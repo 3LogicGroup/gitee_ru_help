@@ -1,2 +1,3 @@
-# gitee_ru_help
-gitee.ru help documentation
+# Unofficial help documentation by Gitee.ru
+
+[Gitee.ru](Gitee.ru) is a git-based storage.
