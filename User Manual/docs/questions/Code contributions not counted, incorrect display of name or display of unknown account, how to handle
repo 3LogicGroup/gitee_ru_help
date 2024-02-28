@@ -1,0 +1,26 @@
+---
+title: 代码贡献未被统计，代码提交显示名字不正确或显示陌生账号如何处理
+authors:
+  - name: 诺墨
+    url: https://gitee.ru/normalcoder
+origin-url: https://gitee.ru/help/articles/4311
+---
+
+因为代码在提交的时候，提交者本地的 git config 配置了另外的邮箱，与注册 Gitee 账号时填写的邮箱信息不一致。
+
+想要避免这问题的话，可以检查对应的 git config user.email 是否正确，保持两者一致即可。
+
+（1）需检查本地 Git 邮箱配置与 Gitee 帐号里的邮箱配置是否一致
+
+（2）如不一致，更改本地邮箱和 Gitee 中邮箱一致
+
+> ① Gitee 邮箱查看操作步骤：登录 Gitee→设置→多邮箱管理
+>
+> ![输入图片说明](https://images.gitee.ru/uploads/images/2020/0927/130821_d6d65b08_7722649.png )
+>
+> ![输入图片说明](https://images.gitee.ru/uploads/images/2020/0927/112017_6f56af27_7722649.png )
+>
+> ② 本地 Git 邮箱操作步骤：
+>
+> - 查看邮箱：git config user.email
+> - 修改邮箱：git config --global user.email "xxx"

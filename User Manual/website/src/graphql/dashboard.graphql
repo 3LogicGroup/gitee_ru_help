@@ -1,0 +1,152 @@
+query dashboard(
+  $projectName: String
+  $issueSort: IssueSort = recently_updated
+  $pullRequestSort: PullRequestSort = created_at_desc
+) {
+  current_user {
+    name
+    username
+    avatar_url
+    projects_count
+    pull_requests_count
+    issues_count
+    codes_count
+    starred_count
+    href
+    bind_phone
+    oversea_user
+    own_projects_blank
+    projects(name: $projectName, first: 5) {
+      total_count
+      pageInfo {
+        endCursor
+        hasNextPage
+      }
+      nodes {
+        id
+        pwd
+        name
+        path
+        path_with_namespace
+        public
+        namespace {
+          display_name
+        }
+      }
+    }
+    namespaces(first: 5) {
+      total_count
+      pageInfo {
+        endCursor
+        hasNextPage
+      }
+      nodes {
+        id
+        type
+        display_name
+        path
+        is_edu
+      }
+    }
+    issues(first: 10, sort: $issueSort) {
+      total_count
+      pageInfo {
+        endCursor
+        hasNextPage
+      }
+      nodes {
+        id
+        ident
+        title
+        show_path
+        updated_at
+        issue_state {
+          color
+          icon
+          id
+          title
+        }
+      }
+    }
+    pull_requests(first: 10, sort: $pullRequestSort) {
+      total_count
+      pageInfo {
+        endCursor
+        hasNextPage
+      }
+      nodes {
+        id
+        title
+        show_path
+        updated_at
+      }
+    }
+    recommend_users {
+      id
+      name
+      username
+      avatar_url
+      bio
+      href
+    }
+    recommend_projects {
+      id
+      name
+      stars_count
+      pwd
+      description
+      path
+      path_with_namespace
+      vip
+      recomm
+    }
+    enterprises {
+      nodes {
+        value: id
+        label: name
+      }
+    }
+    last_push_event {
+      created_at
+      event_project {
+        name_with_namespace
+        path
+        path_in_enterprise
+        readonly_pull_request
+      }
+      id
+      project_commits_path
+      pull_request_new_path
+      ref_name
+    }
+  }
+}
+
+query recommendProjects {
+  current_user {
+    recommend_projects {
+      id
+      name
+      stars_count
+      pwd
+      description
+      path
+      path_with_namespace
+      vip
+      recomm
+    }
+  }
+}
+
+query recommendUsers {
+  current_user {
+    recommend_users {
+      id
+      name
+      username
+      avatar_url
+      bio
+      href
+    }
+  }
+}

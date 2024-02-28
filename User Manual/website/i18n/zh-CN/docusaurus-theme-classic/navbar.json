@@ -1,0 +1,22 @@
+{
+  "title": {
+    "message": "产品文档",
+    "description": "The title in the navbar"
+  },
+  "item.label.企业版": {
+    "message": "企业版",
+    "description": "Navbar item with label 企业版"
+  },
+  "item.label.社区版": {
+    "message": "社区版",
+    "description": "Navbar item with label 社区版"
+  },
+  "item.label.高校版": {
+    "message": "高校版",
+    "description": "Navbar item with label 高校版"
+  },
+  "item.label.私有化": {
+    "message": "私有化",
+    "description": "Navbar item with label 私有化"
+  }
+}

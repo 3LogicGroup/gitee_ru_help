@@ -1,0 +1,15 @@
+upstream minio {
+   server 10.4.145.159:9000 max_fails=3 fail_timeout=10s;
+   server 10.4.145.145:9000 max_fails=3 fail_timeout=10s;
+   server 10.4.145.122:9000 max_fails=3 fail_timeout=10s;
+   server 10.4.145.97:9000 max_fails=3 fail_timeout=10s;
+}
+
+server {
+   proxy_next_upstream on;
+   proxy_next_upstream_tries 3;
+   proxy_next_upstream_timeout 10s;
+   proxy_socket_keepalive on;
+   listen 9000;
+   proxy_pass minio;
+}

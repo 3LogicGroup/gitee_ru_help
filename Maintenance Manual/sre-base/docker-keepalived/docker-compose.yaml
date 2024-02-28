@@ -1,0 +1,22 @@
+version: "3"
+services:
+  keepalived:
+    image: hub.gitee.com/library/keepalived:2.0.20
+    container_name: keepalived
+    network_mode: host
+    privileged: true
+    restart: always
+    environment:
+      - KEEPALIVED_BIND_INTERFACE=enp3s0
+      - KEEPALIVED_ROUTER_ID=100
+      - KEEPALIVED_NODE_PREFIX=node
+      - KEEPALIVED_NODE_STATES=BACKUP,BACKUP
+      - KEEPALIVED_NODE_PRIORITYS=100,90
+      - KEEPALIVED_NODE_IPS=10.4.145.75,10.4.145.135
+      - KEEPALIVED_VIRTUAL_IPS=enp3s0:10.4.145.142/24,enp3s0:10.4.145.142/24
+      - KEEPALIVED_AUTH_PASS=oschina123
+      - KEEPALIVED_COMMAND_LINE_ARGUMENTS=--log-detail --dump-conf --config-id node1
+    cap_add:
+      - NET_RAW
+      - NET_ADMIN
+      - NET_BROADCAST

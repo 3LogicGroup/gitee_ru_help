@@ -1,0 +1,93 @@
+query unreadCount {
+  current_user {
+    unread_count {
+      infos
+      messages
+      referer
+      total
+    }
+  }
+}
+
+fragment Messages on MessagesNotification {
+  actor {
+    name
+    nickname
+  }
+  authenticated
+  content
+  delete_url
+  id
+  read
+  receiver {
+    name
+    nickname
+  }
+  type
+  updated_at
+  url
+}
+
+fragment Infos on InfosNotification {
+  belong_to
+  id
+  message
+  mute
+  namespace {
+    id
+    name
+    path
+    type
+  }
+  read
+  target_id
+  target_type
+  type
+  updated_at
+  url
+}
+
+fragment Referer on RefererNotification {
+  belong_to
+  id
+  message
+  mute
+  namespace {
+    id
+    name
+    path
+    type
+  }
+  read
+  target_id
+  target_type
+  type
+  updated_at
+  url
+}
+
+query notices($typeName: NoticeScope!, $limit: Int!) {
+  current_user {
+    notices(limit: $limit, scope: $typeName) {
+      list {
+        __typename
+        ... on MessagesNotification {
+          ...Messages
+        }
+        ... on InfosNotification {
+          ...Infos
+        }
+        ... on RefererNotification {
+          ...Referer
+        }
+      }
+      total_count
+    }
+  }
+}
+
+mutation markNotices($clientMutationId: String, $scope: NoticeScope!, $notice_ids: [String!]!) {
+  mark_dropdown(input: { clientMutationId: $clientMutationId, scope: $scope, notice_ids: $notice_ids }) {
+    total_count
+  }
+}

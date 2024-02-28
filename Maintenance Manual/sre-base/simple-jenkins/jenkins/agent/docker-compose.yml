@@ -1,0 +1,26 @@
+version: '3.9'
+
+services:
+  agent01:
+    image: hub.gitee.com/jenkinsci/inbound-agent:4.13-2-kube
+    restart: always
+    command: -url http://jenkins:8080 -workDir=/home/jenkins/agent 4b621bb42fec404956747650c4d8be980a8af85f551820693341fd0a491c2891 agent01
+    init: true
+    environment:
+      DOCKER_HOST: "tcp://docker01:2375"
+    volumes:
+      - ./agent01/agent:/home/jenkins/agent
+  agent02:
+    image: hub.gitee.com/jenkinsci/inbound-agent:4.13-2-kube
+    restart: always
+    command: -url http://jenkins:8080 -workDir=/home/jenkins/agent 4f7ac29115fb7186fc8dcc3007d8c01eb91e437cb4adcff86dfd0de6256f392b agent02
+    init: true
+    environment:
+      DOCKER_HOST: "tcp://docker02:2375"
+    volumes:
+      - ./agent02/agent:/home/jenkins/agent
+
+networks:
+  default:
+    external: true
+    name: jenkins-cluster

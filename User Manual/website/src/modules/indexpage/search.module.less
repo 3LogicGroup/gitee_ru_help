@@ -1,0 +1,63 @@
+@tailwind components;
+// 首页的输入框需要高度自定义
+@layer components {
+  .indexpage-custom-search {
+    @apply relative;
+    :global {
+      .navbar__search-input {
+        @apply ~"w-[525px]" ~"rounded-[30px]"  h-14 border-none bg-white px-5 text-left text-base outline-none sm:w-[85vw] !important;
+      }
+      .searchHintContainer_node_modules-\@easyops-cn-docusaurus-search-local-dist-client-client-theme-SearchBar-SearchBar-module {
+        @apply hidden;
+      }
+      .searchBar_node_modules-\@easyops-cn-docusaurus-search-local-dist-client-client-theme-SearchBar-SearchBar-module {
+        @apply inline-block sm:w-full !important;
+      }
+      .searchClearButton_node_modules-\@easyops-cn-docusaurus-search-local-dist-client-client-theme-SearchBar-SearchBar-module {
+        @apply hidden !important;
+      }
+      .searchBarContainer_node_modules-\@easyops-cn-docusaurus-search-local-dist-client-client-theme-SearchBar-SearchBar-module {
+        @apply ml-0 !important;
+      }
+      .dropdownMenu_node_modules-\@easyops-cn-docusaurus-search-local-dist-client-client-theme-SearchBar-SearchBar-module {
+        @apply ~"w-[525px]" sm:w-[85vw] !important;
+      }
+      // ctrl k
+      .searchHintContainer_node_modules-\@easyops-cn-docusaurus-search-local-dist-client-client-theme-SearchBar-SearchBar-module {
+        @apply hidden !important;
+      }
+      button[class^='searchClearButton'] {
+        @apply hidden !important;
+      }
+      div[class^='searchHintContainer'] {
+        @apply hidden !important;
+      }
+      #searchBar_node_modules-\@easyops-cn-docusaurus-search-local-dist-client-client-theme-SearchBar-SearchBar-module-listbox-0 {
+        overflow: hidden;
+      }
+      .searchHintContainer_Pkmr {
+        @apply hidden !important;
+      }
+      .loadingRing_node_modules-\@easyops-cn-docusaurus-search-local-dist-client-client-theme-LoadingRing-LoadingRing-module {
+        @apply hidden !important;
+      }
+      // span[class^='hitTitle'] {
+      //   @apply overflow-hidden text-left;
+      // }
+    }
+  }
+  .indexpage-custom-input {
+    :global {
+      .docsearch-btn {
+        display: inline-flex;
+        @apply ~"w-[525px]" ~"rounded-[30px]"  h-14 border-none bg-white px-5 text-left text-base outline-none sm:w-[85vw] !important;
+      }
+      .docsearch-btn-placeholder {
+        display: inline-block;
+      }
+      .docsearch-btn-icon-container, .docsearch-btn-keys {
+        display: none;
+      }
+    }
+  }
+}

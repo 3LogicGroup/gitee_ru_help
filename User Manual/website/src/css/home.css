@@ -1,0 +1,16 @@
+@media (min-width: 997px) {
+  div.container {
+    max-width: 100% !important;
+  }
+}
+@media (max-width: 1069px) {
+  .nav-item-service {
+    display: none;
+  }
+}
+
+@media (max-width: 669px) {
+  .nav-item-my {
+    display: none;
+  }
+}

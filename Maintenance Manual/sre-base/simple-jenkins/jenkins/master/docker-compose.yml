@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+  jenkins:
+    image: hub.gitee.com/kube-ops/blueocean:2.437
+    environment:
+      - JAVA_OPTS="-Duser.timezone=Asia/Shanghai"
+    restart: always
+    volumes:
+      - ./jenkins_home:/var/jenkins_home
+      - ./init.groovy.d:/usr/share/jenkins/ref/init.groovy.d
+    ports:
+      - 8080:8080
+      - 50000:50000
+
+networks:
+  default:
+    external: true
+    name: jenkins-cluster

@@ -1,0 +1,42 @@
+version: "3.6"
+services:
+  docusaurus_node1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: help-center_node1
+    restart: always
+
+  docusaurus_node2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: help-center_node2
+    restart: always
+
+  nginx:
+    image: nginx:latest
+    container_name: help-center_nginx
+    volumes:
+      - ./config/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - ${NGINX_PORT:-80}:80
+
+  meilisearch:
+    image: getmeili/meilisearch:v1.4
+    container_name: help-center_meilisearch
+    environment:
+      - MEILI_MASTER_KEY=${MEILISEARCH_API_KEY}
+    volumes:
+      - ${DATA_DIR:-./data}/meilisearch_data:/meili_data
+
+  doc-scraper:
+    image: getmeili/docs-scraper:v0.12.12
+    container_name: help-center_doc-scraper
+    volumes:
+      - ./config/docs-scraper.json:/docs-scraper/config.json
+    environment:
+      - MEILISEARCH_HOST_URL=${MEILISEARCH_HOST_URL}
+      - MEILISEARCH_API_KEY=${MEILISEARCH_API_KEY}
+    tty: true
+    command: sh -c "echo '==================' && echo \$MEILISEARCH_HOST_URL && echo \$MEILISEARCH_API_KEY && echo '==================' &&  pipenv run ./docs_scraper /docs-scraper/config.json"

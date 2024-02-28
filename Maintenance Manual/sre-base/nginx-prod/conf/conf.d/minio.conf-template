@@ -1,0 +1,45 @@
+upstream minio {
+    server 10.4.145.159:19001;
+    server 10.4.145.145:19001;
+    server 10.4.145.122:19001;
+    server 10.4.145.97:19001;
+    keepalive 32;
+}
+
+server {
+    listen 80;
+    server_name minio.autom.studio;
+    access_log /var/log/nginx/minio_302_access.log main;
+    error_log /var/log/nginx/minio_302_error.log;
+    return 302 https://$server_name$request_uri;
+}
+
+server {
+    include ssl.d/autom_ssl.conf;
+    server_name minio.autom.studio;
+    access_log /var/log/nginx/minio_access.log main;
+    error_log /var/log/nginx/minio_error.log;
+
+    if ($http_user_agent ~ "MSIE" ) {
+        return 303 https://browser-update.org/update.html;
+    }
+
+    location / {
+        proxy_pass http://minio;
+        # 禁用缓存
+        proxy_no_cache 1;
+        proxy_cache_bypass 1;
+        proxy_set_header Host $http_host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header REMOTE-HOST $remote_addr;
+        proxy_set_header X-Forwarded-Proto $scheme;
+	client_max_body_size 1000m;
+    }
+
+    error_page 500 502 503 504 /50x.html;
+    location = /50x.html {
+        root /usr/share/nginx/html;
+    }
+}
+

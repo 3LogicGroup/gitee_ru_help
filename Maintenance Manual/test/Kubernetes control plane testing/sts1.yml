@@ -1,0 +1,38 @@
+# https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: myapp
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: myapp # has to match .spec.template.metadata.labels
+  serviceName: "myapp"
+  replicas: 3 # by default is 1
+  template:
+    metadata:
+      labels:
+        app: myapp # has to match .spec.selector.matchLabels
+    spec:
+      terminationGracePeriodSeconds: 10
+      containers:
+      - name: myapp
+        image: myapp-slim:1.16.1
+        ports:
+        - containerPort: 80
+          name: myapp
+        volumeMounts:
+        - name: www
+          mountPath: /usr/share/nginx/html
+  volumeClaimTemplates:
+  - metadata:
+      name: www
+    spec:
+      storageClassName: my-storage-class
+      accessModes:
+      - ReadWriteOnce
+      resources:
+        requests:
+          storage: 1Gi
+

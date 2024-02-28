@@ -1,0 +1,2114 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.repo.category.文件操作": {
+    "message": "文件操作",
+    "description": "The label for category 文件操作 in sidebar repo"
+  },
+  "sidebar.repo.category.文件操作.link.generated-index.title": {
+    "message": "文件操作",
+    "description": "The generated-index page title for category 文件操作 in sidebar repo"
+  },
+  "sidebar.repo.category.文件操作.link.generated-index.description": {
+    "message": "文件操作文档",
+    "description": "The generated-index page description for category 文件操作 in sidebar repo"
+  },
+  "sidebar.repo.category.分支管理": {
+    "message": "分支管理",
+    "description": "The label for category 分支管理 in sidebar repo"
+  },
+  "sidebar.repo.category.分支管理.link.generated-index.title": {
+    "message": "分支管理",
+    "description": "The generated-index page title for category 分支管理 in sidebar repo"
+  },
+  "sidebar.repo.category.分支管理.link.generated-index.description": {
+    "message": "分支管理文档",
+    "description": "The generated-index page description for category 分支管理 in sidebar repo"
+  },
+  "sidebar.repo.category.标签/发行版（Release）管理": {
+    "message": "标签/发行版（Release）管理",
+    "description": "The label for category 标签/发行版（Release）管理 in sidebar repo"
+  },
+  "sidebar.repo.category.标签/发行版（Release）管理.link.generated-index.title": {
+    "message": "标签/发行版（Release）管理",
+    "description": "The generated-index page title for category 标签/发行版（Release）管理 in sidebar repo"
+  },
+  "sidebar.repo.category.标签/发行版（Release）管理.link.generated-index.description": {
+    "message": "标签/发行版（Release）管理文档",
+    "description": "The generated-index page description for category 标签/发行版（Release）管理 in sidebar repo"
+  },
+  "sidebar.repo.category.SSH Key 配置管理": {
+    "message": "SSH Key 配置管理",
+    "description": "The label for category SSH Key 配置管理 in sidebar repo"
+  },
+  "sidebar.repo.category.SSH Key 配置管理.link.generated-index.title": {
+    "message": "SSH Key 配置管理",
+    "description": "The generated-index page title for category SSH Key 配置管理 in sidebar repo"
+  },
+  "sidebar.repo.category.SSH Key 配置管理.link.generated-index.description": {
+    "message": "Learn SSH Key 配置管理文档",
+    "description": "The generated-index page description for category SSH Key 配置管理 in sidebar repo"
+  },
+  "sidebar.repo.category.仓库统计": {
+    "message": "仓库统计",
+    "description": "The label for category 仓库统计 in sidebar repo"
+  },
+  "sidebar.repo.category.仓库统计.link.generated-index.title": {
+    "message": "仓库统计",
+    "description": "The generated-index page title for category 仓库统计 in sidebar repo"
+  },
+  "sidebar.repo.category.仓库统计.link.generated-index.description": {
+    "message": "仓库统计文档",
+    "description": "The generated-index page description for category 仓库统计 in sidebar repo"
+  },
+  "sidebar.repo.category.仓库设置": {
+    "message": "仓库设置",
+    "description": "The label for category 仓库设置 in sidebar repo"
+  },
+  "sidebar.repo.category.仓库设置.link.generated-index.title": {
+    "message": "仓库设置",
+    "description": "The generated-index page title for category 仓库设置 in sidebar repo"
+  },
+  "sidebar.repo.category.仓库设置.link.generated-index.description": {
+    "message": "仓库设置文档",
+    "description": "The generated-index page description for category 仓库设置 in sidebar repo"
+  },
+  "sidebar.repo.category.成员管理": {
+    "message": "成员管理",
+    "description": "The label for category 成员管理 in sidebar repo"
+  },
+  "sidebar.repo.category.成员管理.link.generated-index.title": {
+    "message": "成员管理",
+    "description": "The generated-index page title for category 成员管理 in sidebar repo"
+  },
+  "sidebar.repo.category.成员管理.link.generated-index.description": {
+    "message": "成员管理文档",
+    "description": "The generated-index page description for category 成员管理 in sidebar repo"
+  },
+  "sidebar.repo.doc.文件创建、更新、删除": {
+    "message": "文件创建、更新、删除",
+    "description": "The label for the doc item 文件创建、更新、删除 in sidebar repo, linking to the doc repository/file-operate/intro"
+  },
+  "sidebar.repo.doc.重命名、移动文件": {
+    "message": "重命名、移动文件",
+    "description": "The label for the doc item 重命名、移动文件 in sidebar repo, linking to the doc repository/file-operate/intro"
+  },
+  "sidebar.repo.doc.文件对比": {
+    "message": "文件对比",
+    "description": "The label for the doc item 文件对比 in sidebar repo, linking to the doc repository/file-operate/intro"
+  },
+  "sidebar.repo.doc.文件历史版本、提交历史查看": {
+    "message": "文件历史版本、提交历史查看",
+    "description": "The label for the doc item 文件历史版本、提交历史查看 in sidebar repo, linking to the doc repository/file-operate/intro"
+  },
+  "sidebar.repo.doc.筛选查看": {
+    "message": "筛选查看",
+    "description": "The label for the doc item 筛选查看 in sidebar repo, linking to the doc repository/branch/intro"
+  },
+  "sidebar.repo.doc.创建分支": {
+    "message": "创建分支",
+    "description": "The label for the doc item 创建分支 in sidebar repo, linking to the doc repository/branch/intro"
+  },
+  "sidebar.repo.doc.设置默认分支": {
+    "message": "设置默认分支",
+    "description": "The label for the doc item 设置默认分支 in sidebar repo, linking to the doc repository/branch/intro"
+  },
+  "sidebar.repo.doc.合并分支": {
+    "message": "合并分支",
+    "description": "The label for the doc item 合并分支 in sidebar repo, linking to the doc repository/branch/intro"
+  },
+  "sidebar.repo.doc.删除分支": {
+    "message": "删除分支",
+    "description": "The label for the doc item 删除分支 in sidebar repo, linking to the doc repository/branch/intro"
+  },
+  "sidebar.repo.doc.保护分支策略": {
+    "message": "保护分支策略",
+    "description": "The label for the doc item 保护分支策略 in sidebar repo, linking to the doc repository/branch/intro"
+  },
+  "sidebar.repo.doc.什么是发行版（Release）": {
+    "message": "什么是发行版（Release）",
+    "description": "The label for the doc item 什么是发行版（Release） in sidebar repo, linking to the doc repository/release/intro"
+  },
+  "sidebar.repo.doc.创建发行版": {
+    "message": "创建发行版",
+    "description": "The label for the doc item 创建发行版 in sidebar repo, linking to the doc repository/release/intro"
+  },
+  "sidebar.repo.doc.查看发行版": {
+    "message": "查看发行版",
+    "description": "The label for the doc item 查看发行版 in sidebar repo, linking to the doc repository/release/intro"
+  },
+  "sidebar.repo.doc.更新/删除发行版": {
+    "message": "更新/删除发行版",
+    "description": "The label for the doc item 更新/删除发行版 in sidebar repo, linking to the doc repository/release/intro"
+  },
+  "sidebar.repo.doc.公钥管理": {
+    "message": "公钥管理",
+    "description": "The label for the doc item 公钥管理 in sidebar repo, linking to the doc repository/ssh/settings"
+  },
+  "sidebar.repo.doc.生成、添加 SSH 公钥": {
+    "message": "生成、添加 SSH 公钥",
+    "description": "The label for the doc item 生成、添加 SSH 公钥 in sidebar repo, linking to the doc repository/ssh/how to generate and add SSH public key"
+  },
+  "sidebar.repo.doc.如何在 Gitee 上使用 GPG": {
+    "message": "如何在 Gitee 上使用 GPG",
+    "description": "The label for the doc item 如何在 Gitee 上使用 GPG in sidebar repo, linking to the doc repository/ssh/how to use GPG on Gitee"
+  },
+  "sidebar.repo.doc.Git 配置多个 SSH-Key": {
+    "message": "Git 配置多个 SSH-Key",
+    "description": "The label for the doc item Git 配置多个 SSH-Key in sidebar repo, linking to the doc repository/ssh/how to configure multiple SSH-Keys"
+  },
+  "sidebar.repo.doc.SSHKey 常见错误和问题": {
+    "message": "SSHKey 常见错误和问题",
+    "description": "The label for the doc item SSHKey 常见错误和问题 in sidebar repo, linking to the doc repository/ssh/questions"
+  },
+  "sidebar.repo.doc.仓库访问统计": {
+    "message": "仓库访问统计",
+    "description": "The label for the doc item 仓库访问统计 in sidebar repo, linking to the doc repository/statistics/intro"
+  },
+  "sidebar.repo.doc.仓库提交数据统计": {
+    "message": "仓库提交数据统计",
+    "description": "The label for the doc item 仓库提交数据统计 in sidebar repo, linking to the doc repository/statistics/intro"
+  },
+  "sidebar.repo.doc.仓库网络图": {
+    "message": "仓库网络图",
+    "description": "The label for the doc item 仓库网络图 in sidebar repo, linking to the doc repository/statistics/intro"
+  },
+  "sidebar.repo.doc.仓库成员角色说明": {
+    "message": "仓库成员角色说明",
+    "description": "The label for the doc item 仓库成员角色说明 in sidebar repo, linking to the doc repository/member/permission"
+  },
+  "sidebar.repo.doc.添加仓库成员": {
+    "message": "添加仓库成员",
+    "description": "The label for the doc item 添加仓库成员 in sidebar repo, linking to the doc repository/member/add"
+  },
+  "sidebar.repo.doc.移除仓库成员": {
+    "message": "移除仓库成员",
+    "description": "The label for the doc item 移除仓库成员 in sidebar repo, linking to the doc repository/member/delete"
+  },
+  "sidebar.issue.doc.Issue 功能简介": {
+    "message": "Issue 功能简介",
+    "description": "The label for the doc item Issue 功能简介 in sidebar issue, linking to the doc base/issue/intro"
+  },
+  "sidebar.issue.doc.创建 Issue": {
+    "message": "创建 Issue",
+    "description": "The label for the doc item 创建 Issue in sidebar issue, linking to the doc base/issue/intro"
+  },
+  "sidebar.issue.doc.Issue 指派": {
+    "message": "Issue 指派",
+    "description": "The label for the doc item Issue 指派 in sidebar issue, linking to the doc base/issue/intro"
+  },
+  "sidebar.issue.doc.Issue 任务优先级": {
+    "message": "Issue 任务优先级",
+    "description": "The label for the doc item Issue 任务优先级 in sidebar issue, linking to the doc base/issue/intro"
+  },
+  "sidebar.issue.doc.标签管理": {
+    "message": "标签管理",
+    "description": "The label for the doc item 标签管理 in sidebar issue, linking to the doc base/issue/intro"
+  },
+  "sidebar.issue.doc.里程碑管理": {
+    "message": "里程碑管理",
+    "description": "The label for the doc item 里程碑管理 in sidebar issue, linking to the doc base/issue/intro"
+  },
+  "sidebar.issue.doc.任务看板": {
+    "message": "任务看板",
+    "description": "The label for the doc item 任务看板 in sidebar issue, linking to the doc base/issue/intro"
+  },
+  "sidebar.issue.doc.Issue 关联 Pull Request": {
+    "message": "Issue 关联 Pull Request",
+    "description": "The label for the doc item Issue 关联 Pull Request in sidebar issue, linking to the doc base/issue/intro"
+  },
+  "sidebar.pullrequest.category.Pull Request 审查功能介绍": {
+    "message": "Pull Request 审查功能介绍",
+    "description": "The label for category Pull Request 审查功能介绍 in sidebar pullrequest"
+  },
+  "sidebar.pullrequest.category.Pull Request 审查功能介绍.link.generated-index.title": {
+    "message": "Pull Request 审查功能介绍",
+    "description": "The generated-index page title for category Pull Request 审查功能介绍 in sidebar pullrequest"
+  },
+  "sidebar.pullrequest.category.Pull Request 审查功能介绍.link.generated-index.description": {
+    "message": "成员管理文档",
+    "description": "The generated-index page description for category Pull Request 审查功能介绍 in sidebar pullrequest"
+  },
+  "sidebar.pullrequest.category.Pull Request 质量扫描": {
+    "message": "Pull Request 质量扫描",
+    "description": "The label for category Pull Request 质量扫描 in sidebar pullrequest"
+  },
+  "sidebar.pullrequest.category.Pull Request 质量扫描.link.generated-index.title": {
+    "message": "Pull Request 质量扫描",
+    "description": "The generated-index page title for category Pull Request 质量扫描 in sidebar pullrequest"
+  },
+  "sidebar.pullrequest.category.Pull Request 质量扫描.link.generated-index.description": {
+    "message": "成员管理文档",
+    "description": "The generated-index page description for category Pull Request 质量扫描 in sidebar pullrequest"
+  },
+  "sidebar.pullrequest.doc.Pull Request 功能简介": {
+    "message": "Pull Request 功能简介",
+    "description": "The label for the doc item Pull Request 功能简介 in sidebar pullrequest, linking to the doc base/pullrequest/intro"
+  },
+  "sidebar.pullrequest.doc.创建 Pull Request": {
+    "message": "创建 Pull Request",
+    "description": "The label for the doc item 创建 Pull Request in sidebar pullrequest, linking to the doc base/pullrequest/intro"
+  },
+  "sidebar.pullrequest.doc.Pull Request 草稿功能": {
+    "message": "Pull Request 草稿功能",
+    "description": "The label for the doc item Pull Request 草稿功能 in sidebar pullrequest, linking to the doc base/pullrequest/intro"
+  },
+  "sidebar.pullrequest.doc.合并 Pull Request": {
+    "message": "合并 Pull Request",
+    "description": "The label for the doc item 合并 Pull Request in sidebar pullrequest, linking to the doc base/pullrequest/intro"
+  },
+  "sidebar.pullrequest.doc.代码审查指派": {
+    "message": "代码审查指派",
+    "description": "The label for the doc item 代码审查指派 in sidebar pullrequest, linking to the doc base/pullrequest/intro"
+  },
+  "sidebar.pullrequest.doc.代码评论": {
+    "message": "代码评论",
+    "description": "The label for the doc item 代码评论 in sidebar pullrequest, linking to the doc base/pullrequest/intro"
+  },
+  "sidebar.pullrequest.doc.代码「已阅」功能": {
+    "message": "代码「已阅」功能",
+    "description": "The label for the doc item 代码「已阅」功能 in sidebar pullrequest, linking to the doc base/pullrequest/intro"
+  },
+  "sidebar.pullrequest.doc.缺陷扫描": {
+    "message": "缺陷扫描",
+    "description": "The label for the doc item 缺陷扫描 in sidebar pullrequest, linking to the doc base/pullrequest/intro"
+  },
+  "sidebar.pullrequest.doc.规范扫描": {
+    "message": "规范扫描",
+    "description": "The label for the doc item 规范扫描 in sidebar pullrequest, linking to the doc base/pullrequest/intro"
+  },
+  "sidebar.pullrequest.doc.依赖项扫描": {
+    "message": "依赖项扫描",
+    "description": "The label for the doc item 依赖项扫描 in sidebar pullrequest, linking to the doc base/pullrequest/intro"
+  },
+  "sidebar.pullrequest.doc.Pull Request 质量门禁": {
+    "message": "Pull Request 质量门禁",
+    "description": "The label for the doc item Pull Request 质量门禁 in sidebar pullrequest, linking to the doc base/pullrequest/intro"
+  },
+  "sidebar.pullrequest.doc.标签管理": {
+    "message": "标签管理",
+    "description": "The label for the doc item 标签管理 in sidebar pullrequest, linking to the doc base/pullrequest/intro"
+  },
+  "sidebar.pullrequest.doc.里程碑管理": {
+    "message": "里程碑管理",
+    "description": "The label for the doc item 里程碑管理 in sidebar pullrequest, linking to the doc base/pullrequest/intro"
+  },
+  "sidebar.pullrequest.doc.Pull Request 关联 Issue": {
+    "message": "Pull Request 关联 Issue",
+    "description": "The label for the doc item Pull Request 关联 Issue in sidebar pullrequest, linking to the doc base/pullrequest/intro"
+  },
+  "sidebar.wiki.category.wiki": {
+    "message": "wiki",
+    "description": "The label for category wiki in sidebar wiki"
+  },
+  "sidebar.devops/connect.doc.第三方集成服务说明": {
+    "message": "第三方集成服务说明",
+    "description": "The label for the doc item 第三方集成服务说明 in sidebar devops/connect, linking to the doc devops/connect/intro"
+  },
+  "sidebar.devops/connect.doc.Jenkins 插件": {
+    "message": "Jenkins 插件",
+    "description": "The label for the doc item Jenkins 插件 in sidebar devops/connect, linking to the doc devops/connect/Jenkins-Plugin"
+  },
+  "sidebar.devops/connect.doc.TencentHub": {
+    "message": "TencentHub",
+    "description": "The label for the doc item TencentHub in sidebar devops/connect, linking to the doc devops/connect/TencentHub"
+  },
+  "sidebar.devops/connect.doc.腾讯云托管": {
+    "message": "腾讯云托管",
+    "description": "The label for the doc item 腾讯云托管 in sidebar devops/connect, linking to the doc devops/connect/Tencent-CloudBase"
+  },
+  "sidebar.devops/connect.doc.腾讯云 ServerlessFramework": {
+    "message": "腾讯云 ServerlessFramework",
+    "description": "The label for the doc item 腾讯云 ServerlessFramework in sidebar devops/connect, linking to the doc devops/connect/Tencent-Serverless-Framework"
+  },
+  "sidebar.devops/connect.doc.百度效率云": {
+    "message": "百度效率云",
+    "description": "The label for the doc item 百度效率云 in sidebar devops/connect, linking to the doc devops/connect/Baidu-XLY"
+  },
+  "sidebar.devops/connect.doc.华为容器云": {
+    "message": "华为容器云",
+    "description": "The label for the doc item 华为容器云 in sidebar devops/connect, linking to the doc devops/connect/HUAWEI-Cloud-ContainerOps"
+  },
+  "sidebar.devops/connect.doc.华为微服务": {
+    "message": "华为微服务",
+    "description": "The label for the doc item 华为微服务 in sidebar devops/connect, linking to the doc devops/connect/HUAWEI-Cloud-SWR"
+  },
+  "sidebar.devops/connect.doc.华为云 ContainerOps 服务": {
+    "message": "华为云 ContainerOps 服务",
+    "description": "The label for the doc item 华为云 ContainerOps 服务 in sidebar devops/connect, linking to the doc devops/connect/HUAWEI-Cloud-Service-Engine"
+  },
+  "sidebar.devops/connect.doc.阿里云 CodePipeline": {
+    "message": "阿里云 CodePipeline",
+    "description": "The label for the doc item 阿里云 CodePipeline in sidebar devops/connect, linking to the doc devops/connect/Aliyun-CodePipeline"
+  },
+  "sidebar.devops/connect.doc.AzurePipeLine ": {
+    "message": "AzurePipeLine ",
+    "description": "The label for the doc item AzurePipeLine  in sidebar devops/connect, linking to the doc devops/connect/Azure-PipeLine"
+  },
+  "sidebar.devops/connect.doc.奇安信代码卫士": {
+    "message": "奇安信代码卫士",
+    "description": "The label for the doc item 奇安信代码卫士 in sidebar devops/connect, linking to the doc devops/connect/Qi-AnXin-CodeSafe"
+  },
+  "sidebar.devops/connect.doc.Composer 集成（packagist.org）": {
+    "message": "Composer 集成（packagist.org）",
+    "description": "The label for the doc item Composer 集成（packagist.org） in sidebar devops/connect, linking to the doc devops/connect/how-to-automatically-publish-to-packagist.org"
+  },
+  "sidebar.webhook.category.webhook": {
+    "message": "webhook",
+    "description": "The label for category webhook in sidebar webhook"
+  },
+  "sidebar.webhook.doc.WebHoo 简介": {
+    "message": "WebHoo 简介",
+    "description": "The label for the doc item WebHoo 简介 in sidebar webhook, linking to the doc webhook/gitee-webhook-intro"
+  },
+  "sidebar.webhook.doc.添加 WebHook": {
+    "message": "添加 WebHook",
+    "description": "The label for the doc item 添加 WebHook in sidebar webhook, linking to the doc webhook/how-to-add-webhook"
+  },
+  "sidebar.webhook.doc.删除 WebHook": {
+    "message": "删除 WebHook",
+    "description": "The label for the doc item 删除 WebHook in sidebar webhook, linking to the doc webhook/how-to-delete-webhook"
+  },
+  "sidebar.webhook.doc.WebHook 推送数据类型说明": {
+    "message": "WebHook 推送数据类型说明",
+    "description": "The label for the doc item WebHook 推送数据类型说明 in sidebar webhook, linking to the doc webhook/gitee-webhook-push-data-type"
+  },
+  "sidebar.webhook.doc.WebHook 推送数据格式说明": {
+    "message": "WebHook 推送数据格式说明",
+    "description": "The label for the doc item WebHook 推送数据格式说明 in sidebar webhook, linking to the doc webhook/gitee-webhook-push-data-format"
+  },
+  "sidebar.webhook.doc.WebHook 密钥验证和验证算法": {
+    "message": "WebHook 密钥验证和验证算法",
+    "description": "The label for the doc item WebHook 密钥验证和验证算法 in sidebar webhook, linking to the doc webhook/how-to-verify-webhook-keys"
+  },
+  "sidebar.webhook.doc.WebHook 对 Slack 的支持": {
+    "message": "WebHook 对 Slack 的支持",
+    "description": "The label for the doc item WebHook 对 Slack 的支持 in sidebar webhook, linking to the doc webhook/webhook-for-slack"
+  },
+  "sidebar.webhook.doc.WebHook 对企业微信的支持": {
+    "message": "WebHook 对企业微信的支持",
+    "description": "The label for the doc item WebHook 对企业微信的支持 in sidebar webhook, linking to the doc webhook/webhook-for-wecom-robot"
+  },
+  "sidebar.webhook.doc.WebHook 对钉钉机器人的支持": {
+    "message": "WebHook 对钉钉机器人的支持",
+    "description": "The label for the doc item WebHook 对钉钉机器人的支持 in sidebar webhook, linking to the doc webhook/webhook-for-dingtalk-robot"
+  },
+  "sidebar.webhook.doc.WebHook 对飞书机器人的支持": {
+    "message": "WebHook 对飞书机器人的支持",
+    "description": "The label for the doc item WebHook 对飞书机器人的支持 in sidebar webhook, linking to the doc webhook/webhook-for-feishu-robot"
+  },
+  "sidebar.enterprise.category.产品介绍": {
+    "message": "产品介绍",
+    "description": "The label for category 产品介绍 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.产品动态与公告": {
+    "message": "产品动态与公告",
+    "description": "The label for category 产品动态与公告 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.产品计费": {
+    "message": "产品计费",
+    "description": "The label for category 产品计费 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.快速上手": {
+    "message": "快速上手",
+    "description": "The label for category 快速上手 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.最佳实践": {
+    "message": "最佳实践",
+    "description": "The label for category 最佳实践 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.企业管理": {
+    "message": "企业管理",
+    "description": "The label for category 企业管理 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.项目管理 Project": {
+    "message": "项目管理 Project",
+    "description": "The label for category 项目管理 Project in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.代码管理 Code": {
+    "message": "代码管理 Code",
+    "description": "The label for category 代码管理 Code in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.代码扫描 Scan": {
+    "message": "代码扫描 Scan",
+    "description": "The label for category 代码扫描 Scan in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.流水线 CICD": {
+    "message": "流水线 CICD",
+    "description": "The label for category 流水线 CICD in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.知识库 Wiki ": {
+    "message": "知识库 Wiki ",
+    "description": "The label for category 知识库 Wiki  in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.Gitee 小程序": {
+    "message": "Gitee 小程序",
+    "description": "The label for category Gitee 小程序 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.Gitee 内源": {
+    "message": "Gitee 内源",
+    "description": "The label for category Gitee 内源 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.常见问题": {
+    "message": "常见问题",
+    "description": "The label for category 常见问题 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.账户管理": {
+    "message": "账户管理",
+    "description": "The label for category 账户管理 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.相关协议": {
+    "message": "相关协议",
+    "description": "The label for category 相关协议 in sidebar enterprise"
+  },
+  "sidebar.enterprise.link.个人信息保护政策": {
+    "message": "个人信息保护政策",
+    "description": "The label for link 个人信息保护政策 in sidebar enterprise, linking to https://gitee.ru/user_terms"
+  },
+  "sidebar.enterprise.link.Gitee 企业版服务条款": {
+    "message": "Gitee 企业版服务条款",
+    "description": "The label for link Gitee 企业版服务条款 in sidebar enterprise, linking to https://gitee.ru/enterprise_terms"
+  },
+  "sidebar.enterprise.doc.企业案例": {
+    "message": "企业案例",
+    "description": "The label for the doc item 企业案例 in sidebar enterprise, linking to the doc enterprise/企业案例"
+  },
+  "sidebar.eduction.doc.产品简介": {
+    "message": "产品简介",
+    "description": "The label for the doc item 产品简介 in sidebar eduction, linking to the doc eduction/产品简介"
+  },
+  "sidebar.devops.category.devops": {
+    "message": "devops",
+    "description": "The label for category devops in sidebar devops"
+  },
+  "sidebar.devops/jenkins.doc.Gitee x Jenkins 集成": {
+    "message": "Gitee x Jenkins 集成",
+    "description": "The label for the doc item Gitee x Jenkins 集成 in sidebar devops/jenkins, linking to the doc devops/connect/Jenkins-Plugin"
+  },
+  "sidebar.giteeGo.category.流水线配置": {
+    "message": "流水线配置",
+    "description": "The label for category 流水线配置 in sidebar giteeGo"
+  },
+  "sidebar.giteeGo.category.流水线配置.link.generated-index.title": {
+    "message": "流水线配置",
+    "description": "The generated-index page title for category 流水线配置 in sidebar giteeGo"
+  },
+  "sidebar.giteeGo.category.流水线配置.link.generated-index.description": {
+    "message": "流水线配置",
+    "description": "The generated-index page description for category 流水线配置 in sidebar giteeGo"
+  },
+  "sidebar.giteeGo.category.流水线插件": {
+    "message": "流水线插件",
+    "description": "The label for category 流水线插件 in sidebar giteeGo"
+  },
+  "sidebar.giteeGo.category.流水线插件.link.generated-index.title": {
+    "message": "流水线插件",
+    "description": "The generated-index page title for category 流水线插件 in sidebar giteeGo"
+  },
+  "sidebar.giteeGo.category.流水线插件.link.generated-index.description": {
+    "message": "流水线插件",
+    "description": "The generated-index page description for category 流水线插件 in sidebar giteeGo"
+  },
+  "sidebar.giteeGo.category.主机管理": {
+    "message": "主机管理",
+    "description": "The label for category 主机管理 in sidebar giteeGo"
+  },
+  "sidebar.giteeGo.category.主机管理.link.generated-index.title": {
+    "message": "主机管理",
+    "description": "The generated-index page title for category 主机管理 in sidebar giteeGo"
+  },
+  "sidebar.giteeGo.category.主机管理.link.generated-index.description": {
+    "message": "主机管理",
+    "description": "The generated-index page description for category 主机管理 in sidebar giteeGo"
+  },
+  "sidebar.giteeGo.category.常见问题": {
+    "message": "常见问题",
+    "description": "The label for category 常见问题 in sidebar giteeGo"
+  },
+  "sidebar.giteeGo.category.常见问题.link.generated-index.title": {
+    "message": "常见问题",
+    "description": "The generated-index page title for category 常见问题 in sidebar giteeGo"
+  },
+  "sidebar.giteeGo.category.常见问题.link.generated-index.description": {
+    "message": "常见问题",
+    "description": "The generated-index page description for category 常见问题 in sidebar giteeGo"
+  },
+  "sidebar.opensources.doc.开源贡献者协议": {
+    "message": "开源贡献者协议",
+    "description": "The label for the doc item 开源贡献者协议 in sidebar opensources, linking to the doc opensources/cla/intro"
+  },
+  "sidebar.opensources.doc.创建、管理贡献者协议": {
+    "message": "创建、管理贡献者协议",
+    "description": "The label for the doc item 创建、管理贡献者协议 in sidebar opensources, linking to the doc opensources/cla/manage"
+  },
+  "sidebar.opensources.doc.如何签署 CLA": {
+    "message": "如何签署 CLA",
+    "description": "The label for the doc item 如何签署 CLA in sidebar opensources, linking to the doc opensources/cla/sign"
+  },
+  "sidebar.services.category.Gitee Pages 静态页面托管": {
+    "message": "Gitee Pages 静态页面托管",
+    "description": "The label for category Gitee Pages 静态页面托管 in sidebar services"
+  },
+  "sidebar.services.category.Gitee Pages 静态页面托管.link.generated-index.title": {
+    "message": "Gitee Pages",
+    "description": "The generated-index page title for category Gitee Pages 静态页面托管 in sidebar services"
+  },
+  "sidebar.services.category.Gitee Pages 静态页面托管.link.generated-index.description": {
+    "message": "Gitee Pages",
+    "description": "The generated-index page description for category Gitee Pages 静态页面托管 in sidebar services"
+  },
+  "sidebar.services.category.代码文档生成服务": {
+    "message": "代码文档生成服务",
+    "description": "The label for category 代码文档生成服务 in sidebar services"
+  },
+  "sidebar.services.category.代码文档生成服务.link.generated-index.title": {
+    "message": "文档生成与托管",
+    "description": "The generated-index page title for category 代码文档生成服务 in sidebar services"
+  },
+  "sidebar.services.category.代码文档生成服务.link.generated-index.description": {
+    "message": "文档生成与托管",
+    "description": "The generated-index page description for category 代码文档生成服务 in sidebar services"
+  },
+  "sidebar.services.doc.Sonar 代码质量分析": {
+    "message": "Sonar 代码质量分析",
+    "description": "The label for the doc item Sonar 代码质量分析 in sidebar services, linking to the doc services/SonarQube"
+  },
+  "sidebar.services.doc.Gitee Scan 代码扫描": {
+    "message": "Gitee Scan 代码扫描",
+    "description": "The label for the doc item Gitee Scan 代码扫描 in sidebar services, linking to the doc services/gitee-scan"
+  },
+  "sidebar.services.doc.JavaDoc 文档生成": {
+    "message": "JavaDoc 文档生成",
+    "description": "The label for the doc item JavaDoc 文档生成 in sidebar services, linking to the doc services/apidocs/JavaDoc"
+  },
+  "sidebar.services.doc.PHPDoc 文档生成": {
+    "message": "PHPDoc 文档生成",
+    "description": "The label for the doc item PHPDoc 文档生成 in sidebar services, linking to the doc services/apidocs/PHPDoc"
+  },
+  "sidebar.services.doc.安卓在线构建": {
+    "message": "安卓在线构建",
+    "description": "The label for the doc item 安卓在线构建 in sidebar services, linking to the doc services/Android-build-online"
+  },
+  "sidebar.changelog.doc.CSDNCODE 迁移到 Gitee 的说明": {
+    "message": "CSDNCODE 迁移到 Gitee 的说明",
+    "description": "The label for the doc item CSDNCODE 迁移到 Gitee 的说明 in sidebar changelog, linking to the doc change-log/csdncode-migration-to-gitee"
+  },
+  "sidebar.changelog.doc.Gitee 2017 功能更新": {
+    "message": "Gitee 2017 功能更新",
+    "description": "The label for the doc item Gitee 2017 功能更新 in sidebar changelog, linking to the doc change-log/gitee-update-2017"
+  },
+  "sidebar.changelog.doc.Gitee 2018 功能更新": {
+    "message": "Gitee 2018 功能更新",
+    "description": "The label for the doc item Gitee 2018 功能更新 in sidebar changelog, linking to the doc change-log/gitee-update-2018"
+  },
+  "sidebar.changelog.doc.Gitee 2019 功能更新": {
+    "message": "Gitee 2019 功能更新",
+    "description": "The label for the doc item Gitee 2019 功能更新 in sidebar changelog, linking to the doc change-log/gitee-update-2019"
+  },
+  "sidebar.changelog.doc.Gitee 2020 功能更新": {
+    "message": "Gitee 2020 功能更新",
+    "description": "The label for the doc item Gitee 2020 功能更新 in sidebar changelog, linking to the doc change-log/gitee-update-2020"
+  },
+  "sidebar.changelog.doc.Gitee 2021 功能更新": {
+    "message": "Gitee 2021 功能更新",
+    "description": "The label for the doc item Gitee 2021 功能更新 in sidebar changelog, linking to the doc change-log/gitee-update-2021"
+  },
+  "sidebar.changelog.doc.Gitee 2022 功能更新": {
+    "message": "Gitee 2022 功能更新",
+    "description": "The label for the doc item Gitee 2022 功能更新 in sidebar changelog, linking to the doc change-log/gitee-update-2022"
+  },
+  "sidebar.questions.doc.代码贡献未被统计，代码提交显示名字不正确或显示陌生账号如何处理": {
+    "message": "代码贡献未被统计，代码提交显示名字不正确或显示陌生账号如何处理",
+    "description": "The label for the doc item 代码贡献未被统计，代码提交显示名字不正确或显示陌生账号如何处理 in sidebar questions, linking to the doc questions/代码贡献未被统计，代码提交显示名字不正确或显示陌生账号如何处理"
+  },
+  "sidebar.questions.doc.仓库体积过大，如何减小": {
+    "message": "仓库体积过大，如何减小",
+    "description": "The label for the doc item 仓库体积过大，如何减小 in sidebar questions, linking to the doc questions/仓库体积过大，如何减小"
+  },
+  "sidebar.enterprise.category.产品介绍.link.generated-index.title": {
+    "message": "产品介绍",
+    "description": "The generated-index page title for category 产品介绍 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.产品介绍.link.generated-index.description": {
+    "message": "产品介绍",
+    "description": "The generated-index page description for category 产品介绍 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.产品动态与公告.link.generated-index.title": {
+    "message": "产品动态与公告",
+    "description": "The generated-index page title for category 产品动态与公告 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.产品动态与公告.link.generated-index.description": {
+    "message": "产品动态与公告",
+    "description": "The generated-index page description for category 产品动态与公告 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.产品计费.link.generated-index.title": {
+    "message": "产品计费",
+    "description": "The generated-index page title for category 产品计费 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.产品计费.link.generated-index.description": {
+    "message": "产品计费",
+    "description": "The generated-index page description for category 产品计费 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.企业管理.link.generated-index.title": {
+    "message": "企业管理",
+    "description": "The generated-index page title for category 企业管理 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.企业管理.link.generated-index.description": {
+    "message": "企业管理",
+    "description": "The generated-index page description for category 企业管理 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.项目管理 Project ": {
+    "message": "项目管理 Project ",
+    "description": "The label for category 项目管理 Project  in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.项目管理 Project .link.generated-index.title": {
+    "message": "项目管理 Project ",
+    "description": "The generated-index page title for category 项目管理 Project  in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.项目管理 Project .link.generated-index.description": {
+    "message": "项目管理 Project ",
+    "description": "The generated-index page description for category 项目管理 Project  in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.代码管理 Code ": {
+    "message": "代码管理 Code ",
+    "description": "The label for category 代码管理 Code  in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.代码管理 Code .link.generated-index.title": {
+    "message": "代码管理 Code ",
+    "description": "The generated-index page title for category 代码管理 Code  in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.代码管理 Code .link.generated-index.description": {
+    "message": "代码管理 Code ",
+    "description": "The generated-index page description for category 代码管理 Code  in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.代码扫描 Scan ": {
+    "message": "代码扫描 Scan ",
+    "description": "The label for category 代码扫描 Scan  in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.代码扫描 Scan .link.generated-index.title": {
+    "message": "代码扫描 Scan ",
+    "description": "The generated-index page title for category 代码扫描 Scan  in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.代码扫描 Scan .link.generated-index.description": {
+    "message": "代码扫描 Scan ",
+    "description": "The generated-index page description for category 代码扫描 Scan  in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.流水线 CI/CD ": {
+    "message": "流水线 CI/CD ",
+    "description": "The label for category 流水线 CI/CD  in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.流水线 CI/CD .link.generated-index.title": {
+    "message": "流水线 CI/CD ",
+    "description": "The generated-index page title for category 流水线 CI/CD  in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.流水线 CI/CD .link.generated-index.description": {
+    "message": "流水线 CI/CD ",
+    "description": "The generated-index page description for category 流水线 CI/CD  in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.效能度量 Insight ": {
+    "message": "效能度量 Insight ",
+    "description": "The label for category 效能度量 Insight  in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.效能度量 Insight .link.generated-index.title": {
+    "message": "效能度量 Insight ",
+    "description": "The generated-index page title for category 效能度量 Insight  in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.效能度量 Insight .link.generated-index.description": {
+    "message": "效能度量 Insight ",
+    "description": "The generated-index page description for category 效能度量 Insight  in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.知识库 Wiki .link.generated-index.title": {
+    "message": "知识库 Wiki ",
+    "description": "The generated-index page title for category 知识库 Wiki  in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.知识库 Wiki .link.generated-index.description": {
+    "message": "知识库 Wiki ",
+    "description": "The generated-index page description for category 知识库 Wiki  in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.Gitee 小程序.link.generated-index.title": {
+    "message": "Gitee 小程序",
+    "description": "The generated-index page title for category Gitee 小程序 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.Gitee 小程序.link.generated-index.description": {
+    "message": "Gitee 小程序",
+    "description": "The generated-index page description for category Gitee 小程序 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.Gitee 内源.link.generated-index.title": {
+    "message": "Gitee 内源",
+    "description": "The generated-index page title for category Gitee 内源 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.Gitee 内源.link.generated-index.description": {
+    "message": "Gitee 内源",
+    "description": "The generated-index page description for category Gitee 内源 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.常见问题.link.generated-index.title": {
+    "message": "常见问题",
+    "description": "The generated-index page title for category 常见问题 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.常见问题.link.generated-index.description": {
+    "message": "常见问题",
+    "description": "The generated-index page description for category 常见问题 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.账户管理.link.generated-index.title": {
+    "message": "账户管理",
+    "description": "The generated-index page title for category 账户管理 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.账户管理.link.generated-index.description": {
+    "message": "账户管理",
+    "description": "The generated-index page description for category 账户管理 in sidebar enterprise"
+  },
+  "sidebar.enterprise.link.视频中心": {
+    "message": "视频中心",
+    "description": "The label for link 视频中心 in sidebar enterprise, linking to https://space.bilibili.com/511608172"
+  },
+  "sidebar.enterprise.doc.Gitee 企业版是什么 ": {
+    "message": "Gitee 企业版是什么 ",
+    "description": "The label for the doc item Gitee 企业版是什么  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.Gitee 企业版产品优势 ": {
+    "message": "Gitee 企业版产品优势 ",
+    "description": "The label for the doc item Gitee 企业版产品优势  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.Gitee 企业版资质认证 ": {
+    "message": "Gitee 企业版资质认证 ",
+    "description": "The label for the doc item Gitee 企业版资质认证  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.产品动态 ": {
+    "message": "产品动态 ",
+    "description": "The label for the doc item 产品动态  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.产品更新日志 ": {
+    "message": "产品更新日志 ",
+    "description": "The label for the doc item 产品更新日志  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.Project 更新日志 ": {
+    "message": "Project 更新日志 ",
+    "description": "The label for the doc item Project 更新日志  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.Code 更新日志 ": {
+    "message": "Code 更新日志 ",
+    "description": "The label for the doc item Code 更新日志  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.Scan 更新日志 ": {
+    "message": "Scan 更新日志 ",
+    "description": "The label for the doc item Scan 更新日志  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.CICD 更新日志 ": {
+    "message": "CICD 更新日志 ",
+    "description": "The label for the doc item CICD 更新日志  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.Insight 更新日志 ": {
+    "message": "Insight 更新日志 ",
+    "description": "The label for the doc item Insight 更新日志  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.Wiki 更新日志 ": {
+    "message": "Wiki 更新日志 ",
+    "description": "The label for the doc item Wiki 更新日志  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.企业管理 更新日志 ": {
+    "message": "企业管理 更新日志 ",
+    "description": "The label for the doc item 企业管理 更新日志  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.Gitee 企业版 2022 资费 ": {
+    "message": "Gitee 企业版 2022 资费 ",
+    "description": "The label for the doc item Gitee 企业版 2022 资费  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.企业版功能说明 ": {
+    "message": "企业版功能说明 ",
+    "description": "The label for the doc item 企业版功能说明  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.企业版购买 FAQ ": {
+    "message": "企业版购买 FAQ ",
+    "description": "The label for the doc item 企业版购买 FAQ  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.工作台 ": {
+    "message": "工作台 ",
+    "description": "The label for the doc item 工作台  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.企业设置 ": {
+    "message": "企业设置 ",
+    "description": "The label for the doc item 企业设置  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.成员管理 ": {
+    "message": "成员管理 ",
+    "description": "The label for the doc item 成员管理  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.组织管理 ": {
+    "message": "组织管理 ",
+    "description": "The label for the doc item 组织管理  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.功能管理 ": {
+    "message": "功能管理 ",
+    "description": "The label for the doc item 功能管理  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.资源管理 ": {
+    "message": "资源管理 ",
+    "description": "The label for the doc item 资源管理  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.安全性管理 ": {
+    "message": "安全性管理 ",
+    "description": "The label for the doc item 安全性管理  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.产品介绍 ": {
+    "message": "产品介绍 ",
+    "description": "The label for the doc item 产品介绍  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.项目管理 ": {
+    "message": "项目管理 ",
+    "description": "The label for the doc item 项目管理  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.工作项 ": {
+    "message": "工作项 ",
+    "description": "The label for the doc item 工作项  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.代码管理 ": {
+    "message": "代码管理 ",
+    "description": "The label for the doc item 代码管理  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.仓库管理 ": {
+    "message": "仓库管理 ",
+    "description": "The label for the doc item 仓库管理  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.Git 知识大全 ": {
+    "message": "Git 知识大全 ",
+    "description": "The label for the doc item Git 知识大全  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.权限与设置 ": {
+    "message": "权限与设置 ",
+    "description": "The label for the doc item 权限与设置  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.初识 Gitee 流水线 ": {
+    "message": "初识 Gitee 流水线 ",
+    "description": "The label for the doc item 初识 Gitee 流水线  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.流水线配置 ": {
+    "message": "流水线配置 ",
+    "description": "The label for the doc item 流水线配置  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.流水线插件 ": {
+    "message": "流水线插件 ",
+    "description": "The label for the doc item 流水线插件  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.主机管理 ": {
+    "message": "主机管理 ",
+    "description": "The label for the doc item 主机管理  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.流水线执行状态与历史 ": {
+    "message": "流水线执行状态与历史 ",
+    "description": "The label for the doc item 流水线执行状态与历史  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.全局参数 ": {
+    "message": "全局参数 ",
+    "description": "The label for the doc item 全局参数  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.发布记录 ": {
+    "message": "发布记录 ",
+    "description": "The label for the doc item 发布记录  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.凭证管理 ": {
+    "message": "凭证管理 ",
+    "description": "The label for the doc item 凭证管理  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.付款、发票问题 ": {
+    "message": "付款、发票问题 ",
+    "description": "The label for the doc item 付款、发票问题  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.付费服务问题 ": {
+    "message": "付费服务问题 ",
+    "description": "The label for the doc item 付费服务问题  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.Gitee Project 常见问题 ": {
+    "message": "Gitee Project 常见问题 ",
+    "description": "The label for the doc item Gitee Project 常见问题  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.Gitee Code 常见问题 ": {
+    "message": "Gitee Code 常见问题 ",
+    "description": "The label for the doc item Gitee Code 常见问题  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.Gitee Scan 常见问题 ": {
+    "message": "Gitee Scan 常见问题 ",
+    "description": "The label for the doc item Gitee Scan 常见问题  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.Gitee CICD 常见问题 ": {
+    "message": "Gitee CICD 常见问题 ",
+    "description": "The label for the doc item Gitee CICD 常见问题  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.Gitee Insight 常见问题 ": {
+    "message": "Gitee Insight 常见问题 ",
+    "description": "The label for the doc item Gitee Insight 常见问题  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.Gitee Wiki 常见问题 ": {
+    "message": "Gitee Wiki 常见问题 ",
+    "description": "The label for the doc item Gitee Wiki 常见问题  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.企业管理 常见问题 ": {
+    "message": "企业管理 常见问题 ",
+    "description": "The label for the doc item 企业管理 常见问题  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.转移组织至企业账号 ": {
+    "message": "转移组织至企业账号 ",
+    "description": "The label for the doc item 转移组织至企业账号  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.企业创建者离职了如何处理 ": {
+    "message": "企业创建者离职了如何处理 ",
+    "description": "The label for the doc item 企业创建者离职了如何处理  in sidebar enterprise, linking to the doc enterprise/mini-program"
+  },
+  "sidebar.enterprise.doc.如何主动退出企业？ ": {
+    "message": "如何主动退出企业？ ",
+    "description": "The label for the doc item 如何主动退出企业？  in sidebar enterprise, linking to the doc enterprise/帐户管理/如何主动退出企业"
+  },
+  "sidebar.community.category.产品简介": {
+    "message": "产品简介",
+    "description": "The label for category 产品简介 in sidebar community"
+  },
+  "sidebar.community.category.产品简介.link.generated-index.title": {
+    "message": "产品简介",
+    "description": "The generated-index page title for category 产品简介 in sidebar community"
+  },
+  "sidebar.community.category.产品简介.link.generated-index.description": {
+    "message": "产品简介文档",
+    "description": "The generated-index page description for category 产品简介 in sidebar community"
+  },
+  "sidebar.community.category.关于开源": {
+    "message": "关于开源",
+    "description": "The label for category 关于开源 in sidebar community"
+  },
+  "sidebar.community.category.关于开源.link.generated-index.title": {
+    "message": "关于开源",
+    "description": "The generated-index page title for category 关于开源 in sidebar community"
+  },
+  "sidebar.community.category.关于开源.link.generated-index.description": {
+    "message": "关于开源文档",
+    "description": "The generated-index page description for category 关于开源 in sidebar community"
+  },
+  "sidebar.community.category.仓库/代码管理": {
+    "message": "仓库/代码管理",
+    "description": "The label for category 仓库/代码管理 in sidebar community"
+  },
+  "sidebar.community.category.仓库/代码管理.link.generated-index.title": {
+    "message": "仓库/代码管理",
+    "description": "The generated-index page title for category 仓库/代码管理 in sidebar community"
+  },
+  "sidebar.community.category.仓库/代码管理.link.generated-index.description": {
+    "message": "仓库/代码管理文档",
+    "description": "The generated-index page description for category 仓库/代码管理 in sidebar community"
+  },
+  "sidebar.community.category.文件操作": {
+    "message": "文件操作",
+    "description": "The label for category 文件操作 in sidebar community"
+  },
+  "sidebar.community.category.文件操作.link.generated-index.title": {
+    "message": "文件操作",
+    "description": "The generated-index page title for category 文件操作 in sidebar community"
+  },
+  "sidebar.community.category.文件操作.link.generated-index.description": {
+    "message": "文件操作文档",
+    "description": "The generated-index page description for category 文件操作 in sidebar community"
+  },
+  "sidebar.community.category.分支管理": {
+    "message": "分支管理",
+    "description": "The label for category 分支管理 in sidebar community"
+  },
+  "sidebar.community.category.分支管理.link.generated-index.title": {
+    "message": "分支管理",
+    "description": "The generated-index page title for category 分支管理 in sidebar community"
+  },
+  "sidebar.community.category.分支管理.link.generated-index.description": {
+    "message": "分支管理文档",
+    "description": "The generated-index page description for category 分支管理 in sidebar community"
+  },
+  "sidebar.community.category.标签/发行版（Release）管理": {
+    "message": "标签/发行版（Release）管理",
+    "description": "The label for category 标签/发行版（Release）管理 in sidebar community"
+  },
+  "sidebar.community.category.标签/发行版（Release）管理.link.generated-index.title": {
+    "message": "标签/发行版（Release）管理",
+    "description": "The generated-index page title for category 标签/发行版（Release）管理 in sidebar community"
+  },
+  "sidebar.community.category.标签/发行版（Release）管理.link.generated-index.description": {
+    "message": "标签/发行版（Release）管理文档",
+    "description": "The generated-index page description for category 标签/发行版（Release）管理 in sidebar community"
+  },
+  "sidebar.community.category.SSH Key 配置管理": {
+    "message": "SSH Key 配置管理",
+    "description": "The label for category SSH Key 配置管理 in sidebar community"
+  },
+  "sidebar.community.category.SSH Key 配置管理.link.generated-index.title": {
+    "message": "SSH Key 配置管理",
+    "description": "The generated-index page title for category SSH Key 配置管理 in sidebar community"
+  },
+  "sidebar.community.category.SSH Key 配置管理.link.generated-index.description": {
+    "message": "Learn SSH Key 配置管理文档",
+    "description": "The generated-index page description for category SSH Key 配置管理 in sidebar community"
+  },
+  "sidebar.community.category.仓库统计": {
+    "message": "仓库统计",
+    "description": "The label for category 仓库统计 in sidebar community"
+  },
+  "sidebar.community.category.仓库统计.link.generated-index.title": {
+    "message": "仓库统计",
+    "description": "The generated-index page title for category 仓库统计 in sidebar community"
+  },
+  "sidebar.community.category.仓库统计.link.generated-index.description": {
+    "message": "仓库统计文档",
+    "description": "The generated-index page description for category 仓库统计 in sidebar community"
+  },
+  "sidebar.community.category.仓库设置": {
+    "message": "仓库设置",
+    "description": "The label for category 仓库设置 in sidebar community"
+  },
+  "sidebar.community.category.仓库设置.link.generated-index.title": {
+    "message": "仓库设置",
+    "description": "The generated-index page title for category 仓库设置 in sidebar community"
+  },
+  "sidebar.community.category.仓库设置.link.generated-index.description": {
+    "message": "仓库设置文档",
+    "description": "The generated-index page description for category 仓库设置 in sidebar community"
+  },
+  "sidebar.community.category.成员管理": {
+    "message": "成员管理",
+    "description": "The label for category 成员管理 in sidebar community"
+  },
+  "sidebar.community.category.成员管理.link.generated-index.title": {
+    "message": "成员管理",
+    "description": "The generated-index page title for category 成员管理 in sidebar community"
+  },
+  "sidebar.community.category.成员管理.link.generated-index.description": {
+    "message": "成员管理文档",
+    "description": "The generated-index page description for category 成员管理 in sidebar community"
+  },
+  "sidebar.community.category.Issue 任务协作": {
+    "message": "Issue 任务协作",
+    "description": "The label for category Issue 任务协作 in sidebar community"
+  },
+  "sidebar.community.category.Issue 任务协作.link.generated-index.title": {
+    "message": "Issue 任务协作",
+    "description": "The generated-index page title for category Issue 任务协作 in sidebar community"
+  },
+  "sidebar.community.category.Issue 任务协作.link.generated-index.description": {
+    "message": "Issue 任务协作",
+    "description": "The generated-index page description for category Issue 任务协作 in sidebar community"
+  },
+  "sidebar.community.category.Pull Request 代码协作": {
+    "message": "Pull Request 代码协作",
+    "description": "The label for category Pull Request 代码协作 in sidebar community"
+  },
+  "sidebar.community.category.Pull Request 代码协作.link.generated-index.title": {
+    "message": "Pull Request 代码协作",
+    "description": "The generated-index page title for category Pull Request 代码协作 in sidebar community"
+  },
+  "sidebar.community.category.Pull Request 代码协作.link.generated-index.description": {
+    "message": "Pull Request 代码协作",
+    "description": "The generated-index page description for category Pull Request 代码协作 in sidebar community"
+  },
+  "sidebar.community.category.Pull Request 审查功能介绍": {
+    "message": "Pull Request 审查功能介绍",
+    "description": "The label for category Pull Request 审查功能介绍 in sidebar community"
+  },
+  "sidebar.community.category.Pull Request 审查功能介绍.link.generated-index.title": {
+    "message": "Pull Request 审查功能介绍",
+    "description": "The generated-index page title for category Pull Request 审查功能介绍 in sidebar community"
+  },
+  "sidebar.community.category.Pull Request 审查功能介绍.link.generated-index.description": {
+    "message": "成员管理文档",
+    "description": "The generated-index page description for category Pull Request 审查功能介绍 in sidebar community"
+  },
+  "sidebar.community.category.Pull Request 质量扫描": {
+    "message": "Pull Request 质量扫描",
+    "description": "The label for category Pull Request 质量扫描 in sidebar community"
+  },
+  "sidebar.community.category.Pull Request 质量扫描.link.generated-index.title": {
+    "message": "Pull Request 质量扫描",
+    "description": "The generated-index page title for category Pull Request 质量扫描 in sidebar community"
+  },
+  "sidebar.community.category.Pull Request 质量扫描.link.generated-index.description": {
+    "message": "成员管理文档",
+    "description": "The generated-index page description for category Pull Request 质量扫描 in sidebar community"
+  },
+  "sidebar.community.category.Wiki 知识库": {
+    "message": "Wiki 知识库",
+    "description": "The label for category Wiki 知识库 in sidebar community"
+  },
+  "sidebar.community.category.Wiki 知识库.link.generated-index.title": {
+    "message": "Wiki 知识库",
+    "description": "The generated-index page title for category Wiki 知识库 in sidebar community"
+  },
+  "sidebar.community.category.Wiki 知识库.link.generated-index.description": {
+    "message": "Wiki 知识库",
+    "description": "The generated-index page description for category Wiki 知识库 in sidebar community"
+  },
+  "sidebar.community.category.wiki": {
+    "message": "wiki",
+    "description": "The label for category wiki in sidebar community"
+  },
+  "sidebar.community.category.WebHook 管理": {
+    "message": "WebHook 管理",
+    "description": "The label for category WebHook 管理 in sidebar community"
+  },
+  "sidebar.community.category.WebHook 管理.link.generated-index.title": {
+    "message": "WebHook 管理",
+    "description": "The generated-index page title for category WebHook 管理 in sidebar community"
+  },
+  "sidebar.community.category.WebHook 管理.link.generated-index.description": {
+    "message": "WebHook 管理",
+    "description": "The generated-index page description for category WebHook 管理 in sidebar community"
+  },
+  "sidebar.community.category.webhook": {
+    "message": "webhook",
+    "description": "The label for category webhook in sidebar community"
+  },
+  "sidebar.community.category.帐号与安全": {
+    "message": "帐号与安全",
+    "description": "The label for category 帐号与安全 in sidebar community"
+  },
+  "sidebar.community.category.帐号与安全.link.generated-index.title": {
+    "message": "帐号与安全",
+    "description": "The generated-index page title for category 帐号与安全 in sidebar community"
+  },
+  "sidebar.community.category.帐号与安全.link.generated-index.description": {
+    "message": "帐号与安全",
+    "description": "The generated-index page description for category 帐号与安全 in sidebar community"
+  },
+  "sidebar.community.category.服务集成": {
+    "message": "服务集成",
+    "description": "The label for category 服务集成 in sidebar community"
+  },
+  "sidebar.community.category.服务集成.link.generated-index.title": {
+    "message": "服务集成",
+    "description": "The generated-index page title for category 服务集成 in sidebar community"
+  },
+  "sidebar.community.category.服务集成.link.generated-index.description": {
+    "message": "服务集成文档",
+    "description": "The generated-index page description for category 服务集成 in sidebar community"
+  },
+  "sidebar.community.category.流水线配置": {
+    "message": "流水线配置",
+    "description": "The label for category 流水线配置 in sidebar community"
+  },
+  "sidebar.community.category.流水线配置.link.generated-index.title": {
+    "message": "流水线配置",
+    "description": "The generated-index page title for category 流水线配置 in sidebar community"
+  },
+  "sidebar.community.category.流水线配置.link.generated-index.description": {
+    "message": "流水线配置",
+    "description": "The generated-index page description for category 流水线配置 in sidebar community"
+  },
+  "sidebar.community.category.流水线插件": {
+    "message": "流水线插件",
+    "description": "The label for category 流水线插件 in sidebar community"
+  },
+  "sidebar.community.category.流水线插件.link.generated-index.title": {
+    "message": "流水线插件",
+    "description": "The generated-index page title for category 流水线插件 in sidebar community"
+  },
+  "sidebar.community.category.流水线插件.link.generated-index.description": {
+    "message": "流水线插件",
+    "description": "The generated-index page description for category 流水线插件 in sidebar community"
+  },
+  "sidebar.community.category.主机管理": {
+    "message": "主机管理",
+    "description": "The label for category 主机管理 in sidebar community"
+  },
+  "sidebar.community.category.主机管理.link.generated-index.title": {
+    "message": "主机管理",
+    "description": "The generated-index page title for category 主机管理 in sidebar community"
+  },
+  "sidebar.community.category.主机管理.link.generated-index.description": {
+    "message": "主机管理",
+    "description": "The generated-index page description for category 主机管理 in sidebar community"
+  },
+  "sidebar.community.category.常见问题": {
+    "message": "常见问题",
+    "description": "The label for category 常见问题 in sidebar community"
+  },
+  "sidebar.community.category.常见问题.link.generated-index.title": {
+    "message": "常见问题",
+    "description": "The generated-index page title for category 常见问题 in sidebar community"
+  },
+  "sidebar.community.category.常见问题.link.generated-index.description": {
+    "message": "常见问题",
+    "description": "The generated-index page description for category 常见问题 in sidebar community"
+  },
+  "sidebar.community.category.Gitee Pages 静态页面托管": {
+    "message": "Gitee Pages 静态页面托管",
+    "description": "The label for category Gitee Pages 静态页面托管 in sidebar community"
+  },
+  "sidebar.community.category.Gitee Pages 静态页面托管.link.generated-index.title": {
+    "message": "Gitee Pages",
+    "description": "The generated-index page title for category Gitee Pages 静态页面托管 in sidebar community"
+  },
+  "sidebar.community.category.Gitee Pages 静态页面托管.link.generated-index.description": {
+    "message": "Gitee Pages",
+    "description": "The generated-index page description for category Gitee Pages 静态页面托管 in sidebar community"
+  },
+  "sidebar.community.category.代码文档生成服务": {
+    "message": "代码文档生成服务",
+    "description": "The label for category 代码文档生成服务 in sidebar community"
+  },
+  "sidebar.community.category.代码文档生成服务.link.generated-index.title": {
+    "message": "文档生成与托管",
+    "description": "The generated-index page title for category 代码文档生成服务 in sidebar community"
+  },
+  "sidebar.community.category.代码文档生成服务.link.generated-index.description": {
+    "message": "文档生成与托管",
+    "description": "The generated-index page description for category 代码文档生成服务 in sidebar community"
+  },
+  "sidebar.community.category.IDE 插件集成": {
+    "message": "IDE 插件集成",
+    "description": "The label for category IDE 插件集成 in sidebar community"
+  },
+  "sidebar.community.category.IDE 插件集成.link.generated-index.title": {
+    "message": "IDE 插件集成",
+    "description": "The generated-index page title for category IDE 插件集成 in sidebar community"
+  },
+  "sidebar.community.category.IDE 插件集成.link.generated-index.description": {
+    "message": "IDE 插件集成",
+    "description": "The generated-index page description for category IDE 插件集成 in sidebar community"
+  },
+  "sidebar.community.category.第三方服务集成": {
+    "message": "第三方服务集成",
+    "description": "The label for category 第三方服务集成 in sidebar community"
+  },
+  "sidebar.community.category.第三方服务集成.link.generated-index.title": {
+    "message": "第三方服务集成",
+    "description": "The generated-index page title for category 第三方服务集成 in sidebar community"
+  },
+  "sidebar.community.category.第三方服务集成.link.generated-index.description": {
+    "message": "第三方服务集成文档",
+    "description": "The generated-index page description for category 第三方服务集成 in sidebar community"
+  },
+  "sidebar.community.category.更新日志": {
+    "message": "更新日志",
+    "description": "The label for category 更新日志 in sidebar community"
+  },
+  "sidebar.community.category.更新日志.link.generated-index.title": {
+    "message": "更新日志",
+    "description": "The generated-index page title for category 更新日志 in sidebar community"
+  },
+  "sidebar.community.category.更新日志.link.generated-index.description": {
+    "message": "更新日志",
+    "description": "The generated-index page description for category 更新日志 in sidebar community"
+  },
+  "sidebar.community.category.服务协议": {
+    "message": "服务协议",
+    "description": "The label for category 服务协议 in sidebar community"
+  },
+  "sidebar.community.category.服务协议.link.generated-index.title": {
+    "message": "服务协议",
+    "description": "The generated-index page title for category 服务协议 in sidebar community"
+  },
+  "sidebar.community.category.服务协议.link.generated-index.description": {
+    "message": "服务协议文档",
+    "description": "The generated-index page description for category 服务协议 in sidebar community"
+  },
+  "sidebar.community.link.网站 ": {
+    "message": "网站 ",
+    "description": "The label for link 网站  in sidebar community, linking to https://gitee.ru/terms"
+  },
+  "sidebar.community.link.个人 ": {
+    "message": "个人 ",
+    "description": "The label for link 个人  in sidebar community, linking to https://gitee.ru/user_terms"
+  },
+  "sidebar.community.doc.Gitee 开源软件 ": {
+    "message": "Gitee 开源软件 ",
+    "description": "The label for the doc item Gitee 开源软件  in sidebar community, linking to the doc repository/file-operate/intro"
+  },
+  "sidebar.community.doc.开源 - 价值、生态": {
+    "message": "开源 - 价值、生态",
+    "description": "The label for the doc item 开源 - 价值、生态 in sidebar community, linking to the doc repository/file-operate/intro"
+  },
+  "sidebar.community.doc.文件创建、更新、删除": {
+    "message": "文件创建、更新、删除",
+    "description": "The label for the doc item 文件创建、更新、删除 in sidebar community, linking to the doc repository/file-operate/creation-update-and-deletion"
+  },
+  "sidebar.community.doc.重命名、移动文件": {
+    "message": "重命名、移动文件",
+    "description": "The label for the doc item 重命名、移动文件 in sidebar community, linking to the doc repository/file-operate/rename-and-move"
+  },
+  "sidebar.community.doc.文件对比": {
+    "message": "文件对比",
+    "description": "The label for the doc item 文件对比 in sidebar community, linking to the doc repository/file-operate/compare"
+  },
+  "sidebar.community.doc.文件历史版本、提交历史查看": {
+    "message": "文件历史版本、提交历史查看",
+    "description": "The label for the doc item 文件历史版本、提交历史查看 in sidebar community, linking to the doc repository/file-operate/history"
+  },
+  "sidebar.community.doc.筛选查看": {
+    "message": "筛选查看",
+    "description": "The label for the doc item 筛选查看 in sidebar community, linking to the doc repository/branch/intro"
+  },
+  "sidebar.community.doc.创建分支": {
+    "message": "创建分支",
+    "description": "The label for the doc item 创建分支 in sidebar community, linking to the doc repository/branch/intro"
+  },
+  "sidebar.community.doc.设置默认分支": {
+    "message": "设置默认分支",
+    "description": "The label for the doc item 设置默认分支 in sidebar community, linking to the doc repository/branch/intro"
+  },
+  "sidebar.community.doc.合并分支": {
+    "message": "合并分支",
+    "description": "The label for the doc item 合并分支 in sidebar community, linking to the doc repository/branch/merge"
+  },
+  "sidebar.community.doc.删除分支": {
+    "message": "删除分支",
+    "description": "The label for the doc item 删除分支 in sidebar community, linking to the doc repository/branch/intro"
+  },
+  "sidebar.community.doc.保护分支策略": {
+    "message": "保护分支策略",
+    "description": "The label for the doc item 保护分支策略 in sidebar community, linking to the doc repository/branch/intro"
+  },
+  "sidebar.community.doc.什么是发行版（Release）": {
+    "message": "什么是发行版（Release）",
+    "description": "The label for the doc item 什么是发行版（Release） in sidebar community, linking to the doc repository/release/intro"
+  },
+  "sidebar.community.doc.创建发行版": {
+    "message": "创建发行版",
+    "description": "The label for the doc item 创建发行版 in sidebar community, linking to the doc repository/release/intro"
+  },
+  "sidebar.community.doc.查看发行版": {
+    "message": "查看发行版",
+    "description": "The label for the doc item 查看发行版 in sidebar community, linking to the doc repository/release/intro"
+  },
+  "sidebar.community.doc.更新/删除发行版": {
+    "message": "更新/删除发行版",
+    "description": "The label for the doc item 更新/删除发行版 in sidebar community, linking to the doc repository/release/intro"
+  },
+  "sidebar.community.doc.公钥管理": {
+    "message": "公钥管理",
+    "description": "The label for the doc item 公钥管理 in sidebar community, linking to the doc repository/ssh/settings"
+  },
+  "sidebar.community.doc.生成、添加 SSH 公钥": {
+    "message": "生成、添加 SSH 公钥",
+    "description": "The label for the doc item 生成、添加 SSH 公钥 in sidebar community, linking to the doc repository/ssh/how to generate and add SSH public key"
+  },
+  "sidebar.community.doc.如何在 Gitee 上使用 GPG": {
+    "message": "如何在 Gitee 上使用 GPG",
+    "description": "The label for the doc item 如何在 Gitee 上使用 GPG in sidebar community, linking to the doc repository/ssh/how to use GPG on Gitee"
+  },
+  "sidebar.community.doc.Git 配置多个 SSH-Key": {
+    "message": "Git 配置多个 SSH-Key",
+    "description": "The label for the doc item Git 配置多个 SSH-Key in sidebar community, linking to the doc repository/ssh/how to configure multiple SSH-Keys"
+  },
+  "sidebar.community.doc.SSHKey 常见错误和问题": {
+    "message": "SSHKey 常见错误和问题",
+    "description": "The label for the doc item SSHKey 常见错误和问题 in sidebar community, linking to the doc repository/ssh/questions"
+  },
+  "sidebar.community.doc.仓库访问统计": {
+    "message": "仓库访问统计",
+    "description": "The label for the doc item 仓库访问统计 in sidebar community, linking to the doc repository/statistics/access"
+  },
+  "sidebar.community.doc.仓库提交数据统计": {
+    "message": "仓库提交数据统计",
+    "description": "The label for the doc item 仓库提交数据统计 in sidebar community, linking to the doc repository/statistics/intro"
+  },
+  "sidebar.community.doc.仓库网络图": {
+    "message": "仓库网络图",
+    "description": "The label for the doc item 仓库网络图 in sidebar community, linking to the doc repository/statistics/graph"
+  },
+  "sidebar.community.doc.仓库成员角色说明": {
+    "message": "仓库成员角色说明",
+    "description": "The label for the doc item 仓库成员角色说明 in sidebar community, linking to the doc repository/member/permission"
+  },
+  "sidebar.community.doc.添加仓库成员": {
+    "message": "添加仓库成员",
+    "description": "The label for the doc item 添加仓库成员 in sidebar community, linking to the doc repository/member/add"
+  },
+  "sidebar.community.doc.移除仓库成员": {
+    "message": "移除仓库成员",
+    "description": "The label for the doc item 移除仓库成员 in sidebar community, linking to the doc repository/member/delete"
+  },
+  "sidebar.community.doc.Issue 功能简介": {
+    "message": "Issue 功能简介",
+    "description": "The label for the doc item Issue 功能简介 in sidebar community, linking to the doc base/issue/intro"
+  },
+  "sidebar.community.doc.创建 Issue": {
+    "message": "创建 Issue",
+    "description": "The label for the doc item 创建 Issue in sidebar community, linking to the doc base/issue/new"
+  },
+  "sidebar.community.doc.Issue 指派": {
+    "message": "Issue 指派",
+    "description": "The label for the doc item Issue 指派 in sidebar community, linking to the doc base/issue/assignment"
+  },
+  "sidebar.community.doc.Issue 任务优先级": {
+    "message": "Issue 任务优先级",
+    "description": "The label for the doc item Issue 任务优先级 in sidebar community, linking to the doc base/issue/priority"
+  },
+  "sidebar.community.doc.标签管理": {
+    "message": "标签管理",
+    "description": "The label for the doc item 标签管理 in sidebar community, linking to the doc base/pullrequest/tag"
+  },
+  "sidebar.community.doc.里程碑管理": {
+    "message": "里程碑管理",
+    "description": "The label for the doc item 里程碑管理 in sidebar community, linking to the doc base/pullrequest/milestone"
+  },
+  "sidebar.community.doc.任务看板": {
+    "message": "任务看板",
+    "description": "The label for the doc item 任务看板 in sidebar community, linking to the doc base/issue/sidebar"
+  },
+  "sidebar.community.doc.Issue 关联 Pull Request": {
+    "message": "Issue 关联 Pull Request",
+    "description": "The label for the doc item Issue 关联 Pull Request in sidebar community, linking to the doc base/issue/PR"
+  },
+  "sidebar.community.doc.Pull Request 功能简介": {
+    "message": "Pull Request 功能简介",
+    "description": "The label for the doc item Pull Request 功能简介 in sidebar community, linking to the doc base/pullrequest/intro"
+  },
+  "sidebar.community.doc.创建 Pull Request": {
+    "message": "创建 Pull Request",
+    "description": "The label for the doc item 创建 Pull Request in sidebar community, linking to the doc base/pullrequest/intro"
+  },
+  "sidebar.community.doc.Pull Request 草稿功能": {
+    "message": "Pull Request 草稿功能",
+    "description": "The label for the doc item Pull Request 草稿功能 in sidebar community, linking to the doc base/pullrequest/draft"
+  },
+  "sidebar.community.doc.合并 Pull Request": {
+    "message": "合并 Pull Request",
+    "description": "The label for the doc item 合并 Pull Request in sidebar community, linking to the doc base/pullrequest/intro"
+  },
+  "sidebar.community.doc.代码审查指派": {
+    "message": "代码审查指派",
+    "description": "The label for the doc item 代码审查指派 in sidebar community, linking to the doc base/pullrequest/intro"
+  },
+  "sidebar.community.doc.代码评论": {
+    "message": "代码评论",
+    "description": "The label for the doc item 代码评论 in sidebar community, linking to the doc base/pullrequest/comment"
+  },
+  "sidebar.community.doc.代码「已阅」功能": {
+    "message": "代码「已阅」功能",
+    "description": "The label for the doc item 代码「已阅」功能 in sidebar community, linking to the doc base/pullrequest/check"
+  },
+  "sidebar.community.doc.缺陷扫描": {
+    "message": "缺陷扫描",
+    "description": "The label for the doc item 缺陷扫描 in sidebar community, linking to the doc base/pullrequest/intro"
+  },
+  "sidebar.community.doc.规范扫描": {
+    "message": "规范扫描",
+    "description": "The label for the doc item 规范扫描 in sidebar community, linking to the doc base/pullrequest/intro"
+  },
+  "sidebar.community.doc.依赖项扫描": {
+    "message": "依赖项扫描",
+    "description": "The label for the doc item 依赖项扫描 in sidebar community, linking to the doc base/pullrequest/dependency"
+  },
+  "sidebar.community.doc.Pull Request 质量门禁": {
+    "message": "Pull Request 质量门禁",
+    "description": "The label for the doc item Pull Request 质量门禁 in sidebar community, linking to the doc base/pullrequest/quality-access"
+  },
+  "sidebar.community.doc.Pull Request 关联 Issue": {
+    "message": "Pull Request 关联 Issue",
+    "description": "The label for the doc item Pull Request 关联 Issue in sidebar community, linking to the doc base/pullrequest/issue"
+  },
+  "sidebar.community.doc.WebHoo 简介": {
+    "message": "WebHoo 简介",
+    "description": "The label for the doc item WebHoo 简介 in sidebar community, linking to the doc webhook/gitee-webhook-intro"
+  },
+  "sidebar.community.doc.添加 WebHook": {
+    "message": "添加 WebHook",
+    "description": "The label for the doc item 添加 WebHook in sidebar community, linking to the doc webhook/how-to-add-webhook"
+  },
+  "sidebar.community.doc.删除 WebHook": {
+    "message": "删除 WebHook",
+    "description": "The label for the doc item 删除 WebHook in sidebar community, linking to the doc webhook/how-to-delete-webhook"
+  },
+  "sidebar.community.doc.WebHook 推送数据类型说明": {
+    "message": "WebHook 推送数据类型说明",
+    "description": "The label for the doc item WebHook 推送数据类型说明 in sidebar community, linking to the doc webhook/gitee-webhook-push-data-type"
+  },
+  "sidebar.community.doc.WebHook 推送数据格式说明": {
+    "message": "WebHook 推送数据格式说明",
+    "description": "The label for the doc item WebHook 推送数据格式说明 in sidebar community, linking to the doc webhook/gitee-webhook-push-data-format"
+  },
+  "sidebar.community.doc.WebHook 密钥验证和验证算法": {
+    "message": "WebHook 密钥验证和验证算法",
+    "description": "The label for the doc item WebHook 密钥验证和验证算法 in sidebar community, linking to the doc webhook/how-to-verify-webhook-keys"
+  },
+  "sidebar.community.doc.WebHook 对 Slack 的支持": {
+    "message": "WebHook 对 Slack 的支持",
+    "description": "The label for the doc item WebHook 对 Slack 的支持 in sidebar community, linking to the doc webhook/webhook-for-slack"
+  },
+  "sidebar.community.doc.WebHook 对企业微信的支持": {
+    "message": "WebHook 对企业微信的支持",
+    "description": "The label for the doc item WebHook 对企业微信的支持 in sidebar community, linking to the doc webhook/webhook-for-wecom-robot"
+  },
+  "sidebar.community.doc.WebHook 对钉钉机器人的支持": {
+    "message": "WebHook 对钉钉机器人的支持",
+    "description": "The label for the doc item WebHook 对钉钉机器人的支持 in sidebar community, linking to the doc webhook/webhook-for-dingtalk-robot"
+  },
+  "sidebar.community.doc.WebHook 对飞书机器人的支持": {
+    "message": "WebHook 对飞书机器人的支持",
+    "description": "The label for the doc item WebHook 对飞书机器人的支持 in sidebar community, linking to the doc webhook/webhook-for-feishu-robot"
+  },
+  "sidebar.community.doc.Gitee Scan 代码扫描": {
+    "message": "Gitee Scan 代码扫描",
+    "description": "The label for the doc item Gitee Scan 代码扫描 in sidebar community, linking to the doc services/gitee-scan"
+  },
+  "sidebar.community.doc.Sonar 代码质量分析": {
+    "message": "Sonar 代码质量分析",
+    "description": "The label for the doc item Sonar 代码质量分析 in sidebar community, linking to the doc services/SonarQube"
+  },
+  "sidebar.community.doc.JavaDoc 文档生成": {
+    "message": "JavaDoc 文档生成",
+    "description": "The label for the doc item JavaDoc 文档生成 in sidebar community, linking to the doc services/apidocs/JavaDoc"
+  },
+  "sidebar.community.doc.PHPDoc 文档生成": {
+    "message": "PHPDoc 文档生成",
+    "description": "The label for the doc item PHPDoc 文档生成 in sidebar community, linking to the doc services/apidocs/PHPDoc"
+  },
+  "sidebar.community.doc.安卓在线构建": {
+    "message": "安卓在线构建",
+    "description": "The label for the doc item 安卓在线构建 in sidebar community, linking to the doc services/Android-build-online"
+  },
+  "sidebar.community.doc.第三方集成服务说明": {
+    "message": "第三方集成服务说明",
+    "description": "The label for the doc item 第三方集成服务说明 in sidebar community, linking to the doc devops/connect/intro"
+  },
+  "sidebar.community.doc.Jenkins 插件": {
+    "message": "Jenkins 插件",
+    "description": "The label for the doc item Jenkins 插件 in sidebar community, linking to the doc devops/connect/Jenkins-Plugin"
+  },
+  "sidebar.community.doc.TencentHub": {
+    "message": "TencentHub",
+    "description": "The label for the doc item TencentHub in sidebar community, linking to the doc devops/connect/TencentHub"
+  },
+  "sidebar.community.doc.腾讯云托管": {
+    "message": "腾讯云托管",
+    "description": "The label for the doc item 腾讯云托管 in sidebar community, linking to the doc devops/connect/Tencent-CloudBase"
+  },
+  "sidebar.community.doc.腾讯云 ServerlessFramework": {
+    "message": "腾讯云 ServerlessFramework",
+    "description": "The label for the doc item 腾讯云 ServerlessFramework in sidebar community, linking to the doc devops/connect/Tencent-Serverless-Framework"
+  },
+  "sidebar.community.doc.百度效率云": {
+    "message": "百度效率云",
+    "description": "The label for the doc item 百度效率云 in sidebar community, linking to the doc devops/connect/Baidu-XLY"
+  },
+  "sidebar.community.doc.华为容器云": {
+    "message": "华为容器云",
+    "description": "The label for the doc item 华为容器云 in sidebar community, linking to the doc devops/connect/HUAWEI-Cloud-ContainerOps"
+  },
+  "sidebar.community.doc.华为微服务": {
+    "message": "华为微服务",
+    "description": "The label for the doc item 华为微服务 in sidebar community, linking to the doc devops/connect/HUAWEI-Cloud-SWR"
+  },
+  "sidebar.community.doc.华为云 ContainerOps 服务": {
+    "message": "华为云 ContainerOps 服务",
+    "description": "The label for the doc item 华为云 ContainerOps 服务 in sidebar community, linking to the doc devops/connect/HUAWEI-Cloud-Service-Engine"
+  },
+  "sidebar.community.doc.阿里云 CodePipeline": {
+    "message": "阿里云 CodePipeline",
+    "description": "The label for the doc item 阿里云 CodePipeline in sidebar community, linking to the doc devops/connect/Aliyun-CodePipeline"
+  },
+  "sidebar.community.doc.AzurePipeLine ": {
+    "message": "AzurePipeLine ",
+    "description": "The label for the doc item AzurePipeLine  in sidebar community, linking to the doc devops/connect/Azure-PipeLine"
+  },
+  "sidebar.community.doc.奇安信代码卫士": {
+    "message": "奇安信代码卫士",
+    "description": "The label for the doc item 奇安信代码卫士 in sidebar community, linking to the doc devops/connect/Qi-AnXin-CodeSafe"
+  },
+  "sidebar.community.doc.Composer 集成（packagist.org）": {
+    "message": "Composer 集成（packagist.org）",
+    "description": "The label for the doc item Composer 集成（packagist.org） in sidebar community, linking to the doc devops/connect/how-to-automatically-publish-to-packagist.org"
+  },
+  "sidebar.community.doc.2017": {
+    "message": "2017",
+    "description": "The label for the doc item 2017 in sidebar community, linking to the doc change-log/gitee-update-2017"
+  },
+  "sidebar.community.doc.2018": {
+    "message": "2018",
+    "description": "The label for the doc item 2018 in sidebar community, linking to the doc change-log/gitee-update-2018"
+  },
+  "sidebar.community.doc.2019": {
+    "message": "2019",
+    "description": "The label for the doc item 2019 in sidebar community, linking to the doc change-log/gitee-update-2019"
+  },
+  "sidebar.community.doc.2020": {
+    "message": "2020",
+    "description": "The label for the doc item 2020 in sidebar community, linking to the doc change-log/gitee-update-2020"
+  },
+  "sidebar.community.doc.2021": {
+    "message": "2021",
+    "description": "The label for the doc item 2021 in sidebar community, linking to the doc change-log/gitee-update-2021"
+  },
+  "sidebar.community.doc.2022": {
+    "message": "2022",
+    "description": "The label for the doc item 2022 in sidebar community, linking to the doc change-log/gitee-update-2022"
+  },
+  "sidebar.enterprise.category.产品动态 ": {
+    "message": "产品动态 ",
+    "description": "The label for category 产品动态  in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.产品动态 .link.generated-index.title": {
+    "message": "产品动态",
+    "description": "The generated-index page title for category 产品动态  in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.编排与执行": {
+    "message": "编排与执行",
+    "description": "The label for category 编排与执行 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.编排与执行.link.generated-index.title": {
+    "message": "编排与执行",
+    "description": "The generated-index page title for category 编排与执行 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.流水线源": {
+    "message": "流水线源",
+    "description": "The label for category 流水线源 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.流水线源.link.generated-index.title": {
+    "message": "流水线源",
+    "description": "The generated-index page title for category 流水线源 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.触发流水线运行": {
+    "message": "触发流水线运行",
+    "description": "The label for category 触发流水线运行 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.触发流水线运行.link.generated-index.title": {
+    "message": "触发流水线运行",
+    "description": "The generated-index page title for category 触发流水线运行 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.任务管理": {
+    "message": "任务管理",
+    "description": "The label for category 任务管理 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.任务管理.link.generated-index.title": {
+    "message": "任务管理",
+    "description": "The generated-index page title for category 任务管理 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.编译": {
+    "message": "编译",
+    "description": "The label for category 编译 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.编译.link.generated-index.title": {
+    "message": "编译",
+    "description": "The generated-index page title for category 编译 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.测试": {
+    "message": "测试",
+    "description": "The label for category 测试 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.测试.link.generated-index.title": {
+    "message": "测试",
+    "description": "The generated-index page title for category 测试 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.扫描": {
+    "message": "扫描",
+    "description": "The label for category 扫描 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.扫描.link.generated-index.title": {
+    "message": "扫描",
+    "description": "The generated-index page title for category 扫描 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.发布": {
+    "message": "发布",
+    "description": "The label for category 发布 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.发布.link.generated-index.title": {
+    "message": "发布",
+    "description": "The generated-index page title for category 发布 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.部署": {
+    "message": "部署",
+    "description": "The label for category 部署 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.部署.link.generated-index.title": {
+    "message": "部署",
+    "description": "The generated-index page title for category 部署 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.工具": {
+    "message": "工具",
+    "description": "The label for category 工具 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.工具.link.generated-index.title": {
+    "message": "工具",
+    "description": "The generated-index page title for category 工具 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.变量": {
+    "message": "变量",
+    "description": "The label for category 变量 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.变量.link.generated-index.title": {
+    "message": "变量",
+    "description": "The generated-index page title for category 变量 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.通知": {
+    "message": "通知",
+    "description": "The label for category 通知 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.通知.link.generated-index.title": {
+    "message": "通知",
+    "description": "The generated-index page title for category 通知 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.企业设置": {
+    "message": "企业设置",
+    "description": "The label for category 企业设置 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.企业设置.link.generated-index.title": {
+    "message": "企业设置",
+    "description": "The generated-index page title for category 企业设置 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.主机管理": {
+    "message": "主机管理",
+    "description": "The label for category 主机管理 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.主机管理.link.generated-index.title": {
+    "message": "主机管理",
+    "description": "The generated-index page title for category 主机管理 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.凭证管理": {
+    "message": "凭证管理",
+    "description": "The label for category 凭证管理 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.凭证管理.link.generated-index.title": {
+    "message": "凭证管理",
+    "description": "The generated-index page title for category 凭证管理 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.构建问题": {
+    "message": "构建问题",
+    "description": "The label for category 构建问题 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.构建问题.link.generated-index.title": {
+    "message": "构建问题",
+    "description": "The generated-index page title for category 构建问题 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.主机管理问题": {
+    "message": "主机管理问题",
+    "description": "The label for category 主机管理问题 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.主机管理问题.link.generated-index.title": {
+    "message": "主机管理问题",
+    "description": "The generated-index page title for category 主机管理问题 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.计费规则": {
+    "message": "计费规则",
+    "description": "The label for category 计费规则 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.计费规则.link.generated-index.title": {
+    "message": "计费规则",
+    "description": "The generated-index page title for category 计费规则 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.付款、发票问题 ": {
+    "message": "付款、发票问题 ",
+    "description": "The label for category 付款、发票问题  in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.Gitee Project 常见问题": {
+    "message": "Gitee Project 常见问题",
+    "description": "The label for category Gitee Project 常见问题 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.Gitee Project 常见问题.link.generated-index.title": {
+    "message": "Gitee Project 常见问题",
+    "description": "The generated-index page title for category Gitee Project 常见问题 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.Gitee Code 常见问题 ": {
+    "message": "Gitee Code 常见问题 ",
+    "description": "The label for category Gitee Code 常见问题  in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.企业管理常见问题": {
+    "message": "企业管理常见问题",
+    "description": "The label for category 企业管理常见问题 in sidebar enterprise"
+  },
+  "sidebar.enterprise.category.企业管理常见问题.link.generated-index.title": {
+    "message": "企业管理常见问题",
+    "description": "The generated-index page title for category 企业管理常见问题 in sidebar enterprise"
+  },
+  "sidebar.enterprise.doc.Gitee 流水线是什么": {
+    "message": "Gitee 流水线是什么",
+    "description": "The label for the doc item Gitee 流水线是什么 in sidebar enterprise, linking to the doc enterprise/pipeline/初识 Gitee 流水线"
+  },
+  "sidebar.enterprise.doc.使用流水线": {
+    "message": "使用流水线",
+    "description": "The label for the doc item 使用流水线 in sidebar enterprise, linking to the doc enterprise/pipeline/pipeline/使用流水线"
+  },
+  "sidebar.enterprise.doc.创建流水线": {
+    "message": "创建流水线",
+    "description": "The label for the doc item 创建流水线 in sidebar enterprise, linking to the doc enterprise/pipeline/pipeline/创建流水线"
+  },
+  "sidebar.enterprise.doc.流水线源": {
+    "message": "流水线源",
+    "description": "The label for the doc item 流水线源 in sidebar enterprise, linking to the doc enterprise/pipeline/pipeline/source/流水线源"
+  },
+  "sidebar.enterprise.doc.配置代码源": {
+    "message": "配置代码源",
+    "description": "The label for the doc item 配置代码源 in sidebar enterprise, linking to the doc enterprise/pipeline/pipeline/source/配置代码源"
+  },
+  "sidebar.enterprise.doc.代码提交触发": {
+    "message": "代码提交触发",
+    "description": "The label for the doc item 代码提交触发 in sidebar enterprise, linking to the doc enterprise/pipeline/pipeline/source/代码提交触发"
+  },
+  "sidebar.enterprise.doc.配置流水线源": {
+    "message": "配置流水线源",
+    "description": "The label for the doc item 配置流水线源 in sidebar enterprise, linking to the doc enterprise/pipeline/pipeline/source/配置流水线源"
+  },
+  "sidebar.enterprise.doc.配置 Gitee 制品库源": {
+    "message": "配置 Gitee 制品库源",
+    "description": "The label for the doc item 配置 Gitee 制品库源 in sidebar enterprise, linking to the doc enterprise/pipeline/pipeline/source/配置 Gitee 制品库源"
+  },
+  "sidebar.enterprise.doc.编排流水线": {
+    "message": "编排流水线",
+    "description": "The label for the doc item 编排流水线 in sidebar enterprise, linking to the doc enterprise/pipeline/pipeline/编排流水线"
+  },
+  "sidebar.enterprise.doc.触发流水线运行": {
+    "message": "触发流水线运行",
+    "description": "The label for the doc item 触发流水线运行 in sidebar enterprise, linking to the doc enterprise/pipeline/pipeline/trigger/触发流水线运行"
+  },
+  "sidebar.enterprise.doc.定时触发流水线": {
+    "message": "定时触发流水线",
+    "description": "The label for the doc item 定时触发流水线 in sidebar enterprise, linking to the doc enterprise/pipeline/pipeline/trigger/定时触发流水线"
+  },
+  "sidebar.enterprise.doc.阻塞构建": {
+    "message": "阻塞构建",
+    "description": "The label for the doc item 阻塞构建 in sidebar enterprise, linking to the doc enterprise/pipeline/pipeline/阻塞构建"
+  },
+  "sidebar.enterprise.doc.任务介绍": {
+    "message": "任务介绍",
+    "description": "The label for the doc item 任务介绍 in sidebar enterprise, linking to the doc enterprise/pipeline/plugin/任务介绍"
+  },
+  "sidebar.enterprise.doc.Maven 构建": {
+    "message": "Maven 构建",
+    "description": "The label for the doc item Maven 构建 in sidebar enterprise, linking to the doc enterprise/pipeline/plugin/compile/Maven 构建"
+  },
+  "sidebar.enterprise.doc.Nodejs 构建": {
+    "message": "Nodejs 构建",
+    "description": "The label for the doc item Nodejs 构建 in sidebar enterprise, linking to the doc enterprise/pipeline/plugin/compile/Nodejs 构建"
+  },
+  "sidebar.enterprise.doc.镜像构建": {
+    "message": "镜像构建",
+    "description": "The label for the doc item 镜像构建 in sidebar enterprise, linking to the doc enterprise/pipeline/plugin/compile/镜像构建"
+  },
+  "sidebar.enterprise.doc.Golang 构建": {
+    "message": "Golang 构建",
+    "description": "The label for the doc item Golang 构建 in sidebar enterprise, linking to the doc enterprise/pipeline/plugin/compile/Golang 构建"
+  },
+  "sidebar.enterprise.doc.Gradle 构建": {
+    "message": "Gradle 构建",
+    "description": "The label for the doc item Gradle 构建 in sidebar enterprise, linking to the doc enterprise/pipeline/plugin/compile/Gradle 构建"
+  },
+  "sidebar.enterprise.doc.Ant 构建": {
+    "message": "Ant 构建",
+    "description": "The label for the doc item Ant 构建 in sidebar enterprise, linking to the doc enterprise/pipeline/plugin/compile/Ant 构建"
+  },
+  "sidebar.enterprise.doc.GCC 构建": {
+    "message": "GCC 构建",
+    "description": "The label for the doc item GCC 构建 in sidebar enterprise, linking to the doc enterprise/pipeline/plugin/compile/GCC 构建"
+  },
+  "sidebar.enterprise.doc.Ruby 构建": {
+    "message": "Ruby 构建",
+    "description": "The label for the doc item Ruby 构建 in sidebar enterprise, linking to the doc enterprise/pipeline/plugin/compile/Ruby 构建"
+  },
+  "sidebar.enterprise.doc.PHP 构建": {
+    "message": "PHP 构建",
+    "description": "The label for the doc item PHP 构建 in sidebar enterprise, linking to the doc enterprise/pipeline/plugin/compile/PHP 构建"
+  },
+  "sidebar.enterprise.doc..NET Core 构建": {
+    "message": ".NET Core 构建",
+    "description": "The label for the doc item .NET Core 构建 in sidebar enterprise, linking to the doc enterprise/pipeline/plugin/compile/DotNet 构建"
+  },
+  "sidebar.enterprise.doc.Maven 单元测试": {
+    "message": "Maven 单元测试",
+    "description": "The label for the doc item Maven 单元测试 in sidebar enterprise, linking to the doc enterprise/pipeline/plugin/test/Maven 单元测试"
+  },
+  "sidebar.enterprise.doc.Nodejs 单元测试": {
+    "message": "Nodejs 单元测试",
+    "description": "The label for the doc item Nodejs 单元测试 in sidebar enterprise, linking to the doc enterprise/pipeline/plugin/test/Nodejs 单元测试"
+  },
+  "sidebar.enterprise.doc.Gradle 单元测试": {
+    "message": "Gradle 单元测试",
+    "description": "The label for the doc item Gradle 单元测试 in sidebar enterprise, linking to the doc enterprise/pipeline/plugin/test/Gradle 单元测试"
+  },
+  "sidebar.enterprise.doc.PHP 单元测试": {
+    "message": "PHP 单元测试",
+    "description": "The label for the doc item PHP 单元测试 in sidebar enterprise, linking to the doc enterprise/pipeline/plugin/test/PHP 单元测试"
+  },
+  "sidebar.enterprise.doc.Python 单元测试": {
+    "message": "Python 单元测试",
+    "description": "The label for the doc item Python 单元测试 in sidebar enterprise, linking to the doc enterprise/pipeline/plugin/test/Python 单元测试"
+  },
+  "sidebar.enterprise.doc.Golang 单元测试": {
+    "message": "Golang 单元测试",
+    "description": "The label for the doc item Golang 单元测试 in sidebar enterprise, linking to the doc enterprise/pipeline/plugin/test/Golang 单元测试"
+  },
+  "sidebar.enterprise.doc.Jacoco 覆盖率采集": {
+    "message": "Jacoco 覆盖率采集",
+    "description": "The label for the doc item Jacoco 覆盖率采集 in sidebar enterprise, linking to the doc enterprise/pipeline/plugin/test/Jacoco 覆盖率采集"
+  },
+  "sidebar.enterprise.doc.Cobertura 覆盖率采集": {
+    "message": "Cobertura 覆盖率采集",
+    "description": "The label for the doc item Cobertura 覆盖率采集 in sidebar enterprise, linking to the doc enterprise/pipeline/plugin/test/Cobertura 覆盖率采集"
+  },
+  "sidebar.enterprise.doc.OpenSCA 开源组件检测": {
+    "message": "OpenSCA 开源组件检测",
+    "description": "The label for the doc item OpenSCA 开源组件检测 in sidebar enterprise, linking to the doc enterprise/pipeline/plugin/scan/OpenSCA 开源组件检测"
+  },
+  "sidebar.enterprise.doc.上传制品": {
+    "message": "上传制品",
+    "description": "The label for the doc item 上传制品 in sidebar enterprise, linking to the doc enterprise/pipeline/plugin/publish/上传制品"
+  },
+  "sidebar.enterprise.doc.发布": {
+    "message": "发布",
+    "description": "The label for the doc item 发布 in sidebar enterprise, linking to the doc enterprise/pipeline/plugin/publish/发布"
+  },
+  "sidebar.enterprise.doc.主机滚动部署": {
+    "message": "主机滚动部署",
+    "description": "The label for the doc item 主机滚动部署 in sidebar enterprise, linking to the doc enterprise/pipeline/plugin/deploy/主机滚动部署"
+  },
+  "sidebar.enterprise.doc.主机部署": {
+    "message": "主机部署",
+    "description": "The label for the doc item 主机部署 in sidebar enterprise, linking to the doc enterprise/pipeline/plugin/deploy/主机部署"
+  },
+  "sidebar.enterprise.doc.K8S部署": {
+    "message": "K8S部署",
+    "description": "The label for the doc item K8S部署 in sidebar enterprise, linking to the doc enterprise/pipeline/plugin/deploy/K8S部署"
+  },
+  "sidebar.enterprise.doc.Helm Chart部署": {
+    "message": "Helm Chart部署",
+    "description": "The label for the doc item Helm Chart部署 in sidebar enterprise, linking to the doc enterprise/pipeline/plugin/deploy/Helm Chart部署"
+  },
+  "sidebar.enterprise.doc.基于镜像的脚本执行": {
+    "message": "基于镜像的脚本执行",
+    "description": "The label for the doc item 基于镜像的脚本执行 in sidebar enterprise, linking to the doc enterprise/pipeline/plugin/tool/基于镜像的脚本执行"
+  },
+  "sidebar.enterprise.doc.Shell 脚本执行": {
+    "message": "Shell 脚本执行",
+    "description": "The label for the doc item Shell 脚本执行 in sidebar enterprise, linking to the doc enterprise/pipeline/plugin/tool/Shell 脚本执行"
+  },
+  "sidebar.enterprise.doc.Jenkins 任务": {
+    "message": "Jenkins 任务",
+    "description": "The label for the doc item Jenkins 任务 in sidebar enterprise, linking to the doc enterprise/pipeline/plugin/tool/Jenkins 任务"
+  },
+  "sidebar.enterprise.doc.人工卡点": {
+    "message": "人工卡点",
+    "description": "The label for the doc item 人工卡点 in sidebar enterprise, linking to the doc enterprise/pipeline/plugin/tool/人工卡点"
+  },
+  "sidebar.enterprise.doc.系统级变量": {
+    "message": "系统级变量",
+    "description": "The label for the doc item 系统级变量 in sidebar enterprise, linking to the doc enterprise/pipeline/variable/系统级变量"
+  },
+  "sidebar.enterprise.doc.流水线级变量": {
+    "message": "流水线级变量",
+    "description": "The label for the doc item 流水线级变量 in sidebar enterprise, linking to the doc enterprise/pipeline/variable/流水线级变量"
+  },
+  "sidebar.enterprise.doc.通用变量": {
+    "message": "通用变量",
+    "description": "The label for the doc item 通用变量 in sidebar enterprise, linking to the doc enterprise/pipeline/variable/通用变量"
+  },
+  "sidebar.enterprise.doc.飞书机器人发送群消息": {
+    "message": "飞书机器人发送群消息",
+    "description": "The label for the doc item 飞书机器人发送群消息 in sidebar enterprise, linking to the doc enterprise/pipeline/notice/飞书机器人发送群消息"
+  },
+  "sidebar.enterprise.doc.企业微信机器人发送群消息": {
+    "message": "企业微信机器人发送群消息",
+    "description": "The label for the doc item 企业微信机器人发送群消息 in sidebar enterprise, linking to the doc enterprise/pipeline/notice/企业微信机器人发送群消息"
+  },
+  "sidebar.enterprise.doc.钉钉机器人发送群消息": {
+    "message": "钉钉机器人发送群消息",
+    "description": "The label for the doc item 钉钉机器人发送群消息 in sidebar enterprise, linking to the doc enterprise/pipeline/notice/钉钉机器人发送群消息"
+  },
+  "sidebar.enterprise.doc.使用 Webhook 发送通知": {
+    "message": "使用 Webhook 发送通知",
+    "description": "The label for the doc item 使用 Webhook 发送通知 in sidebar enterprise, linking to the doc enterprise/pipeline/notice/使用 Webhook 发送通知"
+  },
+  "sidebar.enterprise.doc.多云主机组管理": {
+    "message": "多云主机组管理",
+    "description": "The label for the doc item 多云主机组管理 in sidebar enterprise, linking to the doc enterprise/pipeline/enterprise-setup/host/多云主机组管理"
+  },
+  "sidebar.enterprise.doc.凭证管理": {
+    "message": "凭证管理",
+    "description": "The label for the doc item 凭证管理 in sidebar enterprise, linking to the doc enterprise/pipeline/enterprise-setup/certificate/凭证管理"
+  },
+  "sidebar.enterprise.doc.Java 语言": {
+    "message": "Java 语言",
+    "description": "The label for the doc item Java 语言 in sidebar enterprise, linking to the doc enterprise/pipeline/q&a/compile/Java 语言"
+  },
+  "sidebar.enterprise.doc.Nodejs 语言": {
+    "message": "Nodejs 语言",
+    "description": "The label for the doc item Nodejs 语言 in sidebar enterprise, linking to the doc enterprise/pipeline/q&a/compile/Nodejs 语言"
+  },
+  "sidebar.enterprise.doc.Golang 语言": {
+    "message": "Golang 语言",
+    "description": "The label for the doc item Golang 语言 in sidebar enterprise, linking to the doc enterprise/pipeline/q&a/compile/Golang 语言"
+  },
+  "sidebar.enterprise.doc.主机管理": {
+    "message": "主机管理",
+    "description": "The label for the doc item 主机管理 in sidebar enterprise, linking to the doc enterprise/pipeline/q&a/host/主机管理"
+  },
+  "sidebar.enterprise.doc.计费规则和产品定价": {
+    "message": "计费规则和产品定价",
+    "description": "The label for the doc item 计费规则和产品定价 in sidebar enterprise, linking to the doc enterprise/pipeline/billing/计费规则和产品定价"
+  },
+  "sidebar.enterprise.doc.联系我们": {
+    "message": "联系我们",
+    "description": "The label for the doc item 联系我们 in sidebar enterprise, linking to the doc enterprise/pipeline/contact/联系我们"
+  },
+  "sidebar.enterprise.doc.转移组织至企业账号": {
+    "message": "转移组织至企业账号",
+    "description": "The label for the doc item 转移组织至企业账号 in sidebar enterprise, linking to the doc enterprise/帐户管理/转移组织至企业账号"
+  },
+  "sidebar.enterprise.doc.企业创建者离职了如何处理": {
+    "message": "企业创建者离职了如何处理",
+    "description": "The label for the doc item 企业创建者离职了如何处理 in sidebar enterprise, linking to the doc enterprise/帐户管理/企业创建者离职了如何处理"
+  },
+  "sidebar.community.category.创建 Pull Request": {
+    "message": "创建 Pull Request",
+    "description": "The label for category 创建 Pull Request in sidebar community"
+  },
+  "sidebar.community.category.创建 Pull Request.link.generated-index.title": {
+    "message": "创建 Pull Request",
+    "description": "The generated-index page title for category 创建 Pull Request in sidebar community"
+  },
+  "sidebar.community.category.创建 Pull Request.link.generated-index.description": {
+    "message": "创建 Pull Request 的两种模式",
+    "description": "The generated-index page description for category 创建 Pull Request in sidebar community"
+  },
+  "sidebar.community.doc.筛选查看和创建分支": {
+    "message": "筛选查看和创建分支",
+    "description": "The label for the doc item 筛选查看和创建分支 in sidebar community, linking to the doc repository/branch/screen-and-create"
+  },
+  "sidebar.community.doc.设置默认分支和删除分支": {
+    "message": "设置默认分支和删除分支",
+    "description": "The label for the doc item 设置默认分支和删除分支 in sidebar community, linking to the doc repository/branch/default-and-delete"
+  },
+  "sidebar.community.doc.保护分支和保护分支的评审模式": {
+    "message": "保护分支和保护分支的评审模式",
+    "description": "The label for the doc item 保护分支和保护分支的评审模式 in sidebar community, linking to the doc repository/branch/protected-branches"
+  },
+  "sidebar.community.doc.什么是 Release（发行版）": {
+    "message": "什么是 Release（发行版）",
+    "description": "The label for the doc item 什么是 Release（发行版） in sidebar community, linking to the doc repository/release/what-is-release"
+  },
+  "sidebar.community.doc.创建 Release（发行版）": {
+    "message": "创建 Release（发行版）",
+    "description": "The label for the doc item 创建 Release（发行版） in sidebar community, linking to the doc repository/release/create"
+  },
+  "sidebar.community.doc.更新和删除 Release（发行版）": {
+    "message": "更新和删除 Release（发行版）",
+    "description": "The label for the doc item 更新和删除 Release（发行版） in sidebar community, linking to the doc repository/release/update-and-delete"
+  },
+  "sidebar.community.doc.仓库数据统计": {
+    "message": "仓库数据统计",
+    "description": "The label for the doc item 仓库数据统计 in sidebar community, linking to the doc repository/statistics/stats"
+  },
+  "sidebar.community.doc.Issue 简介": {
+    "message": "Issue 简介",
+    "description": "The label for the doc item Issue 简介 in sidebar community, linking to the doc base/issue/intro"
+  },
+  "sidebar.community.doc.“Fork + Pull”模式": {
+    "message": "“Fork + Pull”模式",
+    "description": "The label for the doc item “Fork + Pull”模式 in sidebar community, linking to the doc base/pullrequest/Fork+Pull"
+  },
+  "sidebar.community.doc.“Gitee 轻量级 PR”模式": {
+    "message": "“Gitee 轻量级 PR”模式",
+    "description": "The label for the doc item “Gitee 轻量级 PR”模式 in sidebar community, linking to the doc base/pullrequest/lite"
+  },
+  "sidebar.community.doc.Pull Request 支持扁平化 (Squash) 合并功能": {
+    "message": "Pull Request 支持扁平化 (Squash) 合并功能",
+    "description": "The label for the doc item Pull Request 支持扁平化 (Squash) 合并功能 in sidebar community, linking to the doc base/pullrequest/squash"
+  },
+  "sidebar.community.doc.代码审查": {
+    "message": "代码审查",
+    "description": "The label for the doc item 代码审查 in sidebar community, linking to the doc base/pullrequest/review"
+  },
+  "sidebar.community.doc.缺陷/规范扫描": {
+    "message": "缺陷/规范扫描",
+    "description": "The label for the doc item 缺陷/规范扫描 in sidebar community, linking to the doc base/pullrequest/defect"
+  }
+}

@@ -1,0 +1,8 @@
+app:
+  auth_server: "http://giteerussia.org"
+  auth_timeout: 20s
+  private_token: "usertoken"
+
+log:
+  access: "${APPDIR}/logs/hook-access.log"
+  error: "${APPDIR}/logs/hook-error.log"

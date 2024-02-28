@@ -1,0 +1,42 @@
+/*
+Hide color mode toggle in small viewports
+ */
+@media (max-width: 996px) {
+  .colorModeToggle {
+    display: none;
+  }
+}
+
+.colorModeToggle {
+  color: #909aaa;
+}
+.navbarSearch :global(.navbar__search-input) {
+  min-width: 360px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid var(--gitee-border-color-primary);
+  font-size: 14px;
+  padding-right: 12px;
+  color: var(--gitee-text-muted-color);
+}
+
+.navbarSearch :global(.navbar__search)::before {
+  position: absolute;
+  top:50%;
+  left: 10px;
+  transform: translateY(-50%);
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4IiB2aWV3Qm94PSIwIDAgMTYgMTYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8dGl0bGU+c2VhcmNoPC90aXRsZT4KICAgIDxnIGlkPSIyMDIyMTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSLkvIHkuJrmoYjkvosiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMDY4LjAwMDAwMCwgLTI3LjAwMDAwMCkiPgogICAgICAgICAgICA8ZyBpZD0iU2VsZWN0LS8tMzJweC1Gb2N1cyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTA1Ni4wMDAwMDAsIDE1LjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPGcgaWQ9InNlYXJjaCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTIuMDAwMDAwLCAxMi4wMDAwMDApIj4KICAgICAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0i6Lev5b6EIiBwb2ludHM9IjAgMCAxNiAwIDE2IDE2IDAgMTYiPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNywxIEMxMC4zMTM3MDg1LDEgMTMsMy42ODYyOTE1IDEzLDcgQzEzLDguNDc2NTc3MjEgMTIuNDY2NjE5OCw5LjgyODU3NjgxIDExLjU4MjAyMDUsMTAuODczODM3OCBMMTQuODUzNTUzNCwxNC4xNDY0NDY2IEMxNS4wNDg4MTU1LDE0LjM0MTcwODggMTUuMDQ4ODE1NSwxNC42NTgyOTEyIDE0Ljg1MzU1MzQsMTQuODUzNTUzNCBDMTQuNjU4MjkxMiwxNS4wNDg4MTU1IDE0LjM0MTcwODgsMTUuMDQ4ODE1NSAxNC4xNDY0NDY2LDE0Ljg1MzU1MzQgTDEwLjg3MzgzNzgsMTEuNTgyMDIwNSBDOS44Mjg1NzY4MSwxMi40NjY2MTk4IDguNDc2NTc3MjEsMTMgNywxMyBDMy42ODYyOTE1LDEzIDEsMTAuMzEzNzA4NSAxLDcgQzEsMy42ODYyOTE1IDMuNjg2MjkxNSwxIDcsMSBaIE03LDIgQzQuMjM4NTc2MjUsMiAyLDQuMjM4NTc2MjUgMiw3IEMyLDkuNzYxNDIzNzUgNC4yMzg1NzYyNSwxMiA3LDEyIEM5Ljc2MTQyMzc1LDEyIDEyLDkuNzYxNDIzNzUgMTIsNyBDMTIsNC4yMzg1NzYyNSA5Ljc2MTQyMzc1LDIgNywyIFoiIGlkPSLlvaLnirYiIGZpbGw9IiM5MDlBQUEiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9wYXRoPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=');
+}
+.navbarSearch :global(.navbar__search-input):hover,
+.navbarSearch :global(.navbar__search-input):focus,
+.navbarSearch :global(.navbar__search-input):focus-visible {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+}
+:global(.searchHintContainer_node_modules-\@easyops-cn-docusaurus-search-local-dist-client-client-theme-SearchBar-SearchBar-module) {
+  right: 12px;
+}

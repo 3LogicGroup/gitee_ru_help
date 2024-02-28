@@ -1,0 +1,13 @@
+// TODO: 减少或不使用 less
+@tailwind components;
+@layer components {
+  .menu-item {
+    @apply flex items-center py-2 px-5 text-gray-300 hover:bg-slate-800 hover:text-white;
+  }
+  .menu-item-icon {
+    @apply mr-3;
+  }
+  .divider {
+    @apply my-1 mx-4 w-auto min-w-max max-w-full border-t-gray-600 px-4;
+  }
+}

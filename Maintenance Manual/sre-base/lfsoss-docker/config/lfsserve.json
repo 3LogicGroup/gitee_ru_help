@@ -1,0 +1,39 @@
+{
+  "Description": "LFS Server (Cloud Storage)",
+  "Date": "2022-05-17",
+  "Listen": "0.0.0.0:8002",
+  "PID": "${APPDIR}/log/lfsserve.pid",
+  "LogError": "${APPDIR}/log/lfsserve.error.log",
+  "LogAccess": "${APPDIR}/log/lfsserve.access.log",
+  "MainURL": "https://lfs.autom.studio",
+  "AuthServer": "http://gitee.ru",
+  "AuthToken": "ba2711d5c199fc1570577332d4b0ea2d",
+  "Realm": "http://gitee.ru",
+  "TLS": false,
+  "Certificate": "server.crt",
+  "CertificateKey": "server.key",
+  "LFSLocal": false,
+  "LFSLocalOnly": false,
+  "LFSLocalPath": "/home/git/lfs/storage",
+  "Sync": 2,
+  "DataSourceName": "gitee:123456@tcp(10.4.145.132:3306)/lfs?parseTime=true",
+  "Storage": {
+    "Name": "minio",
+    "KeyId": "u5C4unUfImuOQrfMp9OU",
+    "KeySecret": "dZGu9loZ6xJNguXP9aKjA0cW9fIQFzh8BpMjMSPn",
+    "Region": "su",
+    "Host": "10.4.145.142:9000",
+    "UseHttps": true,
+    "Bucket": "gitee-lfs",
+    "Expires": 1200
+  },
+
+  "Note": "This is for lfs object sync from third-part platform like: Github, Gitlab to Gitee",
+  "BatchSyncObjectTask": {
+    "BatchInfoWorkerNum": 10,
+    "ObjectDownWorkerNum": 20,
+    "BatchInfoChanCap": 100,
+    "ObjectDownChanCap": 500,
+    "FailedTryNum": 3
+  }
+}

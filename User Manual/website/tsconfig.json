@@ -1,0 +1,15 @@
+{
+  "extends": "@tsconfig/docusaurus/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "."
+  },
+  "include": [
+    "./src/**/*.tsx",
+    "**/*.ts", "content.indexpage.tsx",
+  ],
+  "lib": [
+    "es5",
+    "es6",
+    "dom"
+  ],
+}

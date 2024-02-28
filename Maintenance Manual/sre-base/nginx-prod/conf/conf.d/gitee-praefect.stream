@@ -1,0 +1,18 @@
+upstream praefect_backend {
+   server 10.4.145.107:30999 max_fails=3 fail_timeout=10s;
+   server 10.4.145.32:30999 max_fails=3 fail_timeout=10s;
+   server 10.4.145.79:30999 max_fails=3 fail_timeout=10s;
+   server 172.18.0.37:31999 max_fails=3 fail_timeout=10s;
+   server 172.18.0.168:31999 max_fails=3 fail_timeout=10s;
+   server 172.18.0.113:31999 max_fails=3 fail_timeout=10s;
+}
+
+server {
+   proxy_next_upstream on;
+   proxy_next_upstream_tries 3;
+   proxy_next_upstream_timeout 10s;
+   proxy_socket_keepalive on;
+   listen 9999;
+   proxy_pass praefect_backend;
+}
+

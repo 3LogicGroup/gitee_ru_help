@@ -1,0 +1,15 @@
+{
+  "registry-mirrors": ["https://gfty7g09.mirror.aliyuncs.com"],
+  "insecure-registries": ["hub.gitee.com"],
+  "live-restore": true,
+  "default-shm-size": "128M",
+  "max-concurrent-downloads": 10,
+  "oom-score-adjust": -1000,
+  "log-driver": "json-file",
+  "log-opts": {
+    "max-size": "100m"
+  },
+  "dns": [
+    "172.18.0.39"
+  ]
+}

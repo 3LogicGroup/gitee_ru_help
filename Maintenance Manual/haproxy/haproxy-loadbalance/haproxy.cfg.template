@@ -1,0 +1,57 @@
+#---------------------------------------------------------------------
+# Global settings
+#---------------------------------------------------------------------
+global
+    log         127.0.0.1 local2
+    chroot      /var/lib/haproxy
+    pidfile     /var/run/haproxy.pid
+    maxconn     4000
+    user        haproxy
+    group       haproxy
+    daemon
+
+    stats socket /var/lib/haproxy/stats
+defaults
+    mode                    http
+    log                     global
+    option                  httplog
+    option                  dontlognull
+    option http-server-close
+    option forwardfor       except 127.0.0.0/8
+    option                  redispatch
+    retries                 3
+    timeout http-request    10s
+    timeout queue           1m
+    timeout connect         10s
+    timeout client          1m
+    timeout server          1m
+    timeout http-keep-alive 10s
+    timeout check           10s
+    maxconn                 3000
+#---------------------------------------------------------------------
+# kubernetes apiserver frontend which proxys to the backends
+#---------------------------------------------------------------------
+frontend kubernetes-apiserver
+    mode                 tcp
+    bind                 *:16443
+    option               tcplog
+    default_backend      kubernetes-apiserver
+#---------------------------------------------------------------------
+# round robin balancing between the various backends
+#---------------------------------------------------------------------
+backend kubernetes-apiserver
+    mode        tcp
+    balance     roundrobin
+    server      master01.k8s.io   10.4.145.92:6443 check
+    server      master02.k8s.io   10.4.145.129:6443 check
+    server      master03.k8s.io   10.4.145.169:6443 check
+#---------------------------------------------------------------------
+# collection haproxy statistics message
+#---------------------------------------------------------------------
+listen stats
+    mode                 http
+    bind                 0.0.0.0:1080
+    stats auth           admin:admin
+    stats refresh        30s
+    stats realm          HAProxy\ Statistics
+    stats uri            /haproxy-status

@@ -1,0 +1,15 @@
+upstream minio-console {
+   server 10.4.145.159:19001 max_fails=3 fail_timeout=10s;
+   server 10.4.145.145:19001 max_fails=3 fail_timeout=10s;
+   server 10.4.145.122:19001 max_fails=3 fail_timeout=10s;
+   server 10.4.145.97:19001 max_fails=3 fail_timeout=10s;
+}
+
+server {
+   proxy_next_upstream on;
+   proxy_next_upstream_tries 3;
+   proxy_next_upstream_timeout 10s;
+   proxy_socket_keepalive on;
+   listen 19001;
+   proxy_pass minio-console;
+}

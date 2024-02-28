@@ -1,0 +1,74 @@
+{
+  "link.item.label.Git 大全": {
+    "message": "Git 大全",
+    "description": "The label of footer link with label=Git 大全 linking to https://gitee.ru/all-about-git"
+  },
+  "link.item.label.Git 命令学习": {
+    "message": "Git 命令学习",
+    "description": "The label of footer link with label=Git 命令学习 linking to https://oschina.gitee.io/learn-git-branching/"
+  },
+  "link.item.label.CopyCat 代码克隆检测": {
+    "message": "CopyCat 代码克隆检测",
+    "description": "The label of footer link with label=CopyCat 代码克隆检测 linking to https://copycat.gitee.ru/"
+  },
+  "link.item.label.APP 与插件下载": {
+    "message": "APP 与插件下载",
+    "description": "The label of footer link with label=APP 与插件下载 linking to https://gitee.ru/appclient"
+  },
+  "link.item.label.Gitee Reward": {
+    "message": "Gitee Reward",
+    "description": "The label of footer link with label=Gitee Reward linking to https://gitee.ru/gitee_reward"
+  },
+  "link.item.label.Gitee 封面人物": {
+    "message": "Gitee 封面人物",
+    "description": "The label of footer link with label=Gitee 封面人物 linking to https://gitee.ru/gitee-stars"
+  },
+  "link.item.label.GVP 项目": {
+    "message": "GVP 项目",
+    "description": "The label of footer link with label=GVP 项目 linking to https://gitee.ru/gvp"
+  },
+  "link.item.label.Gitee 博客": {
+    "message": "Gitee 博客",
+    "description": "The label of footer link with label=Gitee 博客 linking to https://blog.gitee.ru/"
+  },
+  "link.item.label.Gitee 持续集成": {
+    "message": "Gitee 持续集成",
+    "description": "The label of footer link with label=Gitee 持续集成 linking to https://gitee.ru/features/gitee-go"
+  },
+  "link.item.label.OpenAPI": {
+    "message": "OpenAPI",
+    "description": "The label of footer link with label=OpenAPI linking to https://gitee.ru/api/v5/swagger"
+  },
+  "link.item.label.帮助文档": {
+    "message": "帮助文档",
+    "description": "The label of footer link with label=帮助文档 linking to https://help.gitee.ru"
+  },
+  "link.item.label.在线自助服务": {
+    "message": "在线自助服务",
+    "description": "The label of footer link with label=在线自助服务 linking to https://gitee.ru/self_services"
+  },
+  "link.item.label.更新日志": {
+    "message": "更新日志",
+    "description": "The label of footer link with label=更新日志 linking to https://help.gitee.ru/changelog"
+  },
+  "link.item.label.关于我们": {
+    "message": "关于我们",
+    "description": "The label of footer link with label=关于我们 linking to https://gitee.ru/about_us"
+  },
+  "link.item.label.加入我们": {
+    "message": "加入我们",
+    "description": "The label of footer link with label=加入我们 linking to https://www.oschina.net/news/131099/oschina-hiring"
+  },
+  "link.item.label.使用条款": {
+    "message": "使用条款",
+    "description": "The label of footer link with label=使用条款 linking to https://gitee.ru/terms"
+  },
+  "link.item.label.意见建议": {
+    "message": "意见建议",
+    "description": "The label of footer link with label=意见建议 linking to https://gitee.ru/oschina/git-osc/issues"
+  },
+  "link.item.label.合作伙伴": {
+    "message": "合作伙伴",
+    "description": "The label of footer link with label=合作伙伴 linking to https://gitee.ru/links.html"
+  }
+}

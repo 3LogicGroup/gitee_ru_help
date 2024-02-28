@@ -1,0 +1,154 @@
+---
+title: 仓库体积过大，如何减小
+origin-url: https://gitee.ru/help/articles/4232
+---
+
+### 概述
+
+Gitee 平台目前对仓库的配额如下：
+
+| 套餐   | 免费版      | 基础版      | 标准版      | 高级版      | 尊享版      |
+| ------ | ----------- | ----------- | ----------- | ----------- | ----------- |
+| 单仓库 | 最大 500 MB | 最大 1 GB   | 最大 1 GB   | 最大 2 GB   | 最大 3 GB   |
+| 单文件 | 最大 50 MB  | 最大 100 MB | 最大 100 MB | 最大 200 MB | 最大 300 MB |
+
+如用户在使用过程中不小心将较大的二进制文件加入仓库，那么仓库大小很快就会超过规定的配额，用户可以通过升级到对应的套餐配额或对仓库进行历史改写瘦身，来解除系统对仓库推拉服务的锁定。
+
+> 瘦身之后，可使用 Git 大文件存储（Git LFS）来解决大文件存储空间占用的问题，Git LFS 使用帮助参考：<https://gitee.ru/help/articles/4235>
+
+- 套餐升级可访问：[https://gitee.ru/enterprises](https://gitee.ru/enterprises) 了解
+- 仓库瘦身方案见下方：
+
+ **方案一 (推荐)：**
+
+由于原生 Git 命令 git filter-branch 的一些缺陷导致重写历史过程出现数据损坏：
+
+WARNING: git-filter-branch has a glut of gotchas generating mangled history rewrites.
+
+实际使用过程中，很多用户反馈使用这个命令来清理仓库大文件的过程十分缓慢且效果不佳。
+
+针对这些反馈，Gitee 自研了一款开源 Git 插件式工具，目的是让用户不再为仓库瘦身头疼。
+
+仓库地址：
+
+<https://gitee.ru/oschina/git-repo-clean.git>
+
+ **安装：**
+
+1. Linux 环境
+
+sudo cp git-repo-clean $(git --exec-path)
+
+2. Windows 环境
+
+方法一：将可执行文件 git-repo-clean.exe 的路径放到系统$PATH 路径中，大致操作步骤为：
+点击 Windows 的 [开始] --> 输入 path --> 选择编辑系统环境变量--> 选择环境变量`<N>` --> 在系统变量 (S) 中选择 Path --> 选择新建 (N) --> 将刚才解压的包含 git-repo-clean.exe 文件的路径复制到新建的环境变量中。
+
+方法二：也是将 git-repo-clean.exe 复制到 Git 的执行目录下：cp git-repo-clean.exe $(git --exec-path)。(Git 可能安装在 C 盘某个目录中，需要特别权限才能复制)
+
+方法三：也可以直接复制该可执行文件 git-repo-clean.exe 到 C:\Windows\system32 目录下。(不推荐使用该方法，因为可能会误操作，导致系统文件被破坏)
+
+3. Mac OS 环境
+与 Linux 上的操作类似。
+但是注意：在 Mac OS 上进行配置之后可能无法执行，需要授权，具体方式为：
+System Preferences -> Security & Privacy
+点击 Allow Anyway 始终允许即可：
+
+![输入图片说明](https://images.gitee.ru/uploads/images/2021/1215/190941_9f067c72_7722649.png )
+
+通过方法安装完成后，执行如下命令检测是否安装成功：
+
+git repo-clean --version
+
+使用：
+
+安装成功后，便可以像使用普通 Git 命令一样使用 git-repo-clean 工具。
+
+执行 git repo-clean，或 git repo-clean --interactive 或 git repo-clean -i 直接进入交互式界面
+
+然后程序会询问用户文件筛选的条件：
+
+$ git repo-clean -i
+? 选择要扫描的文件的类型，如：zip, png: *
+? 选择要扫描文件的最低大小，如：1M, 1g: 1M
+? 选择要显示扫描结果的数量，默认值是 3: [? for help] (3)
+根据这三个条件，程序会筛选出需要删除的文件，经过用户确认后程序会自动从整个 commit 历史中删除该文件并更新相关 commit 记录。
+
+为了仓库数据的安全，在删除任何数据之前，会允许用户对仓库进行备份。
+
+整个过程操作简单，用户只需要按照程序提示回答 Yes/No 就行。
+
+ **方案二** ：
+
+### 查看存储库中的大文件
+
+```bash
+git rev-list --objects --all | grep -E `git verify-pack -v .git/objects/pack/*.idx | sort -k 3 -n | tail -10 | awk '{print$1}' | sed ':a;N;$!ba;s/\n/|/g'`
+```
+
+或
+
+```bash
+git rev-list --objects --all | grep "$(git verify-pack -v .git/objects/pack/*.idx | sort -k 3 -n | tail -15 | awk '{print$1}')"
+```
+
+### 改写历史，去除大文件
+
+> 注意：下方命令中的 `path/to/large/files` 是大文件所在的路径，千万不要弄错！
+
+```bash
+git filter-branch --tree-filter 'rm -f path/to/large/files' --tag-name-filter cat -- --all
+git push origin --tags --force
+git push origin --all --force
+```
+
+如果在 `git filter-branch` 操作过程中遇到如下提示，需要在 `git filter-branch` 后面加上参数 `-f`（出现这个错误的原因是，第一次操作成功后发现仓库大小并没有减少 (可能还增大了)，便进行了第二次操作）
+
+```bash
+Cannot create a new backup.
+A previous backup already exists in refs/original/
+Force overwriting the backup with -f
+```
+
+ **并告知所有组员，push 代码前需要 pull rebase，而不是 merge，否则会从该组员的本地仓库再次引入到远程库中，导致仓库在此被 Gitee 系统屏蔽。**
+
+ **备选方案**
+
+[git filter-repo](http://github.com/newren/git-filter-repo)
+
+下载：
+
+<https://github.com/newren/git-filter-repo/releases>
+
+依赖：
+
+Git 版本 >= 2.22.0 ; 有些特性需要 Git >= 2.24.0
+Python3 版本 >= 3.5
+
+安装：
+
+下载 git-filter-repo-xxx-tar.xz 之后，直接解压，即可获得可执行文件包。
+将该可执行文件复制到系统$PATH 即可。
+
+<https://github.com/newren/git-filter-repo#how-do-i-install-it>
+
+使用：
+
+删除指定文件：
+git filter-repo --path badfile --invert-paths
+删除指定目录中的所有文件：
+git filter-repo --path foo/bar/ --invert-paths
+<https://github.com/newren/git-filter-repo#how-do-i-use-it>
+
+----------------------------------------
+
+### Gitee 存储库体积控制策略
+
+Gitee 已将服务端的钩子切换到 GNK (Gitee Native Hook)，GNK 基于 C++ 编写，使用了 Git 环境隔离等高级特定，意味着大文件检测和存储库体积检测不会再有漏网之鱼。一些用户的存储库体积已经超过了 Gitee 配额限制，而之前的钩子检测存在缺陷，无法实时拦截大存储库和大文件，当切换到 GNK 后，这些用户修改他们的存储库却无法推送到 Gitee，这让他们产生了困扰。
+
+《Gitee 存储库体积控制策略》就这一困扰解答若干问题，详情请见：<https://my.oschina.net/GIIoOS/blog/3126211>
+
+ **其他工具**
+[https://git-scm.com/docs/git-filter-branch](https://git-scm.com/docs/git-filter-branch)
+[https://github.com/newren/git-filter-repo](https://github.com/newren/git-filter-repo)
+[https://rtyley.github.io/bfg-repo-cleaner/](https://rtyley.github.io/bfg-repo-cleaner/)

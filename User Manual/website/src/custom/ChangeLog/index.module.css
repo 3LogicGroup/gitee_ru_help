@@ -1,0 +1,45 @@
+.header {
+    background-image: url("/img/home-title-bg.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.line::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    top: 22px;
+    left: 4px;
+    border-left: 1px dashed #979797;
+}
+
+.line:last-child:before {
+    display: none;
+}
+
+.select {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem
+}
+
+.lineBox {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 5px;
+    left: -4px;
+    display: flex;
+    background: #FBFBFB;
+    justify-content: center;
+    align-items: center;
+}
+
+.lineBoxInner {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #979797;
+}

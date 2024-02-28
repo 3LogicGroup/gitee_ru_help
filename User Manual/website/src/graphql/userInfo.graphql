@@ -1,0 +1,62 @@
+query userInfo {
+  current_user {
+    id
+    name
+    username
+    nickname
+    avatar_url
+    bind_phone
+    href
+    is_block
+    # 当用户没有绑定邮箱时,此字段会返回虚拟邮箱,可以通过emails判断是否有绑定邮箱
+    email
+    emails
+    show_active_email_guide
+    show_add_email_guide
+    new_user
+    authenticate_status
+    # 手机有可能是未激活的,可以通过active_phone判断是否是已激活的手机
+    phone
+    active_phone
+    owned_enterprise {
+      id
+      name
+      path
+    }
+    enterprises(first: 2) {
+      nodes {
+        id
+        path
+        name
+      }
+      total_count
+    }
+    groups(first: 2) {
+      nodes {
+        id
+        name
+        path
+      }
+      total_count
+    }
+    programs(first: 5) {
+      nodes {
+        id
+        name
+        enterprise {
+          path
+        }
+      }
+      total_count
+    }
+    projects(first: 5) {
+      nodes {
+        id
+        name
+        path
+        pwd
+      }
+      total_count
+    }
+  }
+}

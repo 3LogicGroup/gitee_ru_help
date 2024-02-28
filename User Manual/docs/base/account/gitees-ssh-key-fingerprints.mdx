@@ -1,0 +1,51 @@
+---
+title: Gitee SSH 密钥指纹
+description: Gitee 的 SSH 密钥指纹，公钥指纹可用于验证与远程服务器的连接。
+slug: /account/gitees-ssh-key-fingerprints
+---
+
+为保证你所连接的远端代码仓库是真实可信的 gitee.ru 代码仓库，现提供 gitee.ru 的 SSH 密钥指纹用于鉴权。
+
+你只需在本地运行命令，验证返回的结果就能确认你所访问的远端代码仓库的真实性。
+
+:::info 关于 SSH (Secure Shell) 密钥指纹
+
+SSH 密钥指纹是**用于验证公钥完整性的一串唯一标识符**，
+可用于验证用户与 Gitee 远程服务器的可信连接。避免受中间人攻击 (MITM)。
+
+:::
+
+:::caution
+如果你在首次访问 gitee.ru 时获取到的指纹与下方指纹信息不匹配，说明可能存在安全问题，请在执行具体操作前进行确认或联系我们进行反馈。
+:::
+
+在第一次连接远程服务器时，Git/SSH 客户端会收到一个由 gitee.ru 服务器返回的指纹。你需要将此指纹与从可信渠道获取到的指纹进行比对，确认 gitee.ru 服务器的公钥是否正确。
+
+### Gitee 的公钥指纹
+
+以下是 Gitee 的公钥指纹：
+
+- `SHA256:+xxxxxxxxx/xxxxxxxxx` (ED25519)
+- `SHA256:xxxxxxxxx` (RSA)
+- `SHA256:FQGC9Kn/xxxxxxxxx+xxxxxxxxx` (ECDSA)
+
+你也可以将以下 SSH 密钥条目添加到 `~/.ssh/known_hosts` 文件中，以避免手动验证 Gitee 主机：
+
+> gitee.ru ssh-ed25519 xxxxxxxxx/xxxxxxxxx
+> gitee.ru ecdsa-sha2-nistp256 xxxxxxxxxxxxxxxxxxxxxxxxxxx/xxxxxxxxx=
+> gitee.ru ssh-rsa xxxxxxxxx+xxxxxxxxxxxxxxxxxxxxxxxxxxx/xxxxxxxxxxxxxxxxxxxxxxxxxxx/xxxxxxxxxxxxxxxxxx/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/xxxxxxxxxxxxxxxxxx/xxxxxxxxx+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/xxxxxxxxx+xxxxxxxxx/xxxxxxxxx/
+
+### 验证 SHA256 算法指纹
+
+你可以通过以下命令查看本地 `.ssh/know_hosts` 文件中关于 `gitee.ru` 的 `SHA256` 算法的指纹，如果返回值与上文指纹匹配，则证明你连接到了正确的 Gitee 服务器。
+
+```bash showLineNumbers
+ssh-keygen -lf ~/.ssh/known_hosts | grep giteerussia.com
+```
+
+以下为正确的返回示例之一：
+
+```bash showLineNumbers
+➜  ssh-keygen -lf ~/.ssh/known_hosts | grep gitee.ru
+256 SHA256:FQGC9Kn/xxxxxxxxx+xxxxxxxxxxxxxxxxxx giteerussia.com (ECDSA)
+```

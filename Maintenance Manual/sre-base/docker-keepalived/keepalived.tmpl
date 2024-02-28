@@ -1,0 +1,63 @@
+! Configuration File for keepalived
+
+global_defs {
+    default_interface {{.keepalived.bindInterface}}
+    script_user root
+    enable_script_security
+}
+
+vrrp_instance VI_1 {
+    # 绑定网卡
+    interface {{.keepalived.bindInterface}}
+    # 虚拟路由ID,两个节点要一样
+    virtual_router_id {{.keepalived.routerId}}
+    # 初始状态MASTER/BACKUP
+    # @node1 state BACKUP
+    # @node2 state BACKUP
+    {{- range .keepalived.states}}
+    {{.}}
+    {{- end}}
+    # 优先级,第一个节点100,第二个节点90,第三个节点80
+    # @node1 priority 100
+    # @node2 priority 90
+    {{- range .keepalived.prioritys}}
+    {{.}}
+    {{- end}}
+    # 检查间隔,两个节点要一样
+    advert_int 1
+    # 不争抢VIP
+    nopreempt
+    # 采用单播通信,避免同一个局域网中多个keepalived组之间的相互影响
+    # 本机IP
+    # @node1 unicast_src_ip 192.168.8.161
+    # @node2 unicast_src_ip 192.168.8.162
+    {{- range .keepalived.localIps}}
+    {{.}}
+    {{- end}}
+    # 对端IP
+    # unicast_peer {
+    #     @^node1 192.168.8.161
+    #     @^node2 192.168.8.162
+    # }
+    unicast_peer {
+        {{- range .keepalived.peerIps}}
+        {{.}}
+        {{- end}}
+    }
+    # 虚拟IP池,允许多个
+    # virtual_ipaddress {
+    #     #192.168.1.1/28 dev ens33 label ens33:vip
+    # }
+    virtual_ipaddress {
+        {{- range .keepalived.vips}}
+        {{.}}
+        {{- end}}
+    }
+    # 认证信息,两个节点需要一样
+    authentication {
+        auth_type PASS
+        auth_pass {{.keepalived.pass}}
+    }
+    # 通知信息
+    {{.keepalived.notify}}
+}

@@ -1,0 +1,239 @@
+---
+title: Gitee 表单语法规范
+slug: /community/syntax-for-gitees-form-schema
+---
+
+:::tip Gitee 表单范式是一种结构化描述表单定义的语法规范。可用于配置 [Gitee Issue 模板功能](./issue/template.mdx)。
+:::
+
+本文档将介绍如何定义和配置使用 Gitee 的表单范式字段。
+
+## 表单范式元素定义
+
+对于表单元素，你可以设置以下属性。
+
+| 键 | 描述 | 必须 | 类型 | 默认值 | 有效值 |
+|:-:|:--|:-:|---|---|---|
+| `type` | 元素类型 | 必选 | 字符串 | - | 参见下方说明 |
+| `id` | 元素的标识符，`type` 为 `markdown` 时除外。<br />`id` 只能使用字母数字字符、`-` 和 `_`。`id` 在表单定义中必须是唯一的。如果 `id` 被设置，`id` 是 URL 查询参数预填中字段的标准标识符。 | 可选 | 字符串 | - | - |
+| `attributes` | 键值对，用来描述和定义具体表单元素的属性。 | 必选 | 字段映射 | - | - |
+| `validations` | 键值对，用于设置具体表单元素的约束。 | 可选 | 字段映射 | - | - |
+
+对于 `type` 的值，你可以从以下类型的表单元素（表单项）中选择。每个类型都有唯一的属性和验证。
+
+| 类型 | 描述 |
+|---|---|
+| [`checkboxes`](#checkboxes) | 一组复选框 |
+| [`dropdown`](#dropdown) | 下拉菜单 |
+| [`input`](#input) | 单行文本字段 |
+| [`markdown`](#markdown) | Markdown 文本显示在表单中，为用户提供额外的上下文，但**不提交** |
+| [`textarea`](#textarea) | 多行文本字段 |
+
+## `attributes` 和 `validations` 定义 {#attributes-and-validations}
+
+对于 `attributes` 和 `validations`，相关的定义参考如下：
+
+## `markdown` 表单项 {#markdown}
+
+:::info 元素说明
+你可以使用 `markdown` 元素的 `value` 在表单中显示 Markdown 内容，为用户提供额外的上下文，但 `value` 的内容默认不提交，只有用户修改后才会提交。
+:::
+
+### attributes 定义 {#markdown-attributes}
+
+| 键 | 描述 | 必选 | 类型 | 默认值 | 有效值  |
+| --- | --- | --- | --- | --- | --- |
+| `value` | 渲染的文本。支持 Markdown 格式。 | 必选 | 字符串 | - | - |
+
+:::info
+YAML 处理将哈希符号视为评论。要插入 Markdown 标题，请用引号括住文本。对于多行文本，你可以使用竖线运算符。（参考 YAML 语法）
+:::
+
+以下是具体的 YAML 示例：
+
+```yaml showLineNumbers
+body:
+- type: markdown
+  value: "## Thank you for contributing to our project!"
+- type: markdown
+  attributes:
+   value: |
+  Thanks for taking the time to fill out this bug report.
+```
+
+## `textarea` 文本框 {#textarea}
+
+:::info 元素说明
+你可以使用 `textarea` 元素添加多行文本字段到表单。贡献者也可以在 `textarea` 字段中附加文件。
+:::
+
+### attributes 定义 {#textarea-attributes}
+
+| 键 | 描述 | 必选 | 类型 | 默认值 | 有效值  |
+| --- | --- | --- | --- | --- | --- |
+| `label` | 预期用户输入的简短描述，也以表单形式显示。 | 必选 | 字符串 | - | -
+| `description` | 提供上下文或指导的文本区域的描述，以表单形式显示。 | 可选 | 字符串 | 空字符串 | -
+| `placeholder` | 半透明的占位符，在文本区域空白时呈现。 | 可选 | 字符串 | 空字符串 | -
+| `value` | 在文本区域中预填充的文本。 | 可选 | 字符串 | - | -
+| `render` | 如果提供了值，提交的文本将格式化为代码块。提供此键时，文本区域将不会扩展到文件附件或 Markdown 编辑。 | 可选 | 字符串 | - | 已知的语言类型。更多信息请参阅 [语言类型定义声明](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml)。 |
+
+### validations 定义 {#textarea-validations}
+
+| 键 | 描述 | 必选 | 类型 | 默认值 | 有效值 |
+| - | --- | --- | --- | --- | --- |
+| `required` | 防止在元素完成之前提交表单。仅适用于公共存储库。 | 可选 | 布尔型 | false | - |
+
+以下是具体的 YAML 示例：
+
+```yaml showLineNumbers
+body:
+- type: textarea
+  id: repro
+  attributes:
+   label: 复现步骤
+   description: "你是如何触发这个错误的？请一步一步地告诉我们。"
+   value: |
+  1.
+  2.
+  3.
+  ...
+   render: bash
+  validations:
+   required: true
+```
+
+## `input` 输入框 {#input}
+
+:::info 元素说明
+你可以使用 `input` 元素添加单行文本字段（Input 输入框）到表单。
+:::
+
+### attributes 定义 {#input-attributes}
+
+| 键 | 描述 | 必选 | 类型 | 默认值 | 有效值  |
+| --- | --- | --- | --- | --- | --- |
+| `label` | 预期用户输入的简短描述，也以表单形式显示。 | 必选 | 字符串 | - | -
+| `description` | 提供上下文或指导的字段的描述，以表单形式显示。 | 可选 | 字符串 | 空字符串 | -
+| `placeholder` | 半透明的占位符，在字段空白时呈现。 | 可选 | 字符串 | 空字符串 | -
+| `value` | 字段中预填的文本。 | 可选 | 字符串 | - | -
+
+### validations 定义 {#input-validations}
+
+| 键 | 描述 | 必选 | 类型 | 默认值 | 有效值 |
+| - | --- | --- | --- | --- | --- |
+| `required` | 防止在元素完成之前提交表单。仅适用于公共存储库。 | 可选 | 布尔型 | false | - |
+
+以下是具体的 YAML 示例：
+
+```yaml showLineNumbers
+body:
+- type: input
+  id: prevalence
+  attributes:
+   label: Bug prevalence
+   description: "How often do you or others encounter this bug?"
+   placeholder: "Example: Whenever I visit the user account page (1-2 times a week)"
+  validations:
+   required: true
+```
+
+## `dropdown` 下拉框 {#dropdown}
+
+:::info 元素说明
+你可以使用 `dropdown` 元素在表单中添加下拉菜单。
+:::
+
+### attributes 定义 {#dropdown-attributes}
+
+| 键 | 描述 | 必选 | 类型 | 默认值 | 有效值  |
+| --- | --- | --- | --- | --- | --- |
+| `label` | 预期用户输入的简短描述，以表单形式显示。 | 必选 | 字符串 | - | -
+| `description` | 提供上下文或指导的下拉列表的描述，以表单形式显示。 | 可选 | 字符串 | 空字符串 | -
+| `multiple` | 确定用户是否可以选择多个选项。 | 可选 | 布尔值 | false | -
+| `options` | 用户可以选择的选项阵列。不能为空，所有选择必须是不同的。 | 必选 | 字符串阵列 | - | -
+
+### validations 定义 {#dropdown-validations}
+
+| 键 | 描述 | 必选 | 类型 | 默认值 | 有效值 |
+| - | --- | --- | --- | --- | --- |
+| `required` | 防止在元素完成之前提交表单。仅适用于公共存储库。 | 可选 | 布尔型 | false | - |
+
+以下是具体的 YAML 示例：
+
+```yaml showLineNumbers
+body:
+- type: dropdown
+  id: download
+  attributes:
+   label: How did you download the software?
+   options:
+  - Homebrew
+  - MacPorts
+  - apt-get
+  - Built from source
+  validations:
+   required: true
+```
+
+## `checkboxes` 复选框 {#checkboxes}
+
+:::info 元素说明
+你可以使用 `checkboxes` 元素添加一组复选框到表单。
+:::
+
+### attributes 定义 {#checkboxes-attributes}
+
+| 键 | 描述 | 必选 | 类型 | 默认值 | 有效值  |
+| --- | --- | --- | --- | --- | --- |
+| `label` | 预期用户输入的简短描述，以表单形式显示。 | 必选 | 字符串 | - | -
+| `description` | 复选框集的描述，以表单形式显示。支持 Markdown 格式。 | 可选 | 字符串 | 空字符串 | -
+| `options` | 用户可以选择的复选框阵列。有关语法，请参阅下文。 | 必选 | 数组 | - | -
+
+对于 `options` 数组中的每个值，可以设置以下键。
+
+| 键 | 描述 | 必选 | 类型 | 默认值 | 有效值  |
+| --- | --- | --- | --- | --- | --- |
+| `label` | 预期用户输入的简短描述，以表单形式显示。 | 必选 | 字符串 | - | -
+| `description` | 复选框集的描述，以表单形式显示。支持 Markdown 格式。 | 可选 | 字符串 | 空字符串 | -
+| `options` | 用户可以选择的复选框阵列。有关语法，请参阅下文。 | 必选 | 数组 | - | -
+
+对于 `options` 数组中的每个值，可以设置以下键。
+
+| 密钥 | 说明 | 必选 | 类型 | 默认 | 选项 |
+|:-:|:--|:-:|:-:|:-:|:-:|
+| label | 选项的标识符，显示在表单中。支持 Markdown 用于粗体或斜体文本格式化和超文本链接。 | 必须 | String | - | - |
+
+### validations 定义 {#checkboxes-validations}
+
+| 键 | 描述 | 必选 | 类型 | 默认值 | 有效值 |
+| - | --- | --- | --- | --- | --- |
+| `required` | 防止在元素完成之前提交表单。仅适用于公共存储库。 | 可选 | 布尔型 | false | - |
+
+以下是具体的 YAML 示例：
+
+```yaml showLineNumbers
+body:
+- type: checkboxes
+  id: operating-systems
+  attributes:
+   label: Which operating systems have you used?
+   description: You may select more than one.
+   options:
+  - label: macOS
+  - label: Windows
+  - label: Linux
+```
+
+## 延伸阅读
+
+- [YAML](https://yaml.org)
+
+<div dangerouslySetInnerHTML={{
+  __html: `
+    <style>
+      td {
+        min-width: 60px;
+      }
+    </style>
+  `
+}} />

@@ -1,0 +1,84 @@
+[INFO] [13] 2023-04-28 06:33:32 Use metadata backend: mysql
+[INFO] [13] 2023-04-28 06:33:32 Use 'bos' as object  storage service
+[INFO] [13] 2023-04-28 06:33:48 Use metadata backend: mysql
+[INFO] [13] 2023-04-28 06:33:48 Use 'bos' as object  storage service
+[INFO] [13] 2023-04-28 06:37:04 Use metadata backend: mysql
+[INFO] [13] 2023-04-28 06:37:04 Use 'bos' as object  storage service
+[INFO] [13] 2023-04-28 06:43:16 Use metadata backend: mysql
+[INFO] [13] 2023-04-28 06:43:16 Use 'bos' as object  storage service
+[INFO] [13] 2023-04-28 08:05:22 Use metadata backend: mysql
+[INFO] [13] 2023-04-28 08:05:22 Use 'bos' as object  storage service
+[INFO] [1] 2023-06-12 08:24:53 Use metadata backend: mysql
+[INFO] [1] 2023-06-12 08:24:53 Use 'bos' as object  storage service
+[INFO] [1] 2023-06-12 08:25:02 Use metadata backend: mysql
+[INFO] [1] 2023-06-12 08:25:02 Use 'bos' as object  storage service
+[ERROR] [1] 2023-06-12 08:26:45 POST /sura/sura-new-001.git/info/lfs/locks/verify - 500.  ID: 624ef771-2ef0-6f41-28cb-0d1094960dfb Error: Post "https://master.runjs.cn/api/v3/internal/authorize/lfs": x509: certificate signed by unknown authority
+[ERROR] [1] 2023-06-12 08:26:45 DefaultClient Post "https://master.runjs.cn/api/v3/internal/authorize/lfs": x509: certificate signed by unknown authority
+[ERROR] [1] 2023-06-12 08:26:45 POST /sura/sura-new-001.git/info/lfs/objects/batch - 500.  ID: 8a6ef1c2-f6cc-d6b0-d25f-d96b7dd37afd Error: Post "https://master.runjs.cn/api/v3/internal/authorize/lfs": x509: certificate signed by unknown authority
+[ERROR] [1] 2023-06-12 08:26:45 DefaultClient Post "https://master.runjs.cn/api/v3/internal/authorize/lfs": x509: certificate signed by unknown authority
+[ERROR] [1] 2023-06-12 08:58:26 POST /sura/sura-new-001.git/info/lfs/locks/verify - 500.  ID: 9ee4a357-92d4-cfb8-1fea-e664fe7620cb Error: Post "https://master.runjs.cn/api/v3/internal/authorize/lfs": x509: certificate signed by unknown authority
+[ERROR] [1] 2023-06-12 08:58:26 DefaultClient Post "https://master.runjs.cn/api/v3/internal/authorize/lfs": x509: certificate signed by unknown authority
+[ERROR] [1] 2023-06-12 08:58:26 POST /sura/sura-new-001.git/info/lfs/objects/batch - 500.  ID: 79fdca71-db59-ed4a-7db2-384dd8a38e80 Error: Post "https://master.runjs.cn/api/v3/internal/authorize/lfs": x509: certificate signed by unknown authority
+[ERROR] [1] 2023-06-12 08:58:26 DefaultClient Post "https://master.runjs.cn/api/v3/internal/authorize/lfs": x509: certificate signed by unknown authority
+[INFO] [1] 2023-06-12 08:58:59 Use metadata backend: mysql
+[INFO] [1] 2023-06-12 08:58:59 Use 'bos' as object  storage service
+[INFO] [1] 2023-06-12 09:02:49 Use metadata backend: mysql
+[INFO] [1] 2023-06-12 09:02:49 Use 'bos' as object  storage service
+[INFO] [1] 2023-06-12 09:03:22 Successfully upload "eea08208166551bad35d5a823f3e4a2acccff4cc19b1a8154ae1614bbad58ffa" to "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:04:49 Successfully upload "aed909778a70d23318fe08e6a2fa35eb85ff4d81cdbc19fdca4414a14e58313b" to "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:07:42 Successfully upload "1fc917c7ad66487470e466c0ad40ddd45b9f7730a4b43e1b2542627f0596bbdc" to "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:36:10 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:36:10 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:36:10 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:36:24 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:36:24 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:36:24 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:36:28 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:36:34 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:38:04 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:38:04 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:38:04 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:38:10 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:38:10 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:38:11 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:38:24 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:38:24 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:38:24 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:38:32 Successfully download "1fc917c7ad66487470e466c0ad40ddd45b9f7730a4b43e1b2542627f0596bbdc" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:38:32 Successfully download "1fc917c7ad66487470e466c0ad40ddd45b9f7730a4b43e1b2542627f0596bbdc" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:38:32 Successfully download "1fc917c7ad66487470e466c0ad40ddd45b9f7730a4b43e1b2542627f0596bbdc" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:38:59 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:38:59 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:38:59 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:42:43 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:42:43 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:42:43 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:43:24 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:43:24 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:43:24 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:49:09 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:49:17 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:49:17 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:49:17 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:49:36 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:49:36 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:49:36 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:52:09 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:52:09 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:52:09 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:52:16 Successfully download "1fc917c7ad66487470e466c0ad40ddd45b9f7730a4b43e1b2542627f0596bbdc" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:52:16 Successfully download "1fc917c7ad66487470e466c0ad40ddd45b9f7730a4b43e1b2542627f0596bbdc" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:52:16 Successfully download "1fc917c7ad66487470e466c0ad40ddd45b9f7730a4b43e1b2542627f0596bbdc" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:56:21 Successfully download "1fc917c7ad66487470e466c0ad40ddd45b9f7730a4b43e1b2542627f0596bbdc" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:56:21 Successfully download "1fc917c7ad66487470e466c0ad40ddd45b9f7730a4b43e1b2542627f0596bbdc" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 09:56:21 Successfully download "1fc917c7ad66487470e466c0ad40ddd45b9f7730a4b43e1b2542627f0596bbdc" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 10:00:45 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 10:00:45 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 10:00:45 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 10:24:19 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 10:24:19 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 10:24:19 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 10:24:35 Successfully download "181210f8f9c779c26da1d9b2075bde0127302ee0e3fca38c9a83f5b1dd8e5d3b" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 11:12:12 Successfully download "1fc917c7ad66487470e466c0ad40ddd45b9f7730a4b43e1b2542627f0596bbdc" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 11:12:12 Successfully download "1fc917c7ad66487470e466c0ad40ddd45b9f7730a4b43e1b2542627f0596bbdc" from "gitee-lfs-v2"
+[INFO] [1] 2023-06-12 11:12:12 Successfully download "1fc917c7ad66487470e466c0ad40ddd45b9f7730a4b43e1b2542627f0596bbdc" from "gitee-lfs-v2"

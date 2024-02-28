@@ -1,0 +1,12 @@
+@tailwind components;
+
+@layer components {
+  .notice-content a {
+    @apply text-gray-500 hover:text-slate-600;
+  }
+  .notice-badge {
+    :global(.ant-badge-count-sm) {
+      @apply px-1 text-cyan-50 sm:mr-2.5;
+    }
+  }
+}

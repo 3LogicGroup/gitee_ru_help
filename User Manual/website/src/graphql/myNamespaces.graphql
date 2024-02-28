@@ -1,0 +1,18 @@
+query myNamespaces($first: Int, $after: String) {
+  current_user {
+    namespaces(first: $first, after: $after) {
+      nodes {
+        id
+        type
+        display_name
+        path
+        is_edu
+      }
+      pageInfo {
+        endCursor
+        hasNextPage
+      }
+      total_count
+    }
+  }
+}

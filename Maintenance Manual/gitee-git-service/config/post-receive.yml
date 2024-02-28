@@ -1,0 +1,15 @@
+app:
+  branch_limit: 50
+  domain: "https://gitee.com"
+
+log:
+  access: "${APPDIR}/logs/hook-access.log"
+  error: "${APPDIR}/logs/hook-error.log"
+
+sidekiq_redis:
+  mode: "normal"
+  master_name: "master_name"
+  address: "172.18.0.95:6380"
+  addresses: ["127.0.0.1:6379"]
+  db: 0
+  password: ""

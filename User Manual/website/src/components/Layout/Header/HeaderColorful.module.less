@@ -1,0 +1,80 @@
+@tailwind components;
+
+.gitee-header-menu-shwodow {
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.02),
+    0px 3px 14px 0px rgba(0, 0, 0, 0.05), 0px 1px 12px 0px rgba(0, 0, 0, 0.04) !important;
+}
+@layer components {
+  #gitee-header--colorful {
+    :global {
+      // 用户 "我的" 菜单
+      .gitee-header__my__menu {
+        @apply bg-[#FCFCFC] text-muted !important;
+        .gitee-header-menu-shwodow();
+      }
+      .gitee-header__my__item {
+        @apply text-[#1B1C1E] hover:bg-[#F5F5F5] !important;
+      }
+      .gitee-header__my__divider {
+        @apply border-t-[#E3E9ED] !important;
+      }
+      .gitee-header__my__all-btn {
+        @apply text-muted hover:text-black !important;
+      }
+      // 搜开源
+      // .gitee-header__search input.ant-input {
+      //   @apply border border-solid border-[#8C92A4] bg-white !important;
+      // }
+      .gitee-header__search__item {
+        @apply bg-white text-[#1B1C1E] shadow-lg hover:bg-[#F5F5F5] !important;
+      }
+      // 新建菜单
+      .gitee-header__create__menu {
+        @apply bg-[#FCFCFC] text-[#1B1C1E] !important;
+        .gitee-header-menu-shwodow();
+      }
+      .gitee-header__create__item {
+        @apply text-[#1B1C1E] hover:bg-[#F5F5F5] !important;
+      }
+      // 用户个人菜单
+      .gitee-header__user__menu {
+        @apply bg-[#FCFCFC] !important;
+        .gitee-header-menu-shwodow();
+      }
+      .gitee-header__user__item {
+        @apply text-[#1B1C1E] hover:bg-[#F5F5F5] !important;
+      }
+      // 消息通知
+      .gitee-header__notice__menu {
+        @apply bg-[#F3F3F3] text-[#1B1C1E] !important;
+        .gitee-header-menu-shwodow();
+      }
+      .gitee-header__notice__tab-btn {
+        @apply text-[#1B1C1E] !important;
+      }
+      .gitee-header__notice__tabbar--active {
+        @apply bg-white !important;
+      }
+      .gitee-header__notice__tab-content {
+        @apply bg-white !important;
+      }
+      .gitee-header__notice__item {
+        @apply bg-white text-[#1B1C1E] hover:bg-[#F5F5F5] !important;
+      }
+      .gitee-header__notice__footer {
+        @apply bg-white text-[#1B1C1E] !important;
+        & > * {
+          @apply text-[#1B1C1E] transition-colors hover:text-black !important;
+        }
+      }
+      // 服务与支持
+      .gitee-header__service-support__menu {
+        @apply bg-white text-[#1B1C1E] !important;
+        .gitee-header-menu-shwodow();
+      }
+      .gitee-header__service-support__item {
+        @apply text-[#1B1C1E] hover:bg-[#F5F5F5] !important;
+      }
+    }
+  }
+}

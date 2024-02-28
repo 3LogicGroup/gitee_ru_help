@@ -1,0 +1,19 @@
+# create database lfs;
+# create user gitee@'%' identified by '123456';
+# grant all privileges on lfs.* to gitee@'%' with grant option;
+# alter user gitee@'%' identified with mysql_native_password by '123456';
+
+version: "3.8"
+
+services:
+  lfsoss-server:
+    image: "hub.gitee.com/library/lfsoss:v1.1.0"
+    container_name: "lfsoss-server"
+    hostname: "lfsoss-server"
+    restart: always
+    ports:
+      - "192.168.240.23:8002:8002"
+    volumes:
+      - "./config:/home/git/oscbin/config"
+      - "./log:/home/git/oscbin/log/"
+      - "/data/nfs/lfs/storage:/home/git/lfs/storage"
