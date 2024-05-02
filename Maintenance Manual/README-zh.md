@@ -1,110 +1,110 @@
-# Russia Gitee Pass Overall Architecture Description
+# Описание общей архитектуры Russia Gitee Pass* 
 
-## 1. Gitee Russia Pass Overall Topology
+## 1. Общая топология Gitee Russia Pass
 
 ![](./images/pass-zhengtituopu.png)
 
-## 2. Gitee Russia Pass Service Distribution
+## 2. Служба распространения Gitee Russia Pass
 
 ![](./images/pass-zhengtituopu2.png)
 
-## 3. Gitee Platform Architecture
+## 3.  Архитектуры платформы Gitee
 
-### 3.1 Gitee Technical Architecture Advantages
+### 3.1 Преимущества технической архитектуры Gitee
 
-To ensure that the system has no single point of failure, ensure the continuity and robustness of the business, Gitee platform establishes a load-balanced and highly available cluster based on K8s and self-developed distributed git storage architecture. When a code repository management node fails, the service will automatically migrate to other management nodes, ensuring high availability of the platform and uninterrupted operation of applications 7*24 hours.
+Чтобы гарантировать отсутствие у системы единой точки отказа, а также обеспечить непрерывность и надежность бизнеса, платформа Gitee создает на основе K8s и самостоятельно разработанной архитектуры распределенного репозитория git кластер с распределенной нагрузкой и высокой доступностью. В случае выхода из строя узла управления репозиторием кода сервис автоматически переносится на другие узлы управления, обеспечивая высокую доступность платформы и бесперебойную работу приложений в режиме 24/7.
 
-The Gitee platform adopts a hybrid cloud deployment approach with separation of compute and storage. The compute nodes deploy a K8s cluster to run Gitee platform's business code that is unrelated to storage. The deployment controller in the K8s cluster achieves multiple instances redundancy and fault self-healing of the business code, ensuring the stability of the platform services. The storage nodes deploy a self-developed distributed git storage architecture that supports multiple shards and replicas to ensure repository data security.
+Платформа Gitee использует подход развертывания гибридного облака с разделением вычислений и хранения данных. Вычислительные узлы развертывают кластер K8s для запуска бизнес-кода платформы Gitee, не связанного с хранилищем. Контроллер развертывания в кластере K8s обеспечивает резервирование нескольких экземпляров и самовосстановление бизнес-кода после сбоев, что гарантирует стабильность сервисов платформы. На узлах хранения развернута самостоятельно разработанная архитектура распределенного git-хранилища, поддерживающая множество сегментов и реплик для обеспечения безопасности данных репозитория.
 
-### 3.2 System High Availability and Scalability
+### 3.2 Высокая доступность и масштабируемость системы
 
-To ensure there is no single point of failure and to guarantee the continuity and robustness of the business system, the architecture of Gitee products is based on K8s to establish a load-balanced cluster. When a business application instance fails, the traffic is automatically scheduled to other healthy instances, and the failed instance is automatically restarted. Once the instance recovers, it is added back to the load-balanced scheduling backend to ensure the high availability of the platform services. When the business load is high, dynamic scaling of business instances can be achieved through the dynamic scaling capabilities of K8s to ensure the scalability of the business system.
+Чтобы гарантировать отсутствие у системы единой точки отказа и гарантировать непрерывность и устойчивость бизнес-системы, архитектура продуктов Gitee основана на K8s для создания кластера с балансировкой нагрузки. В случае выхода из строя экземпляра бизнес-приложения, трафик автоматически планируется на другие рабочие экземпляры, а вышедший из строя экземпляр автоматически перезапускается. Как только экземпляр восстанавливается, он снова добавляется в бэкэнд планирования сбалансированной нагрузки, чтобы обеспечить высокую доступность сервисов платформы. При высокой бизнес-нагрузке можно обеспечить динамическое масштабирование экземпляров с помощью возможностей динамического масштабирования K8s для обеспечения масштабируемости бизнес-системы.
 
-In order to ensure that the git repository storage has no single point of failure and to ensure the reliability of repository data, Gitee platform has independently developed a distributed git storage architecture. The git storage is distributed and stored on multiple nodes through the independently developed storage sharding rules, which can expand the capacity of the entire storage architecture by increasing the number of shards, ensuring the scalability of git repository storage. At the same time, each shard supports the deployment of multiple replicas to achieve repository data redundancy and ensure high reliability of git repository storage.
+Чтобы гарантировать отсутствие у хранилища git-репозитория единой точки отказа и обеспечить надежность данных репозитория, платформа Gitee самостоятельно разработала архитектуру распределенного git-хранилища. Хранилище git распределяется и хранится на нескольких узлах с помощью самостоятельно разработанных правил сегментирования  хранилища, что позволяет увеличить емкость всей архитектуры хранения за счет увеличения количества сегментов, обеспечивая масштабируемость хранилища git-репозитория. В то же время каждый сегмент поддерживает развертывание нескольких реплик для достижения избыточности данных репозитория и обеспечения высокой надежности хранения git-репозитория.
 
-The platform architecture is as follows:
+Архитектура платформы выглядит следующим образом:
 
 ![](./images/pass-zhengtitu01.png)
 
-### 3.3 High availability and scalability implementation on Gitee platform
+### 3.3 Реализация высокой доступности и масштабируемости на платформе Gitee
 
-3.3.1 Implementation of high availability and scalability of business systems
+3.3.1 Обеспечение высокой доступности и масштабируемости бизнес-систем
 
-[sshtunnelweb: A ssh tunnel web forwarding system based on user IP for permission control, written in Go. It is mainly used within the company for R&D access to production environment services, without exposing the production IP to the R&D team. Only access to the company's internal host port is required.](URL-b282645f32)
+[sshtunnelweb: Система веб-переадресации ssh-туннелей, основанная на IP-адрес пользователя для контроля прав доступа, написанная на Go. В основном используется внутри компании для доступа R&D к сервисам производственной среды, не раскрывая производственный IP-адрес для команды НИОКР. Требуется только доступ к внутреннему порту хоста компании.](URL-b282645f32)
 
-K8s cluster deployment architecture is as follows:
+Архитектура развертывания кластера K8s выглядит следующим образом:
 
 ![](./images/pass-zhengtitu02.png)
 
-The business system of the Gitee platform ensures the healthy operation of the business system Pod resources through the Deployment controller.
+Бизнес-система платформы Gitee обеспечивает исправное функционирование ресурсов подов бизнес-системы с помощью контроллера развертывания.
 
-Application access is through upper layer LB reverse proxy to multiple nodes in K8s cluster. Business instances are exposed ports in the K8s cluster in the form of NodePort, allowing access to business instances through ports of any node.
+Доступ к приложениям осуществляется через обратный прокси-сервер верхнего уровня LB к нескольким узлам кластера K8s. Бизнес-экземпляры имеют открытые порты в кластере K8s в виде NodePort, что позволяет получить доступ к бизнес-экземплярам через порты любого узла.
 
-Pods in the K8s cluster's Deployment controller support dynamic scaling. When the workload of a business system is high, the number of pods can be adjusted to increase the system's capacity to handle traffic.
+Поды в контроллере развертывания кластера K8s поддерживают динамическое масштабирование. При высокой нагрузке на бизнес-систему количество подов может быть изменено для увеличения мощности системы по обработке трафика.
 
-The deployment architecture of the business system is as follows:
+Архитектура развертывания бизнес-системы выглядит следующим образом:
 
 ![](./images/pass-zhengtitu03.png)
 
-#### 3.3.2 High Availability and Scalable Implementation of Git Repository Storage
+#### 3.3.2 Реализация высокой доступности и масштабируемости хранилища репозиториев Git
 
-Gitee's git repository storage on the platform is implemented using a self-developed distributed git repository storage architecture, providing repository-level high availability and scalability.
+Для хранения git-репозиториев на платформе Gitee используется самостоятельно разработанная архитектура распределенного хранения git-репозиториев, обеспечивающая высокую доступность и масштабируемость на уровне репозиториев.
 
-Each repository storage node deploys the gitaly service. The entire storage pool is divided into multiple shards using upper-level sharding rules. Increasing the number of shards can expand the storage capacity of git repositories.
+На каждом узле хранения репозитория развернут сервис gitaly. Весь пул хранилища делится на несколько сегментов с помощью правил сегментирования верхнего уровня. Увеличение количества сегментов позволяет расширить объем памяти git-репозиториев.
 
-The praefect service is deployed on top of each shard, which is used to synchronize data replicas and perform health checks on replica data. When a replica in a shard fails, the healthy replicas within the shard will continue to provide services, ensuring high availability of the git repository storage. The architecture diagram of the git repository storage deployment is as follows:
+Поверх каждого сегмента развернут сервис praefect, который используется для синхронизации реплик данных и проверки состояния данных реплики. Если реплика в сегменте выходит из строя, исправные реплики в этом сегменте продолжают функционировать, обеспечивая высокую доступность хранилища git-репозитория. Архитектурная схема развертывания хранилища репозитория git выглядит следующим образом:
 
 ![](./images/pass-zhengtitu04.png)
 
-#### 3.3.3 High availability implementation of databases and middleware
+#### 3.3.3 Реализация высокой доступности баз данных и промежуточного программного обеспечения
 
-Gitee platform uses various open source databases and middleware, and these components all use official or community-recognized high availability deployment solutions to ensure the high availability and scalability of the middleware.
+Платформа Gitee использует различные базы данных и промежуточное ПО с открытым исходным кодом, и все эти компоненты используют официальные или признанные сообществом решения для развертывания высокой доступности, чтобы обеспечить высокую доступность и масштабируемость промежуточного ПО.
 
-##### MySQL High Availability
+##### Высокая доступность MySQL
 
-The high availability solution for MySQL is to use keepalived for primary and secondary traffic access. When the primary node in keepalived fails, the cluster VIP will switch to the backup node to provide uninterrupted service. The primary and secondary MySQL achieve bidirectional master-master synchronization through binlog. Each of the two primary nodes is also mounted with a backup node to implement data backup, ensuring high availability and data security of the MySQL service.
+Решение, обеспечивающее высокую доступность MySQL, заключается в использовании keepalived для первичного и вторичного доступа к трафику. В случае выхода из строя основного узла keepalived кластер VIP переключится на резервный узел для обеспечения бесперебойного обслуживания. Первичный и вторичный MySQL обеспечивают двунаправленную синхронизацию master-master через binlog. Каждый из двух основных узлов также подключен к резервному узлу для осуществления резервного копирования данных, что обеспечивает высокую доступность и безопасность данных службы MySQL.
 
 ![](./images/database-tuopu01.png)
 
-##### Redis High Availability
+##### Высокая доступность Redis
 
-Redis achieves high availability through the official redis cluster solution. The cluster consists of 6 nodes, including 3 master nodes and 3 replica nodes. Data is stored in different shard groups based on the cluster sharding protocol. Each shard group runs two instances, one as the master and the other as the replica. When the master instance fails, the replica instance takes over the traffic of the master instance and continues to provide services. By scaling the number of shard groups and rebalancing the distribution of slots in the cluster, horizontal scaling of the cluster can be achieved.
+Высокая доступность Redis достигается за счет официального кластерного решения Redis. Кластер состоит из 6 узлов, в том числе 3 мастер-узлов и 3 узлов-реплик. Данные хранятся в различных группах сегментов на основе протокола сегментирования кластера. В каждой группе сегментов работают два экземпляра, один из которых является ведущим, а другой - репликой. В случае отказа основного экземпляра реплика продолжает функционировать, принимая на себя трафик основного экземпляра. Масштабирование числа групп сегментов и перераспределение слотов в кластере позволяет добиться горизонтального масштабирования кластера.
 
 ![](./images/database-tuopu02.png)
 
-etcd high availability
+##### Высокая доступность etcd
 
-etcd is a highly available distributed key-value database used for service discovery and system configuration. It serves as the metadata storage database for the K8s cluster on the Gitee platform. High availability of etcd is achieved by deploying a 3-node etcd cluster. When a node in the cluster fails, a new master node is elected through the Raft algorithm by voting among the majority of healthy nodes. The new master node takes over the traffic of the failed node and continues to provide services.
+etcd - это высокодоступная распределенная база данных "ключ-значение", используемая для обнаружения сервисов и настройки системы. Она служит базой данных для хранения метаданных в кластере K8s на платформе Gitee. Высокая доступность etcd достигается за счет развертывания 3-узлового кластера etcd. В случае выхода из строя одного из узлов кластера новый ведущий узел выбирается с помощью алгоритма Raft путем отбора из числа большинства исправных узлов. Новый ведущий узел продолжает функционировать, принимая на себя трафик вышедшего из строя узла.
 
 ![](./images/database-tuopu03.png)
 
-##### PostgreSQL High Availability
+##### Высокая доступность PostgreSQL
 
-PostgreSQL adopts the high availability cluster deployment solution provided by Zalando called Patroni. The cluster metadata is stored in the high availability etcd cluster. Multiple PostgreSQL instances synchronize data through the streaming replication of PostgreSQL. When the primary node in the cluster fails, the Patroni template reads the metadata from etcd and selects a new primary node to take over the traffic and provide continuous service.
+PostgreSQL использует предоставляемое компанией Zalando решение для развертывания кластеров высокой доступности под названием Patroni. Метаданные кластера хранятся в высокодоступном кластере etcd. Несколько экземпляров PostgreSQL синхронизируют данные с помощью потоковой репликации PostgreSQL. В случае выхода из строя основного узла кластера шаблон Patroni считывает метаданные из etcd и выбирает новый основной узел, который продолжает функционировать, принимая на себя трафик вышедшего из строя узла.
 
 ![](./images/database-tuopu04.png)
 
-##### Kafka High Availability
+##### Высокая доступность Kafka
 
-Kafka uses the method of multiple partitions and replicas to achieve high availability deployment. Each partition has replication
+В Kafka для достижения высокой доступности развертывания используется метод нескольких разделов и реплик. Каждый раздел имеет репликацию
 
 ![](./images/kafka-tuopu01.png)
 
-### 3.4 Observable implementation on Gitee platform
+### 3.4 Реализация Observable на платформе Gitee
 
-Gitee platform Prometheus monitors the status of all nodes and applications, including node performance indicators, service status, application load, K8s cluster pod status and performance indicators, etc.; collects application logs through Elastic Stack and provides aggregation queries and analysis.
+Gitee-платформа Prometheus отслеживает состояние всех узлов и приложений, включая показатели производительности узлов, состояние сервисов, загрузку приложений, состояние и показатели производительности стручков кластера K8s и т. д.; собирает журналы приложений через Elastic Stack и обеспечивает агрегирование запросов и анализ.
 
 ![](./images/gitee-monitor01.png)
 
-### 3.5 Gitee platform information security implementation
+### 3.5 Реализация информационной безопасности платформы Gitee
 
-Due to the physical isolation between data centers and the public network environment, for the management of data center nodes, operations personnel connect to the data center's bastion host through a virtual private network (VPN) and then manage the data center nodes through the bastion host.
+В силу физической изолированности дата-центров от общедоступной сетевой среды, для осуществления управления узлами дата-центров эксплуатационный персонал подключается к бастионному хосту дат-центра через виртуальную частную сеть (VPN) и затем управляет узлами дата-центра через бастионный хост.
 
-All accounts logging into the bastion host have two-factor authentication enabled and are only allowed to connect via a virtual private network to ensure protection against network attacks.
+В целях исключения возможности сетевых атак все учетные записи, входящие на бастионный хост, проходят двухфакторную аутентификацию и могут подключиться только через виртуальную частную сеть. 
 
 ![](./images/baoleiji01.png)
 
-## 4. Detailed implementation of the Gitte platform
+## 4. Детальная реализация платформы Gitte
 
 [Appendix - IAAS Resource Application](./Appendix-IAAS-Resource-Application.md)
 
@@ -112,67 +112,69 @@ All accounts logging into the bastion host have two-factor authentication enable
 
 [Attachment - Internal DNS configuration for all server nodes](./Attachment-InternalDNS.md)
 
-### 4.1 Deploying High Availability Kubernetes Cloud Platform
+### 4.1 Развертывание высокодоступной облачной платформы Kubernetes
 
 [Install_ha_k8s](./russia-gitee-prod/Install_ha_k8s.md)
 
-### 4.2 Deploying Highly Available gitee-git-service
+### 4.2 Развертывание высокодоступного gitee-git-service
 
 [Install_gitee-git-service](./gitee-git-service/README.md)
 
-### 4.3 Deploy sre (primary and backup)
+### 4.3 Развертывание sre (основного и резервного)
 
 [Install_sre-service](./sre-base/README.md)
 
-### 4.4 Deploy MySQL semi-synchronous master-slave replication
+### 4.4 Развертывание полусинхронной репликации MySQL master-slave 
 
 [Install_MySQL](./sre-base/mysql-replication/README.md)
 
-### 4.5 Deploy PostgreSQL Master-Slave Streaming Replication
+### 4.5 Развертывание потоковой репликации PostgreSQL master-slave
 
 [Install_PostgreSQL](./sre-base/postgresql/README.md)
 
-### 4.6 Deploy highly available MinIO 4 nodes
+### 4.6 Развертывание высокодоступной 4-узловой MinIO 
 
 [Install_MinIO](./sre-base/minio/README.md)
 
-### 4.7 Deploy High Availability Kafka Cluster
+### 4.7 Развертывание высокодоступного кластера Kafka
 
 [Install_Kafka](./sre-base/kafka-cluster/README.md)
 
-### 4.8 Deploy Highly Available Elasticsearch Cluster
+### 4.8 Развертывание высокодоступного кластера Elasticsearch
 
 [Install_Elasticsearch](./sre-base/es-cluster/README.md)
 
-### 4.9 Deploy Highly Available Redis Cluster
+### 4.9 Развертывание высокодоступного кластера Redis
 
 [Install_Redis-cluster](./russia-gitee-prod/install_redis_cluster.md)
 
-### 4.10 Deploy hot standby haproxy load balancer
+### 4.10 Развертывание балансировщика нагрузки haproxy в режиме горячего резервирования
 
 [Install_haproxy_haproxy](./haproxy/README.md)
 
-### 4.11 Deploy Varnish cdn acceleration service
+### 4.11 Развертывание службы ускорения Varnish cdn
 
 [Install_Varnish-service](./varnish/README.md)
 
-### 4.12 Deploy Gitee Core Services (Frontend and Backend)
+### 4.12 Развертывание основных служб Gitee (фронтенд и бэкенд)
 
 [Install_Gitee-service](./russia-gitee-prod/README.md)
 
-### 4.13 Gitee continuous integration and continuous deployment
+### 4.13 Непрерывная интеграция и непрерывное развертывание Gitee
 
 [Install_Gitee-service](./russia-gitee-prod/README.md)
 
-## 5. Data Backup Plan
+## 5. План резервного копирования данных
 
-jenkins --- scheduled task ----- backup data uploaded to Minio
-// TODO Add a diagram
+jenkins --- запланированная задача ----- выполнить резервное копирование данных, загруженных на Minio
+// ПРИМЕЧАНИЕ РАЗРАБОТЧИКА Необходимо добавить схему
 
-### 5.1 MySQL Data Backup
+### 5.1 Резервное копирование данных MySQL
 
 [Backup MySQL data and upload it to minio](./backup/mysql_backup/README.md)
 
-### 5.2 PostgreSQL Data Backup
+### 5.2 Резервное копирование данных PostgreSQL
 
 [Backup PostgreSQL Data and Upload to Minio](./backup/postgresql_backup/README.md)
+
+*Название ПО

@@ -1,6 +1,6 @@
 # HAProxy
 
-1. Deployment
+1. Развертывание
 
 ```sh
 $ sudo apt upgrade -y
@@ -26,7 +26,7 @@ sudo systemctl restart sshd
 
 
 
-Generate SSL certificate files
+Создание файлов сертификатов SSL
 
 ```
 Multiple Certificates in One
@@ -35,9 +35,9 @@ cat gitee_ru_2025_01_14.crt intermediate_pem_globalsign_ssl_dv_wildcard_1.crt ro
 cp -rf haproxy_gitee_ru_ssl.pem ../
 ```
 
-Reference articles:
+Справочные материалы:
 
-[Certificate Chain Merge - momingliu11 - cnblogs.com](https://www.cnblogs.com/dreamer-fish/p/7479294.html)
+[Объединение цепочек сертификатов — momingliu11 — cnblogs.com](https://www.cnblogs.com/dreamer-fish/p/7479294.html)
 
 
 
@@ -162,7 +162,7 @@ backend ssh_pilot_servers
 
 
 
-Enable haproxy logging
+Включить ведение журнала haproxy
 
 ```sh
 # vim /etc/haproxy/haproxy.cfg
@@ -195,16 +195,17 @@ sudo systemctl enable --now haproxy
 
 
 
-## 2. Monitoring
 
-"[3.26 HAProxy Data Collection · Prometheus Notes (erdong.site)](https://erdong.site/prometheus-notes/chapter03-Exporter/3.26-haproxy-exporter.html)"
+## 2. Мониторинг
 
-
-
-[【Cloud Native | Kubernetes Series】---Prometheus Monitoring Haproxy(Haproxy-exporter)-CSDN Blog](https://blog.csdn.net/qq_29974229/article/details/126697996)
+"[3.26 Сбор данных HAProxy · Заметки Прометея (erdong.site)](https://erdong.site/prometheus-notes/chapter03-Exporter/3.26-haproxy-exporter.html)"
 
 
 
-haproxy 2.0 has been released for some time, providing direct internal exposure of Prometheus metrics, making it convenient to quickly monitor the system's status.
+[【Cloud Native | Kubernetes Series】---Prometheus Monitoring Haproxy(Haproxy-exporter)-Блог CSDN](https://blog.csdn.net/qq_29974229/article/details/126697996)
 
-Monitoring system status using haproxy 2.0 prometheus metrics
+
+
+Ранее был выпущен haproxy 2.0, обеспечивающий прямое внутреннее раскрытие метрик Prometheus, что позволяет удобно и быстро отслеживать состояние системы.
+
+Мониторинг состояния системы с помощью метрик haproxy 2.0 prometheus

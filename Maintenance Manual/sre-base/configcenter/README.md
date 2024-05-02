@@ -1,5 +1,5 @@
 
 
-# nginx configuration for a fully functional webdav server
+# Конфигурация nginx для полнофункционального сервера WebDAV
 
-nginx configuration feature complete webdav server - Read Heart Notes (opswill.com)
+Функция конфигурации nginx, полный сервер WebDAV — прочтите Heart Notes (opswill.com)

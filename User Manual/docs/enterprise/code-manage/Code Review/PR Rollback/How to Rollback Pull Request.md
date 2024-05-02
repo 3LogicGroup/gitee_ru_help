@@ -1,6 +1,6 @@
 ---
-title: How to roll back a Pull Request?
+title: Как откатить запрос на слияние?
 description: None
 ---
 
-![Image Description](../../../../../assets/image170.png)
+![Описание изображения](../../../../../assets/image170.png)

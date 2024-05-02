@@ -1,21 +1,21 @@
 ---
-{"title"=>"Basic Concepts of Pipelines"}
+{"title"=>"Основные понятия о конвейере"}
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 slug: /gitee-go/pipeline/basic-config
-description: What is Gitee Go
+description: Что такое Gitee Go
 origin-url: 
 ---
 
-- Pipeline Name: The name of the pipeline. It can be duplicated within the same code repository, but it is not recommended to have duplicate names.
-- Pipeline unique identifier: The unique identifier of the pipeline, which cannot be duplicated within the same code repository
+- Имя конвейера: имя конвейера. Его можно дублировать в одном и том же репозитории кода, но не рекомендуется иметь повторяющиеся имена.
+- Уникальный идентификатор конвейера: уникальный идентификатор конвейера, который не может быть дублирован в одном репозитории кода.
 
- **Use Case:**
-**[Recommended]** You can define it in the visual editing interface:
-![Configure basic information](https://images.gitee.ru/uploads/images/2021/1117/132106_3bd84c77_5192864.png)
+ **Пример использования:**
+**[Рекомендуется]** Вы можете посмотреть на скриншоте:
+![Настройка основной информации](https://images.gitee.ru/uploads/images/2021/1117/132106_3bd84c77_5192864.png)
 
- **You can define directly in Yml:**
+ **Вы можете посмотреть в Yml:**
 
 ```yaml
 # Current yml file version, default 1.0

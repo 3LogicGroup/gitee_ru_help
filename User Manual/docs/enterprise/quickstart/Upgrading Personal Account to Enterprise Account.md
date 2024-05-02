@@ -1,5 +1,5 @@
 ---
-title: Upgrade personal account to enterprise account
+title: Обновление персональной учетной записи до корпоративной
 authors:
   - name: Roger
     url: https://gitee.ru/yuriluo
@@ -8,28 +8,28 @@ origin-url: https://gitee.ru/help/articles/4207
 
 
 
-Upgrade Personal Community Account
+Обновление персональной учетной записи сообщества
 
-Upgrade organization account
+Обновление учетной записи организации
 
-## Upgrade Personal Community Account
+## Обновление персональной учетной записи сообщества
 
-Step 1: Log in to your community account.
+Шаг 1: Войдите в свою учетную запись сообщества.
 
-Step 2: Click "Settings" in the drop-down menu that appears next to your avatar, and then click "Upgrade to Enterprise Edition".
+Шаг 2: Нажмите "Настройки" в выпадающем меню, которое появится рядом с вашим аватаром, а затем нажмите "Обновить до Enterprise Edition".
 
-Step 3: Fill in the upgrade information as prompted.
+Шаг 3: Заполните информацию об обновлении, как будет предложено.
 
-Step 4: Select the repositories that need to be transferred to the enterprise under the community account.
+Шаг 4: Выберите репозитории, которые необходимо перенести в корпоративную версию под учетной записью сообщества.
 
-Step 5: Complete Account Upgrade.
+Шаг 5: Завершите обновление учетной записи.
 
-## Upgrade Organization Account
+## Обновление учетной записи организации
 
-Step 1: Log in to your community account.
+Шаг 1: Войдите в учетную запись сообщества.
 
-Step 2: Click on the organization name in the dropdown menu under the top navigation bar 'My Gitee' to enter the organization homepage.
+Шаг 2: Нажмите на название организации в выпадающем меню под верхней навигационной панелью 'Мой Gitee', чтобы перейти на главную страницу организации.
 
-Step 3: Click on the organization's "Settings" and click "Upgrade to Enterprise Edition".
+Шаг 3: Нажмите на "Настройки" организации и нажмите "Обновить до Enterprise Edition".
 
-Step 4: Fill in the corresponding information as prompted to complete the account upgrade.
+Шаг 4: Заполните соответствующую информацию, как будет предложено, чтобы завершить обновление учетной записи.

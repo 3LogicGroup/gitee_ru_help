@@ -1,72 +1,72 @@
 ---
-title: Baidu Efficiency Cloud
+title: Облако эффективности Baidu 
 
 origin-url: https://gitee.ru/help/articles/4285
 ---
 
-Use Baidu Efficiency Cloud-iPipe to compile, scan, test, and deploy code on Gitee.
+Используйте iPipe-агент облака эффективности Baidu для компиляции, сканирования, тестирования и развертывания кода на Gitee.
 
-## Introduction
+## Введение
 
-Baidu Efficiency Cloud is a DevOps platform on Baidu Cloud. It uses Baidu Efficiency Cloud-iPipe to connect with Gitee code repository, allowing you to easily compile, scan, test, and deploy your applications. Efficiency Cloud-iPipe supports popular languages such as Python, Java, Javascript, C, C++, PHP, and Go for compilation, Docker build, artifact management, and cloud deployment. You can also use Baidu Efficiency Cloud iScan for source code scanning and iTest for automated API testing and performance testing. The flexible pipeline customization can meet your needs.
+Облако эффективности Baidu представляет собой платформу DevOps в Облаке Baidu. Оно использует iPipe-агент Облака эффективности Baidu для соединения с репозиторием кода Gitee, позволяя вам легко компилировать, сканировать, тестировать и разворачивать ваши приложения. iPipe-агент Облака эффективности поддерживает такие популярные языки программирования, как Python, Java, Javascript, C, C++, PHP и Go для компиляции, сборки Docker, управления артефактами и развертывания в облаке. Вы также можете использовать iScan Облака Эффективности Baidu для сканирования исходного кода и iTest для автоматизированного тестирования API и тестирования производительности. Гибкая настройка конвейера данных может удовлетворить ваши потребности.
 
-## Connecting Baidu Effciency Cloud with Gitee Repositories
+## Соединение Облака эффективности Baidu с Репозиториями Gitee
 
-- Gitee's PullRequest can automatically trigger the cloud integration service iPipe, which can perform compilation, code scanning, artifact storage, and deployment.
-- Code commits on branches in Gitee will automatically trigger the efficiency cloud iPipe for builds, achieving continuous integration.
+- Запрос  на слияние в Gitee может автоматически запускать облачный интеграционный сервис агента i-Pipe, который может выполнять компиляцию, сканирование кода, хранение артефактов и развертывание.
+- Коммиты кода в ветках Gitee будут автоматически запускать облако эффективности iPipe для сборок, обеспечивая непрерывную интеграцию.
 
-## Just three steps to connect Baidu iPipe with Gitee code repository
+## Всего лишь три шага для соединения iPipe-агента Baidu с репозиторием кода Gitee
 
-### Step 1: Registering a Baidu Cloud Account and Activate Efficiency Cloud Service
+### Шаг 1: Регистрация учетной записи Облака Baidu и активация сервиса Облака эффективности
 
-1. Open the Baidu Efficiency Cloud product homepage ([https://cloud.baidu.com/product/xly.html](https://cloud.baidu.com/product/xly.html?trackid=30001)) and click 'Use Now'.
+1. Откройте главную страницу продукта Облако эффективности Baidu ([https://.baidu.com/product/xly.html](https://.baidu.com/product/xly.html?trackid=30001)) и нажмите 'Использовать сейчас'.
 
-![Image Description](https://images.gitee.ru/uploads/images/2019/1229/000440_5f66931a_62561.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2019/1229/000440_5f66931a_62561.png )
 
-2. Log in with your Baidu account. If you don't have a Baidu account, please register one and start from the previous step after registration.
+2. Войдите в систему, используя свою учетную запись Baidu. Если у вас нет учетной записи Baidu, зарегистрируйте ее, затем после регистрации начните с предыдущего Шага.
 
-3. On the Open Efficiency Cloud Service page, enter the "Enterprise Name" and "Enterprise Identifier/URL" to open the Efficiency Cloud Service. Access the Efficiency Cloud
+3. На странице "Открыть сервис облака эффективности" введите "Имя предприятия" и "Идентификатор/URL-адрес предприятия", чтобы открыть сервис облака эффективности. Войдите в Облако эффективности
 
-![Image Description](https://images.gitee.ru/uploads/images/2019/1229/000543_385faf4f_62561.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2019/1229/000543_385faf4f_62561.png )
 
-### Step 2: Create an efficiency cloud project and set up an iPipe pipeline.
+### Шаг 2: Создайте проект в Облаке эффективности и настройте конвейер данных в iPipe-агенте.
 
-1. On the Efficiency Cloud project overview page, click "New Project", enter the project name and identifier, and click "Finish and Create".
+1. На странице обзора проекта в Облаке эффективности нажмите "Новый проект", введите имя и идентификатор проекта и нажмите "Завершить и создать".
 
-![Image Description](https://images.gitee.ru/uploads/images/2019/1229/000630_f1018367_62561.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2019/1229/000630_f1018367_62561.png )
 
-2. Enter the newly created project, select "Pipeline iPipe" in the left navigation, and click the "Create Pipeline" button on the page.
+2. Войдите в только что созданный проект, выберите "Конвейер данных iPipe" в левой навигационной панели и нажмите кнопку "Создать конвейер данных" на странице.
 
-![Image Description](https://images.gitee.ru/uploads/images/2019/1229/000728_4d30c3ef_62561.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2019/1229/000728_4d30c3ef_62561.png )
 
-### Step 3: Configure iPipe pipeline and select Gitee code repository
+### Шаг 3: Настройте конвейер данных iPipe и выберите репозиторий кода Gitee
 
-1. On the pipeline configuration page, click the "+ Repository/Branch" button and select Gitee repository
+1. На странице настроек конвейера данных нажмите кнопку "+ Репозиторий/Ветка" и выберите репозиторий Gitee
 
 ![](https://images.gitee.ru/uploads/images/2019/1231/115413_fd078de1_551147.png )
 
-2. Click on 'OAuth' authorization, authorize Efficiency Cloud in the Gitee page, and give the connection a name
+2. Нажмите на кнопку авторизации 'OAuth' авторизуйте Облако эффективности на странице Gitee и присвойте соединению имя
 
-3. Select the code repository or manually enter the open source code repository and configure the branch to monitor.
+3. Выберите репозиторий кода или вручную войдите в репозиторий открытого исходного кода и настройте ветку для мониторинга.
 
 ![](https://images.gitee.ru/uploads/images/2019/1231/115444_aea5aa4b_551147.png )
 
-4. Configure iPipe pipeline stages and tasks, save the pipeline, [Detailed Documentation](https://cloud.baidu.com/doc/XLY/s/qjwvy89pc?trackid=30001)
+4. Настройте этапы и задачи конвейера данных, сохраните конвейер данных, [Подробная документация](https://.baidu.com/doc/XLY/s/qjwvy89pc?trackid=30001)
 
 ![](https://images.gitee.ru/uploads/images/2019/1231/115507_06741cd4_551147.png )
 
-## For open source projects, make the iPipe build results visible to anyone
+## Для проектов с открытым исходным кодом сделайте результаты сборки iPipe-агента видимыми для всех
 
-If your Gitee project is an open-source project, you may want the connected iPipe pipeline to be visible to everyone so that anyone can see the log of the automatically triggered iPipe pipeline when submitting a Commit or creating a PR. If you want this, perform the following operation to configure the Efficiency Cloud project as "public to the whole network".
+Если ваш проект Gitee является проектом с открытым исходным кодом, вы можете захотеть, чтобы подключенный конвейер данных iPipe был виден всем, чтобы любой мог просматривать журнал автоматически запускаемого конвейера iPipe при отправке коммита или создании запроса на слияние. Если вы хотите этого, выполните следующую операцию, чтобы настроить проект Облака эффективности как "общедоступный для всей сети".
 
-If you have already configured a pipeline for connecting to the Gitee code repository (based on the above three steps), please click on the "Project Settings" in the left navigation of the iPipe pipeline page, and in the "Privacy Settings" section of the basic information, select "Public to the Whole Network"
+Если вы уже настроили конвейер данных для подключения к репозиторию кода Gitee (на основе трех вышеуказанных шагов), нажмите на "Настройки проекта" в левой навигационной панели страницы конвейера данных iPipe и в разделе "Настройки конфиденциальности" основной информации выберите "Общедоступный для всей Сети"
 
 ![](https://images.gitee.ru/uploads/images/2019/1231/115527_b23bd877_551147.png )
 
-Please note: Currently, the 'Public on the Internet' feature only works for Efficiency Cloud-iPipe Pipeline components. This means that if a user views a 'Public on the Internet' Efficiency Cloud project without logging in, they can only see
+Обратите внимание: в настоящее время функция "Общедоступный в Интернете" работает только для компонентов конвейера данных Облака эффактивности. Это означает, что если пользователь просматривает "Общедоступный в Интернете" проект Облака Эффективности без входа в систему, он может видеть лишь ограниченную часть кода
 
-## Help and Support
+## Помощь и поддержка
 
-- [Baidu Efficiency Cloud Product Manual and Help Documentation](https://cloud.baidu.com/doc/XLY/index.html?trackid=30001)
-- [Baidu Cloud Efficiency Forum](https://developer.baidu.com/forum/topic/list/95?trackid=30001)
-- Contact Baidu Efficiency Cloud (xiaolvyun@baidu.com)
+- [Руководство по работе с продуктом Облако эффективности Baidu и Справочная документация](https://.baidu.com/doc/XLY/index.html?trackid=30001)
+- [Форум Облака эффективности Baidu](https://developer.baidu.com/forum/topic/list/95?trackid=30001)
+- Связаться с командой Облака эффективности Baidu (xiaolvyun@baidu.com)

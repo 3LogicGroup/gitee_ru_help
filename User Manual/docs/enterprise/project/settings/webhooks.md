@@ -1,15 +1,15 @@
 ---
-title: WebHook settings
+title: Настройки вебхуков
 ---
 
-Click on the bottom of the project navigation menu, "Project Settings":
+Нажмите на "Настройки проекта" внизу навигационного меню проекта:
 
-Click on "WebHooks":
+Нажмите на "Вебхуки":
 
-![Image Description](assets/image570.png)
+![Описание изображения](assets/image570.png)
 
-Click the "New WebHook" button in the upper right corner of the page to enter the WebHook creation page.
+Для перехода на страницу создания вебхука нажмите на кнопку "Новый вебхук" в правом верхнем угллу страницы.
 
-![Image Description](assets/image571.png)
+![Описание изображения](assets/image571.png)
 
-To learn more about WebHooks, you can refer to [Enterprise Management - Function Management - WebHooks Management](/enterprise/management/functions/webhooks).
+Более подробную информацию о вебхуках вы можете найти на странице  [Управление предприятием - Управление функционалом - Управление вебхуками](/enterprise/management/functions/webhooks).

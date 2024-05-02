@@ -1,8 +1,8 @@
 ---
-title: How to view commit records
+title: Как просмотреть записи коммита
 ---
 
 
-When we want to know what modifications we made to a file when submitting code, we can go to 'Repository Details' -> 'Code', click 'x commits' to enter the commit record page.
+Когда нам нужно узнать, какие изменения мы внесли в файл при отправке кода, мы можем перейти в "Сведения о репозитории" -> "Код", нажать "x коммитов", чтобы перейти на страницу записи коммита.
 
-![Image Description](../../../../../assets/image159.png)
+![Описание изображения](../../../../../assets/image159.png)

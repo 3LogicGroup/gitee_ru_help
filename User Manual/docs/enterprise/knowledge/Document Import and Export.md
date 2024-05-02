@@ -1,16 +1,17 @@
 ---
-title: Document Import and Export
-description: Document import and export
+title: Импорт и экспорт документов
+description: Импорт и экспорт документов
 slug: enterprise/knowledge/import-and-export
 ---
-### Document Import
+### Импорт документов 
 
-1. Click the "Settings" button on the document page to enter the document settings page;
-![Image Description](assets/image301.png)
+1. Для перхода на страницу настроек документа нажмите кнопку "Настройки" на странице документа;
+![Описание изображения](assets/image301.png)
 
-2. Click on the `Upload` option in the left menu bar to upload zip/html/txt/markdown files for document importation.
-![Image Description](assets/image302.png)
-### Document Export
+2. Нажмите на опцию `Загрузка` в левой строке меню, чтобы загрузить zip/html/txt/markdown файлы для импорта документов.
+![Описание изображения](assets/image302.png)
 
-1. Click the "Export" button in the upper right corner of the document page to export the document in different formats.
-![Image Description](assets/image303.png)
+### Экспорт документов
+
+1. Для осуществления экспорта документа в различных форматах нажмите кнопку "Экспорт" в правом верхнем углу страницы документа.
+![Описание изображения](assets/image303.png)

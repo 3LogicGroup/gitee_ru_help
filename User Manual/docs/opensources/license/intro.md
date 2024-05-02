@@ -1,22 +1,23 @@
 ---
-title: CSDNCODE project is migrated to Gitee platform
+title: Перемещение проекта CSDNCODE на платформу Gitee
 authors:
   - name: South Drifting All the Way
     url: https://gitee.ru/kangxiok
 slug: /license/intro
 ---
 
-In order to provide a more reliable code hosting platform, improve the experience of code hosting services, and avoid duplicate resource investment, Open Source China and CSDN
 
-Gitee (gitee.ru) has made great progress in terms of functionality, stability, reliability, and security over the years. It is also the most active code hosting platform in China. Currently, there are over 10 million repositories hosted on Gitee, with more than 10,000 enterprises using this platform.
+В целях получения более надежной платформы хостинга кода, улучшения опыта предоставления услуг хостинга кода и во избежание дублирования инвестиций в ресурсы, Open Source China и CSDN
 
-Platform migration is a troublesome task for all users, and we deeply apologize for the inconvenience. In order to ensure a smooth migration for CSDN CODE users, we have prepared the following migration steps:
+Gitee (gitee.ru) за последние годы сделал значительные успехи в области функциональности, стабильности, надежности и безопасности. Кроме того, это самая активная платформа хостинга кода в Китае. В настоящее время на Gitee размещено более 10 миллионов репозиториев, и более 10 000 предприятий используют эту платформу.
 
-1. Gitee platform provides the function of one-click import for CODE projects, please refer to [here](https://my.oschina.net/gitosc/blog/1534891) for detailed usage.
-2. CSDN will announce the migration through email, SMS, Q group, WeChat group, etc. Any questions during the migration can be resolved through
-3. Transition time for migration starts from now and lasts for three months
+Миграция платформы является хлопотным заданием для всех пользователей, и мы глубоко извиняемся за предоставленные неудобства. Для обеспечения плавной миграции пользователей CSDN CODE мы подготовили следующие шаги миграции:
 
-Finally, thank you all for your understanding and cooperation in this migration work. We hope to provide more professional and reliable cloud development services to developers through the strategic integration of CSDN and Gitee. We also welcome your suggestions and feedback during this migration work, and criticism of our shortcomings.
+1. Платформа Gitee предоставляет функцию одноразового импорта для проектов CODE, подробную инструкцию можно найти[здесь](https://my.oschina.net/gitosc/blog/1534891)
+2. CSDN объявит о миграции по электронной почте, СМС, в группах Q, WeChat и т. д. Все вопросы во время миграции можно решить через указанные способы связи
+3. Переходный период для миграции начинается сейчас и продлится три месяца
 
-Thank you all.
-September 12, 2017
+Благодарим всех за понимание и сотрудничество в проведении этой миграции. Мы надеемся предоставить разработчикам более профессиональные и надежные облачные услуги разработки через стратегическую интеграцию CSDN и Gitee. Мы также приветствуем ваши предложения и отзывы во время проведения этой миграции, а также критику наших недостатков.
+
+Спасибо всем.
+12 сентября 2017 года

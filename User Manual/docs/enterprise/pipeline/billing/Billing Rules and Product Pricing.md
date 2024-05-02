@@ -1,60 +1,60 @@
 ---
-title: Billing Rules and Product Pricing
-description: Billing rules and product pricing
+title: Правила выставления счетоввыставления счетов и ценообразование на продукцию
+description: Правила выставления счетов и ценообразование на продукцию
 origin-url: https://gitee.ru/help/articles/4365
 slug: /enterprise/pipeline/billing/introduce
 keywords:
  - Gitee
- - Product pricing
- - Billing rules
+ - Ценообразование на продукцию
+ - Правила выставления счетов
 ---
 
-If your company's build duration exceeds the package limit, the pipeline may not run properly.
+Если продолжительность сборки вашей компании превышает лимит пакета, возможна неправильная работа конвейера.
 
-Duration gifting rules
+Правила дарения на срок
 
-After the current enterprise opens Gitee CICD pipeline, it will provide **1000** minutes of free build time per month (expired in the current month and deducted first). All projects and repositories under the enterprise can directly use it.
+После того как текущее предприятие откроет конвейер Gitee CICD, оно будет предоставлять **1000** минут бесплатного времени сборки в месяц (срок действия истек в текущем месяце и вычитается в первую очередь). Его могут напрямую использовать все проекты и репозитории предприятия.
 <br/>
 
-Buying the Enterprise Standard Edition, Advanced Edition, or Exclusive Edition will give you additional pipeline build time (never expires).
+Покупка Enterprise Standard Edition, Advanced Edition или Exclusive Edition даст вам дополнительное время для построения конвейера (бессрочное).
 
-Check current remaining duration:
+Проверьте текущую оставшуюся продолжительность:
 
-![Billing Model](./assets/gos-1.png)
+![Модель биллинга](./assets/gos-1.png)
 
-Billing rules for duration
+Правила выставления счетов за продолжительность
 
-A pipeline consists of multiple stages, and a stage consists of multiple tasks.
+Конвейер состоит из нескольких этапов, а этап - из нескольких задач.
 
-As shown in the figure below, this pipeline contains four stages:
+Как показано на рисунке ниже, этот конвейер содержит четыре этапа:
 
-- Test
-- Build
-Upload
-Release
+- Тест
+- Сборка
+- Загрузка
+- Релиз
 
-The "Test" stage includes three tasks:
+Этап "Тест" включает три задачи:
 
-- Maven Unit Testing
-- Jacoco Coverage Collection
-- Cobertura Coverage Collection
+- Юнит-тестирование Maven
+- Сбор покрытия Jacoco
+- Коллекция покрытий Cobertura
 
-![Pipeline Orchestration](./assets/Pipeline Orchestration.png)
+![Оркестровка конвейера](./assets/Pipeline Orchestration.png)
 
-Gitee pipelines will calculate the build duration based on the task's running status. However, not all pipeline tasks will consume your enterprise quota.
+Конвейеры Gitee будут рассчитывать продолжительность сборки на основе статуса выполнения задачи. Однако не все задачи конвейера будут расходовать вашу корпоративную квоту.
 
-Only when you use the cloud build resources provided by Gitee and the tasks included in your pipeline fall into the following billing models, will the build duration be counted when they run.
+Только если вы используете облачные ресурсы сборки, предоставляемые Gitee, и задачи, включенные в ваш конвейер, подпадают под следующие модели биллинга, продолжительность сборки будет учитываться при их выполнении.
 
-![Billing Model](./assets/Billing Model.png)
+![Модель биллинга](./assets/Billing Model.png)
 
-## Product Pricing
+## Ценообразование продукта
 
-Build duration exceeds a total of 1000 minutes. You can also continue to purchase additional build minutes. The pricing is as follows.
+Продолжительность сборки превышает 1000 минут. Вы также можете приобрести дополнительные минуты сборки. Цены указаны следующим образом.
 
-| Package      | Amount   |
+| Пакет | Сумма |
 |---------|-------|
-| 400 minutes | $100 |
-| 800 minutes | $200 |
-| 2000 minutes  | 500 yuan  |
-| 4000 minutes  | 1000 yuan |
-| 1 year (unlimited build time throughout the year) | 5000 yuan |
+| 400 минут | 100 долларов |
+| 800 минут | 200 долларов |
+| 2000 минут | 500 юаней |
+| 4000 минут | 1000 юаней |
+| 1 год (неограниченное время сборки в течение года) | 5000 юаней |

@@ -1,36 +1,36 @@
-# Deploy gitlay
+# Развертывание gitaly
 
-# Deploy gitlay
+# Развертывание gitaly
 
-Gitaly and gitee-GNK are recommended to be deployed on the same server.
+Рекомендуется разворачивать gitaly и gitee-GNK на одном сервере.
 
-## 1. Repository address
+## 1. Адрес репозитория
 
-gitaly repository
+Репозиторий gitaly
 
 https://gitee.com/oscstudio/gitaly.git
 
-> Branch: gitee
+> Ветка: gitee
 
-## 2. Deploy Gitaky
+## 2. Развертывание gitaly
 
-### 2.1 Install Dependencies
+### 2.1 Установка зависимостей
 
-Dependencies
+Зависимости
 
 - Git 2.35+
 - Golang 1.17+
 - Ruby 2.7+
 
-Operating system Ubuntu20.04, Baidu Cloud BCC cloud host
+Операционная система Ubuntu20.04, Baidu Cloud BCC cloud host
 
 | Service Name | Specification | Operating System | IP | Remarks | External Access |
 | -------- | --------------------- | ----------- | ---------------------------------------------------------------------------------------- | ---------------------- | ------------ |
 | gitaly   | 4C*16G 1*200G 1\*500G | ubuntu20.04
   | gitaly1:172.18.0.85<br>gitaly2:172.18.0.83<br>gitaly3:172.18.0.82<br>gitaly4:172.18.0.84
-  | git 存储库 GRPC 服务器 | 否           |
+  | репозиторий git сервер GRPC | мусор           |
 
-#### Git Installation
+#### Установка Git
 
 ```shell
 $ apt update \
@@ -94,7 +94,7 @@ $ cd /tmp; \
 && git --version
 ```
 
-#### Install Golang
+#### Установка Golang
 
 ```shell
 $ cd /tmp; \
@@ -113,7 +113,7 @@ $ source /etc/profile \
 && go version
 ```
 
-#### Ruby Installation
+#### Установка Ruby
 
 ```shell
 $ cd /tmp;  \
@@ -137,7 +137,7 @@ wget "https://cache.ruby-china.com/pub/ruby/2.7/ruby-2.7.5.tar.xz" \
   bundle --version
 ```
 
-### 2.2 Compilation
+### 2.2 Сборка
 
 ```shell
 git clone https://gitee.com/oscstudio/gitaly.git
@@ -145,27 +145,27 @@ cd gitaly
 make install
 ```
 
-Configuration
+Конфигурация
 
 ```shell
 cp config.toml.example config.toml
 ```
 
-- The value of storage.name must match projects.storages in the database
+- Значение storage.name должно совпадать с projects.storages в базе данных
 
-- Adjust all /home/git/gitaly paths in the configuration file as needed.
+- В файле конфигурации настройте все пути /home/git/gitaly, если это необходимо.
 
-Configuration file example:
+Пример файла конфигурации:
 
 [config](./config.toml)
 
-### 2.4 Start
+### 2.4 Запуск
 
 ```shell
 /home/git/gitaly/gitaly /home/git/gitaly/config.toml
 ```
 
-### 2.5 Using Systemd for Management
+### 2.5 Использование Systemd для управления
 
 ```shell
 Configuration
@@ -183,13 +183,13 @@ sudo systemctl restart gitaly.service
 
 **FAQ**
 
-1. Go Proxy
+1. Перейдите в proxy
 
 ```shell
 make install GOPROXY="https://goproxy.cn,direct"
 ```
 
-Please do not use goproxy.io as a proxy, you may encounter the following errors:
+Не используйте goproxy.io в качестве прокси, это может привести к следующим ошибкам:
 
 ```shell
 verifying gitlab.com/gitlab-org/labkit@v1.0.0: checksum mismatch
@@ -197,23 +197,23 @@ verifying gitlab.com/gitlab-org/labkit@v1.0.0: checksum mismatch
         go.sum:     h1:t2Wr8ygtvHfXAMlCkoEdk5pdb5Gy1IYdr41H7t4kAYw=
 ```
 
-## 3. Deploy gitee-GNK
+## 3. Разверните gitee-GNK
 
-### 3.1 Repository Address
+### 3.1 Адрес репозитория
 
-Project name: heimdallr. Implement Git server hooks to replace GNK.
+Название проекта: heimdallr. Добавьте серверные хуки Git, чтобы заменить GNK.
 
 https://gitee.com/oscstudio/gitee-hook
 
-> Branch: master
+> Ветка: master
 
-### 3.2 Build and Deploy
+### 3.2 Сборка и развертывание
 
-Development guide for reference: DevelopmentGuide
+Справочное руководство по разработке: DevelopmentGuide
 
 Configure gitee-GNK
 
-Configuration example:
+Пример конфигурации:
 
 [post-receive.yml](./config/post-receive.yml)
 
@@ -223,14 +223,14 @@ Configuration example:
 
 [update.yml](./config/update.yml)
 
-### 3.3 Start Hooks
+### 3.3 Запустите хуки
 
-Need to globally start Gitee-Hook, execute the following command using the user who started Gitaly.
+Необходимо глобально запустить Gitee-Hook. Запустите следующую команду от имени того же пользователя, который запускал Gitaly.
 
 ```sh
 git config --global core.hooksPath /path/to/gitee-hook/bin
 ```
 
-## 4. Deployment Process Script Record
+## 4. Скрипт записи процесса развертывания
 
 [](./gitaly/ru-gitaly.sh)

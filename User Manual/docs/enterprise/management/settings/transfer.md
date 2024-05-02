@@ -1,10 +1,10 @@
 ---
-title: Transfer Enterprise
+title: Передача компании
 ---
 
-1. Click on the 'Settings' in the enterprise navigation menu to enter the enterprise information page
-1. Click on the 'Transfer and Delete' option in the Enterprise Management menu
-1. Click on the member selection box under "Transfer Enterprise" and select an enterprise member as the receiving party.
-1. Click the "Transfer" button and complete the verification in the subsequent popup verification window.
+1. Нажмите «Настройки» в меню навигации компании, чтобы перейти на страницу с информацией о предприятии.
+2. Нажмите кнопку «Передать и удалить» в меню «Управление компанией».
+3. Нажмите на поле выбора участника в разделе «Передать компанию» и выберите участника компании в качестве принимающей стороны.
+4. Нажмите кнопку «Передать» и завершите проверку в следующем всплывающем окне проверки.
 
-![Image Description](assets/image414.png)
+![Описание изображения](assets/image414.png)

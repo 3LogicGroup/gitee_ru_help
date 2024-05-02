@@ -1,17 +1,17 @@
 ---
-title: WebHook supports Slack
+title: Вебхуки для Slack
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 origin-url: https://gitee.ru/help/articles/4300
 ---
 
-Gitee WebHook supports message notifications through Slack Robot.
+Вебхуки Gitee поддерживают уведомления через робота Slack.
 
-## Add a bot to get WebHook
+## Добавить робота
 
-1. Visit <https://api.slack.com/apps>, choose "Create New App" and select the corresponding Slack Workspace to create a Slack APP.
-2. After creation, select a channel as the conversation channel for notification sending through `Features`->`Incoming Webhooks`->`Add New Webhook to Workspace`, and authorize the group to obtain a WebHook address.
+1. Перейдите на https://api.slack.com/apps, выберите "Создать новое приложение" и выберите соответствующее рабочее пространство Slack для создания приложения Slack.
+2. После создания выберите канал в качестве канала общения для отправки уведомлений через `Функции`->`Входящие вебхуки`->`Добавить новый вебхук в рабочее пространство`, и авторизуйте группу для получения адреса вебхука.
 
 ![](https://images.gitee.ru/uploads/images/2020/0628/124622_44f9e339_551147.png )
 
@@ -19,27 +19,27 @@ Gitee WebHook supports message notifications through Slack Robot.
 
 ![](https://images.gitee.ru/uploads/images/2020/0628/125740_e9e93408_551147.png )
 
-Set up robot WebHook
+Настройка вебхука робота
 
-In the previous step of adding, you can get a WebHook request URL like `https://hooks.slack.com/services/xxxxxxxx/xxxxxxxx/xxxxxxxx`, add this URL to Gitee to complete the WebHook configuration.
+При добавлении вебхука на предыдущем шаге вы получите URL-адрес запроса вебхука, например, `https://hooks.slack.com/services/xxxxxxxx/xxxxxxxx/xxxxxxxx`. Добавьте этот URL-адрес в Gitee, чтобы завершить настройку вебхука.
 
-On the Gitee repository page, go to "Manage" -> "WebHooks Settings" -> "Add" to add a new WebHook.
+Для добавления нового вебхука на странице репозитория в Gitee перейдите в "Управление" -> "Настройки вебхуков" -> "Добавить".
 
-Fill in the webhook address obtained from the previous section into the URL, select the specific trigger event, activate and add to complete the setup of the webhook.
+Для завершения настройки вебхука заполните полученный URL-адрес вебхука в поле URL, затем выберите, активируйте и добавьте конкретное событие-триггер.
 
 ![](webhook-for-slack.assets/image.png)
 
-## Trigger WebHooks
+## Триггеры вебхуков
 
-By setting up a bot, the following scenarios will trigger WebHook requests to Feishu.
+Следующие сценарии активируют запросы вебхука к Slack.
 
-- Push: Repository pushes code, pushes branches, deletes branches
-- Tag push: Create tag, delete tag
-- Issue: Create, close, reopen, delete tasks, or modify task assignees
-- Pull request: Create pull request, update pull request, merge pull request
-- Comment: Comment on repositories, issues, pull requests, commits
+- Push: Репозиторий отправляет код, создает ветки, удаляет ветки
+- Tag Push: Создание тега, удаление тега
+- Issue: Создание, закрытие, повторное открытие, удаление задач или изменение назначенных исполнителей задачи
+- Pull Request: Создание запроса на слияние, обновление запроса на слияние, объединение запроса на слияние
+- Comment: Комментарии к репозиториям, задачам, запросам на слияние, коммитам
 
-## Related Readings
+## Связанные материалы
 
-- [Gitee WebHook supports DingTalk group chat robot](/help/articles/4135)
-- [Gitee WebHook supports WeChat Work](/help/articles/4296)
+- [Поддержка Gitee вебхуков для робота группового чата DingTalk](/help/articles/4135)
+- [Поддержка Gitee вебхуков для WeChat Work](/help/articles/4296)

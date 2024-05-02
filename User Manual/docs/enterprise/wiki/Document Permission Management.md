@@ -1,13 +1,13 @@
 ---
-title: Document permission management
+title: Управление правами доступа к документам
 authors:
   - name: Roger
     url: https://gitee.ru/yuriluo
 origin-url: https://gitee.ru/help/articles/4255
 ---
 
-You can independently configure member access permissions based on roles, folders, and documents: 'No Access', 'Read Only', 'Read and Write', to help managers protect intellectual property and reduce the risk of code leakage.
+Вы можете самостоятельно настраивать разрешения доступа участников на основе ролей, папок и документов: "Нет доступа", "Только чтение", "Чтение и запись", чтобы помочь менеджерам защитить интеллектуальную собственность и снизить риск утечки кода.
 
-![Image Description](image673.png)
+![Описание изображения](image673.png)
 
-![Image Description](image674.png)
+![Описание изображения](image674.png)

@@ -1,16 +1,16 @@
 ---
-title: Repository expansion
+title: Расширение репозитория
 origin-url: https://gitee.ru/help/articles/4321
 ---
 
-(1) Prioritize checking the personal/enterprise package quota description and the large file capacity in the repository, refer to the help documentation: <https://gitee.ru/help/articles/4232>
-(2) Optimize storage space through repository GC, refer to the help documentation: <https://gitee.ru/help/articles/4173>
-(3) If using the enterprise edition, you can view the package quota for the current version and upgrade the package quota to increase repository capacity.
-Operation steps:
-A. Log in to the enterprise super administrator account (or other accounts with enterprise management permissions);
-B. Go to Enterprise Dashboard -> Management -> Summary Information -> Package Details to check
-![Image Description](image634.png)
-C. To increase the capacity of a single repository, upgrade the package
-Upgrade package operation guide: 
-Enterprise Workspace -> Click 'Expand/Upgrade/Renew'
-Upgrade to the corresponding package as needed
+(1) В первую очередь проверьте описание квоты персональных/предпринимательских пакетов и большой объем файлов в репозитории, обратитесь к справочной документации: <https://gitee.ru/help/articles/4232>
+(2) Оптимизируйте пространство хранения с помощью сборщика мусора репозитория, см. справочную документацию: <https://gitee.ru/help/articles/4173>
+(3) Если используется корпоративная версия, можно просмотреть квоту пакетов для текущей версии и обновить квоту пакетов для увеличения емкости репозитория.
+Шаги операции:
+A. Войдите в учетную запись супер администратора предприятия (или в другие учетные записи с правами управления предприятием);
+Б. Перейдите на панель управления предприятия -> Управление -> Сводная информация -> Сведения о пакете, чтобы проверить
+![Описание изображения](image634.png)
+В. Чтобы увеличить емкость одного репозитория, обновите пакет.
+Руководство по обновлению пакета: 
+Рабочее пространство предприятия -> Нажмите "Расширить/обновить/обновить".
+При необходимости обновите соответствующий пакет

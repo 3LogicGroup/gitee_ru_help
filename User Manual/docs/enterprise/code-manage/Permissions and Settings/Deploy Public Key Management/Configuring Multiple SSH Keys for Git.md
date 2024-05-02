@@ -1,30 +1,31 @@
 ---
-title: Configure Multiple SSH Key in Git
+title: Настройка нескольких SSH-ключей в Git
 origin-url: https://gitee.ru/help/articles/4229
 ---
 
-Background
+Справочная информация
 
-To use two Gitee accounts simultaneously, you need to configure different SSH Keys for each account:
+Чтобы одновременно использовать два аккаунта Gitee, необходимо настроить разные SSH-ключи для каждого аккаунта:
 
-* Account A is for the company;
-* Account B is for personal use.
+* Учетная запись A - для компании;
+* Учетная запись Б - для личного использования.
 
-### Solution
+### Решение
 
-1. Generate SSH Key for account A and add SSH public key in the Gitee settings page of account A:
+1. Сгенерируйте SSH-ключ для учетной записи A и добавьте открытый SSH-ключ на странице настроек Gitee для учетной записи A:
 
 ```bash
 ssh-keygen -t ed25519 -C "Gitee User A" -f ~/.ssh/gitee_user_a_ed25519
 ```
 
-2. Generate SSH keys for account B and add the SSH public key on account B's Gitee settings page:
+2. Сгенерируйте SSH-ключи для учетной записи Б и добавьте открытый SSH-ключ на странице настроек Gitee учетной записи Б:
 
 ```bash
 ssh-keygen -t ed25519 -C "Gitee User B" -f ~/.ssh/gitee_user_b_ed25519
 ```
 
-3. Create or modify the file `~/.ssh/config` and add the following content:
+3. Создайте или измените файл `~/.ssh/config` и добавьте в него следующее содержимое:
+
 
 ```bash
 Host gt_a
@@ -39,7 +40,7 @@ Host gt_b
     IdentityFile ~/.ssh/gitee_user_b_ed25519
 ```
 
-4. Test the two SSH Keys separately using the ssh command:
+4. Проверьте по отдельности два SSH-ключа с помощью команды ssh:
 
 ```text
 $ ssh -T gt_a
@@ -49,15 +50,15 @@ $ ssh -T gt_b
 Hi Gitee User B! You've successfully authenticated, but gitee.ru does not provide shell access.
 ```
 
-5. Pull code:
+5. Выполнить слияние кода:
 
-Replace `git@gitee.ru` with the corresponding `Host` in the SSH configuration file, such as the original repository SSH link:
+В файле настроек SSH замените `git@gitee.ru` на соответствующий `Host`, например, на SSH-ссылку оригинального репозитория:
 
 ```text
 git@gitee.ru:owner/repo.git
 ```
 
-When using account A to push and pull repositories, you need to modify the connection to:
+В случае использования учетной записи A для отправки и слияния репозиториев необходимо изменить соединение на:
 
 ```text
 gt_a:owner/repo.git

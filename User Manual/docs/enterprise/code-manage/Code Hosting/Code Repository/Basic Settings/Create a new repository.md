@@ -1,26 +1,26 @@
 ---
-title: Create a new repository
+title: Создание нового репозитория
 origin-url: https://gitee.ru/help/articles/4169
 ---
 
-### How to create a release
+### Как создать репозиторий
 
-After completing the registration and successfully logging in to the Gitee account, users can start creating their first repository.
+После завершения регистрации и успешного входа в учетную запись Gitee пользователи могут приступить к созданию своего первого репозитория.
+ 
+- 1. Нажмите кнопку "+" в правом верхнем углу веб-сайта и выберите "Новый репозиторий", чтобы перейти на страницу нового репозитория.
 
- - 1. Click the "+" button in the upper right corner of the website and select "New Repository" to enter the new repository page.
+![Описание изображения](../../../../../../assets/image139.png)
 
-![Image Description](../../../../../../assets/image139.png)
+После завершения регистрации и успешного входа в аккаунт Gitee пользователи могут приступить к созданию своего первого репозитория.
+    - Имя репозитория: Имя репозитория, используемое для присвоения репозиторию имени
+ - Владелец: Владелец хранилища, которым может быть отдельная учетная запись/организация/предприятие. После создания учетная запись становится владельцем (администратором) хранилища по умолчанию.
+    - Путь: Путь доступа к репозиторию в git, состоящий из персонализированного адреса пользователя и имени пути к репозиторию. После создания репозитория пользователи будут получать доступ к репозиторию по этому пути.
+    - Знакомство с репозиторием: Краткое описание репозитория
+    - Является ли ресурсом с открытым исходным кодом: Укажите, является ли репозиторий общедоступным. Общедоступные репозитории видны всем, в то время как частные репозитории видны только участникам репозитория.
+    - Выбрать язык: Основной язык программирования, используемый в репозитории.
+- Добавить .gitignore: предоставляемый системой шаблон файла для игнорирования файлов в git. После установки .gitignore он будет автоматически проигнорировать указанные каталоги/файлы в репозитории.
+    - Добавление лицензии с открытым исходным кодом: Если репозиторий является общедоступным, вы можете добавить лицензию, чтобы установить для репозитория соглашение с открытым исходным кодом, являющееся ограничением для текущего репозитория проекта и репозиториев производных проектов. Лицензия с открытым исходным кодом определяет, является ли проект с открытым исходным кодом коммерчески приемлемым.
+    - Файл Readme: Документ с самоописанием репозитория проекта, обычно содержащий описание программного обеспечения или указания по использованию.
+- Инициализация репозитория с помощью файла шаблона: Инициализация репозитория с помощью шаблона файла проблемы или запроса на извлечение.
 
- - 2. Fill in the repository information on the new repository page. The following are explanations of the relevant concepts of the repository:
-    - Repository name: The name of the repository, used for repository naming
- - Ownership: The ownership of the repository, which can be an individual account/organization/enterprise. After creation, the account becomes the default owner (administrator) of the repository.
-    - Path: The git access path of the repository, which is composed of the user's personalized address and the repository path name. After creating the repository, users will access the repository through this path.
-    - Repository Introduction: A brief introduction to the repository
-    - Is it open source: Set whether the repository is a public repository. Public repositories are visible to everyone, while private repositories are only visible to repository members.
-    - Select language: The primary programming language used in the repository.
-- Add .gitignore: A system-provided file template for ignoring files in git. After setting .gitignore, it will automatically ignore specified directories/files in the repository.
-    - Add an open source license: If the repository is public, you can add a license to set the open source agreement for the repository, which serves as a constraint on the current project repository and derivative project repositories. The open source license determines whether the open source project is commercially friendly.
-    - Readme: Project repository self-description document, usually contains software description or usage notes.
-- Initialize the repository using a template file: Initialize the repository using an Issue or Pull Request file template.
-
- - 3. Click "Create" to create your first repository on Gitee.
+ - 3. Нажмите "Создать", чтобы создать свой первый репозиторий на Gitee.

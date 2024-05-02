@@ -1,15 +1,15 @@
 ---
-title: WebHook support for DingTalk bots
+title: Поддержка вебхука для роботов DingTalk
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 ---
 
-DingTalk provides the "Smart Group Assistant" function in group chats. Through WebHook, you can add custom robots in DingTalk to achieve automatic notifications.
+DingTalk предоставляет функцию "Умного ассистента группы" в групповых чатах. С помощью вебхука вы можете добавить пользовательских ботов в DingTalk для автоматических уведомлений.
 
-## Add Robot
+## Добавление бота
 
-In a DingTalk group chat, go to 'Group Settings' -> 'Intelligent Group Assistant' -> 'Add Robot' and select 'Custom' robot. Set a profile picture and name for the robot, click 'Add' to get a WebHook address, and click 'Complete' to finish adding the DingTalk robot.
+В чате группы DingTalk перейдите в 'Настройки группы' -> 'Умный ассистент группы' -> 'Добавить бота' и выберите 'Пользовательский' бот. Установите профильную картинку и имя для бота, нажмите 'Добавить', чтобы получить адрес вебхука, и нажмите 'Завершить', чтобы закончить добавление бота DingTalk.
 
 ![](https://images.gitee.ru/uploads/images/2019/1219/194453_7c7ae14c_551147.png )
 
@@ -17,46 +17,50 @@ In a DingTalk group chat, go to 'Group Settings' -> 'Intelligent Group Assistant
 
 ![](https://images.gitee.ru/uploads/images/2019/1219/195953_08539aca_551147.png )
 
-Set up robot WebHook
+Настройка вебхука для бота
 
-In the previous adding process, you can obtain a WebHook request URL like 'https://oapi.dingtalk.com/robot/send?access_token=xxxxxxxxxxxxxxxxx'. Add this URL to Gitee to complete the WebHook configuration.
+Получите URL-адрес вебхука в процессе добавления робота. URL-адрес будет похож на  'https://oapi.dingtalk.com/robot/send?access_token=xxxxxxxxxxxxxxxxx'. Добавьте этот URL в Gitee для завершения конфигурации вебхука.
 
-Click on 'Management' in the enterprise navigation menu, then click on 'WebHooks Management', and then click on the 'New WebHook' button in the upper right corner to enter the new WebHook page.
+Перейдите на страницу репозитория на Gitee и выберите "Управление" -> "Настройки вебхуков" -> "Добавить" для добавления нового вебхука.
 
-Fill in the URL with the obtained WebHook address. Choose 'Signing Key' for 'WebHook Password/Signing Key' and fill in the corresponding signing key content provided by 'Signing Key'. Select specific trigger events, activate and add to complete the WebHook configuration.
+Заполните поле URL полученным адресом вебхука. Для поля "Пароль/Ключ подписи вебхука" выберите "Ключ подписи" и введите соответствующее содержимое ключа подписи, предоставленное в настройках бота. Выберите конкретные события-триггеры, активируйте и добавьте, чтобы завершить настройку вебхука.
 
-![Signing Secret Key](./assets/webhooks-secret-key.png)
+![Секретный ключ подписи](./assets/webhooks-secret-key.png)
 
-## Security Settings
+## Настройки безопасности
 
-Dingtalk robots support 'Custom Keywords', 'Signing', and 'IP Address (Range)' on WebHook, which are used to enhance the security of robot request acceptance and prevent malicious requests.
+Боты Dingtalk поддерживают функции 'Пользовательские ключевые слова', 'Подпись' и 'IP-адрес (диапазон)', которые используются для усиления безопасности приема запросов бота и предотвращения вредоносных запросов.
 
-### Custom Keywords
+### Пользовательские ключевые слова
 
-After setting the custom keywords, only WebHook requests that contain the specified custom keywords will trigger the bot. Up to 10 can be defined.
+После установки пользовательских ключевых слов будет активирован только при получении запросов вебхука, содержащих указанные пользовательские ключевые слова. Можно определить до 10 ключевых слов.
 
 ![](https://images.gitee.ru/uploads/images/2019/1219/195006_2a5c79ea_551147.png )
 
-### Counter-signing
+### Контрольная подпись
 
-By setting the signature, you can support the request signature of the DingTalk robot to obtain higher security.
+Установка подписи позволяет обеспечить подпись запроса бота DingTalk для обеспечения более высокой безопасности.
 
 ![](https://images.gitee.ru/uploads/images/2019/1219/195809_ac4c9a91_551147.png )
 
-### IP address (range)
+### Белый список IP-адресов 
 
-By setting the request IP address (range), you can restrict the IP whitelist of the triggering robot. Since the IP range of Gitee service requests is not fixed, it is not recommended to set the IP address (range) whitelist to avoid the DingTalk robot from being triggered normally.
+Установка диапазона IP-адресов позволяет ограничить белый список IP-адресов, с которых могут быть выполнены запросы на активацию бота. Поскольку диапазон IP-адресов запросов услуг Gitee не фиксирован, не рекомендуется устанавливать белый список IP-адресов (диапазон), чтобы избежать проблем с нормальной активацией бота DingTalk.
 
 ![](https://images.gitee.ru/uploads/images/2019/1219/195750_17d422d1_551147.png )
 
-Trigger DingTalk WebHooks
+Триггеринг вебхуков DingTalk
 
-WebHook requests to DingTalk are triggered through setting up a robot in the following scenarios.
+Запросы WebHook в DingTalk срабатывают при настройке робота в следующих случаях:
 
-- Push: Repository pushes code, pushes branches, deletes branches
-- Tag push: Create tag, delete tag
-- Issue: Create, close, reopen, delete tasks, or modify task assignees
-- Pull request: Create pull request, update pull request, merge pull request
-- Comment: Comment on repositories, issues, pull requests, commits
+- Push: Отправка кода в репозиторий, создание и удаление веток
+- Tag push: Создание и удаление тегов
+- Issue: Создание, закрытие, повторное открытие, удаление задач или изменение назначенных исполнителей
+- Pull request: Создание запроса на слияние, обновление запроса на слияние, объединение запроса на слияние
+- Comment: Комментарии к репозиториям, задачам, запросам на слияние, коммитам
 
-![Image Description](https://images.gitee.ru/uploads/images/2019/1009/161438_04ff173d_551147.png)
+![Описание изображения](https://images.gitee.ru/uploads/images/2019/1009/161438_04ff173d_551147.png)
+
+## Связанные материалы
+
+- [Поддержка вебхуков Gitee для WeChat Work](/help/articles/4296)

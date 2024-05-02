@@ -1,83 +1,83 @@
 ---
-title: Set up Baidu Statistics
+title: Настройка статистики Baidu
 origin-url: https://gitee.ru/help/articles/4335
 ---
 
-After embedding Baidu Analytics through **"Baidu Analytics Settings"** in the repository, open source project authors can obtain detailed access details of the open source repository, such as visitor sources, geographical distribution, search keywords, entry pages, and more.
-Help open-source project authors operate their projects in a more targeted and efficient manner
+После встраивания Baidu Analytics через **"Настройки Baidu Analytics"** в репозиторий авторы проектов с открытым исходным кодом могут получить подробные сведения о доступе к репозиторию с открытым исходным кодом, такие как источники посетителей, географическое распределение, ключевые слова для поиска, страницы входа и многое другое.
+Помогите авторам проектов с открытым исходным кодом управлять своими проектами более целенаправленно и эффективно.
 
-<a name="divtop"><b>1. How to configure a single repository</b></a>
+<a name="divtop"><b>1. Как настроить единый репозиторий</b></a>
 
-1.1 Register a Baidu Analytics account by clicking on the registration link in Baidu Analytics and selecting "Baidu Analytics - Site Owner Edition". If you already have an account, simply log in.
+1.1 Зарегистрируйте учетную запись Baidu Analytics, нажав на ссылку регистрации в Baidu Analytics и выбрав "Baidu Analytics - версия для владельцев сайтов". Если у вас уже есть учетная запись, просто войдите в нее.
 
-![Image Description](https://images.gitee.ru/uploads/images/2021/0519/210725_0d17e0b6_7722649.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2021/0519/210725_0d17e0b6_7722649.png )
 
-1.2 Click on "Manage" - "Add Website", enter the website domain name gitee.ru, fill in your repository address in the website homepage, and click OK.
+1.2 Нажмите "Управление" - "Добавить сайт", введите доменное имя сайта gitee.ru, укажите адрес своего репозитория на главной странице сайта и нажмите "ОК".
 
-![Image Description](https://images.gitee.ru/uploads/images/2021/0519/210739_df1a1ca6_7722649.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2021/0519/210739_df1a1ca6_7722649.png )
 
-1.3 After adding, click on [Get Code] and copy the KEY value (32-character string) after hm.js?.
+1.3 После добавления нажмите [Получить код] и скопируйте значение KEY (строка из 32 символов) после hm.js?.
 
-![Image Description](https://images.gitee.ru/uploads/images/2021/0519/210753_569d47c8_7722649.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2021/0519/210753_569d47c8_7722649.png )
 
-![Image Description](https://images.gitee.ru/uploads/images/2021/0519/210809_d67c388e_7722649.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2021/0519/210809_d67c388e_7722649.png )
 
-1.4 Open the 'Manage' - 'Baidu Analytics Settings' under the repository, paste the obtained KEY into the input box shown in the figure, and click the confirm button. Single repository configuration completed.
+1.4 Откройте в репозитории "Управление" — "Настройки Baidu Analytics", вставьте полученное значение KEY в поле ввода, показанное на рисунке, и нажмите кнопку «Подтвердить». Настройка единого репозитория завершена.
 
-![Image Description](https://images.gitee.ru/uploads/images/2021/0519/210824_640848f9_7722649.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2021/0519/210824_640848f9_7722649.png )
 
- **2. How to configure multiple repositories**
+  **2. Как настроить несколько репозиториев**
 
- **2.1 Solution 1: Consolidated Statistics of Multiple Repositories**
+ **2.1 Решение 1: Сводная статистика нескольких репозиториев**.
 
-Advantage: Easy and fast configuration, get KEY value once, configure multiple times
+Преимущества: Простая и быстрая настройка, однократное получение значения KEY, возможность выполнения настройки несколько раз
 
-**Disadvantage**: Unable to view the summary of data for a specific repository
+**Недостатки**: Невозможно просмотреть сводные данные по конкретному репозиторию
 
-Configure the KEY value obtained from 'How to configure a single repository' section to multiple repositories. The data source obtained from Baidu Statistics will be multiple repositories.
+Настройте значение KEY, полученное в разделе "Как настроить один репозиторий", на несколько репозиториев. Источником данных, полученных из Статистика Baidu, будет несколько репозиториев.
 
-![Image Description](https://images.gitee.ru/uploads/images/2021/0519/210911_ad5733c2_7722649.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2021/0519/210911_ad5733c2_7722649.png )
 
-2.2 Plan 2: Separate statistics for multiple repositories
+2.2 План 2: Отдельная статистика для нескольких репозиториев
 
-**Advantage**: Can view the summary of data for a specific repository
+**Преимущество**: Возможность просмотра сводных данных для конкретного репозитория
 
- **Disadvantage**: Configuring is more complicated, requiring multiple times to obtain KEY values and configure multiple times
+ **Недостаток**: Настройка сложнее, требуется несколько раз получать значения KEY и настраивать несколько раз
 
-In step [How to configure a single repository](#divtop), directly fill in the website domain as the repository address to obtain data for a single repository. Repeat this operation by clicking [Add Website] multiple times to complete the configuration of multiple repositories, and the data for each repository is independent.
+На шаге [Как настроить один репозиторий](#divtop), чтобы получить данные для одного репозитория, введите домен сайта в качестве адреса репозитория. Повторите эту операцию, нажав [Добавить веб-сайт] несколько раз, чтобы завершить настройку нескольких репозиториев, и данные для каждого репозитория будут независимыми.
 
-![Image Description](https://images.gitee.ru/uploads/images/2021/0519/210935_84fcd7e6_7722649.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2021/0519/210935_84fcd7e6_7722649.png )
 
- **3. How to view statistical data**
+ **3. Как просмотреть статистические данные**.
 
-After the configuration is completed, you need to wait for about 20 minutes to view the repository access sources, regional distribution, search keywords, etc. in <https://tongji.baidu.com>.
+После завершения настройки необходимо подождать около 20 минут, чтобы получить возможность просмотреть источники доступа к репозиторию, региональное распределение, ключевые слова поиска и т. д. в <https://tongji.baidu.com>.
 
-![Image Description](https://images.gitee.ru/uploads/images/2021/0519/210959_293abbbb_7722649.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2021/0519/210959_293abbbb_7722649.png )
 
-Advanced gameplay
+Продвинутый геймплей
 
-To view the summary of all repository data under 'Me' or 'Organization' and also view the summary of individual repository data.
+Чтобы просмотреть сводку всех данных репозитория в разделе "Я" или "Организация", а также просмотреть сводку данных отдельных репозиториев.
 
-Taking Gitee organization as an example, using the concept of subdirectories:
+На примере организации Gitee с использованием концепции подкаталогов:
 
-![Image Description](https://images.gitee.ru/uploads/images/2021/0519/211019_d8412a82_7722649.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2021/0519/211019_d8412a82_7722649.png )
 
-Specific setup steps:
+Конкретные шаги по настройке:
 
-1. When adding a new website, enter the organization address as the website domain, get the KEY value, and complete the configuration for the repository under the organization;
+1. При добавлении нового сайта введите адрес организации в качестве домена сайта, получите значение KEY и завершите настройку репозитория под организацией;
 
-![Image Description](https://images.gitee.ru/uploads/images/2021/0519/211043_a2ef2d71_7722649.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2021/0519/211043_a2ef2d71_7722649.png )
 
-2. Add subdirectories to the website domain through [Subdirectory Management];
+2. Добавьте подкаталоги к домену сайта через [Управление подкаталогами];
 
-![Image Description](https://images.gitee.ru/uploads/images/2021/0519/211058_67065e2f_7722649.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2021/0519/211058_67065e2f_7722649.png )
 
-![Image Description](https://images.gitee.ru/uploads/images/2021/0519/211120_3e39c369_7722649.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2021/0519/211120_3e39c369_7722649.png )
 
-Note: The included pages are in wildcard form to make the access data more complete.
+Примечание: Включенные страницы указываются в виде подстановочных знаков, чтобы сделать данные доступа более полными.
 
-3. Switch website domain and subdirectory to view data.
+3. Переключите домен и подкаталог сайта для просмотра данных.
 
-![Image Description](https://images.gitee.ru/uploads/images/2021/0519/211138_a2d8c566_7722649.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2021/0519/211138_a2d8c566_7722649.png )
 
-![Image Description](https://images.gitee.ru/uploads/images/2021/0519/211145_120e6bf6_7722649.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2021/0519/211145_120e6bf6_7722649.png )

@@ -1,9 +1,9 @@
 ---
-title: Global Settings
+title: Глобальные настройки
 ---
 
-In Gitee, users can allocate resources by setting task archiving time and checked code repository size
+В Gitee пользователи могут распределять ресурсы, устанавливая время архивации задач и размер репозитория проверенного кода
 
-![Global Settings](./assets/setting-1.png)
+![Глобальные настройки](./assets/setting-1.png)
 
-Enabling this feature means that users can initiate full scans of any repository branch and incremental scans of newly added Pull Requests in the enterprise.
+Включение этой функции означает, что пользователи могут инициировать полное сканирование любой ветки репозитория и инкрементное сканирование вновь добавленных запросов на слияние на предприятии.

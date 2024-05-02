@@ -1,13 +1,13 @@
 ---
-title: Mailing Information
+title: Информация для рассылки
 ---
 
-Click on the 'Settings' in the enterprise navigation menu to enter the enterprise information page, then click on the edit icon in the upper right corner of the 'Mailing Information' card:
+Нажмите «Настройки» в меню навигации компании для перехода на страницу информации о компании, затем нажмите значок редактирования в правом верхнем углу карточки «Информация о рассылке»:
 
-![Image Description](../securities/assets/image399.png)
+![Описание изображения](../securities/assets/image399.png)
 
-Click the "+" card in the mailing information page to add mailing information:
+Нажмите «+» на странице информации о рассылке, чтобы добавить информацию о рассылке:
 
-![Image Description](../securities/assets/image400.png)
+![Описание изображения](../securities/assets/image400.png)
 
-After filling in the mailing information, click the "Add" button to complete the addition.
+После заполнения информации о рассылке нажмите кнопку «Добавить» для завершения добавления.

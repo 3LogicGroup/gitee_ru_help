@@ -1,61 +1,61 @@
 ---
-title: VisualStudio Plugin
+title: Плагин VisualStudio
 
 origin-url: https://gitee.ru/help/articles/4118
 ---
 
-# Gitee Visual Studio Extension
+# Расширение Gitee для Visual Studio
 
-Note: Visual Studio 2013, 2015, and 2017 all have Community Editions. Gitee's Visual Studio extension supports the Community Edition, Professional Edition, and Enterprise Edition of Visual Studio 2017.
+Примечание. У всех релизов Visual Studio 2013, 2015 и 2017 имеются Корпоративные версии. Расширение Gitee для Visual Studio поддерживает Корпоративные версии, Профессиональные версии и Корпоративную версию Visual Studio 2017.
 
-The community edition has the same basic functions as the professional edition, provided it is only used for non-commercial projects and open-source projects. The Express edition can be used for commercial projects or only download the Visual Studio C++ Build Tools, which can be used without limitations.
+Версия для сообщества имеет те же основные функции, что и профессиональная версия, при условии, что она используется только для некоммерческих проектов и проектов с открытым исходным кодом. Версию Express можно использовать для коммерческих проектов или загрузить только инструменты сборки Visual Studio C++, которые можно использовать без ограничений.
 
-## Installation
+## Установка
 
-Go [https://marketplace.visualstudio.com/items?itemName=GiteeInc.GiteeExtension](https://marketplace.visualstudio.com/items?itemName=GiteeInc.GiteeExtension)
+Перейдите по ссылке [https://marketplace.visualstudio.com/items?itemName=GiteeInc.GiteeExtension](https://marketplace.visualstudio.com/items?itemName=GiteeInc.GiteeExtension)
 
-Note: Gitee.VisualStudio only supports Visual Studio 2015/2017.
+Примечание. Gitee.VisualStudio поддерживает только Visual Studio 2015/2017.
 
-## Usage
+## Использование
 
-Visual Studio version management-related functions are centralized in Team Explorer Gitee.VisualStudio. Various functions are interspersed in the workflow of Team Explorer.
+Функции управления версиями Visual Studio централизованы в Team Explorer Gitee.VisualStudio. В рабочем процессе Team Explorer отражены различные функции.
 
-### Connect page
+### Страница подключения
 
-After opening Visual Studio, expand the Team Explorer panel, which defaults to the Connect page (you can also click the plug icon in the toolbar of the Team Explorer panel to navigate to the Connect page).
+После открытия Visual Studio разверните панель Team Explorer, по умолчанию представляющую собой страницу подключения (для перехода на страницу подключения вы также можете щелкнуть по значку подключения на панели инструментов панели Team Explorer).
 
-If the user is not logged in to Gitee, they can click the 'Connect' button in the Gitee section on the Connect page to log in. If they are not registered on Gitee, they can click the 'Register' button in the same section to register on the Gitee website.
+Если пользователь не авторизован в Gitee, он может нажать кнопку «Подключиться» в разделе Gitee на странице «Подключение», чтобы войти в систему. Если он не зарегистрирован в Gitee, он может нажать кнопку «Зарегистрироваться» в том же разделе. зарегистрироваться на сайте Gitee.
 
-After logging in to Gitee, in the Gitee area, the repositories cloned to the local machine through Visual Studio will be displayed. You can perform clone, clone and exit operations in the toolbar of the Gitee area. Double-clicking on a repository in the repository list in this area will open the repository.
+После входа в Gitee отобразятся репозитории, клонированные на локальную машину через Visual Studio. Вы можете выполнять операции клонирования, клонирования и выхода на панели инструментов области Gitee. Двойной щелчок по репозиторию в списке репозиториев в этой области откроет репозиторий.
 
-#### Clone
+#### Клонирование
 
-In the toolbar of the Gitee area, click on the Clone button, which will display all Gitee repositories owned by the current user, including repositories owned by groups. Select one of them and click the Clone button below.
+На панели инструментов области Gitee нажмите кнопку «Клонировать», после чего отобразятся все репозитории Gitee, принадлежащие текущему пользователю, включая репозитории, принадлежащие группам. Выберите один из них и нажмите кнопку «Клонировать» ниже.
 
-Note: By default, the selected repository will be cloned to %USERPROFILE%\Source\Repos, and you can modify the clone path using the browse button below. The clone button will be unavailable if there is a folder with the same name as the project in that directory.
+Примечание. По умолчанию выбранный репозиторий будет клонирован в %USERPROFILE%\Source\Repos, и вы можете изменить путь клонирования, используя кнопку обзора ниже. Кнопка клонирования будет недоступна, если в этом каталоге есть папка с тем же именем, что и проект.
 
-Creating a repository
+#### Создание репозитория
 
-In the toolbar of the Gitee area, click the create repository button, fill in the repository name, description, select Git ignore and license, and then click the create button below.
+На панели инструментов области Gitee нажмите кнопку «Создать репозиторий», введите имя репозитория, описание, выберите Git игнорировать и лицензировать, а затем нажмите кнопку «Создать» ниже.
 
-Exit
+#### Выход
 
-In the Gitee area's toolbar, click the logout button to log out the current user.
+На панели инструментов области Gitee нажмите кнопку "Выход", чтобы выйти из системы текущего пользователя.
 
-Note: Login information will be cleared from the system, but the cloned repository will still remain and will be available for the next login.
+Примечание. Информация для входа будет удалена из системы, но клонированный репозиторий останется и будет доступен для следующего входа в систему.
 
-#### Push to Gitee
+#### Опубликуйте в Gitee
 
-In the Team Explorer's Synchronization/Publish page, through the Gitee section, you can publish the current Git repository to Gitee (need to fill in the repository name, description, protocol, and ownership). If the current repository is not a Git repository, you can click Add to Source Control / Git in the bottom right corner of Visual Studio to convert it into a Git repository, and then publish it.
+На странице синхронизации/публикации Team Explorer в разделе Gitee вы можете опубликовать текущий репозиторий Git в Gitee (необходимо указать имя репозитория, описание, протокол и владельца). Если текущий репозиторий не является репозиторием Git, вы можете нажать «Добавить в систему управления версиями/Git» в правом нижнем углу Visual Studio, чтобы преобразовать его в репозиторий Git, а затем опубликовать.
 
-#### Commit changes
+#### Закоммитировать изменения
 
-Team Explorer itself integrates Git operations such as commit, pull, and sync. You can use the small house button in the Team Explorer toolbar to navigate to the Home page for these operations. The Gitee.VisualStudio plugin integrates Gitee-specific features like attachment, pull request, issues, statistics, and wiki into that page. By clicking on the corresponding buttons, you can navigate to the respective pages.
+Сам Team Explorer интегрирует такие операции Git, как коммит, получение и синхронизация. Вы можете использовать кнопку с маленьким домиком на панели инструментов Team Explorer, чтобы перейти на домашнюю страницу для этих операций. Плагин Gitee.VisualStudio интегрирует на этой странице специфичные для Gitee функции, такие как вложение, запрос на слияние, задачи, статистику и вики. Нажимая на соответствующие кнопки, вы можете перейти на соответствующие страницы.
 
-## Demo Animation
+## Демо-анимация
 
 ![](https://gitee.ru/GitGroup/CodeCloud.VisualStudio/raw/master/docs/images/option.gif "option.gif")
 
-License Agreement and History
+Лицензионное соглашение и история
 
-This software was initially developed by @dilly through a bounty program, and the code was borrowed from the Github for Visual Studio source code. We would like to express our gratitude to all the relevant developers.
+Это программное обеспечение было первоначально разработано @dilly в рамках программы вознаграждений, а код был заимствован из исходного кода Github для Visual Studio. Мы хотели бы выразить нашу благодарность всем соответствующим разработчикам.

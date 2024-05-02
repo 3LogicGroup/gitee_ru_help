@@ -1,15 +1,15 @@
 ---
-title: Setting Work Item Fields
+title: Настройка полей рабочих элементов
 ---
 
-Click on 'Settings' in the Enterprise Navigation Menu, then click on 'Work Item Settings' in the Enterprise Management Menu:
+Нажмите на "Настройки" в навигационном меню предприятия, затем нажмите на "Настройки рабочих элементов" в меню управления предприятием:
 
-![Image Description](assets/image572.png)
+![Описание изображения](assets/image572.png)
 
-Click on the work item type attribute under the "Work Item Settings" group to enter the settings page, then click on the "Configure Type" link.
+Нажмите на атрибуты рабочего элемента под группой "Настройки рабочего элемента" чтобы перейти на страницу настройки. Затем нажмите на ссылку "Настроить тип".
 
-![Image Description](assets/image573.png)
+![Описание изображения](assets/image573.png)
 
-On this page, you can add, delete, sort, and make fields mandatory for this work item type.
+На этой странице вы можете добавить, удалить, отсортировать и установить обязательные поля для выбранного рабочего элемента.
 
-![Image Description](assets/image574.png)
+![Описание изображения](assets/image574.png)

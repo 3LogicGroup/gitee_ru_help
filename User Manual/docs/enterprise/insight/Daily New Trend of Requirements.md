@@ -1,7 +1,7 @@
 ---
-title: Daily New Trend in Requirements
-description: Demand daily new trend
+title: Ежедневный тренд новых требований
+description: Ежедневный тренд новых требований
 slug: enterprise/insight/demand-daily-trend
 ---
-Track the daily new and completed requirements in the requirement daily trend within the project.
-![Image Description](./assets/demand_daily_trend.png)
+Ежедневно отслеживайте новые и выполненные требования в ежедневном тренде требований в рамках проекта.
+![Описание изображения](./assets/demand_daily_trend.png)

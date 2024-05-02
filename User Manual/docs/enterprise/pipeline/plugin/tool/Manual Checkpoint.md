@@ -1,28 +1,28 @@
 ---
-title: Manual checkpoint
-description: Artificial card point
+title: Ручная контрольная точка
+description: Точка искусственной карты
 slug: /enterprise/pipeline/plugin/tool-review
 keywords:
  - Gitee
- - Manual Checkpoints
+ - Ручные контрольные точки
 ---
 
-## Plugin Description
+## Описание плагина
 
-The manual checkpoint plugin is used for manual review to control whether the entire pipeline can continue to execute. This plugin will send an internal message to notify the reviewer for review. After the reviewer approves or rejects it, an internal message will be sent back for notification.
+Плагин ручной контрольной точки используется для ручной проверки в целях проверки возможности продолжения выполнения всего конвейера. Этот плагин отправляет внутреннее сообщение, уведомляющее рецензента о необходимости проверки. После того как рецензент одобрит или отклонит его, внутреннее сообщение будет отправлено обратно для уведомления.
 
-## Form Description
+## Составление описания
 
-- **Reviewer**: The reviewer needs to pass the verification to continue executing the subsequent tasks of the pipeline.
+- **Рецензент**: Рецензент должен пройти верификацию, чтобы продолжить выполнение последующих задач конвейера.
 
-## Usage Example
+## Пример использования
 
-- Add plugins, select reviewer.
+- Добавить плагины, выбрать рецензента.
 
-![Manual card point - Select acceptance person](./assets/Manual card point - Select acceptance person.png)
+![Точка ручной карты - Выбор принимающего лица](./assets/Manual card point - Select acceptance person.png)
 
-- After the pipeline is executed, the corresponding reviewer will receive an internal message notification.
+- После выполнения конвейера соответствующий рецензент получит уведомление о внутреннем сообщении.
 
-![Manual Card Point - Internal Mail](./assets/Manual Card Point - Internal Mail.png)
+![Точка ручной карты - Внутренняя почта](./assets/Manual Card Point - Internal Mail.png)
 
-- After the acceptance by the reviewer, the pipeline will continue with the subsequent tasks.
+- После одобрения рецензентом конвейер продолжит выполнение последующих задач.

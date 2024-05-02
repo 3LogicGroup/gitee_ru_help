@@ -1,19 +1,19 @@
 ---
-title: Pipeline-level variables
-description: Pipeline-level variables
+title: Переменные на уровне конвейера
+description: Переменные на уровне конвейера
 slug: /enterprise/pipeline/variable/pipeline
 keywords:
  - Gitee
- - Project-level
-- Pipeline-level variables
+ - Уровень проекта
+- Переменные на уровне конвейера
 ---
 
-Pipeline-level parameters are user-defined parameters that can be used in any stage or task within the pipeline. The words 'GITEE_' and 'GO_' are reserved by the system. Pipeline-level parameters are user-defined and can be changed. You can change or create parameters by executing the following command: 'echo 'Key=Value' >> GITEE_PARAMS', where
+Параметры уровня конвейера - это определяемые пользователем параметры, которые могут использоваться на любом этапе или задаче в рамках конвейера. Слова 'GITEE_' и 'GO_' зарезервированы системой. Параметры уровня конвейера определяются пользователем и могут быть изменены. Вы можете изменить или создать параметры, выполнив следующую команду: 'echo 'Key=Value' >> GITEE_PARAMS', где
 
-## Use Cases
+## Примеры использования
 
-1. Add variables
-![Add pipeline variables](./assets/Add pipeline variables.png)
+1. Добавление переменных
+![Добавить переменные конвейера](./assets/Add pipeline variables.png)
 
-2. Task Using Variables
-![Variable usage](./assets/Variable usage.png)
+2. Задача с использованием переменных
+![Использование переменных](./assets/Variable usage.png)

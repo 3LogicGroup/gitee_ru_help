@@ -1,5 +1,5 @@
 ---
-title: Configure Multiple SSH Keys in Git
+title: Настройка нескольких SSH-ключей в Git
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
@@ -7,28 +7,28 @@ slug: /repository/ssh-key/configure-multiple-ssh-keys
 origin-url: https://gitee.ru/help/articles/4229
 ---
 
-Background
+Справочная информация
 
-When there are multiple git accounts, for example:
+Когда есть несколько учетных записей git, например:
 
-a. A Gitee for internal work development within the company;
-b. A GitHub account for personal development activities
+a. Gitee для внутренней разработки внутри компании;
+b. Учетная запись GitHub для личных разработок.
 
-### Solution
+### Решение
 
-1. Generate an SSH-Key for the company
+1. Сгенерируйте SSH-ключ для компании
 
 ```bash
 ssh-keygen -t rsa -C 'xxxxx@company.com' -f ~/.ssh/gitee_id_rsa
 ```
 
-2. Generate an SSH-Key for use with GitHub.
+2. Сгенерируйте SSH-ключ для использования с GitHub.
 
 ```bash
 ssh-keygen -t rsa -C 'xxxxx@qq.com' -f ~/.ssh/github_id_rsa
 ```
 
-3. Create a config file in the ~/.ssh directory and add the following content (where Host and HostName specify the domain name of the git server, and IdentityFile specifies the path to the private key)
+3. Создайте файл конфигурации в каталоге ~/.ssh и добавьте в него следующее содержимое (где Host и HostName указывают доменное имя git-сервера, а IdentityFile - путь к закрытому ключу)
 
 ```ssh
 # gitee
@@ -43,13 +43,13 @@ PreferredAuthentications publickey
 IdentityFile ~/.ssh/github_id_rsa
 ```
 
-4. Test with ssh command separately
+4. Протестируйте команду ssh отдельно
 
 ```bash
 ssh -T git@gitee.ru
 ssh -T git@github.com
 ```
 
-In this example, we take gitee as an example, and if successful, the following image will be returned
+Здесь в качестве примера мы возьмем gitee, и в случае успеха будет возвращено следующее изображение
 
-![Image Description](https://images.gitee.ru/uploads/images/2018/0921/161137_b71ef6be_967230.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2018/0921/161137_b71ef6be_967230.png )

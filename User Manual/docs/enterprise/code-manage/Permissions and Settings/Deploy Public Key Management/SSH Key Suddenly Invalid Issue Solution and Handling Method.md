@@ -1,32 +1,32 @@
 ---
-title: Troubleshooting and Handling Methods for SSH Key Suddenly Invalid
+title: Устранение неполадок и методы работы с неожиданно ставшим недействительным SSH-ключом
 origin-url: https://gitee.ru/help/articles/4352
 ---
 
-### **Issues encountered**
+### **Возникшие проблемы**
 
-Support for RSA-SHA1 was removed in OpenSSH 8.8 released on September 26, 2021.
+Поддержка RSA-SHA1 была удалена в выпущенном 26 сентября 2021 года OpenSSH 8.8.
 
-- The latest version of git for windows 2.33.1 uses OpenSSH 8.8.
-- Rolling upgrades of distributions like arch and manjaro are quite aggressive. Using pacman -Syu will upgrade all software to the latest version
-- The current behavior is that it was working fine before, but after running pacman -Syu or upgrading to git for windows 2.33.1, when using git pull, it shows a fatal: unable to read remote repository error.
+- Последняя версия git для Windows 2.33.1 использует OpenSSH 8.8.
+- Постоянные обновления дистрибутивов, таких как arch и manjaro, весьма агрессивны. Использование pacman -Syu приведет к обновлению всего программного обеспечения до последней версии
+- Текущее поведение заключается в том, что раньше оно работало нормально, но после запуска pacman -Syu или обновления до git для Windows 2.33.1 при использовании git pull отображается фатальная ошибка: невозможно прочитать удаленный репозиторий.
 
-If you upgrade to OpenSSH 8.8 or above, you may encounter verification failures when using ssh to push/pull Gitee code.
+Если вы выполните обновление до OpenSSH 8.8 или выше, вы можете столкнуться с ошибками верификации при использовании ssh для отправки/извлечения кода Gitee.
 
-![Image Description](./assets/110518_2fa9dedc_4764813.webp)
-![Image Description](./assets/110856_78e3d7d4_4764813.webp)
+![Описание изображения](./assets/110518_2fa9dedc_4764813.webp)
+![Описание изображения](./assets/110856_78e3d7d4_4764813.webp)
 
-### **Reason**
+### **Причина**
 
-We use `golang.org/x/crypto/ssh` to extract fingerprints from public keys in order to exchange user information from the main Gitee application.
+Для извлечения идентификационных меток из открытых ключей с целью обмена информацией о пользователях из основного приложения Gitee мы используем `golang.org/x/crypto/ssh`.
 
-However, this repository currently (2021-10-12) does not support the RSA-SHA2 algorithm, so the fingerprint cannot be obtained, resulting in user verification failure.
+Однако этот репозиторий в настоящее время (2021-10-12) не поддерживает алгоритм RSA-SHA2, поэтому идентификационная метка не может быть получена, что приводит к сбою верификации пользователя.
 
-### **Temporary Solution**
+### **Временное решение**
 
-Choose one of the following three solutions
- 
-1. Configure OpenSSH service to allow RSA-SHA1 key usage
+Выберите одно из следующих трех решений
+
+1. Настройте службу OpenSSH, чтобы разрешить использование ключа RSA-SHA1
 
 ```bash
 Add the following configuration to ~/.ssh/config
@@ -35,25 +35,25 @@ HostkeyAlgorithms +ssh-rsa
 PubkeyAcceptedAlgorithms +ssh-rsa
 ```
 
-PS: This method does not require changing ssh key, recommended for Linux and Windows git bash
+PS: Этот метод не требует изменения ssh-ключа, рекомендуется для git bash Linux и Windows 
 
-2. Use a different algorithm to generate ssh key
+2. Используйте другой алгоритм для генерации ssh-ключа
 
 ```bash
 ssh-keygen -t ed25519 -C "your@example.email"
 # Then re-add the public key to Gitee
 ```
 
-PS: This method does not require changing ssh key, recommended for Linux and Windows git bash
+PS: Этот метод не требует изменения ssh-ключа, рекомендуется для git bash Linux и Windows 
 
-3. Do not use OpenSSH 8.8 or higher version for now.
+3. На данный момент не используйте OpenSSH версии 8.8 или выше.
 
-### **Conclusion**
+### **Заключение**
 
-The golang community has already noticed this situation and has been promoting support for RSA-SHA2. Details:
+Сообщество golang уже заметило эту ситуацию и продвигает поддержку RSA-SHA2. Подробности:
 
-We will always pay attention to the progress and respond as soon as possible after Golang supports RSA-SHA2. Thank you for your support to Gitee.
+Мы всегда будем обращать внимание на прогресс и ответим как можно скорее после того, как Golang поддержит RSA-SHA2. Благодарим вас за поддержку Gitee.
 
-### **Reference Links**
+### **Справочные ссылки**
 
 [openssh-release-note-8.8](https://gitee.ru/link?target=https%3A%2F%2Fwww.openssh.com%2Ftxt%2Frelease-8.8)

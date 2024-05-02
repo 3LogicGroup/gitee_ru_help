@@ -1,7 +1,7 @@
 ---
-title: Remove Component
+title: Удаление компонента
 ---
 
-Click the "..." in the upper right corner of the component card, and then click the "Remove" option in the menu.
+Щелкните "..." в правом верхнем углу карточки компонента, а затем выберите в меню опцию "Удалить".
 
-![Image Description](assets/image331.png)
+![Описание изображения](assets/image331.png)

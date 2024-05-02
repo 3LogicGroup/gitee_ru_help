@@ -1,27 +1,27 @@
 ---
-title: Add LICENSE to the repository
+title: Добавление ЛИЦЕНЗИИ в репозиторий
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 origin-url: https://gitee.ru/help/articles/4146
 ---
 
-For a repository, the purpose and value of LICENSE are important. Users can manage the repository's LICENSE in two ways.
+Для репозитория важны назначение и значение ЛИЦЕНЗИИ. Пользователи могут управлять ЛИЦЕНЗИЕЙ репозитория двумя способами.
 
-### 1. Add LICENSE when creating a new repository
+### 1. Добавление ЛИЦЕНЗИИ при создании нового репозитория
 
-When creating a new repository, users can specify the LICENSE to be used for the repository. As shown in the figure.
+При создании нового репозитория пользователь может указать ЛИЦЕНЗИЮ, которая будет использоваться для репозитория. Как показано на рисунке.
 
-'![Specify LICENSE when creating a new repository](https://images.gitee.ru/uploads/images/2018/0814/111750_67f0e6a1_551147.png 'Specify LICENSE when creating a new repository')'
+'![Указать ЛИЦЕНЗИЮ при создании нового репозитория](https://images.gitee.ru/uploads/images/2018/0814/111750_67f0e6a1_551147.png 'Указать ЛИЦЕНЗИЮ при создании нового репозитория')'
 
-### 2. Create LICENSE file in the repository
+### 2. Создание файла LICENSE в репозитории
 
-If the user already has a repository and the repository has not confirmed the LICENSE, they can follow the steps below to add a LICENSE to the repository:
+Если у пользователя уже есть репозиторий, но он не подтвердил ЛИЦЕНЗИЮ, для добавления ЛИЦЕНЗИИ в репозиторий он может выполнить следующие шаги:
 
-- Select "Files" -> "Create new file" on the repository homepage.
-- In a new file, if the file name is named LICENSE (case insensitive, no spaces before or after), a LICENSE selection box will pop up on the right side for the user to choose.
-- After confirming and selecting the LICENSE, click "Confirm" to create a new LICENSE.
+- Выберите "Файлы" -> "Создать новый файл" на главной странице репозитория.
+- В новом файле, если имя файла названо LICENSE (без учета регистра, без пробелов до или после), справа появится окно выбора ЛИЦЕНЗИИ, которое пользователь может выбрать.
+- После подтверждения и выбора ЛИЦЕНЗИИ нажмите "Подтвердить", чтобы создать новую ЛИЦЕНЗИЮ.
 
-![New File](https://images.gitee.ru/uploads/images/2018/0814/112354_75681317_551147.png "New File")
+![Новый файл](https://images.gitee.ru/uploads/images/2018/0814/112354_75681317_551147.png "Новый файл")
 
-![Confirm LICENSE](https://images.gitee.ru/uploads/images/2018/0814/112957_580682a5_551147.png "Confirm LICENSE")
+![Подтвердить ЛИЦЕНЗИЮ](https://images.gitee.ru/uploads/images/2018/0814/112957_580682a5_551147.png "Подтвердить ЛИЦЕНЗИЮ")

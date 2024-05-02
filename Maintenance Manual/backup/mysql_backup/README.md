@@ -1,8 +1,8 @@
-# Database scheduled backup
+# Запланированное резервное копирование базы данных
 
-## 1. Backup and Upload Full Snapshot to Mino
+## 1. Сделайте резерныую копию и загрузите в Mino
 
-1. Download minIO client
+1. Скайчате клиент minIO
 
 ```sh
 wget https://dl.min.io/client/mc/release/linux-amd64/mc
@@ -12,7 +12,7 @@ sudo mv mc /usr/local/bin/mc
 
 
 
-2. Configure mc client
+2. Настройте клиент mc
 
 ```sh
 $ mc config host add minio http://10.4.145.142:9000 "u5C4unUfImuOQrfMp9OU" "dZGu9loZ6xJNguXP9aKjA0cW9fIQFzh8BpMjMSPn"
@@ -27,11 +27,11 @@ $ mc ls minio
 $ mc rb --force minio/gitee-mysql-backup/
 ```
 
-Documentation URL: https://docs.min.io/minio/baremetal/reference/minio-cli/minio-mc.html
+Документация: https://docs.min.io/minio/baremetal/reference/minio-cli/minio-mc.html
 
 
 
-3. Add backup script
+3. Добавьте скрипт резервной копии
 
 ```sh
 #!/bin/sh
@@ -63,7 +63,7 @@ sudo mc rm --older-than=10d --force --recursive "${BACKUP_BUCKET}/${BACKUP_DIREC
 
 
 
-4. Add scheduled task
+4. Добавьте запланированную задачу
 
 ```sh
 crontab -e
@@ -72,7 +72,7 @@ crontab -e
 
 
 
-5. We can use Jenkins' scheduled tasks to complete the backup and display the backup results graphically
+5. Можно использовать запланированные задачи Jenkins для создания резервной копии и графического представления результатов
 
 ```
 pipeline{
@@ -118,7 +118,7 @@ pipeline{
 
 
 
-## 2. Full Database and Table Backup
+## 2. Полное резервное копирование базы данных и таблиц
 
 [mysql-Detailed-backup: Backup of MySQL database for sharding and partitioning. (gitee.com)](https://gitee.com/oschina/mysql-detailed-backup)
 
@@ -128,15 +128,15 @@ pipeline{
 
 
 
-Reference documentation
+Справочная документация
 
 eback Enterprise Snapshot, MySQL Full Backup
 
 192.168.3.131:222
 
-Account/Password Identifier: git/eback
+Идентификатор учетной записи/Пароля: git/eback
 
-Deployment/Update:
+Развертывание/Обновление:
 
 ```sh
 Enterprise Snapshot Service
@@ -156,4 +156,4 @@ Scheduled tasks are located in: /etc/crontab
 
 https://www.treesir.pub/post/k8s-cronjob-backup-mysql/
 
-MySQL database data scheduled backup and upload to minIO - JoyLau's Blog
+Резервное копирование данных баз данных MySQL по расписанию и загрузка в minIO - JoyLau's Blog 

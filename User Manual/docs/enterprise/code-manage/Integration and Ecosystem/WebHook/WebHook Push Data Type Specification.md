@@ -1,14 +1,14 @@
 ---
-title: WebHook push data type description
+title: Описание типа данных отправки вебхука
 ---
 
-### The webhook push data contains rich JSON aggregation information, which can be roughly divided into several types based on the aggregation unit of information.
+### Данные отправки вебхука содержат богатую агрегированную информацию в формате JSON, которую можно условно разделить на несколько типов в зависимости от единицы агрегирования информации.
 
-**Additional Notes:**
-1. The key-value pairs inside [] depend on the data and may not be saved
-**2, *user, *commit, etc. represent the corresponding json data aggregation**
-**3. This document is for reference only. Please refer to the actual data received for accuracy**  
-If an error is found in the document, we apologize and please go to the [Gitee Feedback Center](https://gitee.ru/oschina/git-osc/) to submit an issue.
+**Дополнительные примечания:**
+1. Пары ключ-значение внутри [] зависят от данных и могут не сохраняться
+**2, *пользователь, *фиксация и т.д. представляют соответствующую агрегацию данных json**
+**3. Этот документ предназначен только для справки. В целях обеспечения точности ознакомьтесь с фактическими полученными данными**
+Если в документе обнаружена ошибка, мы приносим извинения и просим перейти в [Центр обратной связи Gitee](https://git.ru/oschina/git-osc/), чтобы сообщить о проблеме.
 
 ```bash
 # Tags. Labels for issues and pull requests
@@ -190,9 +190,9 @@ changed_files: Number                 # Number of lines modified in the PR.
 }
 ```
 
-### Currently supported webhook hooks by Gitee
+### Поддерживаемые в настоящее время хуки вебхуков от Gitee
 
-#### Issue Hook data format
+#### Формат данных хука задачи
 
 ```bash
 {
@@ -224,7 +224,7 @@ The enterprise information to which the issue belongs.
 }
 ```
 
-#### Push / Tag Hook data format
+#### Формат данных отправки/хуков тегов
 
 ```bash
 {
@@ -255,7 +255,7 @@ enterprise: *enterprise || ull # The information of the enterprise where the tar
 }
 ```
 
-#### Pull Request Hook Data Format
+#### Формат данных хука запроса на слияние
 
 ```bash
 {
@@ -296,7 +296,7 @@ enterprise: *enterprise || null      # Information about the enterprise where th
 }
 ```
 
-#### Note Hook data format
+#### Обратите внимание на формат данных хука
 
 ```bash
 {

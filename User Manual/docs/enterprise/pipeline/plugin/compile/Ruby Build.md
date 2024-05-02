@@ -1,18 +1,18 @@
 ---
-title: Ruby Build
-description: Ruby build
+title: Сборка Ruby
+description: Сборка Ruby
 slug: /enterprise/pipeline/plugin/ruby-compile
 keywords:
  - Gitee
  - Ruby
- - Build
+ - Сборка
 ---
 
-## Form Introduction
+## Знакомство с формой
 
-- **Ruby version number**: Select the appropriate Ruby version from the dropdown list. The plugin will initialize the Ruby environment based on the selected version when executing.
+- **Номер версии Ruby**: Выберите подходящую версию Ruby из выпадающего списка. Плагин инициализирует среду Ruby на основе выбранной версии при выполнении.
 
-- **Build Command**: The build command is a user-defined command to build the code. The command is executed in the root path of the code repository and supports ${Parameter Key} to get environment variables. Note that adding `set -e` can control the automatic exit of script commands in case of errors.
+- **Команда сборки**: Команда сборки - это пользовательская команда для сборки кода. Команда выполняется по корневому пути репозитория кода и поддерживает ${Parameter Key} для получения переменных окружения. Обратите внимание, что добавление `set -e` может управлять автоматическим завершением команд скрипта в случае ошибок.
 
 ```shell
 bundle install
@@ -23,33 +23,33 @@ bin/rails test
 RAILS_ENV=production bin/rails assets:precompile
 ```
 
-- **Stash build artifacts**:
-- **Unique Identifier**: The identifier for the artifact produced, which can be referenced in downstream tasks using `${Unique Identifier}` to obtain the artifact.
-    - **Packaged files/directories**: Select the files or directories produced by the artifact, it can be single or multiple (these packaging directories are compressed together).
+- **Артефакты сборки в корзине**:
+- **Уникальный идентификатор**: Идентификатор созданного артефакта, на который можно ссылаться в последующих задачах, используя `${Unique Identifier}` для получения артефакта.
+    - **Упакованные файлы/каталоги**: Выберите файлы или каталоги, созданные артефактом, их может быть один или несколько (эти упаковочные каталоги сжимаются вместе).
 
-- **Build cache**:
+- **Кэш сборки**:
 
-> The cache parameter supports both absolute and relative paths, for example:
+> Параметр кэша поддерживает как абсолютные, так и относительные пути, например:
 
-- xxx/xxx relative to the root directory of the code repository
+- xxx/xxx относительно корневого каталога хранилища кода
 - /root/workspace/xxx
 
-> Rule Explanation:
+> Пояснение правила:
 
-- The so-called cache essentially means storing the modules that are repeatedly used in our pipeline in the uploaded S3. When the pipeline is triggered again, the cache file is downloaded and extracted from S3.
-Only when the pipeline build is successful will the updated cache files be uploaded
-- Cache files expire by default after 30 days
-- Each time the pipeline is triggered, the cache expiration can be extended (even if the build fails)
+- Так называемый кэш по сути означает хранение модулей, которые неоднократно используются в нашем конвейере, в загруженном S3. Когда конвейер запускается снова, файл кэша загружается и извлекается из S3.
+Только после успешной сборки конвейера обновленные файлы кэша будут загружены.
+- Срок действия файлов кэша по умолчанию истекает через 30 дней.
+- При каждом запуске конвейера срок действия кэша может быть продлен (даже если сборка не удалась)
 
-## Notes:
+## Примечания:
 
-### Execute Command Script
+### Сценарий выполнения команд
 
-You can maintain the user commands entered in the input box in the code, similar to build.sh. Benefits: It can prevent the deletion of the pipeline and not being able to find the previous build commands after that.
+Вы можете сохранить в коде пользовательские команды, введенные в поле ввода, аналогично build.sh. Преимущества: Это может предотвратить удаление конвейера и невозможность найти предыдущие команды сборки после этого.
 
-## Common combinations:
+## Распространенные комбинации:
 
-### Image Build and Deployment (Single Artifact)
+### Сборка и развертывание образа (один артефакт)
 
 ```mermaid
 graph LR
@@ -57,14 +57,14 @@ A[Ruby Build] --> B[Image Build] --> C[K8S Deployment]
     B --> D[Helm Chart Deployment]
 ```
 
-### Artifact Upload and Deployment (Single Artifact)
+### Загрузка и развертывание артефактов (один артефакт)
 
 ```mermaid
 graph LR
 A[Ruby Build] -->B[Upload Artifact] -->C[Release] -->D[Host Deployment]
 ```
 
-### Image Build and Deployment (Multiple Artifacts)
+### Сборка и развертывание образов (несколько артефактов)
 
 ```mermaid
 graph LR

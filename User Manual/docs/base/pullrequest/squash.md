@@ -1,30 +1,30 @@
 ---
-title: Pull Request supports flat (Squash) merging function
+title: Запрос на слияние поддерживает функцию сквош
 authors:
   - name: Cheese
-description: Pull Request supports the creator's request for Squash merge.
+description: Запрос на слияние поддерживает запрос создателя на слияние по сквошу.
 ---
 
-## Background
+## Справка
 
-When a user creates a Pull Request, because the commit history of the Pull Request is large, they want it to be merged as a single commit without affecting the commit history of the merge branch, and without creating a Merge commit. The creator of the Pull Request can choose this option.
+Когда пользователь создает запрос на слияние, поскольку история фиксации запроса на слияние велика, он хочет, чтобы она была объединена как один коммит, не влияя на историю фиксации ветви слияния и не создавая коммит слияния. Создатель запроса на слияние может выбрать этот параметр.
 
-## Introduction to Squash feature usage
+## Введение в использование функции сквоша
 
-> Squash merging allows you to streamline the Git history of the source branch when completing a pull request. Squash Merge will "squash" all the changes on the merged branch into a single commit instead of adding all the file changes to the default branch as a single new commit.
+> Слияние в сквош позволяет упростить историю Git исходной ветви при выполнении запроса на слияние. Слияние в сквош "сведет" все изменения в объединенной ветке в один коммит вместо добавления всех изменений файла в ветку по умолчанию в виде одного нового коммита.
 
-Note: This option strategy takes precedence over the default merge method for Pull Requests. When Squash Merge is disabled, the option is set to Disabled, and the hover prompt shows 'This repository has disabled this Pull Request merge method.'
+Примечание: Эта стратегия выбора имеет приоритет над методом слияния по умолчанию для запросов на слияние. Когда слияние в сквош отключено, для параметра установлено значение "Отключено", и в подсказке при наведении курсора отображается "Этот репозиторий отключил этот метод слияния для запросов на слияние".
 
-### Operation Example
+### Пример операции
 
-In the Merge Options section at the bottom right corner of the Create Pull Request interface, select 'Use squash merge when accepting Pull Request'.
+В разделе "Параметры слияния" в правом нижнем углу интерфейса "Создать запрос на слияние" выберите "Использовать сквош-слияние при принятии запроса на слияние".
 
-![Squash Merge](https://foruda.gitee.ru/images/1666236191363360928/f43fe4cd_551147.jpeg)
+![Слияние в сквош](https://foruda.gitee.ru/images/1666236191363360928/f43fe4cd_551147.jpeg)
 
-### Set default merge strategy
+### Установите стратегию слияния по умолчанию
 
-In the repository settings - functional settings page, Gitee supports setting the default merge strategy for Pull Requests.
+На странице функциональных настроек Gitee поддерживает настройку стратегии слияния по умолчанию для запросов на слияние.
 
-![Default merge options](https://foruda.gitee.ru/images/1666236128379107376/f36b9ed4_551147.jpeg)
+![Параметры слияния по умолчанию](https://foruda.gitee.ru/images/1666236128379107376/f36b9ed4_551147.jpeg)
 
-![Default merge options](https://foruda.gitee.ru/images/1666236505729867484/64d92c81_551147.jpeg)
+![Параметры слияния по умолчанию](https://foruda.gitee.ru/images/1666236505729867484/64d92c81_551147.jpeg)

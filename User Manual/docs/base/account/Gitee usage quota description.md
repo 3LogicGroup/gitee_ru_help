@@ -1,20 +1,20 @@
 ---
-title: Gitee Usage Quota Description
+title: Описание квоты на использование Gitee
 slug: /account/usage-quota
 origin-url: https://gitee.ru/help/articles/4125
 ---
 
-## Community edition quota description
+## Описание квоты версии Community edition
 
-| Type | Explanation |
-|:------:|:--- |
-Number of Repositories
-| Warehouse capacity | The maximum size of a single warehouse is 500M, and the maximum size of a single file is 50M. The total warehouse capacity for a user is 5G. Note: The total warehouse refers to all the warehouses under the user's account and the organizations created by the user. |
-| Attachment Capacity | Maximum file size for a single attachment is 100MB. Total repository attachment capacity is 1G. |
-| Number of members | There is no limit on the number of members in public repositories. The total number of collaborators in all private repositories under a personal account is limited to 5 |
+| Тип 	 | Пояснение |
+|:------:|:--- 		 |
+Количество репозиториев
+| Ёмкость хранилища | Максимальный размер одного хранилища составляет 500МБ, а максимальный размер одного файла составляет 50МБ. Общая емкость хранилища для пользователя составляет 5ГБ. Примечание: Общий объем хранилища  относится ко всемхранилищам под учетной записью пользователя и созданным пользователем организациям. |
+| объем приложений | Максимальный размер файла для отдельного приложения составляет 100МБ. Общая емкость репозитория приложений составляет 1ГБ. |
+| Количество участников| Количество участников в общедоступных репозиториях не ограничено. Общее количество соавторов во всех частных репозиториях под личной учетной записью не более 5 |
 
 -------------------------
 
-## Enterprise edition quota description
+## Описание квоты на использование версии Enterprise edition
 
-Enterprise edition quota details: [Enterprise Edition and Personal Edition Service Comparison](/help/articles/4167)
+Подробная информация о квоте на использование версии Enterprise edition: [Сравнение сервисов Enterprise Edition и Personal Edition](/help/articles/4167)

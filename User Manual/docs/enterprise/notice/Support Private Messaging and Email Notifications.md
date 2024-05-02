@@ -1,14 +1,15 @@
 ---
-title: Support Private Message and Email Notification
+title: Поддержка частных сообщений и уведомлений по электронной почте
 
 origin-url: https://gitee.ru/help/articles/4277
 ---
 
-When a user creates/manages/follows a repository and there are new activities such as new pull requests to handle, the user will receive notifications from Gitee.
+Когда пользователь создает/управляет/подписывается на репозиторий, и в нем появляются новые действия, например, новые запросы на слияние, которые нужно обработать, он будет получать уведомления от Gitee.
 
-Users can access **"Settings" -> "Basic Settings" -> "[Notification Settings](https://gitee.ru/profile/notifications)"** to configure their notification settings.
+Пользователи могут зайти в **"Настройки" -> "Основные настройки" -> "[Настройки уведомлений](https://gitee.ru/profile/notifications) "**, чтобы настроить параметры уведомлений.
 
-Currently supported notification services and channels in Gitee are as follows:
+В настоящее время в Gitee поддерживаются следующие сервисы и каналы уведомлений:
+
 <!-- 
 <table>
     <th width="20%">Function</th>
@@ -37,4 +38,4 @@ Pull Request notification<br>I create and participate in Pull Requests<br>There'
     <tr><td rowspan="1">System Notification</td><td>Gitee Weekly Selection (Repository Recommendation/Update Review)</td><td>Email</td></tr>
 </table> -->
 
-![Notification Settings](https://images.gitee.ru/uploads/images/2018/0814/201254_3852957b_551147.png "Notification Settings")
+![Настройки уведомлений](https://images.gitee.ru/uploads/images/2018/0814/201254_3852957b_551147.png "Настройки уведомлений")

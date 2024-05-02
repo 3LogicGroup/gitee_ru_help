@@ -1,28 +1,28 @@
 ---
-title: git clone / Download Code
+title: клонирование git/ Загрузка кода
 origin-url: https://gitee.ru/help/articles/4192
 ---
 
-When users access the project on Gitee and need to download the project repository/code to their local machine, they can do so by cloning/downloading the ZIP.
+Когда пользователи получают доступ к проекту на Gitee и им необходимо загрузить репозиторий проекта/код на свой локальный компьютер, они могут сделать это путем клонирования/загрузки ZIP-файла.
 
-![Image Description](../../../../../assets/image28.png)
+![Описание изображения](../../../../../assets/image28.png)
 
-### **Clone Repository with git clone**
+### **Клонирование репозитория при помощи git clone**
 
-> Users can find the repository address by going to the project homepage and finding "Repository Clone Address/Download Area".
-Here we take the repository named HelloGitee under the user account gitee as an example. The corresponding repository URL is `https://gitee.ru/gitee/HelloGitee.git`. If the user has the permission to access the project repository code, you can clone the repository to your local machine by executing the command 'git clone' followed by the repository URL.
+> Пользователи могут найти адрес репозитория, перейдя на главную страницу проекта и найдя "Адрес клонирования репозитория/область загрузки".
+Здесь в качестве примера мы возьмем репозиторий с именем HelloGitee под учетной записью пользователя gitee. Соответствующий URL-адрес репозитория - `https://gitee.ru/gitee/HelloGitee.git`. Если у пользователя есть права доступа к коду репозитория проекта, он может клонировать репозиторий на свой локальный компьютер, выполнив команду "git clone", за которой следует URL-адрес репозитория.
 
 ```bash
 git clone https://gitee.ru/gitee/HelloGitee.git #Clone the remote repository to the local machine.
 ```
 
-Note: During the cloning process, if the repository is a private repository, users may be prompted to enter their Gitee username and password. Follow the prompts to input the information. For specific configuration and operations, please refer to the Quick Start/Creating Your First Project Repository.
+Примечание: Во время процесса клонирования, если репозиторий является частным, пользователям может быть предложено ввести свое имя пользователя и пароль Gitee. Для ввода информации следуйте инструкциям. Для получения информации о конкретной конфигурации и операциях, обратитесь к разделу Быстрый запуск/Создание вашего первого репозитория проекта.
 
-### **Download code via ZIP**
+### **Загрузка кода через ZIP**
 
-Users can find the download area on the project repository homepage (see the download button in the figure above), click 'Download ZIP', enter the verification code on the redirected verification page to confirm, and then start the download.
+Пользователи могут найти область загрузки на главной странице репозитория проекта (см. кнопку загрузки на рисунке выше), нажать "Загрузить ZIP-файл", ввести для подтверждения проверочный код на странице, куда они будут перенаправлены, а затем начать загрузку.
 
-> Download ZIP package content for downloading the content of the current accessed branch/Commit, excluding Git version. For more details, refer to the git archive packaging command: https://git-scm.com/docs/git-archive
+> Загрузить содержимое ZIP-пакета для загрузки содержимого текущей доступной ветки/коммита, исключая версию Git. Для получения более подробной информации обратитесь к команде упаковки архива git: https://git-scm.com/docs/git-archive
 
-![Image Description](../../../../../assets/image29.png)
+![Описание изображения](../../../../../assets/image29.png)
  

@@ -1,28 +1,28 @@
 ---
-title: Helm Chart Deployment
-description: Helm Chart deployment
+title: Развертывание Helm Chart
+description: Развертывание Helm Chart
 slug: /enterprise/pipeline/plugin/helm-deploy
 keywords:
  - Gitee
  - Helm
- - Deploy
+ - Развертывание
 ---
 
-## Form Introduction
+## Знакомство с формой
 
-- **Helm Version**: Select the Helm version used, currently providing 3.4.0 and 2.17.0.
+- **Версия Helm**: Выберите используемую версию Helm, в настоящее время доступны версии 3.4.0 и 2.17.0.
 
-Cluster Certificate: Use the cluster certificate to connect to the Kubernetes service cluster
+Сертификат кластера: Используйте сертификат кластера для подключения к кластеру служб Kubernetes.
 
-- **Namespace**: Namespace under Kubernetes, default is default.
+- **Пространство имен**: Пространство имен в Kubernetes, по умолчанию.
 
-- **App Name**: The application name is the target application name for the current release, for example: "k8s-app".
+- **Имя приложения**: Имя приложения - это имя целевого приложения для текущего выпуска, например: "k8s-app".
 
-- **Chart File Directory**: The Chart file directory is the relative path of the Chart definition in the source code repository, for example: "helm-config/app".
+- **Каталог файла диаграммы**: Каталог файла Chart - это относительный путь к определению Chart в репозитории исходного кода, например: "helm-config/app".
 
-- **Specify values.yaml**: Specify the path of values.yaml in the Chart directory.
+- **Указать values.yaml**: Укажите путь к файлу values.yaml в каталоге Chart.
 
-## Common combinations:
+## Общие комбинации:
 
 ```mermaid
 graph LR

@@ -1,14 +1,14 @@
 ---
-title: Document preview
+title: Предварительный просмотр документа
 authors:
   - name: Cheese
-description: Preview of the wiki document
+description: Предварительный просмотр wiki-документа
 ---
 
-Document Preview
+Предварительный просмотр документа
 
-Click the 'Preview' icon on the top left of the Wiki page to preview the document in full screen.
+Для просмотра документа в полноэкранном режиме нажмите на значок "Предварительный просмотр" в левом верхнем углу вики-страницы.
 
-![Image Description](assets/image22.png)
+![Описание изображения](assets/image22.png)
 
-![Image Description](assets/image23.png)
+![Описание изображения](assets/image23.png)

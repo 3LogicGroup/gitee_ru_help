@@ -1,9 +1,9 @@
 ---
-title: Delete Repository
+title: Удаление репозитория
 ---
 
-To prevent user errors, when deleting a repository on Gitee, a secondary verification is required. Users can go to the repository list -> 'Three-dot operator' -> 'Delete'.
+В целях предотвращения пользовательских ошибок при удалении репозитория на Gitee требуется повторная проверка. Пользователи могут перейти к списку репозиториев -> "Оператор с тремя точками" -> "Удалить".
 
-After confirming the operation, password verification is required from the user. Once the password is verified, the repository can be deleted.
+После подтверждения операции от пользователя требуется подтверждение пароля. Как только пароль будет подтвержден, репозиторий может быть удален.
 
-![Image Description](../../../../../../assets/image138.png)
+![Описание изображения](../../../../../../assets/image138.png)

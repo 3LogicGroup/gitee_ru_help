@@ -1,70 +1,70 @@
 ---
-title: Using Pull Request Feature for Code Review
+title: Использование функции запроса на слияние для проверки кода
 origin-url: https://gitee.ru/help/articles/4304
 ---
 
-If your team adopts the "Fork + Pull" collaboration model recommended by Gitee, we also recommend using the Pull Request feature for code review within the team, with the following steps:
+Если ваша команда использует рекомендованную Gitee модель совместной работы "Fork + Pull",  мы также рекомендуем использовать для проверки кода внутри команды функцию запроса на слияние с выполнением следующих действий:
 
-### **Repository Manager: Code Review Setup**
+### **Менеджер репозитория: Настройка проверки кода**
 
-> After setting specific individuals as the default code reviewers/testers for a repository, whenever a new Pull Request with the target branch within this repository is created, the system will notify the specified individuals to review the submitted Pull Request (i.e., the modified code content). At the same time, thresholds for merging Pull Requests can be set (e.g., whether all specified individuals need to agree before merging).
+> После назначения по умолчанию для данного репозитория определенных лиц в качестве проверяющих/тестировщиков кода, всякий раз, когда создается новый запрос на слияние с целевой веткой в этом репозитории, система уведомит указанных лиц о необходимости проверки отправленного запроса на слияние (т.е. измененного содержимого кода). В то же время могут быть установлены пороговые значения для выполнения запросов на слияние (например, необходимо ли согласие всех указанных лиц перед объединением).
 
-### **Developer Submit Pull Request**
+### **Разработчик отправляет запрос на слияние**
 
-> Developers can initiate a code review request by submitting a Pull Request from a forked branch to the source branch of the repository or from a working branch within the same repository to the source branch, in order to update the code in the source branch.
+> Разработчики могут инициировать запрос на проверку кода, отправив запрос на слияние из форка ветки в исходную ветку репозитория или из рабочей ветки в том же репозитории в исходную ветку для обновления кода в исходной ветке.
 
-### **Reviewers Conduct Code Review/Testing**
+### **Проверяющие проводят проверку/тестирование кода**
 
-> Specify personnel to view the Pull Request content submitted by developers and decide whether to accept the changes made by the developer.
+> Укажите персонал для просмотра содержимого запроса на слияние, отправленного разработчиками, и принятия решения о том, принимать ли изменения, внесенные разработчиком.
 
-### **Repository Admin Merges Pull Request**
+### **Администратор репозитория объединяет запрос на слияние**
 
-After the reviewers agree, the repository administrators can merge the developer's file changes to the source branch by merging the Pull Request.
+После того, как будет получено согласие прверяющих, администраторы репозитория получат возможность объединить изменения файла разработчика с исходной веткой, объединив запрос на слияние.
 
-Illustration as follows:
+Ниже приведена иллюстрация:
 
-![Image Description](./assets/095737_47c0f42b_5370906.webp)
+![Описание изображения](./assets/095737_47c0f42b_5370906.webp)
 
-### **Repository Manager: Code Review Setup**
+### **Менеджер репозитория: Настройка проверки кода**
 
-- Code review is based on repositories. Members with repository administrator or higher roles can access the [Repository Details] - [Code Review Settings] page
-- Set the corresponding code reviewers/testers according to the requirements.
+- Проверка кода основана на репозиториях. Пользователи с ролями администратора репозитория или выше могут получить доступ к странице [Сведения о репозитории] - [Настройки проверки кода]
+- Назначьте соответствующих проверяющих/тестировщиков кода в соответствии с требованиями.
 
-![Image Description](../../../../../../assets/image175.png)
+![Описание изображения](../../../../../../assets/image175.png)
 
-Once set up, whenever a developer submits a Pull Request to a branch in the repository, the relevant personnel will receive a notification to start the code review process.
+После завершения настройки всякий раз, когда разработчик отправляет запрос на слияние в ветку репозитория, соответствующий персонал получит уведомление о начале процесса проверки кода.
 
-### **Developer Submits Pull Request**
+### **Разработчик отправляет запрос на извлечение**
 
-- Developer forks the target repository, makes modifications on the corresponding branch, and pushes to their own forked repository. Click '+' and then 'Pull Request' from their own repository.
+- Разработчик создает форк целевого репозитория, вносит изменения в соответствующую ветку и отправляет в свой собственный форк репозитория. Нажимает "+", а затем "Запрос на слияние" из своего собственного репозитория.
 
-![Image Description](../../../../../../assets/image176.png)
+![Описание изображения](../../../../../../assets/image176.png)
 
-### **Reviewers Conduct Code Review/Testing**
+### **Проверяющие проводят проверку/тестирование кода**
 
-In the enterprise view [Dashboard] - [Pull Request] of the specified reviewer, the [Assigned to Me] tab is the Pull Request that the reviewer needs to review.
+В корпоративном представлении [Панель инструментов] - [Запрос на слияние] указанного проверяющего, вкладка [Назначено мне] представляет собой запрос на слияние, который проверяющему предстит проверить.
 
-![Image Description](../../../../../../assets/image177.png)
+![Описание изображения](../../../../../../assets/image177.png)
 
-> Note: Paying enterprise users automatically enable code defect scanning, which will automatically scan defects and specification issues in any submitted Pull Request.
+> Примечание: Ппользователи платной версии Enterprise автоматически включают сканирование дефектов кода, которое автоматически сканирует дефекты и проблемы со спецификациями в любом отправленном запросе на извлечение.
 
-- Reviewers can view the details of the Pull Request
- 
-- The only difference is that the newly created directory is now named mygrit, everything else is the same as above.
-![Image Description](../../../../../../assets/image178.png)
+- Рецензенты могут просмотреть подробную информацию о запросе на извлечение
 
-- Also supports code line comments in "File Changes"
-![Image Description](../../../../../../assets/image179.png)
+- Единственное отличие заключается в том, что вновь созданная директория теперь называется mygrit, все остальное остается таким же, как указано выше.
+
+![Описание изображения](../../../../../../assets/image178.png)
+
+- Также поддерживаются комментарии к строкам кода в разделе "Изменения файла".
+![Описание изображения](../../../../../../assets/image179.png)
 、、
 
-- View the report content in 'Bug Report' and 'Specification Report'
-![Image Description](./assets/pull_request_6.png)
+- Просмотр содержимого отчета в разделах "Отчет об ошибке" и "Отчет о спецификации".
+![Описание изображения](./assets/pull_request_6.png)
 
-The reviewer's suggestions will be notified to the developer who submitted the pull request through messages, etc., and the developer can discuss with the reviewer in the 'Comments' section according to the situation.
+Предложения проверяющего будут доведены до сведения отправившего запрос на извлечение разработчика посредством сообщений и т.д., и разработчик может обсудить их с првоеряющим в разделе "Комментарии" в зависимости от ситуации.
 
-### **Repository Admin Merges Pull Request**
+### **Администратор репозитория объединяет запрос на извлечение**
 
-After the Pull Request review is completed and meets the code review rules set by the repository administrator, members with the permission to merge Pull Requests (usually repository administrators, please refer to protected branch rules for special cases) can merge the Pull Request into the target branch.
-![Image Description](../../../../../../assets/image182.png)
+После завершения проверки запроса на извлечение и соответствия правилам проверки кода, установленным администратором репозитория, участники, имеющие разрешение на объединение запросов на извлечение (обычно администраторы репозитория, обратитесь к правилам защищенной ветки для особых случаев), могут объединить запрос на извлечение в целевую ветку.![Описание изображения](../../../../../../assets/image182.png)
 
-After the merge is complete, the developer's changes to the target branch take effect. If there are any other issues, please refer to how to roll back to a previous version
+После завершения слияния изменения, внесенные разработчиком в целевую ветку, вступают в силу. В случае возникновения каких-либо других проблем обращайтесь к разделу "Как выполнить откат к предыдущей версии".

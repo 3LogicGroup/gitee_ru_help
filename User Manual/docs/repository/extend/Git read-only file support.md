@@ -1,46 +1,46 @@
 ---
-title: Git Read-only File Support
+title: Поддержка файлов только для чтения в Git
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 origin-url: https://gitee.ru/help/articles/4256
 ---
 
-As an application project, there are usually some files to describe the configuration information in the production environment, such as service connection information, environment configuration information, etc. However, during the local development process, it is necessary to adjust the configuration of these files according to the local service environment. If these modifications are accidentally committed, it may directly cause the application in the production environment to fail to run properly.
+В проекте приложения обычно есть несколько файлов для описания конфигурационной информации в производственной среде, например информация о подключении к сервису, информация о конфигурации среды и т. д. Однако в процессе локальной разработки необходимо скорректировать конфигурацию этих файлов в соответствии с локальной средой обслуживания. Если эти изменения будут случайно зафиксированы, это может привести к тому, что приложение в производственной среде не будет работать должным образом.
 
-Therefore, SVN has a very useful feature that allows certain files to be configured as read-only and not allow modifications to be submitted.
+Поэтому в SVN есть очень полезная функция, которая позволяет настроить определенные файлы как доступные только для чтения и не разрешать отправку модификаций.
 
-However, Git itself does not have this feature. Mainstream Git platforms generally provide read-only branches, but cannot achieve read-only restrictions on individual files or folders
+Однако сам Git такой возможности не имеет. Основные платформы Git обычно предоставляют ветки, доступные только для чтения, но не могут обеспечить ограничения только для чтения отдельных файлов или папок.
 
-The usage is as follows:
+Это можно использовать следующим образом:
 
-1. Go to the repository page, right-click on the file or folder that you want to set as read-only, and select 'Mark as Read-Only' (only repository administrators have permission).
-![Image Description](https://images.gitee.ru/uploads/images/2019/0618/164916_d5bbd348_4764813.png "Screenshot_20190618_164105.png")
-![Image Description](https://images.gitee.ru/uploads/images/2019/0618/165006_76435672_4764813.png "Screenshot_20190618_164151.png")
-2. Go to the repository management page to view and manage all the read-only settings of the repository.
-![Image Description](https://images.gitee.ru/uploads/images/2019/0618/165746_d75a7620_4764813.png "readonly-list.png")
-3. If pushing code contains modifications to read-only files, an error will occur:
+1. Перейдите на страницу репозитория, нажмите правой кнопкой мыши на файле или папке, которые вы хотите установить как доступные только для чтения, и выберите 'Mark as Read-Only' (разрешение есть только у администраторов репозитория).
+![Описание изображения](https://images.gitee.ru/uploads/images/2019/0618/164916_d5bbd348_4764813.png "Screenshot_20190618_164105.png")
+![Описание изображения](https://images.gitee.ru/uploads/images/2019/0618/165006_76435672_4764813.png "Screenshot_20190618_164151.png")
+2. Перейдите на страницу управления репозиторием, чтобы просмотреть и управлять всеми настройками репозитория, доступными только для чтения.
+![Описание изображения](https://images.gitee.ru/uploads/images/2019/0618/165746_d75a7620_4764813.png "readonly-list.png")
+3. Если при отправке кода будут внесены изменения в файлы, доступные только для чтения, произойдет ошибка:
 
-Code Submission Error:
+Ошибка ввода кода:
 
-![Image Description](https://images.gitee.ru/uploads/images/2019/0618/172009_01d60e4e_4764813.png "push.png")
+![Описание изображения](https://images.gitee.ru/uploads/images/2019/0618/172009_01d60e4e_4764813.png "push.png")
 
-PR code merge error: 
+Ошибка слияния PR-кода: 
 
-![Image Description](https://images.gitee.ru/uploads/images/2019/0618/170248_fda5e3dd_4764813.png "pr-merge.png")
+![Описание изображения](https://images.gitee.ru/uploads/images/2019/0618/170248_fda5e3dd_4764813.png "pr-merge.png")
 
-4. There are three ways to resolve read-only errors
+4. Существует три способа устранения ошибок, связанных только с чтением
 
-- Change the content of read-only files back to their original state
+- Вернуть содержимое файлов, доступных только для чтения, в исходное состояние
 
-> Modify the content of the corresponding read-only file to match the online version to push normally.
+> Измените содержимое соответствующего файла, доступного только для чтения, чтобы оно соответствовало онлайн-версии для нормального продвижения.
 
-- `git reset --hard <tree-ish>` command
+- Команда `git reset --hard <tree-ish>`.
 
-> Use the command 'git reset --hard <tree-ish>' to discard changes to read-only files after committing, and then you can push normally.
+> Для отмены после фиксации изменений в файлах, доступных только для чтения, используйте команду 'git reset --hard <tree-ish>', затем вы сможете нормально выполнить отправку данных.
 
-Cancel the read-only flag of the corresponding file (only repository administrators can operate)
+Отменить флаг "только для чтения" соответствующего файла (могут работать только администраторы репозитория)
 
-> Users with repository management permissions can remove the read-only mark for the corresponding file in the repository directory or repository management page.
+> Пользователи с правами управления репозиторием могут снять отметку "только для чтения" для соответствующего файла в директории репозитория или на странице управления репозиторием.
 
-This feature is currently available for paid Enterprise Edition users only.
+В настоящее время эта функция доступна только для пользователей платной версии Enterprise Edition.

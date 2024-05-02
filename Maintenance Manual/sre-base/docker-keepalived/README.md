@@ -1,25 +1,25 @@
 # docker-keepalived
 
-base on alpine 3.11
+основано на alpine 3.11
 
-environment and default value:
-Bind network card
+окружение и значение по умолчанию:
+Привязка сетевой карты
 KEEPALIVED_BIND_INTERFACE=ens33
-# Route number (same for both nodes)
+# Номер маршрута (одинаковый для обоих узлов)
 KEEPALIVED_ROUTER_ID=100
-Node prefix
+Префикс узла
 KEEPALIVED_NODE_PREFIX=node
-Node status
+Статус узла
 KEEPALIVED_NODE_STATES=BACKUP,BACKUP
-# Node Priority
+# Приоритет узла
 KEEPALIVED_NODE_PRIORITYS=100,90
-Node address
+Адрес узла
 KEEPALIVED_NODE_IPS=192.168.8.161,192.168.8.162
-# Virtual Address (dev:ip,dev:ip)
+# Виртуальный адрес (dev:ip,dev:ip)
 KEEPALIVED_VIRTUAL_IPS=ens33:192.168.8.160/24,ens33:192.168.9.160/24
-# Authentication password (same for both nodes)
+# Пароль аутентификации (одинаковый для обоих узлов)
 KEEPALIVED_AUTH_PASS=abcd1234
-# Startup parameters (config-id=node01,node02)
+# Параметры запуска (config-id=node01,node02)
 KEEPALIVED_COMMAND_LINE_ARGUMENTS=--log-detail --dump-conf --config-id node1
 
 docker run -it --rm --network=host --name=keepalived \

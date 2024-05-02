@@ -1,5 +1,5 @@
 ---
-title: Introduction to Enterprise Documentation
+title: Знакомство с корпоративной документацией
 authors:
   - name: Roger
     url: https://gitee.ru/yuriluo
@@ -7,12 +7,12 @@ origin-url: https://gitee.ru/help/articles/4252
 slug: /enterprise/wiki/intro
 ---
 
-In Gitee Enterprise Edition, the 'Documents' feature is used to build team knowledge bases and facilitate knowledge sharing among members; folders contain documents and files, providing unified document management for enterprises.
+В Gitee Enterprise Edition функция "Документы" используется для создания базы знаний команды и облегчения обмена знаниями между её участниками; папки содержат документы и файлы, обеспечивая единый документооборот для предприятий.
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/0309/154331_1217199a_5370906.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/0309/154331_1217199a_5370906.png )
 
-In 'Documents', each user has an independent knowledge management space, which provides clear storage and traceability for document categories, publishing, previewing, and version history.
+В "Документах" у каждого пользователя есть независимое пространство управления знаниями, которое обеспечивает четкое хранение и отслеживание категорий документов, публикацию, предварительный просмотр и историю версий.
 
-Integrate 'Enterprise Documents', 'Enterprise Attachments', and 'Repository Wiki' into one view, centralizing and standardizing the knowledge base information for easy reference at any time.
+Интегрируйте "Документы предприятия", "Вложения предприятия" и "Репозиторий Wiki" в единое пространство, централизуя и стандартизируя информацию базы знаний для удобного обращения к ней в любое время.
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/0309/154358_b79b8318_5370906.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/0309/154358_b79b8318_5370906.png )

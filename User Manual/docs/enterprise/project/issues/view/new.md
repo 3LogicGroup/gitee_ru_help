@@ -1,23 +1,23 @@
 ---
-title: Create new view
+title: Создание новой доски
 ---
 
-Click the dropdown menu on the left end of the filter bar, then click on the "New View" option in the menu:
+Нажмите на выпадающее меню в левой части панели фильтров, а затем нажмите на опцию "Создать новый" в меню:
 
-![Image Description](../../docs/assets/image539.png)
+![Описание изображения](../../docs/assets/image539.png)
 
-To create a new empty view, enter the view name in the 'New View' window that pops up and click the 'Save' button.
+Чтобы создать новую пустую доску, введите название доски в всплывающем окне "Новая доска" и нажмите кнопку "Сохранить".
 
-![Image Description](../../docs/assets/image540.png)
+![Описание изображения](../../docs/assets/image540.png)
 
-Click on the 'Filter' on the right to open the filter panel. After adding filter conditions, click on the 'Filter' button at the bottom right of the panel to apply these filter conditions.
+Нажмите на "Фильтры" в правом верхнем углу панели фильтров. После добавления комбинации фильтров, нажмите на кнопку "Применить фильтры" справа внизу панели инструментов, чтобы применить комбинацию фильтров.
 
-![Image Description](../../docs/assets/image541.png)
+![Описание изображения](../../docs/assets/image541.png)
 
-Click on the options in the 'Save View' dropdown menu to save the current filter conditions to a new view.
+Нажмите на опции в всплывающем окне "Сохранить доску" чтобы сохранить текущую комбинацию фильтров.
 
-![Image Description](../../docs/assets/image542.png)
+![Описание изображения](../../docs/assets/image542.png)
 
-If the current view is a personal created view, the view save option will become two:
+Если текущая доска создана как личная доска, опций сохранения будет две:
 
-![Image Description](../../docs/assets/image543.png)
+![Описание изображения](../../docs/assets/image543.png)

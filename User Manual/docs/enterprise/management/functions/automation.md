@@ -1,43 +1,43 @@
 ---
-title: Automation
+title: Автоматизация
 ---
 
-Using automation features can convert some work-related operations to be automatically executed by the system, saving manpower operation costs.
+Вы можете использовать функции автоматизации для преобразования некоторых операций, связанных с работой, автоматически выполняемых системой.
 
-You can access the Automation feature by clicking on "Management" -> "Automation" in the enterprise navigation menu.
+Для доступа к функции автоматизации перейдите по пути "Управление" -> "Автоматизация" в меню навигации компании.
 
-## Create Automation Rule
+## Создание правила автоматизации
 
-On the 'All Rules' page, click the 'New Rule' button in the upper right corner, and a window will be displayed:
+На странице "Все правила" нажмите кнопку "Новое правило" в верхнем правом углу, и откроется окно:
 
-![Select Template](./assets/automation-rule-template.png)
+![Выбрать шаблон](./assets/automation-rule-template.png)
 
-This window provides some preset common templates. Moving the mouse pointer over the template card will display two buttons: "Preview Template" and "Use Template". Clicking the "Preview Template" button will show the detailed configuration of this rule.
+Это окно показывает несколько заранее заданных общих шаблонов. Наведите мышку на карточку шаблона, чтобы отобразить две кнопки: "Просмотр шаблона" и "Использовать шаблон". Щелкните кнопку "Просмотр шаблона", чтобы показать подробную конфигурацию этого правила.
 
-![Template Preview](./assets/automation-rule-template-preview.png)
+![Просмотр шаблона](./assets/automation-rule-template-preview.png)
 
-Click the "Use Template" button to enter the new page for creating automation rules, and the page content will be pre-filled with the template content.
+Для перехода на новую страницу создания правил автоматизации нажмите кнопку "Использовать шаблон", и содержимое страницы будет предварительно заполнено содержимым шаблона.
 
-![New Rule](./assets/automation-rule-new-form.png)
+![Новое правило](./assets/automation-rule-new-form.png)
 
-After configuring the rules, click the "New" button in the upper right corner.
+После настройки правил нажмите кнопку "Создать" в правом верхнем углу.
 
-## Disable Automation Rule
+## Отключение правила автоматизации
 
-Click on the '...' operation menu on the right side of the rule and select 'Disable' to disable this rule. After disabling, the rule will no longer be executed.
+Чтобы отключить это правило, нажмите на меню операций '...' справа от правила и выберите 'Отключить'. После отключения правило больше не будет выполняться.
 
-![Disable Rule](./assets/automation-rule-disable.png)
+![Отключение правила](./assets/automation-rule-disable.png)
 
-View the execution log of automation rules
+Просмотр журнала выполнения автоматических правил.
 
-Click on "Execution Log" in the left menu to enter the execution log page, which displays the execution information of all automation rules.
+Нажмите на "Журнал выполнения" в левом меню, чтобы перейти на страницу журнала выполнения, на которой отображается информация о выполнении всех правил автоматизации.
 
-![Execution Logs](./assets/automation-logs.png)
+![Журнал выполнения](./assets/automation-logs.png)
 
-Click on the automation rule in the list to view detailed logs.
+Нажмите на правило автоматизации в списке, чтобы просмотреть подробные журналы.
 
-![Execution Log Details](./assets/automation-log-detail.png)
+![Детали журнала выполнения](./assets/automation-log-detail.png)
 
-In work items affected by automation rules, you can also open the automation rule execution log by clicking on the `[Automation]` tag in the operation log.
+В рабочих элементах, на которые влияют автоматические правила, вы также можете открыть журнал выполнения автоматического правила, кликнув на тег [Автоматизация] в журнале операций.
 
-![Execution log details](./assets/automation-log-detail-from-issue.png)
+![Детали журнала выполнения](./assets/automation-log-detail-from-issue.png)

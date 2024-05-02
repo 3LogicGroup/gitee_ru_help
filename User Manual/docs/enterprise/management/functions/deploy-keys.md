@@ -1,9 +1,9 @@
 ---
-title: Deploy Public Key
+title: Развертывание открытого ключа
 ---
 
-Deploy public keys allow read-only access to repositories, mainly used for deploying repositories on production servers, eliminating the need to enter passwords for each operation using HTTP and the hassle of accidentally modifying repository code using SSH.
+Развернутые открытые ключи позволяют получать доступ только для чтения к репозиториям, в основном используются для развертывания репозиториев на производственных серверах, без необходимости ввода паролей для каждой операции с использованием HTTP и отсутсвием проблем случайного изменения кода репозитория с использованием SSH.
 
-Click on the "Settings" - "Deploy Keys" in the Enterprise Navigation menu to enter the Deploy Keys page.
+Чтобы войти на страницу развернутых ключей, нажмите на "Настройки" - "Ключи развертывания" в меню навигации компании.
 
-![Image Description](assets/image338.png)
+![Описание изображения](assets/image338.png)

@@ -1,7 +1,7 @@
 ---
-title: Add Team
+title: Добавление команды
 ---
 
-Click on the "Members" in the Enterprise Navigation menu to go to the Member Management page, then click on "Team Management" and select "Add Team" option. Fill in the basic information in the form and click "Create" button.
+Для перехода на страницу «Управление участниками» нажмите «Участники» в меню «Навигация компании», затем нажмите «Управление командой» и выберите опцию «Добавить команду». Заполните основную информацию в форме и нажмите кнопку «Создать».
 
-![Image Description](assets/image417.png)
+![Описание изображения](assets/image417.png)

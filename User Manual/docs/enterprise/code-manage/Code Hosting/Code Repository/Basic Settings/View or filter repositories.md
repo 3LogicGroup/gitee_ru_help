@@ -1,8 +1,8 @@
 ---
-title: View/Filter repositories
+title: Просмотр/фильтрация репозиториев
 origin-url: https://gitee.ru/help/articles/4170
 ---
 
-- After the user logs in, the user can search and browse the project repositories owned/participated by the current account by going to the 'Code' page.
+- После входа в систему пользователь может искать и просматривать репозитории проектов, которыми данная учетная запись владеет/в работе которых участвует, перейдя на страницу "Код".
 
-![Image Description](../../../../../../assets/image38.png)
+![Описание изображения](../../../../../../assets/image38.png)

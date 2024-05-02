@@ -1,45 +1,45 @@
 ---
-title: Host Deployment
-description: Host deployment
+title: Развертывание хоста
+description: Развертывание хоста
 slug: /enterprise/pipeline/plugin/host-deploy
 keywords:
  - Gitee
  - Host
- - Deploy
+ - Развертывание
 ---
 
-## Form Introduction
+## Знакомство с формой
 
-- **Execution Host Group**: You can go to [Host Management](/) to add your host group.
+- **Группа хостов исполнения**: Вы можете перейти к [Управлению хостом](/), чтобы добавить свою группу хостов.
 
-- **Download upstream output files or artifacts to the host before deployment (supports multiple configurations)**:
-- Deployment filename: The name of the artifact downloaded to the host
-    - **Download Path**: The path where the artifact is downloaded to the host machine
-    - **File Source**: Deployment files can come from upstream build outputs or the general artifact repository.
+- **Загрузка выходных файлов или артефактов на хост перед развертыванием (поддерживает несколько конфигураций)**:
+- Имя файла развертывания: имя артефакта, загружаемого на хост.
+    - **Путь загрузки**: Путь, по которому артефакт загружается на хост-машину.
+    - **Источник файла**: Файлы развертывания могут быть получены из сборочных выходов восходящего потока или из общего хранилища артефактов.
 
-- **Deployment Script**: A script used for host deployment, supports retrieving environment variables using ${parameterKey}.
+- **Сценарий развертывания**: Сценарий, используемый для развертывания на хосте, поддерживает получение переменных окружения с помощью ${parameterKey}.
 
-## Usage Example
+## Пример использования
 
-1. Fork a SpringBoot code repository from the example code repository: [https://gitee.ru/gitee-go/spring-boot](https://gitee.ru/gitee-go/spring-boot), which includes a deployment script deploy.sh: [https://gitee.ru/gitee-go/spring-boot/blob/master/deploy.sh](https://gitee.ru/gitee-go/spring-boot/blob/master/deploy.sh).
+1. Форк репозитория кода SpringBoot из репозитория кода примера: [https://gitee.ru/gitee-go/spring-boot](https://gitee.ru/gitee-go/spring-boot), который включает скрипт развертывания deploy.sh: [https://gitee.ru/gitee-go/spring-boot/blob/master/deploy.sh](https://gitee.ru/gitee-go/spring-boot/blob/master/deploy.sh).
 
-2. Install Java runtime environment on the deployment machine
+2. Установите среду выполнения Java на машине развертывания.
 
-3. Build artifacts in the pipeline
+3. Сборка артефактов в конвейере
 
-To perform deployment, it is necessary to first build artifacts. The artifacts in Gitee Pipeline are tar.gz compressed packages. In the build task, you can specify one or more files (folders) to be included in the artifact.
+Чтобы выполнить развертывание, необходимо сначала собрать артефакты. Артефакты в Gitee Pipeline представляют собой сжатые пакеты tar.gz. В задании сборки можно указать один или несколько файлов (папок), которые должны быть включены в артефакт.
 
-In this example, you need to package the target/application.jar and deploy.sh files into the artifact. Therefore, you need to configure the build task as follows:
+В этом примере вам нужно включить в артефакт файлы target/application.jar и deploy.sh. Поэтому необходимо настроить задачу сборки следующим образом:
 
-![Host Deployment - Artifact Configuration](./assets/Host Deployment - Artifact Configuration.png)
+![Развертывание хоста - конфигурация артефактов](./assets/Host Deployment - Artifact Configuration.png)
 
-4, Host deployment configuration
+4, Конфигурация развертывания хоста
 
-![Host Deployment Configuration](./assets/Host_Deployment_Configuration.png)
+![Конфигурация развертывания хоста](./assets/Host_Deployment_Configuration.png)
 
-Deployment script:
+Сценарий развертывания:
 
-Because the actual deployment script has been packaged into the compressed package of the build output, the deployment script can be simply unpacked and executed.
+Поскольку фактический сценарий развертывания был упакован в сжатый пакет результатов сборки, сценарий развертывания можно просто распаковать и выполнить.
 
 ```shll
 mkdir -p /home/admin/application

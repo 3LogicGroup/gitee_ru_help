@@ -1,48 +1,48 @@
 ---
-title: Support for WebHook to Feishu robot
+title: Поддержка вебхуков для роботов Feishu
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 origin-url: https://gitee.ru/help/articles/4297
 ---
 
-Feishu provides the 'Group Robot' feature in internal group chats. By using WebHooks, you can add custom robots to Feishu for automatic notifications.
+Feishu предоставляет функцию "Групповой робот" во внутренних групповых чатах. С помощью вебхуков вы можете добавить пользовательских роботов в Feishu для автоматических уведомлений.
 
-## Add Robot
+## Добавление робота
 
-In Feishu group chat, go to the right side `Settings` -> `Group Robots` -> `Add Robot`, choose `Custom Bot`, set an avatar and name for the robot, click `Add` to get a
+С правой стороны в групповом чате Feishu `Настройки` -> `Групповой робот` -> `Добавить робота`, выберите `Пользовательский робот`, установите аватар и имя для робота, нажмите `Добавить`
 
-> Currently, group chats containing external contacts do not support adding robots.
+> В настоящее время групповые чаты, содержащие внешние контакты, не поддерживают добавление роботов.
 
-![](https://images.gitee.ru/uploads/images/2020/0403/145706_c80c79f8_551147.png "Add Robot")
+![](https://images.gitee.ru/uploads/images/2020/0403/145706_c80c79f8_551147.png "Добавить робота")
 
-![](https://images.gitee.ru/uploads/images/2020/0403/150013_f4fd3975_551147.png "Select Custom Robot")
+![](https://images.gitee.ru/uploads/images/2020/0403/150013_f4fd3975_551147.png "Выбрать пользовательского робота")
 
 ![](https://images.gitee.ru/uploads/images/2020/0403/150042_39cb7cbf_551147.png )
 
 ![](https://images.gitee.ru/uploads/images/2020/0403/150121_63d961c3_551147.png )
 
-Set up robot WebHook
+Настройка вебхука робота
 
-When adding the webhook in the previous step, you will get a webhook request URL like `https://open.feishu.cn/open-apis/bot/hook/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`. Add this URL to Gitee to complete the webhook setup.
+При добавлении вебхука на предыдущем шаге вы получите URL-адрес запроса вебхука, например, https://open.feishu.cn/open-apis/bot/hook/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx. Добавьте этот URL-адрес в Gitee, чтобы завершить настройку вебхука.
 
-On the Gitee repository page, go to "Manage" -> "WebHooks Settings" -> "Add" to add a new WebHook.
+На странице репозитория в Gitee перейдите в "Управление" -> "Настройки вебхуков" -> "Добавить", чтобы добавить новый вебхук.
 
-Fill in the webhook address obtained from the previous section into the URL, select the specific trigger event, activate and add to complete the setup of the webhook.
+Заполните полученный URL-адрес вебхука в поле URL, выберите конкретное событие-триггер, активируйте и добавьте, чтобы завершить настройку вебхука.
 
 ![](webhook-for-feishu-robot.assets/image.png)
 
-## Trigger WebHooks
+## Триггеры вебхуков
 
-By setting up a bot, the following scenarios will trigger WebHook requests to Feishu.
+Cледующие сценарии активируют запросы вебхука к Feishu.
 
-- Push: Repository pushes code, pushes branches, deletes branches
-- Tag push: Create tag, delete tag
-- Issue: Create, close, reopen, delete tasks, or modify task assignees
-- Pull request: Create pull request, update pull request, merge pull request
-- Comment: Comment on repositories, issues, pull requests, commits
+- Push: Репозиторий отправляет код, создает ветки, удаляет ветки
+- Tag Push: Создание тега, удаление тега
+- Issue: Создание, закрытие, повторное открытие, удаление задач или изменение назначенных исполнителей задачи
+- Pull Request: Создание запроса на слияние, обновление запроса на слияние, объединение запроса на слияние
+- Comment: Комментарии к репозиториям, задачам, запросам на слияние, коммитам
 
-## Related Readings
+## Связанные материалы
 
-- [Gitee WebHook supports DingTalk group chat robot](/help/articles/4135)
-- [Gitee WebHook supports WeChat Work](/help/articles/4296)
+- [Поддержка Gitee вебхуков для робота группового чата DingTalk](/help/articles/4135)
+- [Поддержка Gitee вебхуков для WeChat Work](/help/articles/4296)

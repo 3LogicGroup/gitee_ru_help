@@ -1,8 +1,8 @@
 ---
-title: Add WebHook
+title: Добавление вебхуков
 origin-url: https://gitee.ru/help/articles/4184
 ---
 
-- Users can go to "Enterprise Management"->"WebHooks Management"-> Add WebHook
+- Пользователи могут перейти в раздел "Управление предприятием"-> "Управление вебхуками"-> Добавить вебхук
 
-![Image Description](../../../../../assets/image224.png)
+![![Описание изображения](../../../../../assets/image 224.png)

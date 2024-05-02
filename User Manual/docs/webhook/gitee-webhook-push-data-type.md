@@ -1,15 +1,15 @@
 ---
-title: WebHook Push Data Type Explanation
+title: Объяснение типов данных, полученных при отправке вебхука
 origin-url: https://gitee.ru/help/articles/4271
 ---
 
-### The webhook hook carries rich JSON aggregation information in the push data, which can be roughly divided into the following types based on the aggregation unit of information.
+### Вебхук несет в себе ценную информацию в формате JSON в данных об отправке, которые, в зависимости от единицы агрегации информации, можно приблизительно разделить на следующие типы:
 
-**Explanation:**
-**1. The key-value pairs in [] depend on the data situation, and their existence is uncertain.**
-**2, \*user, \*commit, etc. indicate references to the corresponding JSON data aggregation**
-**3. This document is for reference only. Please refer to the actual data received for accuracy.**
-If you find any errors in the documentation, please go to the Gitee feedback center and create an issue.
+**Объяснение:**
+**1. Пары ключ-значение в [] зависят от ситуации с данными, и их наличие неопределено.**
+**2. \*user, \*commit, и т. д. указывают на ссылки на соответствующую агрегацию данных в формате JSON.**
+**3. Этот документ предоставлен исключительно для ознакомления. Для получения точной информации обращайтесь к фактическим данным.**
+Если вы обнаружили ошибки в документации, пожалуйста, перейдите в центр обратной связи Gitee и создайте запрос.
 
 ```bash
 Labels: issue and pull request corresponding labels
@@ -195,9 +195,9 @@ Number of changed files: Number
 }
 ```
 
-### Currently, Gitee supports four types of webhook hooks.
+### В настоящее время Gitee поддерживает четыре типа вебхуков.
 
-#### Issue Hook Data Format
+#### Формат данных хука задачи
 
 ```bash
 {
@@ -226,7 +226,7 @@ enterprise: *enterprise || null # Enterprise information to which the issue belo
 }
 ```
 
-Push / Tag Hook data format
+#### Формат данных хука пуша / тега
 
 ```bash
 {
@@ -257,7 +257,7 @@ enterprise: *enterprise || null       # The enterprise information of the target
 }
 ```
 
-#### Pull Request Hook Data Format
+#### Формат данных хука запроса на слияние
 
 ```bash
 {
@@ -297,7 +297,7 @@ enterprise: *enterprise || null      # Information about the enterprise where th
 }
 ```
 
-#### Note Hook Data Format
+#### Формат данных хука для заметок
 
 ```bash
 {

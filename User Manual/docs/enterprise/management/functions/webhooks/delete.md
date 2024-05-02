@@ -1,7 +1,7 @@
 ---
-title: Delete WebHook
+title: Удаление вебхука
 ---
 
-Click on "Management" in the enterprise navigation menu -> "WebHooks Management", and then click the "Delete" button in the upper right corner of the target WebHook:
+Нажмите на "Управление" в меню навигации компании -> "Управление вебхуками", а затем нажмите кнопку "Удалить" в верхнем правом углу целевого вебхука:
 
-![Image Description](assets/image350.png)
+![Описание изображения](assets/image350.png)

@@ -1,11 +1,11 @@
 ---
-title: Create Standard Project
+title: Создание стандартного проекта
 ---
 
-Click "Projects" in the left navigation menu to enter the project list page, then click the "New Project" button in the upper right corner.
+Нажмите на "Проекты" в навигационном меню слева для перехода на страницу списка проектов. Затем нажмите на кнопку "Новый проект" в правом верхнем углу.
 
-![Image Description](../docs/assets/image556-1.png)
+![Описание изображения](../docs/assets/image556-1.png)
 
-Select 'Standard Project' in the popup 'Select Project Type' window.
+Выберите "Стандартный проект" во всплывающем окне "Выберите тип проекта".
 
-![Image Description](../docs/assets/image560.png)
+![Описание изображения](../docs/assets/image560.png)

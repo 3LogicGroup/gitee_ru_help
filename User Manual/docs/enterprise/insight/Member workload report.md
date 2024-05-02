@@ -1,7 +1,7 @@
 ---
-title: Member workload report
-description: Member Load Report
+title: Отчет о рабочей нагрузке участников
+description: Отчет о рабочей нагрузке участников
 slug: enterprise/insight/member-load-report
 ---
-Understand the workload of each member in the iteration in the Member Workload Report and optimize the work arrangement reasonably.
-![Image Description](./assets/member_load_report.png)
+Узнайте рабочую нагрузке каждого участника итерации из отчета о рабочей нагрузке участников и оптимизируйте организацию работы.
+![Описание изображения](./assets/member_load_report.png)

@@ -1,33 +1,33 @@
 ---
-title: Introduction to Repo Tools
+title: Знакомство с инструментами Repo
 origin-url: https://gitee.ru/help/articles/4316
 ---
 
-### **Introduction to the Usage Process**
+### **Введение в процесс использования**
 
-Note: The content with {*} in the following instructions represents variables
+Примечание: Содержимое с {*} в следующих инструкциях представляет переменные
 
-1. Configure manifest.xml file
-2. Download the repo bootstrap command
-3. repo init initialization
-4. repo sync repository synchronization
-5. repo start {BRANCH} [project1, project2] for batch branch switching to start development...
-6. repo stage/repo forall -c git add . or submit it manually
-7. repo config repo.token {ACCESS_TOKEN} configures the Gitee personal API token
-8. repo config repo.pullrequest {True/False} configures whether to enable the feature of submitting a PR to the specified branch after a push.
-9. repo push -p --br={BRANCH} --d={DEST_BRANCH} --new_branch uses the specified local branch to push and associate with the remote branch, and after successful push, submit in bulk to the specified branch
-10. repo sync or repo forall -c git pull to synchronize code in batches
+1. Настройте файл manifest.xml
+2. Загрузите команду начальной загрузки репозитория
+3. Инициализация repo init
+4. Синхронизация репозитория repo sync
+5. Запустите репозиторий {ВЕТКА} [project1, project2] для пакетного переключения ветки, чтобы начать разработку...
+6. repo stage/repo forall -c git add .  или отправьте его вручную
+7. Конфигурация репозитория repo.token {ACCESS_TOKEN} настраивает личный токен API Gitee
+8. Конфигурация репозитория repo.pullrequest {True/False} определяет, следует ли включать функцию отправки запроса на слияние в указанную ветку после нажатия.
+9. Отправка репозитория -p --br={BRANCH} --d={DEST_BRANCH} --new_branch использует указанную локальную ветвь для отправки и связывания с удаленной ветвью, а после успешной отправки отправляет массово в указанную ветвь
+10. repo sync или repo forall -c git pull для пакетной синхронизации кода
 
-### **Manifest Configuration Example**
+### **Пример конфигурации манифеста**
 
-Create a default.xml file in the repository named 'manifest' as the basis for repo initialization
-The following is the repo init initialization command, which needs to use the -u parameter to specify the git repository for the manifest.
+Создайте файл default.xml в репозитории с именем "manifest" в качестве основы для инициализации репозитория
+Ниже приведена команда инициализации repo init, которая должна использовать параметр -u для указания репозитория git для манифеста.
 
 ```bash
 repo init -u git@gitee.ru:{namespace}/manifest.git
 ```
 
-default.xml File Case
+default.xml Подборка файлов
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -44,11 +44,11 @@ default.xml File Case
 </manifest>
 ```
 
-1. The revision attribute of default should be noted as the target branch for subsequent PR submissions
-2. Different projects can also have different revisions, which means the target branch for submitting PR can also be different. The priority of revisions is from low to high.
-3. fetch currently only supports gitee's ssh
+1. Атрибут revision по умолчанию должен быть указан как целевая ветка для последующих отправок запросов на слияние
+2. Разные проекты также могут иметь разные редакции, что означает, что целевые ветки для отправки запроса на слияние также могут быть разными. Приоритет изменений - от низкого до высокого.
+3. Команда fetch в настоящее время поддерживает только ssh gitee
 
-### **1. Repo Bootstrap Installation**
+### **1. Установка Repo Bootstrap**
 
 ```bash
 # Python3 version backward compatible
@@ -62,7 +62,7 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple requests
 https://gitee.ru/mirrors/pyenv
 ```
 
-### **2. Repo Initialization and Initial Repository Sync**
+### **2. Инициализация репозитория и синхронизация начального репозитория**
 
 ```bash
 mkdir your_project && cd your_project
@@ -70,7 +70,7 @@ repo init -u git@gitee.ru:{namespace}/manifest.git
 repo sync
 ```
 
-### **3. Repo + Gitee Local Development Process**
+### **3. Repo + Процесс локальной разработки Gitee**
 
 ```bash
 repo start {branch} --all # Switch to the development branch. When specifying certain repositories, it will trigger the pre-fork of the repository.
@@ -88,20 +88,20 @@ repo push --br={BRANCH} --d={DEST_BRANCH}  # Push and create a PR and review. Af
 repo gitee-pr --br={BRANCH} # Get the list of PRs for the specified branch after project push
 ```
 
-Introduction to repo push parameters
+Знакомство с параметрами отправки repo
 
-![Image Description](./assets/191114_41c2e24f_1332572.webp)
+![Описание изображения](./assets/191114_41c2e24f_1332572.webp)
 
-1. It is worth noting the --dest_branch and --br parameters. If the corresponding branches are not specified, the operations will be based on the default branch. --br will use the current branch for submission, and --dest_branch will use the default revision in manifest.xml as the default target branch.
-2. When pushing to the repository with repo push, it will by default push to the repository under the user's personal namespace associated with the token. If the branch was not forked beforehand, then if the repo push fails, it will fork the upstream repository again using the user associated with the token, and then push again.
-3. The repo push command will by default push the repository to the user's namespace using the ssh method associated with the token. If you want to change it to https, you can configure the repo.pushurl to the user's namespace address such as [https://gitee.ru/xxxx].
+1. Следуетт отметить параметры --dest_branch и --br. Если соответствующие ветки не указаны, операции будут проводиться на основе ветки по умолчанию. --br будет использовать для отправки текущую ветку, а --dest_branch будет использовать версию по умолчанию в manifest.xml в качестве целевой ветки по умолчанию.
+2. При отправке в репозиторий с помощью repo push по умолчанию он будет отправляться в репозиторий в личном пространстве имен пользователя, связанном с токеном. Если ветка не была разветвлена заранее, то в случае сбоя отправки репозитория она снова разветвит вышестоящий репозиторий, используя пользователя, связанного с токеном, а затем снова отправит запрос.
+3. Команда repo push по умолчанию отправит репозиторий в пространство имен пользователя, используя связанный с токеном метод ssh. Если вы хотите изменить его на https, вы можете настроить repo.pushurl на адрес пространства имен пользователя, как, например, [https://gitee.ru/xxxx].
 
-repo result details
+подробные сведения о результатах repo 
 
-![Image Description](./assets/153908_dcd3f625_1332572.webp)
+![Описание изображения](./assets/153908_dcd3f625_1332572.webp)
 
-Introduction to gitee-pr parameters in the repository
+Знакомство с параметрами gitee-pr в репозитории
 
-![Image Description](./assets/230859_93627600_1332572.webp)
+![Описание изображения](./assets/230859_93627600_1332572.webp)
 
-return the specified branch that has already been submitted on the Gitee platform under the --br={BRANCH} parameter
+Возвращает указанную ветку, которая уже была отправлена на платформу Gitee с параметром --br={BRANCH}

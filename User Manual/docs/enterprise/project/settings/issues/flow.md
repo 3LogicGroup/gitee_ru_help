@@ -1,13 +1,13 @@
 ---
-title: Workflow Settings
+title: Настройка рабочего процесса
 ---
 
-Click on 'Settings' in the Enterprise Navigation Menu, then click on 'Work Item Settings' in the Enterprise Management Menu:
+Нажмите на "Настройки" в навигационном меню предприятия, затем нажмите на "Настройки рабочих элементов" в меню управления предприятием:
 
-Click on the work item type attribute under the "Work Item Settings" group to enter the settings page, then click on the "Configure Type" link.
+Нажмите на атрибуты рабочего элемента под группой "Настройки рабочего элемента" для перехода на страницу настройки. Затем нажмите на ссылку "Настроить тип".
 
-![Image Description](assets/image575.png)
+![Описание изображения](assets/image575.png)
 
-Click 'Workflow Settings', and then you can set the transition order of work item types in this page.
+Нажмите на "Настройка рабочего процесса". На этой странице вы можете установить порядок перехода типов рабочих элементов.
 
-![Image Description](assets/image578.png)
+![Описание изображения](assets/image578.png)

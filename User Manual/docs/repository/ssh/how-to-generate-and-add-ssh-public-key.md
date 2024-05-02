@@ -1,5 +1,5 @@
 ---
-title: Generate and Add SSH Public Key
+title: Сгенерируйте и добавьте открытый SSH-ключ
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
@@ -7,15 +7,15 @@ slug: /repository/ssh-key/generate-and-add-ssh-public-key
 origin-url: https://gitee.ru/help/articles/4181
 ---
 
-Gitee provides Git services based on the SSH protocol. Before accessing the repository using the SSH protocol, you need to configure the SSH public key of the repository.
+Gitee предоставляет услуги Git на основе протокола SSH. Прежде чем получить доступ к репозиторию по протоколу SSH, необходимо настроить открытый ключ SSH репозитория.
 
-> Account public key, please go to [Set Account SSH Public Key](/base/account/Set-SSH-Public-Key)
+> Открытый ключ учетной записи, перейдите по ссылке [Установка открытого SSH-ключа учетной записи](/base/account/Set-SSH-Public-Key)
 
-## Generate SSH Public Key
+## Генерация открытого SSH-ключа
 
-> Windows users are recommended to use **Windows PowerShell** or **Git Bash** as there is no `cat` and `ls` commands in the **Command Prompt**.
+> Пользователям Windows рекомендуется использовать **Windows PowerShell** или **Git Bash**, так как в **командной строке** нет команд `cat` и `ls`.
 
-1. Generate SSH Key using the command `ssh-keygen`:
+1. Сгенерируйте SSH-ключ с помощью команды `ssh-keygen`:
 
 ```bash
 ssh-keygen -t ed25519 -C "Gitee SSH Key"
@@ -24,7 +24,7 @@ ssh-keygen -t ed25519 -C "Gitee SSH Key"
 * `-t` key type
 * `-C` Comment
 
-Output, such as:
+Выходные данные, например:
 
 ```bash
 Generating public/private ed25519 key pair.
@@ -49,52 +49,52 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
-* Press **Enter** three times in between
+* Три раза нажмите **Enter** между ними.
 
-2. View the generated SSH public key and private key:
+2. Просмотрите сгенерированные открытый и закрытый SSH-ключи:
 
 ```bash
 ls ~/.ssh/
 ```
 
-Output:
+Выходные данные:
 
 ```bash
 id_ed25519  id_ed25519.pub
 ```
 
-* Private key file `id_ed25519`
-Public key file `id_ed25519.pub`
+* Файл закрытого ключа `id_ed25519`.
+Файл открытого ключа `id_ed25519.pub`.
 
-3. Read the public key file `~/.ssh/id_ed25519.pub`:
+3. Прочитайте файл открытого ключа `~/.ssh/id_ed25519.pub`:
 
 ```bash
 cat ~/.ssh/id_ed25519.pub
 ```
 
-Output, such as:
+Выходные данные, например:
 
 ```bash
 ssh-ed25519 AAAA***5B Gitee SSH Key
 ```
 
-Copy the public key output from the terminal.
+Скопируйте вывод открытого ключа из терминала.
 
-## Add Deployment Public Key
+## Добавить открытый ключ развертывания
 
-Copy the generated SSH key and add it to the repository through the repository homepage 'Manage' -> 'Deploy Key Management' -> 'Add Deploy Key'.
+Скопируйте сгенерированный SSH-ключ и добавьте его в репозиторий через главную страницу репозитория 'Manage' -> 'Deploy Key Management' -> 'Add Deploy Key'.
 
-![Add Deployment Key](./assets/deploy_keys_create.png "Add Deployment Key")
+![Добавить ключ развертывания](./assets/deploy_keys_create.png "Add Deployment Key")
 
-When testing with 'ssh -T', the output is 'Anonymous':
+При тестировании с помощью 'ssh -T', на выходе получается 'Anonymous':
 
 ```bash
 $ ssh -T git@gitee.ru
 Hi Anonymous! You've successfully authenticated, but gitee.ru does not provide shell access.
 ```
 
-After successful addition, you can use the SSH protocol to **pull** the repository.
+После успешного добавления вы можете использовать протокол SSH для **извлечения** репозитория.
 
-## Repository public key and deployable public key
+## Открытый ключ репозитория и развертываемый открытый ключ
 
-In order to enable users to use a set of deployable public keys in multiple project repositories, avoiding the cumbersome process of repeated deployment and management, Gitee has launched the "Deployable Public Key" feature, which supports using the deployment public key of another repository space under the current account name/participating repository space in the same repository space to achieve public key sharing.
+Для того чтобы пользователи могли использовать набор развертываемых открытых ключей в нескольких репозиториях проекта, избегая громоздкого процесса повторного развертывания и управления, Gitee запустила функцию "Развертываемый открытый ключ", поддерживающую использование развертываемого открытого ключа другого пространства репозитория под именем текущей учетной записи/участника пространства репозитория в том же пространстве репозитория для обеспечения совместного использования открытых ключей.

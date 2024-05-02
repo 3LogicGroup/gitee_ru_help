@@ -4,128 +4,128 @@ title: Gitee Pages
 origin-url: https://gitee.ru/help/articles/4136
 ---
 
-### Description
+### Описание
 
-Gitee Pages is a free static webpage hosting service that allows you to host static webpages such as blogs and project websites.
+Gitee Pages — это бесплатная служба хостинга статических веб-страниц, которая позволяет размещать статические веб-страницы, такие как блоги и веб-сайты проектов.
 
-Currently Gitee Pages supports Jekyll, Hugo, Hexo to compile static resources.
+В настоящее время Gitee Pages поддерживает Jekyll, Hugo, Hexo для компиляции статических ресурсов.
 
-### Criteria for compiling Jekyll, Hugo, and Hexo
+### Критерии составления Jekyll, Hugo, и Hexo
 
-1. Compile Hugo based on: When the repository compilation directory contains `config.toml|json|yaml` files and the `content` directory, `hugo` will be used to generate static files.
-2. Hexo is compiled based on the presence of package.json, _config.yml files, and the scaffolds directory in the compilation directory of the repository. Since each deployment requires cloning the code, executing npm install, and compiling, the deployment time is relatively longer compared to Hugo and Jekyll.
-3. When the above conditions 1 and 2 are not met, use Jekyll to compile.
+1. Скомпилируйте Hugo: Если каталог компиляции репозитория содержит файлы `config.toml|json|yaml` и каталог `content`, `hugo` будет использоваться для создания статических файлов.
+2. Hexo компилируется на основе наличия файлов package.json, _config.yml и каталога scaffolds в каталоге компиляции репозитория. Поскольку каждое развертывание требует клонирования кода, выполнения установки npm и компиляции, время развертывания больше чем у Hugo и Jekyll.
+3. Если вышеуказанные условия 1 и 2 не выполнены, используйте для компиляции Jekyll.
 
-Frequently asked questions
+Часто задаваемые вопросы
 
-1. How to create a homepage with an access address without a secondary directory, like ipvb.gitee.io?
+1. Как создать домашнюю страницу с адресом доступа без дополнительного каталога, например ipvb.gitee.io?
 
-Q: If you want the homepage of your pages to be accessed without a subdirectory, such as ipvb.gitee.io, **you need to create a repository with the same name as your personalized address**. For example, this user <https://gitee.ru/ipvb> wants to create their own site but does not want to access it in a subdirectory. They want to access it directly with `ipvb.gitee.io`, so they can create a repository named `ipvb` <https://gitee.ru/ipvb/ipvb> After deployment, it can be accessed using <https://ipvb.gitee.io>.
+Ответ: Если вы хотите, чтобы домашняя страница ваших страниц была доступна без подкаталога, например ipvb.gitee.io, **вам необходимо создать репозиторий с тем же именем, что и ваш персональный адрес**. Например, этот пользователь <https://gitee.ru/ipvb> хочет создать свой сайт, но не хочет иметь доступ к нему в подкаталоге. Он хочет получить к нему доступ напрямую с помощью `ipvb.gitee.io`, чтобы создать репозиторий с именем `ipvb` <https://gitee.ru/ipvb/ipvb>. После развертывания к нему можно будет получить доступ с помощью <https:/ /ipvb.gitee.io>.
 
-2. When the project to be deployed does not match the personal address, there may be resource access 404 after the deployment is completed.
+2. Если развертываемый проект не соответствует личному адресу, после завершения развертывания при попытке получить доступ к ресурсу может возникнуть ошибка 404.
 
-Answer: When the repository to be deployed does not match your personalized address, such as: <https://gitee.ru/ipvb/blog>, the generated pages URL is <https://ipvb.gitee.io/blog>, and the requested resource returns a 404 error, such as <https://ipvb.gitee.io/style.css>. This is due to a problem with the relative path in the corresponding configuration file, and the generated resource URL should be <https://ipvb.gitee.io/blog/style.css>. For different static resource generators, the configurations are as follows:
-     - Modify the baseURL in the Hugo configuration file `config.toml` as follows:
+Ответ: Если развертываемый репозиторий не соответствует вашему персонализированному адресу, например: <https://gitee.ru/ipvb/blog>, URL сгенерированных страниц будет <https://ipvb.gitee.io/blog>. , а запрошенный ресурс возвращает ошибку 404, например <https://ipvb.gitee.io/style.css>, то это связано с проблемой относительного пути в соответствующем файле конфигурации, а URL-адрес созданного ресурса должен быть <https://ipvb.gitee.io/blog/style.css>. Для различных генераторов статических ресурсов конфигурации следующие:
+     - Измените baseURL в файле конфигурации Hugo `config.toml` следующим образом.:
 
        ```toml
        baseURL = "https://ipvb.gitee.io/blog"
        ```
 
-     - Modify the Hexo configuration file `_config.yml` as follows for `url` and `root`:
+     - Измените файл настроек Hexo `_config.yml` для `url` и `root` следующим образом:
 
        ```toml
        url: https://ipvb.gitee.io/blog
        root: /blog
        ```
 
-     - Modify the Jekyll configuration file `_config.yml` as follows for `baseurl`:
+     - Измените файл настроек Jekyll `_config.yml` для `baseurl` следующим образом:
 
        ```toml
        baseurl: "/blog" # the subpath of your site, e.g. /blog
        ```
 
-3. Jekyll cannot access folders or files starting with an underscore, for example: _layouts
-Answer: You need to create _config.yml in the root directory of the repository and write: include: [_layouts]
+3. Jekyll не может получить доступ к папкам или файлам, начинающимся с подчеркивания, например: _layouts
+Ответ: Вам нужно создать _config.yml в корневом каталоге репозитория и написать:include:[_layouts]
 
-4. How to customize 404?
-   Answer: Create a new file named 404.html in the root directory of the repository.
+4. Как настроить 404?
+Ответ: Создайте новый файл с именем 404.html в корневом каталоге репозитория.
 
-5. How to not trigger Jekyll compilation.
+5. Как не запускать компиляцию Jekyll.
 
-A: Create a .nojekyll file in the root directory of the repository.
+Ответ: Создайте файл .nojekyll в корневом каталоге репозитория.
 
-### 1. Precautions
+### 1. Меры предосторожности
 
-1. The repository must have an index.html in order to be accessed properly
+1. Для правильного доступа к репозиторию должен быть index.html.
 
-2. The style of static web pages can be self-written or modified from some static templates. The Pages service itself does not provide any form of templates, but we will gradually add examples for reference.
+2. Стиль статических веб-страниц может быть написан самостоятельно или изменен на основе некоторых статических шаблонов. Сам сервис Pages не предоставляет никаких шаблонов, но мы постепенно будем добавлять примеры для справки.
 
-### 2. A newbie's journey of building Pages
+### 2. Создание страниц для новичков
 
-A. Create a new repository test_pages
+**А. Создайте новый репозиторий test_pages.**
 
-![Image Description](https://static.oschina.net/uploads/img/201806/26173338_Pmcg.png)
+[Описание изображения](https://static.oschina.net/uploads/img/201806/26173338_Pmcg.png)
 
-Click to complete the repository creation
+Нажмите, чтобы завершить создание репозитория
 
-**B. Add the file `index.html` (note that the name should be index.html!)**
+**Б. Добавьте файл index.html (обратите внимание, имя должно быть index.html!)**
 
-Click to create a new file
+Нажмите, чтобы создать новый файл
 
-![Image Description](https://static.oschina.net/uploads/img/201806/26172523_5GI8.png)
+![Описание изображения](https://static.oschina.net/uploads/img/201806/26172523_5GI8.png)
 
-Enter the filename as `index.html` and the content is a simple `html`.
+Введите имя файла «index.html», а содержимое — простой «html».
 
-![Image Description](https://static.oschina.net/uploads/img/201806/26173106_Jn2d.png)
+![Описание изображения](https://static.oschina.net/uploads/img/201806/26173106_Jn2d.png)
 
-Click Submit to submit the file to the repository
+Нажмите «Отправить», чтобы отправить файл в репозиторий.
 
-**C. Select pages service**
+**В. Сервис выбора страниц**
 
-![Image Description](https://static.oschina.net/uploads/img/201806/26173423_zzeF.png)
+![Описание изображения](https://static.oschina.net/uploads/img/201806/26173423_zzeF.png)
 
-**D. Select the branch to be deployed, here choose Master to start the service.**
+**Г. Выберите ветку для развертывания, затем выберите «Мастер», чтобы запустить службу.**
 
-![Image Description](https://static.oschina.net/uploads/img/201806/26173508_e3TE.png)
+![Описание изображения](https://static.oschina.net/uploads/img/201806/26173508_e3TE.png)
 
-**E. Visit the generated website address to view the static pages you deployed!**
+**Д. Посетите сгенерированный адрес веб-сайта, чтобы просмотреть развернутые вами статические страницы!**
 
-![Image Description](https://static.oschina.net/uploads/img/201806/26173825_h9D1.png)
-![Image Description](https://static.oschina.net/uploads/img/201806/26173847_USPU.png)
+![Описание изображения](https://static.oschina.net/uploads/img/201806/26173825_h9D1.png)
+![Описание изображения](https://static.oschina.net/uploads/img/201806/26173847_USPU.png)
 
-### 3. How to deploy an existing Pages repository to Gitee Pages
+### 3. Как развернуть существующий репозиторий Pages в Gitee Pages
 
-Using the `jQuery-File-Upload` repository as an example, the repository address is: <https://github.com/blueimp/jQuery-File-Upload>
+Если использовать в качестве примера репозиторий jQuery-File-Upload, адрес репозитория: <https://github.com/blueimp/jQuery-File-Upload>
 
-Its Pages address on Github is: <https://blueimp.github.io/jQuery-File-Upload/>
+Адрес его страницы на Github: <https://blueimp.github.io/jQuery-File-Upload/>
 
-If you want to move it to Gitee Pages, just log in to your Gitee account, click the '+' in the upper right corner, and select 'New Repository'.
+Если вы хотите переместить его на Gitee Pages, просто войдите в свою учетную запись Gitee, нажмите «+» в правом верхнем углу и выберите «Новый репозиторий».
 
-![Image Description](https://static.oschina.net/uploads/img/201806/26174500_j9HQ.png)
+![Описание изображения](https://static.oschina.net/uploads/img/201806/26174500_j9HQ.png)
 
-![Image Description](https://static.oschina.net/uploads/img/201806/26174556_lc6V.png)
+![Описание изображения](https://static.oschina.net/uploads/img/201806/26174556_lc6V.png)
 
-![Image Description](https://static.oschina.net/uploads/img/201806/26174630_Kpri.png)
+![Описание изображения](https://static.oschina.net/uploads/img/201806/26174630_Kpri.png)
 
-Then click create, the repository will be automatically imported in the background. After successful import, click on the menu bar's service dropdown `Gitee Pages`
+Затем нажмите «Создать», репозиторий будет автоматически импортирован в фоновом режиме. После успешного импорта щелкните раскрывающийся список службы в строке меню «Gitee Pages».
 
-![Image Description](https://static.oschina.net/uploads/img/201806/26175015_PomW.png)
+![Описание изображения](https://static.oschina.net/uploads/img/201806/26175015_PomW.png)
 
-![Image Description](https://static.oschina.net/uploads/img/201806/26175207_KKZ0.png)
+![Описание изображения](https://static.oschina.net/uploads/img/201806/26175207_KKZ0.png)
 
-Here we assume that the `Pages` service branch is the default branch of the repository, but you have also selected the branch where your static pages are located. For example, the static pages branch of the `jQuery-File-Upload` repository is `gh-pages`. Select `gh-pages` and click on start service.
+Здесь мы предполагаем, что ветка службы «Pages» является веткой репозитория по умолчанию, но вы также выбрали ветку, в которой расположены ваши статические страницы. Например, ветка статических страниц репозитория jQuery-File-Upload — это gh-pages. Выберите «gh-pages» и нажмите «Запустить службу».
 
-![Image Description](https://static.oschina.net/uploads/img/201806/26175333_xxzm.png)
-At this point, the static webpage has been successfully deployed. Access the provided address at https://frech.gitee.io/jquery-file-upload to view the static website of the 'jQuery-File-Upload' repository.
+![Описание изображения](https://static.oschina.net/uploads/img/201806/26175333_xxzm.png)
+На этом этапе статическая веб-страница успешно развернута. Откройте предоставленный адрес https://frech.gitee.io/jquery-file-upload, чтобы просмотреть статический веб-сайт репозитория jQuery-File-Upload.
 
-![Image Description](https://static.oschina.net/uploads/img/201806/26175421_ikZP.png)
+![Описание изображения](https://static.oschina.net/uploads/img/201806/26175421_ikZP.png)
 
-### 4. Pages Advanced, Use Jekyll, Hugo, Hexo to Generate Your Own Static Web Pages
+### 4. Pages Advanced: используйте Jekyll, Hugo, Hexo для создания собственных статических веб-страниц.
 
-What are Jekyll, Hugo, and Hexo?
+Что такое Jekyll, Hugo и Hexo?
 
-Jekyll, Hugo, and Hexo are simple blog-like static site generators. They have a template directory that contains documents in the original text format, which can be transformed into HTML files using the template engine.
+Jekyll, Hugo и Hexo — это простые генераторы статических сайтов, похожие на блоги. У них есть каталог шаблонов, содержащий документы в исходном текстовом формате, которые можно преобразовать в файлы HTML с помощью механизма шаблонов.
 
-* Jekyll Documentation: <https://www.jekyll.com.cn/docs/home/>
-* Hugo Documentation: <https://gohugo.io/documentation/>
-* Hexo User Documentation: <https://hexo.io/docs/>
+* Документация Jekyll: <https://www.jekyll.com.cn/docs/home/>
+* Документация Hugo: <https://gohugo.io/documentation/>
+* Документация Hexo: <https://hexo.io/docs/>

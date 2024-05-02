@@ -1,44 +1,44 @@
 ---
-title: Git Read-only File Support
+title: Поддержка файлов Git "только для чтения"
 origin-url: https://gitee.ru/help/articles/4256
 ---
 
-As an application project, there are usually some files to describe the configuration information in the production environment, such as service connection information and environment configuration information. However, during the local development process, these files need to be adjusted according to the local service environment. If these modifications are accidentally committed, it may directly cause the application in the production environment to fail to run properly.
+Обычно в проекте приложения  есть несколько файлов, описывающих информацию о конфигурации в рабочей среде, как, например, информация о подключении к службе и информация о конфигурации среды. Однако в процессе локальной разработки эти файлы необходимо настроить в соответствии с локальной средой службы. Если эти изменения будут внесены случайно, это может непосредственно привести к сбою в работе приложения в рабочей среде.
 
-So in SVN, there is a very useful feature that allows configuring certain files as read-only, not allowing modifications to be submitted.
+Итак, в SVN есть очень полезная функция, позволяющая настроить определенные файлы как доступные только для чтения, не позволяя отправлять изменения.
 
-Git itself does not have this feature. Mainstream Git platforms generally provide read-only branch functionality, but cannot implement read-only restrictions on individual files or folders.
+Сам Git не имеет этой функции. Основные платформы Git обычно предоставляют функциональность ветвей только для чтения, но не могут реализовать ограничения только для чтения для отдельных файлов или папок.
 
-The usage method is as follows:
+Метод использования следующий:
 
-1. Go to the repository page, right-click on the file or folder that you want to set as read-only, select 'Mark as read-only' (only available for repository administrators)
+1. Перейдите на страницу репозитория, щелкните правой кнопкой мыши по файлу или папке, которые вы хотите установить как доступные только для чтения, выберите "Пометить как доступные только для чтения" (доступно только для администраторов репозитория).
 
-![Image Description](../../../../../assets/image141.png)
+![Описание изображения](../../../../../assets/image141.png)
  
-2. Enter the repository settings interface to view and manage all read-only settings of the repository.
+2. Войдите в интерфейс настроек репозитория, чтобы просматривать все настройки репозитория, доступные только для чтения, и управлять ими.
 
-![Image Description](../../../../../assets/image142.png)
+![Описание изображения](../../../../../assets/image142.png)
  
-3. If there are modifications to read-only files when pushing code, an error will occur
+3. Если при отправке кода в доступные только для чтения файлы будут внесены изменения, возникнет ошибка
 
-- Code submission error:
+- Ошибка отправки кода:
 
-![Image Description](./assets/172009_01d60e4e_4764813.webp)
+![Описание изображения](./assets/172009_01d60e4e_4764813.webp)
 
-- PR merge error:
+- Ошибка выполнения запроса на слияние:
 
-4. There are three ways to solve the read-only error.
+4. Существует три способа устранения ошибки, "только для чтения".
 
-Change the content of the read-only file back to its original state
+Верните содержимое файла, доступного только для чтения, в исходное состояние
 
-> Modify the content of the corresponding read-only file to be consistent with the online version to push normally.
+> Измените содержимое соответствующего файла, доступного только для чтения, чтобы оно соответствовало онлайн-версии, подлежащей обычной отправке.
 
 - `git reset --hard <tree-ish> command`
 
-> Use the command `git reset --hard <tree-ish>` to discard modifications to read-only files and then push normally.
+> Используйте команду `git reset --hard <tree-ish>`, чтобы отменить изменения в файлах, доступных только для чтения, а затем отправьте их обычным способом.
 
-Cancel the corresponding file read-only flag (only repository administrators can perform this operation)
+Отмените соответствующий флажок только для чтения файлов (эту операцию имеют право выполнять только администраторы репозитория)
 
-> Users with repository management permissions can go to the repository directory or repository settings page to remove the corresponding file's read-only flag.
+> Пользователи с разрешениями на управление репозиторием могут перейти в каталог репозитория или на страницу настроек репозитория, чтобы снять флажок "только для чтения" с соответствующего файла.
 
-This feature is currently available to paid Enterprise Edition users.
+В настоящее время эта функция доступна для пользователей платной версии Enterprise Edition.

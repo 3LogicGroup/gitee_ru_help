@@ -1,11 +1,11 @@
 ---
-title: Iteration Overview
+title: Обзор итерации
 ---
 
-Click on 'Iteration' in the navigation menu of the Agile project, and then click on the iteration name to enter the page of that iteration.
+Нажмите на "Итерации" в навигационном меню проекта Agile, затем нажмите на названии итерации для перехода на страницу выбранной итерации.
 
-![Image Description](../docs/assets/image588.png)
+![Описание изображения](../docs/assets/image588.png)
 
-Click the 'Overview' button to enter the overview page of this iteration.
+Для перехода на страницу обзора этой итерации нажмите на кнопку "Обзор".
 
-![Image Description](../docs/assets/image589.png)
+![Описание изображения](../docs/assets/image589.png)

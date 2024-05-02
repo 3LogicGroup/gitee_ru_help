@@ -1,7 +1,7 @@
 ---
-title: How to view distributions
+title: Как просматривать дистрибутивы
 ---
 
-Users can go to "Repository Details"->"Code", click on "x releases" to enter the page and view the releases.
+Для перехода на страницу и просмотра релизов пользователи могут перейти в раздел "Сведения о репозитории"-> "Код", нажать на "x релизов".
 
-![Image Description](../../../../../assets/image145.png)
+![Описание изображения](../../../../../assets/image145.png)

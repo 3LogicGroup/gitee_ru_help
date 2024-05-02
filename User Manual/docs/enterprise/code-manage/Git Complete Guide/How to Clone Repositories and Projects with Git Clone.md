@@ -1,26 +1,26 @@
 ---
-title: How to clone a repository/project using git
+title: Как клонировать репозиторий/проект с использованием git
 origin-url: https://gitee.ru/help/articles/4111
 ---
 
-In the previous section, we introduced that Git supports multiple data transfer protocols, including `git://` protocol, `http(s)://` and `user@server:/path.git` SSH transfer protocol. We can clone projects/repositories using these three protocols.
+В предыдущем разделе мы узнали, что Git поддерживает несколько протоколов передачи данных, включая протокол `git://`, протокол `http(s)://` и протокол передачи данных SSH `user@server:/path.git`. Мы можем клонировать проекты/репозитории, используя эти три протокола.
 
-Next, we will take the repository `git@git.oschina.net:zxzllyj/sample-project.git` as an example to clone the project/repository.
+Затем возьмем репозиторий `git@git.oschina.net:zxzllyj/sample-project.git` в качестве примера для клонирования проекта/репозитория.
 
-### **Clone via HTTPS Protocol**
+### **Клонирование по протоколу HTTPS**
 
 ```bash
 git clone https://gitee.ru/zxzllyj/sample-project.git
 ```
 
-### **Clone using SSH Protocol**
+### **Клонирование по протоколу SSH**
 
 ```bash
 git clone git@gitee.ru:zxzllyj/sample-project.git
 ```
 
-Take the repository `git@gitee.ru:zxzllyj/sample-project.git` as an example (Note: ssh address is used here because the demo machine has already configured ssh public key, so ssh address can be used. If you haven't configured the public key, please use the https address)
+Возьмем в качестве примера репозиторий "git@gitee.ru:zxzllyj/sample-project.git" (Примечание: здесь используется ssh-адрес, потому что демонстрационный компьютер уже настроил открытый ssh-ключ, поэтому можно использовать ssh-адрес. Если вы не настроили открытый ключ, используйте https-адрес)
 
-![Image Description](./assets/10160653_BHzv.gif)
+![Описание изображения](./assets/10160653_BHzv.gif)
 
-Note: Although the method in the above diagram pulls the complete repository, it will only display the default branch. If you need to go directly to a specific branch, you can append the branch name after the repository URL.
+Примечание: Хотя метод на вышеприведенной диаграмме извлекает весь репозиторий, он отобразит только ветку по умолчанию. Если вам нужно перейти непосредственно к определенной ветке, вы можете добавить название ветки после URL-адреса репозитория.

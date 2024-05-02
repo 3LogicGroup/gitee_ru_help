@@ -1,19 +1,19 @@
 ---
-title: Resolve Code Conflicts Online
+title: Устранение  конфликтов кода в режиме онлайн
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 origin-url: https://gitee.ru/help/articles/4305
 ---
 
-### Feature Introduction
+### Представление функций
 
-When encountering code conflicts in the process of using Pull Request, it is often necessary to retrieve the code locally, handle the code conflicts through 'git merge', and then push it back to the repository.
+При возникновении конфликтов кода в процессе использования запроса на слияние часто бывает необходимо извлечь код локально, устранить конфликты кода с помощью команды "git merge", а затем отправить его обратно в репозиторий.
 
-Gitee provides a solution to resolve conflicts online using the WebIDE, allowing conflict resolution to be completed on the webpage without the need for a client operation.
+Gitee предоставляет решение для устранения конфликтов кода в режиме онлайн с использованием веб-сайта, позволяющее завершить Устранение  конфликтов на веб-странице без необходимости выполнения клиентской операции.
 
-### Resolve conflicts online through WebIDE
+### Устранение  конфликтов в режиме онлайн с помощью WebIDE
 
-1. On the PR page where code conflicts occur, click 'Try to resolve conflicts through WebIDE' to enter WebIDE.
-2. Select the corresponding conflicting code file, find the conflicting code segment, and select the appropriate code change and accept it.
-3. 'Stash' the modified files, then click 'Commit' to submit the conflict resolved code to the PR source branch, and go back to the Pull Request.
+1. На странице запроса на слияние, где возникают конфликты кода, нажмите "Попытаться устранить конфликты через WebIDE", чтобы войти в WebIDE.
+2. Выберите соответствующий файл конфликтующего кода, найдите конфликтующий сегмент кода, выберите соответствующее изменение кода и примите его.
+3. "Отложите" измененные файлы, затем нажмите "Коммит", чтобы отправить код с устраненным конфликтом в исходную ветку запроса на слияние, затем вернитесь к запросу на слияние.

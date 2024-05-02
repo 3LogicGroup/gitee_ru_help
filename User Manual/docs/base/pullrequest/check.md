@@ -1,19 +1,21 @@
 ---
-title: PullRequest code review function
+
+title: Функция проверки кода Запроса на слияние 
 authors:
-  - name: No Mo
-    url: https://gitee.ru/normalcoder
+- name: No Mo  
+url: https://gitee.ru/normalcoder 
 origin-url: https://gitee.ru/help/articles/4306
+
 ---
 
-The Pull Request Reviewed feature can save the progress of reviewing Pull Request changes for users, effectively distinguishing between viewed and unviewed code.
+Функция проверки запроса на слияние может сохранить для пользователей ход проверки изменений запроса на слияние, эффективно проводя различие между проверенным и непроверенным кодом.
 
-## How to use
+## Как пользоваться
 
-You can find the "Reviewed" feature entry by viewing the "Files" list of changes on a PR detail page.
+Вы можете найти запись о "Проверенной" функции, просмотрев список изменений "Файлы" на странице сведений о запросе на слияние.
 
-By checking "Read", you can mark the viewing status of the corresponding file. When a file is selected as "Read", the corresponding changed file will be automatically collapsed, and the number of "Read" files will be displayed on the page.
+Установив флажок "Читать", вы можете отметить статус просмотра соответствующего файла. Когда файл выбран как "Прочитанный", соответствующий измененный файл будет автоматически свернут, а на странице отобразится количество "прочитанных" файлов.
 
-> When there are code changes in the Pull Request, the system will automatically cancel the "Reviewed" status for the corresponding changed files.
+> При изменении кода в запросе на слияние система автоматически отменит статус "Проверено" для соответствующих измененных файлов.
 
 ![](https://images.gitee.ru/uploads/images/2020/0623/135835_f8e6a5ba_551147.gif "Read.gif")

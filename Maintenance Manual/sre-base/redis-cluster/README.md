@@ -1,12 +1,12 @@
-docker-compose cluster deployment redis-cluster
+Развертывание кластера Docker-Compose Redis-Cluster
 
-Cluster Architecture
+Архитектура кластера
 
 ![image-20231212095001102](D:\gitee_ru\pro\sre-base\redis-cluster\assets\image-20231212095001102.png)
 
 
 
-| Architecture | System Environment | Docker CE Version | IP Address
+| Архитектура | Системное окружение | Версия Docker CE | IP-адрес
 
 
 | --------- | ------------------- | -------------- | ------------ | ------------ | ----------- | ---------- |
@@ -16,13 +16,13 @@ Cluster Architecture
 
 
 
-Repository address:
+Адрес репозитория:
 
-[gitee-redis-cluster: Gitee Redis Cluster Solution](https://gitee.com/autom-studio/gitee-redis-cluster#docker-compose-集群部署-redis-cluster)
+[gitee-redis-cluster: Кластерное решение Gitee Redis](https://gitee.com/autom-studio/gitee-redis-cluster#docker-compose-集群部署-redis-cluster)
 
 
 
-## 1. Build docker image
+## 1. Создайте docker-образ
 
 ```sh
 cd docker-images/redis
@@ -31,11 +31,11 @@ docker build -t hub.gitee.com/library/redis:5.0.10-alpine .
 
 
 
-Modify the .env file to specify the folder for storing persistent data (default: /data/rediscluster).
+Измените файл .env, чтобы указать папку для хранения постоянных данных (по умолчанию: /data/rediscluster).
 
 
 
-## 2. Create Data Persistence Directory
+## 2. Создайте каталог постоянных данных
 
 ```sh
 source .env
@@ -47,9 +47,9 @@ sudo chown -R 999:999 ${DATA_DIR}/{master,slave}
 
 
 
-## 3. Start redis node
+## 3. Запустите узел redis
 
-- Startup sequence:
+- Последовательность запуска:
 
 1. gitee-redis2
 2. gitee-redis3
@@ -57,7 +57,7 @@ sudo chown -R 999:999 ${DATA_DIR}/{master,slave}
 
 
 
-- Start Command:
+- Команда запуска:
 
 ```sh
 $ docker-compose up -d
@@ -65,7 +65,7 @@ $ docker-compose up -d
 
 
 
-## 4. Create cluster master node
+## 4. Создайте master-узел кластера
 
 ```sh
 root@gitee-redis1:/home/ubuntu/workdir/docker-compose/gitee-redis-cluster# docker exec -it gitee-redis-cluster-redis-m-1 sh
@@ -102,9 +102,9 @@ M: 7bfd9dee44cd6f40d021f4dc3c4171fa62796a13 10.4.145.53:7001
 
 
 
-##  5. Add cluster slave nodes and specify master
+## 5. Добавьте ведомые узлы кластера и укажите master
 
-- View cluster master IDs
+- Просмотр идентификаторов master-узла кластера
 
 ```sh
 /data # redis-cli --cluster check 10.4.145.144:7001
@@ -128,7 +128,7 @@ M: 7bfd9dee44cd6f40d021f4dc3c4171fa62796a13 10.4.145.53:7001
 
 
 
-- Add specified slave node according to the master id (Make sure to check the id! Don't add it incorrectly!)
+- Добавьте указанный ведомый узел в соответствии с идентификатором master (обязательно проверьте идентификатор! Не добавляйте его неправильно!)
 
 ```
 # 1
@@ -145,6 +145,6 @@ redis-cli --cluster add-node --cluster-slave --cluster-master-id 8dbbaff49fba137
 
 
 
-## Reference
+## Ссылка
 
-"[Redis-Cluster cluster · Yuque (yuque.com)](https://www.yuque.com/youngfit/wufeyh/bi1n72#ff7d1bca)"
+"[Кластер Redis-Cluster · Yuque (yuque.com)](https://www.yuque.com/youngfit/wufeyh/bi1n72#ff7d1bca)"

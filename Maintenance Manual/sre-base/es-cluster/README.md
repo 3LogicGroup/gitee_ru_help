@@ -1,66 +1,66 @@
-# Deploy ES cluster
+# Развертывание кластера ES
 
-## 1. Environment description
+## 1. Описание среды
 
 elasticsearch: 7.16.3
 
-Set up an ES cluster with three nodes.
+Создайте кластер ES с тремя узлами.
 
-| Node Role | Hostname | Architecture | Operating System | Specification | IP | Remarks |
+| Роль узла | Имя узла | Архитектура | Операционная система | Спецификация | IP | Заметки |
 | --------- | ---------------- | --------- | ---------------- | ------------------------------------------------------------------ | ------------ | ---- |
 | es-master | gitee-es-kakfak1 | Amd64/X86 | Ubuntu 20.04 LTS | VCPU：16C<br />Mem：64G<br />System-Disk：500G<br />Data-Disk:500G | 10.4.145.18  |      |
 | es-node1  | gitee-es-kakfak2 | Amd64/X86 | Ubuntu 20.04 LTS | VCPU：16C<br />Mem：64G<br />System-Disk：500G<br />Data-Disk:500G | 10.4.145.130 |      |
 | es-node2  | gitee-es-kakfak3 | Amd64/X86 | Ubuntu 20.04 LTS | VCPU：16C<br />Mem：64G<br />System-Disk：500G<br />Data-Disk:500G | 10.4.145.151 |      |
 
-Architecture as follows:
+Архитектура выглядит следующим образом:
 
 ![img](https://cdn.nlark.com/yuque/0/2023/png/1570245/1692588871552-27c73247-c9f9-4bcf-866f-7a22015afc48.png)
 
-One master node, other two nodes only store data
+Один узел - главный, а два других только хранят данные.
 
-2. Preparation
+2. Подготовка
 
-The following operations are performed on three hosts respectively:
+Следующие операции выполняются на трех узлах соответственно:
 
 ```sh
-# Create directories to store data and logs
-# Grant permission to the admin user for data and log directories
+# Создайте каталоги для хранения данных и журналов.
+# Предоставьте права пользователю admin на каталоги данных и журналов
 mkdir /data/elasticsearch/{config,data,logs} -pv
 
-## Create Kibana Configuration Directory
+## Создание каталога конфигурации Kibana
 mkdir /data/kibana/config -pv
 
-## Modify the directory permissions of es, otherwise the container startup will fail. The es container is started using the es user with user ID 1000.
+## Измените права доступа к каталогу es, иначе запуск контейнера завершится неудачей. Контейнер es запускается с помощью пользователя es с идентификатором пользователя 1000.
 chown 1000:1000 /data/elasticsearch/* -R
 
-# Disable firewall and swap partitions
+# Отключите брандмауэр и разделы подкачки
 systemctl stop ufw
 systemctl disable ufw
-# ufw allow 9200
-# ufw allow 9300
+# ufw разрешить 9200
+# ufw разрешить 9300
 sudo swapoff -a
 sudo sed -i '/swap/ s/^\(.*\)$/#\1/g' /etc/fstab
 
-## ElasticSearch startup error, bootstrap checks failed
-## max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+## Ошибка запуска ElasticSearch, проверка загрузки не удалась
+## максимальное количество виртуальных областей памяти vm.max_map_count [65530] слишком мало, увеличьте по крайней мере до [262144]
 cat >> /etc/sysctl.conf<<EOF
 vm.max_map_count=655360
 vm.swappiness=1
 EOF
 
 sudo sysctl -p
-## Reference Document: https://blog.csdn.net/feng12345zi/article/details/80367907
+## Справочный документ: https://blog.csdn.net/feng12345zi/article/details/80367907
 ```
 
-## 3. Start ES instances using docker-compose
+## 3. Запуск экземпляров ES с помощью docker-compose
 
-Now, you need to configure the `docker-compose.yml` file on three hosts, and then use the `docker-compose up -d` command to create and run the containers (user needs to have root permissions).
+Теперь вам нужно настроить файл `docker-compose.yml` на трех узлах, а затем использовать команду `docker-compose up -d` для создания и запуска контейнеров (пользователь должен иметь права root).
 
-### 3.1 Deploy `es-master` Node
+### 3.1 Развертывание узла `es-master`
 
-> `10.4.145.18` Host
+> Хост `10.4.145.18`
 
-Edit docker-compose file
+Отредактируйте файл docker-compose
 
 ```yaml
 version: "3"
@@ -105,7 +105,7 @@ services:
       - es-master
 ```
 
-Edit `elasticsearch.yml` configuration
+Отредактируйте конфигурацию `elasticsearch.yml`.
 
 `vim /data/elasticsearch/config/es.yml`
 
@@ -128,7 +128,7 @@ action.destructive_requires_name: true
 cluster.initial_master_nodes: ["es-master"]
 ```
 
-Edit `kibana.yml` configuration file
+Отредактируйте файл конфигурации `kibana.yml`.
 
 ` vim /data/kibana/config/kibana.yml`
 
@@ -140,17 +140,17 @@ elasticsearch.hosts: "http://es-master:9200"
 xpack.monitoring.ui.container.elasticsearch.enabled: true
 ```
 
-Start the service
+Запустить сервис
 
 ```shell
 docker-compose up -d
 ```
 
-### 3.2 Deploy `es-node1` node
+### 3.2 Развертывание узла `es-node1`
 
-> `10.4.145.130` host
+> хост `10.4.145.130`
 
-Edit docker-compose file
+Отредактируйте файл docker-compose
 
 ```yaml
 version: "3"
@@ -180,7 +180,7 @@ services:
       - "es-node2:10.4.145.151"
 ```
 
-Edit 'es.yml' configuration file
+Отредактируйте файл конфигурации 'es.yml'
 
 `vim /data/elasticsearch/config/es.yml`
 
@@ -207,17 +207,17 @@ action.destructive_requires_name: true
 cluster.initial_master_nodes: ["es-master"]
 ```
 
-Start the service
+Запустите сервис
 
 ```shell
 docker-compose up -d
 ```
 
-### 3.3 Deploy `es-node2` node
+### 3.3 Развертывание узла `es-node2`
 
-> `10.4.145.151` host
+> хост `10.4.145.151`
 
-Edit docker-compose file
+Отредактируйте файл docker-compose
 
 ```yaml
 version: "3"
@@ -247,7 +247,7 @@ services:
       - "es-node2:10.4.145.151"
 ```
 
-Edit 'es.yml' configuration file
+Отредактируйте файл конфигурации 'es.yml'
 
 `vim /data/elasticsearch/config/es.yml`
 
@@ -274,54 +274,54 @@ action.destructive_requires_name: true
 cluster.initial_master_nodes: ["es-master"]
 ```
 
-Start the service
+Запустите сервис
 
 ```shell
 docker-compose up -d
 ```
 
-### 3.4 Verification
+### 3.4 Верификация
 
-Access any address:
+Доступ к любому адресу:
 
 - [10.4.145.18:9200/\_cat/health?v](http://10.4.145.18:9200/_cat/health?v)
 - [10.4.145.130:9200/\_cat/health?v](http://10.4.145.130:9200/_cat/health?v)
 - [10.4.145.151:9200/\_cat/health?v](http://10.4.145.151:9200/_cat/health?v)
 
-## 4. Start 'es_xpack' authentication
+## 4. Запустите аутентификацию 'es_xpack'
 
-Cluster authentication needs to configure keys first, otherwise an error will occur when creating keys for built-in users.
+Для кластерной аутентификации необходимо сначала настроить ключи, иначе при создании ключей для встроенных пользователей возникнет ошибка.
 
-### 4.1 Generate Certificates
+### 4.1 Генерация сертификатов
 
 ```sh
-## Log in to one of the node nodes to execute the command, generate the certificate and transfer it to other nodes in the cluster.
+## Войдите на один из узлов, чтобы выполнить команду, сгенерировать сертификат и передать его на другие узлы кластера.
 docker exec -it es-master bash
 /usr/share/elasticsearch/bin/elasticsearch-certutil ca
 /usr/share/elasticsearch/bin/elasticsearch-certutil cert --ca elastic-stack-ca.p12
-## Both commands can be executed by pressing Enter all the way, no need to add password to the key again.
+## Обе команды можно выполнить, нажав Enter до конца, не нужно снова добавлять пароль к ключу.
 
-## After the certificate is created, it is by default in the data directory of ES. Here, we uniformly copy it to the host directory.
+## После создания сертификата он по умолчанию находится в каталоге данных ES. Здесь мы равномерно скопируем его в каталог хоста.
 mv elastic-* /usr/share/elasticsearch/data/
-## Exit the container
+## Выходим из контейнера
 exit
 
-## Copy certificates under /data/elasticsearch/data/ to the config directory
+## Скопируйте сертификаты из каталога /data/elasticsearch/data/ в каталог config
 cd /data/elasticsearch/config/
-cp /data/elasticsearch/data/elastic-*  ./
+cp /data/elasticsearch/data/elastic-* ./
 chmod 644 elastic-*
 chown 1000:10000 elastic*
 
-## Copy certificate files to other nodes
+## Скопируйте файлы сертификатов на другие узлы
 
 # scp /data/elasticsearch/config/elastic-* 10.4.145.130:/data/elasticsearch/config/
 # scp /data/elasticsearch/config/elastic-* 10.4.145.151:/data/elasticsearch/config/
 ```
 
-Add `es.yml` configuration
+Добавьте конфигурацию `es.yml`.
 
 ```yaml
-## The following configurations are added to the three machines:
+## На три машины добавлены следующие конфигурации:
 
 ......
 xpack.security.enabled: true
@@ -331,7 +331,7 @@ xpack.security.transport.ssl.keystore.path: /usr/share/elasticsearch/config/elas
 xpack.security.transport.ssl.truststore.path: /usr/share/elasticsearch/config/elastic-certificates.p12
 ```
 
-Modify the `docker-compose.yml` file
+Измените файл `docker-compose.yml`.
 
 ```
 version: '3'
@@ -354,7 +354,7 @@ services:
       - /data/elasticsearch/config/es.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
       - /data/elasticsearch/data:/usr/share/elasticsearch/data:rw
       - /data/elasticsearch/log:/usr/share/elasticsearch/log:rw
-## Mount SSL certificates into the container
+## Установите SSL-сертификаты в контейнер
       - /data/elasticsearch/config/elastic-certificates.p12:/usr/share/elasticsearch/config/elastic-certificates.p12:ro
       - /data/elasticsearch/config/elastic-stack-ca.p12:/usr/share/elasticsearch/config/elastic-stack-ca.p12:ro
     ports:
@@ -379,9 +379,9 @@ services:
       - es-master
 ```
 
-Create an account and add a password for the built-in account
+Создайте учетную запись и добавьте пароль для встроенной учетной записи
 
-`ES` comes with several built-in accounts for managing other integrated components, namely `apm_system`, `beats_system`, `elastic`, `kibana`, `logstash_system`, `remote_monitoring_user`. Before using them, you need to add passwords for these accounts.
+В комплект поставки `ES` входит несколько встроенных учетных записей для управления другими интегрированными компонентами, а именно `apm_system`, `beats_system`, `elastic`, `kibana`, `logstash_system`, `remote_monitoring_user`. Перед их использованием необходимо добавить пароли для этих учетных записей.
 
 ```sh
 root@gitee-es-kakfak1:/home/ubuntu/workdir/docker-compose/elasticsearch# docker exec -it es-master bash
@@ -416,13 +416,13 @@ Changed password for user [remote_monitoring_user]
 Changed password for user [elastic]
 ```
 
-After the configuration is complete, you can access the `es` service in the following way
+После завершения настройки вы можете получить доступ к службе `es` следующим образом
 
 ```sh
 curl -XGET -u elastic 'localhost:9200/_xpack/security/user?pretty'
 ```
 
-Add `es` account password in `kibana` configuration file
+Добавьте пароль учетной записи `es` в файл конфигурации `kibana`.
 
 `/data/kibana/config/kibana.yml`
 
@@ -438,8 +438,8 @@ elasticsearch.password: "oschina123"
 xpack.monitoring.ui.container.elasticsearch.enabled: true
 ```
 
-Reference blog
+Блог справочных материалов
 
-[Docker 部署 3 节点 ES 集群 - evescn - 博客园 (cnblogs.com)](https://www.cnblogs.com/evescn/p/16175547.html)
+[Развертывание в Docker 3-узлового ES-кластера — evescn — Blog Park (cnblogs.com)](https://www.cnblogs.com/evescn/p/16175547.html)
 
-[Elasticsearch Cluster Management (yuque.com)](https://www.yuque.com/wfzx/ninzck/cg7ws3agpud2gix2)
+[Управление кластером Elasticsearch (yuque.com)](https://www.yuque.com/wfzx/ninzck/cg7ws3agpud2gix2)

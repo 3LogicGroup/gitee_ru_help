@@ -1,7 +1,7 @@
 ---
-title: Enterprise navigation settings
+title: Настройки навигации компании
 ---
 
-In the "Enterprise Navigation Settings" page, you can customize the order and visibility of options in the left-side enterprise navigation menu.
+На странице "Настройки навигации компании" вы можете настраивать порядок и видимость опций в левом боковом меню навигации компании.
 
-![Image Description](assets/image346.png)
+![Описание изображения](assets/image346.png)

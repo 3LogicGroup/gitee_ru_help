@@ -1,16 +1,16 @@
 ---
-title: Pull Request draft function
+title: Функция черновика запроса на слияние
 authors:
   - name: Cheese
-description: Operation instructions for Pull Request Draft feature
+description: Инструкция по работе с функцией "Черновик запроса на слияние"
 ---
 
-Gitee now supports submitting PR drafts. When project members have not completed development, you can choose 'Create Pull Request Draft' when submitting a PR.
+В настоящее время Gitee поддерживает отправку черновиков запросов на слияние. Если участники проекта не завершили разработку, при отправке запроса на слияние вы можете выбрать "Создать черновик запроса на слияние".
 
-![Draft](https://images.gitee.ru/uploads/images/2022/0223/174737_a1ee41e1_1850385.png)
+![Черновик](https://images.gitee.ru/uploads/images/2022/0223/174737_a1ee41e1_1850385.png)
 
-At the same time, using the PR draft feature can also help other members to review your Fork for feedback. PR submitted as a draft will be prompted on various relevant pages of the PR, and the PR cannot be merged. When ready for code review, you can cancel the draft status of the PR and proceed with normal code review and merging.
+В то же время, использование функции "Черновик запроса на слияние" может помочь другим пользователям просмотреть ваш форк для получения обратной связи. Запрос на слияние, отправленный как черновик, будет отображаться на различных страницах соответствующего запроса на слияние, и выполнение запроса на слияние невозможно. Когда запрос на слияние будет готов к проверке кода, вы сможете отменить статус "Черновик" и продолжить обычную прверку кода и слияние.
 
-![Draft](https://images.gitee.ru/uploads/images/2022/0223/174737_112e3c14_1850385.png)
+![Черновик](https://images.gitee.ru/uploads/images/2022/0223/174737_112e3c14_1850385.png)
 
-![Draft](https://images.gitee.ru/uploads/images/2022/0223/174737_9d6f2eb5_1850385.png)
+![Черновик](https://images.gitee.ru/uploads/images/2022/0223/174737_9d6f2eb5_1850385.png)

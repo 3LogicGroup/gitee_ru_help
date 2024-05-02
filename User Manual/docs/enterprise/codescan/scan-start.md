@@ -1,53 +1,53 @@
 ---
-title: Initiate Scan
+title: Инициировать сканирование
 ---
 
-## Full Scan
+## Полное сканирование
 
-- Note: Manual scanning is a full scan, and PR or code submission triggers a incremental scan mode.
+- Примечание: Ручное сканирование - это полное сканирование, а отправка запроса на слияние или кода запускает режим инкрементного сканирования.
 
-1. Confirm if the corresponding module has been created in GiteeScan.
+1. Подтвердить создание соответствующего модуля в GiteeScan.
 
-- Click on Repository Settings if no modules to be checked have been created:
-![Initiate Scan](./assets/scan-start-1.png)
-The repository settings can be redirected to the Scan module creation page. The default code repository is the current repository and cannot be changed. Enter and set the relevant content to create the Scan module.
-![Start Scanning](./assets/scan-start-2.png)
+- Если не было создано ни одного проверяемого модуля, нажмите на Настройки репозитория:
+![Инициировать сканирование]](./assets/scan-start-1.png)
+Настройки репозитория могут быть перенаправлены на страницу создания модуля сканирования. Репозиторий кода по умолчанию является текущим репозиторием и не может быть изменен. Для создания модуля сканирования введите и настройте соответствующий контент.
+![Начать сканирование](./assets/scan-start-2.png)
 
-- Enterprise administrators can also click on the code navigation to enter the Gitee Scan sub-product menu:
-![Initiate Scan](./assets/scan-start-3.png)
-In the scan sub-product menu, click on the module to be checked, and click create to select the corresponding repository to create the corresponding module.
-![Initiate Scan](./assets/scan-start-4.png)
-![Initiate Scan](./assets/scan-start-5.png)
+- Администраторы предприятий также могут нажать на навигацию по коду, чтобы войти в меню вспомогательного продукта GiteeScan:
+![Инициировать сканирование](./assets/scan-start-3.png)
+Чтобы выбрать соответствующий репозиторий для создания соответствующего модуля, выберите модуль, который необходимо проверить, в меню вспомогательного продукта "Сканирование", затем нажмите кнопку "Создать" .
+![Инициировать сканирование](./assets/scan-start-4.png)
+![Инициировать сканирование](./assets/scan-start-5.png)
 
-2. After the creation of the module to be tested, how to initiate a full scan
+2. Как инициировать полное сканирование после создания тестируемого модуля
 
-- Click on New Scan in the Repository:
-![Initiate Scan](./assets/scan-start-6.png)
+- В репозитории выберите Новое сканирование (New Scan):
+![Инициировать сканирование](./assets/scan-start-6.png)
 
-- Scan sub-product menu, select the module to be checked, click the turtle to initiate the scan:
-![Start Scan](./assets/scan-start-7.png)
+- В меню вспомогательного продукта "Сканирование" выберите проверяемый модуль, затем нажмите на значок черепашки, чтобы запустить сканирование:
+![Начать сканирование](./assets/scan-start-7.png)
 
-Incremental Scanning
+Инкрементное сканирование
 
-Refer to full scan for steps to create a module to be inspected
+Шаги по созданию проверяемого модуля см. в описании полного сканирования
 
-- Code submission triggers scanning, select code submission as the triggering method for creating the module to be checked:
-![Start scanning](./assets/scan-start-8.png)
+- Отправка кода запускает сканирование, поэтому необходимо выбрать отправку кода в качестве метода запуска для создания проверяемого модуля:
+![Начать сканирование](./assets/scan-start-8.png)
 
-Creation completed, at this time, submitting code to the corresponding repository will trigger code scanning
+Создание завершено, тперь отправка кода в соответствующий репозиторий запустит сканирование кода
 
-- Triggered when creating a code review (Pull Request), select create code review trigger for the module being checked:
-![Start scanning](./assets/scan-start-9.png)
+- Срабатывает при создании обзора кода (запрос на слияние), выберите "Создать триггер просмотра кода для проверяемого модуля":
+![Начать сканирование](./assets/scan-start-9.png)
 
-Creation completed, at this time, creating a PR in the corresponding repository will trigger code scanning
+Создание завершено, теперь создание запроса на слияние в соответствующем репозитории запустит сканирование кода
 
-## CVE Vulnerabilities and License Compliance Analysis
+## Сканирование уязвимостей распределённого виртуальноего пространства и анализ соответствия лицензиям
 
-Note: The current version only supports full scanning for CVE vulnerabilities and license compliance analysis.
-Reference step 2.1 for creating the test module
+Примечание: Текущая версия поддерживает только полное сканирование на наличие уязвимостей распределенного рабочего пространства и анализ соответствия лицензии.
+Ознакомьтесь с шагом 2.1 для создания тестового модуля
 
-- CVE and license compliance analysis settings:
-![Start Scan](./assets/scan-start-10.png)
-By selecting the module to be inspected on the Scan sub-product page and clicking on the turtle, you can initiate a manual scan. Enable the component analysis switch to perform CVE vulnerability scanning and license compliance analysis.
-![Start Scan](./assets/scan-start-11.png)
-Create a new scan under the repository and enable the component analysis switch to perform CVE vulnerability scanning and license compliance analysis.
+- Настройки анализа уязвимостей распределённого виртуальноего пространства и соответствия лицензионным требованиям:
+![Начать сканирование](./assets/scan-start-10.png)
+Выбрав модуль для проверки на странице вспомогательного продукта "Сканирование" и нажав на значок черепашки, вы можете запустить проверку вручную. Включите переключатель анализа компоннетов для выполнения сканирования уязвимостей распределенного пространства и анализа соответствия лицензии.
+![Начать сканирование](./assets/scan-start-11.png)
+Создайте новое сканирование в репозитории и включите переключатель анализа компонентов для выполнения сканирования уязвимостей распределенного рабочего пространства и анализа соответствия лицензии.

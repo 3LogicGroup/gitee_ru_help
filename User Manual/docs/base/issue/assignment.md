@@ -1,12 +1,12 @@
 ---
-title: Assigning Issues
+title: Назначение Задач
 authors:
   - name: Cheese
-description: Instructions for assigning an Issue in the repository
+description: Инструкции по назначению Задач в репозитории
 ---
 
-## Issue assignment
+## Назначение Задач
 
-Click on the details page of the issue you want to assign, find the 'Assignee' option in the right sidebar, click the edit icon button on its right, and find the repository member you want to assign in the dropdown menu. You can assign them as 'Assignee' or 'Collaborator'.
+Перейдите на страницу сведений о задаче, которую вы хотите назначить, на правой боковой панели найдите опцию "Исполнитель", нажмите кнопку со значком редактирования справа от нее и в выпадающем меню найдите участника репозитория, которого вы хотите назначить. Вы можете назначить его "Исполнителем" или "Соавтором".
 
 ![](assignment.assets/image.png)

@@ -1,26 +1,26 @@
 ---
-title: Pages Single Page Application Support
+title: Поддержка одностраничных приложений Pages
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 origin-url: https://gitee.ru/help/articles/4237
 ---
 
-`Gitee Pages` supports native single-page applications, such as `vue-router`, `angular`, `react-router`, etc. It can be achieved **through configuration** without writing front-end code to redirect requests via 404.html to the application entry point index.html to fulfill the needs of a single page. Currently, `Gitee Pages` supports configuring single-page applications.
+Gitee Pages поддерживает собственные одностраничные приложения, такие как vue-router, Angular, React-Router и т. д. Этого можно достичь **через настройку** без написания внешнего кода для перенаправления запросов. Через 404.html к точке входа приложения index.html для удовлетворения потребностей одной страницы. В настоящее время Gitee Pages поддерживает настройку одностраничных приложений.
 
-## How to Operate
+## Как работать
 
-By adding a `.spa` file to the root directory in `Gitee Pages`, you can enable support for single-page applications.
+Добавив файл .spa в корневой каталог Gitee Pages, вы можете включить поддержку одностраничных приложений.
 
-## Implementation Principle
+## Принцип реализации
 
-By adding the .spa file in the root directory, the Nginx rules of the Gitee Pages server will automatically change.
+При добавлении файла «.spa» в корневой каталог правила Nginx сервера «Gitee Pages» автоматически изменятся.
 
-```bash
+``` bash
 try_files $uri $uri.html /index.html $uri/ =404;
 ```
 
-When there is no '.spa' file in the root directory, the 'Gitee Pages' server's 'Nginx' rules are the same as before.
+Если в корневом каталоге нет файла «.spa», правила Nginx сервера «Gitee Pages» остаются такими же, как и раньше.
 
 ```bash
 try_files $uri $uri.html $uri.md $uri/ =404;

@@ -1,18 +1,18 @@
 ---
-title: Set Default Branch and Delete Branch
+title: Установка ветки по умолчанию и удаление ветки
 authors:
   - name: Cheese
-Description: Set the current default branch and deletion branch operation instructions for the repository.
+Description: Установка текущей ветки по умолчанию и инструкции по ее удалению для репозитория.
 ---
 
-## Set the default branch for the repository
+## Установка ветки по умолчанию для репозитория
 
-After clicking on the 'Branches' button on the top left of the repository main page, you can see all the existing branches of the repository. The default branch will be marked with an orange icon next to the default branch name. In the right-hand action column of non-default branches, by clicking on the branch icon below, you can change that non-default branch to the default branch.
+После нажатия на кнопку "Ветки" в левом верхнем углу главной страницы репозитория вы увидите все существующие ветви репозитория. Ветка по умолчанию будет отмечена оранжевым значком рядом с названием ветки по умолчанию. В правом столбце действий для веток, не являющихся ветками по умолчанию, нажав на значок ветки ниже, вы можете изменить ветку, не являющуюся веткой по умолчанию, на ветку по умолчанию.
 
-![Default branch](./assets/b-branch-defaul-setup.png)
+![Ветка по умолчанию](./assets/b-branch-defaul-setup.png)
 
-## Delete Branch
+## Удаление ветки
 
-In the repository, only non-default branches can be deleted. To delete a non-default branch, click on the trash can icon in the right-hand action column of the branch.
+В репозитории можно удалять только ветки, не входящие в число веток по умолчанию. Чтобы удалить ветку, не входящую в число веток по умолчанию, нажмите на значок корзины в правой колонке действий ветки.
 
-![Delete Branch](./assets/b-branch-delete.png)
+![Удалить ветку](./assets/b-branch-delete.png)

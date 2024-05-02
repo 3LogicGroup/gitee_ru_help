@@ -1,15 +1,15 @@
 ---
-title: Import External Repository to Enterprise
+title: Импорт внешнего репозитория в предприятие
 origin-url: https://gitee.ru/help/articles/4156
 ---
 
-By importing the repository's address, you can migrate the repositories under members' personal accounts to the enterprise account.
+Импортировав адрес репозитория, вы можете перенести репозитории из личных учетных записей участников в корпоративную учетную запись.
 
-1. Click on 'Code' -> 'New Repository' in the Enterprise Edition interface:
+1. В интерфейсе Enterprise Edition нажмите "Код" -> "Новый репозиторий":
 
-![Image Description](../../../../../assets/image18.png)
+![Описание изображения](../../../../../assets/image18.png)
 
-2. Click "Fill in the address of the imported repository" -> Fill in the address of the repository to be imported, and click "Create".
+2. Нажмите "Ввести адрес импортируемого репозитория" -> Введите адрес импортируемого репозитория и нажмите "Создать".
 
-![Image Description](../../../../../assets/image19.png)
+![Описание изображения](../../../../../assets/image19.png)
  

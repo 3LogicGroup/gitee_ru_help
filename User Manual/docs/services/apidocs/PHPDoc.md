@@ -1,31 +1,31 @@
 ---
-title: PHPDoc service
+title: Сервис PHPDoc
 
 origin-url: https://gitee.ru/help/articles/4226
 ---
 
-Gitee supports automatic generation and hosting service (free) for PHP project documentation.
+Gitee поддерживает автоматическое создание и хостинг (бесплатный) документации проектов на языке PHP.
 
-## Environment
+## Среда
 
 * phpdoc 3.3
 
-## Steps
+## Шаги использования
 
-### Step 1
+### Шаг 1
 
-On the Gitee (gitee.ru) repository homepage, click "Services" - select "PHPDoc".
+На главной странице репозитория Gitee (gitee.ru) нажмите «Сервисы» — выберите «PHPDoc».
 
 ![](../assets/phpdoc-1.png)
 
-### Step 2
+### Шаг 2
 
-Fill in the relevant parameters according to the prompt information and click 'Generate Documentation'.
+Заполните соответствующие параметры в соответствии с подсказкой и нажмите «Создать документацию».
 
 ![](../assets/phpdoc-2.png)
 
-### Step 3
+### Шаг 3
 
-Click the document access address link to view the document.
+Для просмотра документа нажмите ссылку на адрес документа.
 
 ![](../assets/phpdoc-3.png)

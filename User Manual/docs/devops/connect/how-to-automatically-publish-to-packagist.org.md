@@ -1,44 +1,44 @@
 ---
-title: Automatically Publish PHP Projects to packagist.org
+title: Автоматическая публикация проектов на языке PHP на packagist.org
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 origin-url: https://gitee.ru/help/articles/4354
 ---
 
-## Introduction
+## Введение
 
-Gitee supports publishing PHP projects as packages and automatically updating them to packagist.org (a popular PHP package management platform) for installation via Composer (a PHP package manager).
+Gitee поддерживает публикацию PHP-проектов в виде пакетов и их автоматическое обновление до packagist.org (популярная платформа управления пакетами PHP) для установки через Composer (менеджер пакетов PHP).
 
-> Prerequisites:
+> Предварительные условия:
 >
-"> - Already have a Gitee and Packagist.org account"
-> - The project is a valid Composer project (composer.json exists in the root directory).
+"> - У вас уже имеются учетные записи Gitee и Packagist.org"
+> - Проект является актуальным проектом Composer (файл composer.json существует в корневой директории).
 >
-> **The data source for Composer packages uses the code repository address of gitee.ru**
+> **В качестве источника данных для пакетов Composer используется адрес репозитория кода gitee.ru**
 
-## Usage
+## Введение
 
-### Get Packagist API Token
+### Получение токена Packagist API
 
-Visit [https://packagist.org/profile/](https://packagist.org/profile/) and click on the "Show API Token" button on the page to get your Packagist API Token.
+Для получения токена Packagist API пройдите по ссылке [https://packagist.org/profile/](https://packagist.org/profile/) и нажмите кнопку "Показать токен API".
 
 ![](https://images.gitee.ru/uploads/images/2021/1109/200841_49787af7_551147.jpeg "16364480729921.jpg")
 
-### Set up Auto Update WebHook
+### Настройка автоматического обновления вебхука
 
-Under the Gitee repository where you need to set up releases and automatic updates, add a new WebHook through "Manage"->"WebHook", and configure it as follows:
+В репозитории Gitee, в котором необходимо настроить релизы и автоматические обновления, добавьте новый вебхук через "Управление"->"Вебхук" и настройте его следующим образом:
 
 URL: [https://packagist.org/api/update-package?username=YOUR_PACKAGIST_USERNAME&apiToken=API_TOKEN](https://packagist.org/api/update-package?username=YOUR_PACKAGIST_USERNAME&apiToken=API_TOKEN), where: `YOUR_PACKAGIST_USERNAME` needs to be replaced with your username on Packagist.org, `API_TOKEN` is the Packagist API Token obtained in the previous section.
-- Password: No configuration required
-- Check the events 'Push' and 'Tag Push'.
+- Пароль: Настроек не требуется
+- Выберите события 'Отправка' и 'Отправка тега'.
 
 ![](https://images.gitee.ru/uploads/images/2021/1110/135326_1d2c1747_551147.png )
 
-After the configuration is complete, pushing code or tags to the repository will trigger automatic updates to Packagist.org.
+После завершения настройки отправка в репозиторий кода или тегов запустит автоматическое обновление Packagist.org.
 
-## Precautions
+## Меры предосторожности
 
-**To ensure that Packagist.org can correctly fetch the repository when receiving update actions, the repository address needs to be changed to Gitee's repository address in the package management settings.**
+**Чтобы гарантировать корректную загрузку репозиториев в Packagist.org  при получении действий по обновлению, адрес репозитория необходимо изменить на адрес репозитория Gitee в настройках управления пакетами.**
 
 ![](https://images.gitee.ru/uploads/images/2021/1111/140218_312edf40_551147.png )

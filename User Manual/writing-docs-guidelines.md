@@ -1,28 +1,28 @@
-# Markdown Document Writing Guidelines
+# Руководство по написанию документов в формате Markdown
 
-This is the **Markdown Writing Specification** followed and agreed upon by the team, aiming to enhance the readability of documents.
+Это **Спецификация по написанию документов в формате Markdown **, которая согласована командой и которой она НУЖНО в целях повышения удобочитаемости документов. 
 
-> The keywords used in the document `MUST` / `MUST NOT` / `REQUIRED` / `SHALL` / `SHALL
-NOT / SHOULD / SHOULD NOT / RECOMMENDED / MAY and OPTIONAL are explained in [RFC2119](http://oss.org.cn/man/develop/rfc/RFC2119.txt).
+> Значение используемых в документе ключевых слов `ОБЯЗАТЕЛЬНО` / `ЗАПРЕЩАЕТСЯ` / `НЕОБХОДИМО` / `ДОЛЖНО БЫТЬ` / `НЕ ДОЛЖНО БЫТЬ`
+/ НУЖНО / НЕ НУЖНО / РЕКОМЕНДОВАНО / МОЖЕТ и ДОПОЛНИТЕЛЬНО объяснено [RFC2119](http://oss.org.cn/man/develop/rfc/RFC2119.txt).
 
-## 1. Typesetting Guidelines (Key References)
+## 1. Рекомендации по набору текста (ключевые ссылки)
 
-Neat formatting is very important for an article, please pay attention to the following:
+Аккуратное форматирование очень важно для статьи, необходимо обращать внимание на следующее:
 
-- Capitalize the first letter of proper nouns in English
-- Spaces **MUST** be kept between English characters to avoid sticking together with Chinese characters
-- Chinese **must** use full-width punctuation marks
-- **MUST** strictly follow the Markdown syntax
-- "`highlight`", "**bold**", and "[link]()" all need to have a space on both sides
-- Please use code comments extensively in longer code sections.
-- Refer to the following content for typesetting in Chinese and English
+- Имена собственные начинаются с заглавной буквы
+- Во избежание склеивания английского текста с китайскими иероглифами после латинских букв **ОБЯЗАТЕЛЬНО** оставлять пробелы
+- В китайском тексте **обязательно** использовать полноширинные знаки препинания
+- **ОБЯЗАТЕЛЬНО** строго следовать синтаксису Markdown
+- по обе стороны "`выделенного текста`", "**полужирного**", и "[ссылки]()" нужно оставлять пробелы
+- Широко используйте комментарии к коду в более длинных разделах кода.
+- Для набора текста на китайском и английском языках обратитесь к следующему контенту
 
-## 2. Document and Chapter Naming
+## 2. Наименование документов и глав
 
-- `MUST` suffix must use `.md` or `.mdx`
-- `MUST` File names (including articles and referenced images) must be in lowercase, and multiple words should be separated by `-`
-- `MUST` file encoding must be UTF-8
-Document titles SHOULD be represented in the document's meta information instead of using `#`, as shown below:
+- `ОБЯЗАТЕЛЬНО` должны использоваться суффиксы `.md` или `.mdx`
+- `ОБЯЗАТЕЛЬНО` имена файлов (включая статьи и изображения, на которые даны ссылки) пишутся в нижнем регистре, а несколько слов разделяются символом `-`
+- `ОБЯЗАТЕЛЬНО` кодировка файла должна быть UTF-8
+Заголовки документов НУЖНО представлять в метаинформации документа вместо использования `#`, как показано ниже:
 
     ```markdown
     ---
@@ -30,7 +30,7 @@ title: Markdown Writing Guidelines
     ---
     ```
 
-- `SHOULD` The document should have a sentence describing the core content of the document. And it should be indicated in the `description` field of the document's `meta` information.
+- `НУЖНО` В документ НУЖНО включать предложение, описывающее его основное содержание. И его НУЖНО указывать в поле `description` `meta`-информации документа.
 
     ```markdown
     ---
@@ -39,9 +39,9 @@ title: Markdown Writing Guidelines
     ---
     ```
 
-Documents SHOULD have a complete and independent globally unique URL (Slug) to ensure the global uniqueness of the document.
-  - `SHOULD` `Slug` names must be in lowercase English or alphanumeric combinations, and multiple words should be separated by `-`
-  - `SHOULD` `Slug` must be represented in the `slug` field of the document's `meta` metadata
+В целях обеспечения глобальной уникальности всем документам НУЖНО присваивать полный и независимый глобальный уникальный URL-адрес (Slug).
+  - `НУЖНО` `Slug` имена должны быть написаны строчными буквами на английском языке или буквенно-цифровыми комбинациями, а несколько слов НУЖНО разделять символом `-`
+  - `НУЖНО` `Slug` должны быть представлены в поле `slug` метаданных `meta` документа
 
         ```markdown
         ---
@@ -51,10 +51,10 @@ Documents SHOULD have a complete and independent globally unique URL (Slug) to e
         ---
         ```
 
-- `MUST` Chapter titles must start with `##`, not `#`
-- `MUST` The chapter title must have a space after `#`, and there should be no `#` after it
+- `ОБЯЗАТЕЛЬНО` Названия глав должны начинаться с `##`, а не с `#`
+- `ОБЯЗАТЕЛЬНО` В названии главы после символа `#` должен иметься пробел, а после него символа `#` быть не должно
 
-    ```makrndown
+    ```markdown
     // bad
 ## Chapter 1
 
@@ -65,9 +65,9 @@ Documents SHOULD have a complete and independent globally unique URL (Slug) to e
 ## Chapter 1
     ```
 
-- `MUST` There must be a blank line between section titles and content
+- `ОБЯЗАТЕЛЬНО` Между заголовками разделов и их содержанием должна быть пустая строка
 
-    ```makrndown
+    ```markdown
     // bad
 ## Chapter 1
     Content
@@ -81,79 +81,79 @@ Documents SHOULD have a complete and independent globally unique URL (Slug) to e
 ## Chapter 2
     ```
 
-## 3. Content Writing Guidelines
+## 3. Рекомендации по написанию контента
 
-- `MUST` Code blocks must use the Fenced code blocks style. When using `  ` to represent a multi-line code, it is required to clearly indicate its language, as shown below:
+- `ОБЯЗАТЕЛЬНО` В блоках кода должен использоваться стиль огороженных блоков кода. При использовании ` ` для представления многострочного кода необходимо четко указать его язык, как показано ниже:
 
-    ```makrndown
+    ```markdown
     ```{language}
     ```
 
-`SHOULD` The format of the table should refer to [GFM](https://help.github.com/articles/github-flavored-markdown) as follows:
+`НУЖНО` Формат таблицы должен соответствовать [GFM](https://help.github.com/articles/github-flavored-markdown) как показано ниже:
 
-    ```makrndown
-    First Header  | Second Header
-    ------------- | -------------
-    Content Cell  | Content Cell
-    Content Cell  | Content Cell
+    ```markdown
+     Первый заголовок  | Второй заголовок
+    ------------------ | -------------
+    Содержимое ячейки  | Содержимое ячейки
+    Содержимое ячейки  | Содержимое ячейки
     
-    | Left-Aligned  | Center Aligned  | Right Aligned |
-    | :------------ |:---------------:| -----:|
-    | col 3 is      | some wordy text | $1600 |
-    | col 2 is      | centered        |   $12 |
-    | zebra stripes | are neat        |    $1 |
+    | Выровнен по левому краю  | Выровнен по центру          | Выровнен по правому краю |
+    | :----------------------- |:-------------------:        | ------------------------:|
+    | столб. 3 является		   | текст из нескольких слов    | $1600 					|
+    | столб. 2 является 	   | по центру      		 	 |   $12 					|
+    | полоски зебры 		   | аккуратные       			 |    $1 					|
     ```
 
-- `SHOULD` Use the following rules for mixing Chinese and English:
-- English and numbers should use half-width characters.
-  - No spaces between Chinese characters
-  - Add spaces between Chinese characters and English, Arabic numerals, @ # $ % ^ & - . ( ) and other symbols
-- No space is added between Chinese punctuation marks.
-  - There should be no space between Chinese punctuation marks and the preceding/following characters (regardless of full-width or half-width)
-- If there are Chinese characters inside parentheses, use Chinese parentheses.
-  - Use half-width English parentheses if the content in the parentheses is all in English.
-  - When the half-width symbol / represents "or", no spaces are added between the preceding and following characters
-  - Other specific examples are recommended to be read [here](https://github.com/sparanoid/chinese-copywriting-guidelines)
-- `SHOULD` Chinese symbols should be written as follows:
-  - Use straight quotation marks (「」) instead of double quotation marks (""), please refer to [here](http://www.zhihu.com/question/19755746) for specific settings in different input methods.
-  - Use "……" for ellipsis, and "。。。" only for pauses
-  - Other references can be found at [Zhihu Specification](http://www.zhihu.com/question/20414919)
+- `НУЖНО` Для сочетания английского и китайского текстов придерживайтесь следующих правил:
+  - Для написания английских слов и цифр НУЖНО использовать полуширинные символы.
+  - Китайские иероглифы пишутся без пробелов
+  - Добавляйте пробелы между китайскими и английскими символами, а также арабскими цифрами, знаками @ # $ % ^ & - . ( ) и другими символвами.
+- Между китайскими знаками препинания пробел не добавляется.
+  - Между китайскими знаками препинания и предшествующими/последующими символами не должно быть пробелов (независимо от того, полноширинные они или полуширинные)
+- Если внутри скобок есть китайские иероглифы, используйте китайские скобки.
+  - Если заключенный в скобки контент полностью на английском языке, используйте полуширинные английские скобки.
+  - Когда полуширокий символ / означает "или", пробелы между предыдущим и последующим символами не добавляются
+  - Другие конкретные примеры рекомендуем прочитать [здесь](https://github.com/sparanoid/chinese-copywriting-guidelines)
+- `НУЖНО` Китайские иероглифы НУЖНО писать как показано ниже:
+  - Используйте прямые кавычки (「」) вместо двойных кавычек (""), подробнее можно прочитать [здесь](http://www.zhihu.com/question/19755746) for specific settings in different input methods.
+  - Используйте для многоточия "……", а "。。。" только для пауз
+  - Другие рекомендации можно найти по адресу [Zhihu Specification](http://www.zhihu.com/question/20414919)
 
-## 4. Ways of Expressing Content
+## 4. Способы передачи контента
 
-Article content description should follow "The Element of Style" (`SHOULD`):
+Описание контента статьи должно должно соответствовать "Элементам стиля" (`НУЖНО`):
 
-- Make paragraphs the unit of the article: Each paragraph should express only one main idea
-- Usually, the main point should be stated at the beginning of each paragraph, and the point should be summarized at the end of the paragraph
-- Use active voice
-- Use affirmative statements in declarative sentences
-- Remove unnecessary words
-- Avoid using loose sentences consecutively
-- Express parallel meanings using the same structure.
-- Group related words together
-- In the summary, use the same tense (referring to tense in English, not applicable in Chinese, so can be ignored)
-- Put emphasis words at the end of the sentence
+- Сделайте абзацы единицами измерения статьи: каждый абзац должен выражать только одну основную идею
+- Обычно основную мысль НУЖНО излагать в начале каждого абзаца, а в конце - давать краткое обобщение
+- Используйте активный залог
+- Используйте положительные заключения в утвердительных предложениях
+- Удаляйте ненужные слова
+- Избегайте последовательного использования расплывчатых предложений
+- Выражайте параллельные значения, используя одну и ту же структуру.
+- Группируйте родственные слова
+- В заключении используйте ту же временную форму (имеется в виду временная форма в английском языке, в китайском она неприменима, поэтому это положение можно проигнорировать)
+- Помещайте усиливающие выразительность слова в конце предложения
 
-## 5. Writing and Recommended Tools
+## 5. Написание и рекомендуемые инструменты
 
-It is recommended to use professional Markdown editors or text editors such as `VSCode` and `MWeb` to write documents, which can help you effectively solve the problem of document writing specifications.
+Для написания документов рекомендуется использовать профессиональные редакторы Markdown или текстовые редакторы, такие как "VSCode" и "MWeb", которые могут помочь вам эффективно решить проблему написания технических условий и спецификаций.
 
 ### 5.1 Visual Studio Code
 
-#### 5.1.1 Use `markdownlint` as default to format the document
+#### 5.1.1 Для форматирования документа используйте по умолчанию `markdownlint`
+ 
+Чтобы открыть командную панель, используйте `Crtl`/`Command`+`Shift`+`P`,  введите `>format document` и выберите для настройки "Отформатировать документ с помощью...".
 
-Use `Crtl`/`Command`+`Shift`+`P` to bring up the command panel, type `>format document`, and select "Format Document with..." to configure.
+![Отформатировать документ](assets/format-doc-command.jpg)
 
-![Format Document](assets/format-doc-command.jpg)
+![Настроить средство форматирования документов по умолчанию](assets/format-doc-default-setting.jpg)
 
-![Configure Default Document Formatter](assets/format-doc-default-setting.jpg)
+#### 5.1.2 Включите автоматическое форматирование при сохранении
 
-#### 5.1.2 Enable auto formatting on save
+Рекомендуется включить в VS Code функцию автоматического форматирования по умолчанию, чтобы гарантировать, что перед отправкой корректность форматирования документа не забудут проверить. Её можно включить следующим способом:
 
-It is recommended to enable the automatic formatting feature of VSCode by default to ensure that the document is not forgotten to be checked for formatting before submission. The method to enable it is as follows:
+Чтобы вызвать командную панель, используйте `Ctrl`/`Command`+`Shift`+`P`,  а затем введите `toggle formatting`, чтобы переключить форматирование.
 
-Use `Ctrl`/`Command`+`Shift`+`P` to bring up the command palette, and then input `toggle formatting` to switch the formatting.
+### 5.2 Автоисправление для Visual Studio Code
 
-### 5.2 AutoCorrect for Visual Studio Code
-
-"[AutoCorrect for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=huacnlee.autocorrect) is used for "automatic correction" or "checking and suggesting" text, providing correct spacing for CJK (Chinese, Japanese, Korean) and English mixed writing, and attempting to automatically correct punctuation in a safe manner."
+"[Автоисправление для Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=huacnlee.autocorrect) используется для "автоматического исправления" или "проверки и предложения" текста, обеспечения правильных интервалов для смешанного письма на CJK (китайском, японском, корейском) и английском языках, а также для попытки автоматического и безопасного исправления пунктуации".

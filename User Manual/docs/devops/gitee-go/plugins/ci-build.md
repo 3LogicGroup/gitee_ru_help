@@ -1,23 +1,23 @@
 ---
-title: Cloud compilation plugin
+title: Плагины облачной компиляции
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 slug: /gitee-go/plugin/ci-build
 origin-url: 
 ---
-## 1. Maven Build
+## 1. Сборка Maven
 
-- Supported Versions
+- Поддерживаемые версии
   - Maven: 2.2.1, 3.2.5, 3.3.9, 3.5.2, 3.5.3, 3.5.4, 3.6.1, 3.6.3
-  Eight versions
-  - JDK: 6, 7, 8, 9, 10, 11, 13, 17 eight versions
-- Base image
-  - CentOS Linux release 8.3.2011
-  - Built-in Ali Source Maven Repository
-- Field description
-  - Visual configuration
-      ![Maven Build](https://images.gitee.ru/uploads/images/2021/1223/110651_ed109977_5192864.png )
+  Восемь версий
+  - JDK: 6, 7, 8, 9, 10, 11, 13, 17 восемь версий
+- Базовое изображение
+  - CentOS Linux версия 8.3.2011
+  - Встроенный репозиторий Ali Source Maven.
+- Описание поля
+  - Визуальная конфигурация
+      ![Сборка Maven](https://images.gitee.ru/uploads/images/2021/1223/110651_ed109977_5192864.png )
         ```yaml
         - step: build@maven
           name: build_maven
@@ -38,17 +38,17 @@ Path to obtain the build artifacts, which refers to the location of the built ar
                 - ./target
         ```
 
-## 2. Gradle Build
+## 2. Сборка Gradle
 
-- Supported Versions
-- Gradle: Supports four versions - 4.1, 4.2, 4.3, and 4.4
-  - JDK: 6, 7, 8, 9, 10, 11, 13, 17 eight versions
-- Base image
-  - CentOS Linux release 8.3.2011
-  - Built-in Ali Source Maven Repository
-- Field description
-  - Visual configuration
-![Gradle Build](https://images.gitee.ru/uploads/images/2021/1223/111207_480ff9f9_5192864.png)
+- Поддерживаемые версии
+- Gradle: поддерживает четыре версии. - 4.1, 4.2, 4.3, and 4.4
+  - JDK: 6, 7, 8, 9, 10, 11, 13, 17 восемь версий
+- Базовое изображение
+  - CentOS Linux версия 8.3.2011
+  - Встроенный репозиторий Ali Source Maven.
+- Описание поля
+  - Визуальная конфигурация
+![Сборка Gradle](https://images.gitee.ru/uploads/images/2021/1223/111207_480ff9f9_5192864.png)
 
 ```yaml
 - step: build@gradle
@@ -69,17 +69,17 @@ The name of the artifact, which serves as a unique identifier for the artifact a
         - ./build
 ```
 
-3. Ant build
+## 3. Сборка Ant
 
-- Supported Versions
-- Ant: Supports versions 1.6.5, 1.7.1, 1.8.4, 1.9.16, 1.10.9, 1.10.11
-  Six versions
-  - JDK: 6, 7, 8, 9, 10, 11 six versions
-- Base image
-  - CentOS Linux release 8.3.2011
-- Field description
-  - Visual configuration
-![Ant Build](https://images.gitee.ru/uploads/images/2021/1223/111310_a781a8e5_5192864.png)
+- Поддерживаемые версии
+- Ant: Поддерживает версии 1.6.5, 1.7.1, 1.8.4, 1.9.16, 1.10.9, 1.10.11
+  Шесть версий
+  - JDK: 6, 7, 8, 9, 10, 11 шесть версий
+- Базовое изображение
+  - CentOS Linux версия 8.3.2011
+- Описание поля
+  - Визуальная конфигурация
+![Сборка Ant](https://images.gitee.ru/uploads/images/2021/1223/111310_a781a8e5_5192864.png)
 
 ```yaml
 - step: build@ant
@@ -99,15 +99,15 @@ The name of the artifact, which serves as a unique identifier for the artifact a
         - ./build
 ```
 
-## 4. Golang Build
+## 4. Сборка Golang
 
-- Supported Versions
+- Поддерживаемые версии
   - Golang：1.8、1.10、1.11、1.12、1.13、1.14、1.15、1.16
-- Base image
-  - CentOS Linux release 8.3.2011
-- Field description
-  - Visual configuration
-    ![Golang Build](https://images.gitee.ru/uploads/images/2021/1223/111340_cb49be89_5192864.png )
+- Базовое изображение
+  - CentOS Linux версия 8.3.2011
+- Описание поля
+  - Визуальная конфигурация
+    ![Сборка Golang](https://images.gitee.ru/uploads/images/2021/1223/111340_cb49be89_5192864.png )
 
 ```yaml
 - step: build@golang
@@ -133,14 +133,14 @@ The name of the artifact, which serves as a unique identifier for the artifact a
         - ./output
 ```
 
-## 5. Node.js Build
+## 5. Сборка Node.js
 
-- Supported Versions
+- Поддерживаемые версии
   - Node.js：8.16.2, 10.17.0, 12.16.1, 14.16.0, 15.12.0
-- Base image
-  - Based on CentOS 7.6, including git, wget, Python3, and other common tools
-- Field description
-  - Visual configuration
+- Базовое изображение
+  - CentOS Linux версия 8.3.2011
+- Описание поля
+  - Визуальная конфигурация
     ![Node.js](https://images.gitee.ru/uploads/images/2021/1223/111529_996855b3_5192864.png )
 
 ```yaml
@@ -160,20 +160,20 @@ The name of the artifact, which serves as a unique identifier for the artifact a
         - ./dist
 ```
 
-- Attention
-  - Replace the build command and packaging directory according to the project being packaged
-- If other build tools such as yarn, pnpm, etc. are used in the project, please install them globally before installing dependencies. If using yarn, add 'npm i -g yarn' before 'npm install' as shown in the following figure:
-![Node.js Attention](https://images.gitee.ru/uploads/images/2021/1223/111841_3e39ff71_5192864.png)
+- Обратите внимание
+  — Замените команду сборки и каталог упаковки в соответствии с упаковываемым проектом.
+- Если в проекте используются другие инструменты сборки, такие как Yarn, pnpm и т. д., установите их глобально перед установкой зависимостей. Если вы используете yarn, добавьте «npm i -g Yarn» перед «npm install», как показано на следующем рисунке:
+![Node.js](https://images.gitee.ru/uploads/images/2021/1223/111841_3e39ff71_5192864.png)
 
-## 6. PHP Construction
+## 6. Сборка PHP
 
-- Supported Versions
-  - PHP: Supports 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1 eight versions.
-- Base image
-  - CentOS Linux release 8.3.2011
-- Field description
-  - Visual configuration
-![PHP Build](https://images.gitee.ru/uploads/images/2021/1223/112044_dcbd267d_5192864.png)
+- Поддерживаемые версии
+  - PHP: Supports 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1 восемь версий.
+- Базовое изображение
+  - CentOS Linux версия 8.3.2011
+- Описание поля
+  - Визуальная конфигурация
+![Сборка PHP](https://images.gitee.ru/uploads/images/2021/1223/112044_dcbd267d_5192864.png)
 
 ```yaml
 - step: build@php
@@ -192,15 +192,15 @@ The name of the artifact, which serves as a unique identifier for the artifact a
         - ./
 ```
 
-## 7. Python Build
+## 7. Сборка Python
 
-- Supported Versions
-Python: Supports 2.7, 3.6, 3.7, 3.8, and 3.9 versions
-- Base image
-  - CentOS Linux release 8.3.2011
-- Field description
-  - Visual configuration
-![Python Build](https://images.gitee.ru/uploads/images/2021/1223/111952_dd85e88a_5192864.png)
+- Поддерживаемые версии
+Python: Поддерживает версии 2.7, 3.6, 3.7, 3.8, и 3.9 
+- Базовое изображение
+  - CentOS Linux версия 8.3.2011
+- Описание поля
+  - Визуальная конфигурация
+![Сборка Python](https://images.gitee.ru/uploads/images/2021/1223/111952_dd85e88a_5192864.png)
 
 ```yaml
 - step: build@python
@@ -222,15 +222,15 @@ The name of the artifact, which serves as a unique identifier for the artifact a
         - ./
 ```
 
-## 9. GCC Build
+## 8. Сборка GCC
 
-- Supported Versions
-- GCC: Supports six versions - 4.8, 5.5, 6.5, 8.4, 9.4, 10.3
-- Base image
-- Based on Ubuntu 20.04, including git, wget, zip, unzip, p7zip, jq
-- Field description
-  - Visual configuration
-    ![Image Description](https://images.gitee.ru/uploads/images/2022/0518/114438_59f3cc2e_10531940.png )
+- Поддерживаемые версии
+- GCC: Поддерживает шесть версий - 4.8, 5.5, 6.5, 8.4, 9.4, 10.3
+- Базовое изображение
+- На основе Ubuntu 20.04, including git, wget, zip, unzip, p7zip, jq
+- Описание поля
+- Визуальная конфигурация
+    ![Описание изображения](https://images.gitee.ru/uploads/images/2022/0518/114438_59f3cc2e_10531940.png )
 
 ```yaml
 steps:

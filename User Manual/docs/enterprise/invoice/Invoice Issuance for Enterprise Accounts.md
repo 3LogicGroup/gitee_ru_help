@@ -1,22 +1,22 @@
 ---
-title: Corporate account invoice issuance
+title: Выставление счета-фактуры на корпоративную учетную запись
 authors:
   - name: Roger
     url: https://gitee.ru/yuriluo
 origin-url: https://gitee.ru/help/articles/4161
 keywords:
- - Enterprise Account
- - Invoice
+ - Счет предприятия
+ - Счет-фактура
 slug: /enterprise/questions/invoice/invoice-request
 
 ---
 
-1. Log in to the enterprise super administrator account, select 'Management' - 'Order and Invoice Management' - 'Apply for Invoice'
+1. Войдите в учетную запись суперадминистратора предприятия, выберите "Управление" - "Управление заказами и счетами" - "Подать заявку на выставление счета-фактуры".
 
-![Invoice](/img/enterprise/question/invoice/invoice-request/1.webp)
+![Счет-фактура](/img/enterprise/question/invoice/invoice-request/1.webp)
 
-2. Submit after entering the corresponding information on the redirect page.
+2. Отправьте заявку после ввода соответствующей информации на странице переадресации.
 
-![Invoice](/img/enterprise/question/invoice/invoice-request/2.webp)
+![Счет-фактура](/img/enterprise/question/invoice/invoice-request/2.webp)
 
-Note: Select the invoice type according to your actual situation. It is recommended to choose 'Electronic Invoice', which has a faster invoicing speed compared to paper invoices.
+Примечание: Выбирайте тип счета-фактуры в соответствии с вашей реальной ситуацией. Рекомендуется выбрать "Электронный счет-фактуру", обеспечивающий более высокую скорость выставления счетов по сравнению с бумажными.

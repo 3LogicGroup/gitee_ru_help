@@ -1,35 +1,35 @@
 ---
-title: Enterprise Edition Agile Development Process
+title: Процесс Agile-разработки Enterprise Edition
 
 origin-url: https://gitee.ru/help/articles/4266
 ---
 
-### Gitee Enterprise Agile Development Process Content Outline
+### Краткое содержание процесса Agile-разработки Gitee Enterprise
 
-Overview: Introduction to Agile Development Process in Gitee Enterprise Edition
+Обзор: Введение в процесс Agile-разработки в Gitee Enterprise Edition
 
-1. Gitee Enterprise Edition Agile Development - Preparation
-    - Create project
-    - Create repository
-    - Repository permissions and branches
-2. Gitee Enterprise Edition Agile Development - Feature List
-    - Manage Product Requirements
-3. Gitee Enterprise Agile Development - Iteration Planning
-    - User stories
-    - Iteration branch
-4. Gitee Enterprise Agile Development - Getting Started with Iterations
-    - Split requirements
-    - Write documentation
-    - Commit code
-   - Submit PR
-    - Code review & merge PR
-    - Continuous integration
-    - Meeting presentation
-    - Iterative Reflection & Delivery Deployment
+1. Agile-разработка в Gitee Enterprise Edition - подготовка
+    - Создание проекта
+    - Создание репозитория
+    - Права доступа к репозиторию и ветке
+2. Agile-разработка в Gitee Enterprise Edition - список возможностей
+    - Управление требованиями к продукту
+3. Agile-разработка в Gitee Enterprise Edition - планирование итераций
+    - Пользовательские истории
+    - Ветка итерации
+4. Agile-разработка в Gitee Enterprise Edition - Начало работы с итерациями
+    - Разделить требования
+    - Написать документацию
+    - Зафиксировать код
+   - Отправить запрос на слияние
+    - Обзор кода и слияние запрос на слияние
+    - Непрерывная интеграция
+    - Презентация на собрании
+    - Итеративное осмысление и развертывание
 
 ![](https://talk.gitee.ru/phase.1/2.scrum-process.mp4)
 
->If you have any questions or suggestions about the video, please click [https://gitee.ru/GiteeTalk/giteetalk_1](https://gitee.ru/GiteeTalk/giteetalk_1)
+>Если у вас появились вопросы или предложения по поводу видео, нажмите [https://gitee.ru/GiteeTalk/giteetalk_1](https://gitee.ru/GiteeTalk/giteetalk_1)
 
 [Gitee]:https://gitee.ru
 [OSChina]:https://oschina.net

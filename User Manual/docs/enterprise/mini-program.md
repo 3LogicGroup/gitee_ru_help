@@ -1,60 +1,60 @@
 ---
-title: Gitee Enterprise Edition Mini Program
+title: Мини-программа Gitee Enterprise Edition
 origin-url: https://gitee.ru/help/articles/4344
 ---
 
-**Mini program launch**
+**Запуск мини-программы**
 
-Gitee has created a lightweight office mini-program for enterprise users on mobile devices
+Компания Gitee создала легкую офисную мини-программу для корпоративных пользователей на мобильных устройствах
 
-**Main Features**
+**Основные возможности**
 
-1. Project and Repository: View project and repository information
-2. Tasks: View tasks, create tasks, modify task status, comment/reply
-3. Review: Review, view commit information, view code changes, comment/reply
-4. Members: Member Information List
-5. Message notification: receive private messages, notifications, @me
-6. My Profile: Switch Enterprise, Mini Program Settings
+1. Проект и репозиторий: Просмотр информации о проекте и репозитории
+2. Задачи: Просмотр задач, создание задач, изменение статуса задачи, комментарии/ответы
+3. Обзор: Просмотр, просмотр информации о фиксации, просмотр изменений кода, комментарий/ответ
+4. Участники: Список информации об участниках
+5. Уведомление о сообщениях: получение личных сообщений, уведомлений, @me
+6. Мой профиль: Переключение предприятия, настройки мини-программы
 
-![Image Description](https://images.gitee.ru/uploads/images/2021/0811/145330_e6fc44b7_8189591.png 'Screenshot.png')
+![Описание изображения](https://images.gitee.ru/uploads/images/2021/0811/145330_e6fc44b7_8189591.png 'Screenshot.png')
 
-**How to use?**
+**Как использовать?**
 
-1. Log in to Gitee Mini Program and go to the homepage to view enterprise resources intuitively
+1. Войдите в мини-программу Gitee и перейдите на главную страницу для интуитивного просмотра ресурсов предприятия
 
-![Image Description](https://images.gitee.ru/uploads/images/2021/0830/001952_6f851c7f_7722649.png 'Screenshot.png')
+![Описание изображения](https://images.gitee.ru/uploads/images/2021/0830/001952_6f851c7f_7722649.png 'Screenshot.png')
 
-2. Create tasks anytime, anywhere using the mini program;
+2. Создавайте задачи в любое время и в любом месте с помощью мини-программы;
 
-When you create a new task in the mini program, the following operations are supported:
-① Select the belonging project & repository;
-② Assign task owner & collaborators;
-③ Tagging & Uploading Attachments;
-④ Stash tasks. (Exclusive to Mini Programs! Support stashing multiple tasks)
+При создании новой задачи в мини-программе поддерживаются следующие операции:
+① Выбор проекта и хранилища;
+② Назначение владельца задачи и соавторов;
+③ Пометка и загрузка вложений;
+④ Хранить задачи. (Эксклюзив для мини-программ! Поддержка хранения нескольких задач)
 
-![Image Description](https://images.gitee.ru/uploads/images/2021/0830/002032_950766a7_7722649.png 'Screenshot.png')
+![Описание изображения](https://images.gitee.ru/uploads/images/2021/0830/002032_950766a7_7722649.png 'Screenshot.png')
 
-3. Online PR review is also available at any time;
+3. Онлайн-обзор запросов на слияние также доступен в любое время;
 
-When you review a PR in a Mini Program, the following operations are supported:
-① View code changes;
-② Through review;
-③ Through testing;
-④ Merge PR;
-⑤ Close PR.
+Когда вы просматриваете запросов на слияние в мини-программе, поддерживаются следующие операции:
+① Просмотр изменений кода;
+② Через просмотр;
+③ Тестирование;
+④ Объединение запросов на слияние;
+⑤ Закрытие запросов на слияние.
 
-![Image Description](https://images.gitee.ru/uploads/images/2021/0707/154123_08d389c8_7722649.png 'Screenshot.png')
+![Описание изображения](https://images.gitee.ru/uploads/images/2021/0707/154123_08d389c8_7722649.png 'Screenshot.png')
 
-4. Real-time online notifications, no missing any key information;
+4. Онлайн-уведомления в режиме реального времени, не пропуская никакой ключевой информации;
 
-![Image Description](https://images.gitee.ru/uploads/images/2021/0830/002143_37c26c67_7722649.png 'Screenshot.png')
+![Описание изображения](https://images.gitee.ru/uploads/images/2021/0830/002143_37c26c67_7722649.png 'Screenshot.png')
 
-5. Set up personal center, freely configure your own mini program.
+5. Установите персональный центр, свободно настройте свою собственную мини-программу.
 
-![Image Description](https://images.gitee.ru/uploads/images/2021/0707/154331_6903cd6f_7722649.png 'Screenshot.png')
+![Описание изображения](https://images.gitee.ru/uploads/images/2021/0707/154331_6903cd6f_7722649.png 'Screenshot.png')
 
-Open WeChat and scan the following mini-program QR code to explore Gitee Enterprise Mini-program together.
+Откройте WeChat и отсканируйте следующий QR-код мини-программы, чтобы вместе изучить мини-программу Gitee Enterprise.
 
-![Image Description](https://images.gitee.ru/uploads/images/2021/0707/154655_0fb12715_7722649.png 'Screenshot.png')
+![Описание изображения](https://images.gitee.ru/uploads/images/2021/0707/154655_0fb12715_7722649.png 'Screenshot.png')
 
-If you encounter any issues during use, please go to the [user feedback repository](https://gitee.ru/oschina/git-osc/issues) to provide feedback.
+Если в процессе использования у вас возникнут какие-либо проблемы, пожалуйста, посетите [хранилище отзывов пользователей](https://gitee.ru/oschina/git-osc/issues), чтобы оставить свой отзыв.

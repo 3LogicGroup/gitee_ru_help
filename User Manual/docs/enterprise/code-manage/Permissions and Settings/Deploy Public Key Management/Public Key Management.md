@@ -1,11 +1,11 @@
 ---
-title: Public Key Management
+title: Управление открытыми ключами
 origin-url: https://gitee.ru/help/articles/4180
 ---
 
  
-Users can browse/enable/disable/delete the SSH Key that has been added to the current repository by going to the repository homepage 'Repository Settings' -> 'Deploy Public Key Management'.
+Пользователи могут просматривать/включать/отключать/удалять SSH-ключи, добавленные в текущий репозиторий, перейдя на домашнюю страницу репозитория "Настройки репозитория" -> "Развернуть управление открытыми ключами".
 
-![Image Description](../../../../../assets/image221.png)
+![![Описание изображения](../../../../../assets/image221.png)
 
-![Image Description](../../../../../assets/image222.png)
+![Описание изображения](../../../../../assets/image222.png)

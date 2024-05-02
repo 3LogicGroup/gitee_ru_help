@@ -1,61 +1,63 @@
 ---
-title: Fork+PullRequest mode
+title: Режим Fork+PullRequest (Создание форка + Запрос на слияние)
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 origin-url: https://gitee.ru/help/articles/4128
 ---
 
-The most common and recommended way to participate in repository development on Gitee is the 'Fork + Pull' model. In the 'Fork + Pull' model, repository contributors do not need to apply for commit permissions from the repository creator. Instead, they create a fork of the repository in their own hosting space. As for the commits created in the forked repository, they can easily use Gitee's Pull Request tool to send a Pull Request to the original repository maintainer.
+Наиболее распространенным и рекомендуемым способом участия в разработке репозитория на Gitee является модель "Fork + Pull" (Создание форка и Слияние). В модели "Fork + Pull" участникам репозитория не нужно запрашивать разрешения на коммит у создателя репозитория. Вместо этого они создают ветки репозитория в своем собственном пространстве хостинга. Что касается коммитов, созданных в разветвленном репозитории, они легко могут использовать инструмент запроса на извлечение Gitee для отправки запроса на извлечение разработчику исходного репозитория.
 
-### 1. What is Pull Request?
+### 1. Что такое запрос на слияние?
 
-A Pull Request is a way to submit changes between two repositories, usually used for submitting differences between forked and original repositories. It is also a very good way for team collaboration. Now, let's explain how to submit a Pull Request on the Gitee platform:
+Запрос на слияние - это способ отправки изменений между двумя репозиториями, обычно используемый для отправки различий между разветвленным и исходным репозиториями. Кроме того, это очень хороший способ совместной работы команды. Теперь мы объясним, как отправить запрос на слияние на платформе Gitee:
 
-Note: Gitee platform requires the source repository and the target repository to have a fork relationship in order to submit a Pull Request. So, if you want to submit a Pull Request, you must first fork a repository and then submit the Pull Request to that repository. Additionally, you can also submit Pull Requests to all repositories that have the fork relationship with that parent repository.
+Примечание: для отправки запроса на слияние на платформе Gitee обязательным является требование, чтобы между исходным и целевым репозиториями существовало отношение форка. Итак, если вы хотите отправить запрос на слияние, вам нужно сначала создать форк репозитория, а затем отправить в этот репозиторий запрос на слияние. Кроме того, вы также можете отправлять запросы на слияние во все репозитории, имеющие связь форка с этим родительским репозиторием.
 
-### 2. How to fork a repository
+### 2. Как создать форк репозитория
 
-Forking a repository is very simple. Go to the repository page, then find the fork button in the upper right corner. After clicking, select the namespace to fork to, then click confirm and wait for the system to complete the repository cloning operation in the background. The fork operation is complete, as shown in the figure:
+Создать форк репозитория очень просто. Пройдите на страницу репозитория, затем в правом верхнем углу найдите кнопку создания форка. Нажав на неё, выберите пространство имен для создания форка, затем нажмите "Подтвердить" и дождитесь, пока система завершит операцию клонирования репозитория в фоновом режиме. Операция осздания форка завершена, как показано на рисунке:
 
 ![](Fork+PullRequest%E6%A8%A1%E5%BC%8F.assets/image.png)
 
-### 3. How to submit a Pull Request
+### 3. Как отправить запрос на слияние
 
-First, your repository must have differences with the target repository in order to submit, such as this:
+Во-первых, ваш репозиторий должен иметь отличия от целевого репозитория, в который намечена отправка, например, такое:
 
 ![](Fork+PullRequest%E6%A8%A1%E5%BC%8F.assets/image-1.png)
 
-If there are no differences or the target branch is newer than the branch you submitted the Pull Request to, you will receive this prompt:
+Если различий нет или целевая ветка новее ветки, в которую вы отправили запрос на слияние, вы получите вот такое сообщение:
 
 ![](Fork+PullRequest%E6%A8%A1%E5%BC%8F.assets/image-2.png)
 
-Then, fill in the description of the Pull Request, click on 'Submit Pull Request', and you can submit a
+Затем заполните описание запроса на слияние, нажмите "Отправить запрос на слияние", и отправьте
 
 ![](Fork+PullRequest%E6%A8%A1%E5%BC%8F.assets/image-3.png)
 
-4. How to manage existing Pull Requests
+4. Как управлять существующими запросами на слияние
 
-First, for an existing Pull Request, if you only have permissions as an observer or reporter, your access will be restricted. Please refer to the Gitee platform documentation on role permissions for specific restrictions. The following information only applies to administrator permissions. If you notice any differences, please check if you have administrator permissions or if you are the creator of the Pull Request.
+Во-первых, ваш доступ к существующему запросу на слияние будет ограничен, если у вас есть права только наблюдателя или докладчика. Для получения информации о и конкретных ограниченях ознакомьтесь с документацией платформы Gitee о разрешениях ролей. Следующая информация применима только к правам администратора. Если вы заметили какие-либо различия, удостоверьтесь в том, что у вас права администратора или вы являетесь создателем запроса на слияние.
 
-### 5. How to modify an existing Pull Request
+### 5. Как изменить существующий запрос на слияние
 
-Click the edit button in the top right corner of the Pull Request details page, and an edit box will pop up. Modify the information you need to modify in the edit box, and then click Save to modify the Pull Request, as shown in the following figure:
+Нажмите кнопку "Редактировать" в правом верхнем углу страницы сведений о запросе на слияние, и появится окно редактирования. Измените информацию, которую вам нужно изменить, в поле редактирования, а затем, чтобы изменить запрос на слияние,  нажмите "Сохранить", как показано на следующем рисунке:
 
 ![](Fork+PullRequest%E6%A8%A1%E5%BC%8F.assets/image-4.png)
 
-Please note that on this page, you can assign responsible persons and testers to the Pull Request. Each operation will notify the corresponding personnel
+Обратите внимание, что на этой странице для запроса на слияние вы можете назначить ответственных лиц и тестировщиков О каждой операции будет уведомляться соответствующий персонал
 
-### 6. How to submit bug fixes to a Pull Request
+### 6. Как отправить исправления ошибок в запрос на слияние
 
-For bug fixes or any updates in Pull Requests, there is no need to submit a new Pull Request. Just push to the branch where you submitted the Pull Request, and later our backend will automatically update these commits and add them to this Pull Request.
+Для исправления ошибок или каких-либо обновлений в запросах на слияние нет необходимости отправлять новый запрос на слияние. Просто перейдите в ветку, в которую вы отправили запрос на слияние, и через некоторое время наш сервер автоматически обновит эти коммиты и добавит их в этот запрос на слияние.
 
-### 7. What to do if a Pull Request cannot be automatically merged
+### 7. Что делать, если автоматического выполнения запроса на слияние не происходит
 
-After submitting a Pull Request, during the handling of this Pull Request, it changes from being able to be automatically merged to not being able to be automatically merged. This is a very normal thing. At this point, we have two options. One is to continue merging to the target and manually resolve the conflicting parts. The other is to resolve the conflict first, so that the Pull Request is in a mergeable state, and then use automatic merging. Generally, we officially recommend the second option, which is to resolve the conflict first and then merge. The specific operation is as follows:
+После отправки запроса на слияние, во время обработки этого запроса на слияние, он изменяется с возможности автоматического объединения на невозможность автоматического объединения. Это совершенно нормальное явление. На данный момент у нас есть две возможности. Одна из них - продолжить слияние с целевым репозиторием и вручную устранить конфликт между конфликтующими частями. Другая - сначала разрешить конфликт, чтобы запрос на слияние находился в пригодном для слияния состоянии, а затем выполнить автоматическое слияние. Как правило, мы официально рекомендуем второй вариант, который заключается в том, чтобы сначала разрешить конфликт, а затем выполниь слияние. Конкретная операция заключается в следующем:
 
-First, switch to the branch where you want to submit the Pull Request locally, then fetch the target branch to the local. At this point, conflicts may occur, refer to the section [How to handle code conflicts](/help/articles/4194) to resolve the conflicts. After resolving the conflicts, commit to the branch where the Pull Request is located. Wait for the system to complete the update of the Pull Request in the background, and the Pull Request will be in the automatically mergeable state.
+Сначала переключитесь на ветку, в которую вы хотите локально отправить запрос на слияние, затем извлеките целевую ветку в локальную. На этом этапе могут возникать конфликты, способы разрешения которых приведены в разделе [Как устранять конфликты кода](/help/articles/4194).
 
-### 8. What if a Pull Request was accidentally merged? Can it be rolled back?
+После разрешения конфликтов выполните коммит в ветке, в которой находится запрос на слияние. Дождитесь, пока система завершит обновление запроса на слияние в фоновом режиме, и запрос на слияние перейдет в автоматически объединяемое состояние..
 
-For a wrongly merged Pull Request, we provide a rollback functionality that generates a rollback XXX Pull Request. Accepting this Pull Request will complete the rollback action. Note that rollback essentially submits a completely opposite Pull Request, so you still need to test it for integrity. Also, to avoid breaking other Pull Requests, it is recommended to perform the rollback action only when the Pull Request to be rolled back is the last merge operation and there are no more commits above it. Otherwise, please handle it manually.
+### 8. Что делать, если запрос на слияние был случайно объединен? Можно ли откатить эту операцию?
+
+Для ошибочно объединенных запросов на слияние мы предоставляем функцию отката, генерирующую запрос на откат XXX. Принятие этого запроса на слияние завершит операцию отката. Обратите внимание, что откат, по сути, отправляет совершенно противоположный запрос на слияние, поэтому вам все равно необходимо проверить его на целостность. Кроме того, во избежание нарушения других запросов на слияние, рекомендуется выполнять операцию отката только в том случае, если подлежащий откату запрос на слияние является последней операцией слияния и над ним больше нет коммитов. В противном случае операцию необходимо выполнить вручную.

@@ -1,35 +1,35 @@
 ---
-title: What is a Release
+title: Что такое Релиз
 ---
  
 
-## Introduction
+## Введение
 
-`Release` is a top-level object with `Changelogs` and binary files, representing all project history up to a specific point in time beyond the Git architecture itself.
+`Релиз` - объект верхнего уровня с `Журналами изменений` и двоичными файлами, представляющий всю историю проекта вплоть до определенного момента времени за пределами самой архитектуры Git.
 
-## Purpose of Release
+## Предназначение релиз
 
-By using `release`, not only can you view the project history through source code, but you can also further describe the project state through pre-compiled binary files.
+Используя `релиз`, вы можете не только просмотреть историю проекта через исходный код, но и более подробно описать состояние проекта через предварительно скомпилированные бинарные файлы.
 
-The meaning and significance of "beyond the Git architecture itself"
+Смысл и значение выражения "за пределами самой архитектуры Git"
 >
-> 1. git itself can only record project modifications, and it is not suitable for recording compiled binary files of projects.
-> 2. **Through `release`, developers can save the compiled binary files of the project when releasing a version, making it convenient for users to download and search for specific versions of binary files.**
+> 1. Сам git может записывать только изменения проекта и не подходит для записи скомпилированных бинарных файлов проектов.
+> 2. **С помощью `релиза` разработчики могут сохранять скомпилированные бинарные файлы проекта при выпуске версии, что делает удобными загрузку и поиск конкретных версий бинарных файлов для пользователей**.
 >  
 
-## Summary of Release Features
+## Краткое описание возможностей релиза
 
-Combining the characteristics described in the previous section `beyond the Git architecture itself`, the following can be understood and summarized:
+Объединяя характеристики, описанные в предыдущем разделе "за пределами самой архитектуры Git", можно понять и обобщить следующее:
 >
-> 1. Release versions are not a native capability provided by Git, but a version management capability based on Git provided by platforms (such as [Gitee]) that offer hosting capabilities.
-2. Users can quickly download the corresponding version binary files through `release` when accessing the project, without downloading the source code and compiling it locally, greatly reducing the learning cost for users to use the software.
-In a release, it generally includes `the source code of the corresponding release version`, `the compressed package of the source code of the corresponding release version` (which can be downloaded from the platform's Archive without using Git command to clone and check out), and `the binary files uploaded by the developer when creating the release` (i.e., attachments).
-> 4. `Binary files uploaded by developers when creating releases` (i.e., attachments) are uploaded by developers in the release
+> 1. Релизные версии - это не встроенная возможность, предоставляемая Git, а возможность управления версиями на основе Git, предоставляемая платформами (такими как [Gitee]), предлагающими возможности хостинга.
+2. При доступе к проекту пользователи могут быстро загрузить двоичные файлы соответствующей версии через `релиз`, не загружая исходный код и не компилируя его на локальной машине, что значительно снижает затраты пользователей на обучение использованию программного обеспечения.
+В релизе он обычно включает `исходный код соответствующей версии релиза`, `сжатый пакет исходного кода соответствующей версии релиза` (который можно загрузить из архива платформы без использования команды Git для клонирования и извлечения) и `двоичные файлы, загруженные с помощью разработчику при создании выпуска` (т.е. вложений).
+> 4. `Двоичные файлы, загружаемые разработчиками при создании релизов` (т.е. вложения) загружаются разработчиками в релизе>
 
-## Use and Management of Releases
+## Использование релизов и управление ими
 
-You can create releases on [Gitee] to package software, release notes, and attachments for others to download.
+Вы можете создавать релизы на [Gitee] для упаковки программного обеспечения, примечаний к релизу и вложений для скачивания другими пользователями.
 
-By creating a distribution, you can deliver iterations of your project to users.
+Создавая дистрибутив, вы можете предоставлять итерации вашего проекта пользователям.
 
-> Repository collaborators and people with write access to the repository can create, edit, and delete releases.
+> Участники репозитория и люди, имеющие доступ к записи в репозиторий, могут создавать, редактировать и удалять релизы.

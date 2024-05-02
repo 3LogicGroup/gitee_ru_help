@@ -1,14 +1,14 @@
 ---
-title: How to merge branches
+title: Как объединять ветки
 origin-url: https://gitee.ru/help/articles/4196
 ---
 
-## Branch merging can be divided into two cases, one is merging local branches and the other is merging remote branches into local branches. The following GIF animations demonstrate each case respectively.
+## Объединение веток можно разделить на два случая, один - слияние локальных веток, а другой - слияние удаленных веток в локальные ветки. На следующих GIF-анимациях показан каждый случай соответственно.
 
-### **Merge branches locally:**
+### **Объединить ветки локально:**
 
-![Image Description](./assets/11110502_Puw4.gif)
+![Описание изображения](./assets/11110502_Puw4.gif)
 
-### **Merge Remote Branches**
+### **Объединить удаленные ветки**
 
-![Image Description](./assets/11105933_WdrB.gif)
+![Описание изображения](./assets/11105933_WdrB.gif)

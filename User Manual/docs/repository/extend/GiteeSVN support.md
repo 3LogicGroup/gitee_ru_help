@@ -1,102 +1,99 @@
 ---
-title: GiteeSVN Support
+title: Поддержка GiteeSVN
 
 origin-url: https://gitee.ru/help/articles/4131
 ---
 
-Gitee currently supports using Subversion to operate on repositories. Below is a guide and notes for usage.
+Меры предосторожности перед использованием
 
-Precautions before use
-
-1. It is not recommended to use Subversion for repositories with a size exceeding 300 MB. When the repository capacity reaches 400 MB or 300 MB and contains a large amount of non-text data, we will disable Subversion support for the repository.
+1. Не рекомендуется использовать Subversion для репозиториев размером более 300 МБ. Если объем репозитория достигает 400 МБ или 300 МБ, и при этом в нем содержится большое количество нетекстовых данных, мы отключим поддержку Subversion для репозитория.
   
-2. Since GIT does not support submitting empty directories, whether it is a normal repository or a repository with Subversion enabled, it is stored as a GIT repository on the storage machine. Subversion commits are submitted to the git repository. Therefore, Gitee's Subversion does not support submitting empty directories.
+2. Поскольку GIT не поддерживает отправку пустых каталогов, будь то обычный репозиторий или репозиторий с включенной Subversion, он хранится как GIT-репозиторий на машине хранения. Коммиты Subversion отправляются в репозиторий git. Поэтому Gitee's Subversion не поддерживает отправку пустых каталогов.
 
-3. When opening Subversion for the first time and operating a repository, if the repository is large or there are many commits, the response time will be longer due to caching.
+3. При первом открытии Subversion и работе с репозиторием, если репозиторий большой или в нем много коммитов, время отклика будет больше из-за кэширования.
 
-4. Subversion's Hook mechanism is not supported, please use WebHook instead.
+4. Механизм хуков в Subversion не поддерживается, вместо него используйте вебхуков.
 
-5. Subversion properties are not fully supported.
+5. Свойства Subversion поддерживаются не полностью.
 
-6. The client needs to enable SASL support, and unsupported clients cannot access.
+6. Клиенту необходимо включить поддержку SASL, неподдерживаемые клиенты не могут получить доступ.
 
-7. Some svn commands are not supported. You can check the compatibility of the Subversion client.
+7. Некоторые команды svn не поддерживаются. Вы можете проверить совместимость клиента Subversion.
 
-8. The mapping of version numbers, currently the version number calculation of Subversion is based on the number of commits in this branch minus one, excluding merges. If operations such as forced rollback in git are used, please re-checkout.
+8. Сопоставление номеров версий, в настоящее время расчет номера версии в Subversion основан на количестве коммитов в данной ветке минус один, исключая слияния. Если используются такие операции, как принудительный откат в git, пожалуйста, перепроверьте.
 
-*WARNING:*  
+* ПРЕДУПРЕЖДЕНИЕ:*  
 
-> Since git did not consider empty files in its design [Kernel.org: Git FAQ](https://git.wiki.kernel.org/index.php/GitFaq#Can_I_add_empty_directories.3F)
+> Поскольку при разработке git не учитывал пустые файлы [Kernel.org: Git FAQ](https://git.wiki.kernel.org/index.php/GitFaq#Can_I_add_empty_directories.3F)
 
->The principle we designed is not to break or actively modify the user's repository. Our backend stores a complete git repository. If we add it, the commit content will not be consistent. We recommend adding a placeholder file like .keep when adding a directory, an empty file is fine.
+> Принцип, который мы разработали, заключается в том, чтобы не ломать или активно модифицировать пользовательский репозиторий. Наш бэкенд хранит полный репозиторий git. Если мы добавим его, содержимое коммитов не будет согласованным. Мы рекомендуем добавлять файл-заполнитель типа .keep при добавлении директории, пустой файл тоже подойдет.
 
-When using Git and SVN mixed, try not to use Git force push. [Precautions for using Git and SVN mixed](https://git.mydoc.io/?t=122635)
+При смешанном использовании Git и SVN старайтесь не использовать Git force push. [Меры предосторожности при использовании Git и SVN вместе](https://git.mydoc.io/?t=122635)
 
-## About the Revision
+## О ревизии
 
-The final interpretation of the Subversion feature belongs to OSChina.NET. The rules for accessing Subversion may change in the next revision.
+Права на окончательную интерпретацию функции Subversion принадлежит OSChina.NET. Правила доступа к Subversion могут измениться в следующей ревизии.
 
-## Enable Method
+## Метод включения
 
-1. Enable it in the project settings
+1. Включите его в настройках проекта
 
-![Enable svn](https://images.gitee.ru/uploads/images/2020/0924/202415_8b744022_13510.png)
+![Включить svn](https://images.gitee.ru/uploads/images/2020/0924/202415_8b744022_13510.png)
 
-2. If it is an empty repository:
+2. Если это пустой репозиторий:
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/0924/202415_443445fc_13510.png)
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/0924/202415_443445fc_13510.png)
+## Руководство пользователя
 
-## User Guide
-
-Gitee supports the SVN protocol. For SVN, checking out is usually used to obtain the code of a repository. In the project homepage, you can usually get the URL.
+Gitee поддерживает протокол SVN. Для SVN проверка обычно используется для получения кода репозитория. На главной странице проекта обычно можно получить URL.
 
 ![svn-url](http://static.oschina.net/uploads/space/2015/0318/152207_DRMJ_139664.png)
 
-The repository address is:
+Адрес репозитория выглядит следующим образом:
 
 ```bash
 svn://git.oschina.net/svnserver/newos
 ```  
 
-### 1. Get repository code
+### 1. Получение кода репозитория
 
 ```bash
 svn checkout svn://git.oschina.net/svnserver/newos newos
 ```
 
-**Important Note** Gitee's SVN integration is implemented through a git repository, and the URL rule is
+**Важное примечание** Интеграция с SVN в Gitee реализована через git-репозиторий, и правило URL имеет следующий вид
 
-Using the above command, we will get the code of the `default branch` of the project. And we will name the local working directory as *newos*
+Используя приведенную выше команду, мы получим код `дефолтной ветки` проекта. А локальную рабочую директорию мы назовем *newos*.
 
-If not followed by newos, SVN defaults to naming the local working directory as the project name
+Если за командой не следует newos, SVN по умолчанию называет локальный рабочий каталог именем проекта
 
 ```bash
 svn checkout svn://git.oschina.net/svnserver/newos
 ```
 
-If you want to `get code from any branch`, for example, get the dev branch of newos, please enter a command similar to the following:
+Если вы хотите `получить код из любой ветки`, например, получить dev-ветку newos, введите команду, подобную следующей:
 
-- At this time, the address is: `svn://domain/username/project/branches/branch-name`.
+- На данный момент адрес таков: `svn://domain/username/project/branches/branch-name`.
 
 ```bash
 svn checkout svn://git.oschina.net/svnserver/newos/branches/dev
 ```
 
-Special note, to get the main branch, which is the master branch, you can use the following branch format
+Особое примечание: чтобы получить главную ветку, являющуюся мастер-веткой, вы можете использовать следующий формат ветки
 
 ```bash
 svn checkout svn://git.oschina.net/svnserver/newos/trunk newos
 ```
 
-svn trunk branch corresponds to the master branch. Users should try not to use the following format
+Ветка svn trunk соответствует ветке master. Пользователи должны стараться не использовать следующий формат:
   
 ```bash
 svn checkout svn://git.oschina.net/svnserver/newos
 ```
 
-## Operation Instructions
+## Инструкции по использованию
 
-If checking out only a part of the repository, and the repository root directory contains directories like branches/tags/trunk, use the complete path layout as follows:
+Если вы проверяете только часть репозитория, а корневой каталог репозитория содержит каталоги типа branches/tags/trunk, используйте полную схему пути следующим образом:
 
 ```bash
 svn://git.oschina.net/username/example/trunk/tags/hello
@@ -104,31 +101,31 @@ svn://git.oschina.net/username/example/branches/dev/trunk
 svn://git.oschina.net/username/example/branches/dev/branches
 ```
 
-If there is no master branch, there is no trunk branch either. The checked out URL cannot omit the branch name. For example, if there is only one dev branch, you must use the following format, otherwise it will prompt that the repository does not exist.
+Если нет мастер-ветки, то нет и магистральной ветки. В URL-адресе проверенного репозитория нельзя опускать название ветки. Например, если существует только одна ветка dev, вы должны использовать следующий формат, иначе будет выдано сообщение о том, что репозиторий не существует.
 
 ```bash
 svn co svn://git.oschina.net/svnserver/newos/branches/dev  svnserver_dev
 ```
 
-Open the terminal and enter the above command. The first authentication field is the user's password, which can be left empty. The username is the user's 'email address' used when logging in to Gitee. The password is the password used when logging in to Gitee.
+Откройте терминал и введите приведенную выше команду. Первое поле аутентификации - это пароль пользователя, который можно оставить пустым. Имя пользователя - это "адрес электронной почты" пользователя, используемый при входе в Gitee. Пароль - это пароль, используемый при входе в Gitee.
 
-Generally, SVN encrypts and caches the user's username and password, so only the user's email and password need to be entered for repository operations for the first time.
+Как правило, SVN шифрует и кэширует имя пользователя и пароль, поэтому при первых операциях с репозиторием нужно вводить только email и пароль пользователя.
 
-Clear the password cache, the files in the `.subversion/auth/svn.simple` folder under the user's directory.
+Очистите кэш паролей, файлы в папке `.subversion/auth/svn.simple` под каталогом пользователя.
 
-![image](http://static.oschina.net/uploads/space/2015/0318/153828_ptt4_139664.png)
+![изображение](http://static.oschina.net/uploads/space/2015/0318/153828_ptt4_139664.png)
 
-The following figure shows the successful pull of the project code.
+На следующем рисунке показано успешное извлечение кода проекта.
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/0924/202415_c08bc285_13510.png)
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/0924/202415_c08bc285_13510.png)
 
-View local working directory information:
+Просмотр информации о локальном рабочем каталоге:
 
 ```bash
 svn info
 ```
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/0924/202415_80c2678b_13510.png)
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/0924/202415_80c2678b_13510.png)
 
 ```bash
 cd helloworld
@@ -140,75 +137,75 @@ svn update .
 svn commit -m "first svn commit"
 ```
 
-Subversion recommends using `svn update` to update the working copy before committing. It is similar to `git pull` followed by `git push`.
+Subversion рекомендует использовать `svn update` для обновления рабочей копии перед фиксацией. Это похоже на `git pull` с последующим `git push`.
 
-For Subversion, the submission is online. If the machine is offline, the submission will fail. In Git terms, this process can be understood as git commit+git push.
+Для Subversion отправка происходит в режиме онлайн. Если машина находится в оффлайне, отправка будет неудачной. В терминах Git этот процесс можно понимать как git commit+git push.
 
-Users can also dynamically display when using svn to commit code.
+Пользователи также могут динамически отображать при использовании svn для фиксации кода.
 
-List the contents of directories in the repository:
+Перечислить содержимое каталогов в репозитории:
 
 ```bash
 svn list svn://git.net/svnserver/newos/trunk
 ```
 
-Export all files of the specified branch in the repository, without version control information:
+Экспорт всех файлов указанной ветки в репозитории, без информации о контроле версий:
 
 ```bash
 svn export svn://git.net/svnserver/newos/trunk newos
 ```
 
-## Remarks
+## Примечания
 
-### Install Subversion client
+### Установка клиента Subversion
 
-On the Apache Foundation's Subversion official website: 
+На официальном сайте Apache Foundation's Subversion: 
 
 [http://subversion.apache.org](http://subversion.apache.org)
 
-Binary download prompt page:  
+Страница запроса на загрузку бинарных файлов:  
 
 [http://subversion.apache.org/packages.html](http://subversion.apache.org/packages.html)
 
-Windows System
+#### Система Windows
 
-Integration with resource management: [TortoiseSVN](http://tortoisesvn.net/downloads.html), commonly known as 'Tortoise', is an SVN client that allows easy management of SVN repositories.
+Интеграция с управлением ресурсами: [TortoiseSVN](http://tortoisesvn.net/downloads.html), широко известный как "Tortoise", - это SVN-клиент, позволяющий легко управлять SVN-репозиториями.
 
-It is strange that TortoiseSVN is not recommended on Apache.
+Странно, что TortoiseSVN не рекомендуется для Apache.
 
-In addition, there is SlikSVN, download address: [https://sliksvn.com/download/](https://sliksvn.com/download/)
+Кроме того, существует SlikSVN, адрес для скачивания: [https://sliksvn.com/download/](https://sliksvn.com/download/)
 
-The others will not be introduced one by one.
+Остальные не будут представлены по одному.
 
-#### Linux system
+#### Cистема Linux
 
-Generally, the package control software that comes with Linux system can install Subversion. If the version is lower than 1.8, it is recommended to download precompiled binaries or compile Subversion by yourself. No more explanation here.
+Как правило, программное обеспечение для управления пакетами, поставляемое с системой Linux, может установить Subversion. Если версия ниже 1.8, рекомендуется скачать прекомпилированные двоичные файлы или скомпилировать Subversion самостоятельно. Больше объяснений здесь нет.
 
 #### OS X
 
-XCode comes with Subversion version 1.7.x, which is too old, and Gitee only supports SVN clients above version 1.8.
+XCode поставляется с Subversion версии 1.7.x, которая является слишком старой, а Gitee поддерживает только SVN-клиенты выше версии 1.8.
 
-If Homebrew is installed
+Если установлен Homebrew
 
 ```bash
 brew install subversion
 ```
 
-Alternatively, you can use the pre-compiled version from WANdisco.
+В качестве альтернативы можно использовать предварительно скомпилированную версию от WANdisco.
 
 [http://www.wandisco.com/subversion/download#osx](http://www.wandisco.com/subversion/download#osx)
 
-### Compatibility of Subversion Client
+### Совместимость клиента Subversion
 
-We support Apache Subversion 1.8 or higher versions. When installing a Subversion client, if the error message is 'Could not negotiate a verification method', please make sure your client supports SASL verification. For example, on Ubuntu, you can install libsasl2-dev and then compile Subversion, so that the client will support SASL verification.
+Мы поддерживаем Apache Subversion версии 1.8 или выше. При установке клиента Subversion, если появляется сообщение об ошибке 'Could not negotiate a verification method', убедитесь, что ваш клиент поддерживает проверку SASL. Например, на Ubuntu вы можете установить libsasl2-dev, а затем скомпилировать Subversion, чтобы клиент поддерживал проверку SASL.
 
 >sudo apt-get install libsasl2-dev
 
-When using svnkit or SubversionJavaHl IDE integrated clients, make sure to support SASL authentication.
+При использовании интегрированных клиентов svnkit или SubversionJavaHl IDE убедитесь, что они поддерживают SASL-аутентификацию.
 
-### Converting between GIT and SVN
+### Конвертация между GIT и SVN
 
-If a user has a project hosted on Subversion and wants to migrate it to Gitee, they can use git-svn to convert the project into a git-based repository and then push it to Gitee. This way, they can still use SVN to operate on the project. Please remember to create a new project on Gitee first.
+Если у пользователя есть проект, размещенный на Subversion, и он хочет перенести его на Gitee, он может использовать git-svn для преобразования проекта в репозиторий на основе git, а затем перенести его на Gitee. Таким образом, они смогут по-прежнему использовать SVN для работы с проектом. Пожалуйста, не забудьте сначала создать новый проект на Gitee.
 
 ```bash
 git svn clone http://myhost/repo -T trunk -b branches -t tags 
@@ -216,7 +213,7 @@ git remote add oscgit https://git.oschina.net/user/repo
 git push -u oscgit --all
 ```
 
-Usually, if there is a local SVN repository, you can:
+Обычно, если есть локальный SVN-репозиторий, вы можете выполнить следующую операцию:
 
 ```bash
 git svn clone file:///tmp/svn-repo -T trunk -b branches -t tags 
@@ -224,27 +221,27 @@ git remote add oscgit https://git.oschina.net/user/repo
 git push -u oscgit  --all
 ```
 
-After moving the project to Gitee, use the svn command to checkout and operate on the project.
+После перемещения проекта в Gitee используйте команду svn для проверки и работы с проектом.
 
-Advanced Guide:
+Продвинутое руководство:
 
 [http://git-scm.com/book/zh/ch8-2.html](http://git-scm.com/book/zh/ch8-2.html)
 
-### Install git, git-svn
+### Установите git, git-svn
 
 #### Windows
 
-msysgit official website [http://msysgit.github.io/], the version is relatively low.
+Официальный сайт msysgit [http://msysgit.github.io/], версия относительно низкая.
 
-Github for Windows provides the same git tool as msysgit.
+Github для Windows предоставляет тот же git-инструмент, что и msysgit.
 
-Download MSYS2 git from [http://sourceforge.net/projects/msys2], then start the terminal and install git. The current version is 2.4.3.
+Скачайте MSYS2 git с сайта [http://sourceforge.net/projects/msys2], затем запустите терминал и установите git. Текущая версия - 2.4.3.
 
 ```bash
 pacman -S git
 ```
 
-Cygwin git download link: [http://www.cygwin.com/](http://www.cygwin.com/), then use package management software or directly download git source code to compile git.
+Ссылка на загрузку Cygwin git: [http://www.cygwin.com/](http://www.cygwin.com/), затем используйте программное обеспечение для управления пакетами или непосредственно загрузите исходный код git для компиляции git.
 
 ```bash
 make configure
@@ -255,16 +252,16 @@ make install
 
 #### Linux
 
-If there is a package manager, directly install using the package manager.
+Если есть менеджер пакетов, выполните установку непосредственно с помощью менеджера пакетов.
 
-Such as Ubuntu
+Например, в Ubuntu
 
 ```bash
 sudo apt-get install git git-svn
 ```
 
-Also, it can be manually compiled.
+Кроме того, компиляцию можно выполнить вручную.
 
 #### Mac OSX
 
-Download link: [http://git-scm.com/download/mac](http://git-scm.com/download/mac)
+Ссылка для скачивания: [http://git-scm.com/download/mac](http://git-scm.com/download/mac)

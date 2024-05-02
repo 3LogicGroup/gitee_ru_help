@@ -1,33 +1,33 @@
 ---
-title: Gitee product quota explanation
+title: Описание квоты проукта Gitee
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 origin-url: https://gitee.ru/help/articles/4283
 ---
 
-## Community Edition (for individual users)
+## Общедоступная версия (для физических лиц)
 
-| Type | Explanation |
+| Тип | Описание | 
 |:------:|:--- |
-Number of Repositories
-The repository capacity: Git single repository capacity limit is 500M, SVN single repository capacity limit is 400M. The maximum size of a single file is 50M. The total repository capacity for a user is 5G. Note: The total repository refers to all repositories under the username and created organizations.
-| Attachment Capacity | Maximum file size for a single attachment is 100MB. Total repository attachment capacity is 1G. |
-| Number of members | There is no limit on the number of members in public repositories. The total number of collaborators in all private repositories under a personal account is limited to 5 |
+Количество репозиториев
+Вместимость репозитория: Лимит емкости одного репозитория Git составляет 50 МБ, емкость одного репозитория SVN составляет 400 МБ. Максимальный размер одного файла 50 МБ. Общая вместимость репозитория составляет 5 ГБ. Примечание: под общим репозиторием подразумеваются все репозитории под именем пользователя и созданные в организации.
+| Вместимость вложений | Максимальный размер загружаемого файла составляет 100 МБ. Общая вместимость вложений репозитрия составляет 1 ГБ. 
+| Количество участников | Для публичных репозиториев нет ограничений по количеству участников. Лимит общего количества соавторов во всех частных репозиториях составляет 5 человек.
 
 -------------------------
 
-## Enterprise Edition
+## Версия Enterprise Edition
 
-| Package | Free Edition | Basic Edition | Standard Edition | Advanced Edition | Exclusive Edition |
+| Пакет программного обеспечения | Бесплатная версия | Базовая версия | Стандартная версия | Продвинутая версия | Эксклюзивная версия
 | --- | --- | --- | --- | --- | --- |
-| Single Repository | Maximum 500 MB | Maximum 1 GB | Maximum 1 GB | Maximum 2 GB | Maximum 3 GB |
-| Single File | Max 50 MB | Max 100 MB | Max 100 MB | Max 200
+| Один репозиторий | Макс. 500 МБ | Макс. 1 ГБ | Макс. 1 ГБ | Макс. 2 ГБ | Макс. 3 ГБ
+| Один файл  | Макс. 50 МБ | Макс. 100 МБ | Макс. 100 МБ | Макс. 200
 
-For enterprise edition capacity details, please refer to: [Enterprise Edition vs Personal Edition Comparison](/help/articles/4167)
+Для получения дополнительной информации по вместимости в версии Enterprise Edition перейдите: [Сравнение версий Enterprise Edition и Personal Edition](/help/articles/4167):
 
-If the user accidentally adds large binary files to the repository during use, the repository size will quickly exceed the specified quota. Users can upgrade to the corresponding package quota or rewrite the history of the repository to slim down and unlock the push-pull service of the system for the repository.
+Если пользователь случайно добавил большой бинарный файл в репозиторий, размер репозитория автоматически увеличится на указанную квоту. Пользователи могут перейти на соответствующий квоте пакет или переписать истори. репозитория, тем самым уменьшив его и разблокировав сервис скачивания и отправки для репозитория. 
 
-- Package upgrade can be accessed: [https://gitee.ru/enterprises](https://gitee.ru/enterprises) for more information
+- Для обновления пакета программного обеспечения ознакомьтесь с информацией: [https://gitee.ru/enterprises](https://gitee.ru/enterprises)
 
-- For repository slimming solutions, please refer to: <https://gitee.ru/help/articles/4232>
+- Способы уменьшения объёма репозитория вы можете найти на странице: <https://gitee.ru/help/articles/4232>

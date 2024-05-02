@@ -1,32 +1,32 @@
 ---
-title: Issue and Pull Request Templates
+title: Шаблоны задачи и запросов на слияние
 origin-url: https://gitee.ru/help/articles/4145
 ---
 
-Gitee provides default issue and pull request templates to help developers use them in a standardized format. Users can use the issue template and pull request template in the following ways.
+Gitee предоставляет шаблоны задачи и запроса на слияние по умолчанию, чтобы помочь разработчикам использовать их в стандартизированном формате. Пользователи могут использовать шаблон задачи и шаблон запроса на слияние следующими способами.
 
-### **Select Template when Creating a Repository**
+### **Выбор шаблона при создании репозитория**
 
-1. Create a new normal
+1. Создание нового обычного
 
- - When creating a new repository, checking "Use issue template" actually creates a .gitee/ISSUE_TEMPLATE.zh-CN.md file in the root directory of the repository.
+- При создании нового репозитория проверка "Использовать шаблон задачи" фактически создает файл .gitee/ISSUE_TEMPLATE.zh-CN.md в корневой директории репозитория.
 
-![Image Description](../../../../../../assets/image196.png)
-![Image Description](../../../../../../assets/image197.png)
+![Описание изображения](../../../../../../assets/image196.png)
+![Описание изображения](../../../../../../assets/image197.png)
 
-2. Template repository
+2. Репозиторий шаблонов
 
-![Image Description](../../../../../../assets/image198.png)
-![Image Description](../../../../../../assets/image199.png)
+![Описание изображения](../../../../../../assets/image198.png)
+![Описание изображения](../../../../../../assets/image199.png)
 
-### **Create .gitee directory in the repository, and then add template files**
+### **Создание директории .gitee в репозитории, а затем добавьте файлы шаблонов**
 
-1. .gitee/ISSUE_TEMPLATE.zh-CN.md, issue Chinese template
-2. .gitee/ISSUE_TEMPLATE.en.md, issue English template
-3. .gitee/ISSUE_TEMPLATE.zh-TW.md, issue traditional Chinese template
-4. .gitee/PULL_REQUEST_TEMPLATE.zh-CN.md, PR Chinese template
-5. .gitee/PULL_REQUEST_TEMPLATE.en.md, PR English template
-6. .gitee/PULL_REQUEST_TEMPLATE.zh-TW.md, PR traditional Chinese template
+1. .gitee/ISSUE_TEMPLATE.zh-CN.md, шаблон задачи на китайском языке
+2. .gitee/ISSUE_TEMPLATE.en.md, шаблон задачи на английском языке
+3. .gitee/ISSUE_TEMPLATE.zh-TW.md, шаблон задачи на традиционном китайском языке
+4. .gitee/PULL_REQUEST_TEMPLATE.zh-CN.md, шаблон запроса на слияние на китайском языке
+5. .gitee/PULL_REQUEST_TEMPLATE.en.md, шаблон запроса на слияние на английском языке
+6. .gitee/PULL_REQUEST_TEMPLATE.zh-TW.md, шаблон запроса на слияние на традиционном китайском языке
 
-> Q: What is the purpose of different types of templates?
-> A: For example, if there are 3 types of language issue templates in your repository and the user submitting the issue is using the English version, then when the user checks 'Use issue template', it will intelligently use the English template. If the user is using the Chinese version, it will intelligently use the Chinese issue template.
+> Вопрос: Каково назначение различных типов шаблонов?
+> Ответ: Например, если в вашем репозитории есть 3 типа шаблонов задачи на разных языках, и пользователь, отправляющий задачу, использует английскую версию, то, когда пользователь установит флажок "Использовать шаблон задачи", система будет обоснованно использовать шаблон на английском языке. Если пользователь использует китайскую версию, он будет обоснованно использовать шаблон задачи на китайском языке.

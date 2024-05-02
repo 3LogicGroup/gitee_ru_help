@@ -1,113 +1,113 @@
 ---
-title: Multi-Cloud Host Group Management
-description: Multi-cloud host group management
+title: Управление группами хостов в нескольких облаках
+description: Управление группами хостов в нескольких облаках
 slug: /enterprise/pipeline/enterprise-setup/host/introduce
 keywords:
  - Gitee
- - Host Group
- - Host
- - Management
+ - Группа хостов
+ - Хост
+ - Управление
 ---
 
-## 1. Host Group
+## 1. Группа хостов
 
-Enterprise administrators can access the Enterprise Edition, go to 'Management' -> 'Feature Settings' -> 'Host Management' page, and set the projects or repositories that need to be associated with the host group.
+Администраторы предприятий могут получить доступ к Enterprise Edition, перейти на страницу 'Управление' -> 'Настройки функций' -> 'Управление хостом' и задать проекты или репозитории, которые должны быть связаны с группой хостов.
 
-Note: Associating repositories and project settings allows enterprise (organization) administrators to allocate machines to project teams. Only after associating the host group with the code repository, can it be called in the pipeline.
+Примечание: Ассоциирование репозиториев и настроек проектов позволяет администраторам предприятий (организаций) распределять машины между проектными группами. Только после ассоциации группы хостов с репозиторием кода его можно вызывать в конвейере.
 
-![Image Description](https://foruda.gitee.ru/images/1660230257898613744/屏幕截图.png )
+![Описание изображения](https://foruda.gitee.ru/images/1660230257898613744/屏幕截图.png )
 
-## 2. Host Types
+## 2. Типы хостов
 
-Add host (currently supports Alibaba Cloud, Huawei Cloud, Tencent Cloud, LAN host, public network host)
+Добавить хост (в настоящее время поддерживаются Alibaba Cloud, Huawei Cloud, Tencent Cloud, LAN-хост, хост публичной сети)
 
-## 3. Operation Guide
+## 3. Руководство по эксплуатации
 
-### 3.1 Create a host group
+### 3.1 Создание группы хостов
 
-![Image Description](https://foruda.gitee.ru/images/1660230378058600935/屏幕截图.png )
-> Click on 'Create Host Group', select the creation type, and support selecting self-import, import from LAN, import from Alibaba Cloud, import from Tencent Cloud, import from Huawei Cloud.
+![Описание изображения](https://foruda.gitee.ru/images/1660230378058600935/屏幕截图.png )
+> Нажмите "Создать группу хостов", выберите тип создания, поддерживается самоимпорт, импорт из локальной сети, импорт из Alibaba Cloud, импорт из Tencent Cloud, импорт из Huawei Cloud.
 
-#### 3.1.1 Alibaba Cloud Host
+#### 3.1.1 Хост облака Alibaba
 
-![Image Description](https://foruda.gitee.ru/images/1660230445097563873/屏幕截图.png )
->Enter basic information such as host group name, host group identifier, credential name, and read credential management data and host information.
+![Описание изображения](https://foruda.gitee.ru/images/1660230445097563873/屏幕截图.png )
+>Введите основную информацию, такую как имя группы хостов, идентификатор группы хостов, имя учетной записи, прочитайте данные управления учетными записями и информацию о хосте.
 
-![Image Description](https://foruda.gitee.ru/images/1660230651635002910/屏幕截图.png )
+![Описание изображения](https://foruda.gitee.ru/images/1660230651635002910/屏幕截图.png )
 
->Go to "Credentials Management" and add "Aliyun" type credentials.
+>Перейдите в раздел "Управление учетными данными" и добавьте учетные данные типа "Alibaba".
 
-![Image Description](https://foruda.gitee.ru/images/1660230475727162812/屏幕截图.png )
+![Описание изображения](https://foruda.gitee.ru/images/1660230475727162812/屏幕截图.png )
 
-Support automatically installing Alibaba Cloud Assistant for the hosts associated with the credentials.
+Поддержка автоматической установки Alibaba Cloud Assistant для хостов, связанных с учетными данными.
 
-#### 3.1.2 Other Types of Hosts
+#### 3.1.2 Другие типы хостов
 
-![Image Description](https://foruda.gitee.ru/images/1660230778144917527/屏幕截图.png )
+![Описание изображения](https://foruda.gitee.ru/images/1660230778144917527/屏幕截图.png )
 
->Enter basic information such as host group name, host group identifier, project scope, and repository scope.
+>Введите основную информацию, такую как имя группы хостов, идентификатор группы хостов, объем проекта и объем репозитория.
 
-### 3.2 Add Host
+### 3.2 Добавить хост
 
-#### 3.2.1 Add Alibaba Cloud type hosts
+#### 3.2.1 Добавление хостов типа Alibaba Cloud
 
-![Image Description](https://foruda.gitee.ru/images/1660230874051212207/屏幕截图.png )
-![Image Description](https://foruda.gitee.ru/images/1660230881500120946/屏幕截图.png )
-Support viewing host group information, as well as area, credential name, UUID, host information, etc. On this page, you can continue to [install cloud assistant](link), and reinstall the agent for the newly associated host with the credential.
+![Описание изображения](https://foruda.gitee.ru/images/1660230874051212207/屏幕截图.png )
+![Описание изображения](https://foruda.gitee.ru/images/1660230881500120946/屏幕截图.png )
+Поддержка просмотра информации о группе хостов, а также области, имени учетной записи, UUID, информации о хосте и т. д. На этой странице можно перейти к [install cloud assistant](ссылка) и переустановить агент для нового связанного хоста с учетной записью.
 
-#### 3.2.2 Add Huawei Cloud, Tencent Cloud, and public hosts
+#### 3.2.2 Добавление Huawei Cloud, Tencent Cloud и общедоступных хостов
 
-![Image Description](https://foruda.gitee.ru/images/1660230963953771050/屏幕截图.png )
->Click on Add Host to add hosts in this host group
+![Описание изображения](https://foruda.gitee.ru/images/1660230963953771050/屏幕截图.png )
+>Нажмите кнопку Добавить хост, чтобы добавить хосты в эту группу хостов.
 
-![Image Description](https://foruda.gitee.ru/images/1660230972095617783/屏幕截图.png )
->Support adding hosts one by one through commands and importing files in batches
+![Описание изображения](https://foruda.gitee.ru/images/1660230972095617783/屏幕截图.png )
+>Поддержка добавления хостов по одному с помощью команд и импорта файлов партиями
 
-![Image Description](https://foruda.gitee.ru/images/1660230979591649373/屏幕截图.png )
-> Add one by one through commands - open the command line of the host group to be deployed, and execute in a certain directory
+![Описание изображения](https://foruda.gitee.ru/images/1660230979591649373/屏幕截图.png )
+> Добавляйте по одной через команды - откройте командную строку группы хостов, которые нужно развернуть, и выполните в определенном каталоге
 
-![Image Description](https://foruda.gitee.ru/images/1660230986732197447/屏幕截图.png )
->Batch Import Hosts from Files
+![Описание изображения](https://foruda.gitee.ru/images/1660230986732197447/屏幕截图.png )
+> Пакетный импорт хостов из файлов
 
-Support viewing host group information, as well as operating system and host information, this page supports adding more hosts.
+Поддерживает просмотр информации о группах хостов, а также операционной системы и информации о хостах, эта страница поддерживает добавление дополнительных хостов.
 
-- Add Linux hosts one by one using commands or import files in batches
-- Windows hosts and Mac OS hosts only support adding them one by one through commands.
+- Добавляйте хосты Linux по одному с помощью команд или импортируйте файлы пакетно
+- Хосты Windows и Mac OS поддерживают добавление только по одному с помощью команд.
 
-#### 3.2.3 Add LAN Host
+#### 3.2.3 Добавить хост локальной сети
 
-Add proxy host: A proxy host is defined as a host in the local area network that can be reached by the target host and [https://server-agent.gitee.ru/](https://server-agent.gitee.ru/). It is used to connect the local area network and the public network while ensuring security.
-Please add proxy on the proxy host:
-![Image Description](https://foruda.gitee.ru/images/1660232643547283805/屏幕截图.png )
+Добавить прокси-хост: Прокси-хост определяется как хост в локальной сети, который может быть доступен целевому хосту и [https://server-agent.gitee.ru/](https://server-agent.gitee.ru/). Он используется для соединения локальной сети и сети общего пользования, обеспечивая при этом безопасность.
+Пожалуйста, добавьте прокси на прокси-хост:
+![Описание изображения](https://foruda.gitee.ru/images/1660232643547283805/屏幕截图.png )
 
->On the LAN host group page, select Add Proxy Host, copy the installation command, log in to the proxy host and execute the command in a certain directory. The proxy process will start in the background. You can use ps -ef | grep 'gitee-proxy' to check if the process is running.
+>На странице группы хостов LAN выберите Add Proxy Host, скопируйте команду установки, войдите на хост прокси и выполните команду в определенной директории. Процесс прокси запустится в фоновом режиме. Вы можете использовать ps -ef | grep 'gitee-proxy', чтобы проверить, запущен ли процесс.
 
-![Image Description](https://foruda.gitee.ru/images/1660232694183070611/屏幕截图.png )
+![Описание изображения](https://foruda.gitee.ru/images/1660232694183070611/屏幕截图.png )
 
-The proxy process will only retrieve the following information about the host:
+Процесс прокси будет получать только следующую информацию о хосте:
 
-1) Installation directory of the proxy, used for proxy reconnection
-2) Host machine CPU, memory, and hard disk information (not used for analysis)
-The proxy code open source repository is as follows (currently the repository is not publicly available):
+1) каталог установки прокси, используемый для переподключения прокси
+2) Информация о процессоре, памяти и жестком диске хост-машины (не используется для анализа).
+Репозиторий с открытым исходным кодом прокси расположен следующим образом (в настоящее время репозиторий не находится в открытом доступе):
    [https://gitee.ru/gitee-go/agent-proxy](https://gitee.ru/gitee-go/agent-proxy)
-The agent code open source repository is as follows (currently the repository is not publicly available):
+Репозиторий с открытым исходным кодом агента выглядит следующим образом (в настоящее время репозиторий не является общедоступным):
    [https://gitee.ru/gitee-go/agent-all](https://gitee.ru/gitee-go/agent-all)
 
-Delete Host Group 3.3
+Удаление группы хостов 3.3
 
-![Image Description](https://foruda.gitee.ru/images/1660234008391860467/屏幕截图.png )
-> Delete all contents under the host group, including hosts and tasks, and stop processes on each host
+![Описание изображения](https://foruda.gitee.ru/images/1660234008391860467/屏幕截图.png )
+> Удалите все содержимое группы хостов, включая хосты и задачи, и остановите процессы на каждом хосте.
 
-### 3.4 Edit Host Group
+### 3.4 Редактирование группы хостов
 
-#### 3.4.1 Alibaba Cloud host type
+#### 3.4.1 Тип хоста Alibaba Cloud
 
-![Image Description](https://foruda.gitee.ru/images/1660231077667666874/屏幕截图.png )
+![Описание изображения](https://foruda.gitee.ru/images/1660231077667666874/屏幕截图.png )
 
-Support editing the host group name, credentials cannot be edited.
+Поддерживается редактирование имени группы хостов, учетные данные редактировать нельзя.
 
-#### 3.4.2 Other Types of Hosts
+#### 3.4.2 Другие типы хостов
 
-![Image Description](https://foruda.gitee.ru/images/1660231090140975724/屏幕截图.png )
+![Описание изображения](https://foruda.gitee.ru/images/1660231090140975724/屏幕截图.png )
 
->Support editing of host group name, project scope, and repository scope.
+>Поддержка редактирования имени группы хостов, границ проекта и границ репозитория.

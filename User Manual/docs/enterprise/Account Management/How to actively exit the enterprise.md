@@ -1,37 +1,37 @@
 ---
-title: How to voluntarily exit an enterprise
+title: Как добровольно выйти из состава предприятия
 origin-url: https://gitee.ru/help/articles/4262
 keywords: 
-- Handover
- - Exit Enterprise
- - Delete Company
+- Передача дел
+ - Выйти из состава предприятия
+ - Удалить компанию
 slug: /enterprise/account/quit-enterprise
 ---
 
-### 1. The operation to quit the enterprise for non-enterprise account creators is as follows
+### 1. Операция выхода из предприятия для создателей учетных записей, не относящихся к предприятию, выполняется следующим образом
 
-Click on "My Gitee" in the top bar of the personal homepage - select "All" in the Enterprise section - choose the enterprise you want to log out from.
+Нажмите на "Мой Gitee" в верхней панели персональной домашней страницы - выберите "Все" в разделе Enterprise - выберите предприятие, из которого вы хотите выйти.
 
-![Image Description](image690.png)
+![Описание изображения](image690.png)
 
-### 2. Enterprise creator exits the enterprise
+### 2. Создатель предприятия выходит из него
 
-Please see: [How to handle the departure of the enterprise creator](/enterprise/account/owner-leave)
+См.: [Как решить проблему ухода создателя предприятия](/enterprise/account/owner-leave)
 
-### 3. How to Delete a Company?
+### 3. Как удалить компанию?
 
-Operation steps: Log in to the enterprise administrator account -> Enterprise Dashboard -> Manage -> Delete enterprise
+Шаги операции: Войдите в учетную запись администратора предприятия -> Панель управления предприятия -> Управление -> Удалить предприятие
 
-![Image Description](image691.png)
+![Описание изображения](image691.png)
 
-**Special Note:**
+**Особое примечание:**
 
-If the enterprise version service is no longer in use and you need to delete the enterprise version service registered on Gitee, provide the following materials:
+Если сервис корпоративных версий больше не используется, и вам нужно удалить зарегистрированный на Gitee сервис корпоративных версий, предоставьте следующие материалы:
 
-1. Fill in the application materials and stamp with official seal: Click [Download Application Materials](https://gitee.ru/enterprise_del_template.docx)
+1. Заполните материалы заявки и заверьте ее официальной печатью: Нажать [Загрузка материалов заявки](https://gitee.ru/enterprise_del_template.docx)
 
-2. Scanned copy of business license and copy of applicant's ID card;
+2. Отсканированную копию лицензии на ведение бизнеса и копию удостоверения личности заявителя;
 
-3. Except for the legal representative of the company who can directly apply for deletion, others need to provide: company authorization certificate, company employment certificate (both need to be stamped)
+3. За исключением законного представителя компании, имеющего право напрямую подать заявку на удаление, остальным необходимо предоставить: сертификат авторизации компании, сертификат занятости компании (оба должны быть заверены печатью).
 
-Send the required files to git@oschina.cn email with your company email address. Email subject: Delete Gitee Enterprise Edition Service + Company Name. Please provide contact information in the email, our customer service will contact you by phone to confirm the handover.
+Отправьте необходимые файлы на электронную почту git@oschina.cn с указанием адреса электронной почты вашей компании. Тема письма: Удалить сервис Gitee Enterprise Edition + Название компании. Укажите в письме контактную информацию, чтобы наша служба поддержки могла свяжется с вами по телефону для подтверждения передачи.

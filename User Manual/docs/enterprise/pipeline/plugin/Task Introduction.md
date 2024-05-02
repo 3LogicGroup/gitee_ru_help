@@ -1,31 +1,31 @@
 ---
-title: Task Introduction
-Task Introduction
+title: Знакомство с задачей
+Task Введение
 slug: /enterprise/pipeline/plugin/introduce
 keywords:
  - Gitee
- - Tasks
- - Plugin
+ - Задачи
+ - Плагин
 ---
 
-The task page is mainly composed of two parts: regular configuration and notification/advanced configuration.
+Страница задачи состоит в основном из двух частей: обычная настройка и настройка уведомлений/расширенная настройка.
 
-![Task Tab](./assets/Task Tab.png)
+![Вкладка задач](./assets/Task Tab.png)
 
-## General Configuration
+## Обычная конфигурация
 
-General configuration is divided into two areas
+Общая конфигурация разделена на две области
 
-- Basic Information: Mainly for the name of the task, when configuring multiple sources, you can select the working source to execute the task.
-- Task Information: Mainly the information required for task execution, such as version number, build command, etc.
+- Основная информация: В основном для названия задачи, при настройке нескольких источников, вы можете выбрать рабочий источник для выполнения задачи.
+- Информация о задаче: В основном информация, необходимая для выполнения задачи, такая как номер версии, команда сборки и т. д.
 
-![Work Source](./assets/work-source.png)
+![Рабочий источник](./assets/work-source.png)
 
-## Notifications and Advanced Configuration
+## Уведомления и расширенная конфигурация
 
-It is mainly divided into two areas: Notification and Advanced Configuration
+В основном она разделена на две области: Уведомления и расширенная конфигурация
 
-- Notification: After the task is executed, you can monitor the pipeline execution status in real-time. For specific configurations, please refer to [Notification](/enterprise/pipeline/notice)
-- Advanced Configuration: Currently only supports automatic skipping of tasks, please refer to [Advanced Configuration](/)
+- Уведомление: После выполнения задания вы можете отслеживать состояние выполнения конвейера в режиме реального времени. Для конкретной конфигурации обратитесь к разделу [Notification](/enterprise/pipeline/notice).
+- Расширенная конфигурация: В настоящее время поддерживается только автоматический пропуск задач, см. раздел [Расширенная конфигурация](/)
 
-![Notification and Advanced Configuration](./assets/Notification and Advanced Configuration.png)
+![Уведомление и расширенная конфигурация](./assets/Notification and Advanced Configuration.png)

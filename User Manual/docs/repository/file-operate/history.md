@@ -1,22 +1,22 @@
 ---
-title: View file history versions and commit history
+title: Просмотр истории версий файлов и истории коммитов
 authors:
   - name: Cheese
-description: View instructions for operating historical submitted files
+description: Просмотрите инструкции по работе с историей версий файлов
 ---
 
-How to view the history versions of a specified file?
+Как просмотреть историю версий указанного файла?
 
-Click on the file you want to view the history of, click on the 'History' feature, and you can view the history versions of the file.
+Нажмите на файл, историю которого вы хотите просмотреть, нажмите на функцию "История", и вы сможете просмотреть историю версий файла.
 
-![File Version History](./assets/d-history.png)
+![История версий файлов](./assets/d-history.png)
 
-![File History Versions](./assets/d-history-list.png)
+![Версии истории файла](./assets/d-history-list.png)
 
-## View the history files of past submissions
+## Просмотр истории файлов прошлых версий
 
-On the file history page, you can find the version number for each commit history. Click the 'Browse Files' feature to read the content of that historical version.
+На странице истории файлов вы можете найти номер версии для каждой истории фиксации. Нажмите на функцию "Просмотр файлов", чтобы прочитать содержимое этой исторической версии.
 
-![View Commit History](./assets/d-search-file.png)
+![Просмотр истории коммитов](./assets/d-search-file.png)
 
-![View commit history](./assets/d-history-content.png)
+![Просмотр истории коммитов](./assets/d-history-content.png)

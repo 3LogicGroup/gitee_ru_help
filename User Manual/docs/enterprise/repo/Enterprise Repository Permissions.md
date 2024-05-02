@@ -1,29 +1,29 @@
 ---
-title: Enterprise Repository Permissions
+title: Разрешения репозитория предприятия
 authors:
   - name: Roger
     url: https://gitee.ru/yuriluo
 origin-url: https://gitee.ru/help/articles/4157
 ---
 
-### What is the difference between internal repositories in enterprise projects and outsourced projects?
+### В чем разница между внутренними репозиториями в корпоративных проектах и аутсорсинговыми проектами?
 
-When creating a company repository, you can choose the type of repository. If the project is developed by your own team, you can choose an internal repository. If it is developed by a third-party team, you can choose an outsourcing project. Clear repository division helps with project management and team management.
+При создании репозитория компании вы можете выбрать тип репозитория. Если проект разрабатывается вашей собственной командой, вы можете выбрать внутренний репозиторий. Если же он разрабатывается сторонней командой, можно выбрать аутсорсинговый проект. Четкое разделение репозиториев помогает в управлении проектами и командами.
 
-For other instructions regarding outsourcing, please see: [https://gitee.ru/help/articles/4158](https://gitee.ru/help/articles/4158)
-
---------------------
-
-### What are the differences between private repositories, internal open-source repositories, and external open-source repositories in enterprise repositories?
-
-**Private**: Refers to the situation where even enterprise members cannot access the code and any other information of a private repository if they are not members of that repository. For example, if a task is created by a member of the private repository and associated with that private repository, only other members of that private repository can see this task, and non-members of this private repository cannot see it.
-
-**Internal Open Source**: Refers to the code of the repository and other resources (such as PRs, tasks, wiki, attachments, etc.) can be accessed by all internal personnel of the company.
-
-**External Open Source**: It means that anyone can access the code and any other resources of this repository (such as PRs, tasks, wikis, attachments, etc.).
+Другие инструкции по аутсорсингу см.: [https://gitee.ru/help/articles/4158](https://gitee.ru/help/articles/4158)
 
 --------------------
 
-### Are there any differences in the number of repository members for different types of enterprise repositories?
+### Каковы различия между частными репозиториями, внутренними репозиториями с открытым исходным кодом и внешними репозиториями с открытым исходным кодом в корпоративных репозиториях?
 
-Enterprise private repositories and enterprise internal open source repositories: Repository members (including member roles such as developers) are limited by the number of enterprise members. Depending on the different paid plans, there will be different restrictions. For example, the standard version allows up to 20 people, so the maximum number of enterprise repository members for standard version users is 20 people, and they must all be enterprise members.
+**Частные**: Относится к ситуации, когда даже участники предприятия не могут получить доступ к коду и любой другой информации частного репозитория, если они не являются участниками этого репозитория. Например, если задача создана участником частного репозитория и связана с этим частным репозиторием, только другие участники этого частного репозитория могут видеть эту задачу, а лица, не являющиеся участниками этого частного репозитория, ее видеть не могут.
+
+**Внутренний открытый исходный код**: Относится к коду репозитория и другим ресурсам (таким как запросы на слияние, задачи, вики, вложения и т. д.), доступ к которым может получить весь внутренний персонал компании.
+
+**Внешний открытый исходный код**: Означает, что любой желающий может получить доступ к коду и любым другим ресурсам этого репозитория (таким как PR, задачи, вики, вложения и т. д.).
+
+--------------------
+
+### Есть ли различия в количестве участников репозитория для разных типов корпоративных репозиториев?
+
+Частные репозитории предприятия и внутренние репозитории предприятия с открытым исходным кодом: Количество участников репозитория (включая такие роли участников, как разработчики) ограничено количеством участников предприятия. В зависимости от различных платных планов существуют разные ограничения. Например, стандартная версия позволяет иметь до 20 человек, поэтому максимальное количество участников корпоративного репозитория для пользователей стандартной версии составляет 20 человек, и все они должны быть участниками предприятия.

@@ -1,37 +1,37 @@
 ---
-title: Security Settings
+title: Настройки безопасности
 ---
 
-Click on the "Settings" in the enterprise navigation menu, find the "Security" category in the enterprise management menu, and click on "Security Settings" in that category to enter the security settings page.
+В меню навигации компании нажмите «Настройки», найдите категорию «Безопасность» в меню управления компанией и нажмите в этой категории «Настройки безопасности» для перехода на страницу настроек безопасности.
 
-![Image Description](assets/image393.png)
+![Описание изображения](assets/image393.png)
 
-## Enhancing Member Password Security
+## Повышение безопасности паролей участников
 
-Enable password update frequency restriction to force members to regularly update their passwords to enhance password security.
+Включите ограничение частоты обновления паролей, чтобы заставить участников регулярно обновлять свои пароли для повышения их безопасности.
 
-![Image Description](assets/image394.png)
+![Описание изображения](assets/image394.png)
 
-## Preventing Members' Passwords from Being Brute-Forced
+## Предотвращение взлома паролей участников
 
-Enable password error limit to prevent member passwords from being brute-forced by others
+В целях предотвращения подбора паролей участников другими лицами включите ограничение ошибок ввода пароля.
 
-![Image Description](assets/image395.png)
+![Описание изображения](assets/image395.png)
 
-## Restricting IP access to enterprise resources
+## Ограничение IP-доступа к корпоративным ресурсам
 
-Add the IP domain of the local area network to the whitelist, so that enterprise resources are only accessible to machines within the local area network and cannot be accessed by external machines.
+Добавьте IP-домен локальной сети в белый список, чтобы корпоративные ресурсы были доступны только компьютерам внутри локальной сети и не могли быть доступны внешним машинам.
 
-![IP Whitelist](./assets/ip-whitelist.png)
+![Белый список IP](./assets/ip-whitelist.png)
 
-## Disable Members from Downloading Repository
+## Запретить участникам загружать репозиторий
 
-Uncheck "Allow Package Download ZIP" in "Push and Pull Code Settings".
+Снимите флажок «Разрешить загрузку пакета ZIP» в «Настройки загрузки и отправки кода».
 
-![Image Description](assets/image397.png)
+![Описание изображения](assets/image397.png)
 
-## Prevent screen capture leakage
+## Предотвращение утечки снимков экрана
 
-After enabling the watermark, it can prevent enterprise members from taking screenshots to leak information.
+После включения водяного знака он может помешать участникам компании делать снимки экрана для утечки информации.
 
-![Image Description](assets/image398.png)
+![Описание изображения](assets/image398.png)

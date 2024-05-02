@@ -1,0 +1,16 @@
+# Список файлов с кодом
+
+\sre-base\keepalived 					  	 			 
+\sre-base\lfsoss-docker\ 				 				
+\sre-base\minio\             	 			
+\sre-base\mysql-replication 				
+\sre-base\nfs				 				
+\sre-base\ntp-server		 				
+\sre-base\postgresql		 				 
+\sre-base\redis			  				 
+\sre-base\redis-cluster	 			
+\sre-base\redis-replication				 
+\sre\base\rsync							
+\gitee-git-service             			
+\backup\mysql_backup
+\sre-base\simple-jenkins					 

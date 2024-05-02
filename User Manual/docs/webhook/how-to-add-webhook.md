@@ -1,37 +1,37 @@
 ---
-title: Add WebHook
+title: Добавление вебхука
 
 origin-url: https://gitee.ru/help/articles/4184
 ---
 
-Users can add WebHooks through **"Repository homepage"->"Management page"->"WebHooks"**
+Пользователи могут добавлять вебхуки через **"Главная страница репозитория"->"Страница управления"->"Вебхуки"**
 
 ![](how-to-add-webhook.assets/image.png)
 
-### Parameter Description
+### Описание параметров
 
-URL(*): The http address that receives WebHook data. Gitee will send a Post request to this address.
+URL(*): HTTP-адрес, который получает данные вебхука. Gitee будет отправлять POST-запрос на этот адрес.
 
-- Password: To ensure security and identify the source of data, it is recommended to set a password. Gitee will carry this password in the Post data. Note that the password is in plain text.
+- Пароль: Для обеспечения безопасности и идентификации источника данных рекомендуется установить пароль. Gitee будет передавать этот пароль в данных POST-запроса. Обратите внимание, что пароль передается в виде обычного текста.
 
-- Hook: WebHooks that can be triggered by users on Gitee, supports adding multiple hooks
+- Хук: Вебхуки, которые могут быть запущены пользователями Gitee, поддерживают добавление нескольких хуков.
 
-### Hook Types
+### Типы вебхуков
 
-Currently, Gitee supports the following 5 hooks:
+На данный момент Gitee поддерживает следующие 5 типов вебхуков:
 
-- Push: Push code to repository, push/delete branches
+- Push: Отправка кода в репозиторий, отправка/удаление веток
 
-- Tag Push: Create / Delete tag
+- Tag Push: Создание / Удаление тега
 
-- Issue: Create a task, change task status, change task assignee
+- Issue: Создание задачи, изменение статуса задачи, изменение исполнителя задачи
 
-- Pull Request: Create, update PR code, merge Pull Requests
+- Pull Request: Создание, обновление кода запроса на слияние, объединение запросов на слияние
 
-- Comment: Comment on repository, task, Pull Request, Commit
+- Comment: Комментирование репозитория, задачи, запроса на слияние, коммита
 
-### Test WebHook
+### Тестирование Вебхука
 
-After adding a WebHook, you can test if the WebHook is working properly. Gitee will send test data to the specified URL.
+После добавления вебхука вы можете проверить его работоспособность. Gitee отправит тестовые данные на указанный URL-адрес.
 
 ![](how-to-add-webhook.assets/image-1.png)

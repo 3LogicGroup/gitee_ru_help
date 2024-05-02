@@ -1,87 +1,87 @@
 ---
-title: What to do if there are more than 5 private members
+title: Что делать, если количество пользователей частных репозиториев превышает 5
 slug: /account/personal-member-quota-above
 origin-url: https://gitee.ru/help/articles/4234
 ---
 
-"Private repositories" are tools provided by Gitee for small technical team collaboration, with a maximum of 5 members participating in private repositories.
+"Частные репозитории" - инструменты, предоставляемые Gitee для совместной работы небольшой технической команды, в частных репозиториях которой участвуют не более 5 человек.
 
-To avoid affecting your normal use, please make sure to reduce the number of members in your personal private repository to comply with the rules (<=5 people) before **December 31, 2018**. **If you do not upgrade to an enterprise or reduce the number of members in your private repository, all private repositories will become read-only.** The detailed operation instructions are as follows:
+Во избежание негативного влияния на нормальную работу убедитесь, что количество участников в вашем личном частном репозитории соответствует правилам (<=5 человек) до **31 декабря 2018 года**. **Если вы не обновитесь до корпоративной версии или не уменьшите количество участников в частном репозитории, все частные репозитори станут доступны только для чтения.** Подробные инструкции по эксплуатации приведены ниже:
 
-## 1. How to determine if the number of collaborators in a personal private repository exceeds 5?
+## 1. Как определить, что число участников в личном частном репозитории превышает 5?
 
-Go to personal "Settings" - "Private Repository Members" to see which members are currently in the private repository.
+Чтобы увидеть, какие участники в настоящее время находятся в частном репозитории, перейдите в личный раздел "Настройки" - "Участники частного репозитория".
 
-## Second, how to handle if the number of members in the personal private repository exceeds 5?
+## 2. Что делать, если количество участников в личном частном репозитории превышает 5?
 
-### 2.1 Purchase Gitee Enterprise Edition
+### 2.1 Приобрести Gitee Enterprise Edition
 
-**To retain more than 5 private repository members, please use [Gitee Enterprise](https://gitee.ru/enterprises/?from=personal-collaborators) and purchase the corresponding package to get the quota.**
+**Чтобы сохранить количество участников частного репозитория более 5, используйте [Gitee Enterprise](https://gitee.ru/enterprises/?from=personal-collaborators) и приобретите соответствующий пакет для получения квоты.**.
 
- _Note: If the current number of collaborators in the personal private repository exceeds the limit, you can directly upgrade to the enterprise version, but because it exceeds the limit, it will still enter a locked state and you must pay to continue using it!_
+ _Примечание: Если текущее количество участников в личном частном репозитории превышает лимит, вы можете напрямую перейти на версию Enterprise, но в силу превышения лимита она все равно перейдет в заблокированное состояние, и вам придется заплатить, чтобы продолжить ее использование!_
 
-#### 2.1.1. Hope that the original repository address will not change
+#### 2.1.1. Надеемся, что адрес оригинального репозитория не изменится
 
-If the current account has no enterprise, the operation steps are as follows:
+Если текущая учетная запись не использует версию Enterprise, этапы операции следующие:
 
-Step 1: Select 'Settings' - 'Upgrade to Enterprise Edition' for personal
+Шаг  1: Выберите "Настройки" - "Обновление до версии Enterprise Edition" для личного использования
 
-Step 2: Fill in enterprise information and select the repositories to be transferred, complete the account upgrade.
+Шаг  2: Заполните информацию о предприятии и выберите репозиторий для переноса, завершите обновление учетной записи.
 
-- **If the current account has a free enterprise and the enterprise has no data, the operation steps are as follows:**
+- **Если учетная запись использует бесплатную версию Enterprise, и у Enterprise нет данных, то шаги операции выглядят следующим образом:**
 
-Step 1: Enterprise Management Console - "Enterprise Settings" - "Delete Enterprise"
+Шаг  1: Консоль управления Enterprise - "Настройки Enterprise " - "Удалить Enterprise"
 
-Step 2: Select 'Settings' - 'Upgrade to Enterprise Edition' (starting from here if the current account does not have an enterprise)
+Шаг  2: Выберите "Настройки" - "Обновить до корпоративной версии" (если текущая учетная запись не имеет корпоративной версии, начните отсюда).
 
-Step 3: Fill in the company information as prompted, select the repositories to be transferred, and complete the account upgrade.
+Шаг  3: Заполните информацию о компании в соответствии с указаниями, выберите репозитории для переноса и завершите обновление учетной записи.
 
-- **If the current account has a free enterprise and the enterprise has data, the operation steps are as follows:**
+- **Если текущая учетная запись использует бесплатную версию Enterprise, и у Enterprise есть данные, операции выполняются следующим образом:**
 
-Step 1: Enterprise Workbench Interface - "Batch Operations", select Warehouse - "Transfer Warehouse" - Select Personal Account - "Submit"
+Шаг  1: Интерфейс Enterprise Workbench - "Пакетные операции", выберите Репозиторий - "Перенести репозиторий" - Выберите Личный кабинет - "Отправить"
 
-Step 2: Enterprise Management Console - "Enterprise Settings" - "Delete Enterprise"
+Шаг  2: Консоль управления Enterprise - "Настройки Enterprise " - "Удалить Enterprise"
 
-Step 3: Select personal "Settings"-"Upgrade to Enterprise Edition"
+Шаг  3: Выберите личные "Настройки" - "Обновить до версии Enterprise Edition"
 
-Step 4: Fill in the enterprise information as prompted, select the repositories to be transferred, and complete the account upgrade.
+Шаг  4: Заполните информацию о предприятии в соответствии с запросом, выберите репозитории для переноса и завершите обновление учетной записи.
 
-- **If the current account belongs to a paid enterprise, follow these steps:**
+- **Если текущая учетная запись использует платную версию Enterprise, выполните следующие действия:**
 
-Step 1: Personal "Settings" - "Upgrade to Organization", fill in the information as prompted.
+Шаг  1: Личные "Настройки" - "Обновить до организации", заполните информацию в соответствии с запросом.
 
-Step 2: Go to the enterprise workbench interface, select "Members" - "Add Team" - "Move to Team"
+Шаг  2: Перейдите в интерфейс Enterprise workbench, выберите "Участники" - "Добавить команду" - "Переместить в команду".
 
-Step 3: Click "Generate Transfer Code" - "Copy" in the pop-up window.
+Шаг  3: Нажмите  во всплывающем окне "Сгенерировать код переноса" - "Скопировать".
 
-Step 4: Go to the upgraded organization homepage, select "Settings" - "Transfer to Enterprise", paste the transfer code copied in step 2 here, and click "Next".
+Шаг  4: Перейдите на домашнюю страницу обновленной организации, выберите "Настройки" - "Переход на Enterprise", вставьте сюда код перевода, скопированный в разделе 2, и нажмите "Далее".
 
-Step 5: Confirm enterprise information, check the checkmark as shown in the following figure, and then click 'Confirm Transfer'.
+Шаг  5: Подтвердите информацию о предприятии, установите флажок, как показано на следующем рисунке, а затем нажмите "Подтвердить перевод".
 
-![Transfer Organization](https://images.gitee.ru/uploads/images/2018/1212/112152_860605a9_669935.png "1.png")
+![Перенести организации](https://images.gitee.ru/uploads/images/2018/1212/112152_860605a9_669935.png "1.png")
 
-2.1.2. Desired independent enterprise repository address (personal repository address may change)
+2.1.2. Желаемый адрес независимого корпоративного репозитория (адрес личного репозитория может измениться)
 
-Step 1: Create a new enterprise account on the Enterprise Edition homepage (<https://gitee.ru/enterprises>).
+Шаг  1: Создайте новую корпоративную учетную запись на домашней странице Enterprise Edition (<https://gitee.ru/enterprises>).
 
-Step 2: Click on 'Warehouse' - 'Add Warehouse' - 'Transfer Warehouse' on the Enterprise Workspace interface
+Шаг  2: Нажмите "Репозиторий" - "Добавить репозиторий" - "Перенести репозиторий" в интерфейсе Enterprise Workspace
 
-Step 3: Click "Generate Transfer Code" - "Copy" in the pop-up window.
+Шаг  3: Во всплывающем окне нажмите "Сгенерировать код перевода" - "Скопировать".
 
-Step 4: Go to the repository homepage, select 'Manage' - 'Transfer to Enterprise', paste the transfer code copied in step 2 here, and click 'Next'.
+Шаг  4: Перейдите на домашнюю страницу репозитория, выберите "Управление" - "Перенести в Enterprise", вставьте сюда код переноса, скопированный на Шаге 2 , затем нажмите "Далее".
 
-Step 5: Confirm enterprise information, check the checkmark as shown in the following figure, and then click 'Confirm Transfer'.
+Шаг  5: Подтвердите информацию о предприятии, установите флажок, как показано на следующем рисунке, а затем нажмите "Подтвердить перевод".
 
-![Repository Transfer](https://images.gitee.ru/uploads/images/2018/1212/112354_ae055574_669935.jpeg "Repository Transfer.jpg")
+![Перенос репозитория](https://images.gitee.ru/uploads/images/2018/1212/112354_ae055574_669935.jpeg "Repository Transfer.jpg")
 
-Repeat the above steps until all repositories are transferred to the enterprise.
+Повторяйте вышеописанные действия до тех пор, пока все репозитории не будут перенесены в версию Enterprise.
 
-#### 2.1.3, Select enterprise package and make payment
+#### 2.1.3. Выбор пакета Enterprise и оплата
 
-For payment details, please see: [https://gitee.ru/help/articles/4160](https://gitee.ru/help/articles/4160)
+Подробности оплаты см.: [https://gitee.ru/help/articles/4160](https://gitee.ru/help/articles/4160)
 
-### 2.2 Delete members from private repositories
+### 2.2 Удаление участников из частных репозиториев
 
-In personal "Settings" - "Private Repository Members" - "Remove All", remove members from all personal private repositories until the number of collaborators is reduced to 5
+В личных "Настройках" - "Участники частного репозитория" - "Удалить все", удаляйте участников из всех личных частных репозиториев до тех пор, пока количество соавторов не уменьшится до 5
 
-![Image Description](https://images.gitee.ru/uploads/images/2019/0103/191558_c5759289_669935.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2019/0103/191558_c5759289_669935.png )

@@ -1,23 +1,23 @@
 ---
-title: Add Enterprise Member
+title: Добавление участника компании
 ---
 
-Click the "+" dropdown menu and select the "Add Member" option to quickly access the member invitation page.
+Нажмите на выпадающее меню "+" и выберите опцию "Добавить участника", чтобы быстро перейти на страницу приглашения участника.
 
-![Image Description](assets/image.png)
+![Описание изображения](assets/image.png)
 
-You can also click on the "Members" in the enterprise navigation menu, and then click the "Invite Members" button in the upper right corner of the page to enter the member invitation page.
+Вы также можете нажать на "Участники" в меню навигации компании, а затем на кнопку "Пригласить участников" в верхнем правом углу страницы, чтобы перейти на страницу приглашения участников.
 
-![Image Description](assets/image377.png)
+![Описание изображения](assets/image377.png)
 
-In the 'Invite Link' interface, you can invite others to join the company by sharing the invitation link and QR code.
+В интерфейсе "Пригласительная ссылка" вы можете пригласить других присоединиться к компании, поделившись пригласительной ссылкой и QR-кодом.
 
-![Image Description](assets/image378.png)
+![Описание изображения](assets/image378.png)
 
-In the 'Invite by Email' interface, you can fill in the email address of the invitee and then send them the invitation link.
+В интерфейсе "Пригласить по электронной почте" вы можете указать адрес электронной почты приглашаемого и отправить ему пригласительную ссылку.
 
-![Image Description](assets/image379.png)
+![Описание изображения](assets/image379.png)
 
-If the "Require Administrator Approval" option is selected, you need to go to the "Member Application List" page to process the member's join request after the member invitation is successful.
+Если выбрана опция "Требуется подтверждение администратора", после успешного приглашения участника необходимо перейти на страницу "Список заявок на вступление" для обработки запроса на вступление участника.
 
-![Image Description](assets/image380.png)
+![Описание изображения](assets/image380.png)

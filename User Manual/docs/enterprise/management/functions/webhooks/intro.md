@@ -1,50 +1,46 @@
 ---
-Title: Introduction to WebHooks
+Title: Знакомство с вебхуками
 ---
 
-Gitee WebHook feature helps to automatically callback a specified HTTP address after a user pushes code.
+Функция вебхуков Gitee автоматически обратится к указанному HTTP-адресу после того, как пользователь отправит код.
 
-> This is a general solution. Users can write their own script programs based on different needs (such as sending emails, automatic deployment, etc.).
+> Это общее решение. Пользователи могут написать собственные скрипты на основе различных потребностей (например, отправка электронных писем, автоматическое развертывание и т. д.).
 
-Comparison of Enterprise WebHook and Repository WebHook:
+Сравнение вебхуков компании и вебхуков репозитория:
 
-- Enterprise WebHooks are effective for all repositories within the enterprise for push, PR, and issue (task) events.
-- WebHooks for repositories only work for push, PR, and Issue (task) events bound to the repository.
+- Вебхуки компании действуют для всех репозиториев в предприятии для событий отправки, запросов на слияние и задач.
+- Вебхуки для репозиториев работают только для событий обытий отправки, запросов на слияние и задач, связанных с репозиторием.
 
-You can manage Webhooks for enterprises, projects, and repositories on the "WebHooks Management" page.
+Вы можете управлять вебхуками для компании, проектов и репозиториев на странице "Управление вебхуками".
 
-![Image Description](assets/image351.png)
+![Описание изображения](assets/image351.png)
 
-## Data Structures and Types
+## Структура и типы данных
 
-For the data structure and type of WebHook, please refer to the following document:
+Для получения информации о структуре данных и типа вебхука обратитесь к следующим документам:
 
-- [WebHook Push Data Format Guide](./push-data-format.md)
-- [WebHook Secret Verification and Verification Algorithm](./verify.md)
-- [WebHook Push Data Type Explanation](./push-data-type.md)
+- [Руководство по формату данных для передачи вебхуков](./push-data-format.md)
+- [Алгоритм проверки и верификации секретного ключа вебхука](./verify.md)
+- [Объяснение типов данных для передачи данных вебхуков](./push-data-type.md)
 
-## Third-party IM support
+## Поддержка сторонних мессенджеров
 
-We have enabled WebHook to support the following third-party applications for users to receive Gitee's push notifications on third-party IM platforms.
+Мы включили поддержку вебхуков для следующих сторонних приложений, чтобы пользователи могли получать уведомления о Gitee через них:
 
-DingTalk Robot:
+Робот DingTalk:
 
-Set WebHook URL to the Dingtalk group chat robot address.
+Настройте URL-адрес вебхука на адрес робота группового чата в Dingtalk.
 
-Related document: WebHook adds support for DingTalk
+Связанный документ: Вебхук добавляет поддержку для DingTalk
 
-**Enterprise WeChat Bot:**
+**Корпоративный Бот WeChat:**
 
-Set WebHook URL to the Enterprise WeChat robot address.
+Настройте URL-адрес вебхука на адрес робота WeChat Work в компании.
 
-Related documentation: WebHook adds support for WeChat Work
+Связанный документ: Вебхук добавляет поддержку для WeChat Work
 
-Feishu Robot:
+Настройте URL-адрес вебхука на адрес робота группового чата в Feishu.
 
-Set the WebHook URL to the Feishu group chat robot address.
+Связанный документ: Вебхук добавляет поддержку для Feishu
 
-Related document: WebHook adds support for Feishu
-
-Slack Bot:
-
-Set the WebHook URL to the Slack bot address.
+Настройте URL-адрес вебхука на адрес Slack-бота.

@@ -1,4 +1,4 @@
-Install Docker and Docker Compose
+Установка Docker и Docker Compose
 
 ## 1.docker
 
@@ -30,18 +30,18 @@ StartLimitInterval=60s
 WantedBy=multi-user.target
 EOF
 
-# Add executable permissions
+# Добавьте разрешения на выполнение
 $ sudo chmod +x /etc/systemd/system/docker.service
-# Reload the configuration file
+# Перезагрузите файл конфигурации
 $ sudo systemctl daemon-reload
 
-# Starting containers and setting up auto-start
+# Запуск контейнеров и настройка автозапуска
 $ sudo systemctl enable --now docker.service
 Check the status
 $ sudo systemctl status docker
 
 $ docker version
-# Configure image accelerator
+# Настройте ускоритель образа
 $ mkdir /etc/docker/
 $ cat > /etc/docker/daemon.json <<'EOF'
 {
@@ -71,7 +71,7 @@ $ wget -O ~/.docker/cli-plugins/docker-buildx \
 
 $ chmod a+x ~/.docker/cli-plugins/docker-buildx 
 
-# Set experimental parameters
+# Установите экспериментальные параметры
 $ vim ~/.docker/config.json
 Add
 {
@@ -81,7 +81,7 @@ Add
 }
 
 
-# If the environment variable DOCKER_CLI_EXPERIMENTAL does not take effect on some systems (such as
+# Если переменная окружения DOCKER_CLI_EXPERIMENTAL не действует на некоторых системах (таких как
 $ export DOCKER_BUILDKIT=1
 $ docker build --platform=local -o . git://github.com/docker/buildx
 $ mkdir -p ~/.docker/cli-plugins && mv buildx ~/.docker/cli-plugins/docker-buildx
@@ -94,7 +94,7 @@ NAME/NODE DRIVER/ENDPOINT STATUS  BUILDKIT PLATFORMS
 default * docker
   default default         running 23.0.4   linux/amd64, linux/amd64/v2, linux/amd64/v3, linux/amd64/v4, linux/386
 
-# Adding docker user group
+# Добавление группы пользователей docker
 sudo groupadd docker
 sudo gpasswd -a $USER docker     # Add the login user to the docker user group
 Update the user group by running 'newgrp docker'
@@ -118,30 +118,30 @@ Docker Compose version v2.16.0
 
 
 ## 3.docker compose v2
-Install Docker Compose v2
+Установка Docker Compose v2
 
-Docker officially rewrote Docker Compose in Go language and integrated it as a subcommand of the docker CLI, called Compose V2
+Docker официально переписал Docker Compose на языке Go и интегрировал его в качестве подкоманды в docker CLI под названием Compose V2.
 
 ```sh
-# 1. Download the binary file suitable for your system from the project release page and copy it to $HOME/.docker/cli-plugins as docker-compose to install Compose V2
+# 1. Скачайте бинарный файл, подходящий для вашей системы, со страницы релиза проекта и скопируйте его в $HOME/.docker/cli-plugins под именем docker-compose для установки Compose V2
 
-# Run the following command to download the current stable version of Docker Compose
-# This command installs Compose V2 for the user in the $HOME directory.
+# Выполните следующую команду для загрузки текущей стабильной версии Docker Compose
+# Эта команда устанавливает Compose V2 для пользователя в каталоге $HOME.
 $ mkdir -p ~/.docker/cli-plugins/
 $ curl -SL https://github.com/docker/compose/releases/download/v2.16.0/docker-compose-linux-x86_64 -o ~/.docker/cli-plugins/docker-compose
 $ chmod +x ~/.docker/cli-plugins/docker-compose
 
 
-Install Docker Compose for all users in the system
+Установите Docker Compose для всех пользователей в системе
 $ mkdir -p /usr/local/lib/docker/cli-plugins
 $ curl -SL https://github.com/docker/compose/releases/download/v2.16.0/docker-compose-linux-x86_64 -o /usr/local/lib/docker/cli-plugins/docker-compose
 $ chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
 
 
-# Set docker-compose command compatible with v1
+# Установите команду docker-compose, совместимую с v1
 $ sudo ln -s  /usr/local/lib/docker/cli-plugins/docker-compose /usr/local/bin/docker-compose
 
-# 3. Test Installation
+# 3. Тестовая установка
 $ docker compose version
 Docker Compose version v2.16.0
 ```
@@ -150,7 +150,7 @@ Docker Compose version v2.16.0
 
 
 
-## 4. Uninstall docker and docker-compose
+## 4. Удаление docker и docker-compose
 
 ```sh
 sudo rm -rf /etc/systemd/system/docker.service

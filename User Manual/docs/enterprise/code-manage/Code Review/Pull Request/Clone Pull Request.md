@@ -1,19 +1,19 @@
 ---
-title: Clone Pull Request
+title: Клонирование запроса на слияние
 origin-url: https://gitee.ru/help/articles/4133
 ---
 
 
-## Clone Pull Request source branch code to local
+## Клонировать исходный код ветки запроса на слияние в локальный репозиторий
 
-### **The clone address of the current PR can be found on any open Pull Request page**
+### **Адрес клона текущего жапроса на слияние можно найти на любой открытой странице запроса на слияние**
 
-![Image Description](../../../../../assets/image171.png)
+![Описание изображения](../../../../../assets/image171.png)
 
-### **Copy the address to the clipboard using the one-click copy feature**
+### **Скопируйте адрес в буфер обмена, используя функцию копирования одним щелчком мыши**
 
 ![](../../../../base/pullrequest/%E5%85%8B%E9%9A%86PullRequest.assets/image.png)
 
-### **To switch to the corresponding Git repository and execute this command, Git will create a new branch based on the current source branch of the Pull Request and switch to that branch, so you can get all the committed code in this branch**
+### **Для переключения на соответствующий репозиторий Git и выполнения этой команды Git создаст новую ветку на основе текущей исходной ветки запроса на извлечение и переключится на эту ветку, чтобы вы могли получить весь зафиксированный код в этой ветке**
 
-![Image Description](./assets/16114241_bgum.png)
+![Описание изображения](./assets/16114241_bgum.png)

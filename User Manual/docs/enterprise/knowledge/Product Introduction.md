@@ -1,6 +1,6 @@
 ---
-title: Product Introduction
-description: Product Introduction
+title: Знакомство с продуктом
+description: Знакомство с продуктом
 slug: enterprise/knowledge/intro
 ---
-Gitee Knowledge Base is a container for knowledge. The first step to enter the knowledge base is to create a knowledge base for your team, department, or project: to precipitate and share knowledge in it, and to carry out work in an orderly manner. Through structured hierarchy and effective retrieval capability, it can help the team organize and use knowledge quickly.
+База знаний Gitee представляет собой хранилище информации. Первым шагом для присоединения к базе знаний является создание базы знаний для вашей команды, отдела или проекта: накопление в ней знаний и обмен ими, а также упорядоченное выполнение работы. Благодаря структурированной иерархии и эффективным возможностям поиска это может помочь команде быстро систематизировать и использовать знания.

@@ -1,30 +1,30 @@
 ---
-title: Plugin Overview
+title: Обзор плагинов
 
 origin-url: https://gitee.ru/help/articles/4115
 ---
 
-### Introduction to Gitee Editor Plugin
+### Знакомство с плагином редактора Gitee
 
-Gitee provides Git plugin integration for development environments such as Atom, IDEA, Eclipse, VisualStudio, etc. You can use git in your IDE to manage code versions and improve development efficiency.
+Gitee обеспечивает интеграцию плагинов Git для таких сред разработки, как Atom, IDEA, Eclipse, VisualStudio и т. д. Вы можете использовать git в своей IDE для управления версиями кода и повышения эффективности разработки.
 
-#### Gitee Atom Plugin
+#### Плагин Gitee Atom
 
-Plugin address: [Gitee Atom Plugin]
+Адрес плагина: [Плагин Gitee Atom]
 
-#### Gitee IDEA Plugin
+#### Плагин Gitee IDEA
 
-Plugin address: [Gitee IDEA Plugin]
+Адрес плагина: [Плагин Gitee IDEA]
 
-#### Gitee Eclipse Plugin
+#### Плагин Gitee Eclipse
 
-Plugin address: [Gitee Eclipse Plugin]
+Адрес плагина: [Плагин Gitee Eclipse]
 
-#### Gitee VisualStudio Plugin
+#### Плагин Gitee VisualStudio
 
-Plugin URL: [Gitee VisualStudio Plugin]
+Адрес плагина: [Плагин Gitee VisualStudio]
 
-[Gitee Atom Plugin]:https://gitee.ru/GitGroup/atom-gitee
-[Gitee IDEA Plugin]: https://gitee.ru/oschina/intellij-gitosc
-[Gitee Eclipse Plugin]: https://gitee.ru/oschina/eclipse-oscgit
-[Gitee VisualStudio Plugin]: https://gitee.ru/GitGroup/Gitee.VisualStudio
+[Плагин Gitee Atom]:https://gitee.ru/GitGroup/atom-gitee
+[Плагин Gitee IDEA]: https://gitee.ru/oschina/intellij-gitosc
+[Плагин Gitee Eclipse]: https://gitee.ru/oschina/eclipse-oscgit
+[Плагин Gitee VisualStudio]: https://gitee.ru/GitGroup/Gitee.VisualStudio

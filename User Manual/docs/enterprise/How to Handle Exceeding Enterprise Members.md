@@ -1,23 +1,23 @@
 ---
-title: How to Handle Excessive Enterprise Members
+title: Как справиться с чрезмерно активными участниками компании
 origin-url: https://gitee.ru/help/articles/4236
 slug: /enterprise/manage/questions/member-above-quota
 ---
 
-If the number of enterprise members has exceeded the current package's free quota of 5, the enterprise will enter a read-only state. Please upgrade the package to get more quota (by paying) or reduce the number of members to <= 5 to unlock. The detailed operation help is as follows:
+Если количество участников компании превысило бесплатную квоту текущего пакета, равную 5, предприятие перейдет в состояние "только для чтения". Обновите пакет, чтобы получить больше квот (заплатив), или уменьшите количество участников до <= 5, чтобы разблокировать. Ниже приведена подробная справка по операции:
 
-### 1. View enterprise members
+### 1. Просмотр участников компании
 
-To enter the enterprise interface, select "Members" to view the current enterprise members.
+Чтобы войти в интерфейс компании, выберите "Участники", чтобы просмотреть текущих участников компании.
 
-![Image Description](../../assets/image03.png)
+![Описание изображения](../../assets/image03.png)
 
-Buy a package that meets the member quota
+Купить пакет, удовлетворяющий квоте участников
 
-For operation details, see: <https://gitee.ru/help/articles/4160>
+Подробности операции см: <https://gitee.ru/help/articles/4160>
 
-### 3. Delete enterprise members to meet the current package quota
+### 3. Удалите участников компании, чтобы удовлетворить текущую квоту пакетов
 
-Use the enterprise administrator user to go to the enterprise member list and remove members who are not needed until the current package standard is met.
+С помощью пользователя администратора компании перейдите к списку участников компании и удалите участников, которые не нужны до тех пор, пока не будет выполнена текущая норма пакета.
 
-![Image Description](../../assets/image01.png)
+![Описание изображения](../../assets/image01.png)

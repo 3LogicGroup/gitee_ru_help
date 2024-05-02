@@ -1,33 +1,33 @@
 ---
-title: Manage Test Cases
+title: Управление тест-кейсами
 ---
 
-Click on 'Test' in the project's navigation menu to go to the test case page:
+Для перехода на страницу тест-кейса нажмите на "Тест" в навигационном меню проекта:
 
-![Test](/img/enterprise/project/project-nav-tests.png)
+![Тест](/img/enterprise/project/project-nav-tests.png)
 
-In the left sidebar of the "Features" module, click "Add" to add a new feature module:
+На панели слева в разделе “Функции” найдите и нажмите кнопку “Добавить”, чтобы добавить новый функциональный модуль. 
 
-![Add Module](/img/enterprise/project/project-tests-new-module.png)
+![Добавить модуль](/img/enterprise/project/project-tests-new-module.png)
 
-Click on any module to view the sub-modules and test cases within that module:
+Нажмите на любой модуль, чтобы просмотреть подмодули и тест-кейсы внутри этого модуля:
 
-![Open Module](/img/enterprise/project/project-tests-open-module.png)
+![Открыть модуль](/img/enterprise/project/project-tests-open-module.png)
 
-Click the "..." menu on the right side of the module to create a sub-module, edit the name, or delete it.
+Нажмите на меню "..." в правой части модуля, чтобы создать подмодуль, отредактировать название или удалить его.
 
-![Module Operations](/img/enterprise/project/project-tests-module-dropdown.png)
+![Операции с модулями](/img/enterprise/project/project-tests-module-dropdown.png)
 
-Drag and drop the module name to another module to change its position
+Для изменения местоположения зажмите название модуля и перетащите в другой модель.
 
-![Module Drag](/img/enterprise/project/project-tests-module-drag.gif)
+![Перетащить модуль](/img/enterprise/project/project-tests-module-drag.gif)
 
-The right-side test case interface provides search, sorting, filtering, creating cases, batch operations, import/export functions.
+В правой части интерфейса тест-кейса находится строка поиска, сортировка, фильтрация, саздание нового случая, пакетные операции и функции экспорта/импорта.
 
-After clicking the "New Case" button, you can open the case creation form. Fill in the fields such as title, preconditions, case steps, remarks, and function modules, and then click the "Create" button to complete the creation.
+После нажатия кнопки "Новый тест-кейс" откроется форма создания тест-кейса. Заполните следующие поля: название, условия, шаги воспроизведения, примечания и функциональный модуль. Чтобы завершить создание, нажмите кнопку "Создать".
 
-![New test case](/img/enterprise/project/project-tests-new-case.png)
+![Новый тест-кейс](/img/enterprise/project/project-tests-new-case.png)
 
-Click on the title of any test case in the table to open the details of the test case.
+Нажмите на название любого тест-кейса в таблице, чтобы просмотреть детали тест-кейса.
 
-![Open Test Case](/img/enterprise/project/project-tests-open-case.png)
+![Открыть тест-кейс](/img/enterprise/project/project-tests-open-case.png)

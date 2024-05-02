@@ -1,8 +1,8 @@
 ---
-title: How to create a new tag
+title: Как создать новый тег
 ---
 
-Users can enter the "Repository Details" -> "Code" page and click on "x tags" to enter the page -> "Create Tag".
+Пользователи могут перейти на страницу "Сведения о репозитории" -> "Код" и нажать на "x тегов", чтобы перейти на страницу -> "Создать тег".
 
-![Image Description](../../../../../assets/image162.png)
-![Image Description](../../../../../assets/image163.png)
+![Описание изображения](../../../../../assets/image162.png)
+![Описание изображения](../../../../../assets/image163.png)

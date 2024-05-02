@@ -1,11 +1,11 @@
 ---
-title: Create Work Item
+title: Создание рабочего элемента
 ---
 
-In the upper right corner of the new menu, you can choose to create three types of work items: requirements, tasks, and defects.
+В правом верхнем углу нового меню для выбора доступны три типа рабочих элементов: требования, задачи и дефекты.
 
-![Image Description](../docs/assets/image532.png)
+![Описание изображения](../docs/assets/image532.png)
 
-In the left menu of the project, you can also click to enter the 'Requirements', 'Tasks', or 'Defects' page, and then click the create button in the upper right corner to create work items of the corresponding types.
+В меню проекта слева вы можете перейти на страницы "Требования", "Задачи" или "Дефекты". В правом верхнем углу находится кнопка создания рабочих элементов соответствующих типов.
 
-![Image Description](../docs/assets/image533.png)
+![Описание изображения](../docs/assets/image533.png)

@@ -1,7 +1,7 @@
 ---
-title: List View
+title: Просмотр списка
 ---
 
-Click on the view dropdown menu on the filter bar, and then click on the 'List' option.
+Нажмите на раскрывающееся меню в панели фильтров и затем нажмите на опцию "Список".
 
-![Image Description](../../docs/assets/image538.png)
+![Описание изображения](../../docs/assets/image538.png)

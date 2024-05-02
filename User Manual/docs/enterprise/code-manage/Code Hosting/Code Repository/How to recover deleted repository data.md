@@ -1,33 +1,33 @@
 ---
-title: How to recover deleted repository data
+title: Как восстановить удаленные данные репозитория
 origin-url: https://gitee.ru/help/articles/4279
 ---
 
-Currently, Gitee provides the Enterprise Snapshot feature for paid enterprises, which allows deleted repositories to recover data (only available for paid enterprise users and if the repository was deleted after payment. Personal users cannot recover deleted repositories).
+В настоящее время Gitee предоставляет для пользователей платной версии Enterprise функцию моментального снимка предприятия, позволяющую восстанавливать данные из удаленных репозиториев (доступно только для платных корпоративных пользователей и в том случае, если репозиторий был удален после оплаты. Пользователи версии Personal  не могут восстановить удаленные репозитории).
 
-If the repository needs to be restored after deletion, please send an application email to git@oschina.cn. The following points should be noted:
+В случае необходимости восстановления репозитория после удаления, отправьте заявку по электронной почте на адрес git@oschina.cn. Необходимо отметить следующие моменты:
 
-1. Fill in the application materials for repository recovery snapshot and affix the official seal. Click on [Download Application Materials](https://gitee.ru/20210510_%E4%BC%81%E4%B8%9A%E4%BB%93%E5%BA%93%E5%BF%AB%E7%85%A7.docx).
+1. Заполните материалы заявки на получение моментального снимка восстановления репозитория и поставьте официальную печать. Нажмите на [Загрузить материалы заявки](https://gitee.ru/20210510_%E4%BC%81%E4%B8%9A%E4%BB%93%E5%BA%93%E5%BF%AB%E7%85%A7.docx).
 
-**Note: The new repository address should be consistent with the address of the repository being deleted.**
+**Примечание: адрес нового репозитория должен совпадать с адресом удаляемого репозитория.**
 
-2. Other materials: scanned copy of the company's business license, copy of the applicant's ID card, copy of the invoice;
+2. Другие материалы: отсканированная копия бизнес-лицензии компании, копия удостоверения личности заявителя, копия счета-фактуры;
 
-3. Send the required files to [git@oschina.cn](mailto:git@oschina.cn) email address.
+3. Отправьте необходимые файлы на адрес электронной почты [git@oschina.cn](mailto:git@oschina.cn).
 
-Email Subject: Enterprise Repository Snapshot + Company Name
+Тема электронного письма: Снимок корпоративного репозитория + Название компании
 
-Please specify your contact information in the email, and we will confirm the relevant matters with you.
+Укажите в электронном письме вашу контактную информацию, и мы согласуем с вами соответствующие вопросы.
 
 <hr />
 
-Other supplementary notes:
+Другие дополнительные примечания:
 
-- The creation time of the snapshot is
+- Время создания моментального снимка:
 
-The snapshot is taken on weekends in the past three weeks and on the first weekend of each month in the past six months.
-Go to the Enterprise Workspace page -> Click on "Code" to view the snapshot status of all repositories.
+Снимки делались по выходным в течение последних трех недель и в первые выходные каждого месяца за последние шесть месяцев.
+Для просмотра состояния снимков всех репозиториев перейдите на страницу Рабочего пространства компании -> нажмите на "Code".
 
-![Image Description](./assets/snapshot.png)
+![Описание изображения](./assets/snapshot.png)
 
-To learn more about the enterprise snapshot, you can refer to [Introduction to Enterprise Repository Snapshot Feature](https://gitee.ru/help/articles/4163)
+Чтобы узнать о снимке предприятия подробнее, вы можете обратиться к разделу [Знакомство с функцией мгновенного снимка репозитория](https://gitee.ru/help/articles/4163)

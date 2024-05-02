@@ -1,16 +1,16 @@
 ---
-title: Schedule triggering of pipeline
-description: Schedule Pipeline Trigger
+title: Расписание запуска конвейера
+description: Запланировать триггер конвейера
 slug: /enterprise/pipeline/trigger/corn
 keywords:
  - Gitee
- - Trigger
- - Scheduled
- - Pipeline
+ - Триггер
+ - Запланированный
+ - Конвейер
 ---
 
-Through scheduled configuration, the execution of the pipeline can be automatically triggered periodically.
+С помощью конфигурации расписания выполнение конвейера может запускаться автоматически.
 
-When editing the pipeline, you can click on scheduled run and then configure the scheduling.
+При редактировании конвейера можно нажать на запланированный запуск, а затем настроить планирование.
 
-![Scheduled Trigger](./assets/scheduled-trigger.png)
+![Запланированный триггер](./assets/scheduled-trigger.png)

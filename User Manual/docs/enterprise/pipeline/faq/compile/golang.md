@@ -1,22 +1,22 @@
 ---
-title: Golang Language
-description: Golang Language
+title: Язык Golang
+description: Язык Golang
 slug: /enterprise/pipeline/faq/compile/golang
 keywords:
  - Gitee
  - Golang
- - Build
- - Issue
+ - Сборка
+ - Задача
 ---
 
-## 1. Go build, executing "make build" gives the error message "No rule to make target"
+## 1. Команда Go build при выполнении "make build" возвращает сообщение об ошибке "No rule to make target".
 
-Reply:
+Ответ:
 
-1. You can reproduce it by executing 'make build' in the root directory of the code repository on your local machine. 'make build' requires a Makefile, which is not present in your code repository. You can Google it or refer to this document: https://www.cnblogs.com/guigujun/p/10702154.html
+1. Вы можете воспроизвести эту ошибку, выполнив 'make build' в корневом каталоге репозитория кода на вашей локальной машине. Для выполнения 'make build' требуется Makefile, которого нет в вашем репозитории кода. Вы можете поискать его в Google или обратиться к этому документу: https://www.cnblogs.com/guigujun/p/10702154.html.
 
-2. Or you can modify the execution command in the pipeline and use a local build command that passes, such as go build.
+2. Или вы можете изменить команду выполнения в конвейере и использовать локальную команду сборки, которая проходит, например go build.
 
-## 2. Slow Go build, Go proxy
+## 2. Медленное выполнение Go build, Go proxy
 
-Reply: export GOPROXY=https://goproxy.cn
+Ответ: экспортируйте GOPROXY=https://goproxy.cn

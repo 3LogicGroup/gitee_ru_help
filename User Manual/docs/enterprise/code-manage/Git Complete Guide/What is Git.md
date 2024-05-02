@@ -1,20 +1,20 @@
 ---
-title: What is Git
+title: Что из себя представляет Git
 origin-url: https://gitee.ru/help/articles/4104
 ---
 
-Git is a distributed version control system developed by Linus Torvalds to help manage the development of the Linux kernel.
+Git - распределенная система контроля версий, разработанная Линусом Торвальдсом для управления разработкой ядра Linux.
 
-Unlike commonly used version control tools like CVS and Subversion, Git adopts a distributed version control system, which eliminates the need for server-side software support (note: this depends on the type of server used, the interaction with the server is different when using protocols like HTTP or Git). This makes it extremely convenient for publishing and exchanging source code.
+В отличие от широко используемых инструментов контроля версий, таких как CVS и Subversion, Git использует распределенную систему контроля версий, устраняющую необходимость в поддержке программного обеспечения на стороне сервера (примечание: это зависит от типа используемого сервера, взаимодействие с сервером отличается при использовании протоколов, таких как HTTP или Git). Это делает его чрезвычайно удобным для публикации исходного кода и обмена им.
 
-Just like many great events in life, Git was born in a time of great turmoil and innovation. The Linux kernel open source project has a large number of participants. Most of the Linux kernel maintenance work is spent on tedious tasks of submitting patches and maintaining archives (1991-2002). By 2002, the entire project team started using the distributed version control system BitKeeper to manage and maintain the code.
+Как и многие великие события в жизни, Git родился во времена великих потрясений и инноваций. Проект с открытым исходным кодом ядра Linux насчитывает большое количество участников. Большая часть работы по обслуживанию ядра Linux тратится на утомительные задачи отправки исправлений и ведения архивов (1991-2002). К 2002 году вся команда проекта начала использовать распределенную систему контроля версий BitKeeper для управления кодом и его сопровождения.
 
-By 2005, the commercial company that developed BitKeeper ended its cooperation with the Linux kernel open source community and revoked the free usage rights of BitKeeper. This forced the Linux open source community (especially Linus Torvalds, the creator of Linux) to learn a lesson and develop their own version control system to avoid repeating the same mistakes. They formulated several goals for the new system:
+К 2005 году коммерческая компания, разработавшая BitKeeper, прекратила сотрудничество с сообществом разработчиков ядра Linux с открытым исходным кодом и отозвала права на бесплатное использование BitKeeper. Это заставило сообщество Linux с открытым исходным кодом (особенно Линуса Торвальдса, создателя Linux) извлечь соответствующие уроки и разработать свою собственную систему контроля версий, чтобы избежать повторения одних и тех же ошибок. Они сформулировали несколько целей для новой системы:
 
- - Speed
- - Simple design
-- Strong support for non-linear development mode (allowing thousands of parallel developments)
- - Fully distributed
- - Ability to efficiently manage large-scale projects like the Linux kernel (in terms of speed and data volume)
+- Скорость
+- Простота дизайна
+- Мощная поддержка нелинейного режима разработки (допускающего тысячи параллельных разработок)
+- Полностью распределенный
+- Способность эффективно управлять крупномасштабными проектами, такими как ядро Linux (с точки зрения скорости и объема данных)
 
-Since its birth in 2005, Git has become more mature and perfect. It is highly user-friendly while still retaining its initial goals. It is extremely fast and suitable for managing large projects. It also has an incredible non-linear branch management system that can handle various complex project development needs. Although Git was initially developed to assist in the development of the Linux kernel, we have found that it is also used in many other free software projects.
+С момента своего появления в 2005 году Git стал более зрелым и совершенным. Он стал очень удобен в использовании, сохранив при этом свои первоначальные цели. Он чрезвычайно быстр и подходит для управления крупными проектами. Он также обладает невероятной нелинейной системой управления ветками, способной удовлетворять различные сложные потребности разработки проектов. Хотя изначально Git был разработан для оказания помощи в разработке ядра Linux, мы обнаружили, что он также используется во многих других проектах свободного программного обеспечения.

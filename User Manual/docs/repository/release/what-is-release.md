@@ -1,31 +1,31 @@
 ---
-title: What is a Release?
+title: Что такое релиз?
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 origin-url: https://gitee.ru/help/articles/4328
 ---
 
-## Introduction
+## Введение
 
-Release is a top-level object with Changelogs and binary files, representing all project history before a specific point in time that goes beyond the Git architecture itself.
+Релиз - это объект верхнего уровня с Changelogs и бинарными файлами, представляющий всю историю проекта до определенного момента времени, который выходит за рамки самой архитектуры Git.
 
-## Purpose of Release
+## Назначение релиза
 
-Through `release`, not only can you view the project history through source code, but you can also further describe the project status at this time through pre-compiled binary files.
+С помощью `release` можно не только просмотреть историю проекта через исходный код, но и более подробно описать состояние проекта на данный момент через предварительно скомпилированные бинарные файлы.
 
-"The significance and role of being "beyond the Git architecture itself" are:
+"Значение и роль того, что мы находимся "за пределами самой архитектуры Git", таковы:
 >
-> 1. Git itself can only record project modifications, and fundamentally is not suitable for recording compiled project binary files.
-By using `release`, developers can save the compiled binary files of the project when releasing a version, making it convenient for users to download and search for specific versions of binary files.
+> 1. Сам Git может записывать только модификации проекта и принципиально не подходит для записи скомпилированных бинарных файлов проекта.
+Используя `release`, разработчики могут сохранять скомпилированные бинарные файлы проекта при релизе версии, что делает удобным для пользователей скачивание и поиск конкретных версий бинарных файлов.
 
-## Summary of Release Features
+## Краткое описание возможностей релиза
 
-Combining the characteristics described in the previous section `Beyond the Git architecture itself`, we can understand and summarize as follows:
+Объединив характеристики, описанные в предыдущем разделе `Без самой архитектуры Git`, мы можем понять и обобщить следующее:
 
-> 1. The release version is not provided by the native capability of Git, but based on the version management capability of Git-based platforms (such as [Gitee]) provided by hosting platforms.
-> 2. When users access a project, they can quickly download the corresponding version binary files through `release` without having to download the source code and compile it locally, greatly reducing the learning cost for users to use the software.
-> 3. In a release, it generally includes `source code of the corresponding release version`, `source code compression package of the corresponding release version` (provided by the platform with an Archive download address without the need to clone using Git command), and `binary files uploaded by the developer when creating the release` (i.e., attachments).
-> 4. `Binary files uploaded by developers when creating releases` (i.e., attachments) are decided by developers whether to upload when publishing a `release`. In general, developers can provide `pre-made installation packages/executable programs`, `patches`, `version-specific usage documents or development documents`, etc. through the release attachment feature.
+> 1. Версия релиза не обеспечивается собственными возможностями Git'а, а основывается на возможностях управления версиями, предоставляемых хостинговыми платформами на базе Git'а (например, [Gitee]).
+> 2. Когда пользователи получают доступ к проекту, они могут быстро загрузить бинарные файлы соответствующей версии через `release` без необходимости загружать исходный код и компилировать его локально, что значительно снижает затраты на обучение пользователей работе с программным обеспечением.
+> 3. В релиз обычно входят `исходный код соответствующей версии релиза`, `пакет сжатия исходного кода соответствующей версии релиза` (предоставляется платформой с адресом архивной загрузки без необходимости клонирования с помощью команды Git), а также `бинарные файлы, загруженные разработчиком при создании релиза` (т.е. вложения).
+> 4. Решение, загружать ли `Двоичные файлы, загружаемые разработчиками при создании релизов` (т.е. вложения) при публикации `релиза`, принимается разработчиками. В общем случае разработчики могут предоставлять `предварительные установочные пакеты/исполняемые программы`, `патчи`, `специфические документы по использованию версии или документы по разработке` и т. д. через функцию вложения релиза.
 
 [gitee]: https://gitee.ru

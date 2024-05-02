@@ -1,18 +1,18 @@
 ---
-Support JupyterNotebook
+Поддержка JupyterNotebook
 origin-url: https://gitee.ru/help/articles/4273
 ---
 
-Jupyter Notebook (previously known as IPython Notebook) is an interactive notebook that supports running over 40 programming languages.
+Jupyter Notebook (ранее известный как IPython Notebook) - это интерактивный блокнот, поддерживающий работу с более чем 40 языками программирования.
 
-Jupyter Notebook is essentially a web application that facilitates the creation and sharing of literate programming documents, supporting real-time code, mathematical equations, visualization, and markdown. Its uses include data cleaning and transformation, numerical simulation, statistical modeling, machine learning, and more.
+Jupyter Notebook - это, по сути, веб-приложение, которое облегчает создание и обмен грамотными документами по программированию, поддерживая код в реальном времени, математические уравнения, визуализацию и разметку. Его применение включает в себя очистку и преобразование данных, численное моделирование, статистическое моделирование, машинное обучение и многое другое.
 
-Now Jupyter Notebook is widely used in the fields of machine learning and artificial intelligence.
+Сейчас Jupyter Notebook широко используется в области машинного обучения и искусственного интеллекта.
 
-Gitee recently added support for rendering Jupyter Notebook documents (.ipynb). The rendering effect is as shown below.
+Недавно Gitee добавил поддержку рендеринга документов Jupyter Notebook (.ipynb). Эффект рендеринга выглядит так, как показано ниже.
 
-![Image Description](https://images.gitee.ru/uploads/images/2019/1018/115142_ad4b7873_669935.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2019/1018/115142_ad4b7873_669935.png )
 
-You can view the actual rendering effect at the following address:
+Фактический эффект рендеринга можно посмотреть по следующему адресу:
 
 <https://gitee.ru/ModelArts/ModelArts-Lab/blob/master/notebook/DL_image_recognition/image_recongition.ipynb>

@@ -1,34 +1,34 @@
 ---
-title: Introduction to PullRequest Cherry Pick feature
+title: Знакомство с функцией запросов на слияние Cherry Pick 
 origin-url: https://gitee.ru/help/articles/4337
 ---
 
 
-### **Background**
+### **Справка**
 
-In daily development work, after merging a PullRequest, sometimes we want to take out one or more commits from this PullRequest and submit them as a new PullRequest, then merge them into a new target branch.
+В повседневной деятельности по разработке, после выполнения запроса на слияние нам иногда бывает необходимо извлечь из этого запроса на слияние один или несколько коммитов и отправить их как новый запрос на слияние, а затем объединить их в новую целевую ветку.
 
-### **Introduction to Cherry Pick feature usage**
+### **Знакомство с использованием функции Cherry Pick**
 
-#### **1. First, enter a Pull Request**
+#### **1. Сначала введите запрос на слияние**
 
-Go to the commit history, click on cherry-pick mode, select one or more commits to bring out as a new commit for a Pull Request, as follows:
-![Image Description](../../../../../assets/image168.png)
+Перейдите в историю коммитов, нажмите на режим cherry-pick, выберите один или несколько коммитов, которые нужно вывести в качестве нового коммита для запроса на слияние, как показано ниже:
+![Описание изображения](../../../../../assets/image168.png)
 
-Select the relevant Commit
+Выберите соответствующий коммит
 
-#### **3. Click the Cherry-pick button to select the target branch**
+#### **2. Нажмите на кнопку Cherry-pick для выбора целевой ветки**
 
-![Image Description](../../../../../assets/image169.png)
+![Описание изображения](../../../../../assets/image169.png)
 
-It is important to note that there may be several scenarios here. If the creation fails, please pay attention to the prompt in the upper right corner.
+Важно отметить, что в данном случае возможно несколько сценариев. Если создание завершится неудачей,  обратите внимание на подсказку в правом верхнем углу.
 
-- CherryPick failed: CherryPick operation conflicts, please handle locally.
-- CherryPick Failed: The target branch of CherryPick already contains the selected commit content.
+- Не удалось выполнить команду CherryPick: при выполнении операции CherryPick возникли конфликты, необходимо устранить локально.
+- Не удалось выполнить команду CherryPick: целевая ветка операции CherryPick уже содержит контент выбранного коммита.
 - ...
 
-#### **4. Enter the create PullRequest interface**
+#### **3. Войдите в интерфейс создания запроса на слияние**
 
-After completing the information, click create
+Заполнив информацию, нажмите "Создать".
 
-At the same time, the original PullRequest will also leave a comment
+Одновременно с этим исходный запрос на слияние оставит комментарий.

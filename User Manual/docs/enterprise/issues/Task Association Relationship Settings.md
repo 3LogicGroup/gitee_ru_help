@@ -1,5 +1,5 @@
 ---
-title: Set task relationship
+title: Настройка взаимосвязи между задачами
 authors:
   - name: Roger
     url: https://gitee.ru/yuriluo
@@ -7,26 +7,26 @@ origin-url: https://gitee.ru/help/articles/4303
 slug: /enterprise/issues/association-settings
 ---
 
-When managing tasks with Gitee Enterprise Edition in daily use, whenever task association is required, you can choose the 'order' and 'relationship' between tasks:
+При ежедневном использовании Gitee Enterprise Edition для управления задачами, всякий раз, когда требуется объединение задач, вы можете выбрать "порядок" и "взаимосвязь" между задачами:
 
-![Image Description](assets/image292.png)
+![Описание изображения](assets/image292.png)
 
-In fact, the concept of leading graph method is applied here
+Фактически, здесь применяется концепция метода предшествования
 
-Precedence Diagramming Method (PDM) is a commonly used method for describing project schedule network diagrams, also known as activity-on-node (AON).
+Метод предшествования (PDM) представляет собой широко используемый метод описания сетевых диаграмм расписания проекта, также известный как activity-on-node (AON).
 
-In the example below, rectangles represent nodes, representing project tasks, and arrows connecting these nodes represent dependencies between tasks.
+В приведенном ниже примере прямоугольники представляют узлы, представляющие задачи проекта, а стрелки, соединяющие эти узлы, - зависимости между задачами.
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/0521/171423_f8a1b2ca_5370906.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/0521/171423_f8a1b2ca_5370906.png )
 
-PDM has 4 types of dependency relationships as follows (Pre: represents predecessor task, Post: represents successor task):
+PDM имеет следующие 4 типа зависимостей (Pre: представляет задачу-предшественницу, Post: представляет задачу-преемницу):
 
--(Finish before)-(Start after) (FS type): Completion of the predecessor task leads to the start of the successor task.
+-(Завершить до)-(Начать после) (тип FS): Завершение задачи-предшественницы приводит к запуску задачи-преемницы.
 
--(Finish before)-(Finish after) (FF type): Completion of the predecessor task leads to the completion of the successor task.
+-(Завершить до) -(Завершить после) (тип FF): Завершение предыдущей задачи приводит к завершению последующей задачи.
 
-Start-Start (SS type): The start of the predecessor task leads to the start of the successor task
+Запуск-Запуск (тип SS): Запуск предыдущей задачи приводит к запуску последующей задачи
 
-Start-Finish (SF type): The start of the predecessor task leads to the finish of the successor task
+Запуск-Окончание (тип SF): Запуск предшествующей задачи приводит к завершению последующей задачи
 
-Currently, Gitee Enterprise does not support another task starting automatically after one task is completed, so project managers need to manually modify the status of tasks when applying them.
+В настоящее время Gitee Enterprise не поддерживает автоматический запуск следующей задачи после завершения очередной задачи, поэтому руководителям проектов необходимо вручную изменять статус задач при их применении.

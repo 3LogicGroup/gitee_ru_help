@@ -1,12 +1,12 @@
-# Deploying the sre jump server service
+# Развертывание службы сервера перехода sre
 
-## 1. Initialize SRE Server
+## 1. Инициализация сервера SRE
 
 [sre-base-initialization](./README-base.md)
 
-## 2. Deployment Manifest
+## 2. Манифест развертывания
 
-| Service Name | Deployment Method | Detailed Steps |
+| Имя службы | Метод развертывания | Подробные шаги |
 | ------------------- | -------- | -------------------------------------------------- |
 | keepalived          | binary   | [keepalived](./keepalived/README.md) |
 | coredns             | docker   | [coredns](./coredns-dcoker/README.md)              |
@@ -25,13 +25,13 @@
 | fileserver-docker   | docker   | [fileserver-docker](./fileserver-docker/README.md) |
 | vaultwarden         | docker   | [vaultwarden](./vaultwarden/README.md)             |
 
-## 3. rsync Synchronize Important Directories from sre2 to sre1
+## 3. rsync - синхронизация важных каталогов с sre2 на sre1
 
 [rsync](./rsync/README.md)
 
-## 4. Deploying harbor-ha common components
+## 4. Развертывание общих компонентов harbor-ha
 
-[redis replication](./redis-replication/README.md)
+[репликация redis](./redis-replication/README.md)
 
 "[PostgreSQL Master-Slave](./postgresql/README.md)"
 

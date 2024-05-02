@@ -1,50 +1,50 @@
 ---
-title: How to Roll Back Versions
+title: Как откатить версии
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 origin-url: https://gitee.ru/help/articles/4195
 ---
 
-There are multiple ways to roll back versions, which will be demonstrated one by one
+Существует несколько способов отката версий, которые мы продемонстрируем по очереди
 
-### Rollback to the current version (discard all changes)
+### Откат к текущей версии (отмена всех изменений)
 
-![Image Description](https://static.oschina.net/uploads/img/201603/10161457_lf5m.gif)
+![Описание изображения](https://static.oschina.net/uploads/img/201603/10161457_lf5m.gif)
 
-### Discard modifications to a specific file
+### Отмена изменений в конкретном файле
 
-![Image Description](https://static.oschina.net/uploads/img/201603/10161707_dstz.gif)
+![Описание изображения](https://static.oschina.net/uploads/img/201603/10161707_dstz.gif)
 
-### Rollback to a certain version but save modifications from that version
+### Откат к определенной версии, но сохранение изменений из этой версии
 
-![Image Description](https://static.oschina.net/uploads/img/201603/10162127_dLHO.gif)
+![Описание изображения](https://static.oschina.net/uploads/img/201603/10162127_dLHO.gif)
 
-### Rollback to a specific version and discard all changes
+### Откат к определенной версии и отмена всех изменений
 
-![Image Description](https://static.oschina.net/uploads/img/201603/10162634_CKmm.gif)
+![Описание изображения](https://static.oschina.net/uploads/img/201603/10162634_CKmm.gif)
 
-### Rollback remote repository version
+### Откат к версии удаленного репозитория
 
-First switch to the local branch corresponding to the remote repository branch you want to roll back, then roll back locally to the version you need, and then execute:
+Сначала переключитесь на локальную ветку, соответствующую ветке удаленного репозитория, на которую вы хотите откатиться, затем откатитесь локально до нужной вам версии, а затем выполните команду:
 
 ```bash
 git push <repository> <branch> -f
 ```
 
-### How to revert a specified number of commits based on the current version
+### Как откатить заданное количество коммитов на основе текущей версии
 
-First, confirm how many versions you need to roll back from your current version, and then calculate the number of versions you want to roll back. Execute the following command
+Сначала уточните, на сколько версий вам нужно откатиться от текущей версии, а затем рассчитайте количество версий, на которые вы хотите откатиться. Выполните следующую команду
 
 ```bash
 git reset HEAD~X // X represents the number of versions you want to revert, it is a number!
 ```
 
-Please note that if you have merged branches, the commits brought by the merged branches will not be counted in the number of rollbacks, but only one commit will be counted. Therefore, if you need to rollback multiple commits at once, it is not recommended to use this method.
+Обратите внимание, что если у вас есть слитые ветки, то коммиты, принесенные слитыми ветками, не будут учитываться в количестве откатов, а будет учитываться только один коммит. Поэтому, если вам нужно откатить сразу несколько коммитов, использовать этот метод не рекомендуется.
 
-### How to roll back to the same as the remote version
+### Как выполнить откат до той же версии, что и в удаленной ветке.
 
-Sometimes, when you need to discard all the changes made due to an error, you can revert to the same point as the remote branch as a rollback point. The command to execute is as follows:
+Иногда, когда вам нужно отменить все изменения, сделанные из-за ошибки, вы можете вернуться к той же точке, что находится в удаленной ветке, используя ее в качестве точки отката. Для этого нужно выполнить следующую команду:
 
 ```bash
 git reset --hard origin/master // origin represents the name of your remote repository, master represents the branch name

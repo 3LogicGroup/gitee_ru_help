@@ -1,21 +1,21 @@
 ---
-title: Outsourcing team management
+title: Управление аутсорсинговой командой
 origin-url: https://gitee.ru/help/articles/4158
 slug: /enterprise/management/teams/outsourcing
 ---
 
-### What is an Outsourced Team?
+### Что такое аутсорсинговая команда?
 
-In the development process of a repository, due to insufficient internal development members and considering repository costs, some non-core modules are often outsourced to third-party teams for development. However, small and medium-sized teams lack management experience in this regard, and there are few repository management tools that support outsourcing on the market. Gitee addresses this dilemma faced by enterprises by clearly distinguishing internal and outsourced teams based on personnel and repositories, which facilitates later management of teams in repositories and personnel.
+В процессе разработки репозитория из-за недостаточного количества внутренних разработчиков и с учетом затрат на репозиторий некоторые неосновные модули часто передаются для разработки сторонним командам. Однако малым и средним командам не хватает опыта управления в этом отношении, а на рынке мало инструментов управления репозиториями, поддерживающих аутсорсинг. Gitee решает эту дилемму, с которой сталкиваются компании, путем четкого разделения внутренних и внешних команд на основе персонала и репозиториев, что облегчает последующее управление командами в репозиториях и персонале.
 
-### How to add members to an outsourcing team?
+### Как добавить участников в аутсорсинговую команду?
 
-1. In the Member - Outsourcing Team List, click on the top right corner to invite members
-![Image Description](https://foruda.gitee.ru/images/1682664678746923340/3e990176_12365235.png "Screenshot")
+1. Чтобы пригласить членов команды, нажмите на правый верхний угол списка членов аутсорсинговой команды.
+![Описание изображения](https://foruda.gitee.ru/images/1682664678746923340/3e990176_12365235.png)
 
-2. Set relevant members as outsourcing roles
-![Image Description](https://foruda.gitee.ru/images/1682664731217748379/37cb11b1_12365235.png "Screenshot")
+2. Назначьте соответствующих участников на аутсорсинговые роли.
+![Описание изображения](https://foruda.gitee.ru/images/1682664731217748379/37cb11b1_12365235.png)
 
-### Does adding members to the outsourcing team occupy enterprise member quotas?
+### Занимает ли добавление членов в аутсорсинговую группу квоту участников компании?
 
-The occupied. Because the outsourcing team belongs to the enterprise, the outsourcing members must first become members of the enterprise before they can be added to the outsourcing team, so the outsourcing members occupy the quota of enterprise members.
+Занимает. Поскольку аутсорсинговая команда относится к компании, её участники должны стать членами компании, прежде чем их можно будет включить в аутсорсинговую команду, и поэтому участники аутсорсинговой команды занимают квоту членов компании.

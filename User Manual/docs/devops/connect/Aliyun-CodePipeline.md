@@ -1,100 +1,100 @@
 ---
-title: Alibaba Cloud CodePipeline
+title: Alibaba  CodePipeline
 
 origin-url: https://gitee.ru/help/articles/4220
 ---
 
-"[Aliyun CodePipeline](https://www.aliyun.com/product/codepipeline) has added support for integrating with [Gitee](https://gitee.ru/) code repositories. Code hosted on Gitee can be continuously integrated and delivered to the cloud through Aliyun CodePipeline, making it easy for you to iterate and evolve your product's features."
+"[Alibaba  CodePipeline](https://www.aliyun.com/product/codepipeline) добавил поддержку интеграции с репозиториями кода [Gitee](https://gitee.ru/). Размещенный на Gitee код можно постоянно интегрировать и доставлять в облако через Alibaba  CodePipeline, что упрощает итерации и развитие функций вашего продукта."
 
-Aliyun CodePipeline is a SAAS product that provides continuous integration/continuous delivery capabilities and is fully compatible with Jenkins' capabilities and usage habits. By using Aliyun CodePipeline, you can easily achieve continuous integration and delivery from code to application in the cloud, facilitating rapid iteration and evolution of your products.
+Alibaba  CodePipeline  представляет собой SAAS-продукт, обеспечивающий непрерывную интеграцию/непрерывную доставку и полностью совместимый с возможностями и привычками использования Jenkins. Используя Alibaba  CodePipeline, вы можете легко добиться непрерывной интеграции и доставки от кода до приложения в облаке, что способствует быстрой итерации и эволюции ваших продуктов.
 
-**Aliyun CodePipeline has the following key features**
+**Alibaba  CodePipeline обладает следующими ключевыми функциями**
 
-- Provides compilation and unit testing capabilities for multiple programming languages, currently including Java, Node.js, Python2, Python3, and PHP, as well as a generic file packaging mode. More programming languages will be integrated in the future.
+- Предоставляет возможности компиляции и модульного тестирования для нескольких языков программирования, в настоящее время включающих Java, Node.js, Python2, Python3 и PHP, а также общий режим упаковки файлов. В будущем планируется интегрировать больше языков программирования.
 
-- Provides a containerized integration solution that can independently support Docker image compilation, and also supports compilation and security checks through Alibaba Cloud Container Image Service. It is connected to Alibaba Cloud Container Service and currently supports blue-green/grayscale release and other release methods.
+- Предоставляет контейнеризованное интеграционное решение, которое может независимо поддерживать компиляцию образов Docker, а также поддерживает компиляцию и проверку безопасности с помощью сервиса изображений облачных контейнеров Alibaba. Оно подключено к сервису облачных контейнеров Alibaba и в настоящее время поддерживает сине-зеленое/ серое развертывание, а также дргиуе методы развертывания. Он связан с Сервисом Контейнеров Alibaba  и в настоящее время поддерживает "синие", "зеленые"/"серые" релизы и другие методы релиза.
 
-- Provides the ability to deploy applications to ECS, while fully compatible with the open-source automation operations software Salt, transparently providing the entire application release and deployment capability.
+- Предоставляет возможность развертывания приложений в системе сущность-компонент (ECS), при этом полностью совместим с программным обеспечением Salt для автоматизации операций с открытым исходным кодом, прозрачно предоставляя все возможности выпуска и развертывания приложений.
 
-So let's start the deployment now, the specific usage process is as follows:
+Итак, начнем развертывание прямо сейчас, конкретный процесс использования выглядит следующим образом:
 
-### Step 1
+### Шаг 1
 
-In Gitee (gitee.ru) project page - Services, select "Aliyun CodePipeline".
+На странице проекта Gitee (gitee.ru) в разделе "Сервисы" выберите "Alibaba  CodePipeline".
 
-![阿里云 CodePipeline](https://images.gitee.ru/uploads/images/2018/0829/151707_91c73e20_669935.png "阿里云 CodePipeline.png")
+![Alibaba  CodePipeline](https://images.gitee.ru/uploads/images/2018/0829/151707_91c73e20_669935.png "Alibaba  CodePipeline.png")
 
-### Step 2
+### Шаг 2
 
-Follow the page guide, access [Aliyun](https://www.aliyun.com/) and register or log in with an existing account.
+Согласно инструкциям на странице, зайдите на страницу [Alibaba ](https://www.aliyun.com/) и зарегистрируйтесь или войдите в систему с помощью существующей учетной записи.
 
-### Step 3
+### Шаг 3
 
-Select 'Product' -> 'Application Service' -> 'CodePipeline', click on 'Activate Now' to enter the Alibaba Cloud CodePipeline overview page.
+Выберите "Продукт" -> "Сервис приложений" -> "CodePipeline", нажмите "Активировать сейчас", чтобы перейти на страницу обзора Alibaba  CodePipeline.
 
-![阿里云 CodePipeline](https://images.gitee.ru/uploads/images/2018/0829/151507_f358330c_669935.png "阿里云 CodePipeline.png")
+![Alibaba  CodePipeline](https://images.gitee.ru/uploads/images/2018/0829/151507_f358330c_669935.png "Alibaba  CodePipeline.png")
 
-![阿里云 CodePipeline](https://images.gitee.ru/uploads/images/2018/0829/151449_e646842c_669935.png "阿里云 CodePipeline.png")
+![Alibaba  CodePipeline](https://images.gitee.ru/uploads/images/2018/0829/151449_e646842c_669935.png "Alibaba  CodePipeline.png")
 
-![Aliyun CodePipeline](https://images.gitee.ru/uploads/images/2018/0829/151744_ba4071c8_669935.png)
+![Alibaba  CodePipeline](https://images.gitee.ru/uploads/images/2018/0829/151744_ba4071c8_669935.png)
 
-### Step 4
+### Шаг 4
 
-After successful activation, click on "Management Console".
+После успешной активации нажмите на "Консоль управления".
 
-![Aliyun CodePipeline](https://images.gitee.ru/uploads/images/2018/0829/151756_52a045a7_669935.png)
+![Alibaba  CodePipeline](https://images.gitee.ru/uploads/images/2018/0829/151756_52a045a7_669935.png)
 
-### Step 5
+### Шаг 5
 
-Create default CodePipeline roles and authorize
+Создайте роли CodePipeline по умолчанию и авторизуйтесь
 
-![Alibaba Cloud CodePipeline](https://images.gitee.ru/uploads/images/2018/0829/151814_cd4ae055_669935.png )
+![Alibaba  CodePipeline](https://images.gitee.ru/uploads/images/2018/0829/151814_cd4ae055_669935.png )
 
-![Aliyun CodePipeline](https://images.gitee.ru/uploads/images/2018/0829/151850_551dd000_669935.png)
+![Alibaba  CodePipeline](https://images.gitee.ru/uploads/images/2018/0829/151850_551dd000_669935.png)
 
-### Step 6
+### Шаг 6
 
-After opening the CodePipeline service, you can start creating a new project: Management Console -> Create a new project.
+Открыв сервис CodePipeline, вы можете приступить к созданию нового проекта: Консоль управления -> Создать новый проект.
 
-![Alibaba Cloud CodePipeline](https://images.gitee.ru/uploads/images/2018/0829/151826_2b1ac618_669935.png )
+![Alibaba  CodePipeline](https://images.gitee.ru/uploads/images/2018/0829/151826_2b1ac618_669935.png )
 
-![Alibaba Cloud CodePipeline](https://images.gitee.ru/uploads/images/2018/0829/151907_a0d2bb42_669935.png )
+![Alibaba  CodePipeline](https://images.gitee.ru/uploads/images/2018/0829/151907_a0d2bb42_669935.png )
 
-### Step 7
+### Шаг 7
 
-Fill in the project information: Basic Information -> Next -> Code Build Configuration -> Next -> Select Deployment Method -> Next.
+Заполните информацию о проекте: Основная информация -> Далее -> Конфигурация сборки кода -> Далее -> Выберите метод развертывания -> Далее.
 
-![Alibaba Cloud CodePipeline](https://images.gitee.ru/uploads/images/2018/0829/151917_c01365b3_669935.png )
+![Alibaba  CodePipeline](https://images.gitee.ru/uploads/images/2018/0829/151917_c01365b3_669935.png )
 
-![Alibaba Cloud CodePipeline](https://images.gitee.ru/uploads/images/2018/0829/151927_bda3bdaa_669935.png )
+![Alibaba  CodePipeline](https://images.gitee.ru/uploads/images/2018/0829/151927_bda3bdaa_669935.png )
 
-![阿里云 CodePipeline](https://images.gitee.ru/uploads/images/2018/0829/151935_672e14df_669935.png )
+![Alibaba  CodePipeline](https://images.gitee.ru/uploads/images/2018/0829/151935_672e14df_669935.png )
 
-### Step 8
+### Шаг 8
 
-Select Source Control -> Gitee -> Bind Gitee Account to automatically list your code repositories and their corresponding branches.
+Выберите Управление версиями -> Gitee -> Привязать учетную запись Gitee, чтобы автоматически выводить список ваших репозиториев кода и их соответствующих веток.
 
-![阿里云 CodePipeline](https://images.gitee.ru/uploads/images/2018/0829/151944_2f08633f_669935.png )
+![Alibaba  CodePipeline](https://images.gitee.ru/uploads/images/2018/0829/151944_2f08633f_669935.png )
 
-### Step 9
+### Шаг 9
 
-The page will be redirected to the Gitee login page and then authorized.
+Страница будет перенаправлена на страницу входа в Gitee, а затем авторизована.
 
-![阿里云 CodePipeline](https://images.gitee.ru/uploads/images/2018/0829/151951_f5568193_669935.png )
+![Alibaba  CodePipeline](https://images.gitee.ru/uploads/images/2018/0829/151951_f5568193_669935.png )
 
-### Step 10
+### Шаг 10
 
-After successful authorization, you will be prompted to bind successfully. Please refresh the job configuration page! Then go back to step 6 page and refresh -> Select the project repository and branch on Gitee to build.
+После успешной авторизации вам будет предложено выполнить привязку. Обязательно обновите страницу настроек рабочего задания! Затем вернитесь на страницу Шаг 6 и обновите -> Выберите для сборки репозиторий проекта и ветку на Gitee.
 
-![阿里云 CodePipeline](https://images.gitee.ru/uploads/images/2018/0829/151959_d5a865f4_669935.png )
+![Alibaba  CodePipeline](https://images.gitee.ru/uploads/images/2018/0829/151959_d5a865f4_669935.png )
 
-### Step 11
+### Шаг 11
 
-Fill in the build trigger, build, and post-build information in order and submit. Then click on "Start Building Project" to execute the build for the newly created project.
+Заполните триггер сборки, информацию о сборке и информацию после сборки по порядку, а затем  отправьте. Затем нажмите кнопку "Начать сборку проекта", чтобы запустить сборку только что созданного проекта.
 
-![阿里云 CodePipeline](https://images.gitee.ru/uploads/images/2018/0829/152008_d088c850_669935.png )
+![Alibaba  CodePipeline](https://images.gitee.ru/uploads/images/2018/0829/152008_d088c850_669935.png )
 
-Build progress and results can be viewed in the build history. Select the corresponding build history to view the build details. This makes it easy to continuously build and integrate projects hosted on Gitee and complete deployment tasks.
+Ход и результаты сборки можно просмотреть в истории сборки. Для просмотра деталей сборки выберите соответствующую историю сборки. Это упрощает непрерывную сборку и интеграцию размещенных на Gitee проектов, а также выполнение задач по развертыванию.
 
-For more information on using Alibaba Cloud CodePipeline, please visit
-Refer to the '[CodePipeline Help Documentation](https://help.aliyun.com/product/55903.html?spm=a2c4g.11186623.6.540.528237e4JaxWOz)' for instructions on how to use.
+Дополнительную информацию об использовании Alibaba  CodePipeline можно найти на сайте
+Инструкции по использованию см. '[Справочная документация CodePipeline](https://help.aliyun.com/product/55903.html?spm=a2c4g.11186623.6.540.528237e4JaxWOz)'.

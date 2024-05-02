@@ -1,7 +1,7 @@
-# Harbor + Dragonfly Optimizes Image Pull Speed
+# Оптимизация скорости извлечения изображения с помощью Harbour + Dragonfly
 
 
 
-Optimizing image pulling speed with Harbor + Dragonfly
+Оптимизация скорости извлечения изображения с помощью Harbour + Dragonfly
 
 

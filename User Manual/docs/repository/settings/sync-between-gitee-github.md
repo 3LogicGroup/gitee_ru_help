@@ -1,5 +1,5 @@
 ---
-title: Repository Image Management (Gitee<->Github Bidirectional Synchronization)
+title: Управление образами репозиториев (двунаправленная синхронизация Gitee<->Github)
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
@@ -7,264 +7,264 @@ origin-url: https://gitee.ru/help/articles/4336
 slug: /repository/settings/sync-between-gitee-github
 ---
 
-Function Introduction
+Введение в функцию
 
-The repository mirror management function is used to configure and manage repository mirrors. Configuring repository mirrors can automatically synchronize repository branches, tags, and commit information between different platforms.
+Функция управления зеркалами репозиториев используется для настройки и управления зеркалами репозиториев. Настройка зеркал репозиториев позволяет автоматически синхронизировать ветки, теги и информацию о фиксации репозиториев между различными платформами.
 
-> Currently, this feature is open until August 31, 2022. Before the end of the limited opening period, we will update the relevant product policies.
+> В настоящее время эта функция открыта до 31 августа 2022 года. До окончания ограниченного периода работы мы обновим соответствующие политики продукта.
 
-Gitee supports setting two types of mirrors:
+Gitee поддерживает установку двух типов зеркал:
 
-- [Push](#%E6%B7%BB%E5%8A%A0-push-%E6%96%B9%E5%90%91%E7%9A%84%E9%95%9C%E5%83%8F): Used to automatically mirror the `Gitee` repository to `GitHub`.
+- [Отправка](#%E6%B7%BB%E5%8A%A0-push-%E6%96%B9%E5%90%91%E7%9A%84%E9%95%9C%E5%83%8F): Используется для автоматического зеркалирования репозитория `Gitee` на `GitHub`.
 
-> When you configure this mirror, when you submit code to the repository on Gitee, Gitee will automatically synchronize the repository to GitHub
+> Когда вы настроите это зеркало, при отправке кода в репозиторий на Gitee, Gitee будет автоматически синхронизировать репозиторий с GitHub.
   >
-  > ![Push](https://images.gitee.ru/uploads/images/2021/0609/151053_e2fe166f_8249553.png )
+  > ![Отправка](https://images.gitee.ru/uploads/images/2021/0609/151053_e2fe166f_8249553.png )
 
-- [Pull](#Adding-pull-direction-images): Used to mirror the repository from 'GitHub' to 'Gitee'.
+- [Слияние](#Adding-pull-direction-images): Используется для зеркалирования репозитория с 'GitHub' на 'Gitee'.
 
-  > You can choose automatic mirroring or manual mirroring according to your needs;
+  > Вы можете выбрать автоматическое зеркалирование или ручное зеркалирование в зависимости от ваших потребностей;
   >
-> Auto Mirroring: When you commit code to the GitHub mirror repository, Gitee will automatically sync the repository from GitHub;
+> Автоматическое зеркалирование: Когда вы коммитите код в зеркальный репозиторий GitHub, Gitee будет автоматически синхронизировать репозиторий с GitHub;
   >
-  > ![Pull](https://images.gitee.ru/uploads/images/2021/0609/151115_83062169_8249553.png )
+  > ![Слияние](https://images.gitee.ru/uploads/images/2021/0609/151115_83062169_8249553.png )
   >
-  > Manual mirror: Gitee will only synchronize the repository from GitHub when you manually click the update button.
+  > Ручное обновление зеркала: Gitee будет синхронизировать репозиторий с GitHub, только когда вы вручную нажмете кнопку обновления.
 
-The repository image will synchronize the following content:
+Образ репозитория будет синхронизировать следующее содержимое:
 
-- Branches
-- Tags
-- Commit Records (Commits)
+- Ветки
+- метки
+- Записи коммитов (коммиты)
 
-Configuring repository mirroring can help you manage GitHub repositories and reduce the time cost of maintaining repositories on different platforms.
+Настройка зеркалирования репозиториев поможет вам управлять репозиториями GitHub и сократить временные затраты на поддержку репозиториев на разных платформах.
 
-If you encounter any problems during use, please go to [User Feedback Repository](https://gitee.ru/oschina/git-osc) to give us feedback.
+Если вы столкнулись с какими-либо проблемами во время использования перейдите на [Репозиторий отзывов пользователей](https://gitee.ru/oschina/git-osc), чтобы оставить нам отзыв.
 
-# Configure repository images
+# Настроить образы репозиториев
 
-## Add mirror for Push direction
+## Добавьте зеркало для направления Push
 
-A push direction mirror is used to automatically mirror the `Gitee` repository to `GitHub`.
+Зеркало направления push используется для автоматического зеркалирования репозитория `Gitee` на `GitHub`.
 
-- **Run (Build):** Represents an execution of the pipeline. After the run is completed, you will get all the logs related to stages and tasks, as well as the results of the run.
+- **Запуск (сборка):** Представляет собой выполнение конвейера. После завершения выполнения вы получите все журналы, связанные с этапами и задачами, а также результаты выполнения.
 
-You can add a mirror in the Push direction in the following ways:
+Вы можете добавить зеркало в направлении Push следующими способами:
 
-1. Enter the repository where the image feature needs to be used, go to 'Settings' and find the 'Repository Mirroring' option, click on 'Add Mirroring'.
+1. Войдите в репозиторий, в котором необходимо использовать функцию изображения, перейдите в раздел "Настройки" и найдите опцию "Зеркалирование репозитория", нажмите "Добавить зеркалирование".
 
-   > If you haven't bound your GitHub account yet, please follow the pop-up prompt to bind your GitHub account;
+   > Если вы еще не привязали свой аккаунт GitHub, следуйте всплывающему предложению, чтобы привязать аккаунт GitHub;
 
-   ![Image Description](https://images.gitee.ru/uploads/images/2021/0609/110626_76a3ab9b_8249553.png "12.png")
+   ![Описание изображения](https://images.gitee.ru/uploads/images/2021/0609/110626_76a3ab9b_8249553.png "12.png")
 
-2. Add image;
+2. Добавьте изображение;
 
-   ![Image Description](https://images.gitee.ru/uploads/images/2021/0608/154110_68e97f15_8249553.png "6.png")
+   ![Описание изображения](https://images.gitee.ru/uploads/images/2021/0608/154110_68e97f15_8249553.png "6.png")
 
-1. Select the Push direction in the "Image Direction";
+1. Выберите направление движения в "Направлении изображения";
 
-   2. Select the repository to be mirrored from the "Mirror Repository" dropdown list;
+   2. Выберите репозиторий для зеркалирования из выпадающего списка "Mirror Repository";
 
-3. Enter your GitHub personal token in "Personal Access Tokens".
-      - The personal token must include authorization to access 'repo', otherwise the added image will not be available.
+3. Введите свой персональный токен GitHub в разделе "Personal Access Tokens".
+      - Персональный токен должен содержать разрешение на доступ к 'repo', иначе добавленное изображение будет недоступно.
 
-   4. Click 'Add' to save the image configuration.
+   4. Нажмите "Добавить", чтобы сохранить конфигурацию образа.
 
-After the configuration is completed, you can trigger image operations (Gitee synchronizes repositories to GitHub) in the following ways:
+После завершения настройки вы можете запускать операции с изображениями (Gitee синхронизирует репозитории с GitHub) следующими способами:
 
-- Commit code to Gitee repository
-- [Manually update the mirror](#%E6%89%8B%E5%8A%A8%E6%9B%B4%E6%96%B0)
+- Коммит кода в репозитории Gitee
+- [Обновить зеркало вручную](#%E6%89%8B%E5%8A%A8%E6%9B%B4%E6%96%B0)
 
-> The minimum interval for triggering a mirror is 5 minutes.
+> Минимальный интервал для запуска зеркала составляет 5 минут.
 
-If only the Push direction mirror is configured, it is recommended to submit the latest code to the Gitee repository.
+Если настроено только зеркало направления Push, рекомендуется отправить последнюю версию кода в репозиторий Gitee.
 >
-> Gitee automatically synchronizes repositories (branches, tags, commits) with GitHub.
+> Gitee автоматически синхронизирует репозитории (ветки, теги, коммиты) с GitHub.
 
-## Add mirror for Pull direction
+## Добавьте зеркало для Pull direction
 
-Pull direction mirrors the repositories from GitHub to Gitee.
+Pull direction создает зеркалирует репозитории с GitHub на Gitee.
 
-You can choose automatic mirroring or manual mirroring according to your needs.
+Вы можете выбрать автоматическое или ручное зеркалирование в зависимости от ваших потребностей.
 
-You can configure a mirror in the Pull direction in the following ways:
+Вы можете настроить зеркало в направлении отправки данных следующими способами:
 
-1. Enter the repository where the image feature needs to be used, go to 'Settings' and find the 'Repository Mirroring' option, click on 'Add Mirroring'.
+1. Войдите в репозиторий, в котором необходимо использовать функцию зеркалирования, перейдите в раздел "Настройки" и найдите опцию "Зеркалирование репозитория", нажмите на "Добавить зеркалирование".
 
-   > If you haven't bound your GitHub account yet, please follow the pop-up prompt to bind your GitHub account;
+   > Если вы еще не привязали свой аккаунт GitHub, следуйте всплывающему предложению, чтобы привязать аккаунт GitHub;
 
-   ![Image Description](https://images.gitee.ru/uploads/images/2021/0609/110626_76a3ab9b_8249553.png "12.png")
+   ![Описание изображения](https://images.gitee.ru/uploads/images/2021/0609/110626_76a3ab9b_8249553.png "12.png")
 
-2. Add image;
+2. Добавьте изображение;
 
-   ![Image Description](https://images.gitee.ru/uploads/images/2021/0609/111013_4806d22e_8249553.png "13.png")
+   ![Описание изображения](https://images.gitee.ru/uploads/images/2021/0609/111013_4806d22e_8249553.png "13.png")
 
-1. Select Pull direction in the 'Mirror Direction';
+1. Выберите направление вытягивания в разделе "Направление зеркала";
 
-   2. Select the repository to be mirrored from the "Mirror Repository" dropdown list;
-3. Enter your GitHub personal token in "Personal Access Tokens".
-      - The personal token must include authorization to access 'repo', otherwise the added image will not be available.
-   4. Choose whether to select "Automatically sync repository from GitHub" based on your needs;
-      - If selected, we will automatically generate a webhook in the mirrored repository for automatic mirroring;
-- This feature requires your personal access token to include access authorization for `admin:repo_hook`, otherwise it will fail to add;
-   5. Click 'Add' to save the image configuration;
- - If the addition fails, please reapply for a personal token according to the process provided in [How to Apply for a GitHub Personal Token](#how-to-apply-for-a-github-personal-token).
-      - If the addition still fails after reapplying the personal token, please uncheck "Automatically sync repositories from GitHub" and click "Add" to save the image.
+   2. Выберите репозиторий для зеркалирования из выпадающего списка "Зеркалировать репозиторий";
+3. Введите свой персональный токен GitHub в разделе "Токены персонального доступа".
+      - Персональный токен должен содержать разрешение на доступ к 'repo', иначе добавленный образ будет недоступен.
+   4. Выберите опцию "Автоматически синхронизировать репозиторий с GitHub" в зависимости от ваших потребностей;
+      - Если выбрано, мы автоматически сгенерируем вебхук в зеркалируемом репозитории для автоматического зеркалирования;
+- Эта функция требует, чтобы ваш персональный токен доступа включал авторизацию доступа для `admin:repo_hook`, иначе она не будет добавлена;
+   5. Нажмите "Добавить", чтобы сохранить конфигурацию образа;
+ - Если добавление не удалось, повторно подайте заявку на получение персонального токена в соответствии с процедурой, описанной в [Как подать заявку на получение персонального токена GitHub] (#how-to-apply-for-a-github-personal-token).
+      - Если после повторного применения персонального токена добавление по-прежнему не происходит, снимите флажок "Автоматически синхронизировать репозитории с GitHub" и нажмите "Добавить", чтобы сохранить изображение.
 
-After the configuration is complete, you can trigger image operations through the following methods (Gitee synchronizes repositories from GitHub):
+После завершения настройки вы можете запускать операции с изображениями следующими способами (Gitee синхронизирует репозитории с GitHub):
 
-- Push code to GitHub mirror repository
-- [Manually update the mirror](#%E6%89%8B%E5%8A%A8%E6%9B%B4%E6%96%B0)
+- Отправка кода в зеркальный репозиторий GitHub
+- [Ручное обновление зеркала](#%E6%89%8B%E5%8A%A8%E6%9B%B4%E6%96%B0)
 
-> The minimum interval for triggering a mirror is 5 minutes.
+> Минимальный интервал для срабатывания зеркала составляет 5 минут.
 
-> If only the Pull direction of the image is configured, it is recommended to submit the latest code to the GitHub image repository.
+> Если настроено только направление Pull образа, рекомендуется отправить последнюю версию кода в репозиторий образов GitHub.
 >
-Gitee will automatically sync repositories (branches, tags, commits) from GitHub.
+Gitee будет автоматически синхронизировать репозитории (ветки, теги, коммиты) с GitHub.
 
-Bidirectional Mirroring
+Двунаправленное зеркалирование
 
-Bidirectional mirroring refers to configuring two types of mirroring for the same GitHub repository.
+Двунаправленное зеркалирование - это настройка двух типов зеркалирования для одного и того же репозитория GitHub.
 
-> After configuring bidirectional mirroring, the code you submit on any platform will be synchronized to the other platform.
+> После настройки двунаправленного зеркалирования код, который вы отправляете на одной платформе, будет синхронизирован с другой платформой.
 >
-> Note: Bidirectional mirroring currently carries the risk of code loss, please use with caution!
+> Примечание: Двунаправленное зеркалирование в настоящее время несет риск потери кода, поэтому используйте его с осторожностью!
 
-To prevent code loss, please follow the rules when using bidirectional mirroring
+Чтобы предотвратить потерю кода, соблюдайте при использовании двунаправленного зеркалирования следующие правила:
 
-1. Do not submit code to the Gitee repository and GitHub mirrored repository at the same time.
+1. Не отправляйте код в репозиторий Gitee и зеркальный репозиторий GitHub одновременно.
 
-2. Try to ensure that the time interval between the Gitee repository and the GitHub mirrored repository is greater than 30 minutes for code submissions.
+2. Старайтесь, чтобы временной интервал между репозиторием Gitee и зеркальным репозиторием GitHub был больше 30 минут при отправке кода.
 
-# Manage repository images
+# Управление образами репозитория
 
-## Precautions
+## Меры предосторожности
 
-Please pay attention to the following information when using the repository mirroring feature:
+При использовании функции зеркалирования репозитория обратите внимание на следующую информацию:
 
-1. Only supports repositories that have authorized access with a GitHub account;
+1. Поддерживаются только те репозитории, к которым есть авторизованный доступ с помощью учетной записи GitHub;
 
-2. Once an update request is sent, it cannot be interrupted unless [force stopped](#force-stop);
+2. После отправки запроса на обновление он не может быть прерван, пока не будет [принудительно остановлен](#force-stop);
 
-3. Synchronization of Git-LFS is not currently supported;
+3. Синхронизация Git-LFS в настоящее время не поддерживается;
 
-4. Synchronization time exceeding 30 minutes is considered as timeout. It is not recommended to use mirror synchronization for large repositories;
+4. Время синхронизации, превышающее 30 минут, считается превышением времени ожидания. Не рекомендуется использовать зеркальную синхронизацию для больших репозиториев;
 
-5. Image operations will overwrite the branches, tags, and commit records of the target repository. Please backup and use with caution.
+5. Операции с образами перезаписывают ветки, теги и записи фиксации целевого репозитория. Создавайте резервные копии и используйте их с осторожностью.
 
-Manual Update
+Обновление вручную
 
-At any time, you can manually initiate an update request by using the "Update" button on the "Repository Mirroring Management" page.
+В любой момент вы можете вручную инициировать запрос на обновление, воспользовавшись кнопкой "Обновить" на странице "Управление зеркалами репозиториев".
 
-> Once the update request is initiated, it cannot be manually stopped, so please proceed with caution.
+> После того как запрос на обновление инициирован, его невозможно остановить вручную, поэтому соблюдайте осторожность.
 >
-> The minimum update interval for each mirror is 5 minutes.
+> Минимальный интервал обновления для каждого зеркала составляет 5 минут.
 
-Force Stop
+Принудительная остановка
 
-After the image update request is initiated, if the image fails 5 times in a row, the image operation will be forcibly stopped.
+После инициирования запроса на обновление образа, если образ не удается обновить 5 раз подряд, операция с образом будет принудительно остановлена.
 
-> You can see the error message returned by the last failed image in the image list.
+> В списке образов можно увидеть сообщение об ошибке, выданное последним неудачным образом.
 >
-> After forced stop, you can initiate an update request again in at least 5 minutes.
+> После принудительной остановки можно снова инициировать запрос на обновление не менее чем через 5 минут.
 
-# Frequently Asked Questions
+# Часто задаваемые вопросы
 
-## How to request a GitHub private token?
+## Как запросить личный токен GitHub?
 
-> GitHub personal token is used to grant Gitee permission to read and write Github repositories.
+> Персональный токен GitHub используется для предоставления Gitee разрешения на чтение и запись репозиториев Github.
 
-You can apply for a GitHub personal token by following these steps:
+Вы можете подать заявку на получение персонального токена GitHub, выполнив следующие действия:
 
-1. Log in with the GitHub account associated with Gitee;
+1. Войдите в систему с помощью связанной с Gitee учетной записи GitHub;
 
-2. Enter "Developer setting" by clicking on "User Avatar" -> "Settings" -> "Developer setting";
+2. Войдите в "Настройки разработчика", нажав на "Аватар пользователя" -> "Настройки" -> "Настройки разработчика";
 
-3. Select the 'Personal access tokens' option and click 'Generate new token';
+3. Выберите опцию "Персональные токены доступа" и нажмите "Сгенерировать новый токен";
 
-4. The "Note" field can be filled in randomly; for example, Gitee_Mirror;
+4. Поле "Примечание" может быть заполнено произвольно, например, Gitee_Mirror;
 
-5. Please check the "Select scopes" field according to your needs;
-      - The `repo` field is a required field, please check it directly;
-      - The `admin:repo_hook` field is optional and is used to automatically generate webhooks;
-        > When you need Gitee to automatically synchronize the repository from GitHub, it is recommended to select this option.
+5. Поставьте галочку в поле "Select scopes" в соответствии с вашими потребностями;
+      - Поле `repo` является обязательным полем проверьте его;
+      - Поле `admin:repo_hook` является необязательным и используется для автоматической генерации веб-хуков;
+        > Если вам нужно, чтобы Gitee автоматически синхронизировал репозиторий с GitHub, рекомендуется выбрать эту опцию.
 
-6. Click on 'Generate token' to generate a personal token;
+6. Нажмите кнопку "Сгенерировать токен", чтобы сгенерировать персональный токен;
 
-7. Copy the private token and keep it properly.
+7. Скопируйте личный токен и сохраните его надлежащим образом.
 
-![Personal Token](https://images.gitee.ru/uploads/images/2021/0607/102945_c25b7fc1_8249553.png "5.png")
+![Персональный токен](https://images.gitee.ru/uploads/images/2021/0607/102945_c25b7fc1_8249553.png "5.png")
 
-## Why does pushing to GitHub fail?
+## Почему не работает отправка на GitHub?
 
-If your GitHub account has enabled the 'Keep my email addresses private' feature and you push code using your email on Gitee, the push through Gitee will be subject to this restriction.
+Если в вашем аккаунте GitHub включена функция 'Оставить мои адреса электронной почты приватными' и вы отправляете код, используя свою почту на Gitee, то отправка через Gitee будет ограничена.
 
-## How to manually configure Webhook?
+## Как вручную настроить Вебхук?
 
-> Webhook is used to achieve automatic synchronization of Pull direction images.
+> Вебхук используется для автоматической синхронизации изображений направления Pull.
 
-If you are unable to use the automatically generated webhook feature provided by us, or if you accidentally delete the automatically generated webhook;
+Если вы не можете воспользоваться автоматически созданным вебхуком или случайно удалили автоматически созданный webhook;
 
-You can manually configure webhooks using the following methods:
+Вы можете вручную настроить вебхуки, используя следующие методы:
 
-### 1. Apply for a private token from Gitee
+### 1. Подайте заявку на получение персонального токена от Gitee.
 
-> If your existing personal token includes 'project' permission, you can skip this step.
+> Если ваш существующий персональный токен включает разрешение "проект", вы можете пропустить этот шаг.
 
-1. Go to 'User Avatar' -> 'Settings' to find the 'Personal Access Token' option;
+1. Перейдите в раздел 'Аватар пользователя' -> 'Настройки', чтобы найти опцию 'Токен личного доступа';
 
-![Personal Token](https://images.gitee.ru/uploads/images/2021/0608/113341_ea5547fd_8249553.png "9.png")
+![Персональный токен](https://images.gitee.ru/uploads/images/2021/0608/113341_ea5547fd_8249553.png "9.png")
 
-2. Generate a personal token according to the following steps;
+2. Сгенерируйте персональный токен в соответствии со следующими шагами;
 
-   ![Image Description](https://images.gitee.ru/uploads/images/2021/0608/113402_9a4908f8_8249553.png "10.png")
+   ![Описание изображения](https://images.gitee.ru/uploads/images/2021/0608/113402_9a4908f8_8249553.png "10.png")
 
-- The 'Private Token Description' field can be filled in at will; for example, Gitee_Mirror;
-   - Check the `project` permission;
-   - Click "Submit" to generate a personal token;
+- Поле 'Описание личного токена' может быть заполнено произвольно; например, Gitee_Mirror;
+   - Проверьте разрешение `project`;
+   - Нажмите "Отправить", чтобы сгенерировать персональный токен;
 
-3. Copy the personal token and keep it safe.
+3. Скопируйте персональный токен и сохраните его.
 
-### 2. Configure webhook
+### 2. Настройка вебхука
 
-1. Enter the mirror repository of GitHub, go to 'Settings', find the 'Webhooks' option, and click 'Add webhook';
+1. Войдите в зеркальный репозиторий GitHub, перейдите в раздел "Настройки", найдите опцию "Вебхуки" и нажмите "Добавить вебхук";
 
-2. Fill in the `Payload URL` field in the following format;
+2. Заполните поле `URL-адрес полезной нагрузки` в следующем формате;
 
    ```JavaScript
    https://gitee.ru/api/v5/repos/:owner/:repo/remote_mirror/pull?access_token=:personal access token
    ```
 
-   - `:owner`: Indicates the ownership of the repository
-   - `:repo`: Specifies the repository name
-   - `:personal access token`: Refers to your Gitee personal token
+   - `:owner`: Указывает право собственности на репозиторий
+   - `:repo`: Указывает имя репозитория
+   - `:personal access token`: Указывает на ваш персональный токен Gitee
 
-3. Select 'Just the push event.';
+3. Выберите "Только событие отправки данных";
 
-   - If you need to customize the trigger behavior, please select 'Let me select individual events.' and define it yourself;
+   - Если вам нужно настроить поведение триггера, выберите "Позвольте мне выбрать отдельные события" и определите его самостоятельно;
 
-4. After ensuring that "Active" is checked, click "Add webhook" to save the webhook;
+4. Убедившись, что флажок "Активный" установлен, нажмите "Добавить вебхук", чтобы сохранить вебхук;
 
-### 3. Webhook connectivity test
+### 3. Проверка работоспособности вебхука
 
-After saving the webhook, GitHub will automatically send a test request, you can check if the webhook is working properly by looking at the `icon` in the list.
+После сохранения вебхука GitHub автоматически отправит тестовый запрос, вы можете проверить, правильно ли работает вебхук, посмотрев на `icon` в списке.
 
-- Normal:
+- Нормально:
 
-![Normal](https://images.gitee.ru/uploads/images/2021/0924/105302_29a750fc_8249553.png)
+![Нормальный](https://images.gitee.ru/uploads/images/2021/0924/105302_29a750fc_8249553.png)
 
-- Abnormal:
+- Ненормальный:
 
-![Abnormal](https://images.gitee.ru/uploads/images/2021/0924/105210_58266444_8249553.png)
+![Аномальный](https://images.gitee.ru/uploads/images/2021/0924/105210_58266444_8249553.png)
 
-- In this case, please carefully check if the 'Payload URL' is correct and try again.
+- В этом случае внимательно проверьте правильность 'URL-адреса полезной нагрузки' и повторите попытку.
 
-## Common Errors
+## Общие ошибки
 
-- Repository not found: Please check if the mirrored repository has been deleted or renamed.
+- Репозиторий не найден: Проверьте, не был ли удален или переименован зеркальный репозиторий.
 
-Invalid personal token: Please check if the personal token is entered correctly.
+Неверный персональный токен: Проверьте, правильно ли введен персональный токен.
 
-- Insufficient permissions for personal tokens: Please check if the personal token includes 'repo' authorization;
+- Недостаточно прав для персонального токена: Проверьте, включены ли в персональный токен полномочия 'repo';
 
-- The repository is being read or written, please try again later: Pull or Push image is being updated, please retry after the update is complete.
+- Репозиторий находится в процессе чтения или записи, повторите попытку позже: Идет обновление образа Pull или Push повторите попытку после завершения обновления.

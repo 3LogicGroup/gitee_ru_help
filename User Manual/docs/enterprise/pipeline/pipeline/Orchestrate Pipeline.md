@@ -1,47 +1,47 @@
 ---
-title: Arrange Pipelines
-description: Arrange pipelines
+title: Организация конвейеров
+description: Организация конвейеров
 slug: /enterprise/pipeline/layout
 keywords:
  - Gitee
- - Orchestrate Pipeline
+ - Оркестрация контейнеров
 ---
 
-## Stage Settings
+## Настройки этапа
 
-A stage is a secondary element in a pipeline and typically represents a collection of similar tasks, such as the "code scanning" stage, which can have three tasks: "code style scanning," "code security scanning," and "code defect scanning." A pipeline can have multiple stages that are executed sequentially. The basic elements of a stage are as follows:
+Этап - это вторичный элемент конвейера, который обычно представляет собой набор схожих задач, например, этап "сканирование кода", который может состоять из трех задач: "сканирование стиля кода", "сканирование безопасности кода" и "сканирование дефектов кода". Конвейер может иметь несколько этапов, которые выполняются последовательно. Основные элементы этапа выглядят следующим образом:
 
-- Stage Name: The name of the stage, can be repeated within the same pipeline.
+- Имя этапа: Название этапа, которое может повторяться в рамках одного конвейера.
   
-- Trigger Method
-    - Automatic trigger: After the upstream stage build succeeds, the downstream stage is triggered automatically. If it fails, the downstream is not allowed to be triggered.
-- Manual Trigger: After the upstream stage build is successful, the downstream stage will not be automatically triggered. You need to manually click the execute button.
+- Метод триггера
+    - Автоматический триггер: После успешной сборки этапа выше по течению автоматически запускается этап ниже по течению. В случае неудачи последующий этап не может быть запущен.
+- Ручной триггер: После успешной сборки этапа восходящего потока этап нисходящего потока не будет запущен автоматически. Необходимо вручную нажать кнопку выполнения.
 
-- Failure strategy
-    - Fast Failure: It is mainly used in scenarios where concurrent tasks are executed, as shown in the figure below. There are three parallel task chains in the build phase, and when the compilation phase starts, the three task chains will start executing simultaneously. If Step1-1 fails, even if Step2-1 and Step3-1 succeed, downstream tasks will not be triggered. That is, when selecting 'Fast Failure', parallel task chains can affect each other's execution status.
-- Natural Failure: In contrast to fast failure, when selecting "natural failure", the parallel task chains do not affect each other. Even if Step1-1 fails, it will only affect Step1-2 and Step1-3 from continuing to execute, while the Step2 and Step3 chains will continue to execute normally until all chains are completed.
+- Стратегия отказа
+    - Быстрый отказ: В основном используется в сценариях, где выполняются параллельные задачи, как показано на рисунке ниже. На этапе сборки есть три параллельные цепочки задач, и когда начнется этап компиляции, все три цепочки задач начнут выполняться одновременно. Если этап 1-1 завершится неудачей, то даже при успешном выполнении этапов 2-1 и 3-1 последующие задачи не будут запущены. То есть при выборе "Быстрый отказ" параллельные цепочки задач могут влиять на статус выполнения друг друга.
+- Естественный отказ: В отличие от быстрого отказа, при выборе "естественного отказа" параллельные цепочки задач не влияют друг на друга. Даже если Step1-1 не выполнится, это повлияет только на Step1-2 и Step1-3, в то время как цепочки Step2 и Step3 будут продолжать выполняться нормально, пока все цепочки не завершатся.
     
-![Quick Failure](./assets/quick_failure.png)
+![Быстрый отказ](./assets/quick_failure.png)
 
-### Use Cases
+### Примеры использования
 
-![New Stage](./assets/New Stage.png)
+![Новый этап](./assets/New Stage.png)
 
-![New Stage 2](./assets/New Stage 2.png)
+![Новый этап 2](./assets/New Stage 2.png)
 
-## Task Settings
+## Настройки задачи
 
-Task is the third-level element of a pipeline, which is a child element of a stage and is the smallest execution unit. Within a stage, tasks can be defined to run in either serial or parallel order. Tasks are automatically executed by default and do not support manual execution. A task corresponds to a plugin and serves as the execution container for the plugin. Based on this, the overall model of a pipeline is as follows: A pipeline corresponds to multiple stages, a stage corresponds to multiple tasks, and a task corresponds to a plugin.
+Задача - это элемент третьего уровня конвейера, который является дочерним элементом этапа и представляет собой наименьшую единицу выполнения. В рамках этапа задачи могут быть определены для последовательного или параллельного выполнения. По умолчанию задачи выполняются автоматически и не поддерживают ручное выполнение. Задача соответствует плагину и служит контейнером выполнения для плагина. Исходя из этого, общая модель конвейера выглядит следующим образом: Конвейер состоит из нескольких этапов, этап состоит из нескольких задач, а задача состоит из плагина.
 
-A task contains the following basic information:
+Задача содержит следующую базовую информацию:
 
-- Task Name: The name of the task, which can be repeated within the same stage.
-- Workspace: When configuring multiple sources in a pipeline, you need to select the working source, and the working source data will be pulled during execution
+- Имя задачи: Имя задачи, которое может повторяться в пределах одного этапа.
+- Рабочая область: При настройке нескольких источников в конвейере необходимо выбрать рабочий источник, и данные из рабочего источника будут извлекаться во время выполнения.
 
-### Use Cases
+### Примеры использования
 
-![Create Task](./assets/Create Task.png)
+![Создать задачу](./assets/Create Task.png)
 
-![Create task 2](./assets/Create task 2.png)
+![Создать задачу 2](./assets/Create task 2.png)
 
-![Create Task 3](./assets/Create Task 3.png)
+![Создать задачу 3](./assets/Create Task 3.png)

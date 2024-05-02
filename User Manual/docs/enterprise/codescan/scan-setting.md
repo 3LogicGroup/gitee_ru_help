@@ -1,20 +1,20 @@
 ---
-title: Scan Settings
+title: Настройки сканирования
 ---
 
-## Filter Path Settings
+# Настройки пути фильтрации
 
-When creating or editing a module to be checked, you can set path filtering, and support regular expression matching:
+При создании или редактировании проверяемого модуля вы можете настроить фильтрацию пути и поддерживать сопоставление регулярных выражений:
 
-![Scan Settings](./assets/scan-1.png)
+![Настройки сканирования](./assets/scan-1.png)
 
-Wildcard reference format:
+Формат ссылки с подстановочными знаками:
 
-- Please provide a relative path (relative to the root of the codebase) that matches the file
+- Укажите относительный путь (относительно корня кодовой базы), соответствующий файлу
 
-- Use Unix wildcard format, as shown below:
+- Используйте формат Unix wildcard, как показано ниже:
 
-code root directory
+корневая директория кода
 |-src
 |-test
 |-main_test.py
@@ -22,9 +22,9 @@ code root directory
 |-main.py
 |-test
 |-param_test.py
-Match the src/test directory: src/test/*
-Match the test directory under the root directory: test/*
-Match all files with the suffix _test.py: *_test.py
+Сопоставьте src/test directory: src/test/*
+Сопоставьте тестовую директорию с корневой директорией: test/*
+Сопоставьте все файлы с суффиксом _test.py: *_test.py
 ```
 
-- After modification, the next scan will take effect. You need to start a full scan to handle historical stock issues
+- После внесения изменений начнется следующее сканирование. Для устранения исторических проблем репозитория необходимо запустить полное сканирование

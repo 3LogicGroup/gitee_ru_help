@@ -1,10 +1,10 @@
 ---
-title: Rename or Delete Files Online
+title: Переименование или удаление файлов в режиме онлайн
 origin-url: https://gitee.ru/help/articles/4143
 ---
 
-### How to modify files or folders online?
+### Как изменять файлы или папки в режиме онлайн?
 
-> Answer: Move to the file or folder you want to modify - Right-click - Select the rename or delete function.
+> Ответ: Перейдите к файлу или папке, которые вы хотите изменить - Щелкните правой кнопкой мыши - Выберите функцию переименования или удаления.
 
-![Alt text](../../../../repository/base/%E5%9C%A8%E7%BA%BF%E9%87%8D%E5%91%BD%E5%90%8D%E6%88%96%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6.assets/image.png)
+![Замещающий текст](../../../../repository/base/%E5%9C%A8%E7%BA%BF%E9%87%8D%E5%91%BD%E5%90%8D%E6%88%96%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6.assets/image.png)

@@ -1,15 +1,15 @@
 ---
-title: Delete repository
+title: Удаление репозитория
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 origin-url: https://gitee.ru/help/articles/4172
 ---
 
-In order to prevent user misoperation, when deleting a repository on Gitee, a secondary verification is required. Users can delete the repository by going to **Repository Homepage -> 'Manage' -> 'Repository Settings' -> 'Delete Repository'**.
+Чтобы предотвратить неправильные действия пользователей, при удалении репозитория на Gitee требуется вторичная проверка. Пользователи могут удалить репозиторий, перейдя на **Домашнюю страницу репозитория -> 'Управление' -> 'Настройки репозитория' -> 'Удалить репозиторий'**.
 
-After confirming the operation, require password verification from the user. Once the password is verified, the repository can be deleted.
+После подтверждения операции от пользователя потребуется подтверждение пароля. Как только пароль будет подтвержден, репозиторий можно будет удалить.
 
-![Delete Repository - Step 1](https://images.gitee.ru/uploads/images/2018/0814/141508_7944544f_551147.png "Delete Repository - Step 1")
+![Удаление репозитория - шаг 1](https://images.gitee.ru/uploads/images/2018/0814/141508_7944544f_551147.png "Удаление репозитория - шаг 1")
 
-Delete repository - verify password
+Удаление репозитория - проверка пароля

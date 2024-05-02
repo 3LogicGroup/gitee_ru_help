@@ -1,15 +1,15 @@
 ---
-title: Task Board
+title: Панель заданий
 authors:
   - name: Cheese
-description: Introduction to the use of Issue task board
+description: Знакомство с использованием панели заданий
 ---
 
-## Introduction to Task Board Functionality
+## Знакомство с функционалом панели заданий
 
-The Task Board is a way to visualize and organize issue tasks. It arranges tasks in a visual manner so that every member of the repository knows the status of any issue and can quickly find any issue.
+Панель заданий - это способ визуализации и упорядочивания заданий в задаче. Она обеспечивает наглядное упорядочивание заданий таким образом, чтобы каждый пользователь репозитория знал статус любой задачи и мог быстро найти любую задачу.
 
-On the task board page, Issues are presented according to their progress status. With the filtering function on the top, you can achieve efficient Issue management more easily.
+На странице "Панель заданий" задачи представлены в соответствии со статусом их выполнения. С помощью функции фильтрации вверху вы можете без труда добиться эффективного управления задачами.
 
 ![](sidebar.assets/image-1.png)
 

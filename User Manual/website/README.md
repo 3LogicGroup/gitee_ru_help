@@ -1,26 +1,26 @@
-# Gitee docs Website
+# Веб-сайт документации Gitee
 
-### Install
+### Установка
 
 ```
 $ npm install
 ```
 
-### Development 
+### Разработка
 
 ```
 $ cp .env.example .env
 $ npm run start
 ```
 
-### Build
+### Сборка
 
 ```
 $ npm run build
 ```
 
 
-### Todo
-- [ ] Replace the document icon with @gitee/icons
-- [ ] Use Jenkins for automatic deployment to deployment pages
-- [ ] Optimize the font, spacing, and reading experience of the document content
+### Задачи
+- [ ] Заменить иконку документа на @gitee/icons
+- [ ] Использовать Jenkins для автоматического развертывания на страницы развертывания
+- [ ] Оптимизировать шрифт, интервалы и визуальный опыт чтения содержимого 

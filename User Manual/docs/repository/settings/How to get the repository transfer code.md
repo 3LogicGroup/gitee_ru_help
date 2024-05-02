@@ -1,17 +1,17 @@
 ---
-title: How to get the repository transfer code
+title: Как получить код переноса репозитория
 authors:
   - name: South Drifting All the Way
     url: https://gitee.ru/kangxiok
 origin-url: https://gitee.ru/help/articles/4246
 ---
 
-### What is a transfer code
+### Что такое код переноса
 
-Transfer code is used to transfer project code credentials between Gitee Community Edition and Enterprise Edition. The transfer code is valid within one hour after it is generated.
+Код переноса используется для передачи учетных данных кода проекта между Gitee Community Edition и Enterprise Edition. Код переноса действителен в течение одного часа после его генерации.
 
-### Acquisition method
+### Способ получения
 
-> In the Gitee Enterprise backend -> "Repositories" -> "Add Repository" -> "Transfer Repository", select "Generate Transfer Code" to obtain it.
+> В бэкенде Gitee Enterprise -> "Репозитории" -> "Добавить репозиторий" -> "Перенос репозитория", выберите "Сгенерировать код переноса" для получения.
 
-![Image Description](../../../assets/image27.png)
+![Описание изображения](../../../assets/image27.png)

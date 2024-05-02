@@ -1,7 +1,7 @@
 ---
-title: Notification and alert settings
+title: Настройки уведомлений и оповещений
 ---
 
-In the "Notification and Alert Settings" page, various warning notifications can be toggled on/off and the notification method can be set.
+На странице "Настройки уведомлений и оповещений" можно включать или выключать различные предупреждающие уведомления и настраивать метод уведомления.
 
-![Image Description](assets/image390.png)
+![Описание изображения](assets/image390.png)

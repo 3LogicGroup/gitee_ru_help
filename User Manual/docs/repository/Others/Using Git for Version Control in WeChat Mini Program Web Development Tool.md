@@ -1,142 +1,142 @@
 ---
-Title: Using Git for version control in the WeChat mini program web development tool.
+Title: Использование Git для контроля версий в инструменте веб-разработки мини-программы WeChat
 
 origin-url: https://gitee.ru/help/articles/4202
 ---
 
-## Introduction
+## Введение
 
-In the process of developing WeChat mini programs, code version management often requires the use of third-party tools. Although the 'WeChat Web Development Tool' provides prompts for the Git file version status, the actual user experience is still unsatisfactory.
+В процессе разработки мини-программ для WeChat управление версиями кода часто требует использования сторонних инструментов. Хотя "инструмент для веб-разработки WeChat" предоставляет подсказки о состоянии версии файла Git, фактический опыт пользователя все еще неудовлетворителен.
 
-With the update of 'WeChat Web Development Tool', the latest beta version now supports direct management of 'Git'. This article will provide a detailed introduction on using 'Git' for version control in 'WeChat Web Development Tool'.
+С обновлением 'инструмента для веб-разработки WeChat', последняя бета-версия теперь поддерживает прямое управление 'Git'. В этой статье мы подробно расскажем об использовании 'Git' для контроля версий в 'инструменте для веб-разработки WeChat'.
 
-## Environment Preparation
+## Подготовка среды
 
-- Development environment: Mac/Windows/Linux are all supported.
-- Development tools: WeChat Web Developer Tools Beta version, Git
-- Git hosting service: [Gitee]
+- Среда разработки: Mac/Windows/Linux - все поддерживается.
+- Инструменты разработки: бета-версия инструментов для веб-разработчиков WeChat, Git.
+- Служба хостинга Git: [Gitee].
 
-To use the Git service, you need to install Git on your system. For the installation of the related Git environment, please refer to [Getting Started with Git] and [Git Installation].
+Чтобы воспользоваться сервисом Git, необходимо установить Git в вашей системе. Об установке соответствующей среды Git см. в разделах [Начало работы с Git] и [Установка Git].
 
-Since the support for Git management in the current
+Поскольку поддержка управления Git в текущем
 
-## Create a mini program repository
+## Создайте мини-репозиторий программы
 
-To use Git for version control, you first need a Git repository. Open the WeChat Web Developer Tools and create/open the repository for your mini program. In this example, let's assume the repository name is 'HelloGitee'. Fill in the corresponding path and 'appid', select 'Create a regular quickstart template', confirm, and create the repository.
+Чтобы использовать Git для контроля версий, вам сначала нужно создать Git-репозиторий. Откройте инструменты для веб-разработчиков WeChat и создайте/откройте репозиторий для вашей мини-программы. В этом примере предположим, что имя репозитория будет 'HelloGitee'. Введите соответствующий путь и 'appid', выберите 'Создать обычный шаблон быстрого запуска', подтвердите и создайте репозиторий.
 
 ![](https://images.gitee.ru/uploads/images/2018/0819/215526_c564ebdb_551147.png )
 
-After the creation is completed, the initialized repository is obtained.
+После завершения создания будет получен инициализированный репозиторий.
 
-Initialize the repository
+Инициализация репозитория
 
-## Create Remote Repository
+## Создание удаленного репозитория
 
-Login to your Gitee account on [https://gitee.ru] and select **'New Repository'** from the new button in the upper right corner. Fill in the corresponding project repository information.
+Войдите в свой аккаунт Gitee на [https://gitee.ru] и выберите **'Новый репозиторий'** из новой кнопки в правом верхнем углу. Заполните соответствующую информацию о репозитории проекта.
 
-Here we choose to use a public repository, name the path as "HelloGitee", and select "JavaScript" as the development language. Click the "Create" button to initialize the remote repository after confirmation.
+Здесь мы решили использовать публичный репозиторий, назвали путь "HelloGitee" и выбрали "JavaScript" в качестве языка разработки. Нажмите кнопку "Создать", чтобы инициализировать удаленный репозиторий после подтверждения.
 
-![Create Remote Repository](https://images.gitee.ru/uploads/images/2018/0819/215557_2afe3b88_551147.png)
+![Создание удаленного репозитория](https://images.gitee.ru/uploads/images/2018/0819/215557_2afe3b88_551147.png)
 
-After creating and initializing the remote repository, we get a blank repository as shown in the figure below. The repository URL of the project is: `https://gitee.ru/normalcoder/HelloGitee.git`
-Next, we will initialize the local Git repository.
+После создания и инициализации удаленного репозитория мы получим пустой репозиторий, как показано на рисунке ниже. URL-адрес репозитория проекта следующий: `https://gitee.ru/normalcoder/HelloGitee.git`.
+Далее мы инициализируем локальный Git-репозиторий.
 
 ![](https://images.gitee.ru/uploads/images/2018/0819/215609_49072d52_551147.png )
 
-## Initialize local repository
+## Инициализация локального репозитория
 
-Click the 'Version Control' button on the panel in the 'WeChat Web Developer Tool', and the version control panel in the developer tool will pop up.
+Нажмите кнопку "Контроль версий" на панели в "Инструмент для веб-разработчиков WeChat", после чего откроется панель контроля версий в инструменте разработчика.
 
-Since it is a new repository and has not been initialized as a Git repository, it will prompt to initialize the Git repository. Click on 'Initialize Git Repository', then click 'Confirm' to complete the initialization of the local repository.
+Поскольку это новый репозиторий и он не был инициализирован как Git-репозиторий, появится запрос на инициализацию репозитория Git. Нажмите на 'Инициализация репозитория Git', затем нажмите 'Подтвердить', чтобы завершить инициализацию локального репозитория.
 
-**This step is equivalent to executing the 'git init' command.**
+**Этот шаг эквивалентен выполнению команды 'git init'**.
 
 ![](https://images.gitee.ru/uploads/images/2018/0819/215627_888218b0_551147.png )
 
 ![](https://images.gitee.ru/uploads/images/2018/0819/215634_fa883863_551147.png )
 
-After initialization, we can see the local repository and the current Git status. The following image shows the version control panel after initializing the 'WeChat Web Developer Tool'.
+После инициализации мы можем увидеть локальный репозиторий и текущий статус Git. На следующем изображении показана панель управления версиями после инициализации 'WeChat Web Developer Tool'.
 
 ![](https://images.gitee.ru/uploads/images/2018/0819/215642_94c211c4_551147.png )
 
-## Configure repository information
+## Настройка информации о репозитории
 
-After initialization, click 'Workspace' -> 'Settings' -> 'General' -> 'Edit' in order, and edit the username and email used in Git. This step is equivalent to the configuration operation in the 'git config' command.
+После инициализации нажмите 'Рабочее пространство' -> 'Настройки' -> 'Общие' -> 'Редактировать' и отредактируйте имя пользователя и e-mail, используемые в Git. Этот шаг эквивалентен операции настройки в команде 'git config'.
 
 ```bash
 git config --global user.name "username"
 git config --global user.email "email"
 ```
 
-Please note that the email name configured here needs to be consistent with the email on [Gitee https://gitee.ru] to ensure that the contribution information can be counted after submission.
+Обратите внимание, что указанный здесь адрес электронной почты должен совпадать с адресом электронной почты на сайте [Gitee https://gitee.ru], чтобы информация о вкладе могла быть учтена после отправки.
 
 ![](https://images.gitee.ru/uploads/images/2018/0819/215654_9e7deafa_551147.png )
 
 ![](https://images.gitee.ru/uploads/images/2018/0819/215704_e2a45a94_551147.png )
 
-Switch to the 'Remote' tab in the repository settings. At this time, you will find the prompt 'Remote repository information not found'. Click on 'Add' and fill in the previously created remote repository address. Name the repository as '**master**' or choose your own name.
+Перейдите на вкладку 'Remote' в настройках репозитория. В этот момент вы увидите сообщение 'Информация об удаленном репозитории не найдена'. Нажмите на кнопку 'Добавить' и введите ранее созданный адрес удаленного репозитория. Назовите репозиторий '**master**' или выберите собственное имя.
 
 ![](https://images.gitee.ru/uploads/images/2018/0819/215713_21fb385d_551147.png )
 
 ![](https://images.gitee.ru/uploads/images/2018/0819/215720_370e78a2_551147.png )
 
-After adding, you can see the remote branch information in the repository.
+После добавления вы сможете увидеть информацию об удаленной ветке в репозитории.
 
 ![](https://images.gitee.ru/uploads/images/2018/0819/215731_0ae06a3c_551147.png )
 
-## Push Code to Remote Repository
+## Отправка кода в удаленный репозиторий
 
-Click on the 'Push' button on the operation panel, select 'Push to a new remote repository branch' in the pop-up window, fill in the name as '**master**', indicating that it will be pushed to the 'master' branch of the remote repository, and then click 'OK'.
+Нажмите кнопку 'Отправить' на панели управления, выберите 'Отправить в новую ветку удаленного репозитория' во всплывающем окне, введите имя '**master**', указывая, что код будет перенесен в 'master' ветку удаленного репозитория, а затем нажмите 'OK'.
 
 ![](https://images.gitee.ru/uploads/images/2018/0819/215746_448ce1f9_551147.png )
 
-After pushing, we can see the branch information under the 'remote repository'. Accessing the repository on 'Gitee', we can also see the pushed information. At this point, we have completed the process of pushing the code from the local repository to the remote repository.
+После переноса мы можем увидеть информацию о ветке в разделе 'удалённый репозиторий'. Зайдя в репозиторий на 'Gitee', мы также можем увидеть информацию о переносе. На этом мы завершили процесс переноса кода из локального репозитория в удаленный репозиторий.
 
 ![](https://images.gitee.ru/uploads/images/2018/0819/215754_abe86fe9_551147.png )
 
 ![](https://images.gitee.ru/uploads/images/2018/0819/215801_e9136721_551147.png )
 
-## Precautions and identity authorization settings
+## Меры предосторожности и настройки авторизации идентификации
 
-If you encounter a failed push notification while pushing, you need to check user authorization. It may indicate that the 'WeChat Web Developer Tool' has not read the local user's SSH authorization configuration. You need to set the user's authorization information in the development tool.
+Если при отправке push-уведомления вы столкнулись с ошибкой, необходимо проверить авторизацию пользователя. Это может означать, что "Инструмент веб-разработчика WeChat" не прочитал конфигурацию авторизации SSH локального пользователя. Вам необходимо установить информацию об авторизации пользователя в инструменте разработки.
 
 ![](https://images.gitee.ru/uploads/images/2018/0819/215808_0bf8ca78_551147.png )
 
-After initialization, click "Workspace" -> "Settings" -> "Network & Authentication" -> "Authentication Method" in sequence. You can choose the authentication method for the remote repository. The default is "Automatic".
+После инициализации последовательно нажмите "Рабочая область" -> "Настройки" -> "Сеть и аутентификация" -> "Метод аутентификации". Вы можете выбрать метод аутентификации для удаленного репозитория. По умолчанию используется "Автоматически".
 
-Select "Enter Username and Password", enter your Gitee account and password below, and then perform the push operation again.
+Выберите "Введите имя пользователя и пароль", введите учетную запись Gitee и пароль ниже, а затем снова выполните операцию push.
 
 ![](https://images.gitee.ru/uploads/images/2018/0819/215818_df7a9b9a_551147.png )
 
-## Modify and commit code
+## Модификация и фиксация кода
 
-Next, let's modify our code.
+Далее давайте изменим наш код.
 
-Click on the "Version Control" button in the development tool panel, close the "Version Control" panel, open "pages/index/index.wxml", and modify the content "Get Avatar Nickname" to "My First Modification Commit", then save.
+Нажмите на кнопку "Контроль версий" на панели инструментов разработки, закройте панель "Контроль версий", откройте "pages/index/index.wxml" и измените содержимое "Get Avatar Nickname" на "My First Modification Commit", затем сохраните.
 
 ![](https://images.gitee.ru/uploads/images/2018/0819/215829_65697052_551147.png )
 
-Switch to the 'Version Control' panel again, you can see that there is a file waiting to be committed in the current local branch. Select and check the file to view the changes made to the current file.
+Снова переключитесь на панель "Контроль версий", и вы увидите, что в текущей локальной ветке есть файл, ожидающий фиксации. Выберите и проверьте файл, чтобы просмотреть изменения, внесенные в текущий файл.
 
 ![](https://images.gitee.ru/uploads/images/2018/0819/215840_757b3b0d_551147.png )
 
-Fill in the commit message in the commit box below, click "Commit", and **submit the code to the main branch of the local repository**. After the submission, you can view the commit record on the local repository branch.
+Заполните сообщение о коммите в расположенном ниже поле коммита, нажмите "Коммит" и **отправьте код в основную ветку локального репозитория**. После отправки вы сможете просмотреть запись о коммите в локальной ветке репозитория.
 
 ![](https://images.gitee.ru/uploads/images/2018/0819/215847_6b95df4b_551147.png )
 
-Next, we will push the code from the local branch to the remote repository again. Click the "Push" button on the operation panel, select "Push to the following remote repository branch" in the popup window, select the existing remote `master` repository's `master` branch, and then click "OK".
+Далее мы снова отправим код из локальной ветки в удаленный репозиторий. Нажмите кнопку "Push" на панели операций, выберите "Push в следующую ветку удаленного репозитория" во всплывающем окне, выберите существующую ветку `master` удаленного репозитория, а затем нажмите "OK".
 
 ![](https://images.gitee.ru/uploads/images/2018/0819/215853_456a28a3_551147.png )
 
-After the push is completed, you can see the submitted code changes on the homepage of the corresponding repository in [Gitee].
+После завершения процесса push вы сможете увидеть отправленные изменения кода на домашней странице соответствующего репозитория в [Gitee].
 
 ![](https://images.gitee.ru/uploads/images/2018/0819/215901_7356122d_551147.png )
 
-## Summary
+## Заключение
 
-In the above operations, we used the version management function of `WeChat Web Developer Tools` to control and manage the version of the mini program's code, and committed it to the remote Git repository.
+В описанных выше операциях мы использовали функцию управления версиями в `инструментах для веб-разработчиков WeChat` для контроля и управления версией кода мини-программы и зафиксировали ее в удаленном репозитории Git.
 
-In actual project development, we can fully utilize the features of Git in version control and collaboration, collaborate flexibly with others, and then standardize code management and collaborate more efficiently.
+В реальной разработке проекта мы можем в полной мере использовать возможности Git для контроля версий и совместной работы, гибко сотрудничать с другими, а затем стандартизировать управление кодом и сотрудничать более эффективно.
 
 [Gitee]:https://gitee.ru
 [Git Getting Started]:https://gitee.ru/help/categories/20

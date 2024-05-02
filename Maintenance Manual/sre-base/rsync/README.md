@@ -1,6 +1,6 @@
 # rsync
 
-For example, Configure Rsync to copy files and directories under the [/data/nfs] on  nfs1-server to [/data/nfs] on nfs2-server.
+Например, настройте Rsync на копирование файлов и каталогов из папки [/data/nfs] на nfs1-сервере в папку [/data/nfs] на nfs2-сервере.
 
 
 
@@ -14,19 +14,19 @@ For example, Configure Rsync to copy files and directories under the [/data/nfs]
 
 
 
-## 1. nfs2-server
+## 1. nfs2-сервер
 
 ```sh
 nfs2-server:~# apt -y install rsync
 nfs2-server:~# vi /etc/rsync_exclude.lst
-# specify files or directories you'd like to exclude to copy
+# укажите файлы или каталоги, которые вы хотите исключить из копирования
 test
 test.txt
 ```
 
 
 
-## 2. nfs1-server
+## 2. nfs1-сервер
 
 ```sh
 nfs1-server:~# apt -y install rsync
@@ -63,7 +63,7 @@ nfs1-server:~# systemctl enable --now rsync
 
 
 
-## 3. Set scheduled tasks
+## 3. Установите запланированные задачи
 
 ```sh
 nfs2-server:~# crontab -l
@@ -73,6 +73,6 @@ nfs2-server:~# crontab -l
 
 
 
-## Reference
+## Ссылка
 
-Linux Remote Data Sync Tool (yuque.com)
+Инструмент удаленной синхронизации данных для Linux (yuque.com)

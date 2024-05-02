@@ -1,16 +1,16 @@
 ---
-title: Repository Access Statistics
+title: Статистика доступа к репозиторию
 authors:
   - name: Cheese
-description: Instructions on how to view repository access statistics
+description: Инструкции по просмотру статистики доступа к репозиторию
 ---
 
-## How to Determine the Repository's Access Count?
+## Как определить интенсивность доступа к репозиторию?
 
-After entering the repository, click the "Statistics" button on the repository's main page to enter the statistics page. Click the "Access Statistics" button to obtain the access statistics for this repository. Gitee will visualize the repository's access statistics data in both table and chart forms. You can also select the option to receive weekly statistical emails on this page.
+После входа в репозиторий нажмите кнопку "Статистика" на главной странице репозитория, чтобы перейти на страницу статистики. Нажмите кнопку "Статистика доступа", чтобы получить статистику доступа для этого репозитория. Gitee отобразит данные статистики доступа к репозиторию в виде таблицы и графика. Также на этой странице можно выбрать опцию получения еженедельных писем со статистикой.
 
-![Access Statistics](./assets/access-statistics.png)
+![Статистика доступа](./assets/access-statistics.png)
 
-![Access Statistics](./assets/access-table.png)
+![Статистика доступа](./assets/access-table.png)
 
-![Access Statistics](./assets/access-graph.png)
+![Статистика доступа](./assets/access-graph.png)

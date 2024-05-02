@@ -1,14 +1,14 @@
 ---
-title: Batch GC for enterprise internal repositories
+title: Пакетный сбор мусора для внутренних репозиториев предприятия
 origin-url: https://gitee.ru/help/articles/4302
 ---
 
-In the enterprise view of Gitee Enterprise, you can perform batch GC on repositories in 【Management - Summary Information】.
+В корпоративном представлении Gitee Enterprise вы можете выполнить пакетный сбор мусора для репозиториев в 【Управление - Сводная информация】.
 
-![Image Description](image664.png)
+![Описание изображения](image664.png)
 
-The GC (garbage collect) function here is similar to the garbage collection function in Git.
+Функция GC (сбора мусора) здесь аналогична функции сбора мусора в Git.
 
-Git's underlying layer does not use the incremental file system used by CVS and SVN, but uses a self-maintained storage file system. When a file change is committed, the file system stores not the diff information of the file, but the file snapshot, that is, the entire file content, and saves the index pointing to the snapshot. This approach improves the efficiency of using branches, but it can also lead to excessive duplication of content in the code repository, resulting in a large repository size.
+Базовый слой Git не использует инкрементную файловую систему, применяемую в CVS и SVN, а использует самоподдерживающуюся файловую систему хранения. При фиксации изменения файла файловая система сохраняет не diff-информацию файла, а его снимок, то есть все содержимое файла, и сохраняет индекс, указывающий на снимок. Такой подход повышает эффективность использования ветвей, но может привести к чрезмерному дублированию содержимого в репозиторий кода, что приводит к большому размеру репозитория.
 
-In order to avoid the repository size affecting daily collaboration, Gitee provides the function to manually initiate GC for all repositories within the organization. After clicking "Repository GC", garbage collection will be performed on all repositories within the organization and the volume information of the current organization's repositories will be synchronized and refreshed. Only one initiation is allowed per day.
+Чтобы размер репозитория не влиял на ежедневную совместную работу, Gitee предоставляет функцию ручной инициации сбора мусора для всех репозиториев в организации. После нажатия кнопки "Сбор мусора репозитория" будет выполнена сборка мусора для всех репозиториев в организации, а также синхронизирована и обновлена информация об объеме репозиториев текущей организации. В день разрешается только одна инициация.

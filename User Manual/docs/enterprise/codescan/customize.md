@@ -1,23 +1,24 @@
 ---
-title: Customizing Scanning Schemes and Rule Sets
+title: Настройка схем сканирования и наборов правил
 ---
-Note: The system provides built-in language scanning schemes and rule sets for users to choose from and also supports customization.
+Примечание: Система предоставляет на выбор пользователей встроенные схемы сканирования языка и наборы правил на выбор пользователей, а также поддерживает их пользовательскую настройку.
 
-# Customize scanning scheme
+# Настроить схему сканирования
 
-Enterprise administrators enter the Scan sub-product menu, click to enter the scan solution navigation, and click on the right to customize the scan solution.
-![Custom](./assets/custom-1.png)
+Администраторы предприятий входят в меню подпродукта "Сканирование", щелкают, чтобы войти в навигацию по решениям сканирования, и щелкают справа, чтобы настроить решение сканирования.
 
-![Custom](./assets/custom-2.png)
+![Пользовательская настройка](./assets/custom-1.png)
 
-Scan scheme associates rule sets, so the created scan scheme supports a collection of rule sets for different languages. A unified scan scheme can be created for internal use within the enterprise.
+![Пользовательская настройка](./assets/custom-2.png)
 
-# Custom Rule Set
+Схема сканирования ассоциирует наборы правил, поэтому созданная схема сканирования поддерживает коллекцию наборов правил для разных языков. Можно создать единую схему сканирования для внутреннего использования на предприятии.
 
-Enterprise administrators enter the Scan sub-product menu, click on the rule set navigation, and click on the right to create a rule set:
+# Набор правил клиентских настроек
 
-![Custom](./assets/custom-3.png)
+Администраторы предприятия входят в меню подпродукта Scan, щелкают на навигации по набору правил и щелкают справа, чтобы создать набор правил:
 
-![Custom](./assets/custom-4.png)
+![Пользовательская настройка](./assets/custom-3.png)
 
-A rule set can be associated with different rules under the same language and tool
+![Пользовательская настройка](./assets/custom-4.png)
+
+Набор правил может быть связан с разными правилами для одного языка и инструмента

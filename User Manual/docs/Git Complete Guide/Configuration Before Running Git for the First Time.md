@@ -1,61 +1,61 @@
 ---
-title: Configuration before first Git run
+title: Настройки перед первым запуском Git
 authors:
   - name: Zoker
     url: https://gitee.ru/kesin
 origin-url: https://gitee.ru/help/articles/4107
 ---
 
-On a new system, we usually need to configure our Git working environment. The configuration only needs to be done once and will be used for future upgrades. Of course, if needed, you can modify the existing configuration using the same command at any time.
+Как правило, в новой системе нужно настроить рабочую среду Git. Настройку нужно выполнить только один раз, и она будет использоваться при последующих обновлениях. Конечно, при необходимости можно в любое время изменить существующие настройки с помощью той же команды.
 
-Git provides a tool called `git config` (note: actually git-config command, but it can be called using git plus a name), specifically used to configure or read corresponding working environment variables. It is these environment variables that determine the specific working methods and behaviors of Git in various stages. These variables can be stored in the following three different places:
+Git предоставляет инструмент под названием `git config` (примечание: на самом деле это команда git-config, но ее можно вызвать с помощью git плюс имя), специально используемый для настройки или чтения соответствующих переменных рабочего окружения. Именно эти переменные окружения определяют конкретные методы работы и поведение Git на различных этапах. Эти переменные могут храниться в трех следующих различных местах:
 
-> - /etc/gitconfig file: Configuration that is universally applicable to all users in the system. If using git
+> - Файл /etc/gitconfig: Настройки, универсальные для всех пользователей системы. При использовании git
 
 
 
-> - ~/.gitconfig file: The configuration file in the user's directory is only applicable to that user. If the --global option is used with git config, it reads and writes to this file.
-> - Configuration file in the Git directory of the current repository (i.e., the .git/config file in the working directory): The configuration here is only valid for the current repository. Each level of configuration will override the same configuration in the upper level, so the configuration in .git/config will override the same-named variable in /etc/gitconfig.
+> - Файл ~/.gitconfig: Файл настроек в каталоге пользователя, применимый только к этому пользователю. Если в git config используется опция --global, он читает и записывает в этот файл.
+> - Файл настроек в Git-каталоге текущего репозитория (т. е. файл .git/config в рабочем каталоге): Настройки в данном случае действительны только для текущего репозитория. Каждый уровень настроек будет переопределять аналогичные настройки на более высоком уровне, поэтому настройки в .git/config будут переопределять одноименную переменную в /etc/gitconfig.
 
-On Windows systems, Git will search for the .gitconfig file in the user's home directory. The home directory is the directory specified by the $HOME variable, which is usually `C:\Documents and Settings\$USER`. In addition, Git will also try to locate the /etc/gitconfig file based on the directory where Git was installed.
+В системах Windows Git будет искать файл .gitconfig в домашнем каталоге пользователя. Домашняя директория - это директория, указанная переменной $HOME, которая обычно представляет собой `C:\Documents and Settings\$USER`. Кроме того, Git попытается найти файл /etc/gitconfig, основываясь на директории, в которую был установлен Git.
 
-#### User information configuration
+#### Настройка информации о пользователе
 
-The first thing to configure is your personal username and email address. These two configurations are very important. They will be referenced every time you make a Git commit, indicating who made the update. Therefore, they will be permanently included in the history along with the update content.
+Первое, что необходимо настроить, это ваше личное имя пользователя и адрес электронной почты. Эти две настройки очень важны. Каждый раз, когда вы будете делать коммит в Git, на них будет делаться ссылка указывающая, кто сделал обновление. Поэтому они будут постоянно включаться в историю вместе с содержимым обновления.
 
 ```bash
 git config --global user.name "John Doe"
 git config --global user.email johndoe@example.com
 ```
 
-If the --global option is used, the configuration file being changed is the one located in your user's home directory, and from then on, all your repositories will use the user information configured here by default. If you want to use a different name or email in a specific repository, just remove the --global option and reconfigure it, and the new settings will be saved in the .git/config file of the current repository.
+Если используется опция --global, изменяемый файл настроек находится в домашней директории пользователя, и с этого момента все ваши репозитории будут использовать информацию о пользователе, настроенную здесь по умолчанию. Если вы хотите использовать в конкретном репозитории другое имя или адрес электронной почты, просто удалите опцию --global и настройте его заново, и новые настройки будут сохранены в файле .git/config текущего репозитория.
 
-If you are using `https` for repository push/pull, you may need to configure the client to remember the password to avoid entering it every time.
+Если вы используете `https` для push/pull репозитория, вам может понадобиться настроить клиент на запоминание пароля, чтобы не вводить его каждый раз.
 
 ```bash
 git config --global credential.helper store
 ```
 
-#### Text Editor Configuration
+#### Настройки текстового редактора
 
-Next, you need to set the default text editor to use. When Git requires you to enter additional messages, it will automatically invoke an external text editor for you to use. By default, it will use the default editor specified by the operating system, which may be Vi or Vim. If you have other preferences, such as Emacs, you can reset it:
+Далее вам нужно задать используемый по умолчанию текстовый редактор. Когда Git потребует от вас ввода дополнительных сообщений, он автоматически вызовет для вас внешний текстовый редактор. По умолчанию он будет использовать редактор по умолчанию, указанный операционной системой - это может быть Vi или Vim. Если у вас есть другие предпочтения, например Emacs, вы можете их изменить:
 
 ```bash
 git config --global core.editor emacs
 ```
 
-Differential Analysis Tool
-Another commonly used one is which diff analysis tool to use when resolving merge conflicts. For example, if you want to switch to vimdiff:
+Инструмент для дифференциального анализа
+Другой часто используемый вопрос - какой инструмент дифференциального анализа использовать при разрешении конфликтов слияния. Например, если вы хотите перейти на vimdiff:
 
 ```bash
 git config --global merge.tool vimdiff
 ```
 
-Git can understand the output information of merge tools such as kdiff3, tkdiff, meld, xxdiff, emerge, vimdiff, gvimdiff, ecmerge, and opendiff. Of course, you can also specify to use your own developed tool.
+Git может понимать выходную информацию таких инструментов слияния, как kdiff3, tkdiff, meld, xxdiff, emerge, vimdiff, gvimdiff, ecmerge и opendiff. Конечно, вы также можете указать, что используете собственный разработанный инструмент.
 
-#### View Configuration Information
+#### Просмотр информации о настройках
 
-To check the existing configuration information, you can use the git config --list command:
+Чтобы проверить существующую информацию о настройках, вы можете использовать команду git config --list:
 
 ```bash
 $ git config --list
@@ -68,9 +68,9 @@ color.diff=auto
 ...
 ```
 
-Sometimes you may see duplicate variable names, which means they come from different configuration files (such as /etc/gitconfig and ...
+Иногда вы можете увидеть дублирующиеся имена переменных, что означает, что они взяты из разных настроечных файлов (например, /etc/gitconfig и ...).
 
-You can also directly check the setting of a specific environment variable by appending the specific name like this:
+Вы также можете напрямую проверить настройку определенной переменной окружения, добавив ее имя следующим образом:
 
 ```bash
 $ git config user.name

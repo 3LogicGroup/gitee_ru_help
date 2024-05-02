@@ -1,14 +1,14 @@
 ---
-title: Repository Network Graph
+title: Сетевой график репозитория
 authors:
   - name: Cheese
-description: Operation instructions for viewing repository network graph
+description: Руководство пользователя для просмотра сетевого графика репозитория
 ---
 
-## View repository network graph
+## Просмотр сетевого графика репозитория
 
-After entering the repository, click the 'Statistics' button on the repository's main page to enter the statistics page. Click on 'Repository Network Graph' button. The network graph shows the branch history of the entire repository network, including the branches of the root repository and the branches of the forked repositories that contain unique commits.
+После входа в репозиторий нажмите кнопку "Статистика" на главной странице репозитория, чтобы перейти на страницу статистики. Нажмите на кнопку 'Сетевой график репозитория'. Сетевой график показывает историю ветвей всей сети репозитория, включая ветви корневого репозитория и ветви форкнутых репозиториев, содержащие уникальные коммиты.
 
-![Repository Network Graph](./assets/graph-graph.png)
+![Сетевой график репозитория](./assets/graph-graph.png)
 
-You can use this image to better understand who is using the repository, why they are using it, and what changes have been made.
+Вы можете использовать это изображение, чтобы лучше понять, кто использует репозиторий, почему они его используют и какие изменения были сделаны.

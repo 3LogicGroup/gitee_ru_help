@@ -1,47 +1,47 @@
 ---
-title: Create Test Plan
+title: Создание плана тестирования
 ---
 
-Click "Testing" in the project navigation menu:
+Нажмите на "Тестирование" в навигационном меню проекта:
 
-![Test](/img/enterprise/project/project-nav-tests.png)
+![Тест](/img/enterprise/project/project-nav-tests.png)
 
-Click on "Test Plan", then click the "New Test Plan" button. In the pop-up window, fill in the title, responsible person, plan time, and other information, and click the "OK" button to complete the creation.
+Нажмите на "План тестирования", а затем - на кнопку "Новый план тестирования". Во всплывающем окне заполните название, ответственного участника, планируемое время и прочую информацию.  Чтобы завершить процесс создания, нажмите на кнопку "ОК".
 
-![New Test Plan](/img/enterprise/project/project-tests-new-plan.png)
+![Новый План тестирования](/img/enterprise/project/project-tests-new-plan.png)
 
-Then click on the newly created test plan title in the test plan list to enter the test plan details page.
+Затем нажмите на название новосозданного плана тестрования в списке для перехода на страницу с деталями этого плана.
 
-![Open Test Plan](/img/enterprise/project/project-tests-open-plan.png)
+![Открыть План тестирования](/img/enterprise/project/project-tests-open-plan.png)
 
-Click the "New Case" button to create a new test case and add it to the test plan.
+Нажмите на кнопку "Новый тест-кейс", чтобы создать новый тест-кейс и добавить его в план тестирования.
 
-![Create new test plan case](/img/enterprise/project/project-tests-new-plan-case.png)
+![Создать новый тест-кейс для плана тестирования](/img/enterprise/project/project-tests-new-plan-case.png)
 
-Click the "Add Test Case" button to add the existing test cases in the test case library to this test plan.
+Затем нажмите на кнопку "Добавить тест-кейс", чтобы добавить уже существующий тест-кейс в библиотеку тест-кейсов этого плана тестирования.
 
-![Add test plan case](/img/enterprise/project/project-tests-add-plan-case.png)
+![Добавить тест-кейс в план тестирования](/img/enterprise/project/project-tests-add-plan-case.png)
 
-When the test plan has started executing, you can click the "Start Test Plan" button in the upper right corner to change the status of the test plan to In Progress.
+Когда план тестирования будет запущен, вы можете нажать кнопку "Запустить план тестирования" в правом верхнем углу, чтобы поменять статус тестового плана на "В процессе".
 
-![Start Test Plan](/img/enterprise/project/project-tests-start-plan.png)
+![Запустить план тестирования](/img/enterprise/project/project-tests-start-plan.png)
 
-Click on the "Execution Result" in the test case table to quickly modify the execution result of the test case.
+Нажмите на "Результат выполнения" в таблице тест-кейсов, чтобы быстро изменить разультаты выполнения тест-кейса.
 
-![Quickly Change Test Case Execution Result](/img/enterprise/project/project-tests-edit-plan-case-result.png)
+![Быстрое изменение результата выполнения тест-кейса](/img/enterprise/project/project-tests-edit-plan-case-result.png)
 
-Click to open the test case in the table and fill in the actual results and execution results for each step in the test case details panel.
+Нажмите, чтобы открыть тест-кейс в таблице, и заполните фактический результат и результат выполнения для каждого шага в панели детальной информации о тест-кейсе.
 
-![Change test execution result](/img/enterprise/project/project-tests-open-plan-case.png)
+![Имзенить результат выполнения теста](/img/enterprise/project/project-tests-open-plan-case.png)
 
-Once the test plan has been executed, click the "End Test Plan" button in the upper right corner to change the test plan status to completed.
+Как только выполнение плана завершится, нажмите на кнопку "Закончить план тестирования" в правом верхнем углу плана тестирования для смены статуса плана на "Завершен".
 
-![Finish Test Plan](/img/enterprise/project/project-tests-finish-plan.png)
+![Завершить план тестирования](/img/enterprise/project/project-tests-finish-plan.png)
 
-If the test plan is paused or stopped due to some issues during the testing process, you can click the "..." button, and then click "Suspend".
+Если план тестирования поставлен на паузу или остановлен по некоторым причинам, возникшим в процессе тестирования, нажмите на кнопку "..." и затем нажмите на "Приостановить".
 
-![Suspended Test Plan](/img/enterprise/project/project-tests-pause-plan.png)
+![Приостановленный план тестирования](/img/enterprise/project/project-tests-pause-plan.png)
 
-Click the '...' button, then click 'Settings' to change the basic information of this test plan.
+Нажмите на кнопку "...", затем нажмите на "Настройки", чтобы изменить основную информацию об этом плане тестирования.
 
-![Set Test Plan](/img/enterprise/project/project-tests-edit-plan.png)
+![Настроить план тестирования](/img/enterprise/project/project-tests-edit-plan.png)

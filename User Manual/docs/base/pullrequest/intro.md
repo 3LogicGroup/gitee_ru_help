@@ -1,22 +1,22 @@
 ---
-title: Pull Request feature introduction
+title: Знакомство с функцией запроса на слияние
 authors:
   - name: Cheese
-description: Introduction to Pull Request feature
+description: Знакомство с функцией запроса на слияние
 ---
 
-## What is Pull Request?
+## Что такое запрос на слияние?
 
-> Pull Request is translated as a pull request, which is a way for two repositories to submit changes. It is usually used to submit differences between forked repositories and the original repository. It is also a very good collaborative way to contribute to team projects or open source projects. After you pull and modify someone else's code, you notify the original author of your changes and request them to merge your modifications, which is called a Pull Request.
+> Запрос на слияние  представляет собой способ отправки изменений двумя репозиториями. Обычно он используется для отправки различий между ветками репозиториев и исходным репозиторием. Кроме того, это очень хороший способ совместной работы и внесения вклада в командные проекты или проекты с открытым исходным кодом. После того, как вы извлечете и модифицируете чужой код, вы уведомляете первоначального автора о внесенных вамиизменениях и просите его объединить внесенные вами модификации с его кодом, что и называется запросом на слияние.
 
-The use of the word 'pull' here is very vivid~ It's like there's a rope connecting the code in the original repository and the code you forked. You fetched someone else's code and made some fixes and improvements, hoping that the other party will accept it. So you request the original author: I've made changes to your code, please pull it back and take a look!
+В данном случае использование слова "слияние" очень наглядно ~ Это похоже на веревку, соединяющую код в исходном репозитории и код, ветку которого вы создали. Вы извлекли чужой код и внесли ряд исправлений и улучшений, надеясь, что другая сторона их примет. Итак, вы обращаетесь к автору оригинала: я внес изменения в ваш код, пожалуйста, извлеките его обратно и взгляните!
 
-## What process does a Pull Request go through?
+## Через какой процесс проходит запрос на слияние?
 
-When you want to modify code in someone else's repository, follow the steps below:
+Если вы хотите изменить код в чьем-либо репозитории, выполните следующие действия:
 
-1. First fork someone else's repository, create a copy of the repository that is the same as the original repository, after all, the original author will not let you directly modify his code!
-2. Clone the branch you want to modify to a local branch and make the necessary changes.
-3. Initiate a Pull Request to the original repository so that the original author can see the changes you made and review them. If they approve your changes, they will merge your branch into their project.
+1. Сначала создайте форк чужого репозитория - создайте копию репозитория, идентичную исходному репозиторию - в конце концов, автор оригинала не позволит вам модифицировать его код напрямую!
+2. Клонируйте ветку, которую вы хотите изменить, в локальную ветку, затем внесите необходимые изменения.
+3. Инициируйте запрос на слияние с исходным репозиторием, чтобы авторы оригинала могли видеть внесенные вами изменения и проверить их. Если они одобрят ваши изменения, они объединят вашу ветку со своим проектом.
 
-The entire process of the pull request is now complete~
+Теперь процедура запроса на слияние завершена ~

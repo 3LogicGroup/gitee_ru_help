@@ -1,7 +1,7 @@
 ---
-title: Team velocity report
-description: Team Velocity Report
+title: Отчет о скорости работы команды
+description: Отчет о скорости работы команды
 slug: enterprise/insight/team-efficiency-report
 ---
-Optimize team work arrangements by comparing historical completed iteration plans and completed work in the team velocity report. Predict the work that can be completed in the upcoming iteration. The selected statistical iteration range is the average value of completed work items within a single iteration, which is the average velocity.
-![Image Description](./assets/team_efficiency_report.png)
+Оптимизируйте организацию работы команды, сравнивая в отчете о скорости работы команды исторические планы завершенных итераций и выполненную работу. Прогнозируйте работу, которая может быть выполнена в предстоящей итерации. Выбранный статистический диапазон итераций представляет собой среднее значение завершенных рабочих элементов в течение одной итерации, что и является средней скоростью работы команды.
+![Описание изображения](./assets/team_efficiency_report.png)

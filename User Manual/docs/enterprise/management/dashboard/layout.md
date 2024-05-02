@@ -1,11 +1,11 @@
 ---
-title: Adjust component layout
+title: Настройка компонентов
 ---
 
-Hold and drag the bottom right corner of the component card to adjust its width and height.
+Удерживайте и перемещайте правый нижний угол карточки компонента, чтобы изменить его ширину и высоту
 
-![Adjust Width and Height](./assets/resize.gif)
+![Изменение ширины и высоты](./assets/resize.gif)
 
-You can move the position of the component card by holding the header title area of the component card and dragging it.
+Вы можете переместить компонент, удерживая область заголовка компонента и перетаскивая ее.
 
-![Move](./assets/move.gif)
+![Перемещение](./assets/move.gif)

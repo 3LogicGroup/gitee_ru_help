@@ -1,18 +1,18 @@
 ---
-title: Enterprise Edition Member Permission Management
+title: Управление разрешениями участников Enterprise Edition
 
 origin-url: https://gitee.ru/help/articles/4267
 slug: /enterprise/quickstart/permission
 ---
 
-Gitee Enterprise Edition Member Permission Management Content Outline
+Краткое описание содержимого управления разрешениями участников Gitee Enterprise Edition
 
-- Enterprise regular members
-- Enterprise administrator
+- Постоянные участники предприятия
+- Администратор предприятия
 
 ![](https://talk.gitee.ru/phase.1/3.authority-management.mp4)
 
->If you have any questions or suggestions about the video, please click [https://gitee.ru/GiteeTalk/giteetalk_1](https://gitee.ru/GiteeTalk/giteetalk_1)
+>Если у вас появились вопросы или предложения по поводу видео, нажмите [https://gitee.ru/GiteeTalk/giteetalk_1](https://gitee.ru/GiteeTalk/giteetalk_1)
 
 [Gitee]:https://gitee.ru
 [OSChina]:https://oschina.net

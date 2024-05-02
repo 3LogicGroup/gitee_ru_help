@@ -1,27 +1,27 @@
 ---
-title: Rebuild deleted branches
+title: Восстановление удаленных веток
 authors:
   - name: Cheese
-description: Instructions for rebuilding a deleted branch
+description: Инструкции по восстановлению удаленной ветки
 ---
 
-Can deleted branches be recovered?
+Можно ли восстановить удаленные ветки?
 
-You can still have a regret medicine when the branch is deleted! Yes, you can!
-Follow the instructions below to help you revive a deleted branch!
+Даже если ветка удалена, у нас есть для вас хорошие новости! Да, можно!
+Следуйте приведенным ниже инструкциям, которые помогут вам возродить удаленную ветку!
 
-Retrieve commits from deleted branches
+Восстановление коммитов из удаленных веток
 
-After deleting a branch, you can see the recent activity prompt for the branch deletion operation on the main page of the repository in the lower right corner.
+После удаления ветки на главной странице репозитория в правом нижнем углу вы можете увидеть подсказку о недавней активности для операции удаления ветки.
 
-![Rebuild Branch](./assets/rebuild-developments.png)
+![Восстановить ветку](./assets/rebuild-developments.png)
 
-Click into the deleted branch in this activity, and you can find the Commit SHA of the latest commit on the page.
+Нажмите по удаленной ветке в этом действии, и вы сможете найти Commit SHA последней фиксации на странице.
 
-![Rebuild Branch](./assets/rebuild-commitsha.png)
+![Восстановить ветку](./assets/rebuild-commitsha.png)
 
-## Rebuild deleted branch
+## Перестроить удалённую ветку
 
-Copy the Commit SHA you found and click on the 'Create new branch' button on the branch page of the repository. Enter the Commit SHA in the 'Starting point' field in the dropdown menu, add a new branch name, and submit to complete the recreation of the deleted branch.
+Скопируйте найденный Commit SHA и нажмите кнопку "Создать новую ветку" на странице ветки репозитория. Введите Commit SHA в поле 'Отправная точка' в выпадающем меню, добавьте новое имя ветки и отправьте, чтобы завершить восстановление удаленной ветки.
 
-![Rebuild Branch](./assets/rebuild-new.png)
+![Восстановить ветку](./assets/rebuild-new.png)

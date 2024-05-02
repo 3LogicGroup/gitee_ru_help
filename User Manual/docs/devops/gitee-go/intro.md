@@ -1,5 +1,5 @@
 ---
-title: Introduction to Gitee Go
+title: Знакомство с Gitee Go
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
@@ -8,61 +8,61 @@ description: What is Gitee Go
 origin-url: 
 ---
 
-### 1. What is Gitee Go
+### Что такое Gitee Go
 
-Gitee Go is a new CICD tool launched by Gitee, which provides continuous integration and continuous delivery (deployment) capabilities to help enterprises continuously improve the quality and efficiency of application delivery. It automates the process from code submission to application delivery through build automation, test automation, and deployment automation. By measuring the delivery process, it identifies efficiency issues and recommends optimization solutions.
+Gitee Go — это новый инструмент CICD, выпущенный Gitee, обеспечивающий возможности непрерывной интеграции и непрерывной доставки (развертывания), помогая предприятиям постоянно улучшать качество и эффективность доставки приложений. Он автоматизирует процесс - начиная с отправки кода и заканчивая доставкой приложений посредством автоматизации сборки, автоматизации тестирования и автоматизации развертывания. Измеряя процесс доставки, он выявляет проблемы с эффективностью и рекомендует решения по оптимизации.
 
-![Image Description](https://images.gitee.ru/uploads/images/2022/0411/182102_1b1fefdc_10531940.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2022/0411/182102_1b1fefdc_10531940.png )
 
-### 2. Product Advantages
+### 2. Преимущества продукта
 
-- One-stop platform, full traceability of R&D process
+- Единая платформа, полная отслеживаемость процесса исследования и разработки.
 
-From issue creation to code submission and ultimately deployment, a series of processes are connected to make the necessary compilation, testing, and deployment in engineers' work simpler, more efficient, and stable. It is integrated with PR gatekeeping, issue status flow, making the development results measurable and the development process observable.
+От создания задачи до отправки кода и, в конечном итоге, развертывания, ряд процессов связан между собой, чтобы сделать необходимые в работе инженеров процессы компиляции, тестирования и развертывания проще, эффективнее и стабильнее. Он интегрирован с контролем запросов на слияние, потоком статусов задач, что делает результаты разработки измеримыми, а процесс разработки - наблюдаемым.
 
-- Smart Build
+- Умная сборка
 
-Dynamically adjust resources based on the current number of tasks to solve resource contention issues. Visualize the queue of tasks and resource utilization, dynamically adjust task priorities, and help improve the speed and efficiency of pipeline execution. When tasks are congested, in addition to quickly scaling up, a pre-scaling model will be trained based on the long-term accumulated pipeline construction data within the company to further improve the speed of pipeline execution and reduce your waiting time, with the fastest possible completion in seconds.
+Динамически корректируйте ресурсы в зависимости от текущего количества задач для решения задач, связанных с конкуренцией за ресурсы. Визуализируйте очередь задач и использование ресурсов, динамически корректируйте приоритеты задач и помогайте повысить скорость и эффективность выполнения конвейера. Когда задачи перегружены, в дополнение к быстрому масштабированию модель предварительного масштабирования будет обучена на основе долгосрочных накопленных данных о строительстве трубопровода внутри компании, чтобы еще больше повысить скорость выполнения конвейера и сократить время ожидания с самым быстрым возможное завершение за секунды.
 
-- Multi-cloud management, one-click release
+- Мультиоблачное управление, выпуск в один клик
 
-It realizes one-stop management of multi-cloud environments, providing you with a global resource dashboard to help improve resource utilization and reduce maintenance costs. It is closely integrated with Gitee Go to achieve unified deployment of multi-cloud resources with one-click publishing to multiple clouds. It also allows smooth service migration, staged deployment, rollback, and other operations based on different cloud providers.
+Он реализует комплексное управление мультиоблачными средами, предоставляя вам глобальную информационную панель ресурсов, которая поможет улучшить использование ресурсов и снизить затраты на обслуживание. Он тесно интегрирован с Gitee Go для обеспечения унифицированного развертывания мультиоблачных ресурсов с публикацией в несколько облаков одним щелчком мыши. Это также обеспечивает плавную миграцию сервисов, поэтапное развертывание, откат и другие операции на основе разных поставщиков облачных услуг.
 
-### 3. Application Scenarios
+### 3. Сценарии применения
 
-Scenario 1: Delivery Process Setup
+Сценарий 1: Настройка процесса доставки
 
-- Automated build, test, and deployment for various types of engineering applications (such as Spring applications) for each code change. Version management of code, artifacts, and test reports. Hierarchical management of testing and deployment.
-Product form: CI/CD pipeline, pipeline plugin template.
-- Value: Fast and reliable delivery process (traceable, repeatable, rollbackable)
+- Автоматизированная сборка, тестирование и развертывание различных типов инженерных приложений (например, приложений Spring) при каждом изменении кода. Управление версиями кода, артефактов и отчетов о тестировании. Иерархическое управление тестированием и развертыванием.
+Форма продукта: конвейер CI/CD, шаблон плагина конвейера.
+- Ценность: быстрый и надежный процесс доставки (отслеживаемый, повторяемый, откатываемый).
 
-Scenario 2: Testability and Deployment Capability Service
+Сценарий 2: Служба возможности тестирования и развертывания
 
-- Integrate more testing capabilities and deployment capabilities into the pipeline as plug-ins, expand the capabilities of the pipeline (such as code scanning), and transform tasks that originally required QA (test engineers) and OP (operation engineers) operations into tasks that RD (development engineers) can independently call services to complete (such as building test environments, hierarchical deployment)
-- Product Form: Plugin Center
-- Value: Reduce communication and application costs, improve delivery efficiency
+- Интегрируйте дополнительные возможности тестирования и возможности развертывания в конвейер в виде плагинов, расширяйте возможности конвейера (например, сканирование кода) и преобразуйте задачи, которые изначально требовали операций QA (инженеров по тестированию) и OP (инженеров по эксплуатации) в задачи, которые RD (инженеры-разработчики) могут самостоятельно вызывать службы для завершения (например, создание тестовых сред, иерархическое развертывание).
+- Форма продукта: Центр плагинов
+- Ценность: снижение затрат на связь и приложения, повышение эффективности доставки.
 
-Scenario 3: Continuous Improvement Based on Efficiency Metrics
+Сценарий 3: Постоянное улучшение на основе показателей эффективности
 
-- Generate efficiency reports for code changes to application delivery and process reports for build, test, and deployment phases. Identify key processes that impact efficiency and make improvements. Track the effectiveness of the improvements.
-- Product Form: Metric Report
-- Value: Continuous Efficiency Improvement
+- Создавайте отчеты об эффективности изменений кода при доставке приложений и обрабатывайте отчеты на этапах сборки, тестирования и развертывания. Определите ключевые процессы, влияющие на эффективность, и внесите улучшения. Отслеживайте эффективность улучшений.
+- Форма продукта: метрический отчет
+- Ценность: постоянное повышение эффективности.
 
-### 4. Glossary
+### 4. Глоссарий
 
-Pipeline
-The pipeline provides a custom process orchestration tool, and the pipeline consists of multiple stages.
-Stage
-Stages are used to manage a group of tasks with similar business properties (e.g., build, test, and deploy), and each stage contains one or more tasks.
-Task
-A task is the smallest scheduling unit in a pipeline, and all scripts and contents under a task are executed in the same runtime environment.
-Plugin
-A program that implements the compilation, image building, unit testing, code scanning, coverage analysis, test deployment, interface testing, integration testing, performance stability testing, and hierarchical deployment logic of the application. The plugins are divided into official plugins and user-defined plugins. The official plugins encapsulate the standard execution logic, and users only need to configure the input and output without worrying about resources. User-defined plugins are written by users and can be run on their own resources to be compatible with historical tasks that cannot be decoupled from the environment.
-Trigger
-The ways to trigger a pipeline include automatic triggering by code changes, manual triggering, and scheduled triggering.
-- Run (Build)
-Represents the execution of a pipeline. After running, it obtains all the logs related to stages and tasks, as well as the results of the run.
-Artifact
-Refers to various data processed by the pipeline, which can be executable programs, lib files, jar packages, Docker images, Helm Chart deployment files, etc.
-- Parameters
-Parameters refer to the content passed between pipelines, stages, and tasks, and are an important part of the pipeline, existing in key-value form.
+Конвейер
+Конвейер предоставляет настраиваемый инструмент оркестрации процессов и состоит из нескольких этапов.
+Этап
+Этапы используются для управления группой задач со схожими бизнес-свойствами (например, сборка, тестирование и развертывание), и каждый этап содержит одну или несколько задач.
+Задача
+Задача — это наименьшая единица планирования в конвейере, и все сценарии и содержимое задачи выполняются в одной и той же среде выполнения.
+Плагин
+Программа, реализующая компиляцию, построение образа, модульное тестирование, сканирование кода, анализ покрытия, тестовое развертывание, тестирование интерфейса, интеграционное тестирование, тестирование стабильности производительности и логику иерархического развертывания приложения. Плагины делятся на официальные плагины и пользовательские плагины. Официальные плагины инкапсулируют стандартную логику выполнения, и пользователям нужно только настроить ввод и вывод, не беспокоясь о ресурсах. Пользовательские плагины пишутся пользователями и могут запускаться на собственных ресурсах, чтобы быть совместимыми с историческими задачами, которые невозможно отделить от среды.
+Триггер
+Способы запуска конвейера включают автоматический запуск при изменении кода, запуск вручную и запуск по расписанию.
+Сборка
+Представляет выполнение конвейера. После запуска он получает все логи, относящиеся к этапам и задачам, а также результаты запуска.
+Артефакт
+Относится к различным данным, обрабатываемым конвейером, которыми могут быть исполняемые программы, файлы lib, jar-пакеты, образы Docker, файлы развертывания Helm Chart и т. д.
+Параметры
+Параметры относятся к содержимому, передаваемому между конвейерами, этапами и задачами, и являются важной частью конвейера, существующей в форме «ключ-значение».

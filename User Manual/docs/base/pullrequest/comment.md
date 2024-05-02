@@ -1,20 +1,20 @@
 ---
-title: Code Review
+title: Проверка кода
 authors:
   - name: Cheese
-description: Operating instructions for the code review feature in Pull Requests
+description: Инструкция по работе с функцией обзора кода в запросах на слияние
 ---
 
-## Comments
+## Комментарии
 
-Under the "Comments" section below each Pull Request, reviewers can leave their comments and suggestions on the changes made in this Pull Request.
+В разделе "Комментарии" под каждым запросом на слияние проверяющие могут оставлять свои комментарии и предложения по изменениям, внесенным в этот запрос на слияние.
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/0526/153506_d9cfcbbb_5370906.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/0526/153506_d9cfcbbb_5370906.png )
 
-File Changes
+Изменения файлов
 
-Also supports code line comments in "File Changes".
+Кроме того, поддерживаются комментарии строк кода в "Изменениях файла".
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/0526/153529_5e7e4245_5370906.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/0526/153529_5e7e4245_5370906.png )
 
-The reviewer's suggestions will be notified to the developer who submitted the Pull Request through internal messages, etc., and the developer can discuss with the reviewer in the 'comments' based on the situation.
+Предложения проверяющего будут сообщены разработчику, направившему запрос на слияние, через внутренние сообщения и т. д., а разработчик сможет обсудить их с проверяющим в "комментариях", исходя из ситуации.

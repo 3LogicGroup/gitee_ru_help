@@ -1,22 +1,22 @@
 ---
-title: Merge Branches
+title: Слияние веток
 authors:
   - name: Cheese
-description: Filtering and viewing the instructions for different branches in the repository and creating a new branch
+description: Фильтрация и просмотр инструкций для различных веток в репозитории и создание новой ветки
 ---
 
-## How to merge branches?
+## Как объединить ветки?
 
-Step 1: Switch to the branch you want to merge in the repository main interface. You will receive a prompt indicating the number of commits that are different from the upstream branch (Note: merging can only be done when there are differences between the two branches). If you want to merge this branch into its upstream branch, click the 'Contribute code' button next to the prompt and then click 'Create Pull Request' in the dropdown menu.
+Шаг 1: Перейдите к ветке, которую вы хотите объединить, в главном интерфейсе репозитория. Вы получите подсказку, указывающую на количество коммитов, отличающихся от вышестоящей ветки (Примечание: слияние может быть выполнено только в том случае, если между двумя ветками есть различия). Если вы хотите объединить эту ветку с восходящей, нажмите кнопку 'Внести код' рядом с подсказкой, а затем в выпадающем меню выберите 'Создать запрос на слияние'.
 
-![Merge Branch](./assets/c-new-branch-merge.png)
+![Объединить ветку](./assets/c-new-branch-merge.png)
 
-**Step 2:** After entering the Pull Request interface, select the `source branch` and `target branch` for the merge. You can also add `labels`, `descriptions`, and `PR dependencies` for this Pull Request. In the `merge options` at the bottom right, select the desired merge method, and then click `Create Pull Request` to submit the PR.
+**Шаг 2:** После входа в интерфейс запроса на слияние выберите исходную и целевую ветки для слияния. Вы также можете добавить `ярлыки`, `описания` и `зависимости` для этого запроса на слияние. В `опциях слияния` справа внизу выберите нужный метод слияния, а затем нажмите `Создать запрос на слияние` для отправки запроса на слияние.
 
-![Merge Branch](./assets/c-select-branch.png)
+![Объединить ветку](./assets/c-select-branch.png)
 
-![Merge branch](./assets/c-create-branch-merge.png)
+![Объединить ветку](./assets/c-create-branch-merge.png)
 
-**Step 3:** After successfully creating a Pull Request, you can find the PR you submitted on the repository's Pull Request page. Once it has been reviewed and tested successfully, the branch can be successfully merged.
+**Шаг 3:** После успешного создания запроса на слияние вы можете найти отправленный вами запрос на слияние на странице репозитория "Запрос на слияние". После успешного рассмотрения и тестирования ветки ее можно объединить.
 
-![Merge Branch](./assets/c-review-branch-merge.png)
+![Объединить ветку](./assets/c-review-branch-merge.png)

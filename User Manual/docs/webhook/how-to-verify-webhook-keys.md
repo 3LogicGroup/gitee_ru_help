@@ -1,41 +1,41 @@
 ---
-title: WebHook key verification and verification algorithm
+title: Верификация и алгоритм верификации ключа вебхука
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 origin-url: https://gitee.ru/help/articles/4290
 ---
 
-## WebHook Signature Introduction
+## Введение в подпись вебхука
 
-Gitee WebHook supports secure authentication through a key.
+Вебхук Gitee поддерживает безопасную аутентификацию с использованием ключа.
 
-Users can configure a private WebHook secret key, sign the request content when making a request, and the server can verify the received request by signing it with the same secret key to confirm its completeness and trustworthiness. The entire process ensures that the WebHook secret key only exists on Gitee and the server, and is not exposed during network transmission.
+Пользователи могут настроить собственный секретный ключ вебхука, подписывать содержимое запроса при его отправке, и сервер может проверить полученный запрос, подписав его тем же секретным ключом, чтобы подтвердить его целостность и надежность. Секретный ключ вебхука существует только на Gitee и сервере, и не раскрывается во время передачи по сети.
 
-> Compared to password verification, signature verification can effectively avoid security issues caused by the leakage of WebHook passwords during network transmission.
+> В сравнении с верификацией пароля верификация подписи может эффективно избежать проблем безопасности, вызванных утечкой паролей вебхука во время передачи по сети.
 
-## WebHook Signature Generation Algorithm (Reference)
+## Алгоритм генерации подписи вебхука (Ссылка)
 
-If the WebHook uses signature, the request header will include `X-Gitee-Token` with the generated signature as its value. The signature algorithm is as follows:
+Если вебхук использует подпись, в заголовке запроса будет включен X-Gitee-Token с сгенерированной подписью в качестве значения. Алгоритм подписи следующий:
 
-### Signature Parameter Description
+### Описание параметров подписи
 
-| Parameter | Description |
+| Параметр | Описание |
 | --------- | --------------------------------------------------------------- |
-| timestamp | The current timestamp, in milliseconds, the difference between the request call time should not exceed 1 hour, it should be sent with the key when making the request
+| отметка времени | Текущая отметка времени, в миллисекундах. Разница между временем вызова запроса не должна превышать 1 час, она должна быть отправлена вместе с ключом при создании запроса
  |
-| secret    | Signature key, the string starting with SEC displayed below the signing section on the robot security settings page |
+| секретный ключ  | Ключ подписи, строка, начинающаяся с SEC, отображаемая ниже раздела подписи на странице настроек безопасности бота |
 
-- Step1: Use the timestamp + "
-" + secret key as the signature string, and calculate the signature using the HmacSHA256 algorithm.
-- Step 2: Base64 encode the results obtained above.
-- Step 3: URL encode the obtained result (using UTF-8 character set) to obtain the final signature.
+- Шаг 1: Используйте отметку времени + "
+" + секретный ключ как строку подписи и вычислите подпись с использованием алгоритма HmacSHA256.
+- Шаг 2: Кодируйте результат, полученный выше, в Base64.
+- Шаг 3: Примените URL-кодирование к полученному результату (используя набор символов UTF-8), чтобы получить конечную подпись.
 
-Step 2, concatenate the timestamp and the signature value obtained in step 1 to the URL.
+Шаг 4: Объедените отметку времени и значение подписи, полученное на предыдущих шагах, с URL.
 
-## Signature Calculation Sample Code
+## Пример кода вычисления подписи 
 
-Signature Calculation Code Example (Java)
+Пример кода вычисления подписи  (Java)
 
 ```java
 Long timestamp = System.currentTimeMillis();
@@ -47,7 +47,7 @@ byte[] signData = mac.doFinal(stringToSign.getBytes("UTF-8"));
 return URLEncoder.encode(new String(Base64.encodeBase64(signData)),"UTF-8");
 ```
 
-Signature calculation code example (Python)
+Пример кода вычисления подписи  (Python)
 
 ```python
 #python 2.7

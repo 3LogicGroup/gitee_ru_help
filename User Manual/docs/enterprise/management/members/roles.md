@@ -1,21 +1,22 @@
 ---
-title: Roles and Permissions
+title: Роли и разрешения
 ---
 
-## View Roles
+## Просмотр ролей
 
-Click on the Enterprise Navigation menu 'Settings' - 'Roles and Permissions' to enter the Role Management page, click on the role name to view the detailed permission configuration of that role.
 
-![Image Description](assets/image387.png)
+Нажмите на элемент меню "Настройки" в навигационном меню компании, затем выберите "Роли и разрешения", чтобы войти на страницу управления ролями. Нажмите на название роли, чтобы просмотреть подробную конфигурацию разрешений этой роли.
 
-## Custom Roles
+![Описание изображения](assets/image387.png)
 
-When the default roles of the enterprise do not meet the requirements or there are more permission settings, custom roles can be created.
+## Пользовательские роли
 
-Click the enterprise navigation menu "Settings" - "Roles and Permissions", then click the "New Role" button in the upper right corner of the page:
+Когда стандартные роли компании не соответствуют требованиям или требуется больше настроек разрешений, можно создать пользовательские роли.
 
-![Image Description](assets/image388.png)
+Нажмите на элемент меню навигации компании "Настройки" - "Роли и разрешения", затем нажмите кнопку "Новая роль" в правом верхнем углу страницы:
 
-Configure various permissions in the role creation page:
+![Описание изображения](assets/image388.png)
 
-![Image Description](assets/image389.png)
+Настройте нужные разрешения на странице создания роли:
+
+![Описание изображения](assets/image389.png)

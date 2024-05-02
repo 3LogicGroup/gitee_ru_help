@@ -1,29 +1,28 @@
 ---
-title: Repository Transfer
+title: Передача репозитория
 origin-url: https://gitee.ru/help/articles/4144
 ---
 
-Gitee now provides three types of transfers: transferring a repository to an individual, transferring a repository to an organization, and transferring a repository to an enterprise. Users can perform repository transfers in "Manage" -> "Repository Settings" -> "Transfer Repository".
+Сейчас Gitee предоставляет три типа передачи: передачу репозитория частному лицу, передачу репозитория организации и передачу репозитория предприятию. Пользователи могут выполнять перенос репозитория в "Управление" -> "Настройки репозитория" -> "Перенести репозиторий".
+## 1. Передча репозитория другим участникам
 
-1. Transfer the repository to other members
+> Для принятия передачи требуется подтверждение от другой стороны посредством личного сообщения
 
-> Confirmation from the other party is required via private message to accept the transfer
+- После успешной передачи владелец репозитория становится целевым пользователем, а разрешения других участников остаются неизменными. Владелец исходного репозитория удаляется из репозитория, но по умолчанию просматривает общедоступный репозиторий.
 
- - After the transfer is successful, the repository owner becomes the target user, and the permissions of other members remain unchanged. The source repository owner is removed from the repository but defaults to watch the public repository.
+##2. Передча репозитория организации
 
-2. Transfer the repository to an organization
+Репозитории могут быть переданы организациям как их создателями, так и теми, кто к ним присоединился
 
-Repositories can be transferred to organizations created by oneself and joined by oneself
+- После успешной передачи владелец репозитория становится владельцем организации,  а права других участников остаются неизменными
 
-- After the transfer is successful, the owner of the repository becomes the owner of the organization, and other members' permissions remain unchanged.
+### **3. Передача репозитория предприятию**
 
-### **3. Transfer repository to enterprise**
+Репозитории могут быть переданы организациям как их создателями, так и теми, кто к ним присоединился
 
-Repositories can be transferred to organizations created by oneself and joined by oneself
+> Чтобы осуществить передачу другому предприятию, вам нужно сначала перейти к корпоративной версии целевого предприятия, затем перейти в `Настройки репозитория` -> `Настройки функций` -> `Перенести репозиторий`.
 
-> To transfer to another enterprise, you need to first go to the enterprise version of the target enterprise, then go to `Repository Settings` -> `Feature Settings` -> `Transfer Repository`.
+![Описание изображения](../../../../../../assets/image35.png)
+![Описание изображения](../../../../../../assets/image36.png)
 
-![Image Description](../../../../../../assets/image35.png)
-![Image Description](../../../../../../assets/image36.png)
-
- - After successful transfer, the owner of the repository becomes the owner of the enterprise, while other members' permissions remain unchanged
+ - После успешной передачи владелец репозитория становится владельцем предприятия, в то время как права других участников остаются неизменными

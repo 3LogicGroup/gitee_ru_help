@@ -1,27 +1,27 @@
 ---
-{"title"=>"Viewing and Editing Tasks"}
+{"title"=>"Просмотр и редактирование задач"}
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 origin-url: https://gitee.ru/help/articles/4219
 ---
 
-## View Tasks
+## Просмотр задач
 
-![Image Description](image282.png)
+![Описание изображения](image282.png)
 
-## View Global Tasks
+## Просмотр глобальных задач
 
-![Image Description](image283.png)
+![Описание изображения](image283.png)
 
-## Filter Task
+## Фильтрация задач
 
-![Image Description](image284.png)
+![Описание изображения](image284.png)
 
-## Commenting and modifying tasks
+## Комментирование и изменение задач
 
-![Image Description](image285.png)
+![Описание изображения](image285.png)
 
-## Delete Task
+## Удаление задач
 
-![Image Description](image286.png)
+![Описание изображения](image286.png)

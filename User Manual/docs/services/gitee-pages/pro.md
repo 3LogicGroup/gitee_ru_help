@@ -1,89 +1,89 @@
 ---
-title: GiteePagesPro
+title: Gitee PagesPro
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 origin-url: https://gitee.ru/help/articles/4228
 ---
 
-> Due to business adjustments, Gitee Pages Pro temporarily closes the personal user purchase entrance. Repositories of already activated users are not affected. GVP projects and paid enterprise usage are not affected.
+> В связи с изменениями в бизнесе Gitee Pages Pro временно закрывает доступ к личным покупкам пользователей. Репозитории уже активированных пользователей не затрагиваются. Проекты GVP и платное корпоративное использование не затронуты.
 
-Gitee Pages Pro is an upgraded version of Gitee Pages, with the following new features:
+Gitee Pages Pro — это обновленная версия Gitee Pages со следующими новыми функциями:
 
-- Supports publishing a specific directory from the repository (e.g., you can publish the repository's document directory 'doc' as a static webpage)
+- Поддерживает публикацию определенного каталога из репозитория (например, вы можете опубликовать каталог документов репозитория «doc» как статическую веб-страницу)
 
-- Support custom domain (e.g., <https://example.com>)
+- Поддержка собственного домена (например, <https://example.com>).
 
-- Supports custom domain + https
+- Поддерживает собственный домен + https
 
-## Function Introduction
+## Введение в функцию
 
-`Gitee Pages` is a static page hosting service open to Gitee users. Users can publish their own sites using the default provided domain 'gitee.io'.
+«Gitee Pages» — это служба хостинга статических страниц, открытая для пользователей Gitee. Пользователи могут публиковать свои собственные сайты, используя домен по умолчанию «gitee.io».
 
-Currently, Gitee Pages supports `Jekyll`, `Hugo`, `Hexo`, and other static website generation engines. It can easily compile these types of static site projects online. Of course, raw HTML is also supported.
+В настоящее время Gitee Pages поддерживает `Jekyll`, `Hugo`, `Hexo` и другие модули создания статических веб-сайтов. Он может легко скомпилировать подобные проекты статических сайтов онлайн. Конечно, также поддерживается исходный HTML-код.
 
-`Gitee Pages Pro` is the custom domain version of `Gitee Pages`. Currently, it can be used for free in Gitee GVP, Gitee Recommended Projects, and Gitee Paid Enterprise Editions.
+`Gitee Pages Pro` — это версия `Gitee Pages` для личного домена. В настоящее время его можно использовать бесплатно в Gitee GVP, Рекомендуемых проектах Gitee и платных версиях Gitee Enterprise.
 
->【Note】: [Open Enterprise Edition](https://gitee.ru/enterprises) can try Gitee Pages Pro service for free for one month, and after the trial period, it will automatically downgrade to Pages regular version. Enterprise Standard Edition and above can use Gitee Pages Pro for free, and after the enterprise expires, the service will automatically downgrade to Pages regular version.
+>【Примечание】: [Корпоративная версия](https://gitee.ru/enterprises) Можно бесплатно попробовать сервис Gitee Pages Pro в течение одного месяца, а по истечении пробного периода будете автоматически переведены на обычную версию Pages. Стандартная корпоративная версия и выше могут использовать Gitee Pages Pro бесплатно, а после истечения срока действия Корпоративная служба автоматически перейдет на обычную версию Pages.
 
-## Enable Feature
+## Включение функции
 
-To use the personal open source [Gitee Blog Mini Program] as an example, open the 'Gitee Pages' service by going to 'Repository Home' -> 'Services' -> 'Gitee Pages'. Under the default settings, simply click '**Start**' and confirm to enable the service.
+Чтобы использовать персональную [мини-программу блога Gitee с открытым исходным кодом] в качестве примера, откройте службу «Gitee Pages», перейдя в «Главную страницу репозитория» -> «Сервисы» -> «Gitee Pages». При настройках по умолчанию нажмите «**Пуск**» и подтвердите включение службы.
 
 ![](https://images.gitee.ru/uploads/images/2018/1030/173827_8c73e7b2_551147.jpeg "166c4500c3de2d2b.jpg")
 
-Introduction to Configuration Options
+Введение в параметры настройки
 
-- Deployment Branch: branch used for deploying Pages
-- Deployment Directory: Customize the directory for `Pages` source files.
-- Custom Domain: User-defined domain name, needs to be resolved to `gitee.gitee.io` for it to take effect.
-Configure domain certificate: Used to configure custom domain HTTPS certificate
-- Start/Pause: Start/Pause the `Gitee Pages` service
+- Ветка развертывания: ветка, используемая для развертывания страниц.
+- Каталог развертывания: настройте каталог для исходных файлов «Pages».
+- Пользовательский домен: определяемое пользователем доменное имя, которое должно быть преобразовано в `gitee.gitee.io`, чтобы оно вступило в силу.
+- Настройка сертификата домена: используется для настройки сертификата HTTPS личного домена.
+- Старт/Пауза: запуск/пауза службы Gitee Pages.
 
-For a project, the project's Pages may exist on different branches.
-Or it may exist in a subdirectory of a branch, such as the 'docs' or 'pages' directory.
+Страницы проекта могут существовать в разных ветках проекта.
+Или он может существовать в подкаталоге ветки, например в каталоге «docs» или «pages».
 
-By specifying the deployment branch and deployment directory, we can easily accomplish custom deployment of Pages.
+Указав ветку и каталог развертывания, мы можем легко выполнить пользовательское развертывание Pages.
 
 ![](https://images.gitee.ru/uploads/images/2018/1030/173842_6c3fede6_551147.png )
 
-## Apply for Certificate and Parse Domain
+## Подать заявку на сертификат и проанализировать домен
 
-To enable HTTPS access on our website, we need to apply for an HTTPS certificate. Of course, we first need a domain name :)
+Чтобы включить доступ HTTPS на нашем веб-сайте, необходимо подать заявку на получение сертификата HTTPS. Конечно, сначала нам нужно доменное имя.
 
-Here we use the free SSL service provided by [Freessl]. Visit [Freessl], enter your own domain name on the homepage, and choose the type of certificate according to your needs.
+Здесь мы используем бесплатный сервис SSL, предоставляемый [Freessl]. Посетите [Freessl], введите свое доменное имя на главной странице и выберите тип сертификата в соответствии с вашими потребностями.
 
-Taking 'Let's Encrypt V2' as an example, after entering the applied domain name, click the 'Create' button to proceed to the next step.
+Если взять в качестве примера «Let's Encrypt V2», после ввода примененного доменного имени нажмите кнопку «Создать», чтобы перейти к следующему шагу.
 
 ![](https://images.gitee.ru/uploads/images/2018/1030/173855_6e14fefc_551147.png )
 
-Enter the receiving email address for issuing the certificate, choose the type of certificate, verification method, and CSR file generation method, and click Create.
+Введите адрес электронной почты получателя для выдачи сертификата, выберите тип сертификата, метод проверки и метод создания файла CSR и нажмите «Создать».
 
 ![](https://images.gitee.ru/uploads/images/2018/1030/173906_eafe0e3e_551147.png )
 
-If using a browser to create a CSR file, be sure to save the downloaded private key file after generation. After clicking create, it is necessary to verify the DNS information of the related domain.
+В случае использования браузера для создания файла CSR обязательно сохраните загруженный файл закрытого ключа после создания. После нажатия кнопки «Создать» необходимо проверить информацию DNS соответствующего домена.
 
 ![](https://images.gitee.ru/uploads/images/2018/1030/173917_b970db0a_551147.png )
 
-After modifying the domain name DNS as required and resolving the corresponding TXT record, you can click "Configuration completed, check it" to verify if the resolution is correctly configured. If the detection content in the pop-up page appears as shown in the figure below, it means that the resolution is completed.
+После необходимого изменения DNS доменного имени и разрешения соответствующей записи TXT вы можете нажать «Настройка завершена, проверьте ее», чтобы проверить правильность настройки разрешения. Если содержимое обнаружения на всплывающей странице выглядит так, как показано на рисунке ниже, это означает, что выбор объектов завершен.
 
 ![](https://images.gitee.ru/uploads/images/2018/1030/173927_cd2aaa78_551147.png )
 
-At this time, you can click on "Click to Verify" to complete the verification. After the verification is completed, you can obtain a valid HTTPS certificate.
+В это время вы можете нажать «Нажмите, чтобы подтвердить», чтобы завершить проверку. После завершения проверки вы сможете получить действующий сертификат HTTPS.
 
 ![](https://images.gitee.ru/uploads/images/2018/1030/173937_88db13c5_551147.png )
 
-Paste the corresponding certificate and private key into the certificate setting of 'Gitee Pages', click 'Submit', and then redeploy. After confirming that the domain 'CNAME' is successfully resolved to 'gitee.gitee.io', you can access the website normally using your own domain.
+Вставьте соответствующий сертификат и закрытый ключ в настройки сертификата «Gitee Pages», нажмите «Отправить», а затем выполните повторное развертывание. Убедившись, что домен «CNAME» успешно разрешен к «gitee.gitee.io», вы можете получить доступ к веб-сайту в обычном режиме, используя свой собственный домен.
 
 ![](https://images.gitee.ru/uploads/images/2018/1030/173956_b5fe3ef4_551147.png )
 
-The final effect is as follows:
+Конечный эффект будет следующим:
 
 ![](https://images.gitee.ru/uploads/images/2018/1030/174007_97582d78_551147.png )
 
-## Summary
+## Заключение
 
-Through the four steps of 'Upload Code' -> 'Apply for Certificate' -> 'Domain Name Resolution' -> 'Deploy Gitee Pages', we can deploy a static website that supports HTTPS with 'Gitee Pages'. In addition, by choosing different static website generation tools and themes such as Jekyll, Hugo, Hexo, etc., you can easily create a cool personal website/blog.
+Выполнив четыре шага «Загрузить код» -> «Подать заявку на сертификат» -> «Разрешение доменного имени» -> «Развертывание страниц Gitee», можно развернуть статический веб-сайт, поддерживающий HTTPS, с «Gitee Pages». Кроме того, выбрав различные инструменты и темы для создания статических веб-сайтов, такие как Jekyll, Hugo, Hexo и т. д., вы можете легко создать крутой личный веб-сайт/блог.
 
 [Gitee]:https://gitee.ru
 [Gitee gitee.ru]:https://gitee.ru

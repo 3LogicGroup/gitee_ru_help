@@ -1,19 +1,18 @@
 ---
-title: View invoice logistics information
+title: Просмотр информации о логистике счета-фактуры
 origin-url: https://gitee.ru/help/articles/4162
 slug: /enterprise/questions/invoice/invoice-logistics-info
 ---
 
-Gitee offers 2 types of invoices that can be applied for.
+Gitee предлагает 2 типа счетов-фактур, на которые можно подать заявку.
 
-1. View electronic invoice (ordinary invoice): Search 'Shenzhen Ausi' in the invoice application email.
+1. Просмотрите электронный счет-фактуру (обычный счет-фактура): найдите "Shenzhen Ausi" в электронном письме с приложением счета-фактуры.
 
-2. View VAT Special Invoice:
+2. Просмотрите специальный счет-фактуру с НДС:
 
-2.1, Log in to the enterprise administrator account, go to Enterprise Edition, select 'Settings' - 'Order and Invoice Management' -> 'Details'
+2.1. Войдите в учетную запись администратора предприятия, перейдите в Enterprise Edition, выберите "Настройки" - "Управление заказами и счетами-фактурами" -> "Подробнее"
+![Срочно](/img/enterprise/question/invoice/invoice-logistics-info/1.webp)
 
-![Express](/img/enterprise/question/invoice/invoice-logistics-info/1.webp)
+2.2. На странице перехода вы увидите информацию счета-фактуры о доставке.
 
-2.2. On the redirected page, you will see the delivery information of the invoice.
-
-![Express](/img/enterprise/question/invoice/invoice-logistics-info/2.webp)
+![Срочно](/img/enterprise/question/invoice/invoice-logistics-info/2.webp)

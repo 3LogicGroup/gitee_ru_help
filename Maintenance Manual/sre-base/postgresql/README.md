@@ -1,18 +1,18 @@
 # postgresql
 
-## 1. Install
+## 1. Установка
 
 ```sh
 postgres@gitee-postgresql1:~# apt -y install postgresql-12
 ```
 
-By default, only connections from Localhost with the [peer] authentication can be made to the PostgreSQL server.
+По умолчанию к серверу PostgreSQL можно подключаться только с Localhost с аутентификацией [peer].
 
 ```sh
-# listen only localhost by default
+# по умолчанию слушает только localhost
 postgres@gitee-postgresql1:~# grep listen_addresses /etc/postgresql/12/main/postgresql.conf
-#listen_addresses = 'localhost' # what IP address(es) to listen on;
-# authentication methods by default
+# listen_addresses = 'localhost' # какой IP-адрес(а) прослушивать;
+# методы аутентификации по умолчанию
 root@dlp:~# grep -v -E "^#|^$" /etc/postgresql/12/main/pg_hba.conf
 local   all             postgres                                peer
 local   all             all                                     peer
@@ -23,10 +23,10 @@ host    replication     all             127.0.0.1/32            md5
 host    replication     all             ::1/128                 md5
 ```
 
-For [peer] authentication, it requires a PostgreSQL user with the same OS username to connect to the PostgreSQL Server.
+Для аутентификации [peer] требуется пользователь PostgreSQL с таким же именем пользователя ОС для подключения к серверу PostgreSQL.
 
 ```sh
-# Add a PostgreSQL user and its database using the PostgreSQL administrator
+# Добавьте пользователя PostgreSQL и его базу данных с помощью администратора PostgreSQL
 Switch to postgres user
 root@gitee-postgresql1:/home/ubuntu# su - postgres
 postgres@gitee-postgresql1:~$ createuser root
@@ -53,12 +53,12 @@ postgres@gitee-postgresql1:~$ psql -l
 ```
 
 ```sh
-# Connect to testdb database
+# Подключитесь к базе данных testdb
 postgres@gitee-postgresql1:~$ psql testdb
 psql (12.17 (Ubuntu 12.17-0ubuntu0.20.04.1))
 Type "help" for help.
 
-# View user permissions
+# Просмотр разрешений пользователя
 testdb=# \du
                                    List of roles
  Role name |                         Attributes                         | Member of
@@ -66,7 +66,7 @@ testdb=# \du
  postgres  | Superuser, Create role, Create DB, Replication, Bypass RLS | {}
  root      |                                                            | {}
 
-# View the database
+# Просмотр базы данных
 testdb=# \l
                               List of databases
    Name    |  Owner   | Encoding | Collate |  Ctype  |   Access privileges
@@ -91,18 +91,18 @@ testdb=# \dt
  public | test_table | table | postgres
 (1 row)
 
-# Insert Table Data
+# Вставить данные в таблицу
 testdb=# insert into test_table (no,name) values (01,'Ubuntu');
 INSERT 0 1
 
-# Confirm Data
+# Подтвердить данные
 testdb=# select * from test_table;
  no |  name
 ----+--------
   1 | Ubuntu
 (1 row)
 
-# Delete database table
+# Удалить таблицу базы данных
 testdb=# drop table test_table;
 DROP TABLE
 testdb=# \dt
@@ -110,7 +110,7 @@ Did not find any relations.
 testdb=# \q
 postgres@gitee-postgresql1:~$
 
-# Remove the database
+# Удалить базу данных
 ubuntu@dlp:~$ dropdb testdb
 ubuntu@dlp:~$ psql -l
                                   List of databases
@@ -122,59 +122,59 @@ ubuntu@dlp:~$ psql -l
  template1 | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres          +
            |          |          |             |             | postgres=CTc/postgres
 
-# Delete User
+# Удалить пользователя
 postgres@gitee-postgresql1:~$ dropuser  harbor
 postgres@gitee-postgresql1:~$  psql -c "select usename from pg_user;"
 ```
 
-## 2.Remote Connection
+## 2.Удаленное подключение
 
 ```sh
 root@gitee-postgresql1:/home/ubuntu# su - postgres
 postgres@gitee-postgresql1:~# vi /etc/postgresql/12/main/postgresql.conf
-# line 59: uncomment and change
+# строка 59: откомментировать и изменить
 listen_addresses = '*'
 postgres@gitee-postgresql1:~# vi /etc/postgresql/12/main/pg_hba.conf
-# add to the end
-# TYPE  DATABASE        USER            ADDRESS                 METHOD
+# добавить в конец
+# ТИП  БАЗА ДАННЫХ        ПОЛЬЗОВАТЕЛЬ            АДРЕС                 МЕТОД
 
-# "local" is for Unix domain socket connections only
+# "local" только для сокетных соединений с доменом Unix
 local   all             all                                     peer
-# IPv4 local connections:
+# Локальные соединения IPv4:
 host    all             all             127.0.0.1/32            md5
-# IPv6 local connections:
+# Локальные соединения IPv6:
 host    all             all             ::1/128                 md5
-# Allow replication connections from localhost, by a user with the
-# replication privilege.
+# Разрешите соединения для репликации с localhost пользователю с
+# привилегией репликации.
 local   replication     all                                     peer
 host    replication     all             127.0.0.1/32            md5
 host    replication     all             ::1/128                 md5
-# specify network range you allow to connect on [ADDRESS] section
-# if allow all, specify [0.0.0.0/0]
+# укажите диапазон сетей, к которым разрешено подключаться на участке [ADDRESS]
+# если разрешено все, укажите [0.0.0.0/0]
 host    all             all             10.4.145.0/24           md5
 
 postgres@gitee-postgresql1:~# systemctl restart postgresql
 ```
 
-To connect to PostgreSQL database with MD5 password, set a password for each PostgreSQL user.
+Чтобы подключиться к базе данных PostgreSQL с паролем MD5, задайте пароль для каждого пользователя PostgreSQL.
 
 ```sh
 postgres@gitee-postgresql1:~$ psql -d testdb
 psql (12.17 (Ubuntu 12.17-0ubuntu0.20.04.1))
 Type "help" for help.
 
-# Set or change the password for postgres
+# Установите или измените пароль для postgres
 testdb=# \password
 Enter new password for user "postgres":
 Enter it again:
 
-# You can also set or change the password for any user with a PostgreSQL superuser
+# Вы также можете установить или изменить пароль для любого пользователя с правами суперпользователя PostgreSQL
 testdb-# \q
 postgres@gitee-postgresql1:~$ psql -c "alter user root with password 'oschina123';"
 ALTER ROLE
 ```
 
-Verify the setting of using MD5 password to connect to the PostgreSQL database from a remote host.
+Проверьте настройку использования пароля MD5 для подключения к базе данных PostgreSQL с удаленного узла.
 
 ```sh
 Passwordless authentication
@@ -184,37 +184,37 @@ Password for user root:		 # password
 psql (12.17 (Ubuntu 12.17-0ubuntu0.20.04.1))
 SSL connection (protocol: TLSv1.3, cipher: TLS_AES_256_GCM_SHA384, bits: 256, compression: off)
 Type "help" for help.
-# connected
+# подключено
 testdb=>
 ```
 
-## 3.Streaming Replication
+## 3.Потоковая репликация
 
-### 3.1 Configure the master node
+### 3.1 Настройка главного узла
 
 ```sh
 postgres@gitee-postgresql1:~$ vi /etc/postgresql/12/main/postgresql.conf
-# line 59: uncomment and change
+# строка 59: раскомментировать и изменить
 listen_addresses = '*'
-# line 192: uncomment
+# строка 192: раскомментировать
 wal_level = replica
-# line 197: uncomment
+# строка 197: раскомментировать
 synchronous_commit = on
-# line 285: uncomment (max number of concurrent connections from streaming clients)
+# строка 285: раскомментировать (максимальное количество одновременных соединений от потоковых клиентов)
 max_wal_senders = 10
-# line 287: uncomment and change (minimum number of past log file segments)
+# строка 287: раскомментировать и изменить (минимальное количество прошлых сегментов файла журнала)
 wal_keep_segments = 10
-# line 300: uncomment and change
+# строка 300: раскомментировать и изменить
 synchronous_standby_names = '*'
 
 postgres@gitee-postgresql1:~# vi /etc/postgresql/12/main/pg_hba.conf
-# add to the end
-# host replication [replication user] [allowed network] [authentication method]
+# добавляем в конец
+# репликация хоста [пользователь репликации] [разрешенная сеть] [метод аутентификации]
 host    replication     rep_user        10.4.145.105/32            md5
 host    replication     rep_user        10.4.145.35/32             md5
 
 
-# create a user for replication
+# создаем пользователя для репликации
 root@gitee-postgresql1:/home/ubuntu# su - postgres
 postgres@gitee-postgresql1:~$ createuser --replication -P rep_user
 Enter password for new role:			# set any password
@@ -224,7 +224,7 @@ logout
 root@gitee-postgresql1:/home/ubuntu# systemctl restart postgresql
 ```
 
-### 3.2 Configure the slave node
+### 3.2 Настройка ведомого узла
 
 ```sh
 root@gitee-postgresql2:/home/ubuntu# systemctl stop postgresql
@@ -237,20 +237,20 @@ postgres@gitee-postgresql2:~$ exit
 logout
 
 root@gitee-postgresql2:~# vi /etc/postgresql/12/main/postgresql.conf
-# line 59: uncomment and change
+# строка 59: раскомментировать и изменить
 listen_addresses = '*'
-# line 315: uncomment
+# строка 315: раскомментировать
 hot_standby = on
 
 root@gitee-postgresql2:~# vi /var/lib/postgresql/12/main/postgresql.auto.conf
-# Do not edit this file manually!
-# It will be overwritten by the ALTER SYSTEM command.
+# Не редактируйте этот файл вручную!
+# Он будет перезаписан командой ALTER SYSTEM.
 primary_conninfo = 'user=rep_user password=oschina123 host=10.4.145.105 port=5432 sslmode=prefer sslcompression=0 gssencmode=prefer krbsrvname=postgres target_session_attrs=any application_name=gitee-postgresql2'
 
 root@gitee-postgresql2:~# systemctl start postgresql
 ```
 
-If the result of the following commands on the master node is as shown below, it can be accepted. Make sure the settings work properly to create databases or insert data on the master node.
+Если результат выполнения следующих команд на главном узле выглядит так, как показано ниже, его можно принять. Убедитесь, что настройки работают правильно для создания баз данных или вставки данных на главном узле.
 
 ```sh
 root@gitee-postgresql1:/home/ubuntu# su - postgres
@@ -262,9 +262,9 @@ postgres@gitee-postgresql1:~$ psql -c "select usename, application_name, client_
 (1 row)
 ```
 
-### 3.3 Test Master-Slave Synchronization
+### 3.3 Тест синхронизации ведущего и ведомого узлов
 
-#### Create a database on the master node
+#### Создайте базу данных на ведущем узле
 
 ```sh
 root@gitee-postgresql1:/home/ubuntu# su - postgres
@@ -284,7 +284,7 @@ postgres@gitee-postgresql1:~$ psql -l
 (5 rows)
 ```
 
-#### View the database on the slave node
+#### Просмотр базы данных на ведомом узле
 
 ```sh
 root@gitee-postgresql2:~# su - postgres
@@ -304,9 +304,9 @@ postgres@gitee-postgresql2:~$ psql -l
 (5 rows)
 ```
 
-## 4. Create users and databases
+## 4. Создание пользователей и баз данных
 
-Create users, associate databases, and grant privileges
+Создание пользователей, создание баз данных и предоставление привилегий
 
 ```sh
 postgres@gitee-postgresql1:~$ psql -U postgres -W
@@ -341,10 +341,10 @@ GRANT
 ################### Create the foruda user and database ###################
 postgres=# create user foruda with SUPERUSER password 'oschina123';
 CREATE ROLE                                                     | {}
-# Create database and associate user
+# Создайте базу данных и назначьте пользователя
 postgres=# CREATE DATABASE foruda OWNER foruda;
 CREATE DATABASE
-# Grant user database permissions
+# Предоставьте пользователю права доступа к базе данных
 postgres=# GRANT ALL PRIVILEGES ON DATABASE foruda TO foruda;
 GRANT
 
@@ -352,16 +352,16 @@ GRANT
 ################### Create praefect user and database ###################
 postgres=# create user praefect with SUPERUSER password 'oschina123';
 CREATE ROLE                                                     | {}
-# Create database and associate user
+# Создайте базу данных и назначьте пользователя
 postgres=# CREATE DATABASE praefect OWNER praefect;
 CREATE DATABASE
-# Grant user database permissions
+# Предоставьте пользователю права доступа к базе данных
 postgres=# GRANT ALL PRIVILEGES ON DATABASE praefect TO praefect;
 GRANT
 ```
 
 ```sh
-# To set the postgres user as a superuser, follow these steps:
+# Чтобы установить пользователя postgres в качестве суперпользователя, выполните следующие действия:
 postgres@gitee-postgresql1:~$ psql -U postgres
 psql (12.17 (Ubuntu 12.17-0ubuntu0.20.04.1))
 Type "help" for help.
@@ -371,8 +371,8 @@ ALTER ROLE
 postgres=# \q
 ```
 
-5. Reference documents
+5. Справочные документы
 
-PostgreSQL Tutorial
+Учебник по PostgreSQL
 
-[PostgreSQL basic usage guide | Frognew (frognew.com)](https://blog.frognew.com/2021/11/postgresql-get-started.html)
+[Руководство по базовому использованию PostgreSQL | Frognew (frognew.com)](https://blog.frognew.com/2021/11/postgresql-get-started.html)

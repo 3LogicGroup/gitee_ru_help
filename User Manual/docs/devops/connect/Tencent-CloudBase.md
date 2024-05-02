@@ -1,137 +1,139 @@
 ---
-title: Tencent Cloud Hosting
+title: Облачный хостинг Tencent
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 origin-url: https://gitee.ru/help/articles/4318
 ---
 
-"Cloud Run" (Tencent CloudBase Run) is a next-generation cloud-native application engine provided by Tencent CloudBase (TCB). It supports running containerized applications written in any language and framework. Cloud Run has advantages such as painless migration, automated elastic scaling, no maintenance, cross-platform deployment support, and integration with cloud development capabilities. Developers can migrate to cloud development at low cost without language or framework limitations, effectively improving development efficiency.
+Платформа Run (Tencent CloudBase Run) представляет собой модуль облачных приложений  нового поколения, предоставляемый Tencent  Base (TCB). Она поддерживает запуск контейнеризированных приложений, написанных на любом языке и платформе.  Run обладает такими преимуществами, как безболезненная миграция, автоматическое эластичное масштабирование, отсутствие обслуживания, поддержка кроссплатформенного развертывания и интеграция с возможностями облачной разработки. Разработчики могут переходить на облачную разработку по низкой цене без языковых ограничений или фреймворка, что значительно повышает эффективность разработки.
 
-User Benefits
+Преимущества для пользователей
 
-Starting now, Gitee users who successfully deploy applications on Cloud Hosting for the first time can [click here](https://cloud.tencent.com/act/pro/tcb-welfare) to receive a 50 yuan coupon (50 off for orders over 100) as a benefit. Limited to 2000 coupons, first come first served!
+Начиная с этого момента, пользователи Gitee, впервые успешно развернувшие приложения на облачном хостинге, могут [нажмите здесь](https://.tencent.com/act/pro/tcb-welfare) получить в качестве бонуса купон на 50 юаней (скидка 50 юаней при заказе более 100 юаней ). Количество купонов всего 2000 штук, успейте первым!
 
-## Cloud Hosting Application Scenarios
+## Сценарии использования облачного хостинга
 
-Cloud hosting is suitable for various application scenarios, whether it is traditional enterprises, SaaS vendors, or small and medium-sized startups, they can enjoy high-quality cloud-native hosting services through cloud hosting to help businesses develop rapidly.
+Облачный хостинг пригоден для различных сценариев применения, будь то традиционные предприятия, поставщики SaaS или малые и средние стартапы, они могут пользоваться высококачественными услугами облачного хостинга, чтобы помочь бизнесу развиваться быстрее.
 
-- **Quick Cloud Migration**: Traditional enterprises/legacy businesses can be seamlessly migrated to cloud hosting without modifying or refactoring the code, enabling them to enjoy one-stop backend cloud services provided by cloud development without the need for operations and maintenance.
+- ** Быстрая облачная миграция **: Традиционные/унаследованные предприятия могут быть легко перенесены на облачный хостинг без изменения или рефакторинга кода, что позволяет им пользоваться универсальными серверными облачными сервисами, предоставляемыми 
 
-Multi-tenant Isolation: Supports environment-level resource isolation, where each environment has its own set of backend cloud services. For example, with Cloud Hosting, SaaS vendors no longer need to worry about data and resource isolation between SaaS tenants. Each tenant can enjoy all the cloud services within the environment.
+командой облачной разработки, без необходимости в эксплуатации и обслуживании.
 
-- **Backend Service Hosting**: Visual operation, nanny-style service hosting, even **small and medium-sized enterprises** can enjoy the level of back-end automation operations and hosting services provided by large companies, so as to focus more on business development.
+Мультитенантная изоляция: Поддерживает изоляцию ресурсов на уровне среды, где каждая среда имеет свой собственный набор серверных облачных сервисов. Например, с облачным хостингом поставщикам SaaS больше не нужно беспокоиться об изоляции данных и ресурсов между клиентами SaaS. Каждый арендатор может пользоваться всеми облачными сервисами в рамках этой среды.
 
-- **Low-Cost and Rapid Validation of New Business**: **Startups and internal innovation of enterprises**, can use cloud hosting for out-of-the-box usage, convenient deployment, rapid development and deployment of applications, iterative development, and validation of business models.
+- **Серверный сервисный хостинг **: Визуальное управление, сервисный хостинг в стиле няни, даже **малые и средние предприятия** могут пользоваться уровнем автоматизации серверных операций и услуг хостинга, предоставляемых крупными компаниями, чтобы больше сосредоточиться на развитии бизнеса.
 
-## Cloud Hosting Product Advantages
+- **Недорогая и быстрая проверка нового бизнеса**: **Стартапы и внутренние инновации предприятий** могут использовать облачный хостинг для использования "из коробки", удобного развертывания, быстрой разработки и развертывания приложений, итеративной разработки и проверки бизнес-моделей.
 
-Comparison with using cloud servers:
+## Преимущества продуктов облачного хостинга
 
-- **Server maintenance-free**: Serverless mode does not require you to purchase, manage, and maintain servers, saving operation and maintenance costs.
-- **Cross-platform deployment and migration**: Compatible with Knative + Kubernetes ecosystem standards, with a strong community foundation and complete community ecosystem. It can seamlessly migrate between different cloud providers without worrying about technology lock-in, entering the era of "cloud-native".
-Flow-driven mode: The number of instances can automatically scale based on traffic, and can be reduced to 0 or kept running constantly. There is no need to constantly monitor the running status and manually scale up or down.
-- **Pay-as-you-go**: Elastic scaling of resources, only pay for the actual amount of resources used, with a minimum granularity of 0.25C0.5GiB. Avoid idle resources and no need to prepare excessive resources in advance for business peaks.
+Сравнение с использованием облачных серверов:
 
-**Comparison with other container platforms:**
+- ** Сервер не требует технического обслуживания **: Бессерверный режим не требует от вас приобретения серверов, управления ими и технического обслуживания, что экономит затраты на эксплуатацию и техническое обслуживание.
+- **Кроссплатформенное развертывание и миграция **: Совместимость со стандартами экосистемы Native + Kubernetes, с прочной основой сообщества и полной экосистемой сообщества. Имеется возможность легко осуществлять миграцию между различными облачными провайдерами, не беспокоясь о технологической привязке, вступая в эру "нативного облака".
+Программирование, управляемое потоком: Количество событий может автоматически масштабироваться в зависимости от трафика, сокращаться до 0 или продолжать работать постоянно. Нет необходимости постоянно следить за состоянием работы и вручную увеличивать или уменьшать масштаб.
+- ** Оплата по мере поступления **: Гибкое масштабирование ресурсов, оплата только за фактический объем используемых ресурсов с минимальной степенью детализации 0.25C0.5ГиБ. Избегайте простоя ресурсов и не заготавливайте заранее избыточные ресурсы для пиковых рабочих нагрузок.
 
-- **Reduce the learning curve**: No need to create and maintain clusters, write complex yaml configuration files, just focus on business logic development.
-- **Provide build functionality**: In addition to the traditional method of uploading and deploying images, it also supports pulling code directly from code hosting platforms like Gitee for deployment. This provides a complete end-to-end operation without the need for users to manually build images. When used with CloudBase Framework, even the Dockerfile can be generated by the system.
-Cloud Development Framework Linkage: Can be linked with other functions of cloud development, using basic services such as cloud database, cloud storage, cloud calls, cloud access, static website hosting, etc., to host multi-end applications in one-stop, greatly improving the overall development efficiency of the project.
+**Сравнение с другими контейнерными платформами:**
 
-Cloud Hosting x Gitee Operation Guide
+- ** Сокращается кривая обучения **: Нет необходимости создавать и поддерживать кластеры, писать сложные настроечные файлы yaml, просто сосредоточьтесь на разработке бизнес-логики.
+- ** Обеспечивает функциональность сборки **: В дополнение к традиционному методу загрузки и развертывания образов, он также поддерживает извлечение кода для развертывания непосредственно с платформ хостинга кода, таких как Gitee. Это обеспечивает полную сквозную работу, избавляющую пользователей от необходимости вручную создавать образы. При использовании CloudBase Framework система может сгенерировать даже файлы Dockerfile.
+Связь с платформой облачной разработки: Может быть связана с другими функциями облачной разработки, используя базовые сервисы, такие как облачная база данных, облачное хранилище, облачные вызовы, облачный доступ, статический хостинг веб-сайтов и т.д., для размещения многоцелевых приложений в режиме "одного окна", что значительно повышает общую эффективность разработки проекта.
 
-### Step 1: Open Cloud Code
+Руководство по эксплуатации облачного хостинга x Gitee
 
-#### 1.1 Log in to the Cloud Development Console
+### Шаг 1: Облако с открытым кодом
 
-Before enabling cloud hosting, you need to log in to the Cloud Development Console and select a pay-as-you-go environment. If you don't have a pay-as-you-go environment or haven't enabled cloud development yet, please refer to the Cloud Development documentation to activate the environment.
+#### 1.1 Вход в консоль облачной разработки
 
-#### 1.2 Select Environment
+Прежде чем включить облачный хостинг, вам необходимо войти в консоль облачной разработки и выбрать среду с оплатой по факту. Если у вас нет среды с оплатой по факту или вы еще не включили облачную разработку, обратитесь к документации по облачной разработке, чтобы активировать среду.
 
-Multiple Cloud Development Environments can be created under one Tencent Cloud account. Each environment can independently choose whether to enable Cloud Run. When you destroy an environment, the Cloud Run within the environment will also be deleted.
+#### 1.2 Выбор среды
+
+Под одной учетной записью Tencent  можно создать несколько облачных сред разработки. Каждая среда может самостоятельно выбирать, включать ли запуск в облаке. При удалении среды также будет удален облачный запуск в среде.
 
 ![](https://images.gitee.ru/uploads/images/2020/0928/220456_67ed77fd_551147.png)
 
-#### 1.3 Log in to the Cloud Hosting Console
+#### 1.3 Вход в консоль облачного хостинга
 
-Log in to the Cloud Hosting console at https://console.cloud.tencent.com/tcb/service?tdl_anchor=gitee&tdl_site=0, then switch to the specified environment as needed.
+Войдите в консоль облачного хостинга по адресу https://console..tencent.com/tcb/service?tdl_anchor=gitee&tdl_site=0, then switch to the specified environment as needed.
 ![](https://images.gitee.ru/uploads/images/2020/0928/220456_1d1eecb4_551147.png)
 
-#### 1.4 Open Immediately
+#### 1.4 Открыть немедленно
 
-Click [Subscribe Now].
+Нажмите Подписаться прямо сейчас].
 
 ![](https://images.gitee.ru/uploads/images/2020/0928/220456_884e9156_551147.png)
 
-#### 1.5 Open Settings
+#### 1.5 Открытие настроек
 
-- **Location**: Currently, cloud hosting is only available in Shanghai, and more regions will be opened one after another.
+- **Местоположение**: В настоящее время облачный хостинг доступен только в Шанхае, остальные регионы будут открываться один за другим.
 
-- **Cloud Hosted Network**: Network settings include [Virtual Private Cloud (VPC)](https://cloud.tencent.com/document/product/215) and [Subnet](https://cloud.tencent.com/document/product/215/20046#.E5.AD.90.E7.BD.91). All services created in Cloud Hosted are deployed in the same VPC based on the environment, and network settings cannot be changed after Cloud Hosted is successfully provisioned. There are two modes for network settings:
+- **Сеть, размещенная в облаке**: Сетевые настройки включают [Виртуальное частное облако (VPC)](https://.tencent.com/document/product/215) и [Подсеть](https://.tencent.com/document/product/215/20046#.E5.AD.90.E7.BD.91). Все службы, созданные в облачном хостинге, развертываются в одном и том же виртуальном частном облаке в зависимости от среды, и сетевые настройки нельзя изменить после успешной подготовки облачного хостинга. Существует два режима настройки сети:
 
 
-- **Default configuration**: Regardless of whether you have created a Virtual Private Cloud (VPC) and subnet under your Tencent Cloud account, Cloud Run will automatically create a VPC and subnet for your current Cloud Development Environment. All services created in Cloud Run under this environment will be deployed to this VPC and subnet. You do not need to manually configure this process. Afterwards, you can view and manage this VPC and subnet created automatically by Cloud Run in the [VPC Console](https://console.cloud.tencent.com/vpc). You can also deploy more cloud resources (such as cloud servers, cloud databases, etc.) within this VPC for interaction. ![](https://images.gitee.ru/uploads/images/2020/0928/220455_961d0e3a_551147.png)
-- **Custom Configuration**: If you have already created a private network VPC and subnet, and have deployed other cloud resources (such as cloud servers, cloud databases, etc.) in it, and want to deploy the service to the existing private network VPC through the cloud hosting in the current environment, in order to interact with the cloud resources in this private network VPC. Then you can choose the **Custom Configuration** option and select the specific VPC and subnet. Only one VPC can be selected, and multiple subnets are supported. ![](https://images.gitee.ru/uploads/images/2020/0928/220456_06c5192a_551147.png)
+- **Настройки по умолчанию**: Независимо от того, создали ли вы виртуальное частное облако (VPC) и подсеть под своей учетной записью Tencent ,  Run автоматически создаст виртуальное частное облако и подсеть для вашей текущей облачной среды разработки. Все службы, созданные в  Run в этой среде, будут развернуты в этом виртуальном частном облаке и подсети. Вам не нужно настраивать этот процесс вручную. Впоследствии вы сможете просматривать и управлять этим виртуальным частным облаком и подсетью, автоматически созданными  Run в [консоли VPC](https://console..tencent.com/vpc). Вы также можете развернуть в рамках этого виртуального частного облака для совместной работы дополнительные облачные ресурсы (такие как облачные серверы, облачные базы данных и т.д.). ![](https://images.gitee.ru/uploads/images/2020/0928/220455_961d0e3a_551147.png)- **Custom Configuration**: If you have already created a private network VPC and subnet, and have deployed other  resources (such as  servers,  databases, etc.) in it, and want to deploy the service to the existing private network VPC through the  hosting in the current environment, in order to interact with the  resources in this private network VPC. Then you can choose the 
+-  Откройте опцию **Пользовательские настройки** и выберите конкретное виртуальное частное хранилище и подсеть. Можно выбрать только одно виртуальное частное хранилище, но при этом поддерживается несколько подсетей. ![](https://images.gitee.ru/uploads/images/2020/0928/220456_06c5192a_551147.png) 
 
-#### 1.6 Successful Activation
+#### 1.6 Успешная активация
 
-Click "Finish", the status will change to **In progress**, wait a few seconds. ![](https://images.gitee.ru/uploads/images/2020/0928/220456_c2052cb0_551147.png)
+Нажмите "Готово" - при этом статус изменится на **Выполняется**. Подождите несколько секунд. ![](https://images.gitee.ru/uploads/images/2020/0928/220456_c2052cb0_551147.png)
 
-### Step 2: Create a New Service
+### Шаг 2: Создание нового сервиса
 
-#### 2.1 Create a New Service
+#### 2.1 Создание нового сервиса
 
-Click 'Create Service' on the service list page in the console.
+Нажмите "Создать сервис" на странице списка сервисов в консоли.
 
-Enter the service name as "helloworld", select the "Use the default repository of the system" option for the image repository usage mode, and click on "Submit". ![Image](https://images.gitee.ru/uploads/images/2020/0928/220456_bc203cca_551147.png)
+Задайте название сервиса как "helloworld", выберите опцию "Использовать системный репозиторий по умолчанию" для режима использования репозитория изображений и нажмите "Отправить". ![Изображентие](https://images.gitee.ru/uploads/images/2020/0928/220456_bc203cca_551147.png)
 
-#### 2.2 Enter the details of the 'helloworld' service.
+#### 2.2 Ввод данных о сервисе "helloworld".
 
-Select the service "helloworld" and click on the service name to enter the service details page.
+Выберите сервис "helloworld" и нажмите на название сервиса, чтобы перейти на страницу сведений о сервисе.
 
 ![](https://main.qcloudimg.com/raw/252af6bc138cd26f7f109fe3ed8b5fa2.png)
 
-### Step 3: Create and Configure Versions
+### Шаг 3: Создание и настройка версий
 
-Click on [Create New Version]
+Нажмите [Создать новую версию]
 
 ![](https://main.qcloudimg.com/raw/80be0e18962acdd5d131b08a688a544d.png)
 
-In the new version window, continue filling in the required configuration information for the version. Select "Code Repository Pulling" as the upload method, and choose "Gitee" as the code source. The listening port, traffic policy, and advanced settings can all be left as default values. If further modifications are needed, please refer to [More Documentation](https://cloud.tencent.com/document/product/1243/46127#.E6.AD.A5.E9.AA.A43.EF.BC.9A.E9.85.8D.E7.BD.AE.E7.89.88.E6.9C.AC).
+В окне "Новая версия" продолжайте заполнять необходимую информацию о конфигурации для версии. Выберите "Извлечение из хранилища кода" в качестве метода загрузки и выберите "Gitee" в качестве источника кода. Прослушиваемый порт, политика трафика и расширенные настройки могут быть оставлены в качестве значений по умолчанию. В случае необходимости внесения дополнительных изменений обратитесь к [Дополнительной документации](https://.tencent.com/document/product/1243/46127#.E6.AD.A5.E9.AA.A43.EF.BC.9A.E9.85.8D.E7.BD.AE.E7.89.88.E6.9C.AC).
 
 ![](https://main.qcloudimg.com/raw/4991ff020264e0f6ad9f990fe9897880.png)
 
-### Step 4: Start Deployment
+### Step 4: Начать развертывание
 
-In the new version window, after filling in the version configuration information, click on [Start Deployment].
+После заполнения информации о настройках версии нажмите на [Начать развертывание] в окне новой версии.
 
-The initial version is set to 'Creating'. The status changes to 'Normal' when the deployment is successful.
+Начальной версии присваивается статус "Создается". При успешном развертывании татус меняется на "Обычный".
 
-At this time, the traffic is 0% and cannot accept requests. If you click on 'Access Service', an error will be displayed.
+В это время трафик составляет 0% , и прием запросов невозможен. Если вы нажмете на "Доступ к сервису", будет выведено сообщение об ошибке.
 
 ![](https://main.qcloudimg.com/raw/73914fd4b0e1216652d421f3e073c565.png)
 
-Click on [Traffic Configuration]. Configure traffic 100% for version 'helloworld-001'.
+Нажмите [Настройка трафика]. Настройте трафик на 100% для версии 'helloworld-001'.
 
-Click [Finish].
+Нажмите [Готово].
 
 ![](https://main.qcloudimg.com/raw/bcc46bc970c5eeecbadf5ca006d7ab6d.png)
 
-After success, you can see that the traffic becomes 100%.
+После успешного завершения вы увидите, что трафик стал 100%.
 
 ![](https://main.qcloudimg.com/raw/dd62fe608c1afd19bf9b7e5a696a5ebf.png)
 
-### Step 5: Complete the deployment
+### Шаг 5: Звершение развертывания
 
-Click 'Access Service' to see the service running effect as the traffic has been configured to 100% and the service has started processing requests.
+Нажмите 'Войти в сервис' to see the service running effect as the traffic has been configured to 100% and the service has started processing requests.
 
 ![](https://main.qcloudimg.com/raw/60119b59be875421760bc593fdbe5b24.png)
 
-## Help and Support
+## Помощь и поддержка
 
-[Cloud Hosting Product Documentation](https://cloud.tencent.com/document/product/1243)
+[Документация по продукту облачного хостинга](https://.tencent.com/document/product/1243)
 
-Tencent Cloud Cloud Development Technology Exchange QQ Group: 601134960
+Группа команды технологий облачной разработки Tencent  по обмену быстрыми сообщениями в QQ: 601134960
 
-Tencent Cloud Cloud Development WeChat Official Account: Tencent Cloud Cloud Development
+Официальный аккаунт WeChat команды облачной разработки Tencent : Tencent Cloud Cloud Development

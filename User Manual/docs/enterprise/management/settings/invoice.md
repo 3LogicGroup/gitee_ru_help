@@ -1,15 +1,14 @@
 ---
-title: Invoicing information
+title: Информация для выставления счетов
 ---
+Для перехода на страницу информации о компании нажмите «Настройки» в меню навигации компании, затем нажмите на значок редактирования в правом верхнем углу карточки «Информация для выставления счетов»:
 
-Click on the 'Settings' in the enterprise navigation menu to enter the enterprise information page, then click on the edit icon in the upper right corner of the 'Billing Information' card:
+![Описание изображения](assets/image406.png)
 
-![Image Description](assets/image406.png)
+Нажмите кнопку «Редактировать» на странице платежной информации:
 
-Click the 'Edit' button on the billing information page:
+![Описание изображения](assets/image407.png)
 
-![Image Description](assets/image407.png)
+Заполните информацию о счете в соответствии с подсказками на странице, а затем нажмите кнопку «Отправить», чтобы завершить регистрацию информации о счете.
 
-Complete the invoice information according to the prompts on the page, and then click the 'Submit' button to complete the registration of the invoice information.
-
-![Image Description](assets/image408.png)
+![Описание изображения](assets/image408.png)

@@ -1,18 +1,18 @@
 ---
-title: Open Source Repository Settings for Enterprise Edition
+title: Настройки репозитория с открытым исходным кодом для Enterprise Edition
 origin-url: https://gitee.ru/help/articles/4320
 ---
 
-1. Prioritize understanding private repositories, internal open source repositories, and external open source repositories. Refer to the help documentation: <https://gitee.ru/help/articles/4157>
-2. To adjust the members who have permissions to manage open source repositories, perform the following steps:
-3. Operation steps: Enterprise Workbench -> Code -> Management -> Function Settings -> Visibility of Dangerous Operations -> Save
+1. Распределите приоритеты между пониманием частных репозиториев, внутренних репозиториев с открытым исходным кодом и внешних репозиториев с открытым исходным кодом. Обратитесь к справочной документации: <https://gitee.ru/help/articles/4157>.
+2. Чтобы настроить участников, имеющих права на управление репозиториями с открытым исходным кодом, выполните следующие действия:
+3. Шаги операции: Корпоративное рабочее место -> Код -> Управление -> Настройки функций -> Видимость опасных операций -> Сохранить
 
-![Image Description](image645.png)
+![Описание изображения](image645.png)
 
-![Image Description](image646.png)
+![Описание изображения](image646.png)
 
-> View the operation guide for repository open source management permissions:
+> Просмотр руководства по работе с разрешениями на управление открытым исходным кодом репозитория:
 
-Operation steps: Enterprise Workbench -> Management -> Role and Permission Settings -> Repository Open Source Management
+Шаги операции: Корпоративное рабочее место -> Управление -> Настройки ролей и разрешений -> Управление репозиториями с открытым исходным кодом
 
-![Image Description](image647.png)
+![Описание изображения](image647.png)

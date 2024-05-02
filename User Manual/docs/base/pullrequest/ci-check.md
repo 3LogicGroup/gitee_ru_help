@@ -1,169 +1,169 @@
 ---
-title: PullRequest access control check
+title: Проверка контроля доступа по запросу на слияние
 slug: /base/pullrequest/ci-check
-description: PullRequest access control check feature
+description: Функция проверки контроля доступа по запросу на слияние
 ---
 
-Pull Request gate check provides the ability to integrate third-party pipelines in Pull Requests. By building a
+Проверка шлюза запроса на слияние предоставляет возможность интегрировать сторонние конвейеры в запросы на слияние. 
 
-Here is a simple sequence diagram to explain how to access external service capabilities
+Вот простая схема последовательности действий, объясняющая, как получить доступ к возможностям внешнего сервиса
 
 ![](https://images.gitee.ru/uploads/images/2021/0901/175609_cec4deeb_1841492.png 'Screenshot.png')
 
-As shown in the above figure, Gitee pushes events and accepts user operation requests to complete the integration. This means that Gitee needs to provide WebHook event notifications and API interfaces to accept user operation detection requests.
+Как показано на рисунке выше, Gitee отправляет события и принимает пользовательские запросы на операции для завершения интеграции. Это означает, что Gitee необходимо предоставить уведомления о событиях вебхуков и интерфейсов API для приема запросов на обнаружение пользовательских операций.
 
-Interface Description
+Описание интерфейса
 
-:::info Prompt
+:::информационная подсказка
 
-Calling the check interface requires repository administrator permissions
+Для вызова интерфейса проверки требуются права администратора репозитория
 
 :::
 
-### Create a check task
+### Создание задачи проверки
 
 > `POST` : /repos/{owner}/{repo}/check-runs
 
-| Parameter Name | Data Type | Parameter Location | Parameter Description |
+| Наименование параметра | Тип данных | Расположение параметра | Описание параметра |
 |-----|------|--------|------|
-| owner | string | path | The address of the repository space, taking https://gitee.ru/oschina/git-osc as an example, `repo` takes the value of oschina |
-| repo | string | path | Repository address, for example, `repo` takes the value git-osc |
-| name | string | formData | Required parameter, check task name, like: `ci-pipeline-runn`
+| owner | string | path | Адрес пространства репозиториев принимает значение https://gitee.ru/oschina/git-osc например, `repo` принимает значение oschina |
+| repo | string | path | Адрес репозитория, например, `repo` принимает значение git-osc |
+| name | string | formData | Обязательный параметр, проверьте название задачи, например: `ci-pipeline-runn`
   |
-| head_sha | string | formData | Required parameter, represents the latest commit SHA on the branch during the code push.
-| details_url | string | formData | Optional. Provides the homepage address of the access control check capability service.
-| status | string | formData | Optional, the current state of the check task. Possible values are:<br/>- `queued`: indicates the check task is in the queue (default value)<br/>- `in_progress`: indicates the check task is in progress<br/>- `completed`: indicates the check task has been completed |
-| started_at | string | formData | Optional, the start time of the check task, the time format must comply with
-| completed_at | string | formData | Optional, the completion time of the check task, required time format is `ISO 8601` standard |
-| conclusion | string | formData | Optional. The final status (conclusion) of the check task. It can have one of the following values: <br/><ul><li>`action_required`: Action required.</li><li>`cancelled`: Cancelled.</li><li>`failure`: Task failed.</li><li>`neutral`: No status.</li><li>`success`: Task succeeded.</li><li>`skipped`: Skipped.</li><li>`stale`: Stale.</li><li>`timed_out`: Task timed out.</li></ul><br/>When the check task is completed (`completed_at` is not empty or `status` is set to `completed`), `conclusion` is a required parameter.<br/>If the field value is `action_required`, the details URL should be provided in `details_url`.<br/>When the task is completed and a conclusion is provided, the check task will be automatically set to `completed` status. The conclusion cannot be changed afterwards.
-| output | object | formData | Optional. The detection report provided after the inspection task is completed. For the specific data structure, please refer to the **"Access Inspection Report Data Structure"** below. |
-| actions | objects | formData | Optional. Displays a button on the access control related interface to remind you to do extra things.
+| head_sha | string | formData | Обязательный параметр, отображает последний коммит SHA в ветке во время отправки кода.
+| details_url | string | formData | Дополнительный. Содержит адрес домашней страницы службы проверки возможностей контроля доступа.
+| status | string | formData | Дополнительный, текущее состояние задачи проверки. Возможные значения:<br/>- `в_очереди`: указывает на то, что задача проверки находится в очереди (значение по умолчанию)<br/>- `выполняется`: указывает на то, что задача выполняется<br/>- `выполнена`: указывает, что задача проверки выполнена |
+| started_at | string | formData | Дополнительный, время запуска задачи проверки, формат времени должен соответствовать
+| completed_at | string | formData | Дополнительный, время завершения задачи проверки, требуемый формат времени согласно стандарту `ISO 8601` |
+| conclusion | string | formData | Дополнительный. Окончательный статус (завершение) задачи проверки. Может принимать одно из следующих значений: <br/><ul><li>`action_required`: Требуется действие.</li><li>`cancelled`: Отменено.</li><li>`failure`: Задача не выполнена.</li><li>`neutral`: Статус отсутствует.</li><li>`success`: Задача выполнена успешно.</li><li>`skipped`: Пропущено.</li><li>`stale`: Устаревшая.</li><li>`timed_out`: Время выполнения задачи истекло.</li></ul><br/>Когда задача проверки будет выполнена (`completed_at` принимает непустое значение или `status` установлен на `completed`), `conclusion` является обязательным параметром.<br/>Если поле приобретает значение `action_required`, подробный URL-адрес должен быть указан в `details_url`.<br/>Когда задача будет выполнена и предоставлено заключение, задаче проверки будет автоматически присвоен статус `completed`. Впоследствии изменить это заключение будет невозможно.
+| output | object | formData | Дополнительный. Отчет об обнаружении предоставляется после завершения задачи проверки. Конкретную структуру данных см. в разделе ** "Структура данных отчета о проверке доступа "** ниже. |
+| actions | objects | formData | Дополнительный. Отображает кнопку на интерфейсе управления доступом, чтобы напомнить пользователю о необходимости выполнения дополнительных действий.
 
-### Get a Specific Check Task
+### Получение конкретной задачи на проверку
 
 > `GET` /repos/{owner}/{repo}/check-runs/{check_run_id}
 
-| Parameter Name | Data Type | Parameter Description |
+| Наименование параметра | Тип данных | Описание параметра |
 |-----|------|------|
-| owner | string | Required. The space URL where the repository is located. For example, if the URL is oschina, the `repo` value would be oschina |
-| repo | string | Required, repository URL, using 'git-osc' as an example, the 'repo' value is 'git-osc'.
-| check_run_id | integer | The ID of the check item returned after calling the `Create a Check Task` API and successfully creating the check task |
+| owner | string | Обязательный параметр. URL-адрес места, где находится репозиторий. Например, URL-адрес имеет значение "oschina", `repo` также примет значение "oschina" |
+| repo | string | Обязательный параметр. Например, если URL-адрес репозитория имеет значение 'git-osc', параметр 'repo' примет значение 'git-osc'.
+| check_run_id | integer | Идентификатор элемента проверки, возвращаемый после вызова API `Создать задачу проверки` и успешного создания задачи проверки |
 
-### Update a Specific Check Task
+### Обновление конкретной задачи проверки
 
 > `PATCH` /repos/{owner}/{repo}/check-runs/{check_run_id}
 
-| Parameter Name | Data Type | Parameter Location | Parameter Description |
+| Наименование параметра | Тип данных | Расположение параметра | Описание параметра |
 |-----|------|--------|------|
-| owner | string | path | The address of the repository space, taking https://gitee.ru/oschina/git-osc as an example, `repo` takes the value of oschina |
-| repo | string | path | Repository address, for example, `repo` takes the value git-osc |
-| name | string | formData | Required parameter, check task name, e.g.: ci-pipeline-run
-| check_run_id | integer | formData | The ID of the check run returned after successfully creating a check task using the 'Create a check run' API |
-| details_url | string | formData | Link provided by the access control service |
-| status | string | formData | Current status. Values: queued, in_progress, completed. Default: queued |
-| started_at | string | formData | The start time of the check task, with the time format required to be ISO 8601 |
-completed_at: ISO 8601 formatted string representing the completion time of the check task.
-| conclusion | string | formData | Required parameter when completed_at is not empty or the status is completed. Represents the final conclusion of the check task. The value can be one of the following: action_required, cancelled, failure, neutral, success, skipped, stale, timed_out. When the value is action_required, the details_url should provide the detail URL. Note: Providing a conclusion will automatically set the check task to
-| output | object | formData | Detection report, can accept various data outputs, specific data structure refer to `Create an inspection task`->`Inspection task report attribute` |
-| actions | objects | formData | Display a button on the Gitee interface, the specific data structure refers to
+| owner | string | path | Адрес пространства  репозиториев taking https://gitee.ru/oschina/git-osc as an example, `repo` принимает значение "oschina" |
+| repo | string | path | Адрес репозитория, например, `repo` принимает значение git-osc |
+| name | string | formData | Обязательный параметр. Проверьте название задачи, например: ci-pipeline-run
+| check_run_id | integer | formData | Идентификатор выполнения проверки, возвращаемый после успешного создания задачи проверки с помощью API 'Создание контрольного прогона'. |
+| details_url | string | formData | Ссылка, предоставляемая службой контроля доступа |
+| status | string | formData | Текущий статус. Значения: в_очереди, выполняется, выполнена. Значение по умолчанию: в_очереди |
+| started_at | string | formData | Время начала задачи проверки, формат времени должен соответствовать стандарту ISO 8601 |
+completed_at: Форматированная строка по стандарту ISO 8601, представляющая время завершения задачи проверки.
+| conclusion | string | formData | Обязательный параметр, когда completed_at принимает непустое значение, или статус принимает значение "выполнена". Представляет собой окончательное заключение по задаче проверки. Значение может быть одним из следующих: требуется_действие, отменена, не_выполнена, нейтрально, успешно, пропущена, устарела, превышено_время_ожидания. Когда значение равно "требуется_действие", поле details_url должно содержать подробный URL-адрес. Примечание: Предоставление заключения автоматически присваивает задаче проверки статус "выполнена"
+| output | object | formData | Отчет об обнаружении, может принимать различные выходные данные, конкретную структуру данных см. в разделе `Создание задачи проверки`->`Атрибут отчета задачи проверки`. |
+| actions | objects | formData | Отображается кнопка на интерфейсе Gitee, конкретную структуру данных см.
 
-### Get Annotations for a Specific Check Task
+### Получение аннотаций для конкретной задачи проверки
 
 > `GET`：/repos/{owner}/{repo}/check-runs/{check_run_id}/annotations
 
-| Parameter Name | Data Type | Parameter Location | Parameter Description |
+| Наименование параметра | Тип данных | Расположение параметра | Описание параметра |
 |-----|------|--------|------|
-| owner | string | path | The address of the repository space, taking https://gitee.ru/oschina/git-osc as an example, `repo` takes the value of oschina |
-| repo | string | path | Repository address, for example, `repo` takes the value git-osc |
-| check_run_id | integer | - | ID of the check item returned after calling the "Create a check task" interface and successfully creating the check task |
-| per_page | integer | - | Optional parameter, maximum amount of data to retrieve in a single request, with a maximum value of 100, default value is 20 |
-| page | integer | - | Optional parameter, the requested page number, default value is 1 |
+| owner | string | path | Адрес пространства  репозиториев принимает значение https://gitee.ru/oschina/git-osc as an example, `repo` принимает значение "oschina" |
+| repo | string | path | Адрес репозитория, например, `repo` принимает значение git-osc |
+| check_run_id | integer | - | Идентификатор элемента проверки, возвращаемый после вызова интерфейса "Создать задачу проверки" и успешного создания задачи проверки |
+| per_page | integer | - | Дополнительный параметр, максимальный объем данных, который можно получить за один запрос, с максимальным значением 100, значение по умолчанию -  20 |
+| page | integer | - | Дополнительный параметр, запрашиваемый номер страницы, значение по умолчанию -  1 |
 
-### Get the check task corresponding to a specific commit on a specified repository
+### Получение задачи проверки, соответствующей определенному коммиту в указанном репозитории
 
 > `GET` /repos/{owner}/{repo}/commits/{ref}/check-runs
 
-| Parameter Name | Data Type | Parameter Location | Parameter Description |
+| Наименование параметра | Тип данных | Расположение параметра | Описание параметра |
 |-----|------|--------|------|
-| owner | string | path | The address of the repository space, taking https://gitee.ru/oschina/git-osc as an example, `repo` takes the value of oschina |
-| repo | string | path | Repository address, for example, `repo` takes the value git-osc |
-| ref | string | - | Specify the Commit SHA of the specified commit on the repository |
-| check_name | string | - | Returns check runs with the specified name. |
+| owner | string | path | Адрес пространства  репозиториев taking https://gitee.ru/oschina/git-osc as an example, `repo` принимает значение "oschina" |
+| repo | string | path | Адрес репозитория, например, `repo` принимает значение "git-osc" |
+| ref | string | - | Укажите SHA указанного коммита в репозитории |
+| check_name | string | - | Возвращает проверочные прогоны с указанным именем. |
 | status | string | - | - |
 | per_page | integer | - | - |
 | page | integer | - | - |
 
-Data Structure
+Структура данных
 
-### Check Result Report Data Structure
+### Структура данных отчета о результатах проверки
 
-The access control check report is passed by specifying the 'output' field in the 'access control check task' to define and output the specific content of the report to Gitee. Gitee will parse the information contained in the report and display it in the details of the access control check task. The following is the specific data structure of the 'access control check report':
+Отчет о проверке контроля доступа передается путем указания поля 'output' в 'задаче проверки контроля доступа' для определения и вывода конкретного содержимого отчета в Gitee. Gitee выполнит парсинг информации, содержащейся в отчете, и отобразит ее в деталях задачи проверки контроля доступа. Ниже приведена конкретная структура данных "Отчета о проверке контроля доступа":
 
-| Parameter Name | Data Type | Parameter Description |
+| Наименование параметра | Тип данных | Описание параметра |
 |-----|------|------|
-| title | string | Required parameter, the title of the task report to be checked |
-| summary | string | Required parameter, a summary overview of the checklist, this attribute supports `Markdown`
-| text | string | Optional, detailed content of the checklist item. This attribute supports Markdown format
-| annotations | array of objects | Optional. Used to declare and annotate analysis results to the corresponding code. See the 'Analysis Annotation Data Structure' below for the specific data structure. |
-| images | array of objects | Optional. Add images in the report, and the pictures will be displayed in the UI. Refer to the following 'Annotation Data Structure' for the specific data structure.
+| title | string | Обязательный параметр, название проверяемого отчета о задаче |
+| summary | string | Обязательный параметр, краткий обзор контрольного списка, этот атрибут поддерживает `Markdown`.
+| text | string | Дополнительный, подробное содержание элемента контрольного списка. Этот атрибут поддерживает формат Markdown
+| annotations | array of objects | Дополнительный. Используется для объявления и аннотирования результатов анализа соответствующего кода. Конкретную структуру данных см. ниже в разделе "Структура данных аннотации анализа". |
+| images | array of objects | Дополнительный. Добавьте изображения в отчет, и они будут отображаться в пользовательском интерфейсе. Для получения более подробной информации о структуре данных обратитесь к следующему разделу "Структура данных аннотаций".
 
-### Check the annotations property data structure in the report
+### Проверка структуры данных свойств аннотаций в отчете
 
-In the access check report, the 'annotations' property of the 'output' field can be used to annotate analysis information as comments in the code, so that users can see detailed analysis results while viewing the code.
+В отчете о проверке доступа свойство 'annotations' поля 'output' можно использовать для аннотирования информации об анализе в виде комментариев в коде, чтобы пользователи могли видеть подробные результаты анализа при просмотре кода.
 
-> The annotated comments can be seen in the 'Pull Request Details > Files' tab.
+> Аннотированные комментарии можно увидеть на вкладке "Подробности запроса на слияние > Файлы".
 
-| Parameter Name | Data Type | Parameter Description |
+| Наименование параметра | Тип данных | Описание параметра |
 |-----|------|------|
-| path | string | Required parameter, specifies the file path to be annotated, such as: 'README.md', 'src/main/example.java' |
-| start_line | integer | Required parameter, the starting line number of the comment |
-| end_line | integer | Required parameter, the end line number of the comment |
-start_column | integer | Optional, the starting column number for comments, omit when start_line is not equal to end_line
-Optional, the ending column number of the comment. It is omitted when start_line is not equal to end_line.
-| annotation_level | string | Optional, the level of the annotation. The specific value can be one of the following:<br/>- `notice`: Reminder<br/>- `warning`: Warning<br/>- `failure`: Failed error |
-| message | string | Required parameter, a brief description of the feedback for these lines of code |
-| title | string | Optional, the title of the comment |
-| raw_details | string | Optional, detailed information about the comment |
+| path | string | Обязательный параметр, указывает путь к аннотируемому файлу, например: 'README.md', 'src/main/example.java' |
+| start_line | integer | Обязательный параметр, номер начальной строки комментария |
+| end_line | integer | Обязательный параметр, номер конечной строки комментария |
+start_column | integer | Дополнительный, номер начального столбца для комментариев, пропускается, если значение start_line не совпадает с end_line.
+Дополнительный, номер конечного столбца комментария. Пропускается, значение start_line не совпадает с end_line.
+| annotation_level | string | Дополнительный, уровень аннотации. Конкретное значение может быть одним из следующих:<br/>- `notice`: Напоминание<br/>- `warning`: Предупреждение<br/>- `failure`: Сбой |
+| message | string | Обязательный параметр, краткое описание обратной связи для этих строк кода |
+| title | string | Дополнительный, название комментария |
+| raw_details | string | Дополнительный, подробная информация о комментарии |
 
-### Check the data structure of the images property in the report
+### Проверка структуры данных свойств изображения в отчете
 
-In the access control check report, the 'output' field's 'images' attribute can be used to add images to the report in a declarative way. The images will be displayed in the UI interface.
+В отчете о проверке контроля доступа атрибут 'images' поля 'output' можно использовать для добавления изображений в отчет декларативным способом. Изображения будут отображаться в пользовательском интерфейсе.
 
-| Parameter Name | Data Type | Parameter Description |
+| Наименование параметра | Тип данных | Описание параметра |
 |-----|------|------|
-| alt | string | Required parameter, image name |
-| image_url | string | Required parameter, image URL |
-| caption | string | Image description |
+| alt | string | Обязательный параметр, название изображения |
+| image_url | string | Обязательный параметр, URL-адрес изображения |
+| caption | string | Описание изображения |
 
-### Check the data structure of task extension actions
+### Проверка структуры данных действий расширения задачи
 
-In the access control check task, third-party services can use the `actions` attribute to display a button on the access control check related interface, which can be used to passively trigger interaction between the check item and the service it belongs to in the access control check task details. The specific data structure of `access control check task extension actions` is as follows:
+В задаче проверки контроля доступа сторонние сервисы могут использовать атрибут `actions` для отображения кнопки на интерфейсе, связанном с проверкой контроля доступа, которая может быть использована для пассивного запуска взаимодействия между элементом проверки и сервисом, к которому он относится в детальных данных задачи проверки контроля доступа. Конкретная структура данных атрибута `access control check task extension actions` выглядит следующим образом:
 
-| Parameter Name | Data Type | Parameter Description |
+| Наименование параметра | Тип данных | Описание параметра |
 |-----|------|------|
-| label | string | Required parameter, the label displayed in the UI |
-| description | string | Required parameter, describes the specific operation. |
-| identifier | string | Required parameter, unique identifier of the extension operation |
+| label | string | Обязательный параметр, метка, отображаемая в пользовательском интерфейсе |
+| description | string | Обязательный параметр, описывает конкретную операцию. |
+| identifier | string | Обязательный параметр, уникальный идентификатор операции расширения |
 
-### Check WebHook Data Structure Description
+### Проверка описания структуры данных WebHook
 
-When a third-party service calls the access control check related interface, the platform will asynchronously notify the third-party service of the relevant events through `WebHook`. The specific `WebHook` notification data structure is as follows:
+Когда сторонний сервис вызывает интерфейс, связанный с проверкой контроля доступа, платформа будет асинхронно уведомлять сторонний сервис о соответствующих событиях через вебхук. Конкретная структура данных уведомления через вебхук выглядит следующим образом:
 
-| WebHook Field | Type | Field Description |
+| Поле вебхука | Тип | Описание поля |
 |------------|----|------|
-| action | string | This field represents the event type triggered by the current user. The possible values are:<br/><ul><li>`created`: Creating a check task</li><li>`completed`: When the status of the check task becomes completed</li><li>`rerequested`: When the user reruns the check task in the UI</li><li>`requested_action`: When the user uses the functional buttons provided by the check item</li></ul>|
-| requested_action | string | The value of the unique identifier `identifier` customized by the third-party access control check service when creating a check task in the access control check task extension operation (`actions`) |
-| check_run | object | Detailed information about the triggered check run |
-| project | object | Repository information where the triggered check task is located |
-| sender | object | User information who triggered the check task operation |
+| action | string | Это поле представляет тип события, инициированного текущим пользователем. Возможные значения:<br/><ul><li>`created`: Создание задачи проверки</li><li>`completed`: Когда статус задачи проверки принимает значение "выполнена"</li><li>`rerequested`: Когда пользователь повторно запускает задачу проверки в пользовательском интерфейсе</li><li>`requested_action`: Когда пользователь использует функциональные кнопки, предусмотренные пунктом проверки</li></ul>|
+| requested_action | string | Значение уникального идентификатора `identifier`, настроенного сторонней службой проверки контроля доступа при создании задачи проверки в операции расширения задачи проверки контроля доступа (`actions`) |
+| check_run | object | Подробная информация о запущенной проверке |
+| project | object | Информация о репозитории, в котором находится запущенная задача проверки |
+| sender | object | Информация о пользователе, запустившем операцию задачи проверки |
 
-## Setting Pull Request Admission Rules through Protected Branches
+## Настройка запроса на слияние и правила допуска через защищенные ветки Admission Rules through Protected Branches
 
-In the branch protection strategy, set 'Require status checks to pass before merging', check the option, and click save. In subsequent Pull Request creation checks, if the 'Require status checks to pass before merging' check fails, the Pull Request is not allowed to be merged.
+В стратегии защиты веток установите параметр "Требовать прохождения проверок статуса перед слиянием", установите флажок и нажмите кнопку "Сохранить". При создании последующих запросов на слияние, если проверка 'Требовать прохождения проверки статуса перед слиянием' окончится неудачей, разрешение на объединение запроса на слияние не будет получено.
 
-:::tip Tips
+:::tip Рекомендации
 
-1. Only the inspection items executed in the last week can be filtered
-2. If the 'Require successful access status to merge' check item is not successful, the repository administrator can bypass this restriction and force merge the Pull Request
+1. Можно отфильтровать только элементы проверки, выполненные за последнюю неделю
+2. В случае неудачного завершения проверки "Требовать для объединения успешного статуса доступа"  администратор репозитория может обойти это ограничение и принудительно объединить запрос на слияние.
 
 :::

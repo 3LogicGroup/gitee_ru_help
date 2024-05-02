@@ -1,5 +1,5 @@
 ---
-title: Update and Delete Release
+title: Обновление и удаление релиза
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
@@ -7,36 +7,36 @@ authors:
 # slug: /demo
 ---
 
-## Edit Release
+## Редактирование релиза
 
-1. On Gitee, navigate to the main page of the repository.
+1. На Gitee перейдите на главную страницу репозитория.
 
-2. On the right side of the file list, click on `Release Title` or `All`.
+2. В правой части списка файлов нажмите на `Название релиза` или `Все`.
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/1126/124730_fb2abe5b_8249553.jpeg "01.jpeg")
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/1126/124730_fb2abe5b_8249553.jpeg "01.jpeg")
 
-3. On the right side of the release that needs to be edited, click on the `edit icon`.
+3. Справа от релиза, который необходимо отредактировать, нажмите на значок `редактировать`.
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/1126/125302_5158e539_8249553.jpeg "13.jpeg")
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/1126/125302_5158e539_8249553.jpeg "13.jpeg")
 
-4. After editing the content you need to modify, click 'Update'.
+4. После редактирования содержимого, которое необходимо изменить, нажмите кнопку "Обновить".
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/1126/125034_c0ef2f82_8249553.jpeg "12.jpeg")
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/1126/125034_c0ef2f82_8249553.jpeg "12.jpeg")
 
-## Delete Release
+## Удаление релиза
 
-1. On Gitee, navigate to the main page of the repository.
+1. На Gitee перейдите на главную страницу репозитория.
 
-2. On the right side of the file list, click on `Release Title` or `All`.
+2. В правой части списка файлов нажмите на `Название релиза` или `Все`.
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/1126/124730_fb2abe5b_8249553.jpeg "01.jpeg")
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/1126/124730_fb2abe5b_8249553.jpeg "01.jpeg")
 
-3. On the right side of the release that needs to be deleted, click on the `delete icon`.
+3. Справа от релиза, который необходимо удалить, нажмите на значок `удалить`.
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/1126/124940_38df24bf_8249553.jpeg "11.jpeg")
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/1126/124940_38df24bf_8249553.jpeg "11.jpeg")
 
-4. Click the 'Confirm' button in the delete release dialog to delete the release.
+4. Нажмите кнопку `Подтвердить` в диалоговом окне удаления релиза, чтобы удалить релиз.
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/1126/125400_6a88eeaa_8249553.jpeg "14.jpeg")
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/1126/125400_6a88eeaa_8249553.jpeg "14.jpeg")
 
 [gitee]: https://gitee.ru

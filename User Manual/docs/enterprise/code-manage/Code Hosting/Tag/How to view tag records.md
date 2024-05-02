@@ -1,7 +1,7 @@
 ---
-title: How to view tag records
+title: Как просмотреть записи тегов
 ---
 
-Users can click on 'Repository Details'->'Code', and then click on 'x tags' to enter the page.
+Пользователи могут нажать на "Сведения о репозитории"-> "Код", а затем нажать на "x тегов", чтобы перейти на страницу.
 
-![Image Description](../../../../../assets/image161.png)
+![Описание изображения](../../../../../assets/image161.png)

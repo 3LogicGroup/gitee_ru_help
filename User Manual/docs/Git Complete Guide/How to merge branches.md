@@ -1,17 +1,17 @@
 ---
-title: How to merge branches
+title: Как выполнить слияние веток
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 origin-url: https://gitee.ru/help/articles/4196
 ---
 
-Branch merging can be divided into two situations, one is merging local branches, and the other is merging remote branches into local branches. The following GIF animations demonstrate each case.
+Слияние веток можно разделить на две ситуации: одна - слияние локальных веток, а другая - слияние удаленных веток в локальные. На приведенных ниже GIF-анимациях продемонстрированы оба случая.
 
-### Local branch merge
+### Слияние локальных веток
 
-![Image Description](https://static.oschina.net/uploads/img/201603/11110502_Puw4.gif 'Enter image title here')
+![Описание изображения](https://static.oschina.net/uploads/img/201603/11110502_Puw4.gif 'Введите название изображения здесь')
 
-### Remote branch merge
+### Слияние удаленных веток
 
-![Image Description](https://static.oschina.net/uploads/img/201603/11105933_WdrB.gif 'Enter the image title here')
+![Описание изображения](https://static.oschina.net/uploads/img/201603/11105933_WdrB.gif 'Введите название изображения здесь')

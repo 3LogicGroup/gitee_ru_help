@@ -1,52 +1,52 @@
 ---
-title: Set protected branches
+title: Установка защищенных веток
 authors:
   - name: Roger
     url: https://gitee.ru/yuriluo
 origin-url: https://gitee.ru/help/articles/4295
 ---
 
-In the actual process of production development collaboration, for internal control considerations, it is often necessary to customize a group of people who have push and merge permissions for certain critical branches. At this time, you can use the 'Protected Branch' feature in the 'Branch Status'.
+В процессе совместной работы над производственной разработкой, по соображениям внутреннего контроля, часто бывает необходимо настроить группу людей, имеющих права push и merge для определенных критических веток. В этом случае вы можете использовать функцию 'Защищенная ветка' в 'Статус ветки'.
 
-After being set as a protected branch, only the repository members selected in the corresponding protected branch rules are allowed to merge/push to this branch, as shown in the following figure:
+После того как ветка будет установлена как защищенная, только участники репозитория, выбранные в соответствующих правилах защищенной ветки, смогут объединять/толкать в эту ветку, как показано на следующем рисунке:
 
-![Image Description](image649.png)
+![Описание изображения](image649.png)
 
-In Gitee Enterprise Edition, the 'Super Administrator', 'Enterprise Owner', and 'Administrator' roles have default repository permissions.
+В Gitee Enterprise Edition роли 'Супер администратор', 'Владелец предприятия' и 'Администратор' имеют права доступа к репозиториям по умолчанию.
 
-Here are three ways to set up protected branches:
+Ниже приведены три способа настройки защищенных веток:
 
-**Method 1**
+**Метод 1**
 
-After creating a branch, select the branch from the Branches page and change the Branch Status to Protected Branch.
+После создания ветки выберите ее на странице Ветки и измените статус ветки на Защищенная ветка.
 
-![Image Description](image651.png)
+![Описание изображения](image651.png)
 
-The default branch protection rule is that only repository administrators can push code to this branch and merge pull requests made to this branch. If you want to customize the rules, you can click on the settings button on the right side of the 'Protected Branches' dropdown box to enter the editing page for this protection rule.
+По умолчанию правило защиты ветки таково, что только администраторы репозитория могут отправлять код в эту ветку и объединять запросы на притяжение, сделанные в эту ветку. Если вы хотите настроить правила, вы можете нажать на кнопку настроек справа от выпадающего окна "Защищенные ветки", чтобы перейти на страницу редактирования этого правила защиты.
 
-![Image Description](image652.png)
+![Описание изображения](image652.png)
 
-**Method 2**
+**Метод 2**
 
-1. Go to the **Branch Protection Settings** page and click on **Create Rule**.
+1. Перейдите на страницу **Настройки защиты веток** и нажмите на кнопку **Создать правило**.
 
-![Image Description](image653.png)
+![Описание изображения](image653.png)
 
-2. Enter the name/wildcard rules of the branch to be protected and set the protection rules content.
+2. Введите имя/правила для защищаемой ветви и задайте содержание правил защиты.
 
-![Image Description](image654.png)
+![Описание изображения](image654.png)
 
-3. Go to the "Branches" page and set the branch to be protected as "Protected Branch", and the created rule will take effect.
+3. Перейдите на страницу "Ветки" и установите для защищаемой ветки статус "Защищенная ветка", после чего созданное правило вступит в силу.
 
-![Image Description](image656-1.png)
+![Описание изображения](image656-1.png)
 
-If only protection rules are created and the corresponding branch status is not manually set to "Protected Branch", the branch will still be a "Regular Branch".
+Если созданы только правила защиты, а статус соответствующей ветки не установлен вручную на "Защищенная ветка", ветка будет по-прежнему "Обычная ветка".
 
-**Method 3**
+**Метод 3**
 
-Create a branch in the page and push it in the command line with a name that complies with the existing protected branch rules.
+Создайте ветку на странице и введите в командную строку ее имя, соответствующее существующим правилам защищенной ветки.
 
 
-Protect branch rules only affect branches with the status of 'Protected Branch', and do not affect 'Regular Branches' and 'Read-only Branches'.
+Правила защиты веток действуют только на ветки со статусом "Защищенная ветка" и не влияют на "Обычные ветки" и "Ветки только для чтения".
 
-Only one rule can be effective for a branch at the same time, and the earliest effective rule takes priority. When the rule that is effective for the branch itself is changed (no longer meets the effectiveness conditions) or deleted, the branch will automatically match the rule that meets the effectiveness conditions according to the order of creation time.
+Одновременно для ветки может действовать только одно правило, причем приоритет имеет самое раннее правило. Если правило, действующее для самой ветки, изменено (перестало удовлетворять условиям эффективности) или удалено, ветке автоматически будет соответствовать правило, удовлетворяющее условиям эффективности, в порядке убывания времени создания.

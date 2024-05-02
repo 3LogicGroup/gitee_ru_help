@@ -1,7 +1,7 @@
 ---
-title: Enter the workspace
+title: Вход в рабочее пространство
 ---
 
-Click on "Dashboard" in the left-hand enterprise navigation menu.
+Нажмите на 'Дашборд' в левом меню навигации компании
 
-![Image Description](assets/image330.png)
+![Описание изображения](assets/image330.png)

@@ -1,32 +1,32 @@
 ---
-title: Setting Work Item Status
+title: Настройка статусов рабочих элементов
 ---
 
-## Status Settings
+## Настройка статусов
 
-Click on 'Settings' in the Enterprise Navigation Menu, then click on 'Work Item Settings' in the Enterprise Management Menu:
+Нажмите на "Настройки" в навигационном меню предприятия, затем нажмите на "Настройки рабочих элементов" в меню управления предприятием:
 
-![Image Description](assets/image579.png)
-Click "Status Settings", you can create, edit, and delete statuses on the page.
+![Описание изображения](assets/image579.png)
+Нажмите на "Настройка  статусов". На этой странице можно создать, отредактировать и удалить статусы.
 
-![Image Description](assets/image580.png)
+![Описание изображения](assets/image580.png)
 
-Configure the status of work items
+Настройка статуса рабочего элемента
 
-Click on any work item type under 'Work Item Types' and click on 'Configure Types'
+Нажмите на любой тип рабочего элемента под "Типами рабочих элементов" и затем нажмите на "Настроить типы"
 
-![Image Description](assets/image581.png)
+![Описание изображения](assets/image581.png)
 
-Click on "Status Settings" to configure the status for the current work item
+Нажмите на "Настройки статусов" чтобы настроить статус выбранного рабочего элемента
 
-![Image Description](assets/image582.png)
+![Описание изображения](assets/image582.png)
 
-Note: Setting the status attribute correctly can help developers standardize the process and provide a basis for work item statistics.
+Примечание: Правильная настройка атрибутов статуса поможет разработчикам стандартизировать процессы и обеспечить основу для статистики рабочих элементов.
 
->**To Do**: It is the initial state in the workflow, representing the start of a work item.
+>**К выполнению** Это начальный статус рабочего процесса обозначающий начало работы над рабочим элементом.
 >
->**In Progress**: It is a process state of a workflow, indicating that the work item is in progress
+>**В работе** Этот статус рабочего процесса обозначающий что рабочий элемент находится в работе.
 >
->**Completed**: It is the end state of a workflow, indicating that the work item has been completed
+**Выполнен** Это окончательный статус рабочего процесса, указывающий на то, что работа над рабочим элементом завершена.
 >
->**Rejected**: A status of interruption in the workflow, representing non-acceptance or cancellation of the task.
+**Отклонено** Это статус прерывания рабочего процесса, обозначающий отклонение или отмену задачи.

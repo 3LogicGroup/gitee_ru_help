@@ -1,18 +1,18 @@
 ---
-title: Image-based Script Execution
-description: Script execution based on the image
+title: Выполнение сценариев на основе образов
+description: Выполнение сценариев на основе образов
 slug: /enterprise/pipeline/plugin/image-script-run
 keywords:
  - Gitee
  - Docker
-- Script Execution
+- Выполнение сценариев
 ---
 
-- **Repository Credentials**: Select the type of Docker Registry credentials to obtain permissions for pulling images.
+- **Учетные данные репозитория**: Выберите тип учетных данных реестра Docker для получения разрешений на извлечение образов.
 
-- **Image Address**: The image address is the Docker image name for the custom runtime environment. The current task will use the custom image as the command's runtime environment, such as docker.io/bash:latest.
+- **Адрес образа**: Адрес образа - это имя образа Docker для пользовательской среды выполнения. Текущая задача будет использовать пользовательский образ в качестве среды выполнения команды, например docker.io/bash:latest.
 
-- **Build Command**: The build command is the user-defined command run in the container, for example: 'mvn clean package'. Supports ${parameterKey} to access environment variables.
+- **Команда на сборку**: Команда на сборку - это пользовательская команда, выполняемая в контейнере, например: 'mvn clean package'. Поддерживает ${parameterKey} для доступа к переменным окружения.
 
 ```shell
 # Please enter the script you want to execute here

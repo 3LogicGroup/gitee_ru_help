@@ -1,93 +1,92 @@
-## Gitee Core Component List
+## Список основных компонентов Gitee
 
-### Open Source Dependency Service List
+### Список служб зависимостей с открытым исходным кодом
 
-{"服务名称"=>"Redis_cluster", "部署方式"=>"容器", "链接"=>"[官网](URL-5df12506b0)", "版本"=>"5.0", "服务说明"=>"内容审查使用 redis 集群"}
+{"Сервисное имя"=>"Redis_cluster", "Метод развертывания"=>"Контейнер", "Ссылка"=>"Официальный сайт", "Версия"=>"5.0", "Описание сервиса"=>"Используется для контроля содержимого с помощью кластера Redis"}
 | ------------- | -------- | ----------------------------------------------- | ---------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------- |
-| MySQL         | Binary   | [Official Website](https://www.mysql.com)
-  \                  | 5.7                          | Gitee Uses Relational Database                                                 |
-  One Master and One Slave, Read-Write Separation                                   |
-{"服务名称"=>"PostgreSQL", "部署方式"=>"二进制", "链接"=>"[官网](https://www.postgresql.org)", "版本"=>"12.17", "服务说明"=>"foruda、praefect、grms 共用关系型数据库"}
-| Minio         | Binary   | [Official Website](https://min.io)
-  \                         | RELEASE.2023-12-13T23-28-55Z | MinIO is a high-performance object storage                                           |
-| Haproxy | Binary | [Official Website](https://haproxy.org) | 2.6.16 | 2 Node DNS Round Robin | HAProxy Load Balancer's development branch (mirror of git.haproxy.org) |
+| MySQL | Двоичный | [Официальный сайт](https://www.mysql.com)
+  \ | 5,7 | Gitee использует реляционную базу данных |
+  Один master и один worker, разделение чтения и записи                             |
+{"Сервисное имя"=>"PostgreSQL", "Метод развертывания"=>"Бинарный", "Ссылка"=>"[Официальный веб-сайт](https://www.postgresql.org)", "Версия"=>"12.17", "Описание сервиса"=>"Используется для общего доступа для uda, praefect и grms к реляционной базе данных"}
+| Minio | Бинарный | [Официальный веб-сайт](https://min.io)
+  \ |RELEASE.2023-12-13T23-28-55Z |MinIO — высокопроизводительное объектное хранилище |
+| Haproxy | Бинарный  | [Официальный веб-сайт](https://haproxy.org) | 2.6.16 | 2-узловой DNS Round Robin | Ветка разработки HAProxy Load Balancer (зеркало git.haproxy.org) |
 Varnish
 Redis
-| Redis_cluster | container | [Official Website](https://redis.io)
-  \                       | 5.0                          | redis cluster used for content review
-  three masters and three slaves |
-| Kafka         | Container | [Official Website](https://kafka.apache.org)
-  \               | 3.6.1                        | Webhook Event Producer                                                     |
-  3 Node Cluster <br />Deployed on the same server as Elasticsearch |
+| Redis_cluster | Контейнер | [Официальный веб-сайт](https://redis.io)
+  \|5.0|Кластер redis, используемый для проверки контента
+  три master и три slave |
+| Kafka | Контейнер | [Официальный веб-сайт](https://kafka.apache.org)
+  \ |3.6.1 |События вебхука |
+  Кластер из 3 узлов <br /> Развернут на том же сервере, что и Elasticsearch |
 Elasticsearch
 
-### Gitee Public Component List
+### Список общедоступных компонентов Gitee
 
-| Service Name | Deployment Method | Repository URL | Branch | Deployment Node Labels | Service Description | Remarks |
+| Имя службы | Метод развертывания | URL-адрес репозитория | Ветка | Метки узлов развертывания | Описание службы | Примечания |
 | ------------------ | -------- | ------------------------------------------------------------- | ------- | ------------- | ------------------------------------------------------------------ | --------------------------------------------------------- |
-| gitee-http-pilot   | chart    | [Gitee Repository](https://gitee.com/oscstudio/pilot)
-  | master  | giteeFrontend | Git Via HTTP Frontend Service
-  | Provides authentication service for git repository push and pull with HTTPS protocol |
+| gitee-http-pilot | Диаграмма | [Репозиторий Gitee](https://gitee.com/oscstudio/pilot)
+  | master | giteeFrontend | Git через HTTP-интерфейсную службу
+  | Предоставляет службу аутентификации для загрузки и отправки репозитория git по протоколу HTTPS |
 gitee-ssh-pilot
-| gitee-svnsbz | Chart | [Gitee Repository](https://gitee.com/oscstudio/svnsbz) | master | giteeFrontend | SVN Dynamic Proxy | Svn Frontend Proxy |
-| Gitaly             | Binary   | [Gitee Repository](https://gitee.com/oscstudio/gitaly)
-  \             | release | 3 physical nodes  | Git grpc backend service
-Git repository storage service, provides Git operation interface
-  | Gitaly, gitee-GNK, and Sserver are recommended to be deployed on the same server.     |
-| gitee-praefect     | chart    | [Gitee Repository](https://gitee.com/oscstudio/gitaly)
-  \             | release | giteePubcomm  | Gitaly routing and traffic replication
-  Middleware dependencies:<br />PG<br />and Gitaly should be on the same repository branch |
-| gitee-GNK | Binary | Gitee Repository https://gitee.com/oscstudio/gitee-hook | master | 3 physical nodes | Git native hooks | It is recommended to deploy Gitaly, gitee-GNK, and Sserver on the same server. |
-| Sserver-binary | Binary | Gitee Repository https://gitee.com/oscstudio/sserver-binary | master | 3 physical nodes | Svn backend service | It is recommended to deploy Gitaly, gitee-GNK, and Sserver on the same server. |
-| Lfsoss | Container | Gitee Repository https://gitee.com/oscstudio/lfsoss |
-{"gitee-ums-admin"=>{"repo"=>"chart", "url"=>"Gitee 仓库", "external_url"=>"https://gitee.com/oschina/gitee-ums"}}
-{"branch"=>"mirror of git.haproxy.org", "description"=>"2 台 DNS 轮询", "gitee-ums-review"=>{"repo"=>"chart", "url"=>"Gitee 仓库", "external_url"=>"https://gitee.com/oschina/gitee-ums"}, "dependencies"=>{"middleware"=>["MySQL", "Kafka", "Redis-UMS"]}}
+| gitee-svnsbz | Диаграмма | [Репозиторий Gitee](https://gitee.com/oscstudio/svnsbz) | master | giteeFrontend | Динамический прокси-сервер SVN | Прокси-сервер Svn Frontend |
+| Gitaly | Двоичный | [Репозиторий Gitee](https://gitee.com/oscstudio/gitaly)
+  \ | выпуск | 3 физических узла | Серверная служба Git grpc
+Служба хранения репозитория Git, предоставляет интерфейс работы Git.
+  |Gitaly, gitee-GNK и Sserver рекомендуется развертывать на одном сервере. |
+| gitee-praefect | Диаграмма | [Репозиторий Gitee](https://gitee.com/oscstudio/gitaly)
+  \ |релиз |giteePubcomm |Gitaly маршрутизация и репликация трафика
+  Зависимости промежуточного программного обеспечения:<br />PG <br /> и Gitaly должны находиться в одной ветке репозитория |
+| gitee-GNK | Двоичный | Репозиторий Gitee https://gitee.com/oscstudio/gitee-hook | master | 3 физических узла | Собственные перехватчики Git | Рекомендуется развернуть Gitaly, gitee-GNK и Sserver на одном сервере |
+| Sserver-binary | Двоичный | Gitee Repository https://gitee.com/oscstudio/sserver-binary | master | 3 физических узла | Серверная служба Svn | Рекомендуется развернуть Gitaly, gitee-GNK и Sserver на одном сервере |
+| Lfsoss | Контейнер | Репозиторий Gitee https://gitee.com/oscstudio/lfsoss |
+{"gitee-ums-admin"=>{"repo"=>"chart", "url"=>"Репозиторий Gitee", "external_url"=>"https://gitee.com/oschina/gitee-ums" }}
+{"branch"=>"зеркало git.haproxy.org", "description"=>"2 DNS-опрос", "gitee-ums-review"=>{"repo"=>"chart", "url "= >"Репозиторий Gitee", "external_url"=>"https://gitee.com/oschina/gitee-ums"}, "зависимости"=>{"промежуточное ПО"=>["MySQL", "Kafka", "Redis -UMS"]}}
 gitee-rollingbox
 gitee-foruda
-| gitee-foruda-admin | chart    | [Gitee Repository](https://gitee.com/oscstudio/foruda-admin.git)
-  | master  | giteeInternal | Object Storage Service-web end
-  | Middleware dependency:<br /> PG MinIO |
-| gitee-grms         | chart    | [Gitee Repository](https://gitee.com/oscstudio/grms)
-  | master  | giteePubcomm  | Repository Backend Management Service
-  | Middleware dependency:<br /> PG |
-| gitee-pages | docker | |  | Single Container Deployment | | |
+| gitee-foruda-admin | Диаграмма | [Репозиторий Gitee](https://gitee.com/oscstudio/foruda-admin.git)
+  | master | giteeInternal | Служба хранения объектов — веб-конец
+  |Зависимость промежуточного программного обеспечения:<br />PG MinIO |
+| gitee-grms | Диаграмма | [Репозиторий Gitee](https://gitee.com/oscstudio/grms)
+  | master | giteePubcomm | Служба управления серверной частью репозитория
+  |Зависимость промежуточного программного обеспечения:<br />PG |
+| gitee-pages | docker | | | Развертывание одного контейнера | | |
 
-### Gitee Backend Service List
+### Список серверных служб Gitee
 
-| Service Name | Deployment Method | Deployment Node Labels | Service Description |
-| -------------------- | -------- | ------------ | --------------------------------------------------------- |
-| gitee-webunicorn | chart | giteeRuby | Gitee Community Main Service |
-| gitee-graphqlunicorn | chart    | giteeRuby    |
-  Gitee 内部系统提供 graphql 接口的 gitee rails 服务        |
-| gitee-giteecron | chart | giteePubcomm | Gitee service for executing one-time scripts and running scheduled scripts in gitee rails |
+|Имя службы |Метод развертывания |Метки узлов развертывания |Описание службы |
+| -------------------- | -------- | ------------ | ------ -------------------------------------------------- - |
+| gitee-webunicorn | Диаграмма | giteeRuby | Основная служба сообщества Gitee |
+| gitee-graphqlunicorn | Диаграмма | giteeRuby |
+  Внутренняя система Gitee предоставляет сервис gitee Rails с интерфейсом Graphql |
+| gitee-gitecron |Диаграмма | giteePubcomm | Сервис Gitee для выполнения одноразовых и запланированных скриптов в gitee Rails |
 gitee-authunicorn
 gitee-sidekiq
 
-### Gitee Frontend Service List
+### Список услуг внешнего интерфейса Gitee
 
-| 服务名称            | 部署方式 | 部署节点标签  | 服务说明                                                         |
-| ------------------- | -------- | ------------- | ---------------------------------------------------------------- |
-| gitee-community-web | chart | giteeInternal
-| gitee-ent-web       | chart    | giteeInternal
-  | Gitee front-end service enterprise edition front-end                           |
-| gitee-assets | chart | giteeFrontend | HTTP Dynamic Routing Reverse Proxy Service |
+|Имя сервиса |Метод развертывания |Метка узла развертывания |Описание сервиса |
+| ------------------- | -------- | ------------- | ------ -------------------------------------------------- -------- |
+| gitee-community-web | Диаграмма | giteeInternal
+| gitee-ent-web | Диаграмма | giteeInternal
+  Интерфейс Gitee для корпоративной версии |
+| gitee-assets | Диаграмма | giteeFrontend | Служба обратного прокси-сервера с динамической маршрутизацией HTTP |
 
 
 
-## Gitee Core Component Deployment
+## Развертывание основных компонентов Gitee
 
-### Gitee Backend Project Deployment
+### Развертывание серверного проекта Gitee
 
-Build and deploy backend projects for all shared repositories on Gitee
+Создавайте и развертывайте серверные проекты для всех общих репозиториев на Gitee.
 
-- gitee-giteecron
-
+- gitee-gitecron
 - gitee-webunicorn
 - gitee-graphqlunicorn
 - gitee-authunicorn
 - gitee-sidekiq
 
-> Prerequisite: Create namespace and private repository access keys
+> Предварительное условие: создать пространство имен и ключи доступа к частному хранилищу.
 
 ````sh
 # Provide Credentials on the Command Line to Create a Secret, Name: gitee
@@ -102,7 +101,7 @@ kubectl -n gitee-prod create secret docker-registry gitee \
 ```
 ````
 
-Add custom domain name resolution in Kubernetes CoreDNS
+Добавьте собственное разрешение доменных имен в Kubernetes CoreDNS.
 
 ```sh
 $ kubectl get cm/coredns -o yaml -n kube-system
@@ -134,11 +133,11 @@ data:
 kind: ConfigMap
 ```
 
-> Note that there is a period after 'forward'.
+> Обратите внимание, что после «forward» стоит точка.
 >
-> 10.4.145.142 is the internal data center Coredns server.
+> 10.4.145.142 — это внутренний сервер Coredns дата-центра.
 
-You can also add host A records as follows:
+Вы также можете добавить записи хоста A следующим образом:
 
 ```
 hosts {  # Add custom domain name resolution
@@ -149,7 +148,7 @@ hosts {  # Add custom domain name resolution
 }
 ```
 
-You can add the following content to the Corefile to configure wildcard domain resolution and A records:
+Вы можете добавить следующее содержимое в Corefile, чтобы настроить разрешение домена с подстановочными знаками и записи A:
 
 ```
 .:53 {
@@ -169,13 +168,13 @@ You can add the following content to the Corefile to configure wildcard domain r
 }
 ```
 
-The rewrite directive is used for wildcard domain resolution, resolving all domain names ending with .internal.example.com to internal.example.com. The hosts directive is used to configure A record resolution, resolving the specified domain name to the corresponding IP address.
+Директива rewrite используется для разрешения домена с подстановочными знаками, разрешая все доменные имена, заканчивающиеся на .internal.example.com, во внутренний.example.com. Директива hosts используется для настройки разрешения записи, разрешая указанное доменное имя для соответствующего IP-адреса. 
 
-Remember to modify the path of Corefile and reload the configuration file to make the configuration take effect.
+Не забудьте изменить путь к Corefile и перезагрузить файл конфигурации, чтобы конфигурация вступила в силу.
 
-#### Dockerfile production image list
+#### Список рабочих образов Dockerfile
 
-##### gitee-giteecron
+##### gitee-gitecron
 
 ##### gitee-webunicorn
 
@@ -185,7 +184,7 @@ Remember to modify the path of Corefile and reload the configuration file to mak
 
 ##### gitee-sidekiq
 
-#### Charts Deployment Service List
+#### Список сервисов по развертыванию диаграмм
 
 ```sh
 # gitee-giteecron
@@ -209,9 +208,9 @@ helm -n gitee-prod upgrade gitee-authunicorn -f ./gitee-authunicorn/values.yaml 
 helm -n gitee-prod upgrade gitee-sidekiq -f ./gitee-sidekiq/values.yaml ./gitee-sidekiq --install
 ```
 
-### Deployment of Gitee Pub-Comm project
+### Развертывание проекта Gitee Pub-Comm
 
-Build and deploy common components for all shared gitee repositories
+Создайте и разверните общие компоненты для всех общих репозиториев gitee.
 
 - gitee-http-pilot
 - gitee-ssh-pilot
@@ -229,9 +228,9 @@ Build and deploy common components for all shared gitee repositories
 
 
 
-#### Dockerfile production image list
+#### Список рабочих образов Dockerfile
 
-The images are located in the repository directory. Look for the 'Dockerfile' or 'Dockerfile-base' file in the repository directory.
+Образы находятся в каталоге репозитория. Найдите файл Dockerfile или Dockerfile-base в каталоге репозитория.
 
 ##### gitee-http-pilot
 
@@ -261,7 +260,7 @@ The images are located in the repository directory. Look for the 'Dockerfile' or
 
 
 
-#### Charts Deployment Service List
+#### Список сервисов по развертыванию диаграмм
 
 ```sh
 # gitee-http-pilot
@@ -314,33 +313,33 @@ helm -n gitee-prod upgrade gitee-lfsoss -f ./gitee-lfsoss/values.yaml ./gitee-lf
 
 
 
-> Note: gitee-lfsoss needs to change the recycling policy of pv to Retain mode, modify helm uninstall to retain pvc
+> Примечание: gitee-lfsoss необходимо изменить политику утилизации pv на режим Retain, изменить удаление Helm, чтобы сохранить pvc.
 >
-> Reference: https://kubernetes.io/zh-cn/docs/tasks/administer-cluster/change-pv-reclaim-policy/
+> Ссылка: https://kubernetes.io/zh-cn/docs/tasks/administer-cluster/change-pv-reclaim-policy/
 >
-> [Removal of Persistent Volumes · Issue #1875 · helm/helm (github.com)](https://github.com/helm/helm/issues/1875)
+> [Удаление постоянных томов · Задача #1875 · helm/helm (github.com)](https://github.com/helm/helm/issues/1875)
 
 
 
-### Gitee Frontend Project Deployment
+### Развертывание фронтенд-проекта Gitee
 
-Build and deploy frontend projects for all shared repositories on gitee
+Создавайте и развертывайте проекты внешнего интерфейса для всех общих репозиториев на gitee.
 
 - gitee-community-web
 - ~~gitee-edu-api~~
 - ~~gitee-edu-web~~
 - gitee-ent-web
-- gitee-assets
+- gitee-активы
 
-#### Dockerfile production image list
+#### Список рабочих образов Dockerfile
 
 ##### gitee-community-web
 
 ##### gitee-ent-web
 
-##### gitee-assets
+##### gitee-активы
 
-#### Charts Deployment Service List
+#### Список сервисов по развертыванию диаграмм
 
 ```sh
 # gitee-community-web
@@ -362,11 +361,11 @@ helm -n gitee-prod upgrade gitee-ent-web -f ./gitee-ent-web/values.yaml ./gitee-
 helm -n gitee-prod upgrade gitee-assets -f ./gitee-assets/values.yaml ./gitee-assets --install
 ```
 
-## Jenkins-based Continuous Integration and Continuous Deployment (CICD) on Kubernetes
+## Непрерывная интеграция и непрерывное развертывание (CICD) на основе Jenkins в Kubernetes
 
-Early manual update
+Обновление вручную
 
-Front-end
+Фронтенд
 
 - gitee-assets
 
@@ -390,7 +389,7 @@ docker build --pull --build-arg GITEE_APP_VERSION=${OSC_GIT_COMMIT} -f docker/co
 helm upgrade -i --wait --atomic --set podAnnotations.rllme=\\"`date +%Y%m%d%s`\\" -n gitee-prod gitee-community-web gitee-community-web
 ```
 
-Back-end
+Бекэнд
 
 - unicorn
 
@@ -406,7 +405,7 @@ helm upgrade -i --wait --atomic --set podAnnotations.rllme=\\"`date +%Y%m%d%s`\\
 helm upgrade -i --wait --atomic --set podAnnotations.rllme=\\"`date +%Y%m%d%s`\\" -n gitee-prod gitee-sidekiq gitee-sidekiq
 ```
 
-Rollback
+Откат
 
 ```sh
 Roll back to the previous version
@@ -421,26 +420,26 @@ helm rollback gitee-assets ${Designation_version} -n gitee-prod
 
 
 
-[Useful optimization features in Jenkins | Mr.Pu's Blog (putianhui.cn)](https://www.putianhui.cn/posts/f5b12f59c480/)
+[Полезные функции оптимизации в Jenkins | Блог мистера Пу (putianhui.cn)](https://www.putianhui.cn/posts/f5b12f59c480/)
 
-"[Automated deployment of dev-uat-preprd-prd environment services using Jenkins, and implementing rollback on deployment failure.| Mr.Pu's Personal Blog (putianhui.cn)](https://www.putianhui.cn/posts/7041616304b2/)"
+«[Автоматическое развертывание служб среды dev-uat-preprd-prd с использованием Jenkins и реализация отката в случае сбоя развертывания.| Личный блог мистера Пу (putianhui.cn)](https://www.putianhui.cn/posts/7041616304b2 /)"
 
-[Explanation of Jenkinsfile | Mr.Pu's Personal Blog (putianhui.cn)](https://www.putianhui.cn/posts/fa563716f116/)
-
-
-
-Release process and pipeline maintenance
-
-https://gitee.com/autom-studio/std/blob/master/ Operation program / cloud native environment service maintenance / release process and pipeline maintenance.md
+[Объяснение Jenkinsfile | Личный блог мистера Пу (putianhui.cn)](https://www.putianhui.cn/posts/fa563716f116/)
 
 
 
-## Reference
+Процесс выпуска и обслуживание конвейера
 
-Deploying k8s 1.26.3 (with containerd as container runtime) using Kubeadm on Ubuntu 22.04 LTS
+https://gitee.com/autom-studio/std/blob/master/ Программа эксплуатации / обслуживание служб облачной среды / процесс выпуска и обслуживание конвейера.md
 
-[Install k8s-v1.25.x cluster on Ubuntu 22.04 (yuque.com)](https://www.yuque.com/longfc/k8s/mq3iyw#Y2unZ)
 
-[Install a High-Availability Kubernetes Cluster on Ubuntu 20.04 | Cifangzi - Find Me to Bring Vegetables (cifangzi.club)](http://cifangzi.club/2021/06/k8s_installation/)
 
-Kubeadm installation guide - DevOps Development
+## Справочные материалы
+
+Развертывание k8s 1.26.3 (с контейнером в качестве среды выполнения контейнера) с помощью Kubeadm в Ubuntu 22.04 LTS
+
+[Установите кластер k8s-v1.25.x в Ubuntu 22.04 (yuque.com)](https://www.yuque.com/longfc/k8s/mq3iyw#Y2unZ)
+
+[Установите кластер Kubernetes высокой доступности в Ubuntu 20.04 | Cifangzi — Найдите меня, чтобы принести овощи (cifangzi.club)](http://cifangzi.club/2021/06/k8s_installation/)
+
+Руководство по установке Kubeadm - DevOps Development

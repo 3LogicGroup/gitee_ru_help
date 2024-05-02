@@ -1,5 +1,5 @@
 ---
-title: Quick Start in Three Minutes
+title: Быстрый старт за три минуты
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
@@ -7,90 +7,91 @@ slug: /gitee-go/quick-start
 description: Quick Start in Three Minutes
 origin-url: 
 ---
-After completing the Gitee Go pipeline opening, you can quickly get started with the product by reading this article. For detailed introductions to various capabilities, please refer to the "4. Operation Guide".
 
-### 1. Product Function Introduction
+После завершения открытия конвейера Gitee Go вы можете быстро начать работу с продуктом, прочитав эту статью. Подробное описание различных возможностей см. в «4. Руководство по эксплуатации».
 
-Gitee Go consists of Pipelines, Build History, Global Parameters, and Release Records
+### 1. Введение в функции продукта
 
-![Image Description](https://images.gitee.ru/uploads/images/2022/0411/184457_06b33eac_10531940.png )
+Gitee Go состоит из конвейеров, истории сборки, глобальных параметров и записей релизов.
 
-Pipeline: You can view all pipelines in this code repository and perform operations such as execution, editing, and deletion on individual pipelines.
+![Описание изображения](https://images.gitee.ru/uploads/images/2022/0411/184457_06b33eac_10531940.png )
 
-![Image Description](https://images.gitee.ru/uploads/images/2022/0411/184506_a56f4ae3_10531940.png )
+Конвейер: вы можете просматривать все конвейеры в этом репозитории кода и выполнять такие операции, как выполнение, редактирование и удаление на отдельных конвейерах.
 
-Build History: You can view all the build records of a pipeline, and click on different stages of the pipeline to view the execution details of each stage and task of the pipeline.
+![Описание изображения](https://images.gitee.ru/uploads/images/2022/0411/184506_a56f4ae3_10531940.png )
 
-![Image Description](https://images.gitee.ru/uploads/images/2022/0411/184513_34ffbb78_10531940.png )
+История сборки: вы можете просмотреть все записи сборки конвейера и щелкнуть различные этапы конвейера, чтобы просмотреть детали выполнения каждого этапа и задачи конвейера.
 
-Global parameters: Custom parameters that can be centrally managed by users in a single code repository. These parameters can be referenced by all pipelines in this code repository and can be used in any stage or task of the pipeline.
+![Описание изображения](https://images.gitee.ru/uploads/images/2022/0411/184513_34ffbb78_10531940.png )
 
-![Image Description](https://images.gitee.ru/uploads/images/2022/0411/184524_787efa4e_10531940.png )
+Глобальные параметры: пользовательские параметры, которыми пользователи могут централизованно управлять в едином репозитории кода. На эти параметры могут ссылаться все конвейеры в этом репозитории кода, и их можно использовать на любом этапе или задаче конвейера.
 
-Release Record: Records the output artifacts of all pipelines and allows for viewing, downloading, prohibiting downloads, deleting, etc. for a specific artifact.
+![Описание изображения](https://images.gitee.ru/uploads/images/2022/0411/184524_787efa4e_10531940.png )
 
-![Image Description](https://images.gitee.ru/uploads/images/2022/0411/184940_b01f919d_10531940.png )
+Запись релиза: записывает выходные артефакты всех конвейеров и позволяет просматривать, загружать, запрещать загрузку, удалять и т. д. для конкретного артефакта.
 
-### 2. Product Function Practice
+![Описание изображения](https://images.gitee.ru/uploads/images/2022/0411/184940_b01f919d_10531940.png )
 
-1. After completing the automatic creation of the pipeline, you can click to execute the pipeline
+### 2. Практика использования продукта
 
-![Image Description](https://images.gitee.ru/uploads/images/2022/0411/185015_166b6e2e_10531940.png )
+1. После завершения автоматического создания конвейера вы можете нажать кнопку «Выполнить конвейер».
 
-2. Select the corresponding branch and click start build
+![Описание изображения](https://images.gitee.ru/uploads/images/2022/0411/185015_166b6e2e_10531940.png )
 
-![Image Description](https://images.gitee.ru/uploads/images/2022/0411/185020_c432b14f_10531940.png )
+2. Выберите соответствующую ветку и нажмите начать сборку.
 
-3. Automatically redirect to the build history page of that pipeline
+![Описание изображения](https://images.gitee.ru/uploads/images/2022/0411/185020_c432b14f_10531940.png )
 
-![Image Description](https://images.gitee.ru/uploads/images/2022/0411/185026_ce4ec117_10531940.png )
+3. Автоматическое перенаправление на страницу истории сборки этого конвейера.
 
-4. Click 'Build' to trigger the domain to view the execution status of the tasks in this stage.
+![Описание изображения](https://images.gitee.ru/uploads/images/2022/0411/185026_ce4ec117_10531940.png )
 
-![Image Description](https://images.gitee.ru/uploads/images/2022/0411/185031_880800a1_10531940.png )
+4. Нажмите «Создать», чтобы домен мог просмотреть состояние выполнения задач на этом этапе.
 
-5. Click the "Upload Artifact" task to view the execution status of the task
+![Описание изображения](https://images.gitee.ru/uploads/images/2022/0411/185031_880800a1_10531940.png )
 
-![Image Description](https://images.gitee.ru/uploads/images/2022/0411/185036_6a67b81b_10531940.png )
+5. Нажмите задачу «Загрузить артефакт», чтобы просмотреть статус выполнения задачи.
 
-6. Click "#4" to enter the details page of this pipeline execution (including an overview and execution logs of each stage task)
+![Описание изображения](https://images.gitee.ru/uploads/images/2022/0411/185036_6a67b81b_10531940.png )
 
-![Image Description](https://images.gitee.ru/uploads/images/2022/0411/185041_141ad71a_10531940.png )
+6. Нажмите «#4», чтобы перейти на страницу сведений о выполнении этого конвейера (включая обзор и журналы выполнения каждой задачи этапа).
 
-![Image Description](https://images.gitee.ru/uploads/images/2022/0411/185054_7ef859f2_10531940.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2022/0411/185041_141ad71a_10531940.png )
 
-7. This pipeline includes the 'Artifact Release' task, which can be viewed in the release records for details.
+![Описание изображения](https://images.gitee.ru/uploads/images/2022/0411/185054_7ef859f2_10531940.png )
 
-![Image Description](https://images.gitee.ru/uploads/images/2022/0411/185058_8fb01ee0_10531940.png )
+7. Этот конвейер включает задачу «Выпуск артефакта», подробности которой можно просмотреть в записях о выпуске.
 
-8. You can enter the pipeline editing interface through the pipeline and build history interface
+![Описание изображения](https://images.gitee.ru/uploads/images/2022/0411/185058_8fb01ee0_10531940.png )
 
-![Image Description](https://images.gitee.ru/uploads/images/2022/0411/185102_b7204db2_10531940.png )
+8. Вы можете войти в интерфейс редактирования конвейера через интерфейс конвейера и истории сборки.
 
-![Image Description](https://images.gitee.ru/uploads/images/2022/0411/185107_1837b697_10531940.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2022/0411/185102_b7204db2_10531940.png )
 
-9. Pipeline editing is divided into graphic view and code view, and you can complete the configuration of the pipeline in different views.
+![Описание изображения](https://images.gitee.ru/uploads/images/2022/0411/185107_1837b697_10531940.png )
 
-![Image Description](https://images.gitee.ru/uploads/images/2022/0411/185113_0ef67819_10531940.png )
+9. Редактирование конвейера разделено на графическое представление и представление кода, и вы можете выполнить настройку конвейера в разных представлениях.
 
-![Image Description](https://images.gitee.ru/uploads/images/2022/0411/185117_415df774_10531940.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2022/0411/185113_0ef67819_10531940.png )
 
-10. Pipeline stage orchestration: A stage is a secondary element in a pipeline, and a stage is usually a collection of similar tasks, such as the 'Code Scan' stage, which can have three tasks: 'Code Standard Scan', 'Code Security Scan', and 'Code Defect Scan'. A pipeline can have multiple stages, which are executed sequentially in order.
+![Описание изображения](https://images.gitee.ru/uploads/images/2022/0411/185117_415df774_10531940.png )
 
-![Image Description](https://images.gitee.ru/uploads/images/2022/0411/185126_cbf2f77f_10531940.png )
+10. Оркестровка этапов конвейера. Этап — это второстепенный элемент в конвейере, а этап обычно представляет собой набор похожих задач, например этап «Сканирование кода», который может состоять из трех задач: «Стандартное сканирование кода», «Сканирование кода». «Сканирование безопасности» и «Сканирование дефектов кода». Конвейер может состоять из нескольких этапов, которые выполняются последовательно.
 
-11. Pipeline task orchestration: Tasks are the third-level elements of a pipeline and are sub-elements of a stage. They are the smallest execution units in a pipeline. In a stage, tasks can be defined to be executed in serial or parallel order. Tasks are automatically executed by default and do not support manual execution. A task corresponds to a plugin, and the task is the execution container for the plugin. Based on this, the overall model of the pipeline is: A pipeline corresponds to multiple stages, a stage corresponds to multiple tasks, and a task corresponds to a plugin.
+![Описание изображения](https://images.gitee.ru/uploads/images/2022/0411/185126_cbf2f77f_10531940.png )
 
-![Image Description](https://images.gitee.ru/uploads/images/2022/0411/185132_d10d65f2_10531940.png )
+11. Оркестровка задач конвейера. Задачи — это элементы конвейера третьего уровня и подэлементы этапа. Это самые маленькие исполнительные единицы в конвейере. На этапе задачи могут быть определены для выполнения в последовательном или параллельном порядке. По умолчанию задачи выполняются автоматически и не поддерживают выполнение вручную. Задача соответствует плагину, а задача является контейнером выполнения плагина. Исходя из этого, общая модель конвейера выглядит следующим образом: конвейер соответствует нескольким этапам, этап соответствует нескольким задачам, а задача соответствует плагину.
 
-![Image Description](https://images.gitee.ru/uploads/images/2022/0411/185140_9d339c4b_10531940.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2022/0411/185132_d10d65f2_10531940.png )
 
-![Image Description](https://images.gitee.ru/uploads/images/2022/0411/185145_508aad1a_10531940.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2022/0411/185140_9d339c4b_10531940.png )
 
-12. After completing the orchestration of the pipeline, click save. Gitee Go will automatically submit the yaml file to the code repository where the pipeline is located and re-execute the pipeline to generate a build record.
+![Описание изображения](https://images.gitee.ru/uploads/images/2022/0411/185145_508aad1a_10531940.png )
 
-![Image Description](https://images.gitee.ru/uploads/images/2022/0411/185159_39166a16_10531940.png )
+12. После завершения оркестровки конвейера нажмите «Сохранить». Gitee Go автоматически отправит файл yaml в репозиторий кода, где расположен конвейер, и повторно запустит конвейер для создания записи сборки.
 
-![Image Description](https://images.gitee.ru/uploads/images/2022/0411/185205_90f52632_10531940.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2022/0411/185159_39166a16_10531940.png )
 
-![Image Description](https://images.gitee.ru/uploads/images/2022/0411/185208_842e5d14_10531940.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2022/0411/185205_90f52632_10531940.png )
+
+![Описание изображения](https://images.gitee.ru/uploads/images/2022/0411/185208_842e5d14_10531940.png )

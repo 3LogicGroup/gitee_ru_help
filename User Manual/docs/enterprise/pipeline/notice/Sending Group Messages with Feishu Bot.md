@@ -1,48 +1,46 @@
 ---
-title: Send group message via Feishu robot
-description: Send group message using Feishu robot
+title: Отправка групповых сообщений через робота Feishu
+description: Отправка групповых сообщений с помощью робота Feishu
 slug: /enterprise/pipeline/notice/feishu
 keywords:
  - Gitee
  - Feishu
- - Robot
- - Notification
+ - Робот
+ - Уведомление
 ---
 
-Users can configure Feishu group notifications in pipeline tasks to push pipeline task execution information to specified Feishu groups.
+Пользователи могут настроить групповые сообщения Feishu в задачах конвейера, чтобы отправлять информацию о выполнении задач конвейера указанным группам Feishu.
 
-Add Feishu group robot
+Добавление группового робота Feishu
 
-Add a custom robot by going to Group Settings -> Group Robots -> Add Robot -> Select Custom Robot.
+Добавьте пользовательского робота, перейдя в Настройки группы -> Роботы группы -> Добавить робота -> Выбрать пользовательского робота.
 
-![Feishu Robot](./assets/Feishu Robot.png)
+![Робот Feishu](./assets/Feishu Robot.png)
 
-Refer to the following document: [https://open.feishu.cn/document/ukTMukTMukTM/ucTM5YjL3ETO24yNxkjN?lang=zh-CN](https://open.feishu.cn/document/ukTMukTMukTM/ucTM5YjL3ETO24yNxkjN?lang=zh-CN)
+См. следующий документ: [https://open.feishu.cn/document/ukTMukTMukTM/ucTM5YjL3ETO24yNxkjN?lang=zh-CN](https://open.feishu.cn/document/ukTMukTMukTM/ucTM5YjL3ETO24yNxkjN?lang=zh-CN)
 
-Copy the webhook address and configure it in the pipeline [Feishu notification credentials](/enterprise/pipeline/enterprise-setup/certificate/introduce#im-通讯).
+Скопируйте адрес вебхука и настройте его в конвейере [Учетные данные уведомлений Feishu](/enterprise/pipeline/enterprise-setup/certificate/introduce#im-通讯).
 
-:::info **Note that Feishu group robots can choose whether to enable security settings:**
-If "signature" is enabled, please record and save the signature key, and configure it in the notification credentials of the Feishu pipeline.
+:::info **Примечание: роботы группы Feishu могут выбирать, включать ли настройки безопасности:**.
+Если включена "подпись", запишите и сохраните ключ подписи, а также настройте его в учетных данных уведомлений конвейера Feishu.
 :::
 
-Configure Lark group notification for pipeline tasks
+1. В узле задач конвейера выберите Добавить групповое уведомление Feishu.
 
-1. In the pipeline task node, select Add Feishu Group Notification.
+![Добавить конфигурацию Feishu](./assets/AddFeishuConfiguration.png)
 
-![Add Feishu configuration](./assets/AddFeishuConfiguration.png)
+2. Добавьте учетные данные Feishu, см. раздел Управление учетными данными [Вебхук Feishu](/enterprise/pipeline/enterprise-setup/certificate/introduce#im-communication)
 
-2. Add Feishu credentials, please refer to Credential Management [Feishu Webhook](/enterprise/pipeline/enterprise-setup/certificate/introduce#im-communication)
+![Добавить учетные данные Feishu](./assets/AddFeishuCredentials.png)
 
-![Add Feishu credentials](./assets/AddFeishuCredentials.png)
+3. Выберите события уведомления, когда задача этого конвейера перейдет в состояние выбора, это вызовет уведомления о сообщениях.
 
-3. Select notification events, when the task of this pipeline enters the selection state, it will trigger message notifications.
+4. Выберите содержимое уведомления, после чего выбранное содержимое уведомления будет автоматически добавлено в push-сообщение.
 
-4. Select the notification content, the selected notification content will be automatically added to the push message.
+5. Поддерживает заполнение пользовательского контента, поддерживает ссылки на переменные окружения, такие как ${GITEE_PIPELINE_NAME}, поддерживает синтаксис Feishu [Markdown](https://open.feishu.cn/document/ukTMukTMukTM/uADOwUjLwgDM14CM4ATN)
 
-5. Supports filling in custom content, supports referencing environment variables like ${GITEE_PIPELINE_NAME}, supports Feishu [Markdown](https://open.feishu.cn/document/ukTMukTMukTM/uADOwUjLwgDM14CM4ATN) syntax
+## Запуск триггерного конвейера
 
-## Trigger Pipeline Run
+Триггер выполнения конвейера. Когда задача конвейера переходит в состояние выполнения, настроенное в плагине уведомлений, запускается уведомление о сообщении.
 
-Trigger pipeline execution. When the pipeline task enters the running state configured in the notification plugin, trigger message notification.
-
-![Feishu Notification Message Example](./assets/feishu-notification-message-example.png)
+![Пример сообщения уведомления Feishu](./assets/feishu-notification-message-example.png)

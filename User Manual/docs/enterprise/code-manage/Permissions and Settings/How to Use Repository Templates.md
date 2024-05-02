@@ -1,43 +1,43 @@
 ---
-How to use repository templates?
+ Как использовать репозитории шаблонов?
 origin-url: https://gitee.ru/help/articles/4348
 ---
 
-### **Function Introduction:**
+### **Знакомство с функциями:**
 
-Template repositories support enterprise members to set existing repositories as templates, so that other members can generate new repositories with the same code based on the template repository.
+Репозитории шаблонов позволяют корпоративным участникам устанавливать существующие репозитории в качестве шаблонов, чтобы другие участники могли создавать новые репозитории с тем же кодом на основе репозитория шаблонов.
 
-You can quickly create a new repository using the template repository page or select the corresponding template repository when creating a new repository.
+Вы можете быстро создать новый репозиторий, используя страницу репозитория шаблонов или выбрав соответствующий репозиторий шаблонов при создании нового репозитория.
 
-### **Operation Instructions:**
+### **Инструкции по использованию:**
 
-1. Permission Description: Log in with the role account of Repository Administrator or Enterprise Administrator to set a repository as a template repository
+1. Описание разрешений: Войдите в систему с учетной записью Администратора репозитория или Администратора предприятия, чтобы установить репозиторий в качестве репозитория шаблонов
 
-2. Steps to create a template repository:
+2. Шаги по созданию репозитория шаблонов:
 
-- (1) Log in to the Gitee account and go to the enterprise workspace. Select 'Code' and click on 'New Repository'. Fill in the complete repository information and click on 'Create' to create it.
+- (1) Войдите в учетную запись Gitee и перейдите в рабочее пространство предприятия. Выберите "Код" и нажмите "Создать репозиторий". Чтобы создать репозиторий, заполните всю необходимую информацию о нем и нажмите "Создать",
 
-![Image Description](../../../../assets/image214.png)
+![Описание изображения](../../../../assets/image214.png)
 
- - (2) After the repository is successfully created, click Repository -> Manage -> Feature Settings -> Template Repository to select it. Then, the repository becomes a "Template Repository".
+- (2) После успешного создания репозитория нажмите Репозиторий -> Управление -> Настройки функций -> Репозиторий шаблонов, чтобы выбрать его. После этого репозиторий становится "Репозиторием шаблонов".
 
-![Image Description](../../../../assets/image215.png)
-![Image Description](../../../../assets/image216.png)
+![Описание изображения](../../../../assets/image215.png)
+![Описание изображения](../../../../assets/image216.png)
 
-- (3) When creating a new repository again, you can use the template repository for quick use. Click 'Create Repository' -> Select 'Desired Template Repository' -> Create successfully.
+- (3) При повторном создании нового репозитория для ускорения работы вы можете использовать репозиторий шаблонов. Нажмите "Создать репозиторий" -> Выберите "Желаемый репозиторий шаблонов" -> Создайте его.
 
-![Image Description](../../../../assets/image217.png)
+![Описание изображения](../../../../assets/image217.png)
 
-**Note: If you want to set the original repository as a template repository, just go to the repository settings, as shown below:**
+**Примечание: Если вы хотите установить исходный репозиторий в качестве репозитория шаблонов, просто перейдите в настройки репозитория, как показано ниже:**
 
-3. How to view existing template repositories?
+3. Как просмотреть существующие репозитории шаблонов?
 
-Click on Code -> Code Repository -> Template Repository to view
+Для просмотра нажмите на Код -> Репозиторий кода -> Репозиторий шаблонов
 
-![Image Description](../../../../assets/image218.png)
+![Описание изображения](../../../../assets/image218.png)
 
-4. How to cancel the template repository?
+4. Как удалить репозиторий шаблонов?
 
-Click Code -> Code Repository -> Template Repository -> Right-click 'Cancel Template Repository'
+Выберите Код -> Репозиторий кода -> Репозиторий шаблонов -> Щелкните правой кнопкой мыши "Удалить репозиторий шаблонов"
 
-![Image Description](../../../../assets/image219.png)
+![Описание изображения](../../../../assets/image219.png)

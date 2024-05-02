@@ -1,7 +1,7 @@
 ---
-title: Remove Enterprise Member
+title: Удаление участника компании
 ---
 
-Click on the 'Members' in the enterprise navigation menu to enter the member management page, then click on the '...' on the right side of the target member's row, and then click on the 'Remove from Enterprise' option in the dropdown menu to remove the member from the enterprise.
+Нажмите на "Сотрудники" в меню навигации компании, чтобы перейти на страницу управления сотрудниками. Затем щелкните на "..." справа от строки целевого сотрудника и в выпадающем меню выберите опцию "Удалить из компании" для удаления сотрудника из компании.
 
-![Image Description](assets/image385.png)
+![Описание изображения](assets/image385.png)

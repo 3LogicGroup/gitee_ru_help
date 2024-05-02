@@ -1,45 +1,45 @@
 ---
-title: Transfer organization to enterprise account
-description: The organization account is designed to meet the needs of large open source teams and is not suitable for enterprises/teams to manage their internal private repositories. To clarify the ownership of private repositories and ensure the security of private repositories, it is strongly recommended for enterprise teams to use Gitee Enterprise Edition to manage internal private repositories.
+title: Перенос организации в аккаунт предприятия
+description: Аккаунт организации разработан для удовлетворения потребностей крупных команд разработчиков программного обеспечения с открытым исходным кодом и не подходит предприятиям/командам для управления своими внутренними частными репозиториями. Чтобы уточнить права собственности на частные репозитории и обеспечить безопасность частных репозиториев, корпоративным командам настоятельно рекомендуется использовать Gitee Enterprise Edition для управления внутренними частными репозиториями.
 origin-url: https://gitee.ru/help/articles/4149
 keywords:
- - Organization Management
- - Organizational Transfer
+ - Управление организацией
+ - Перенос организации
 slug: /enterprise/account/group-upgrade
 ---
 
-### Transfer existing organization to enterprise account
+## Перенос существующей организации в аккаунт предприятия
 
-Organization accounts are designed to meet the needs of large open-source teams and are not suitable for managing private repositories within an enterprise/team. To clarify the ownership of private repositories and ensure their security, it is strongly recommended for enterprise teams to use Gitee Enterprise Edition to manage internal private repositories.
+Аккаунт организации разработан для удовлетворения потребностей крупных команд разработчиков программного обеспечения с открытым исходным кодом и не подходит предприятиям/командам для управления своими внутренними частными репозиториями. Чтобы уточнить права собственности на частные репозитории и обеспечить безопасность частных репозиториев, корпоративным командам настоятельно рекомендуется использовать Gitee Enterprise Edition для управления внутренними частными репозиториями.
 
-Log in to the Gitee account and select 'Mine' in the navigation bar to enter the organization's homepage that needs to be transferred.
+Для перехода на домашнюю страницу организации, которую необходимо перенести, войдите в учетную запись Gitee и на панели навигации выберите "Моя".
+ 
+![Описание изображения](/img/enterprise/account/group-upgrade/my.webp)
 
-![Image Description](/img/enterprise/account/group-upgrade/my.webp)
+Перейдите на домашнюю страницу организации, нажмите на "Перевести на предприятие" в правом верхнем углу
 
-Go to the organization's homepage, click on "Transfer to Enterprise" at the top right corner
+![Описание изображения](/img/enterprise/account/group-upgrade/transfer-button.webp)
 
-![Image Description](/img/enterprise/account/group-upgrade/transfer-button.webp)
+После нажатия на кнопку появится следующее содержимое. Сгенерируйте код переноса в соответствии с информацией в подсказке.
 
-After clicking the button, the following content will appear, generate the transfer code according to the prompt information.
+![Описание изображения](/img/enterprise/account/group-upgrade/transfer-code.webp)
 
-![Image Description](/img/enterprise/account/group-upgrade/transfer-code.webp)
+Перейдите на страницу рабочего пространства предприятия и на левой боковой панели нажмите "Участники".
 
-Go to the Enterprise Workspace page and click on "Members" in the left sidebar.
+![Описание изображения](/img/enterprise/account/group-upgrade/member.webp)
 
-![Image Description](/img/enterprise/account/group-upgrade/member.webp)
+В появившемся справа интерфейсе выберите "Добавить команду" - "Перейти в команду".
 
-In the appearing interface on the right side, select "Add Team" - "Move to Team".
+![Описание изображения](/img/enterprise/account/group-upgrade/to-group.webp)
 
-![Image Description](/img/enterprise/account/group-upgrade/to-group.webp)
+Во всплывающем окне нажмите "Сгенерировать код перевода" - "Скопировать".
 
-Click 'Generate Transfer Code' - 'Copy' in the pop-up window.
+![Описание изображения](/img/enterprise/account/group-upgrade/copy.webp)
 
-![Image Description](/img/enterprise/account/group-upgrade/copy.webp)
+Введя сгенерированный код перевода, нажмите "Далее", после чего появится информация о подлежащем переносу предприятии. Здесь вам нужно установить галочку, как показано на рисунке ниже, а затем нажать "Подтвердить перенос".
 
-After filling in the generated transfer code, click "Next", and the enterprise information to be transferred will appear. Here, you need to check the check mark shown in the figure below, and then click "Confirm Transfer".
+![Описание изображения](/img/enterprise/account/group-upgrade/sure.webp)
 
-![Image Description](/img/enterprise/account/group-upgrade/sure.webp)
+После успешного переноса в правом верхнем углу появится сообщение с приглашением.
 
-After the successful transfer, there will be a prompt message in the upper right corner.
-
-![Image Description](/img/enterprise/account/group-upgrade/alert.webp)
+![Описание изображения](/img/enterprise/account/group-upgrade/alert.webp)

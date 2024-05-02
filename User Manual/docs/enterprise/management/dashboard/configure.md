@@ -1,11 +1,12 @@
 ---
-title: Change the color, width, and configuration of components
+title: Изменение цвета, ширины и конфигурации компонентов
 ---
 
-Click on the '...' in the upper right corner of the component card to adjust the color and width of the component in the menu.
+Нажмите на "..." в верхнем правом углу карточки компонента, чтобы настроить цвет и ширину компонента в меню.
 
-![Image Description](assets/image328.png)
+![Описание изображения](assets/image328.png)
 
-Clicking the "Configure Component" option in the menu can further configure the component. The configurable content varies depending on the component type. Taking the Work Item component as an example, it supports configuring the name, tab type, and default tab.
 
-![Image Description](assets/image329.png)
+Нажатие на опцию "Настроить компонент" в меню позволяет дополнительно настраивать компонент. Настраиваемый контент зависит от типа компонента. Возьмем, к примеру, компонент "Рабочий элемент": он поддерживает настройку имени, типа вкладки и вкладки по умолчанию.
+
+![Описание изображения](assets/image329.png)

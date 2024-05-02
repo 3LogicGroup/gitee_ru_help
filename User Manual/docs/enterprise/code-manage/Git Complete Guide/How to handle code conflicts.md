@@ -1,31 +1,31 @@
 ---
-title: How to handle code conflicts
+title: Как устранять конфликты кода
 origin-url: https://gitee.ru/help/articles/4194
 ---
 
-Conflict merging usually occurs when there are differences between the local commits and the commits on the server, and Git cannot automatically merge the file changes in these differences. Therefore, manual merging is required.
+Конфликты слияния обычно происходят, когда возникают различия между локальными коммитами и коммитами на сервере, и Git не может автоматически объединить изменения файла в этих различиях. Поэтому требуется выполнять слияние вручную.
 
-For example, I execute `git pull origin master`
+Например, выполним команду `git pull origin master`
 
-If Git can merge automatically, the process looks like this:
+Если Git может выполнять автоматическое слияние, процесс выглядит следующим образом:
 
-![Image Description](./assets/113507_cca8cd22_62561.gif)
+![Описание изображения](./assets/113507_cca8cd22_62561.gif)
 
-When pulling, Git automatically merges and generates a commit.
+При извлечении Git автоматически выполняет слияние и генерирует коммит.
 
-### **If Git cannot merge automatically, it will prompt**
+### **Если Git не может выполнить автоматическое слияние, он отправляет сообщение**
 
-![Image Description](./assets/113621_dbc985b5_62561.png)
+![Описание изображения](./assets/113621_dbc985b5_62561.png)
 
-At this time, we can know that README.MD has conflicts and needs to be resolved manually by modifying README.MD
+На данный момент мы можем знать, что в файле README.MD есть конфликты, и их необходимо устранить вручную, внеся изменения в README.MD
 
-![Image Description](./assets/113823_fffe18cf_62561.png)
+![Описание изображения](./assets/113823_fffe18cf_62561.png)
 
-It can be seen that there is a conflict in the code on the line where 1+1= is written. The goal of resolving conflicts is to keep the desired code, here we keep 1+1=2, and then save and exit.
+Можно видеть, что в коде имеется конфликт в строке, где записано 1+1=. Цель устранения конфликтов состоит в том, чтобы сохранить желаемый код, здесь мы сохраняем 1+1=2, а затем сохраняем и завершаем работу.
 
-![Image Description](./assets/114159_426b8d65_62561.png)
+![Описание изображения](./assets/114159_426b8d65_62561.png)
 
-After exiting, make sure all conflicts are resolved and then you can use
+После выхода убедитесь, что все конфликты устранены, и затем вы можете использовать скрипт
 
 ```bash
 git add .
@@ -33,8 +33,8 @@ git commit -m "fixed conflicts"
 git push origin master`
 ```
 
-You can complete a conflict merge.
+Вы можете завершить конфликт слияния.
 
-The whole process looks like this
+Весь процесс выглядит следующим образом:
 
-![Image Description](./assets/114058_429e8b54_62561.gif)
+![Описание изображения](./assets/114058_429e8b54_62561.gif)

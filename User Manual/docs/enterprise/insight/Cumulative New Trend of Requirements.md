@@ -1,7 +1,7 @@
 ---
-title: Cumulative new requirement trend
-description: Cumulative trend of added requirements
+title: Тенденция роста новых совокупных потребностей
+description: Тенденция роста новых совокупных потребностей
 slug: enterprise/insight/demand-cumulative-trend
 ---
-Track the cumulative new and completed requirements in the requirement accumulation trend within the project.
-![Image Description](./assets/demand_cumulative_trend.png)
+Отслеживайте совокупность новых и закрытых потребностей в тренде накопления потребностей в рамках проекта.
+![Описание изображения](./assets/demand_cumulative_trend.png)

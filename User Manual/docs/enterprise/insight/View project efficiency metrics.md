@@ -1,10 +1,10 @@
 ---
-title: View project performance metrics
-description: View project performance metrics
+title: Просмотр показателей эффективности проекта
+description: Просмотр показателей эффективности проекта
 slug: enterprise/insight
 ---
-1. Click on 'Projects' in the navigation bar to enter the project list page, and select a project to enter the project page;
-![Image Description](assets/image.png)
+1. Для перехода на страницу списка проектов нажмите "Проекты" на панели навигации, затем выберите проект, чтобы перейти на страницу проекта;
+![Описание изображения](assets/image.png)
 
-2. Click "Metrics" on the left sidebar of the project page to view the project's performance metrics.
-![Image Description](assets/image268.png)
+2. Для просмотра показателей эффективности проекта нажмите "Показатели" на левой боковой панели страницы проекта.
+![![Описание изображения](assets/image268.png)

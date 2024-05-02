@@ -1,30 +1,30 @@
 ---
-title: Label Management
+title: Управление тегами
 authors:
   - name: Cheese
-description: Related content of Issue label management
+description: Связанный контент управления тегами задач
 ---
 
-## Add Tags
+## Добавление тегов
 
-The initiator of the issue can add labels to the issue when creating it, and the assignees, collaborators, and repository owners can also add labels after creation.
+Автор задачи может добавлять теги к задаче при её создании, а исполнители, соавторы и владельцы репозитория могут добавлять теги после её создания.
 
-In the created Issue or in the Issue details page, find the 'Labels' option in the right sidebar, click the edit icon button on the right side of it, and select the labels for this Issue from the dropdown menu. Multiple labels can be set.
+В созданной задаче или на правой боковой панели страницы сведений о задаче найдите опцию "Теги", нажмите кнопку со значком редактирования справа от нее и выберите ярлыки для этой задачи из выпадающего меню. Можно установить несколько тегов.
 
 ![](tag.assets/image.png)
 
-Management Tags
+Управление тегами
 
-The repository manager can click the 'Tag Management' button in the drop-down bar under the tag to enter the tag management page and deploy all the tags of the repository. They can also click the 'Three Dots' icon on the Issue page of the repository and find and click the 'Tag Management' button in the drop-down bar.
+Чтобы перейти на страницу управления тегами и развернуть все теги репозитория, администратор репозитория может нажать кнопку "Управление тегами" в раскрывающемся списке под тегом. Он также может нажать на значок "Три точки" на странице задач репозитория, найти и в раскрывающемся списке нажать кнопку "Управление тегами".
 
 ![](tag.assets/image-1.png)
 
 ![](tag.assets/image-2.png)
 
-Repository managers can 'edit' and 'delete' existing tags, as well as perform 'create tags' and 'import tags' operations, where importing tags allows the manager to import tags from other repositories they manage into the current repository.
+Менеджеры репозиториев могут "редактировать" и "удалять" существующие теги, а также выполнять операции "создание тегов" и "импорт тегов", причем импорт тегов позволяет менеджеру импортировать в текущий репозиторий теги из других управляемых им репозиториев.
 
 ![](tag.assets/image-3.png)
 
-You can create and edit tags, including the `name`, `description`, and `color code`.
+Вы можете создавать и редактировать теги, в том числе `название`, `описание` и `цветовой код`.
 
 ![](tag.assets/image-4.png)

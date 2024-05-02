@@ -1,7 +1,7 @@
 ---
-title: Project time tracking
+title: Учет времени проекта
 ---
 
-Click on 'Statistics' in the left menu, then 'Working Hours Statistics', and finally 'Project Working Hours' to go to the enterprise's working hours statistics page and view the working hours statistics for all projects within the enterprise.
+Для перехода к статистике рабочих часов предприятия и просмотра рабочих часов всех проектов внутри предприятия нажмите на "Статистика" в левом меню, затем "Статистика рабочего времени", а затем "Рабочие часы проекта".
 
-![Project work time statistics](/img/enterprise/project/enterprise-project-worktime-report.png)
+![Статистика рабочего времени проека](/img/enterprise/project/enterprise-project-worktime-report.png)

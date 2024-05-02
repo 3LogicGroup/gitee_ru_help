@@ -1,5 +1,5 @@
 ---
-title: Notes for invoice application
+title: Примечания к применению счетов-фактур
 authors:
   - name: South Drifting All the Way
     url: https://gitee.ru/kangxiok
@@ -7,24 +7,24 @@ origin-url: https://gitee.ru/help/articles/4272
 slug: /enterprise/questions/invoice/invoice-request-notice
 ---
 
-![Invoice](/img/enterprise/question/invoice/invoice-request-notice/1.webp)
+![Счёт-фактура](/img/enterprise/question/invoice/invoice-request-notice/1.webp)
 
-【Note】:
+【Примечание】:
 
-- Value-added tax ordinary invoice: Only issue electronic invoice
+- Обычный счет-фактура для оплаты НДС: Выставляются только электронные счета-фактуры
 
-- Value-added Tax Special Invoice: Only issue paper invoices
-
-------------------
-
-When can the invoice be mailed after applying?
-
-After applying for the invoice, the staff will mail the invoice within **7 working days**.
+- Специальный счет-фактура для оплаты НДС: Выставляются только бумажные счета-фактуры
 
 ------------------
 
-### What is the category for invoice issuance of the enterprise account?
+Когда счет-фактура будет отправлен по почте после подачи заявки?
 
-The category information of the invoice is as shown in the figure below:
+После подачи заявки на получение счета-фактуры сотрудники отправят его по почте в течение **7 рабочих дней**.
 
-![Invoice](/img/enterprise/question/invoice/invoice-request-notice/2.webp)
+------------------
+
+### Какой категории счета-фактуры выставляются для счета предприятия?
+
+Информация о категории счета-фактуры приведена на рисунке ниже:
+
+![Счет-фактура](/img/enterprise/question/invoice/invoice-request-notice/2.webp)

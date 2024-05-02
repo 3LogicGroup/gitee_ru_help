@@ -1,53 +1,53 @@
 ---
-title: Why Buy Enterprise Edition
+title: Почему стоит купить Enterprise Edition
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 origin-url: https://gitee.ru/help/articles/4147
 ---
 
-Since its launch in 2013, Gitee, the code hosting platform, has hosted over 25 million repositories, making it the earliest and largest code hosting platform in China. After years of continuous improvement and operation, Gitee is capable of safeguarding enterprises' core assets - source code.
+С момента запуска в 2013 году на платформе хостинга кода Gitee было размещено более 25 миллионов репозиториев, что делает ее самой первой и самой крупной платформой хостинга кода в Китае. После нескольких лет непрерывного совершенствования и эксплуатации Gitee способна обеспечить сохранность основных активов предприятий - исходного кода.
 
-So, we have launched Gitee Enterprise Edition based on the community edition, which is suitable for the development and team management models of most IT companies. Gitee
+Поэтому мы запустили Gitee Enterprise Edition на базе Community Edition, которая подходит для моделей разработки и управления командой большинства ИТ-компаний. Gitee
 
-## Gitee Enterprise Edition Features
+## Особенности Gitee Enterprise Edition
 
-| Feature | Description |
+| Характеристика | Описание |
 | --- | --- |
-| More reasonable task allocation | Supports custom task types and statuses, flexible multi-level sub-tasks, associated tasks, and easy decomposition of large requirements into kanban boards, lists, and minimalist mode switching, as well as powerful search and filtering capabilities |
-| Seamless integration of project management and development | Detailed statistics report showing all project resources and development progress at a glance. Regularly create snapshots to effectively reduce code security risks |
-| Powerful and Convenient Online Documentation | Support custom task types and statuses, flexible and multi-level subtasks, associated tasks, and easy decomposition of large requirements with kanban, list, and minimalist mode switching, as well as powerful search and filtering.
-| Clear member status | Clear member permissions, flexibly assign internal teams and outsourcing teams to manage member work progress
+| Более разумное распределение задач | Поддержка пользовательских типов и статусов задач, гибких многоуровневых подзадач, связанных задач, легкой декомпозиции больших требований на доски канбан, списки и переключение в минималистский режим, а также мощные возможности поиска и фильтрации |
+| Бесшовная интеграция управления проектами и разработки | Подробный статистический отчет, в котором наглядно отображаются все ресурсы проекта и ход разработки. Регулярное создание моментальных снимков для эффективного снижения рисков безопасности кода | |
+| Мощная и удобная онлайн-документация | Поддержка пользовательских типов и статусов задач, гибких и многоуровневых подзадач, связанных задач, легкой декомпозиции больших требований с переключением режимов "канбан", "список" и "минимализм", а также мощного поиска и фильтрации.
+| Очистка статуса участника | Очистка прав участника, гибкое назначение внутренних и аутсорсинговых команд для управления ходом работы участника.
 
-## More Features
+## Дополнительные возможности
 
-**Stable and High-speed Multi-level Backup**: Full regional and network coverage, no longer worry about access barriers. Automatic backup, code worry-free.
+**Стабильное и высокоскоростное многоуровневое резервное копирование**: Полный региональный и сетевой охват, больше не нужно беспокоиться о барьерах доступа. Автоматическое резервное копирование, код не беспокоиться.
 
-**More in line with the usage habits of Chinese people**: Free for individual developers (including private repositories), internationalization support, integrated with a variety of practical development services
+**Больше соответствует привычкам китайцев**: Бесплатный доступ для индивидуальных разработчиков (включая частные репозитории), поддержка интернационализации, интеграция с различными практическими сервисами разработки.
 
-**Legal Protection and Fault Compensation**: Sign a service contract and use it with confidence. A complete fault compensation mechanism eliminates the risk of code hosting.
+**Юридическая защита и компенсация ущерба**: Заключите договор на предоставление услуг и пользуйтесь ими с уверенностью. Полный механизм компенсации убытков устраняет риск размещения кода.
 
-**Outstanding Brand of Gitee**: The most active open-source technology community in China, committed to serving developers for 9 years
+**Отличный бренд Gitee**: Самое активное сообщество разработчиков технологий с открытым исходным кодом в Китае, которое служит разработчикам уже 9 лет.
 
-## Over 250,000 companies and organizations are using Gitee Enterprise Edition
+## Более 250 000 компаний и организаций используют Gitee Enterprise Edition
 
-![Industrial and Commercial Bank of China](https://gitee.ru/enterprise_cases/zsyh.png)
-![China Merchants Securities](https://gitee.ru/enterprise_cases/zszq.png)
+![Промышленный и коммерческий банк Китая](https://gitee.ru/enterprise_cases/zsyh.png)
+![Китайские торговцы ценными бумагами](https://gitee.ru/enterprise_cases/zszq.png)
 ![Qianhai Heijing](https://gitee.ru/enterprise_cases/qhhj.png)
-![SuperMap Software](https://gitee.ru/enterprise_cases/ctrj.png)
+![Программное обеспечение SuperMap](https://gitee.ru/enterprise_cases/ctrj.png)
 ![iGola](https://gitee.ru/enterprise_cases/igola.png)
 ![Zuoye Hezi (Homework Box)](https://gitee.ru/enterprise_cases/zyhz.png)
-![Donghai Airlines](https://gitee.ru/enterprise_cases/dhhk.png)
+![Донхайские авиалинии](https://gitee.ru/enterprise_cases/dhhk.png)
 ![Jiuzhou Cloud Soaring](https://gitee.ru/enterprise_cases/jzyt.png)
-![National University of Defense Technology](https://gitee.ru/enterprise_cases/gfkjdx.png)
-![People's Posts and Telecommunications Press](https://gitee.ru/enterprise_cases/rmydcbs.png)
-![Linxia Bank](https://gitee.ru/enterprise_cases/lsyh.png)
+![Национальный университет оборонных технологий](https://gitee.ru/enterprise_cases/gfkjdx.png)
+![Народная почта и телекоммуникационная пресса](https://gitee.ru/enterprise_cases/rmydcbs.png)
+![Банк Linxia](https://gitee.ru/enterprise_cases/lsyh.png)
 ![CSDN](https://gitee.ru/enterprise_cases/CSDN.png)
 ![ThoughtWorks](https://gitee.ru/enterprise_cases/pactera.png)
-![Image](https://gitee.ru/enterprise_cases/ztsz.png)
+![Изображение](https://gitee.ru/enterprise_cases/ztsz.png)
 ![Lujiazui China Pacific Life](https://gitee.ru/enterprise_cases/ljzgtrs.png)
 ![Poisson Technology](https://gitee.ru/enterprise_cases/bsjs.png)
 
-## Enterprise Edition Opening Purchase Address
+## Адрес первоначальной покупки Enterprise Edition
 
 [https://gitee.ru/enterprises](https://gitee.ru/enterprises)

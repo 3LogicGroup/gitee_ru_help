@@ -1,14 +1,14 @@
 ---
-title: Jenkins Task
-description: Jenkins tasks
+title: Задача Jenkins
+description: Задача Jenkins
 slug: /enterprise/pipeline/plugin/jenkins
 keywords:
  - Gitee
  - Jenkins
 ---
 
-## Form Description
+## Описание формы
 
-- **Golang Version**: Select the appropriate JDK version from the dropdown list. The plugin will initialize the JDK environment based on the selected version when executing.
-- **Job Name**: The name of the triggered Jenkins job.
-When the task is set with parameterized build, trigger parameters can be defined here.
+- **Версия Golang**: Выберите соответствующую версию JDK из выпадающего списка. При выполнении плагин инициализирует окружение JDK на основе выбранной версии.
+- **Имя задачи**: Имя запускаемой задачи Jenkins.
+Если задача задана с параметризованной сборкой, здесь можно задать параметры триггера.

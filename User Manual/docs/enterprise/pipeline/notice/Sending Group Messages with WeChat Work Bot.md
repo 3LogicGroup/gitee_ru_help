@@ -1,48 +1,48 @@
 ---
-title: Send group messages using Enterprise WeChat bots
-description: Send group message using WeChat Work bot
+title: Отправка групповых сообщений с помощью корпоративных роботов WeChat
+description: Отправка групповых сообщений с помощью робота WeChat
 slug: /enterprise/pipeline/notice/weixin
 keywords:
  - Gitee
  - Enterprise WeChat
- - Robot
- - Notification
+ - Робот
+ - Уведомление
 ---
 
-Users can configure enterprise WeChat group notifications in pipeline tasks to push pipeline task running information to specified enterprise WeChat groups.
+Пользователи могут настроить уведомления групп корпоративного робота WeChat в задачах конвейера, чтобы отправлять информацию о выполнении задач конвейера в указанные группы корпоративного WeChat.
 
-## Add Enterprise WeChat Group Robot
+## Добавление корпоративного робота группы WeChat
 
-Add a group robot by going to Group Settings -> Add Group Robot -> Create Robot.
+Добавьте группового робота, перейдя в Настройки группы -> Добавить группового робота -> Создать робота.
 
-![Enterprise WeChat Robot](./assets/enterprise-wechat-robot.png)
+![Enterprise WeChat](./assets/enterprise-wechat-robot.png)
 
-You can refer to the following document: [https://open.work.weixin.qq.com/help2/pc/14931?person_id=1&from=homesearch# Sending Messages with Group Robots](https://open.work.weixin.qq.com/help2/pc/14931?person_id=1&from=homesearch# Sending Messages with Group Robots)
+Вы можете обратиться к следующему документу: [https://open.work.weixin.qq.com/help2/pc/14931?person_id=1&from=homesearch# Отправка сообщений с помощью групповых роботов](https://open.work.weixin.qq.com/help2/pc/14931?person_id=1&from=homesearch# Отправка сообщений с помощью групповых роботов).
 
-Copy the webhook URL and configure it in the pipeline [Enterprise WeChat Notification Certificate](/enterprise/pipeline/enterprise-setup/certificate/introduce#im-通讯).
+Скопируйте URL-адрес вебхука и настройте его в конвейере [Сертификат уведомления Enterprise WeChat](/enterprise/pipeline/enterprise-setup/certificate/introduce#im-通讯).
 
-## Pipeline Task Configuration DingTalk Group Notification
+## Конфигурация задачи конвейера "Групповое уведомление DingTalk"
 
-1. In the pipeline task node, select to add DingTalk group notification.
+1. В узле задачи конвейера выберите добавить групповое уведомление DingTalk.
 
-2. Add WeChat Work credentials, please refer to the credential management [WeChat Webhook](/enterprise/pipeline/enterprise-setup/certificate/introduce#im-communication)
+2. Добавьте рабочие учетные данные WeChat, обратитесь к управлению учетными данными [WeChat Webhook](/enterprise/pipeline/enterprise-setup/certificate/introduce#im-communication)
 
-![Add WeChat Work Credentials](./assets/add-wechat-work-credentials.png)
+![Добавить рабочие учетные данные WeChat](./assets/add-wechat-work-credentials.png)
 
-3. Select notification events, when the task of this pipeline enters the selection state, it will trigger message notifications.
+3. Выберите события уведомления, когда задача этого конвейера переходит в состояние выбора, она будет запускать уведомления о сообщениях.
 
-4. Select the notification content, the selected notification content will be automatically added to the push message.
+4. Выберите содержание уведомления, выбранное содержание уведомления будет автоматически добавлено в push-сообщение.
 
-5. Support filling in custom content, support referencing environment variables, such as ${GITEE_PIPELINE_NAME}, support enterprise WeChat [Markdown](https://developer.work.weixin.qq.com/document/path/91770#markdown type) syntax
+5. Поддержка заполнения пользовательского контента, поддержка ссылок на переменные окружения, такие как ${GITEE_PIPELINE_NAME}, поддержка синтаксиса WeChat [Markdown](https://developer.work.weixin.qq.com/document/path/91770#markdown type).
 
-6. Please enter the user_id (Enterprise WeChat user_id) of the member to be @, or enter all
+6. Введите user_id (Enterprise WeChat user_id) участника, который будет @, или введите все.
 
-Obtain user_id through Enterprise WeChat Admin -> Address Book
+Получить идентификатор пользователя через Администратор Enterprise WeChat -> Адресная книга
 
-![Enterprise WeChat User ID](./assets/Enterprise-WeChat-User-ID.png)
+![Идентификатор пользователя Enterprise WeChat](./assets/Enterprise-WeChat-User-ID.png)
 
-## Trigger Pipeline Run
+## Триггерный запуск конвейера
 
-Trigger pipeline execution. When the pipeline task enters the running state configured in the notification plugin, trigger message notification.
+Триггер выполнения конвейера. Когда задача конвейера переходит в состояние выполнения, настроенное в плагине уведомлений, запускается уведомление о сообщении.
 
-![Enterprise WeChat notification message example](./assets/Enterprise WeChat notification message example.png)
+![Пример сообщения-уведомления Enterprise WeChat](./assets/Enterprise-WeChat-notification-message-example.png)

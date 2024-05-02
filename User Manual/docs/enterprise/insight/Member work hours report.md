@@ -1,7 +1,7 @@
 ---
-title: Member working hours report
-description: Member Work Hour Report
+title: Отчет о трудозатратах участников
+description: Отчет о трудозатратах участников
 slug: enterprise/insight/member-work-time
 ---
-Understand the workload of each member in the iteration report and optimize the work arrangement.
-![Image Description](./assets/member_work_time.png)
+Изучайте трудозатраты каждого участника в отчете об итерации и оптимизируйте организацию работы.
+![Описание изображения](./assets/member_work_time.png)

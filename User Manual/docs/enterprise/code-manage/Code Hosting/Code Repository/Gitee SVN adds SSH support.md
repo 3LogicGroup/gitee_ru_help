@@ -1,39 +1,39 @@
 ---
-title: Add SSH support to Gitee SVN
+title: Добавление поддержки SSH в Gitee SVN
 origin-url: https://gitee.ru/help/articles/4251
 ---
 
-Recently, Gitee SVN module has added support for SSH, which means that code repositories can be accessed using svn+ssh. There are two advantages of using SSH:
+Недавно модуль Gitee SVN добавил поддержку SSH - это означает, что доступ к репозиториям кода можно получить с помощью svn+ssh. Есть два преимущества использования SSH:
 
-- More secure
-- Support passwordless code push and pull (using certificate)
+- Более безопасен
+- Поддержка отправки и слияния кода без пароля (с использованием сертификата)
 
-![Image Description](./assets/110508_23520888_669935.webp)
+![Описание изображения](./assets/110508_23520888_669935.webp)
 
-### **Usage:**
+### **Использование:**
 
-Gitee repositories do not have SVN access support enabled by default. You need to enable SVN access in the project management interface, with the following configuration:
+В репозиториях Gitee по умолчанию не включена поддержка доступа SVN. Вам необходимо включить доступ SVN в интерфейсе управления проектами со следующими настройками:
 
-![Image Description](../../../../../assets/image30.png)
+![Описание изображения](../../../../../assets/image30.png)
 
-After enabling SVN access, you can access it in two ways, taking the J2Cache project as an example:
+После включения доступа к SVN вы можете получить доступ к нему двумя способами, взяв в качестве примера проект J2Cache:
 
 1. svn://gitee.ru/ld/J2Cache
 2. svn+ssh://gitee.ru/ld/J2Cache
 
-As shown in the figure below:
-![Image Description](../../../../../assets/image31.png)
+Как показано на рисунке ниже:
+![Описание изображения](../../../../../assets/image31.png)
 
-The first method is a regular SVN operation address, which does not support encryption, and requires the Gitee account and password to submit code.
+Первый метод - это обычный рабочий адрес SVN, не поддерживающий шифрование и требующий учетной записи Gitee и пароля для отправки кода.
 
-The second method combines SVN and SSH. Before using it, you need to configure the certificate. Please refer to the help documentation for configuration methods. This way, you can achieve secure and password-free code push and pull.
+Второй метод объединяет SVN и SSH. Перед его использованием вам необходимо настроить сертификат. Ознакомьтесь со справочной документацией по методам настройки. Таким образом, вы сможете добиться безопасных и не защищенных паролем отправки и слияния кода.
 
-(Please note that using svn+ssh, whether pushing or pulling code, requires the developer to be a repository developer member)
+(Обратите внимание, что использование svn+ssh, будь то отправка или слияние кода, требует, чтобы разработчик был участником репозитория для разработчиков)
 
 <hr />
 
-Finally, due to Gitee's SVN support, its underlying storage is still Git, so Gitee's SVN cannot completely replace SVN. It implements the overlapping functionality of Git and SVN. The intention of providing SVN support is not to replace existing SVN services, but to provide a smooth transition solution for SVN developers migrating to Git.
+Наконец, благодаря поддержке Git SVN его базовое хранилище все еще доступно, поэтому SVN от Gitee не может полностью заменить SVN. Он реализует перекрывающиеся функциональные возможности Git и SVN. Целью предоставления поддержки SVN является не замена существующих сервисов SVN, а предоставление решения для плавного перехода разработчиков SVN на Git.
 
-![Image Description](./assets/110651_1905c195_669935.webp)
+![Описание изображения](./assets/110651_1905c195_669935.webp)
 
-Therefore, it is recommended to use Git!
+Таким образом, рекомендуется использовать Git!

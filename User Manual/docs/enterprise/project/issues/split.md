@@ -1,11 +1,11 @@
 ---
-title: Break Down Work Item
+title: Разделение рабочего элемента
 ---
 
-Open any work item in the work item list, click on the "Sub Work Items" tab, select the type of work item from the "Add" menu on the right, then fill in the title of the sub work item in the input box, and click the "Create" button to complete the creation.
+Откройте любой рабочий элемент из списка, нажмите на вкладку "Дочерние рабочие элементы", выберите тип рабочего элемента из расположенного справа меню "Добавить". Затем введите заголовок дочернего рабочего элемента в поле ввода и нажмите кнопку "Создать".
 
-![Image Description](../docs/assets/image535.png)
+![Описание изображения](../docs/assets/image535.png)
 
-In the table view of the work item, you can click the icon at the right end of the work item title to quickly create a sub-work item.
+Для быстрого создания дочернего рабочего элемента вы можете нажать в табличном отображении рабочего элемента на иконку справа от заголовка рабочего элемента.
 
-![Image Description](../docs/assets/image526.png)
+![Описание изображения](../docs/assets/image526.png)

@@ -1,29 +1,28 @@
 ---
-title: Sonar quality analysis
+title: Анализ качества Sonar
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 origin-url: https://gitee.ru/help/articles/4182
 ---
+В настоящее время на платформе Gitee создана платформа анализа качества кода Sonar, которая может получать статистику количества строк кода/коэффициента дублирования, сканирование логических дефектов кода (например, нулевых указателей), сканирование рисков утечки паролей/ключей и обнаружение признаков плохого кода. Он предоставляет соответствующие подробные отчеты и предложения по улучшению.
 
-Currently, the Gitee platform has built a Sonar code quality analysis platform, which can perform code line count/duplicate rate statistics, code logic defect scanning (such as null pointers), password/key leakage risk scanning, and bad code smell detection. It provides corresponding detailed reports and repair evaluations.
+> **В настоящее время анализ качества доступен только для версии Enterprise Edition и рекомендуемых проектов.**
 
-> **Quality analysis is currently only available for Enterprise Edition and recommended projects.**
+## Включить проверку качества кода
 
-## Enable code quality check
-
-By accessing the homepage of the open-source project repository, go to the "Services" -> "Code Quality Analysis" menu to enter the code quality inspection feature page.
+Зайдя на домашнюю страницу репозитория проекта с открытым исходным кодом, перейдите в меню «Сервисы» -> «Анализ качества кода», чтобы перейти на страницу функции проверки качества кода.
 
 ![](https://images.gitee.ru/uploads/images/2019/1224/202958_7a15aee0_551147.png)
 
-By clicking the 'Start Analysis' button, fill in the directory where the code to be analyzed is located, the corresponding analysis branch, and the analysis language. After submission, the code quality analysis service will be started, and you can wait for the analysis to complete to obtain the code quality analysis report.
+Нажав кнопку «Начать анализ», укажите каталог, в котором находится анализируемый код, соответствующую ветку анализа и язык анализа. После отправки будет запущена служба анализа качества кода, и вы сможете дождаться завершения анализа, чтобы получить отчет об анализе качества кода.
 
 ![](https://images.gitee.ru/uploads/images/2019/1224/203018_b34cb135_551147.png)
 
 ![](https://images.gitee.ru/uploads/images/2019/1224/203035_e1c8e5a4_551147.png)
 
-## View quality check report
+## Просмотр отчета о проверке качества
 
-After the analysis service is completed, you can directly view the analysis report by accessing the code quality detection service page. By filtering the problem types, problem severities, and problem tags, you can filter the analyzed reports.
+После завершения анализа кода вы можете напрямую просмотреть отчет, открыв страницу службы определения качества кода. Фильтруя типы проблем, уровень серьезности проблем и теги проблем, вы можете фильтровать анализируемые отчеты.
 
 ![](https://images.gitee.ru/uploads/images/2019/1224/203054_be567419_551147.png)

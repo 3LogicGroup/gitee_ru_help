@@ -1,34 +1,34 @@
 ---
-title: K8S Deployment
-description: K8S Deployment
+title: Развертывание K8S
+description: Развертывание K8S
 slug: /enterprise/pipeline/plugin/k8s-deploy
 keywords:
  - Gitee
  - K8S
- - Deploy
+ - Развертывание
 ---
 
-## Form Introduction
+## Знакомство с формой
 
-- **Kubectl Version**: The Kubectl version is the version of the kubectl client used in the current step. Please select the Kubectl version compatible with the cluster, the default version is v1.16.4.
+- **Версия Kubectl**: Версия Kubectl - это версия клиента kubectl, используемого на текущем шаге. Пожалуйста, выберите версию Kubectl, совместимую с кластером, по умолчанию используется версия v1.16.4.
 
-Cluster Certificate: Use the cluster certificate to connect to the Kubernetes service cluster
+Сертификат кластера: Используйте сертификат кластера для подключения к кластеру служб Kubernetes.
 
-- **Namespace**: Namespace under Kubernetes, default is default.
+- **Пространство имен**: Пространство имен в Kubernetes, по умолчанию - default.
   
-- YAML Path: The YAML path is the relative path of the YAML file to be deployed in the source code. For example, "./manifests.yaml".
+- Путь YAML: Путь YAML - это относительный путь к файлу YAML, который необходимо развернуть в исходном коде. Например, "./manifests.yaml".
 
-- **Using Replace mode**: Suitable for scenarios where kubectl apply may not correctly calculate the diff and update the application when using kubectl install for the initial deployment. Note that the replace mode only supports Kubernetes clusters with imported certificates.
+- **Использование режима замены**: Подходит для сценариев, в которых kubectl apply может некорректно рассчитать разницу и обновить приложение при использовании kubectl install для первоначального развертывания. Обратите внимание, что режим замены поддерживает только кластеры Kubernetes с импортированными сертификатами.
 
-- **Skip TLS Verification**: Skip TLS verification. When the custom certificate declares insecure-skip-tls-verify as true, this configuration needs to be selected to ensure that kubectl skips verification.
+- **Пропустить проверку TLS**: Пропустить проверку TLS. Если в пользовательском сертификате объявлено значение insecure-skip-tls-verify как true, необходимо выбрать эту конфигурацию, чтобы kubectl пропускал проверку.
 
-- **Variables**: Variables are placeholders that need to be dynamically replaced. Variable values support obtaining global variables in the pipeline using ${variable key}. In YAML, you can use placeholders like ${GITEE_DOCKER_IMAGE} and they will be automatically replaced during deployment.
+- **Переменные**: Переменные - это заполнители, которые необходимо динамически заменять. Значения переменных поддерживают получение глобальных переменных в конвейере с помощью ${ключ переменной}. В YAML вы можете использовать такие заполнители, как ${GITEE_DOCKER_IMAGE}, и они будут автоматически заменяться во время развертывания.
 
-## Tips for Use
+## Советы по использованию
 
-In yaml files, ${} can be used as a placeholder for dynamically replacing variables that need to be replaced during actual usage.
+В yaml-файлах ${} можно использовать в качестве заполнителя для динамической замены переменных, которые должны быть заменены в процессе использования.
 
-For example, the image of `spec.template.spec.containers.image` can be obtained using the variable `GITEE_DOCKER_IMAGE`.
+Например, изображение `spec.template.spec.containers.image` может быть получено с помощью переменной `GITEE_DOCKER_IMAGE`.
 
 ```yaml
 apiVersion: apps/v1
@@ -67,7 +67,7 @@ spec:
     nodePort: 32500
 ```
 
-## Common combinations:
+## Общие комбинации:
 
 ```mermaid
 graph LR

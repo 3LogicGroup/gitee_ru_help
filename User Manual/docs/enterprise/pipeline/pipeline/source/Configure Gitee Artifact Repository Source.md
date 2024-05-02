@@ -1,18 +1,18 @@
 ---
-Configure Gitee Package Repository Source
-description: Configure Gitee artifact repository source
+Настройка источника репозитория пакетов Gitee
+description: Настройка источника репозитория артефактов Gitee
 slug: /enterprise/pipeline/source/artifact-repo
 keywords:
  - Gitee
- - Artifact Repository Source
+ - Источник репозитория артефактов
 ---
 
-During the code build process, artifacts are usually stored in the artifact repository under the code repository through two plugins: Upload and Publish. So how do we deploy these artifacts in the future? The steps are as follows:
+В процессе сборки кода артефакты обычно сохраняются в хранилище артефактов под хранилищем кода с помощью двух плагинов: Upload и Publish. Как же развернуть эти артефакты в будущем? Шаги следующие:
 
-1. Select the Gitee artifact repository source, configure the code repository, artifact repository, artifact version, and trigger events you need.
+1. Выберите источник репозитория артефактов Gitee, настройте репозиторий кода, репозиторий артефактов, версию артефакта и нужные вам триггерные события.
 
-![Configure Gitee artifact source](./assets/Configure Gitee artifact source.png)
+![Настройка источника артефактов Gitee](./assets/Configure Gitee artifact source.png)
 
-2. Select the host deployment plugin, configure the self-owned host, choose the source of the file as the workspace, and pull the artifact to the host for deployment.
+2. Выберите плагин развертывания на хосте, настройте собственный хост, выберите источник файла в качестве рабочего пространства и перетащите артефакт на хост для развертывания.
 
-![Configure artifact source host deployment](./assets/Configure artifact source host deployment.png)
+![Настройка развертывания узла источника артефактов](./assets/Configure artifact source host deployment.png)

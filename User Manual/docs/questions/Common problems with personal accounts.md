@@ -1,47 +1,47 @@
 ---
-title: Common problems of personal accounts
+title: Типичные проблемы с личным кабинетом
 origin-url: https://gitee.ru/help/articles/4286
 ---
 
-* [Why can't personal accounts unbind phone numbers](#%e4%b8%aa%e4%ba%ba%e8%b4%a6%e5%8f%b7%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a7%a3%e7%bb%91%e4%b8%8d%e4%ba%86%e6%89%8b%e6%9c%ba%e5%8f%b7)
-* [Personal account is already the creator or member of an enterprise account and cannot unbind the phone number](#%e4%b8%aa%e4%ba%ba%e8%b4%a6%e5%8f%b7%e5%b7%b2%e6%98%af%e4%bc%81%e4%b8%9a%e8%b4%a6%e5%8f%b7%e7%9a%84%e5%88%9b%e5%bb%ba%e8%80%85%e6%88%96%e6%88%90%e5%91%98%ef%bc%8c%e6%97%a0%e6%b3%95%e8%a7%a3%e7%bb%91%e6%89%8b%e6%9c%ba%e5%8f%b7)
+* [Почему не удается отвзять номер мобильного телефона от учётной записи?](#%e4%b8%aa%e4%ba%ba%e8%b4%a6%e5%8f%b7%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a7%a3%e7%bb%91%e4%b8%8d%e4%ba%86%e6%89%8b%e6%9c%ba%e5%8f%b7)
+* [Персональная учетная запись уже явялется создателем или участником предприятия, поэтому отвязать номер мобильного телефона невозможно](#%e4%b8%aa%e4%ba%ba%e8%b4%a6%e5%8f%b7%e5%b7%b2%e6%98%af%e4%bc%81%e4%b8%9a%e8%b4%a6%e5%8f%b7%e7%9a%84%e5%88%9b%e5%bb%ba%e8%80%85%e6%88%96%e6%88%90%e5%91%98%ef%bc%8c%e6%97%a0%e6%b3%95%e8%a7%a3%e7%bb%91%e6%89%8b%e6%9c%ba%e5%8f%b7)
 
 <a name="%e4%b8%aa%e4%ba%ba%e8%b4%a6%e5%8f%b7%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a7%a3%e7%bb%91%e4%b8%8d%e4%ba%86%e6%89%8b%e6%9c%ba%e5%8f%b7"></a>
 
-### Why can't personal accounts unbind phone numbers
+### Почему не удается отвзять номер мобильного телефона от учётной записи?
 
-It is not possible to unbind the phone number directly if the account has the following situations.
+Отвязка номера мобильного телефона напрямую невозможна в следующих ситуациях:
 
-* If there are enterprise accounts under a personal account or if the account is a member of an enterprise account, unbinding the phone is not allowed.
-* If the personal account is registered with a mobile phone number and is the only login method, unbinding the phone is not allowed.
+* Если под личной учётной записью есть учетная запись предприятия или если учётная запись явялется участником аккаунта предприятия, отвязка номера мобильного телефона заперещена. 
+* Если учётная запись зарегистрирована на номер мобильного телефона, и это единственный доступный способ входа в систему, отвязка номера мобильного телефона заперещена.
 
 <a name="%e4%b8%aa%e4%ba%ba%e8%b4%a6%e5%8f%b7%e5%b7%b2%e6%98%af%e4%bc%81%e4%b8%9a%e8%b4%a6%e5%8f%b7%e7%9a%84%e5%88%9b%e5%bb%ba%e8%80%85%e6%88%96%e6%88%90%e5%91%98%ef%bc%8c%e6%97%a0%e6%b3%95%e8%a7%a3%e7%bb%91%e6%89%8b%e6%9c%ba%e5%8f%b7"></a>
 
-### Personal account is already the creator or member of an enterprise account and cannot unbind the mobile number
+### Учетная запись уже явялется создателем или участником предприятия, поэтому отвязка номера мобильного телефона невозможна
 
-#### Personal account is a member of the enterprise account
+#### Учётная запись явялется участником учетной записи предприятия
 
-You can first log out of the enterprise account and then unbind it. After unbinding, you can contact the enterprise account administrator/creator to join the enterprise account.
+Сначала вы можете выйти из учётной записи предприятия и затем отвязать её. После отвязки учётной записи вам будет необходимо обратиться к администратору или создателю аккаунта предприятия, чтобы привязать её обратно. 
 
-#### Personal account is the creator of the enterprise account
+#### Личная учетная запись явялется создателем учетной записи предприятия
 
-For free enterprise accounts without important data, you can delete or transfer the enterprise before unbinding.
+Для бесплатных учетных записей предприятий, не содержащих важной информации, перед отвязкой можно удалить или перенести предприятие. 
 
-For enterprise accounts that are paid/free and have important data, the original phone number can only be released by changing to another phone number.
+Для платных и бесплатных учётных записей предприятий, хранящих важную информацию, номер мобильного телефона можно заменить только на другой номер телефона.
 
-Note: Delete operation is not supported for paid enterprises.
+Примечание: Опция удаления недоступна для оплаченных учётых записей.
 
 <a name="%e6%89%8b%e6%9c%ba%e5%8f%b7%e6%98%af%e4%b8%aa%e4%ba%ba%e8%b4%a6%e5%8f%b7%e7%9a%84%e5%94%af%e4%b8%80%e7%99%bb%e5%bd%95%e6%96%b9%e5%bc%8f%ef%bc%8c%e6%97%a0%e6%b3%95%e8%a7%a3%e7%bb%91%e6%89%8b%e6%9c%ba%e5%8f%b7"></a>
 
-### How to cancel Gitee account
+### Как закрыть учетную запись в Gitee
 
-After logging out, all data in the account will be cleared and the account cannot be recovered. Please be cautious.
+После выхода из учетной записи все данные из учетной записи будут удалены без возможности восстановления. Будьте внимательны.
 
-Gitee provides email account cancellation service. If you need to cancel your account, please send an email cancellation request to git#oschina.cn (# replaced with @). The relevant precautions are as follows:
+В Gitee доступна возможность закрытия учетной записи через электронную почту. Если вам нужно закрыть учетную запись, отправьте заявку на закрытие на электронную почту git#oschina.cn (# необходимо заменить на @). Учитывайте следующие меры предосторожности:
 
-* To unregister a Gitee account, send an email with the bound email of the account. If the account is registered using a mobile phone number and has not been bound to an email, send an email with any email address and provide the required information below.
-* Before sending the application for cancellation, make sure that there is no creation/joining of an enterprise and no repository information under the account.
-* Email subject: Cancel Gitee account
-Please specify the email, nickname, and personalized address of the account you want to cancel in the email body. If the account you want to cancel is a mobile phone registered account, please indicate the corresponding mobile phone number in the email.
-* Please do not include password and other sensitive information in the email!
-* After sending the email, the platform will process it within 30 working days. Please wait patiently for the email reply.
+* Для незарегистрированных в Gitee учетных записей необходимо отправить электронное письмо с привязанного ящика электронной почты. Если учетная запись зарегистрирована на номер мобильного телефона и не привязана ни к одному электронному почтовому ящику, отправить электронной письмо с любого электронного почтового ящика со следующей информацией
+* Перед отправкой заявки на закрытие учетной записи убедитесь в том, что у нее нет созданных или объединенных предприятий или репозиториев.
+* Тема письма: Закрытие учетной записи Gitee
+В теле письма укажите адрес электронной почты, никнейм, личный адрес учётной записи, которую вы хотите закрыть. Если учётная запись, которую вы хотите закрыть, зарегистрирована на номер мобильного телефона, укажите этот номер телефона в электронном письме.
+* Не указывайте в письме пароли или любую другую конфиденциальную информацию!
+* Обработка заявки занимает до 30 дней. Ожидайте ответ в указанный промежуток времени.

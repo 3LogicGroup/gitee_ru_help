@@ -1,32 +1,32 @@
 ---
-title: How to host AI models on Gitee
+title: Как разместить модели ИИ на Gitee
 slug: /enterprise/code-manage/code-hosting/large-file-manage/ai-model-hosting
 keywords:
-- AI
-- AI Model
+- ИИ
+- Модель ИИ
 - open ai
 - chatgpt
 ---
 
-To help developers learn and develop AI models more efficiently, Gitee now supports AI model hosting, providing stable and high-speed hosting services for AI developers. Now, in addition to code, you can also host your AI models on Gitee.
+Чтобы помочь разработчикам более эффективно изучать и разрабатывать модели ИИ, Gitee теперь поддерживает хостинг моделей ИИ, предоставляя разработчикам ИИ услуги стабильного и высокоскоростного хостинга. Теперь, помимо кода, вы также можете размещать на Gitee свои модели ИИ.
 
-## View AI Models
+## Просмотр моделей ИИ
 
-The management interface of AI models and the management interface of code have a unified style. The main difference is that after large files (such as AI model files), they are annotated with LFS file and indicate the space size they occupy, making it easy to locate the AI model files.
+Интерфейс управления моделями ИИ и интерфейс управления кодом имеют единый стиль. Основное отличие заключается в том, что после больших файлов (таких как файлы моделей ИИ) они помечаются как LFS-файл с указанием размера занимаемого пространства, что упрощает поиск файлов моделей ИИ.
 
-![LFS file size](./assets/gitee-ai-model-file-size.png)
+![Размер файла LFS](./assets/gitee-ai-model-file-size.png)
 
-## Download AI Models
+## Загрузка моделей ИИ
 
-### Downloading through web pages
+### Загрузка через веб-страницы
 
-If you want to download a specific AI model from the repository, just like downloading a file from the code repository, click on its filename and click download.
+Если вы хотите загрузить конкретную модель ИИ из репозитория, действуйте точно так же, как при загрузке файла из репозитория кода: щелкните по его имени и нажмите "Загрузить".
 
-![Download LFS file](./assets/gitee-ai-model-download-file.png)
+![Загрузка LFS-файла](./assets/gitee-ai-model-download-file.png)
 
-### Download via Command Line
+### Загрузка через командную строку
 
-In addition to the web page, you can also download the model file through the command line:
+В дополнение к веб-странице вы также можете загрузить файл модели через командную строку:
 
 ```bash
 # Clone Repository
@@ -41,35 +41,35 @@ git lfs install
 git lfs pull -I <model-file-path>
 ```
 
-## Manage models using Git LFS
+## Управление моделей с использованием Git LFS
 
-You can also use Git LFS to manage models. In the repository's tab page, go to "Manage" and then "Git LFS" option to view all LFS files in the repository, including their file types, sizes, and perform download and delete operations on them.
+Для управления моделями вы также можете использовать Git LFS. На странице вкладок репозитория перейдите в "Управление", а затем к опции "Git LFS", чтобы просмотреть все файлы LFS в репозитории, включая их типы файлов, размеры, и выполнить над ними операции загрузки и удаления.
 
-![Manage LFS](./assets/gitee-ai-model-manage-lfs.png)
+![Управление LFS](./assets/gitee-ai-model-manage-lfs.png)
 
-## How to Upload AI Models to Gitee
+## Как загрузить модели ИИ на Gitee
 
-So, how do you host AI models on Gitee? Is the process the same as code hosting?
+Итак, как размещать модели ИИ на Gitee? Процесс такой же, как при размещении кода?
 
-Similar to code hosting, supports two ways to upload AI models: importing from Hugging Face and pushing from local
+Аналогично хостингу кода поддерживаются два способа загрузки моделей искусственного интеллекта: импорт с платформы Hugging Face и отправку из локального репозитория
 
-### Import from Hugging Face
+### Импорт с Hugging Face
 
-Hugging Face is a very active AI startup. It has an active AI community. Over 5000 institutions have published content in the Hugging Face community, including Google AI, Facebook AI, Microsoft, etc., which makes it the most familiar AI technology community for developers at present.
+Hugging Face - очень активный стартап в области ИИ. У него активное сообщество ИИ. Более 5000 организаций опубликовали контент в сообществе Hugging Face, включая Google AI, Facebook AI, Microsoft и т.д., что делает его наиболее знакомым сообществом в области технологий ИИ для разработчиков в настоящее время.
 
-Now you can directly import Hugging Face models to Gitee using their model address, similar to importing code repositories.
+Теперь вы можете напрямую импортировать модели Hugging Face в Gitee, используя адрес их модели, аналогично импорту репозиториев кода.
 
-- Click the "+" next to the avatar in the upper right corner and select "Import from External Repository";
-- Enter the Hugging Face address you want to import into the Git repository URL, and Gitee will automatically set the name and path for it.
-- Click "Import" and wait a few minutes to complete, and the background will start synchronizing LFS files (the speed depends on the file size).
+- Нажмите "+" рядом с аватаром в правом верхнем углу и выберите "Импорт из внешнего репозитория";
+- Введите адрес Hugging Face, который вы хотите импортировать на URL-адрес репозитория Git, и Gitee автоматически установит для него имя и путь.
+- Нажмите "Импорт", подождите несколько минут до завершения операции, после чего в фоновом режиме начнется синхронизация файлов LFS (скорость зависит от размера файла).
 
-![Import LFS](./assets/gitee-ai-model-import-lfs.gif)
+![Импорт LFS](./assets/gitee-ai-model-import-lfs.gif)
 
-### Pushing from Local
+### Отправка из локального репозитория
 
-In addition to importing from Hugging Face, since Gitee fully supports Git LFS, Gitee also supports pushing AI models from local. The process and commands for pushing AI models are slightly different, as `git lfs` commands need to be included.
+В дополнение к импорту из Hugging Face, Gitee также поддерживает отправку моделей ИИ из локального репозитория, поскольку Gitee полностью поддерживает Git LFS. Процесс и команды для отправки моделей ИИ немного отличаются, поскольку необходимо включить команды `git lfs`.
 
-- Push Hugging Face's model repository
+- Отправка репозитория моделей Hugging Face
 
 ```bash
 # Clone the repository to local
@@ -83,7 +83,7 @@ git lfs fetch --all
 git lfs push https://gitee.ru/<your-gitee-repo-path> --all
 ```
 
-- Push your own AI model repository
+- Отправьте ваш собственный репозиторий моделей ИИ
 
 ```bash
 cd ai-models-project
@@ -113,16 +113,17 @@ git lfs push origin --all
 git push
 ```
 
-## Want More Storage Space?
+## Нужно больше места для хранения?
 
-:::tip
+:::подсказка
 
-Currently, this feature has been opened to all paid enterprises. Due to the large size of AI models, the storage and traffic costs are high. Paid enterprises can expand the LFS capacity to store more AI models.
+В настоящее время эта функция открыта для всех пользователей платных предприятий. Из-за большого размера моделей ИИ расходы на хранение и трафик высоки. Платные предприятия могут расширить емкость LFS для хранения большего количества моделей ИИ.
+
 
 :::
 
-In the Enterprise Console, click on the settings in the lower left corner to view the Git LFS quota usage and expand it as needed.
+В консоли Enterprise нажмите на "Настройки" в левом нижнем углу, чтобы просмотреть использование квоты Git LFS, и при необходимости расширьте ее.
 
-![LFS Expansion](./assets/gitee-ai-model-more-lfs.png)
+![Расширение LFS Expansion](./assets/gitee-ai-model-more-lfs.png)
 
-If you want to get more information about LFS expansion, please scan the QR code below to contact the exclusive consultant, or go to Gitee
+Если вы хотите получить больее подробную информацию о расширении LFS, отсканируйте приведенный ниже QR-код, чтобы связаться с эксклюзивным консультантом, или перейдите на сайт Gitee

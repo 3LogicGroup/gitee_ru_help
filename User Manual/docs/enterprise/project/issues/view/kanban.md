@@ -1,9 +1,9 @@
 ---
-title: Kanban View
+title: Доска Канбан
 ---
 
-> Kanban view is an important tool for visualizing workflows and can effectively help teams identify issues.
+> Доска Канбан являлется важным инструментом для визуализации рабочих процессов и помогает командам выявлять проблемы.
 
-Click on the view dropdown menu at the right end of the filter bar, then hover over the 'Kanban' option, and select the appropriate Kanban view from the expanded submenu.
+Нажмите на выпадающее меню в в правой части панели фильтров, затем наведите курсор на пункт "Канбан" и выберите подходящую доску Канбан из расширенного подменю.
 
-![Image Description](../../docs/assets/image537.png)
+![Описание изображения](../../docs/assets/image537.png)

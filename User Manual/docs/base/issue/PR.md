@@ -1,23 +1,23 @@
 ---
-title: Issue Associated with Pull Request
+title: Задача, связанная с запросом на слияние
 authors:
   - name: Cheese
 ---
 
-Issue associated with Pull Request, users can close the Issue when closing the Pull Request. The associated feature has the following characteristics:
+Если задача связана с запросом на слияние, пользователи могут закрыть задачу при закрытии запроса на слияние. Связанная функция имеет следующие характеристики:
 
-1. A PR can be associated with multiple issues, for example, simultaneously associated with issue1, issue2 in the format: `#issue1ident, #issue2dent`
-2. After PR is associated with an issue, the status of the issue will automatically change to 'In Progress'. When the PR is merged, the issue will be closed.
-3. Difference between Personal and Enterprise versions:
-   > - Personal edition, PR can only be associated with tasks in the current repository
-> - Enterprise edition, PP can associate tasks from all enterprises
+1. Запрос на слияние может быть связан с несколькими задачами, например, одновременно связан с задачей 1, задачей 2 в формате: `#issue1ident, #issue2dent`
+2. После поривязки запроса на слияние к задаче  статус задачи автоматически изменится на "Выполняется". После выполнения запроса на слияние задача будет закрыта.
+3. Различие между и версиями Personal и Enterprise:
+   > - В версии Personal запрос на слияние может быть связан только с задачами в текущем репозитории
+> - В версии Enterprise запрос на слияние может быть связан с задачами со всех предприятий
 
-## The specific operation of associating Issue with Pull Request is as follows
+## Конкретная операция привязки задачи к запросу на слияние заключается в следующем
 
-#### 1. Specify the PR to be associated in the Issue details page
+#### 1. На странице сведений о задаче укажите привязываемый запрос на слияние
 
 ![](PR.assets/image-1.png)
 
-#### 2. When the PR is merged and its associated Issue is closed
+#### 2. После выполнения запроса на слияние связанная с ним задача закрывается
 
 ![](PR.assets/image.png)

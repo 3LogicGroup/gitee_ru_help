@@ -1,22 +1,22 @@
 ---
-title: Document Editing
-description: Document editing
+title: Редактирование документов
+description: Редактирование документов
 slug: enterprise/knowledge/edit
 ---
-### Document Editing
+### Редактирование документов
 
-1. Click on any document to enter the document editing page.
-![Image Description](assets/image.png)
+1.  Для перехода на страницу редактирования документов нажмите на любой документ.
+![Описание изображения](assets/image.png)
 
-2. Click the 'Edit' button to edit the document.
-![Image Description](image297.png)
+2. Для редактирования документа нажмите кнопку "Редактировать".
+![Описание изображения](image297.png)
 
-### Document renaming
+### Переименование документов
 
-1. Click the edit icon to rename the document.
-![Image Description](image299.png)
+1. Чтобы переименовать документ, нажмите на значок "Редактировать".
+![Описание изображения](image299.png)
 
-### Page and Directory Management
+### Управление страницами и директориями
 
-1. Click the "Add" button to add pages and directories.
-![Image Description](image300.png)
+1.  Для добавления страниц и директорий нажмите кнопку "Добавить".
+![Описание изображения](image300.png)

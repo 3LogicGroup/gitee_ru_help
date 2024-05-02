@@ -1,23 +1,23 @@
 ---
-title: Basic Information
+title: Основная информация
 ---
 
-Click on the 'Settings' in the company navigation menu to enter the company information page.
+Для перехода на страницу информации о компании нажмите «Настройки» в меню навигации компании.
 
-![Image Description](assets/image402.png)
+![Описание изображения](assets/image402.png)
 
-## Edit basic information
+## Редактирование основной информацию
 
-Click on the edit icon in the upper right corner of the basic information card to edit the basic information.
+Чтобы отредактировать основную информацию, нажмите на значок редактирования в правом верхнем углу карточки основной информации.
 
-![Image Description](assets/image403.png)
+![Описание изображения](assets/image403.png)
 
-## Change Enterprise Logo
+## Изменение логотипа предприятия
 
-Click on the LOGO on the right:
+Нажмите на ЛОГОТИП справа:
 
-![Image Description](assets/image404.png)
+![Описание изображения](assets/image404.png)
 
-In the pop-up window, click the 'Upload' link, select a suitable LOGO image, then adjust the position and size of the image in the left area. After adjustment, click the 'OK' button to update the enterprise.
+Во всплывающем окне нажмите ссылку «Загрузить», выберите подходящее изображение ЛОГОТИПА, затем отрегулируйте положение и размер изображения в левой области. После настройки нажмите кнопку «ОК», чтобы обновить предприятие.
 
-![Image Description](assets/image405.png)
+![Описание изображения](assets/image405.png)

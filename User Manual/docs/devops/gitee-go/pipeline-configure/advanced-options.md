@@ -1,30 +1,30 @@
 ---
-title: Advanced Settings
+title: Расширенные настройки
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 slug: /gitee-go/pipeline/advantage-options
-description: What is Gitee Go
+description: Что такое Gitee Go
 origin-url: 
 ---
 
-### Block Builds
+### Блокировка сборок
 
-Blocking build is used to solve the scarcity of resources and prevent contamination of the environment when multiple people collaborate. There are two options for blocking build: non-blocking build and blocking build when the previous build is not finished.
+Блокировка сборок используется для решения проблемы нехватки ресурсов и предотвращения захламления среды при совместной работе нескольких пользователей. Существует два варианта блокировки сборок: неблокирующая сборка и блокирующая сборка, когда предыдущая сборка не завершена.
 
-- Non-blocking build: The normal, default build method that allows multiple builds to run in parallel under the same pipeline.
-- Block the next pipeline if the previous build is not finished: The next pipeline will not be triggered until the previous pipeline is completed. Only when the previous pipeline finishes running, the next pipeline will be automatically triggered.
+- Неблокирующая сборка: стандартный метод сборки, позволяющий запускать несколько сборок параллельно в рамках одного конвейера .
+- Блокировка конвейера, если предыдущая сборка не завершена: Следующий конвейер не будет запущен, пока не завершится работа предыдущего конвейера. Только после завершения работы предыдущего конвейера данных будет автоматически запущен следующий.
 
-Scenario Examples:
-A pipeline consists of three stages: compile, deploy to test environment, and functional testing. In build #1 triggered by A, both compile and deploy to test environment stages have been completed, and functional testing is currently in progress. At this point, B submits a code and triggers build #2. When it reaches the deploy to test environment stage, A's functional testing in build #1 is interrupted and fails. To avoid this issue, the execution order of pipeline builds can be limited. If the previous build has not been fully executed, the next build will be in a waiting state.
+Примеры сценариев:
+Конвейер данных состоит из трех этапов: компиляция, развертывание в тестовую среду и функциональное тестирование. В сборке №1, запущенной пользователем A, этапы компиляции и развертывания в тестовую среду завершены, и в настоящее время выполняется функциональное тестирование. В этот момент пользователь Б отправляет код и запускает сборку №2. Когда она достигает этапа развертывания в тестовую среду, функциональное тестирование в сборке №1, запущенной пользователем A, прерывается и завершается неудачей. Чтобы избежать этой проблемы, можно ограничить порядок выполнения сборок конвейера. Если предыдущая сборка еще не завершена, следующая сборка будет находиться в режиме ожидания.
 
-Specific Configuration:
+Конкретная конфигурация:
 
-【Recommended】You can define in the visual editing interface:
+【Рекомендуется】 Вы можете посмотреть на скриншоте:
 
-![Blocking Build Configuration](https://images.gitee.ru/uploads/images/2021/1117/180713_e6b2847a_5192864.png)
+![Настройка блокировки сборки](https://images.gitee.ru/uploads/images/2021/1117/180713_e6b2847a_5192864.png)
 
-You can define directly in Yml:
+Вы можете посмотреть в Yml:
 
 ```yaml
 # Optional Fields
@@ -33,14 +33,14 @@ strategy:
   blocking: false        
 ```
 
-### Timeout Tasks
+### Задачи с тайм-аутом
 
-Task timeout setting applies to all tasks within the pipeline, in minutes. The minimum timeout is 1 minute, and the maximum timeout is 1 day (1440 minutes). Inputs outside this range (1-1440) cannot be saved as configuration. It is recommended to input an integer (non-integer inputs will be rounded down, e.g. 1.5 minutes will be considered as 1 minute). Once a task exceeds the timeout, it will be canceled. If not set, there will be no timeout handling, and the task can continue to run.
-Specific Configuration:
-【Recommended】You can define in the visual editing interface:
-![Task Timeout Configuration](https://images.gitee.ru/uploads/images/2021/1117/180759_5c1a440b_5192864.png )
+Настройка тайм-аута задачи применяется ко всем задачам в конвейере (в минутах). Минимальный тайм-аут — 1 минута, максимальный — 1 день (1440 минут). Тайм-ауты вне этого диапазона (1–1440) не могут быть сохранены как конфигурация. Рекомендуется вводить целое число (нецелые значения будут округляться в меньшую сторону, например, 1,5 минуты будут считаться 1 минутой). Как только задача превысит таймаут, она будет отменена. Если этот параметр не установлен, обработка тайм-аута не будет осуществляться, и задача сможет продолжить выполнение.
+Конкретная конфигурация:
+【Рекомендуется】 Вы можете посмотреть на скриншоте:
+![Настройка тайм-аута задачи](https://images.gitee.ru/uploads/images/2021/1117/180759_5c1a440b_5192864.png )
 
-You can define directly in Yml:
+Вы можете посмотреть в Yml:
 
 ```yaml
 # Optional Fields

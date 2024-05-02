@@ -1,35 +1,35 @@
----
-title: What is Gitee Enterprise Edition
+﻿---
+title: Что такое Gitee Enterprise Edition
 slug: /enterprise/introduce/index
 keywords:
-  - enterprise
+  - предприятие
   - Enterprise Edition
 ---
 
 
-From 2013, Gitee code hosting platform has hosted over 20 million repositories before launching the enterprise version. Gitee platform is a well-known code hosting platform in China. After years of continuous improvement and operation, Gitee is capable of providing services to protect the core assets of enterprises - source code.
+С 2013 года хостинговая платформа Gitee разместила более 20 миллионов репозиториев до запуска версии Enterprise. Платформа Gitee - хорошо известная в Китае хостинговая платформа. После многих лет непрерывного совершенствования и эксплуатации Gitee способна предоставлять услуги по защите основных средств разработанного предприятиями кода. 
 
-So, we have launched Gitee Enterprise Edition based on the community edition, which is suitable for the development and team management models of most IT companies. Gitee
+Итак, мы запустили Gitee Enterprise Edition, основанную на community edition, которая подходит для моделей разработки и управления командой большинства ИТ-компаний. 
 
-## Gitee Enterprise Edition Features
+## Функции Gitee Enterprise Edition
 
-| Feature | Description |
+| Функция | Описание |
 | --- | --- |
-| More reasonable task allocation | Support custom task types and statuses, flexible multi-level subtasks, related tasks, and easy decomposition of large requirements into Kanban, list, and minimalist modes. Powerful search and filtering capabilities. |
-| Seamlessly integrate project management and development | All project resources and development progress are clear at a glance.<br/>Detailed statistical reports make it easy to grasp development details. Regularly create snapshots to effectively reduce code security risks.|
-| Powerful and convenient online documentation | Support for custom task types and statuses, flexible and versatile<br/>Multi-level subtasks, linked tasks, easy to split large requirements<br/>Switch between board, list, and minimalist modes, with powerful search and filtering capabilities|
-| Clear Member Status | Clear member permissions, flexible allocation<br/>Manage internal and outsourced teams together<br/>Keep track of members' work progress<br/>|
+| Более разумное распределение задач | Поддержка пользовательских типов задач и статусов, гибких многоуровневых подзадач, связанных задач и простая разбивка больших требований в канбан, список, а также минималистичные режимы. Мощные инструменты поиска и фильтрации. |
+| Плавная интеграция управления проектами и разработки | Все ресурсы проекта и ход разработки понятны с первого взгляда.<br/>Подробные статистические отчеты позволяют легко разобраться в деталях разработки. Регулярно создавайте моментальные снимки в целях эффективного снижения рисков для безопасности кода.|
+| Мощная и удобная онлайн-документация | Поддержка пользовательских типов задач и статусов, гибкость и универсальность<br/>Многоуровневые подзадачи, связанные задачи, простое разделение больших требований<br/>Переключение между режимами "доска", "список" и "минимализм" с мощными инструментами поиска и фильтрации|
+| Понятный статус участников | Понятные права доступа участников, гибкое распределение<br/>Совместное управление внутренними и внештатными командами<br/>Отслеживание прогресса в работе участников<br/>|
 
-## More Features
+## Расширенный функционал
 
-Stable and fast multi-level backup: full regional and network coverage, no longer worry about access barriers. Automatic backup, worry-free code
+Стабильное и быстрое многоуровневое резервное копирование: полный охват региона и сети, больше не нужно беспокоиться о барьерах доступа. Автоматическое резервное копирование, беспроблемная разработка кода
 
-More in line with the habits of Chinese users: free for individual developers (including private repositories), internationalization support, and integration of various practical development services.
+Больше соответствует привычкам китайских пользователей: бесплатна для индивидуальных разработчиков (включая частные репозитории), предусмотрены поддержка интернационализации и интеграция различных практических сервисов разработки.
 
-Legal protection and fault compensation: Sign a service contract and use it with confidence. Perfect fault compensation mechanism to make code hosting risk-free
+Юридическая защита и компенсация ущерба: Заключите договор на предоставление услуг и пользуйтесь ими, отбросив все сомнения. Отлаженный механизм компенсации ущерба делает хостинг кода безрисковым.
 
-Open Source China Premium Brand: The most active open-source technology community in China, dedicated to serving developers for 9 years
+Премиальный бренд Open Source China: Самое активное сообщество разработчиков технологий с открытым исходным кодом в Китае, уже 9 лет занимающееся обслуживанием разработчиков.
 
-## Over 250,000 companies and organizations are using Gitee Enterprise Edition
+## В настоящий момент свыше 250 000 компаний и организаций используют Gitee Enterprise Edition 
 
-![Image Description](./assets/introduce-cases.png)
+![Описание изображения](./assets/introduce-cases.png)

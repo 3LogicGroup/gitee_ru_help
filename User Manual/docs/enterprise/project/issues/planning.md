@@ -1,7 +1,7 @@
 ---
-title: Plan Work Item
+title: Планирование рабочего элемента
 ---
 
-Click on the 'Planning' in the left navigation of the project to use the professional Gantt chart tool. Users can quickly schedule work items and define the dependencies between work items using the Gantt chart.
+Нажмите на "Планирование" слева в меню навигации проекта чтобы использовать профессиональные инструменты диаграммы Ганта. Пользователи могут моментально забронировать рабочие элементы и определять зависимости между рабочими элементами с помощью диаграммы Ганта.
 
-![Image Description](../docs/assets/image534.png)
+![Описание изображения](../docs/assets/image534.png)

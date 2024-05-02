@@ -1,4 +1,4 @@
-# Appendix - Configuring internal DNS and NTP for all server nodes
+# Приложение - Настройка внутреннего DNS и NTP для всех серверных узлов
 
 ## DNS
 

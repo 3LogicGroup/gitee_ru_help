@@ -1,13 +1,13 @@
 ---
-title: Custom task types and statuses
+title: Пользовательские настройки типов и статусов задач
 origin-url: https://gitee.ru/help/articles/4217
 ---
 
 
-As shown in the figure below, log in to the owner account of the enterprise and click on "Manage" - "Task Type and Status Management" to create a new task type/edit existing task types:
+Чтобы создать новый тип задачи/отредактировать существующие типы задач, войдите в учетную запись владельца предприятия и нажмите на "Управление" - "Управление типами задач и статусами", как показано на рисунке ниже:
 
-![Image Description](assets/image293.png)
+![Описание изображения](assets/image293.png)
 
-Switch to the task status tab to create a new task status/edit existing task status
+Чтобы создать новый статус задачи/отредактировать существующий статус задачи, перейдите на вкладку "Статус задачи"
 
-![Image Description](assets/image294.png)
+![Описание изображения](assets/image294.png)

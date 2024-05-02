@@ -1,5 +1,5 @@
 ---
-title: What is a Release
+title: Что такое релиз
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
@@ -8,111 +8,111 @@ authors:
 # slug: /demo
 ---
 
-## Introduction
+## Введение
 
-Release is a top-level object with Changelogs and binary files, representing all project history before a specific point in time that goes beyond the Git architecture itself.
+Релиз - это объект верхнего уровня с Changelogs и бинарными файлами, представляющий всю историю проекта до определенного момента времени, который выходит за рамки самой архитектуры Git.
 
-## Purpose of Release
+## Назначение релиза
 
-Through `release`, not only can you view the project history through source code, but you can also further describe the project status at this time through pre-compiled binary files.
+С помощью `release` можно не только просмотреть историю проекта через исходный код, но и более подробно описать состояние проекта на данный момент через предварительно скомпилированные бинарные файлы.
 
-"The significance and role of being "beyond the Git architecture itself" are:
+"Значение и роль того, что мы находимся "за пределами самой архитектуры Git", таковы:
 >
-> 1. Git itself can only record project modifications, and fundamentally is not suitable for recording compiled project binary files.
-By using `release`, developers can save the compiled binary files of the project when releasing a version, making it convenient for users to download and search for specific versions of binary files.
+> 1. Сам Git может записывать только модификации проекта и принципиально не подходит для записи скомпилированных бинарных файлов проекта.
+Используя `release`, разработчики могут сохранять скомпилированные бинарные файлы проекта при релизе версии, что делает удобным для пользователей скачивание и поиск конкретных версий бинарных файлов.
 >  
 
-## Summary of Release Features
+## Краткое описание возможностей релиза
 
-Combining the characteristics described in the previous section `Beyond the Git architecture itself`, we can understand and summarize as follows:
+Объединив характеристики, описанные в предыдущем разделе `Без самой архитектуры Git`, мы можем понять и обобщить следующее:
 >
-> 1. The release version is not provided by the native capability of Git, but based on the version management capability of Git-based platforms (such as [Gitee]) provided by hosting platforms.
-> 2. When users access a project, they can quickly download the corresponding version binary files through `release` without having to download the source code and compile it locally, greatly reducing the learning cost for users to use the software.
-> 3. In a release, it generally includes `source code of the corresponding release version`, `source code compression package of the corresponding release version` (provided by the platform with an Archive download address without the need to clone using Git command), and `binary files uploaded by the developer when creating the release` (i.e., attachments).
-> 4. `Binary files uploaded by developers when creating releases` (i.e., attachments) are decided by developers whether to upload when publishing a `release`. In general, developers can provide `pre-made installation packages/executable programs`, `patches`, `version-specific usage documents or development documents`, etc. through the release attachment feature.
+> 1. Версия релиза не обеспечивается собственными возможностями Git'а, а основывается на возможностях управления версиями, предоставляемых хостинговыми платформами на базе Git'а (например, [Gitee]).
+> 2. Когда пользователи получают доступ к проекту, они могут быстро загрузить бинарные файлы соответствующей версии через `release` без необходимости загружать исходный код и компилировать его локально, что значительно сокращает затраты пользователей на обучение работе с программным обеспечением.
+> 3. В релиз обычно входят `исходный код соответствующей версии релиза`, `пакет сжатия исходного кода соответствующей версии релиза` (предоставляется платформой с адресом архивной загрузки без необходимости клонирования с помощью команды Git), а также `бинарные файлы, загруженные разработчиком при создании релиза` (т.е. вложения).
+> 4. `Двоичные файлы, загружаемые разработчиками при создании релизов` (т.е. вложения), определяются разработчиками, загружать ли их при публикации `релиза`. В общем случае разработчики могут предоставлять `готовые установочные пакеты/исполняемые программы`, `патчи`, `документы по использованию конкретной версии или документы по разработке` и т. д. через функцию вложения релиза.
 
-## Usage and management of release features
+## Использование и управление функциями релиза
 
-You can create releases on [Gitee] to package software, release notes, and attachments for others to download.
+Вы можете создавать релизы на [Gitee], чтобы упаковывать программное обеспечение, заметки о релизе и вложения для загрузки другими пользователями.
 
-By creating a release, you can deliver project iterations to users.
+Создавая релиз, вы можете доставлять итерации проекта пользователям.
 
-> Repository collaborators and personnel with write permission to the repository can create, edit, and delete releases.
+> Создавать, редактировать и удалять релизы могут сотрудники, сотрудничающие с репозиторием, и персонал с правом записи в репозиторий.
 
-Distribution Management and Usage
+Управление и использование дистрибутивов
   
-### How to Create a Distribution
+### Как создать дистрибутив
 
-1. On [Gitee], navigate to the main page of the repository.
+1. На [Gitee] перейдите на главную страницу репозитория.
 
-2. On the right side of the file list, click on "Create" (for initial creation) or "Release Title" or "All".
+2. В правой части списка файлов нажмите "Создать" (для первоначального создания) или "Название релиза" или "Все".
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/1126/115356_1d0310c8_8249553.jpeg "02.jpeg")
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/1126/115356_1d0310c8_8249553.jpeg "02.jpeg")
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/1126/115333_3c45bb5d_8249553.jpeg "01.jpeg")
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/1126/115333_3c45bb5d_8249553.jpeg "01.jpeg")
 
-3. Click the `+ Create Release` button in the upper right corner.
+3. Нажмите кнопку `+ Создать релиз` в правом верхнем углу.
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/1126/115437_2b091816_8249553.jpeg "03.jpeg")
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/1126/115437_2b091816_8249553.jpeg "03.jpeg")
 
-4. Enter the version number of the release, it is recommended to use [semantic versioning](https://semver.org/lang/zh-CN/) to name the tag.
+4. Введите номер версии релиза, для названия тега рекомендуется использовать [semantic versioning](https://semver.org/lang/zh-CN/).
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/1126/115449_b2ac4158_8249553.jpeg "04.jpeg")
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/1126/115449_b2ac4158_8249553.jpeg "04.jpeg")
 
-5. Expand the dropdown list on the right and select the branch that includes the project to be published.
+5. Разверните выпадающий список справа и выберите ветку, в которую входит публикуемый проект.
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/1126/115459_fce043f4_8249553.jpeg "05.jpeg")
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/1126/115459_fce043f4_8249553.jpeg "05.jpeg")
 
-6. Enter the title and description of the distribution, you can also insert links and images in the description.
+6. Введите название и описание раздачи, в описание также можно вставить ссылки и изображения.
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/1126/120023_15aa67fe_8249553.jpeg "06.jpeg")
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/1126/120023_15aa67fe_8249553.jpeg "06.jpeg")
 
-7. If your distribution needs to add attachments, please `drag and drop` or `manually select` files in the file box.
+7. Если к вашей раздаче необходимо добавить вложения `перетащите` или `выберите` файлы вручную в поле для файлов.
 
-> Individual attachments cannot exceed 100M (GVP project 200M)
-> The total attachment size for each repository should not exceed 1G (recommended projects should not exceed 5G; GVP projects should not exceed 20G)
-> The total capacity of attachments includes repository attachments and release attachments.
+> Размер отдельных вложений не должен превышать 100М (проект GVP - 200М).
+> Общий размер вложений для каждого репозитория не должен превышать 1 Гб (рекомендуемые проекты не должны превышать 5 Гб; GVP-проекты не должны превышать 20 Гб)
+> Общий объем вложений включает вложения репозитория и вложения релиза.
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/1126/124522_4e4e24ba_8249553.jpeg "08.jpeg")
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/1126/124522_4e4e24ba_8249553.jpeg "08.jpeg")
 
-8. If you need to inform the user that the release version is still unstable, check `This is a preview version`.
+8. Если вам нужно сообщить пользователю, что релизная версия еще нестабильна, сделайте пометку `Это предварительная версия`.
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/1126/124533_2adadaaa_8249553.jpeg "09.jpeg")
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/1126/124533_2adadaaa_8249553.jpeg "09.jpeg")
 
-9. After checking the information is correct, click 'Create release' to publish the release. If you need to modify the release after it is published, refer to 'Edit release'.
+9. После проверки правильности информации нажмите кнопку "Создать релиз", чтобы опубликовать релиз. Если вам нужно изменить релиз после его публикации, обратитесь к разделу "Редактировать релиз".
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/1126/124626_48b6df86_8249553.jpeg "10.jpeg")
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/1126/124626_48b6df86_8249553.jpeg "10.jpeg")
 
-### How to Edit a Distribution
+### Как редактировать дистрибутив
 
-1. On Gitee, navigate to the main page of the repository.
+1. На Gitee перейдите на главную страницу репозитория.
 
-2. On the right side of the file list, click on `Release Title` or `All`.
+2. В правой части списка файлов нажмите на `Название релиза` или `Все`.
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/1126/124730_fb2abe5b_8249553.jpeg "01.jpeg")
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/1126/124730_fb2abe5b_8249553.jpeg "01.jpeg")
 
-3. On the right side of the release that needs to be edited, click on the `edit icon`.
+3. Справа от релиза, который необходимо отредактировать, нажмите на значок `редактировать`.
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/1126/125302_5158e539_8249553.jpeg "13.jpeg")
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/1126/125302_5158e539_8249553.jpeg "13.jpeg")
 
-4. After editing the content you need to modify, click 'Update'.
+4. После редактирования содержимого, которое необходимо изменить, нажмите кнопку "Обновить".
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/1126/125034_c0ef2f82_8249553.jpeg "12.jpeg")
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/1126/125034_c0ef2f82_8249553.jpeg "12.jpeg")
 
-### How to Delete a Release
+### Как удалить релиз
 
-1. On Gitee, navigate to the main page of the repository.
+1. На Gitee перейдите на главную страницу репозитория.
 
-2. On the right side of the file list, click on `Release Title` or `All`.
+2. В правой части списка файлов нажмите на `Название релиза` или `Все`.
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/1126/124730_fb2abe5b_8249553.jpeg "01.jpeg")
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/1126/124730_fb2abe5b_8249553.jpeg "01.jpeg")
 
-3. On the right side of the release that needs to be deleted, click on the `delete icon`.
+3. Справа от релиза, который необходимо удалить, нажмите на значок `удалить`.
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/1126/124940_38df24bf_8249553.jpeg "11.jpeg")
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/1126/124940_38df24bf_8249553.jpeg "11.jpeg")
 
-4. Click the 'Confirm' button in the delete release dialog to delete the release.
+4. Для удаления релиза нажмите кнопку `Подтвердить` в диалоговом окне удаления релиза.
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/1126/125400_6a88eeaa_8249553.jpeg "14.jpeg")
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/1126/125400_6a88eeaa_8249553.jpeg "14.jpeg")
 
 [Gitee]:https://gitee.ru

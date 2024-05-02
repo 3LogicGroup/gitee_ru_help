@@ -1,6 +1,6 @@
-# Format and mount data disk
+# Форматирование и монтирование диска с данными
 
-Disk partition
+Создание разделов на диске
 
 ```sh
 fdisk /dev/vdb
@@ -31,7 +31,7 @@ Changed type of partition 'Linux' to 'Linux LVM'.
 Command (m for help): w
 ```
 
-Create pv and vg
+Создание физических (PV) и логических томов (VG)
 
 ```
 
@@ -64,7 +64,7 @@ root@gitee-git-service1:/home/ubuntu# vgdisplay
   VG UUID               EE9XNp-GRa4-GZLm-jDTv-scVy-ovZm-Gfj4aR
 ```
 
-Create lvm
+Создание LVM
 
 ```sh
 # Created a logical volume named lvm_git_server using all available space of the volume group vg_git_server
@@ -93,7 +93,7 @@ root@gitee-git-service1:/home/ubuntu# lvdisplay
 
 ```
 
-Format mounting
+Точки монтирования
 
 ```sh
 

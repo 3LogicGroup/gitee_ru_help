@@ -1,106 +1,106 @@
 ---
-title: Basic Concepts/Common Commands and Examples of Git
+title: Основные понятия/Распространенные команды и примеры Git
 origin-url: https://gitee.ru/help/articles/4110
 ---
 
-### **What is a Repository**
+### **Что такое репозиторий**
 
-In the concept of Git, a repository refers to all the files in the folder where the .git directory is located, including hidden files. The Git program searches for the .git file in the current directory and the parent directory. If it exists, all the files in the folder where the .git directory is located will be treated as the files you need to manage. Therefore, if you want to treat a certain folder as a Git repository, you can execute the commands in the terminal (Cmd, PoewrShell, or Bash for Windows) under that folder.
+В концепции Git репозиторий относится ко всем файлам в папке, где находится директория .git, включая скрытые файлы. Программа Git выполняет поиск файла .git как в текущей, так и в родительской директориях. Если он существует, все файлы в папке, где находится директория .git, будут рассматриваться как файлы, которыми вам нужно управлять. Следовательно, если вы хотите рассматривать определенную папку как репозиторий Git, вы можете выполнить в этой папке команды в терминале (Cmd, PowerShell или Bash для Windows).
 
 ```bash
 git init
 ```
 
-In this way, the desired folder becomes a Git-managed repository.
+Таким образом, нужная папка становится репозиторием, управляемым Git.
 
-### **What is a Version**
+### **Что такое версия**
 
-Strictly speaking, Git does not have the concept of versions. However, people have developed this thing called versions in Git. In Git, the counting basis is commits, which we often refer to as commits. Every time we make a change, we can generate a commit. When commits accumulate, they can be marked as a product version. We can put a tag on the current commit and call this tag version X. Please note that in Git, a version is just a tag for a commit and has no other meaning. Git itself only has the tagging function and does not have versioning functionality. The versioning functionality is extended based on tags. Git itself does not have it.
+Строго говоря, в Git нет понятия версий. Однако люди разработали то, что в Git называется версиями. В Git основой для подсчета являются коммиты, которые мы часто называем фиксациями. Каждый раз, когда мы вносим изменение, мы можем генерировать коммит. Когда коммиты накапливаются, они могут быть помечены как версия продукта. Мы можем поместить тег на текущую фиксацию и назвать этот тег версией X. Обратите внимание, что в Git версия - это просто тег для коммита и не имеет никакого другого значения. Сам Git имеет только функцию тегирования и не обладает функциональностью управления версиями. Функциональность управления версиями расширена на основе тегов. В самом Git ее нет.
 
-### What is a branch
+### Что такое ветка
 
-This is one of the most important and commonly used concepts and features in Git. The branch feature solves the problem of conflicts between the version being developed and the stable version that is deployed. In Git, our default branch is usually Master, but this can be modified. After completing a development on the Master branch and generating a stable version, when we need to add new features or make modifications, we only need to create a new branch and develop on that branch. Once completed, we can merge it into the main branch.
+Это одна из наиболее важных и часто используемых концепций и функций в Git. Функция ветвления решает проблему конфликтов между разрабатываемой версией и развернутой стабильной версией. В Git нашей веткой по умолчанию обычно является Master, но это можно изменить. После завершения разработки в основной ветке и создания стабильной версии, когда нам нужно добавить новые функции или внести изменения, нам нужно только создать новую ветку и вести разработку в этой ветке. После завершения мы можем объединить ее с основной веткой.
 
-### What is a commit
+### Что такое коммит
 
-Commit is also a very important concept in Git. Git manages versions through commits. In the entire Git repository, the code exists not as individual code snippets, but as individual commits. Git uses a 40-character hexadecimal string to identify each commit, which ensures that each commit is uniquely identified. By organizing a sorted list of commits based on time, we form the branches we talk about. Please note that branches are essentially just indexes, so we can freely roll back and make corrections. Even if they are lost for some reason, they can be rebuilt. In addition, regarding Git's storage method: Git only stores the modified parts and does not store the entire file. Therefore, please do not delete the contents of a folder unless you are sure you no longer need it.
+Коммит также является очень важной концепцией в Git. Git управляет версиями с помощью коммитов. Во всем репозитории Git код существует не в виде отдельных фрагментов кода, а в виде отдельных коммитов. Git использует 40-символьную шестнадцатеричную строку для идентификации каждого коммита, что гарантирует уникальную идентификацию каждого коммита. Упорядочивая отсортированный список коммитов по времени, мы формируем ветки, о которых говорим. Обратите внимание, что ветки, в сущности, являются просто индексами, поэтому мы можем свободно откатываться назад и вносить исправления. Даже если они по какой-либо причине потеряются, их можно будет восстановить. Кроме того, что касается метода хранения Git: Git сохраняет только измененные части и не сохраняет файл целиком. Поэтому не удаляйте содержимое папки, если вы не уверены, что оно вам больше не нужно.
 
-### What is a sync
+### Что такое синхронизация
 
-Synchronization, also known as pulling, is a very frequent operation in Git. Unlike SVN, all repositories in Git are equal, so to ensure code consistency, it is recommended to perform a synchronization operation before each operation. Specifically, execute the following command in the working directory:
+Синхронизация, также известная как слияние, является очень часто выполняемой в Git операцией. В отличие от SVN, все репозитории в Git равноправны, поэтому для обеспечения согласованности кода рекомендуется перед каждой операцией выполнять операцию синхронизации. В частности, выполните в рабочей директории следующую команду:
 
 ```bash
 git pull origin master
 ```
 
-The `origin` represents your remote repository, which can be viewed by the command `git remote -v`. `master` is the branch name, if you have a different local branch, please replace it with the name of the other branch. Also, because there may be conflicts between the remote repository and your local repository, please refer to the advanced article on how to handle conflicts when conflicts occur.
+Параметр `origin` представляет вам удаленный репозиторий, который можно просмотреть при помощи команды `git remote -v`. `master` - имя ветки. Если у вас другая локальная ветка, замените её именем из другой ветки. А также, поскольку между удаленным репозиторием и вашим локальным репозиторием могут возникнуть конфликты, ознакомьтесь со статьей, в которой приведены указания, что нужно делать в случае возникновения конфликтов.
 
-### What is a push
+### Что такое отправка
 
-Pushing is also a very frequent operation. When your code is updated, you need to update it to the remote repository. This action is called pushing and the command executed is the same as pulling, except that the word 'pull' is changed to 'push'. Similarly, if there are updates in the remote repository that your local repository doesn't have, you need to synchronize before pushing. If you are sure that you don't need the remote updates, you can force push by adding the -f option when pushing, but I do not recommend doing this in collaborative development because it may overwrite others' code.
+Отправка также является очень часто выполняемой операцией. Когда ваш код обновляется, вам необходимо обновить его в удаленном репозитории. Это действие называется отправкой, а выполняемая команда тождественна операции слияния, за исключением того, что слово "слияние" заменено на "отправка". Аналогично, если в удаленном репозитории есть обновления, которых нет в вашем локальном репозитории, вам необходимо выполнить синхронизацию перед отправкой. Если вы уверены, что вам не нужны удаленные обновления, вы можете выполнить принудительную отправку, добавив при отправке дополнительную функцию -f , но  при совместной разработке делать этого не рекомендуется, поскольку может привести к перезаписи чужого кода.
 
-Example of pushing code:
+Пример кода отправки:
 
 ```bash
 git push origin master
 ```
 
-Force Push Code Example:
+Пример кода принудительной отправки:
 
 ```bash
 git push origin master -f
 ```
 
-### What is a conflict
+### Что такое конфликт
 
-When using Git for development, if only one person is using it, conflicts are unlikely to occur. However, in the case of collaborative development with multiple people, conflicts are a normal occurrence. Please refer to the 'Handling Code Conflicts' section in the Advanced Guide for information on how to handle conflicts.
+При использовании для разработки Git конфликты маловероятны, если он используется только одним человеком. Однако в случае совместной разработки несколькими людьми конфликты являются нормальным явлением. Для получения информации о том, как устранять конфликты, обратитесь к разделу "Устранение конфликтов кода" расширенного руководства.
 
-### What is a merge
+### Что такое объединение
 
-The merge command is usually used to merge two branches, typically used for local branches, and remote branches are mostly merged using the Pull command. The function of this command is to merge the branch to be merged with the target branch. Note that this command will only merge the differences before the current version. The commit history of the two branches will be reorganized based on the submission time, so there may only be one conflict but it will generate a commit. If you don't want to generate this commit, add the --base parameter.
+Команда merge(объединить) обычно используемая для объединения двух веток, обычно используется для объединения локальных ветвей, а удаленные ветки в основном объединяются с помощью команды Pull. Функция этой команды заключается в объединении подлежащей объединению ветки с целевой веткой. Обратите внимание, что эта команда объединит различия только до текущей версии. История фиксации двух ветвей будет реорганизована в зависимости от времени отправки, поэтому может возникнуть только один конфликт, но он сгенерирует коммит. Если вы не хотите генерировать этот коммит, добавьте параметр --base.
 
-### What is staging
+### Что такое промежуточная обработка
 
-This is both a concept and a command. Its meaning is literally as described. Its function is to temporarily store your current work and then do other things. When you finish doing other things, you can switch back and continue. Note that the stash is only for the last change, that is, all changes to the current version. The specific command is:
+Это одновременно и концепция, и команда. Ее значение буквально соответствует описанию. Ее предназначение заключается в том, чтобы временно сохранить вашу текущую работу, а затем выполнять другие действия. Когда вы закончите выполнять другие действия, вы можете переключиться обратно и продолжить. Обратите внимание, что хранилище предназначено только для последнего изменения, то есть для всех изменений в текущей версии. Конкретная команда выглядит следующим образом:
 
-#### **Stash the current changes:**
+#### **Скрыть текущие изменения:**
 
 ```bash
 git stash
 ```
 
-#### **Restore the last staged changes**
+#### **Восстановить последние скрытые изменения**
 
 ```bash
 git stash pop
 ```
 
-#### **Check how many files are in staging**
+#### **Проверить количество скрытых файлов**
 
 ```bash
 git stash list
 ```
 
-What is a rollback?
+Что такое откат?
 
-Undoing a command is very common because for some reason, we no longer need our changes or the new changes have some problems. We need to revert to a previous version. At this time, we need to use the undo command, or it should be translated as reset. The specific command is as follows:
+Отмена команды очень распространена, потому что по какой-то причине нам больше не нужны внесенные нами изменения или с новыми изменениями возникают какие-то проблемы. Нам нужно вернуться к предыдущей версии. На данный момент нам нужно использовать команду undo (отменить), или ее следует перевести как reset (сброс). Конкретная команда выглядит следующим образом:
 
-#### **Revert the Current Modifications:**
+#### **Отмена текущих изменений:**
 
 ```bash
 git reset --hard
 ```
 
-Please note: The above command will completely reset your modifications. If you want to keep certain files, please use the 'checkout + file path' command to undo the modifications individually.
+Обратите внимание: вышеприведенная команда полностью сбросит ваши изменения. Если вы хотите сохранить определенные файлы, используйте команду 'checkout + file path', чтобы отменять изменения по отдельности.
 
-#### If you want to reset to a specific version, you can change --hard to the specific Commit ID like:
+#### Если вы хотите вернуться к определенной версии, вы можете изменить --hard на ID  конкретного го коммита, например:
 
 ```bash
 git reset 1d7f5d89346
 ```
 
-Please note that your changes still exist, but the version number of your most recent commit has been reset to the version you want to reset. If you want to completely discard the changes, just add the --hard parameter.
+Обратите внимание на то, что ваши изменения все еще существуют, но номер версии вашего последнего коммита был сброшен до версии, которую вы хотите сбросить. Если вы хотите полностью отменить изменения, просто добавьте параметр --hard.
 
-**The explanations provided here are only some basic concepts and terms of Git that are frequently used in work. They do not include all the terms and concepts of Git. Therefore, if there are terms not mentioned in this document, please use a search engine to find their explanations. Also, please point out any incorrect or missing explanations and provide the correct ones. Thank you.**
+** Здесь приведены объяснения  лишь некоторых базовых понятий и терминов Git, которые часто используются в работе. Они не охватывают все термины и концепции Git. Поэтому, если есть термины, не упомянутые в этом документе, воспользуйтесь поисковой системой, чтобы найти объяснение их значений. Кроме того, просим указать на любые неправильные или отсутствующие объяснения и предоставьте правильные. Спасибо**
 
-Furthermore, this article only mentions some commonly used concepts and commands, but Git has much more than that. Therefore, if you cannot find the content you are looking for in this article, please search on your own. Here, I recommend Git's official documentation (both in Chinese and English, maintained by the official and volunteers): http://git-scm.com/book/zh/v2, and the blog of Liao Xuefeng: http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000.
+Более того, в этой статье упоминаются лишь некоторые часто используемые концепции и команды, но в Git их гораздо больше. Поэтому, если вы не можете найти искомый контент в этой статье, выполните поиск самостоятельно. Рекомендуем официальную документацию Git (как на китайском, так и на английском языках, поддерживаемую официальными лицами и волонтерами): http://git-scm.com/book/zh/v2, а также блог Ляо Сюэфэна: http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000.

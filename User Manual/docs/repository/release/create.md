@@ -1,5 +1,5 @@
 ---
-title: Create a Release
+title: Создать релиз
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
@@ -7,52 +7,52 @@ authors:
 # slug: /demo
 ---
 
-You can create releases on [Gitee] to package software, release notes, and attachments for others to download.
+Вы можете создавать релизы на [Gitee], чтобы упаковывать программное обеспечение, заметки о релизе и вложения для загрузки другими пользователями.
 
-By creating a release, you can deliver project iterations to users.
+Создавая релиз, вы можете предоставлять пользователям итерации проекта.
 
-> Repository collaborators and personnel with write permission to the repository can create, edit, and delete releases.
+> Создавать, редактировать и удалять релизы могут сотрудники, сотрудничающие с репозиторием, и персонал с правом записи в репозиторий.
 
-## How to create a distribution
+## Как создать дистрибутив
 
-1. On [Gitee], navigate to the main page of the repository.
+1. На [Gitee] перейдите на главную страницу репозитория.
 
-2. On the right side of the file list, click on "Create" (for initial creation) or "Release Title" or "All".
+2. В правой части списка файлов нажмите "Создать" (для первоначального создания) или "Название релиза" или "Все".
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/1126/115356_1d0310c8_8249553.jpeg "02.jpeg")
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/1126/115356_1d0310c8_8249553.jpeg "02.jpeg")
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/1126/115333_3c45bb5d_8249553.jpeg "01.jpeg")
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/1126/115333_3c45bb5d_8249553.jpeg "01.jpeg")
 
-3. Click the `+ Create Release` button in the upper right corner.
+3. Нажмите кнопку `+ Создать релиз` в правом верхнем углу.
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/1126/115437_2b091816_8249553.jpeg "03.jpeg")
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/1126/115437_2b091816_8249553.jpeg "03.jpeg")
 
-4. Enter the version number of the release, it is recommended to use [semantic versioning](https://semver.org/lang/zh-CN/) to name the tag.
+4. Введите номер версии релиза, для названия тега рекомендуется использовать [semantic versioning](https://semver.org/lang/zh-CN/).
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/1126/115449_b2ac4158_8249553.jpeg "04.jpeg")
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/1126/115449_b2ac4158_8249553.jpeg "04.jpeg")
 
-5. Expand the dropdown list on the right and select the branch that includes the project to be published.
+5. Разверните выпадающий список справа и выберите ветку, в которую входит публикуемый проект.
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/1126/115459_fce043f4_8249553.jpeg "05.jpeg")
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/1126/115459_fce043f4_8249553.jpeg "05.jpeg")
 
-6. Enter the title and description of the distribution, you can also insert links and images in the description.
+6. Введите название и описание раздачи, в описание также можно вставить ссылки и изображения.
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/1126/120023_15aa67fe_8249553.jpeg "06.jpeg")
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/1126/120023_15aa67fe_8249553.jpeg "06.jpeg")
 
-7. If your distribution needs to add attachments, please `drag and drop` or `manually select` files in the file box.
+7. Если к вашей раздаче необходимо добавить вложения `перетащите` или `выберите` файлы вручную в поле для файлов.
 
-> Individual attachments cannot exceed 100M (GVP project 200M)
-> The total attachment size for each repository should not exceed 1G (recommended projects should not exceed 5G; GVP projects should not exceed 20G)
-> The total capacity of attachments includes repository attachments and release attachments.
+> Размер отдельных вложений не должен превышать 100М (проект GVP - 200М).
+> Общий размер вложений для каждого репозитория не должен превышать 1 ГБ (рекомендуемые проекты не должны превышать 5 Гб; GVP-проекты не должны превышать 20 Гб)
+> Общий объем вложений включает вложения репозитория и вложения релиза.
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/1126/124522_4e4e24ba_8249553.jpeg "08.jpeg")
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/1126/124522_4e4e24ba_8249553.jpeg "08.jpeg")
 
-8. If you need to inform the user that the release version is still unstable, check `This is a preview version`.
+8. Если вам нужно сообщить пользователю, что релизная версия еще нестабильна, отметьте `Это предварительная версия`.
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/1126/124533_2adadaaa_8249553.jpeg "09.jpeg")
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/1126/124533_2adadaaa_8249553.jpeg "09.jpeg")
 
-9. After checking the information is correct, click 'Create release' to publish the release. If you need to modify the release after it is published, refer to 'Edit release'.
+9. После проверки правильности информации нажмите кнопку "Создать релиз", чтобы опубликовать релиз. Если вам нужно изменить релиз после его публикации, обратитесь к разделу "Редактировать релиз".
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/1126/124626_48b6df86_8249553.jpeg "10.jpeg")
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/1126/124626_48b6df86_8249553.jpeg "10.jpeg")
 
 [gitee]: https://gitee.ru

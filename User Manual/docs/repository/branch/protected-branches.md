@@ -1,118 +1,118 @@
 ---
-title: Protect Branch and Review Mode of Protected Branch
+title: Защита ветки и режим просмотра защищенной ветки
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 origin-url: https://gitee.ru/help/articles/4239
 ---
 
-## How to Set Up Branch Protection
+## Как настроить защиту ветки
 
-"Protected branch" is a feature of Gitee for managing code permissions in team collaborations. It is used to reduce losses caused by members' accidental operations. It protects critical branches from being destroyed. After protection, only the repository administrator can modify, merge, and perform other operations on this branch.
+"Защищенная ветка" - это функция Gitee для управления правами доступа к коду в совместной работе. Она используется для снижения потерь, вызванных случайными действиями участников. Она защищает от уничтожения критически важные ветки. После настройки защиты только администратор репозитория может изменять, объединять и выполнять другие операции с этой веткой.
 
-Go to the repository, then click on 'Code' -> 'Branch' -> 'Protected Branch' to enable protected branches.
+Чтобы включить защищенные ветки, перейдите в репозиторий, затем нажмите 'Код' -> 'Ветка' -> 'Защищенная ветка'.
 
-![Image Description](https://images.gitee.ru/uploads/images/2018/1224/114942_833faf97_669935.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2018/1224/114942_833faf97_669935.png )
 
-![Image Description](https://images.gitee.ru/uploads/images/2018/1224/124035_26d7b115_669935.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2018/1224/124035_26d7b115_669935.png )
 
-> Gitee can now set a protected branch to **Review Mode**, where any push to this branch without permission will automatically create (or update) a Pull Request.
+> Теперь Gitee может перевести защищённую ветку в режим **Режим обзора**, при котором любой толчок в эту ветку без разрешения будет автоматически создавать (или обновлять) запрос на слияние.
 
-I don't know if you developers have had this experience. After we receive a task, we need to go through the following process to complete it:
+Не знаю, сталкивались ли вы с подобным. После получения задания нам нужно пройти следующий процесс, чтобы завершить его:
 
-1. Update the main branch locally, create and switch to a new branch based on the main branch
-2. Coding...
-3. Push this branch to the remote
-4. Open Gitee and go to the 'Create Pull Request' page.
-5. Select the target branch
-6. Fill in the Title and Description
-7. Click 'Submit Pull Request'
+1. Обновить основную ветку локально, создать и переключиться на новую ветку, основанную на основной ветке
+2. Кодирование...
+3. Переместите эту ветку на удаленную
+4. Откройте Gitee и перейдите на страницу 'Создать запрос на слияние'.
+5. Выберите целевую ветку
+6. Заполните название и описание
+7. Нажмите 'Отправить запрос на слияние'.
 
-At this time, some students feel cumbersome:
+В это время некоторые студенты чувствуют себя в затруднении:
 
-- 'Even though the tasks and subsequent test cases to be done have been clearly stated, why do I have to write them again?'
-- 'I have already provided detailed commit information, no need to repeat'
-- "Can't you automatically create a pull request for me if I can't push, and then automatically associate it with the branch-related tasks?"
+- 'Даже если задачи и последующие тест-кейсы были четко сформулированы, почему я должен писать их снова?'
+- 'Я уже предоставил подробную информацию о коммите, не нужно повторяться'.
+- "Разве вы не можете автоматически создать для меня запрос на слияние, если я не могу сделать push, а затем автоматически связать его с задачами, связанными с веткой?"
 - **...**
 
-So, is there a way to quickly create a Pull Request?
+Итак, есть ли способ быстро создать запрос на слияние?
 
-The answer is: **Yes!**
+Ответ: **Да!**
 
-## Protected Branch Review Mode
+## Режим рецензирования защищенной ветви
 
-### New Feature: Review Mode for Protecting Branches
+### Новая функция: Режим рецензирования для защищённых веток
 
-To solve the problem of the cumbersome process of creating a pull request mentioned above, we have extended protected branches and divided them into two modes:
+Чтобы решить проблему громоздкого процесса создания запросов на выгрузку, о которой говорилось выше, мы расширили защищённые ветки и разделили их на два режима:
 
-- Standard mode: consistent with the logic of the original protected branch, strictly follow the permissions for pushing and merging, if no permission, the push will be rejected.
-- **Review mode:** The only difference from the standard mode is that **if the user does not have push permissions, their push will automatically create (or update) a Pull Request**.
+- Стандартный режим: в соответствии с логикой оригинальной защищённой ветки, строго следуйте разрешениям на проталкивание и слияние, если разрешения нет, то проталкивание будет отклонено.
+- **Режим просмотра:** Единственное отличие от стандартного режима заключается в том, что **если у пользователя нет прав на проталкивание, его проталкивание автоматически создаст (или обновит) запрос на слияние**.
 
-![Image Description](https://images.gitee.ru/uploads/images/2021/0714/153335_36e33ed4_62561.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2021/0714/153335_36e33ed4_62561.png )
 
-Here, in **Repository Management - Protected Branch Settings**, I added a protected branch rule `review` and set it to review mode and prohibit anyone from pushing. So, no matter who (provided they are repository members) pushes code to the `review` branch, it will automatically create a Pull Request:
+Здесь, в **Управление репозиторием — настройки защищенной ветки**, я добавил правило защищённой ветки `ревью` и установил для неё режим обзора, запретив кому-либо push. Таким образом, независимо от того, кто (при условии, что они являются членами репозитория) будет размещать код в ветке `ревью`, автоматически будет создан запрос на слияние:
 
-![Image Description](https://images.gitee.ru/uploads/images/2021/0714/150632_2426aa33_62561.png "1.png")
+![Описание изображения](https://images.gitee.ru/uploads/images/2021/0714/150632_2426aa33_62561.png "1.png")
 
-You can see that the server found that the `review` branch is a protected branch in review mode, and I don't have permission to push to this branch (because it is set to prohibit anyone from pushing). Gitee automatically created a Pull Request for the commit I pushed to the `review` branch and provided the address for access.
+Мы видим, что сервер обнаружил, что ветка `review` - это защищённая ветка в режиме рецензирования, и у меня нет разрешения на размещение кода в этой ветке (потому что она настроена на запрет размещения). Gitee автоматически создал запрос на слияние для коммита, который я отправил в ветку `ревью`, и предоставил адрес для доступа.
 
-If I make another commit and push again, Gitee detects that I have already been automatically created on this branch.
+Если я сделаю ещё один коммит и снова отправлю код, Gitee обнаружит, что я уже автоматически создавал коммит в этой ветке.
 
-![Image Description](https://images.gitee.ru/uploads/images/2021/0714/154106_2ca73096_62561.png "3.png")
+![Описание изображения](https://images.gitee.ru/uploads/images/2021/0714/154106_2ca73096_62561.png "3.png")
 
-At this time, we can go to Gitee and see that the automatically created Pull Request has been updated
+В это время мы можем зайти в Gitee и увидеть, что автоматически созданный запрос на слияние был обновлен
 
-![Image Description](https://images.gitee.ru/uploads/images/2021/0714/154449_07a6958a_62561.png "4.png")
+![Описание изображения](https://images.gitee.ru/uploads/images/2021/0714/154449_07a6958a_62561.png "4.png")
 
-In addition, you can also update the Pull Request directly through the automatically created source branch, which is the 'auto-62561-review-1625833887273' branch created above. The specific steps are as follows
+Кроме того, вы можете обновить запрос на слияние непосредственно через автоматически созданную ветку исходников, которой является созданная выше ветка 'auto-62561-review-1625833887273'. Конкретные шаги выглядят следующим образом:
 
 ```bash
 git fetch
 git checkout auto-62561-review-1625833887273
-// Coding...
+// Кодирование...
 git add {xxfile}
 git commit -m "update auto pr"
 git push origin auto-62561-review-1625833887273
 ```
 
-### Automatic creation & updating of Pull Request rules
+### Автоматическое создание и обновление правил запроса на слияние
 
-"To update a Pull Request on a protected branch in review mode, the commit pushed must fully include the diff commit of the Pull Request. Otherwise, a new Pull Request will be created." This statement may seem very convoluted, so let's break it down. Below is a detailed explanation of automatically creating and updating Pull Requests.
+"Чтобы обновить запрос на слияние на защищённой ветке в режиме обзора, публикуемый коммит должен полностью включать diff-коммит запроса на слияние. В противном случае будет создан новый запрос на слияние." Это утверждение может показаться очень запутанным, поэтому давайте разберем его подробнее. Ниже приведено подробное объяснение автоматического создания и обновления запросов на слияние.
 
-We make the following agreements
+Мы заключаем следующие соглашения
 
-The `remote` indicates the remote
-- `local` represents local
-- `result` represents the result
-- `1-2-3-4` represents four commits, with the latest being `4`
-- `PR stands for Pull Request`
+`remote` обозначает удаленный
+- `local` обозначает локальный
+- `result` обозначает результат
+- `1-2-3-4` обозначает четыре фиксации, последняя из которых - `4`.
+- `PR означает запрос на слияние`.
 
-We agreed that there are four commits in the remote repository: `remote: 1-2-3-4`
+Мы согласились, что в удалённом репозитории есть четыре фиксации: `remote: 1-2-3-4`
 
 ```text
 Case1
 local: 1-2-3-4-5
-result: Created PR-a containing 5
+result: Создан PR-а, содержащий 5
 
 Case2
 local: 1-2-3-4-5-6
-result: Updated PR-a contains 5-6 (because there is already a PR, and this version is the parent set of the diff of this PR, so it can be updated).
+result: Обновлённый PR-a содержит 5-6 (потому что уже есть запрос на слияние, и эта версия является родительским набором diff этого запрос на слияние, поэтому она может быть обновлена).
 
 Case3
-local: 1-2-3-4-5-7 modified commit 6 and became commit 7 (revert or commit --amend operation)
-result: Created PR-b includes 5-7 (the existing PR is not a subset of this version, so create a new PR).
+local: 1-2-3-4-5-7 модифицировал коммит 6 и стал коммитом 7 (операция revert или commit --amend)
+result: Созданный PR-b включает 5-7 (существующий запрос на слияние не является подмножеством этой версии, поэтому создайте новый запрос на слияние).
 ```
 
-### Recommended Usage
+### Рекомендуемое использование
 
-Although the automatic creation of Pull Requests provided by the review mode is convenient, it can confuse developers if they keep switching branches. Therefore, two recommended usage methods are: 1) Using 'Lightweight PR', developers can contribute code (add, delete, modify code, etc.) directly on the web and submit a Pull Request to the open-source project repository with just one click, eliminating the need for many intermediate steps.
+Хотя автоматическое создание запросов на слияние в режиме рецензирования удобно, оно может запутать разработчиков, если они будут постоянно переключаться между ветками. Поэтому рекомендуется использовать два способа: 1) Используя "облегченный запрос на слияние", разработчики могут вносить свой вклад в код (добавлять, удалять, изменять код и т. д.) прямо в Интернете и отправлять запрос на слияние в репозиторий проекта с открытым исходным кодом одним щелчком мыши, избавляясь от необходимости выполнять множество промежуточных шагов.
 
-**One, Local Branch Development**
+**Первое - разработка локальной ветки**
 
-![Image Description](https://images.gitee.ru/uploads/images/2021/0714/163512_b2692312_62561.png "5.png")
+![Описание изображения](https://images.gitee.ru/uploads/images/2021/0714/163512_b2692312_62561.png "5.png")
 
-**Two, Local Trunk Development**
+**Второе - развитие основной локальной ветки**
 
-![Image Description](https://images.gitee.ru/uploads/images/2021/0714/163759_e32154c4_62561.png "6.png")
+![Описание изображения](https://images.gitee.ru/uploads/images/2021/0714/163759_e32154c4_62561.png "6.png")
 
-Come and experience it!
+Приходите и испытайте это!

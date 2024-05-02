@@ -1,46 +1,46 @@
 ---
-title: Gradle Unit Testing
-description: Gradle Unit Testing
+title: Модульное тестирование Gradle
+description: Модульное тестирование Gradle
 slug: /enterprise/pipeline/plugin/gradle-unit-test
 keywords:
  - Gitee
  - Gradle
- - Unit Testing
+ - Модульное тестирование
 ---
 
-## Form Introduction
+## Знакомство с формой
 
-- **JDK Version**: Select the appropriate JDK version from the dropdown list. The plugin will initialize the JDK environment based on the selected version.
+- **Версия JDK**: Выберите соответствующую версию JDK из выпадающего списка. Плагин инициализирует среду JDK на основе выбранной версии.
 
-- **Gradle Version Number**: Select the appropriate Gradle version from the dropdown list. The plugin will initialize the Gradle environment based on the selected version.
+- **Номер версии Gradle**: Выберите соответствующую версию Gradle из выпадающего списка. Плагин инициализирует среду Gradle в соответствии с выбранной версией.
 
-- **Test Command**: The test command is a user-defined command for testing. The command is executed in the root directory of the code repository and supports accessing environment variables using ${parameter key}. Note that adding 'set -e' can control the automatic exit of script commands if there is an error.
+- **Команда test**: Команда test - это пользовательская команда для тестирования. Команда выполняется в корневом каталоге репозитория кода и поддерживает доступ к переменным окружения с помощью ${parameter key}. Обратите внимание, что добавление 'set -e' может управлять автоматическим завершением команд скрипта при возникновении ошибки.
 
 ```shell
-# Default Gradle unit test command
+# Команда юнит-теста Gradle по умолчанию
 chmod +x gradlew
 ./gradlew test
 ```
 
-- **Test Report Directory**: The test report directory is the directory where the test report generated after executing the test command is located.
+- **Каталог отчетов о тестировании**: Каталог отчета о тестировании - это каталог, в котором находится отчет о тестировании, созданный после выполнения команды тестирования.
 
-- **Test report entry file**: The test report entry file is the name of the test report entry file, for example, index.html
+- **Файл записи отчета о тестировании**: Файл записи отчета о тестировании - это имя файла записи отчета о тестировании, например index.html.
 
-- **Quality Gate**: In the testing plugin, you can configure the quality gate. If the actual metrics during task execution are lower than the configured metrics, the gate will take effect. The pipeline task will be marked as failed and the subsequent tasks will not continue to execute.
-  - Test Pass Rate: Pass rate of test cases
+- **Ворота качества**: В плагине тестирования можно настроить ворота качества. Если фактические показатели во время выполнения задачи будут ниже настроенных, то вступят в силу ворота. Задача конвейера будет помечена как неудачная, и последующие задачи не будут выполняться.
+  - Коэффициент прохождения теста: Процент прохождения тестов
 
-- **Build cache**:
+- **Кэш сборки**:
 
-> The cache parameter supports both absolute and relative paths, for example:
+> Параметр кэша поддерживает как абсолютные, так и относительные пути, например:
 
 - /root/.m2
 - ~/.m2
-- xxx/xxx relative to the root directory of the code repository
+- xxx/xxx относительно корневого каталога хранилища кода
 - /root/workspace/xxx
 
-> Rule Explanation:
+> Пояснение правила:
 
-- The so-called cache essentially means storing the modules that are repeatedly used in our pipeline in the uploaded S3. When the pipeline is triggered again, the cache file is downloaded and extracted from S3.
-Only when the pipeline build is successful will the updated cache files be uploaded
-- Cache files expire by default after 30 days
-- Each triggering of the pipeline can extend the cache expiration (even if the build fails)
+- Так называемый кэш по сути означает хранение модулей, которые неоднократно используются в нашем конвейере, в загруженном S3. Когда конвейер запускается снова, файл кэша загружается и извлекается из S3.
+Только после успешной сборки конвейера обновленные файлы кэша будут загружены.
+- Срок действия файлов кэша по умолчанию истекает через 30 дней.
+- Каждое срабатывание конвейера может продлить срок действия кэша (даже если сборка не удалась)

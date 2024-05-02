@@ -1,26 +1,26 @@
 ---
-Tencent Cloud ServerlessFramework
+Бессерверный фреймворк облака Tencent
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 origin-url: https://gitee.ru/help/articles/4330
 ---
 
-[Serverless Framework](https://gitee.ru/serverless-framework/Serverless-Components) is a popular serverless application framework in the industry. Developers can deploy complete serverless application architectures without worrying about underlying resources. Serverless Framework has capabilities such as resource orchestration, auto-scaling, and event-driven, covering the entire lifecycle of coding, debugging, testing, and deployment. It helps developers quickly build serverless applications by linking cloud resources.
+[Бессерверный фреймворк](https://gitee.ru/serverless-framework/Serverless-Components) - популярная в отрасли платформа для создания бессерверных приложений. Разработчики могут развертывать готовые архитектуры бессерверных приложений, не беспокоясь о базовых ресурсах. Бессерверный фреймворк обладает такими возможностями, как окрестрация ресурсов, автоматическое масштабирование и управление событиями, охватывающими весь жизненный цикл разработки, отладки, тестирования и развертывания кода. Это помогает разработчикам быстро создавать бессерверные приложения, связывая облачные ресурсы.
 
-Currently, Serverless Framework has partnered with Gitee, and project code hosted on Gitee can be directly deployed and managed through the [Serverless Application Console](https://console.cloud.tencent.com/ssr), enabling rapid cloud deployment and management of traditional web frameworks.
+В настоящее время платформа бессерверный фреймворк сотрудничает с Gitee, что делает возможным прямое развертывание размещенного на Gitee кода проекта и управление  им  через [Консоль бессерверных приложений] (https://console.cloud .tencent.com/ssr), что обеспечивает быстрое развертывание в облаке и управление традиционными веб-платформами.
 
-### Advantages
+### Достоинства
 
-- **Low transformation cost:** Serverless components automatically help users complete the adaptation and transformation of the framework to the cloud. Users only need to focus on the business code, and some frameworks do not even need to modify a single line of code to complete cloud deployment.
+- ** Низкие затраты на трансформацию: ** Бессерверные компоненты автоматически помогают пользователям завершить адаптацию и трансформацию фреймворка в облако. Пользователям нужно сосредоточиться только на бизнес-коде, а некоторым платформам даже не нужно изменять ни одной строки кода для завершения облачного развертывания.
 
-- **Application-level Resource Display and Management:** After successful deployment, users can easily view and manage the created cloud resources through the Serverless Application Console without switching multiple pages, achieving centralized management of multiple resources.
+- ** Отображение ресурсов и управление ими на уровне приложения:** После успешного развертывания пользователи могут легко просматривать созданные облачные ресурсы и управлять ими через консоль бессерверного приложения, не переключая несколько страниц, что обеспечивает централизованное управление несколькими ресурсами.
 
-- **Continuous build based on code hosting:** Supports continuous build. When the project in the Gitee repository is updated, it can automatically trigger redeployment.
+- ** Непрерывная сборка на основе хостинга кода:** Поддерживается непрерывная сборка. Когда проект в репозитории Gitee обновляется, он может автоматически инициировать повторное развертывание.
 
-- **Application-level monitoring charts**: Provides application-level monitoring capabilities. Users can not only see the number of calls, errors, and other information for each resource, but also view application-level monitoring metrics, facilitating operations and maintenance.
+- ** Графики мониторинга на уровне приложения**: Предоставляет возможности мониторинга на уровне приложения. Пользователи могут видеть не только количество вызовов, ошибок и другую информацию для каждого ресурса, но и показатели мониторинга на уровне приложения, что упрощает операции и обслуживание.
 
-### Supported Frameworks
+### Поддерживаемые фреймворки
 
 - Express
 - Koa
@@ -30,55 +30,55 @@ Currently, Serverless Framework has partnered with Gitee, and project code hoste
 - Next.js
 - Nuxt.js
 
-### Deployment Tutorials
+### Учебные пособия по развертыванию
 
-0. Prerequisite for deployment: the account has opened the **[Serverless Framework](https://console.cloud.tencent.com/sls)** service. Log in to the console, and it will automatically enable it for you. The activation process does not incur any costs.
+1. Необходимое условие для развертывания: в учетной записи открыта служба **[Бессерверный фреймворк](https://console.cloud.tencent.com/sls)**. Войдите в консоль, и она автоматически активирует ее для вас. Процесс активации не влечет за собой никаких затрат.
 
-1. Go to Serverless Application Console (https://console.cloud.tencent.com/ssr), click on 'Create New Application' to go to the application creation page.
+2. Для перехода на страницу создания приложения перейдите в консоль бессерверного приложения (https://console.cloud.tencent.com/ssr) и нажмите "Создать новое приложение".
 
-2. Fill in your application name, select "Import Existing Project" as the creation method, and choose the framework template you are using.
+3. Введите название приложения, в качестве метода создания выберите "Импорт существующего проекта", также выберите шаблон используемого вами фреймворка.
 
-> Some framework projects may require simple project modifications before deployment. For details, please refer to the [Project Modification Documentation](https://cloud.tencent.com/document/product/1242/50319)
+> Перед развертыванием некоторых проектов фреймворка могут потребоваться простые модификации проекта. Для получения подробной информации обратитесь к [Документации по модификации проекта](https://cloud.tencent.com/document/product/1242/50319).
 
-3. Select code hosting, authorize your Gitee account, and then you can choose the project repositories you want to import in the console.
+4. Выберите хостинг кода, авторизуйте свой аккаунт Gitee, а затем в консоли выберите репозитории проектов, которые вы хотите импортировать.
 
    ![](https://images.gitee.ru/uploads/images/2020/1225/184304_98ec81d2_551147.png)
 
-   By default, "Auto Trigger" is selected, and the repository project will be automatically triggered for deployment after each update. You can also modify it according to actual usage.
+   По умолчанию выбрано значение "Автозапуск", и развертывание проекта репозитория будет автоматически запускаться после каждого обновления. Вы также можете изменить этот параметр в соответствии с фактическим использованием.
 
-4. Click on [Create], and the Serverless console will automatically start deploying the application for you. After the deployment is completed, go to the application details page to view the created cloud resources, monitoring logs, deployment records, and other information. You can also modify the configuration on the 'Development & Deployment' page and redeploy.
+5. Нажмите кнопку [Создать], и бессерверная консоль автоматически начнет развертывание приложения. По завершении развертывания перейдите на страницу сведений о приложении, чтобы просмотреть созданные облачные ресурсы, журналы мониторинга, записи о развертывании и прочую информацию. Вы также можете изменить настройки на странице "Разработка и развертывание" и выполнить повторное развертывание.
 
-### Manage Applications
+### Управление приложениями
 
-After the application is created, you can view the specific information of the project on the application details page, mainly supporting the following management functions.
+После создания приложения вы можете просмотреть конкретную информацию о проекте на странице сведений о приложении, в основном поддерживающую следующие функции управления.
 
-#### 1. Resource Management
+#### 1. Управление ресурсами
 
-In the [Resource List] page, you can view the cloud resources created for your current application and view basic configuration information.
+На странице [Список ресурсов] вы можете просмотреть облачные ресурсы, созданные для вашего текущего приложения, и просмотреть основную информацию о конфигурации.
 ![](https://images.gitee.ru/uploads/images/2020/1225/184304_da13bfaa_551147.png)
 
-#### 2. Development Deployment
+#### 2. Разработка и развертывание
 
-On the top of the application details page, click on [Development & Deployment] to easily modify the configuration and redeploy the application. It supports three methods: local upload, code hosting, and CLI development.
+Чтобы легко изменить настройки и повторно развернуть приложение, нажмите [Разработка и развертывание] в верхней части страницы сведений о приложении Приложение поддерживает три метода: локальную загрузку, хостинг кода и разработку интерфейса командной строки.
 
-At the same time, you can also modify the application configuration information on this page and click 'Save' to complete the redeployment.
+В то же время вы также можете изменить информацию о настройках приложения на этой странице и нажать "Сохранить", чтобы завершить повторное развертывание.
 ![](https://images.gitee.ru/uploads/images/2020/1225/184304_d3765c4a_551147.png)
 
-#### 3. Application Monitoring
+#### 3. Мониторинг приложения
 
-In the "Application Monitoring" page, you can view various monitoring indicators such as basic information, project request count, project error statistics, etc. after the project is deployed, making it easy for you to manage and operate the project.
+На странице "Мониторинг приложений" вы можете просмотреть различные показатели мониторинга, такие как основная информация, количество запросов по проекту, статистика ошибок проекта и т.д. после развертывания проекта, что упрощает вам управление проектом.
 ![](https://images.gitee.ru/uploads/images/2020/1225/184305_c0420a3a_551147.png)
 
-#### 4. Deployment Logs
+#### 4. Журналы развертывания
 
-In the 'Deployment Logs' page, you can see the deployment logs for 'Console Deployment' or 'Auto Trigger', as well as the deployment results.
+На странице "Журналы развертывания" вы можете просматривать журналы развертывания для "Консольного развертывания" или "Автоматического запуска", а также результаты развертывания.
 
 ![](https://images.gitee.ru/uploads/images/2020/1225/184305_9fc268ae_551147.png)
 
-Help and Support
+Помощь и поддержка
 
-[Serverless Framework Product Documentation](https://www.serverless.com/cn/framework/docs/)
+[Документация продукта Бессерверный фреймворк](https://www.serverless.com/cn/framework/docs/)
 
-Serverless WeChat Official Account: TencentServerless
+Официальный аккаунт команды Serverless в WeChat: TencentServerless
 
 ![](https://images.gitee.ru/uploads/images/2020/1225/184305_ce3e8dbb_551147.jpeg)

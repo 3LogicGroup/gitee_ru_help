@@ -1,14 +1,15 @@
 ---
-title: WebHook Push Data Type Explanation
+title: Объяснение типа данных для вебхука отправки
 ---
 
-Webhook hooks contain rich JSON aggregation information in the push data, which can be roughly divided into several types according to the aggregation unit of information.
+События вебхука содержат обширную информацию в формате JSON о переданных данных, которые можно грубо разделить на несколько типов в зависимости от агрегационной единицы информации
 
-**Explanation:**
-**1. The key-value pairs in [] depend on the data situation, and their existence is uncertain.**
-**2, \*user, \*commit, etc. indicate references to the corresponding JSON data aggregation**
-**3. This document is for reference only. Please refer to the actual data received for accuracy.**
-If you find any errors in the documentation, please go to the Gitee feedback center and create an issue.
+**Объяснение:**
+**1. Пара ключ-значение в [] зависит от данных, и их наличие не определено.**
+**2, \*user, \*commit, и т. д. указывают на ссылки на соответствующие агрегированные данные JSON.**
+**3. Этот документ предназначен только для справки. Для получения точных данных обращайтесь к фактическим полученным данным.**
+
+Если вы обнаружили какие-либо ошибки в документации  перейдите в центр обратной связи Gitee и создайте запрос.
 
 ```bash
 Labels: issue and pull request corresponding labels
@@ -194,7 +195,7 @@ Number of changed files: Number
 }
 ```
 
-## Issue Hook data format
+## Формат данных хука задачи
 
 ```bash
 {
@@ -223,7 +224,7 @@ enterprise: *enterprise || null # Enterprise information to which the issue belo
 }
 ```
 
-## Push / Tag Hook Data Format
+## Формат данных хука Отправки данных/тегов
 
 ```bash
 {
@@ -254,7 +255,7 @@ enterprise: *enterprise || null       # The enterprise information of the target
 }
 ```
 
-Pull Request Hook data format
+Формат данных хука запроса на слияние
 
 ```bash
 {
@@ -294,7 +295,7 @@ enterprise: *enterprise || null      # Information about the enterprise where th
 }
 ```
 
-## Note Hook data format
+## Формат данных хука
 
 ```bash
 {

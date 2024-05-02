@@ -1,29 +1,29 @@
 ---
-title: SSH public key setting
+title: Настройка открытого SSH-ключа
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 origin-url: https://gitee.ru/help/articles/4191
 ---
 
-Gitee provides Git services based on the SSH protocol. Before accessing a repository with the SSH protocol, you need to configure the SSH public key for the account.
+Gitee предоставляет услуги Git на основе протокола SSH. Прежде чем получить доступ к хранилищу по протоколу SSH, необходимо настроить открытый ключ SSH для учетной записи.
 
-Please go to [Add Deploy Public Key](/repository/ssh-key/generate-and-add-ssh-public-key) for the repository public key (deploy public key).
+Перейдите в [Добавить открытый ключ для развертывания](/repository/ssh-key/generate-and-add-ssh-public-key) for the repository public key (deploy public key).
 
-## Generate SSH Public Key
+## Создание открытого SSH-ключа
 
-> Windows users are recommended to use **Windows PowerShell** or **Git Bash** as there is no `cat` and `ls` commands in the **Command Prompt**.
+> Пользователям Windows рекомендуется использовать **Windows PowerShell** или **Git Bash**, поскольку в **Command Prompt** команды `cat` и `ls` отсутствуют.
 
-1. Generate SSH Key using the command `ssh-keygen`:
+1. Сгенерируйте SSH-ключ с помощью команды `ssh-keygen`:
 
 ```bash
 ssh-keygen -t ed25519 -C "Gitee SSH Key"
 ```
 
-* `-t` key type
-* `-C` Comment
+* `-t` тип ключа
+* `-C` Комментарий
 
-Output, such as:
+Выходные данные, например:
 
 ```bash
 Generating public/private ed25519 key pair.
@@ -48,72 +48,72 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
-* Press **Enter** three times in between
+* Три раза нажмите **Enter**
 
-2. View the generated SSH public key and private key:
+2. Просмотрите сгенерированные открытый и закрытый SSH-ключи:
 
 ```bash
 ls ~/.ssh/
 ```
 
-Output:
+Выходные данные:
 
 ```bash
 id_ed25519  id_ed25519.pub
 ```
 
-* Private key file `id_ed25519`
-Public key file `id_ed25519.pub`
+* Файл закрытого ключа `id_ed25519`
+Файл открытого ключа `id_ed25519.pub`
 
-3. Read the public key file `~/.ssh/id_ed25519.pub`:
+3. Прочитайте файл открытого ключа `~/.ssh/id_ed25519.pub`:
 
 ```bash
 cat ~/.ssh/id_ed25519.pub
 ```
 
-Output, such as:
+Выходные данные, например:
 
 ```bash
 ssh-ed25519 AAAA***5B Gitee SSH Key
 ```
 
-Copy the public key output from the terminal.
+Скопируйте выходные данные открытого ключа из терминала.
 
-## Set Account SSH Public Key
+## Установка открытого SSH-ключа учетной записи
 
-Users can go to the top right corner of the homepage, click on **'Personal Settings' -> 'Security Settings' -> 'SSH Public Keys' -> '[Add Public Key](https://gitee.ru/profile/sshkeys)'** to add the generated public key to the current account.
+Чтобы добавить сгенерированный открытый ключ к текущей учетной записи, пользователи могут перейти в правый верхний угол домашней страницы, нажать на ** "Личные настройки" -> "Настройки безопасности" -> "Открытые SSH-ключи" -> "[Добавить открытый ключ](https://gitee.ru/profile/sshkeys)"**.
 
-> Note: **Adding a public key requires user password verification**
+> Примечание: **Для добавления открытого ключа требуется подтверждение пароля пользователя**
 
 ![](SSH%E5%85%AC%E9%92%A5%E8%AE%BE%E7%BD%AE.assets/image.png)
 
-Test through `ssh -T` and output the **username** associated with the SSH Key:
+Протестируйте через `ssh -T` и выведите **имя пользователя**, связанное с SSH-ключом:
 
 ```bash
 $ ssh -T git@gitee.ru
 Hi USERNAME! You've successfully authenticated, but gitee.ru does not provide shell access.
 ```
 
-After adding the public key, users can browse and view the SSH public keys already added to the current account in 'Personal Settings' -> 'Security Settings' -> '[SSH Public Keys](https://gitee.ru/profile/sshkeys)', and perform management/deletion operations on the public keys.
+После добавления открытого ключа пользователи могут просматривать открытые SSH-ключи, уже добавленные в текущую учетную запись, в "Личные настройки" -> "Настройки безопасности" -> "[Открытые SSH-ключи](https://gitee.ru/profile/sshkeys)" и выполнять операции управления/удаления открытых ключей.
 
 ![](SSH%E5%85%AC%E9%92%A5%E8%AE%BE%E7%BD%AE.assets/image-1.png)
 
 ![](SSH%E5%85%AC%E9%92%A5%E8%AE%BE%E7%BD%AE.assets/image-2.png)
 
-Difference between repository SSH Key and account SSH Key?
+В чём различие между SSH-ключом репозитория и SSH-ключом учетной записи?
 
-The account's SSH Key is bound to the account, and the account can use SSH to push/pull repositories if it has push/pull permissions.
+К учетной записи привязывается SSH-ключ, и учетная запись может использовать SSH-ключи для передачи/слияния репозиториев, если у нее есть права передачи/слияния.
 
-When testing with `ssh -T`, the output will be the username associated with the bound SSH key.
+При проверке с помощью `ssh -T` в качестве выходных данных будет использоваться имя пользователя, связанное с привязанным SSH-ключом.
 
 ```bash
 $ ssh -T git@gitee.ru
 Hi USERNAME! You've successfully authenticated, but gitee.ru does not provide shell access.
 ```
 
-The SSH key for the repository is only applicable to the repository. We only provide a deployment public key for the repository, which can only be used to **pull** the repository. This is commonly used for production servers to pull the repository's code.
+SSH-ключ для репозитория применим только к данному репозиторию. Мы предоставляем только открытый ключ развертывания для репозитория, который может быть использован только для **слияния** репозитория. Обычно это используется на производственных серверах для извлечения кода хранилища.
 
-When testing with `ssh -T`, the output is Anonymous:
+При тестировании с помощью `ssh -T` выходные данные являются анонимными:
 
 ```bash
 ssh -T git@gitee.ru

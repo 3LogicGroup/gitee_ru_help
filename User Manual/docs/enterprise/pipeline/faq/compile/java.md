@@ -1,17 +1,17 @@
 ---
-title: Java Language
-description: Java Language
+title: Язык Java
+description: Язык Java
 slug: /enterprise/pipeline/faq/compile/java
 keywords:
  - Gitee
  - Java
- - Build
- - Issue
+ - Сборка
+ - Задача
 ---
 
-## 1. Gradle build failed with error './gradlew: Permission denied'
+## 1. Сборка Gradle завершилась с ошибкой './gradlew: Разрешение отклонено'
 
-Reply: First elevate the privilege of gradlew
+Ответ: Сначала повысьте привилегии gradlew
 
 ```bash
 chmod +x ./gradlew

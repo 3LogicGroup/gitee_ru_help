@@ -1,108 +1,108 @@
 ---
-title: Common Git operation issues
+title: Типичные проблемы при работе с Git
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 origin-url: https://gitee.ru/help/articles/4205
 ---
 
-* [What is Git? How to use Git to commit code to Gitee](#Git%20%CA%C7%CA%B2%C3%B4%A3%BF%C8%E7%BA%CE%CA%B9%D3%C3%20Git%20%CC%E1%BD%BB%B4%FA%C2%EB%B5%BD)
-* [Git client prompts 'fatal: Authentication failed' when pushing code](#Git client prompts 'fatal: Authentication failed')
-* [Why do I get a 413 error and fail to push?](#%CE%AA%CA%B2%C3%B4%D4%DA%20push%20%B5%C4%CA%B1%BA%F2%A3%AC%B3%F6%CF%D6%C1%CB413%B4%ED%CE%F3%A3%ACpush%CA%A7%B0)
-* [Permission denied (publickey)](#Permission%20denied%20(publickey))
-* [clone code reports RPC failed](#clone%20%E4%BB%A3%E7%A0%81%E6%8A%A5%20RPC%20failed)
-* [Couldn’t resolve host](#Couldn%E2%80%99t%20resolve%20host)
-Clone code reports 403 error
-* [Does Gitee have a graphical tool for code management](#%E7%A0%81%E4%BA%91%E7%9A%84%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86%E6%94%AF%E6%8C%81%E5%9B%BE%E5%BD%A2%E5%8C%96%E5%B7%A5%E5%85%B7%E5%90%97)
+* [Что такое Git? Как работать с Git, чтобы отправить код в Gitee](#Git%20%CA%C7%CA%B2%C3%B4%A3%BF%C8%E7%BA%CE%CA%B9%D3%C3%20Git%20%CC%E1%BD%BB%B4%FA%C2%EB%B5%BD) 
+* [При отправке кода клиент Git выдает сообщение "Критическая ошибка: Сбой аутентификации" ](#Git client prompts 'fatal: Authentication failed')
+* [Почему я получаю сообщение об ошибке 413 и не могу отправить код?](#%CE%AA%CA%B2%C3%B4%D4%DA%20push%20%B5%C4%CA%B1%BA%F2%A3%AC%B3%F6%CF%D6%C1%CB413%B4%ED%CE%F3%A3%ACpush%CA%A7%B0)
+* [В доступе отказано (публичный ключ)](#Permission%20denied%20(publickey)) 
+* [При клонировании кода приходит сообщение о сбое удаленного вызова процедур](#clone%20%E4%BB%A3%E7%A0%81%E6%8A%A5%20RPC%20failed) 
+* [Не удалось разрешить хостинг](#Couldn%E2%80%99t%20resolve%20host)
+При клонировании кода приходит сообщение об ошибке 403
+* [Имеется ли в Gitee графический инструмент для управления кодом](#%E7%A0%81%E4%BA%91%E7%9A%84%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86%E6%94%AF%E6%8C%81%E5%9B%BE%E5%BD%A2%E5%8C%96%E5%B7%A5%E5%85%B7%E5%90%97)
 
 <a name="Git%20%CA%C7%CA%B2%C3%B4%A3%BF%C8%E7%BA%CE%CA%B9%D3%C3%20Git%20%CC%E1%BD%BB%B4%FA%C2%EB%B5%BD"></a>
 
-## What is Git? How to use Git to commit code to Gitee?
+## Что такое Git? Как работать с Git чтобы отправить коммит кода в Gitee
 
-Click [here](https://gitee.ru/help/articles/4104) to learn the basics of Git.
+Нажмите [сюда](https://gitee.ru/help/articles/4104), чтобы ознакомиться с основами Git. 
 
-Click [here](https://gitee.ru/help/articles/4122) to learn how to use Git to commit code to Gitee
+Нажмите [сюда](https://gitee.ru/help/articles/4122) чтобы узнать как отправить коммит кода в Gitee
 
 <a name="Git%20%BF%CD%BB%A7%B6%CB%CD%C6%CB%CD%B4%FA%C2%EB%CC%E1%CA%BE%20fatal:%20Authentication%20failed"></a>
 
-## Git client prompts 'fatal: Authentication failed' when pushing code?
+## При отправке кода клиент Git выдает сообщение "Критическая ошибка: Сбой аутентификации"
 
-Reason: Permission restricted
+Причина: Ограничение прав доступа
 
-Solution steps:
+Шаги для решения проблемы:
 
-**Using https method**
+**Используя метод https**
 
-Please double-check if your account and password are entered correctly, or if your account does not have push permission for this repository.
+Повторно проверьте правильность ввода ваших логина и пароля, а также наличие у вашей учетной записи права на отправку кода
 
-Through ssh method
+С помощью метода ssh
 
-Please check if SSH public key is configured and deployed on Gitee.
+Удостоверьтесь, что публичный SSH-ключ настроен и развернут в Gitee
 
 <a name="%CE%AA%CA%B2%C3%B4%D4%DA%20push%20%B5%C4%CA%B1%BA%F2%A3%AC%B3%F6%CF%D6%C1%CB413%B4%ED%CE%F3%A3%ACpush%CA%A7%B0"></a>
 
-## Why did I get a 413 error and fail to push when pushing
+## Почему я получаю ошибку 413 и не могу отправить код?
 
-> When using HTTP for Git push and pull, due to the stateless design limitation of the HTTP protocol, the Git HTTP Server imposes a length limit on the request data packets, which is manifested on the Git client as the `http.postBuffer` configuration option.
+> При использовании HTTP для скачивания и отправки кода в Git из-за ограничений протокола HTTP без сохранения состояния сервер  Git HTTP ограничивает длину пакетов данных запроса, перечисленных в клиенте Git как опция конфигурации `http.postBuffer`  
 
-In order to provide a more stable and faster service, Gitee's HTTP server is configured with a single upload size limit (`client_max_body_size`) of 500M. If the code pushed locally exceeds 500M in a single push, it will be rejected by the server and return a 413 error.
+Чтобы обеспечить более стабильную и быструю работу сервиса, на сервере Gitee HTTP настроено ограничение на загружаемый за один раз объем (`client_max_body_size`), составляющий 500 МБ. Если обхем отправленного локально кода превышает 500 МБ, он будет отклонен сервером, и пользователь получит сообщение об ошибке 413.
 
-When encountering a 413 error while pushing code, you can try the following configuration command to adjust the local 'http.postBuffer' value to the corresponding single upload size configuration of the Gitee service.
+Если при отправке кода вы столкнулись с ошибкой 413, вы можете попробовать применить следующую команду настройки, чтобы увеличить локальное значение 'http.postBuffer' для настройки единовременной загрузки в сервис Gitee.
 
 > git config --global http.postBuffer=524288000
 
-Using SSH for code push and pull can avoid this problem. Please refer to [Using SSH for Code Push and Pull](/help/articles/4238) for specific usage.
+Использование SSH для отправки и слиянии кода может помочь избежать этой проблемы. За более подробными инструкциями обратитесь к [Использование  SSH для скачивания и отправки кода] (/help/articles/4238).
 
 <a name="Permission%20denied%20(publickey)"></a>
 
-## Permission denied (publickey)
+## В доступе отказано (публичный ключ)
 
-Reason: No permission for the target repository and branch, resulting in inability to update data.
+Причина: Нет прав доступа к целевому репозиторию и ветке, что приводит к блокировке обновления данных.
 
-Solution steps:
+Шаги для решения проблемы:
 
-1) Check the push method.
+1) Проверка метода отправки
 
-SSH method: Check if the SSH public key is correct (when there are multiple private keys, please use the ssh-add command to specify the default private key to use);
+Метод SSH: проверьте, корректно ли введен публичный SSH ключ (если доступно несколько приватных ключей, используйте команду ssh-add, чтобы уточнить - какой именно приватный ключ будет ипользоваться);
 
-HTTPS method: Please check the correctness of the password and username.
+Метод HTTPS: Проверьте, корректно ли введены имя пользователя и пароль. 
 
-2) Confirm if the target branch has write permission.
+2) Подтвердите, что целевая ветка имеет разрешение на запись.
 
 <a name="clone%20%E4%BB%A3%E7%A0%81%E6%8A%A5%20RPC%20failed"></a>
 
-## Clone code reports RPC failed
+## Сообщение о сбое удаленного вызова процедур при клонировании кода
 
-Reason: The https.postBuffer of HTTPS has limitations on the size of pushed files.
+Причина: ограничение на размер загружаемых файлов https.postBuffer в HTTPS.
 
-Solution: Change the SSH method for pushing
+Решение: Смените метод SSH для отправки
 
 <a name="Couldn%E2%80%99t%20resolve%20host"></a>
 
-## Couldn’t resolve host
+## Не удалось разрешить хостинг
 
-Reason: DNS settings cause domain name resolution failure.
+Причина: Настройки DNS вызывают сбой разрешения имени домена.
 
-Solution: Please change your DNS to 8.8.8.8 or 114.114.114.114 and restart the network.
+Решение: Поменяйте DNS на 8.8.8.8 or 114.114.114.114 и перезагрузите сеть.
 
 <a name="clone%20%E4%BB%A3%E7%A0%81%E6%8A%A5%20403%20%E9%94%99%E8%AF%AF"></a>
 
-## clone code reports 403 error
+## При клонировании кода возвращается сообщение об ошибке 403
 
-Reason: restricted permissions, incorrect repository address, cache error password
+Причина: ограничение прав, некорректный адрес репозитория, ошибка кэша пароля 
 
-Solution steps:
+Шаги решения:
 
-1) Ensure the remote URL is correct (case-sensitive)
+1) Убедитесь, что удалённый URL-адрес введен корректно (с учетом регистра)
 
-2) Ensure your own permissions in the repository are not restricted
+2) Убедитесь, что ваши права в репозитории не ограничены 
 
-3) If https clone prompts 403 and does not prompt for password, the git client has cached the wrong password, please clear the saved password.
+3) Если клон https возвращает сообщение об ошибке 403 и не запрашивает пароль, это означает, что в кэше клиента сохранился неверный пароль. Очистите список сохранённых паролей.
 
-4) Use SSH address to clone
+4) Для клонирования используйте SSH-адрес
 
 <a name="%E7%A0%81%E4%BA%91%E7%9A%84%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86%E6%94%AF%E6%8C%81%E5%9B%BE%E5%BD%A2%E5%8C%96%E5%B7%A5%E5%85%B7%E5%90%97"></a>
 
-## Does Gitee support graphical tools for code management?
+## Имеется ли в Gitee графический инструмент для управления кодом
 
-Support, we recommend using the following Git clients, IDEs, and browser plugin tools, please read [Git Complete Guide](https://gitee.ru/all-about-git).
+Для поддержки мы рекомендуем использовать клиенты Git, IDE и плагины для браузера, перечисленные в [Полном справочнике Git](https://gitee.ru/all-about-git).

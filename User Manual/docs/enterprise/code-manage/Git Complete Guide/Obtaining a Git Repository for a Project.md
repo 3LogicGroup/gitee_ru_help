@@ -1,21 +1,21 @@
 ---
-title: Get the Git repository of the project
+title: Получение репозитория Git проекта
 origin-url: https://gitee.ru/help/articles/4109
 ---
 
-There are two ways to obtain a Git project repository. The first is to create a new Git repository by importing all files in an existing directory. The second is to clone a new mirrored repository from an existing Git repository.
+Существует два способа получить репозиторий проекта Git. Первый - создать новый репозиторий Git путем импорта всех файлов из существующей директории. Второй - клонировать новый зеркальный репозиторий из существующего репозитория Git.
 
-### **Initialize a New Repository in the Working Directory**
+### **Инициализация нового репозитория в рабочем каталоге**
 
-To start using Git to manage an existing project, simply go to the directory where the project is located and execute:
+Чтобы начать использовать Git для управления существующим проектом, просто перейдите в каталог, где находится проект, и выполните:
 
 ```bash
 git init
 ```
 
-After initialization, a directory named .git will appear in the current directory, and all the data and resources required by Git are stored in this directory. However, at present, only the existing structure framework has been initialized with all the files and directories in it, but we have not started tracking and managing any file in the project. (In Chapter 9, we will explain in detail what files are in the .git directory just created and what roles they play.)
+После инициализации в текущей директории появится директория с именем .git, и все данные и ресурсы, требуемые Git, будут храниться в этой директории. Однако в настоящее время инициализирована только существующая структура framework со всеми файлами и директории ми в ней, но мы не начали отслеживать ни один файл в проекте и управлять им. (В главе 9 будут даны подробные объяснения, какие файлы находятся в только что созданной диреткории .git и какие роли они играют.)
 
-To include several files in version control in the current directory, you need to first use the 'git add' command to tell Git to start tracking these files, and then commit them.
+В случае необходимости включить несколько файлов в систему управления версиями в текущей директории, вам нужно сначала использовать команду "git add", чтобы дать Git команду начать отслеживать эти файлы, а затем записать на них коммит.
 
 ```bash
 git add *.c
@@ -23,24 +23,24 @@ git add README
 git commit -m 'initial project version'
 ```
 
-Later, we will explain the meaning of each command one by one. But now, you have a Git repository that actually maintains several files.
+Позже мы объясним значение каждой команды по очереди. Но теперь у вас есть репозиторий Git, который фактически поддерживает несколько файлов.
 
-### **Clone from an existing repository**
+### **Клонирование из существующего репозитория**
 
-If you want to contribute to an open source project, you can start by cloning the Git repository of the project. This requires the use of the git clone command. If you are familiar with other VCS such as Subversion, you may have noticed that Git uses clone instead of checkout. This is a very important difference. Git retrieves all the historical data of the project (every version of every file). Once the data is cloned from the server, it is also available locally. In fact, even if the server's disk fails, any cloned client can rebuild the repository on the server and revert to the state it was in at the time of cloning (although some server-side hook settings may be lost, all versions of the data are still there).
+Если вы хотите внести свой вклад в проект с открытым исходным кодом, вы можете начать с клонирования репозитория Git проекта. Для этого требуется использовать команду git clone. Если вы знакомы с другими VCS, такими как Subversion, вы, возможно, заметили, что Git использует команду clone вместо checkout. Это очень важное отличие. Git извлекает все исторические данные проекта (каждую версию каждого файла). Сразу после клонирования с сервера данные также будут доступны локально. Фактически, даже в случае сбоя диска сервера любой клонированный клиент может перестроить репозиторий на сервере и вернуться к состоянию, в котором он находился во время клонирования (хотя некоторые настройки хука на стороне сервера могут быть потеряны, все версии данных по-прежнему будут храниться там).
 
-The command format for cloning a repository is `git clone [url]`. For example, to clone the Git code repository for the Ruby language Grit, you can use the following command:
+Формат команды для клонирования репозитория - "git clone [url]". Например, чтобы клонировать репозиторий кода Git для языка Ruby Grit, вы можете использовать следующую команду:
 
 ```bash
 git clone git@gitee.ru:oschina/git-osc.git
 ```
 
-This will create a directory named 'grit' in the current directory, which contains a '.git' directory to store all downloaded version records, and then extract a copy of the latest version of the file from it. If you enter this newly created 'grit' directory, you will see that all the files in the repository are already there, ready for further development and use. If you want to define the name of the newly created repository directory during cloning, you can specify a new name at the end of the above command.
+Выполнение этой команды создаст в текущей директории новую директорию с именем "grit", содержащую директорию ".git" для хранения всех загруженных записей версий, а затем извлечет из него копию последней версии файла. Если вы войдете в эту недавно созданную директорию "grit", вы увидите, что в репозитории уже есть все файлы, и они готовы к дальнейшей разработке и использованию. Если вы хотите определить имя вновь созданной директории репозитория во время клонирования, вы можете указать новое имя в конце приведенной выше команды.
 
 ```bash
 git clone git@gitee.ru:oschina/git-osc.git mygrit
 ```
 
-Leave your comments and suggestions on the changes in this Pull Request in the 'Comments' section.
+Оставьте свои комментарии и предложения по изменениям в этом запросе на слияние в разделе 'Комментарии'.
 
-Git supports various data transfer protocols. The previous example used the `git://` protocol, but you can also use `http(s)://` or `user@server:/path.git` for SSH protocol.
+Git поддерживает различные протоколы передачи данных. В предыдущем примере использовался протокол `git://`, но вы также можете использовать `http(s)://` или `user@server:/path.git` для протокола SSH.

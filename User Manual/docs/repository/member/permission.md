@@ -1,17 +1,17 @@
 ---
-title: Repository member permission explanation
+title: Описание разрешений участника репозитория
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 origin-url: https://gitee.ru/help/articles/4140
 ---
 
-In Gitee platform, repository member permissions can have the following options:
+В платформе Gitee разрешения участника репозитория могут иметь следующие параметры:
 
-| Member Role | Permissions |
+| Роль участника | Разрешения |
 | --- | --- |
-| Visitor (Logged-in User) | For public repositories: create issues, comment, clone and pull repositories, download code packages, fork repositories, fork repositories and submit pull requests, download attachments.
-| Reporter | Inherits visitor's permissions. Private repository: cannot view code, cannot download code, cannot push, cannot fork, cannot submit pull requests, can download attachments, cannot upload attachments, cannot delete attachments |
-| Observer | Inherits Reporter's permissions Private repository: Create Wiki, Clone and Download code, Pull, cannot
-| Developers | Create Issues, Comment, Clone and Pull Repositories, Fork Repositories, Download Code Packages, Create Pull Requests, Create Branches, Push Branches, Delete Branches, Create Issue Labels (Milestones), Create Wiki, Can Upload Attachments, Can Delete Their Own Attachments, Cannot Delete Others' Attachments. |
-As an administrator, I can create issues, comment, clone and pull repositories, package and download code, create pull requests, create branches, push branches, delete branches, create issue/pull request labels (milestones), create wikis, add repository members, force push branches, edit repository properties, upload attachments, delete attachments uploaded by myself or others, but I cannot transfer/clear/delete repositories.
+| Посетитель (зарегистрированный пользователь) | Для публичных репозиториев: создание задач, комментирование, клонирование и извлечение репозиториев, загрузка пакетов кода, форк репозиториев, форк репозиториев и отправка запросов на извлечение, загрузка вложений.
+| Докладчик | Наследует права посетителя. Приватный репозиторий: не может просматривать код, не может загружать код, не может продвигать, не может форкать, не может отправлять запросы на притяжение, может загружать вложения, не может загружать вложения, не может удалять вложения |
+| Наблюдатель | Наследует права репортера Частный репозиторий: Создавать Вики, клонировать и скачивать код, pull, не может
+| Разработчики | Создавать задачи, комментировать, клонировать и выгружать репозитории, форкать репозитории, выгружать пакеты кода, создавать запросы на слияние, создавать ветки, отправлять ветки, удалять ветки, создавать метки задач (этапы), создавать вики, может загружать вложения, может удалять свои собственные вложения, не может удалять чужие вложения. |
+Администратор может создавать задачи, комментировать, клонировать и объединять репозитории, упаковывать и загружать код, создавать запросы на слияние, создавать ветки, отправлять ветки, удалять ветки, создавать метки (этапы) для задач/запросов на слияние, создавать вики, добавлять членов репозитория, принудительно отправлять ветки, редактировать свойства репозитория, загружать вложения, удалять вложения, загруженные им самим или другими, но не может передавать/очищать/удалять репозитории.

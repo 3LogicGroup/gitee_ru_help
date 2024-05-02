@@ -1,12 +1,12 @@
 ---
-title: Product Introduction
+title: Знакомство с продуктом
 description: None
 ---
 
-Gitee Scan is a static code scanning tool that can analyze source code directly using powerful built-in rules through pattern matching. It analyzes syntax, structure, processes, interfaces, etc. in the source code and has the characteristics of fast speed and high success rate.
+Gitee Scan - инструмент для статического сканирования кода, который может анализировать исходный код напрямую, используя мощные встроенные правила через сопоставление шаблонов. Он анализирует синтаксис, структуру, процессы, интерфейсы и т. д. в исходном коде и обладает такими характеристиками, как высокая скорость и высокий процент успеха.
 
-Gitee Scan can automatically analyze source code without human intervention. It can be deeply integrated with code management and pipelines to identify the root cause of issues before testing, ensuring development quality, improving team efficiency, reducing software development testing costs, and addressing common problems such as product instability, high testing costs, and delayed delivery in many enterprises.
+Gitee Scan может автоматически анализировать исходный код без вмешательства человека. Он может быть глубоко интегрирован с управлением кодом и конвейерами данных для выявления первопричины проблем до начала тестирования, обеспечения качества разработки, повышения эффективности работы команды, снижения затрат на тестирование при разработке программного обеспечения и решения таких распространенных проблем, как нестабильность продукта, высокая стоимость тестирования и задержка поставки на многих предприятиях.
 
-Gitee Scan also integrates the lens component analysis capability to analyze dependency security vulnerabilities and license compliance analysis.
+В Gitee Scan также интегрирована возможность анализа линзовых компонентов для анализа уязвимостей безопасности зависимостей и анализа соответствия лицензиям.
 
-Gitee uses the original code execution chain analysis technology, combined with a massive amount of code defect data on the platform, breaking the advantages of various open-source tools, developing a series of self-developed code analysis engines BCA, and providing powerful static scanning capabilities. The system has built-in various rules 3000+, and through custom scan scheme configuration, it can flexibly select rules and languages for scanning in a single repository and multiple languages dimensions, perfectly achieving quality left shift, and providing high-quality software application security solutions for enterprises.
+Gitee использует оригинальную технологию анализа цепочек выполнения кода, в сочетании с огромным количеством данных о дефектах кода на платформе, разбивая преимущества различных инструментов с открытым исходным кодом, разрабатывая серию саморазвивающихся движков анализа кода BCA, и обеспечивая мощные возможности статического сканирования. В систему встроено более 3000 различных правил, а благодаря пользовательской настройке схемы сканирования, она может гибко выбирать правила и языки для сканирования в одном хранилище и в нескольких языковых измерениях, идеально достигая качества левого сдвига, и предоставляя высококачественные решения по безопасности программных приложений для предприятий.

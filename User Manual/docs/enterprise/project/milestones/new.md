@@ -1,11 +1,11 @@
 ---
-title: Create Milestone
+title: Создание этапа
 ---
 
-Click on "Milestone" in the navigation menu of a standard project, and then click the "New Milestone" button in the upper right corner:
+Нажмите на "Этап" в меню навигации стандартного проекта, а затем нажмите на кнопку "Новый этап" в правом верхнем углу:
 
-![Image Description](../docs/assets/image552.png)
+![Описание изображения](../docs/assets/image552.png)
 
-After filling in the milestone title, description, end date, and other fields, click the "New" button.
+После заполнения названия этапа, его описания, даты окончания и других полей, нажмите на кнопку "Новый". 
 
-![Image Description](../docs/assets/image553.png)
+![Описание изображения](../docs/assets/image553.png)

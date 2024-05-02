@@ -1,18 +1,18 @@
 ---
-title: How to Preserve Individual Commits from Multiple Submissions
+title: Как сохранить отдельные коммиты из нескольких отправок
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 origin-url: https://gitee.ru/help/articles/4197
 ---
 
-If, among many commits, a certain commit is taken as a reference, only a certain commit or several commits from the upstream can be kept using the cherry-pick command. The specific command is:
+Если среди множества коммитов в качестве эталона принят определённый коммит, то с помощью команды cherry-pick можно сохранить только определённый коммит или несколько последних коммитов. Команда выглядит следующим образом:
 
 ```bash
 git cherry-pick <commit id>
 ```
 
-If there are no conflicts, it will display as follows:
+Если конфликтов нет, он отобразится следующим образом:
 
 ```bash
 Finished one cherry-pick.
@@ -20,4 +20,4 @@ Finished one cherry-pick.
 # Your branch is ahead of 'origin/dev' by 3 commits.
 ```
 
-If conflicts exist, they need to be resolved and then continued. For how to handle code conflicts, please refer to the section on dealing with code conflicts.
+Если конфликты существуют, их необходимо устранить, а затем продолжить работу. О способах устранения конфликтов кода читайте в разделе "Устранение конфликтов кода".

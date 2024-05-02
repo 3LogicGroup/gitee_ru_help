@@ -1,16 +1,16 @@
 ---
-title: Document Editing
+title: Редактирование документов
 authors:
   - name: Cheese
-description: wiki document creation
+description: создание документов wiki
 ---
 
-Document Editing
+Редактирование документов
 
-Click on any document to view its details on the right side of the page. Click the 'Edit' button to edit the document.
+Нажмите на любой документ, чтобы просмотреть подробную информацию о нем в правой части страницы. Нажмите кнопку "Редактировать", чтобы отредактировать документ.
 
-![Image Description](assets/image03.png)
+![Описание изображения](assets/image03.png)
 
-After modifying and saving, the document is updated.
+После изменения и сохранения выполняется обновление документа.
 
-![Image Description](assets/image04.png)
+![Описание изображения](assets/image04.png)

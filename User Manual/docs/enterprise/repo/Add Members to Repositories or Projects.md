@@ -1,13 +1,13 @@
 ---
-title: Add members to repository or project
+title: Добавление участников в репозиторий или проект
 origin-url: https://gitee.ru/help/articles/4309
 ---
 
-1. Log in to the admin account (or any other account with enterprise member management permissions).
-2. Go to `Enterprise Workspace` -> `Members` -> `Edit Profile`
+1. Войдите в учетную запись администратора (или любую другую учетную запись с правами управления участниками предприятия).
+2. Перейдите в раздел `Рабочее пространство предприятия` -> `Участники` -> `Редактировать профиль`.
 
-![Image Description](image632.png)
+![Описание изображения](image632.png)
 
-3. Change 'Joined Repositories' or 'Joined Projects' in member's profile to add repositories/projects.
+3. Измените 'Объединенные репозитории' или 'Объединенные проекты' в профиле участника, чтобы добавить репозитории/проекты.
 
-![Image Description](image633.png)
+![Описание изображения](image633.png)

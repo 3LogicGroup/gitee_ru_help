@@ -1,28 +1,28 @@
 ---
-title: Document Creation
+title: Создание документов
 authors:
   - name: Cheese
-description: wiki document creation
+description: Создание документов wiki
 ---
 
-Create New Page or Directory
+Создать новую страницу или директорию
 
-After entering the Wiki page of the repository, click the 'Add Page' button at the top left of the page. In the expanded drop-down menu, select 'Add Page' or 'Add Directory' button to create a new page or directory.
+После входа на wiki-страницу репозитория нажмите кнопку "Добавить страницу" в левом верхнем углу страницы. Чтобы создать новую страницу или  директорию, выберите в выпадающем меню "Добавить страницу" или "Добавить директорию".
 
-![Image Description](assets/image17.png)
+![Описание изображения](assets/image17.png)
 
-### Add page
+### Добавление страницы
 
-Add the title and content of the page, click "Save" to complete the creation of the page
+Добавьте наименование и контент страницы, затем нажмите "Сохранить" для завершения создания страницы
 
-![Image Description](assets/image18.png)
+![Описание изображения](assets/image18.png)
 
-### Add directory
+### Добавление директории
 
-Add the directory name, click 'Save' to complete the creation of the directory.
+Добавьте наименование директории, затем нажмите "Сохранить" для завершения создания директории.
 
-![Image Description](assets/image19.png)
+![Описание изображения](assets/image19.png)
 
-In an existing directory in the Wiki, you can click the "three dots" icon on the right of the directory name to continue adding a subpage or directory.
+В существующей директории в Wiki вы можете нажать на значок "три точки" справа от названия директории, чтобы продолжить добавление подстраницы или директории.
 
-![Image Description](assets/image20.png)
+![Описание изображения](assets/image20.png)

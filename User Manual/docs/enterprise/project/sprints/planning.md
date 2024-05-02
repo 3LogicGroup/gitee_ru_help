@@ -1,15 +1,15 @@
 ---
-title: Iteration Planning
+title: Планирование итерации
 ---
 
-Click "Iterations" in the navigation menu of the agile project, then click the "Planning" tab, where you can allocate work items for all iterations.
+Нажмите на "Итерации" в навигационном меню проекта Agile, затем нажмите на вкладку "Планирование", где вы можете распределить рабочие элементы для всех итераций.
 
-![Image Description](../docs/assets/image590.png)
+![Описание изображения](../docs/assets/image590.png)
 
-In addition, planning can also be done on the work item page in the iteration, just hold the title of the work item and drag it into another iteration or the "Unplanned work item" card:
+Планирование также можно выполнить на странице рабочего элемента в рамках итерации. Для этого зажмите заголовок рабочего элемента и перетяните его в другую итерацию или в карточку "Незапланированный рабочий элемент":
 
-![Image Description](../docs/assets/image591.png)
+![Описание изображения](../docs/assets/image591.png)
 
-If you need to operate on multiple work items at the same time, you can first select these work items, and then drag them into the iteration card.
+Если вам нужно работать над несколькими рабочими элементами одновременно, вы можете сначала выбрать эти рабочие элементы и затем перетянуть их в карточку итерации.
 
-![Image Description](../docs/assets/image592.png)
+![Описание изображения](../docs/assets/image592.png)

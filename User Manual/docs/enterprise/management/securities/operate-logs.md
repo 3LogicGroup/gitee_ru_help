@@ -1,7 +1,7 @@
 ---
-title: Operation Log
+title: Журнал операций
 ---
 
-On the 'Operation Log' page, you can filter and view the operation logs of various resources within the enterprise.
+На странице "Журнал операций" вы можете фильтровать и просматривать журналы операций различных ресурсов в компании.
 
-![Image Description](assets/image392.png)
+![Описание изображения](assets/image392.png)

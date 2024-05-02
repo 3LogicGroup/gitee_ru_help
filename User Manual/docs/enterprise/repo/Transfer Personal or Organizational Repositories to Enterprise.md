@@ -1,21 +1,21 @@
 ---
-title: Transfer personal/organization repositories to enterprise
+title: Перенос личных/организационных репозиториев на предприятие
 authors:
   - name: Roger
     url: https://gitee.ru/yuriluo
 origin-url: https://gitee.ru/help/articles/4155
 ---
 
-You can migrate repositories from individual accounts to enterprise accounts using transfer codes.
+Вы можете переносить репозитории из индивидуальных учетных записей в корпоративные с помощью кодов переноса.
 
-1. Click "Projects"->"New Repository"->"Transfer Repository" on the enterprise dashboard:
+1. Нажмите "Проекты"->"Новый репозиторий"->"Перенести репозиторий" на панели управления предприятия:
 
-![Image Description](image639.png)
+![Описание изображения](image639.png)
 
-2. Click 'Generate Transfer Code' and copy the generated transfer code
+2. Нажмите "Сгенерировать код переноса" и скопируйте сгенерированный код переноса
 
-![Image Description](image640.png)
+![Описание изображения](image640.png)
 
-3. Go to the "Management"-"Transfer Repository" of the repository you want to transfer to the enterprise, paste the transfer code and confirm
+3. Перейдите в раздел "Управление"-"Перенос репозитория" репозитория, который вы хотите перенести на предприятие, вставьте код переноса и подтвердите его
 
-![Image Description](image642.png)
+![Описание изображения](image642.png)

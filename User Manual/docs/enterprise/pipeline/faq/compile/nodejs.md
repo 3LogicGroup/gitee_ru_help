@@ -1,40 +1,41 @@
 ---
-title: Node.js Language
-description: JNodejs language
+title: Язык Node.js
+description: Язык Node.js
 slug: /enterprise/pipeline/faq/compile/nodejs
 keywords:
  - Gitee
  - Nodejs
- - Build
- - Issue
+ - Сборка
+ - Задача
 ---
 
-## 1. Node build failed, Node build is slow
+## 1. Сборка узла не удалась, сборка узла происходит медленно
 
-Reply: Whether to access overseas resources to pull overseas resources, if yes, please pull dependencies from domestic sources
+Ответить: Нужно ли обращаться к зарубежным ресурсам, чтобы подтянуть зарубежные ресурсы, если да, то подтяните зависимости из внутренних источников.
 
-## 2. Yarn build is slow and build fails
+## 2. Сборка Yarn идет медленно и завершается сбоем
 
-Reply: Whether to access overseas resources to pull overseas resources, if yes, please pull dependencies from domestic sources
+Ответ: Нужно ли обращаться к зарубежным ресурсам, чтобы подтянуть зарубежные ресурсы, если да, то пожалуйста, подтяните зависимости из отечественных источников
 
-## 3. Node build fails with 'JavaScript heap out of memory' or other memory resource shortage errors
+## 3. Сборка узла завершается неудачей с ошибкой 'JavaScript heap out of memory' или другими ошибками нехватки ресурсов памяти
 
-Reply: You can Google 'JavaScript heap out of memory' for this issue, for example, refer to: https://www.jianshu.com/p/2bf539bb949f
+Ответ: Для решеняи этой проблемы вы можете прогуглить "JavaScript heap out of memory", например, можно пройти по ссылке: https://www.jianshu.com/p/2bf539bb949f.
 
-Note: --max_old_space_size=8000, max_old_space_size should not exceed 8192 if possible
+Примечание: по мере возможности --max_old_space_size=8000, max_old_space_size не должен превышать 8192 
 
-Alternatively, you can use your own build machine, which has no resource restrictions. Please refer to this document for more details: [Multi-Cloud Host Group Management](/enterprise/pipeline/enterprise-setup/host/introduce)
+В качестве альтернативы вы можете использовать собственную сборочную машину, у которай нет ограничений по ресурсам. Для получения более подробной информации обратитесь к этому документу: [Multi-Cloud Host Group Management](/enterprise/pipeline/enterprise-setup/host/introduce)
 
-## 4、not found：python2
+## 4、не найдено：python2
 
-Reply: Change the mirror source, provide three suggestions
+Ответ: Измените источник зеркала, дайте три предложения
 
-* Change the source using npm i node-sass --sass_binary_site=https://npmmirror.com/mirrors/node-sass 
- or npm config set sass_binary_site=https://npmmirror.com/mirrors/node-sass/ 
- or write the configuration to .npmrc
-* yum install python2 -y (or python3)
-Change sass to less, etc
+* Измените источник с помощью npm i node-sass
+--sass_binary_site=https://npmmirror.com/mirrors/node-sass 
+ или npm config set sass_binary_site=https://npmmirror.com/mirrors/node-sass/ 
+ или запишите конфигурацию в .npmrc
+* yum install python2 -y (или python3)
+Измените sass на less и т.д.
 
-## 5、module Not Found Error
+## 5、Ошибка "Модуль не найден"
 
-Reply: Linux is case-sensitive to file names, check if there are any case-related errors in the file
+Ответ: Linux чувствителен к регистру имен файлов. Проверьте, файл на наличие ошибок, связанных с регистром.

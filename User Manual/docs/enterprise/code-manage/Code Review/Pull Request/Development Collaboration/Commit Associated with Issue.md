@@ -1,58 +1,57 @@
 ---
-title: Commit associated with Issue
+title: Коммит, связанный с задачей
 origin-url: https://gitee.ru/help/articles/4141
 ---
 
-> Note: Gitee's new solution no longer uses the issue ID to identify issues, but instead uses the ident. For specific instructions, see here. To avoid manually entering the issue ident incorrectly, it is recommended to directly copy #issueident)
+> Примечание: Новое решение Gitee больше не использует ID проблемы для идентификации задач, а вместо этого использует ident. Конкретные инструкции смотрите здесь. Чтобы избежать неправильного ввода ID проблемы вручную, рекомендуется напрямую скопировать #issueident)
 
-- Note:
+- Примечание:
 
-1. When pushing locally, please make sure that the email configured locally is consistent with the registered email of the Gitee account in order to associate the issue correctly
- 2. The difference between personal and enterprise versions: commits in personal repositories can only be associated with tasks in that repository, while commits in enterprise repositories can be associated with all tasks in the enterprise.
-3. The `issue_ident` and `issue_url` mentioned below refer to
-![Image Description](../../../../../../assets/image186.png)
+1. Чтобы правильно привязать задачу, при отправке в локальный репозиторий убедитесь, что настроенный локально адрес электронной почты соответствует зарегистрированному адресу электронной почты учетной записи Gitee
+2. Разница между персональной и корпоративной версиями: коммиты в личных репозиториях могут быть связаны только с задачами в этом репозитории, в то время как коммиты в корпоративных репозиториях могут быть связаны со всеми задачами на предприятии.
+3. Упомянутые ниже "issue_ident" и "issue_url", относятся к
+![Описание изображения](../../../../../../assets/image186.png)
 
-4. A commit message can be associated with multiple tasks at the same time, for example: `fix #issue_ident_1 #issue_ident_2` or `fix #issue_ident_1` `fix #issue_ident_2`, please separate different issue_idents with spaces.
+4. Сообщение о коммите может быть связано с несколькими задачами одновременно, например: `исправить #issue_ident_1 #issue_ident_2` или `исправить #issue_ident_1` `исправить #issue_ident_2` Разные issue_idents необходимо разделять пробелами.
 
-### **1. Commit message associated with the task**
+### **1. Сообщение о коммите, связанное с задачей**
 
-- Keyword: link, linked, linking, relate, related, relating
-- Format: Enter link #issue_ident or link issue_url in the commit message
-- The result is as follows
-![Image Description](../../../../../../assets/image187.png)
+- Ключевое слово: link, связанный, связывающий, относящийся, связанный, относящийся к делу
+- Формат: Введите link #issue_ident или link issue_url в сообщении о фиксации
+- Результат будет следующим
+![Описание изображения](../../../../../../assets/image187.png)
 
-### **2. Close task through commit**
+### **2. Закрыть задачу посредством коммита**
 
-- Keywords: close, closes, closing, closed, fixed, fix, resolved
-- Format: Enter in commit message: close #issue_ident, close issue_url to close the issue.
-- The effect image is as follows
-![Image Description](../../../../../../assets/image188.png)
+- Ключевые слова: закрыть, закрывает, закрывающийся, закрытый, исправленный, исправление, разрешенный
+- Формат: Введите в сообщение о коммите: закрыть #issue_ident, закрыть issue_url, чтобы закрыть задачу.
+- Изображение эффекта выглядит следующим образом
+![Описание изображения](../../../../../../assets/image188.png)
 
-### **3. Perform task through commit comments**
+### **3. Выполните задачу с помощью комментариев к фиксации**
 
-- Keywords: comment, reply
-- Format: Enter in the commit message: comment #issue_ident, comment issue_url, and you can comment on the issue.
-- The effect is as follows:
-![Image Description](../../../../../../assets/image189.png)
+- Ключевые слова: комментарий, ответ
+- Формат: Введите в сообщение о фиксации: комментарий #issue_ident, комментарий issue_url, и вы сможете прокомментировать задачу.
+- Эффект следующий:
+![Описание изображения](../../../../../../assets/image189.png)
 
-### **4. Change task status by commit**
+### **4. Изменить статус задачи при помощи коммита**
 
-1. Form 1:
+1. Форма 1:
 
- - Keyword: state to, change state to
- - Usage:
-  - Change #issue_ident state to To-Do
-  - #issue_ident change the state to To Do
-  - issue_url state to To Do
-  - change issue_url status to To Do
+- Ключевое слово: присвоить состояние, изменить состояние на
+- Использование:
+- Изменить состояние #issue_ident на "Нужно сделать"
+- #issue_ident измените состояние на "Нужно сделать"
+- состояние issue_url на "Нужно сделать"
+- измените статус issue_url на "Нужно сделать"
 
-2. Form 2:
+2. Форма 2:
 
- - Keyword: Set task status instruction
- - Set the entry point as follows:
-![Image Description](../../../../../../assets/image190.png)
+- Ключевое слово: Инструкция по установлению статуса задачи
+- Установите точку входа следующим образом:
+![Описание изображения](../../../../../../assets/image190.png)
 
-- Usage:
- - finish #issue_ident
- - finish issue_url
- 
+- Использование:
+- завершить #issue_identified
+- завершить issue_url 

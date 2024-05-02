@@ -1,12 +1,12 @@
 ---
-title: Repository data statistics
+title: Статистика данных репозитория
 authors:
   - name: Cheese
-description: View repository data statistics instructions
+description: Просмотр статистических инструкций по данным репозитория
 ---
 
-## View Repository Data Statistics
+## Просмотр статистики данных репозитория
 
-After entering the repository, click the 'Statistics' button on the main repository page to enter the statistics page. Click on the 'Repository Data Statistics' button to get the data statistics of the repository.
+После входа в репозиторий нажмите кнопку 'Статистика' на главной странице репозитория, чтобы перейти на страницу статистики. Нажмите на кнопку 'Статистика данных репозитория', чтобы получить статистику данных репозитория.
 
-![Stats](./assets/stats-stats.png)
+![Статистика](./assets/stats-stats.png)

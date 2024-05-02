@@ -1,11 +1,11 @@
 ---
-title: Register Working Hours
+title: Регистрация рабочих часов
 ---
 
-Open any work item, click on the "Working Hours" tab, and then click the "Record Working Hours" button.
+Откройте любой рабочий элемент, нажмите на вкладку "Рабочие часы", затем нажмите на кнопку "Записать рабочие часы".
 
-![Register Work Time](/img/enterprise/project/project-worktime-register.png)
+![Запись рабочего времени](/img/enterprise/project/project-worktime-register.png)
 
-In the pop-up 'Log Working Hours' window, fill in the 'Log Working Hours' and 'Work Description' fields, then click the 'Create' button to complete this time's work hour registration.
+Во всплываемом окне "Журнал рабочего времени" заполните поля "Журал рабочего времени" и "Описание работ", затем нажмите на кнопку "Создать", чтобы завершить процесс записи рабочих часов.
 
-![Work Time Registration Window](/img/enterprise/project/project-worktime-register-dialog.png)
+![Окно регистрации рабочего времени](/img/enterprise/project/project-worktime-register-dialog.png)

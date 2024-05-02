@@ -1,12 +1,12 @@
 ---
-title: Associate Documents with Work Items
-description: Document association with work items
+title: Привязка документов к рабочим элементам
+description: Привязка документов к рабочим элементам
 slug: enterprise/knowledge/issue
 ---
-1. Click on the icon for associating work items on the document compilation page;
-2. The pop-up window will list the work items associated with the current document. Click on "Associate Work Items" in the pop-up window;
-3. Select the work item to be associated and click "Associate" to perform the association operation.
-![Image Description](assets/image308.png)
+1. Нажмите на иконку для привязки рабочих элементов на странице составления документа;
+2. Во всплывающем окне отобразится список рабочих элементов, привязанных к текущему документу. Во всплывающем окне нажмите "Привязать рабочие элементы";
+3. Выберите рабочий элемент, который нужно привязать, и нажмите "Привязать" для завершенияи операции привязки.
+![Описание изображения](assets/image308.png)
 
-4. After the association is successful, you can view the associated documents in the work item details.
-![Image Description](assets/image311.png)
+4. После успешного завершения привязки вы можете просмотреть привязанные документы в разделе "Сведения о рабочем элементе".
+![Описание изображения](assets/image311.png)

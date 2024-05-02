@@ -2,9 +2,9 @@
 slug: /enterprise/pipeline/questions/deploy-error
 ---
 
-To troubleshoot self-hosted deployment failures, you can look into the following areas:
+Устранить неполадки при самостоятельном развертывании, можно следующими способами:
 
-- Visit the host group management-host management page to confirm if the host is offline. If it is offline, you can use the host reconnection script to restore online status;
-Check whether the network environment of the corresponding host is normal and whether it can access the external network. If it cannot be accessed, please restore the host network.
-- Check if the corresponding host is missing the software packages for host deployment, such as 'wget', 'curl', 'git', etc.
-- Check if the host task concurrency is set properly;
+- Посетите страницу управления группой хостов - управление хостами, чтобы проверить, не находится ли хост в автономном режиме. Если он находится в автономном режиме, можно использовать сценарий переподключения хоста для восстановления статуса онлайн;
+- Проверьте, нормально ли сетевое окружение соответствующего хоста и может ли он получить доступ к внешней сети. Если доступ невозможен, восстановите сеть хоста.
+- Проверьте, нет ли на соответствующем хосте пакетов программного обеспечения для развертывания хоста, таких как 'wget', 'curl', 'git' и т. д.
+- Проверьте, правильно ли настроен параллелизм задач на хосте;

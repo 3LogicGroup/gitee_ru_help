@@ -1,39 +1,39 @@
 ---
-title: GiteeAndroidBuildOnline (APK Online Build)
+title: Онлайн сборка Gitee для Android (Онлайн сборка через APK)
 authors:
   - name: likui
     url: https://gitee.ru/nocnob
 origin-url: https://gitee.ru/help/articles/4249
 ---
 
-Android build environment
+Среда сборки Android
 
 - Ubuntu 20.04
 - Android NDK r19c
-- Gradle 6.9.1 (used when no version is specified)
-- Kotlin version 1.3.31
-- OpenJDK version 8/11/17, default 8
+- Gradle 6.9.1 (используется в случаях, когда версия не указана)
+- Kotlin версия 1.3.31
+- OpenJDK версия 8/11/17, по умолчанию 8
 
-## Steps to Use
+# Шаги использования
 
-1. Management -> Basic Info -> Language: `Android`:
+1. Управление -> Основная информация -> Язык: `Android`:
     ![](./assets/apk-1.png)
-1. Repository Homepage -> Download APK:
+2. Домашняя страница репозитория -> Скачать APK:
     ![](./assets/apk-2.png)
-1. Create a build, select the build version, Java version, and fill in the build type:
+3. Создайте сборку, выберите версию сборки, версию Java и заполните тип сборки:
     ![](./assets/apk-3.png)
-1. Build process:
+4. Процесс сборки:
     ![](./assets/apk-4.png)
-1. Build completed:
+5. Сборка завершена:
     ![](./assets/apk-5.png)
 
-## Android Project Build Example
+## Пример сборки проекта Android
 
-Take [gitee-sample/android-kotlin](https://gitee.ru/gitee-sample/android-kotlin/tree/openjdk-11) as an example.
+Используем в качестве примера [gitee-sample/android-kotlin](https://gitee.ru/gitee-sample/android-kotlin/tree/openjdk-11).
 
-### Directory Structure
+### Структура каталогов
 
-Standard Android project directory structure is recommended, such as:
+Рекомендуется стандартная структура каталогов проектов Android, например:
 
 ```text
 .
@@ -51,41 +51,41 @@ Standard Android project directory structure is recommended, such as:
 └── settings.gradle
 ```
 
-- When the 'gradle/wrapper/gradle-wrapper.properties' file exists, Gitee will read and modify the file.
-* `gradlew` is required and must have executable permissions, it will be executed during the build.
+- Если файл «gradle/wrapper/gradle-wrapper.properties» существует, Gitee прочитает и изменит его.
+* `gradlew` требуется и должен иметь разрешения на выполнение, он будет выполнен во время сборки.
 
-### Build process:
+### Процесс сборки:
 
-1. Check if it is a standard gradle project
-1. Modify the `distributionUrl` property in `gradle/wrapper/gradle-wrapper.properties` to speed up the gradle download, for example:
+1. Удостоверьтесь в том, что проект является стандартным проектом Gradle.
+2. В целях ускорения загрузки градиента измените свойство distributionUrl в файле gradle/wrapper/gradle-wrapper.properties, например:
 
     ```diff
     -distributionUrl=https\://services.gradle.org/distributions/gradle-7.3.3-bin.zip
     +distributionUrl=file:///data/android/gradle-zip/gradle-7.3.3-bin.zip
     ```
 
-1. (Optional) Handle Signature Configuration
-1. Execute 'gradlew'. To speed up the build process, the internal Maven mirror 'maven.local' on Gitee will be used.
-1. (Optional) Signing
-1. After a successful build, upload the apk. Any newly created `*.apk` file in the directory will be uploaded.
+1. (Дополнительно) Обработка настройки подписи
+2. Выполните команду 'gradlew'. Для ускорения процесса сборки будет использовано внутреннее зеркало Maven 'maven.local' на Gitee.
+3. (Дополнительно) Подписание
+4. После успешной сборки загрузите apk-файл. Будет загружен любой только что созданный в директории файл `*.apk`.
 
-## About Signatures
+## О подписях
 
-> Android systems require that all APKs be signed with a certificate before they can be installed on a device or updated.
+> Системы Android требуют, чтобы все APK-файлы были подписаны сертификатом, прежде чем их можно будет установить на устройство или обновить.
 
-To protect the application signing key and keystore, it is not recommended to put the related information in the Git repository. However, missing the related content will cause errors in APK packaging or the generated APK file cannot be directly installed on the Android system. To address this, Gitee provides an optional feature: preserving the signing configuration.
+Чтобы защитить ключ подписи приложения и хранилище ключей, не рекомендуется помещать соответствующую информацию в репозиторий Git. Однако отсутствие соответствующего контента приведет к ошибкам в упаковке APK, или сгенерированный файл APK не сможет быть напрямую установлен в системе Android. Чтобы решить эту проблему, Gitee предоставляет дополнительную функцию: сохранение конфигурации подписи.
 
-### Select "Keep Signature Configuration"
+### Выберите «Сохранить настройки подписи».
 
-Gitee will not modify the configuration file.
+Gitee не будет изменять файл настроек.
 
-If there are signature-related configuration items in the configuration file, but the signature-related files cannot be accessed, the build will fail.
+Если в файле настроек есть элементы настроек, связанные с подписями, но доступ к связанным с подписями файлам недоступен, сборка завершится неудачно.
 
-### Uncheck "Keep Signature Configuration"
+### Снимите флажок «Сохранить настройки подписи»
 
-When 'Keep Signature Configuration' is **not** selected, Gitee will perform the following operations:
+Если параметр «Сохранить настройки подписи» **не** выбран, Gitee выполнит следующие операции:
 
-1. Delete the signature-related configuration in `build.gradle` file, represented by shell script as follows:
+1. Удалит связанные с подписью настройки в файле build.gradle, представленном сценарием оболочки, при помощи следующего скрипта:
 
 ```bash
 readarray -d '' bfs < <(find apk-repo/ -type f -name "build.gradle" -print0)
@@ -101,5 +101,5 @@ sed -i \
 done
 ```
 
-2. Generate a random keystore using the command tool keytool.
-3. Sign the apk file using the apksigner command-line tool
+2. Создаст случайное хранилище ключей с помощью командного инструмента keytool.
+3. Подпишет файл apk с помощью инструмента командной строки apksigner.

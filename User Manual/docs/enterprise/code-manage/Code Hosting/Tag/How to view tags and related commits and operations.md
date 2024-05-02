@@ -1,8 +1,8 @@
 ---
-title: How to view related commits and operations of tags
+title: Как просмотреть связанные коммиты и операции с тегами
 ---
 
-1. View the commit history of the tag
-2. Download, view releases, delete tags
+1. Просмотрите историю коммитов тегов
+2. Загружайте, просматривайте релизы, удаляйте теги
 
-![Image Description](../../../../../assets/image160.png)
+![Описание изображения](../../../../../assets/image160.png)

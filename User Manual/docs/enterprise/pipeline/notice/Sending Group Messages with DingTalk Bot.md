@@ -1,50 +1,50 @@
 ---
-title: Send group message with DingTalk robot
-description: Send group messages using DingTalk bots
+title: Отправка групповых сообщений с помощью робота DingTalk
+description: Отправка групповых сообщений с помощью ботов DingTalk
 slug: /enterprise/pipeline/notice/dingtalk
 keywords:
  - Gitee
  - DingTalk
- - Robot
- - Notification
+ - Робот
+ - Уведомление
 ---
 
-Users can configure DingTalk group notifications in the pipeline task to push the running information of the pipeline task to the specified DingTalk group.
+Пользователи могут настроить уведомления группы DingTalk в задании конвейера для передачи информации о выполнении задания конвейера в указанную группу DingTalk.
 
-## Add DingTalk Group Robot
+## Добавление группового робота DingTalk
 
-To add a group robot, go to Group Settings -> Intelligent Group Assistant -> Add Group Robot -> Select Custom Webhook Robot.
+Чтобы добавить группового робота, перейдите в Настройки группы -> Интеллектуальный помощник группы -> Добавить группового робота -> Выбрать пользовательский робот вебхука.
 
-![DingTalk Robot 1](./assets/DingTalk Robot 1.png)
+![Робот DingTalk 1](./assets/DingTalk Robot 1.png)
 
-![DingTalk Robot 2](./assets/DingTalk Robot 2.png)
+![Робот DingTalk 2](./assets/DingTalk Robot 2.png)
 
-You can refer to the following documents: [https://open.dingtalk.com/document/robots/custom-robot-access](https://open.dingtalk.com/document/robots/custom-robot-access)
+Вы можете обратиться к следующим документам: [https://open.dingtalk.com/document/robots/custom-robot-access](https://open.dingtalk.com/document/robots/custom-robot-access)
 
-Copy the webhook address and configure it in the pipeline [DingTalk notification certificate](/enterprise/pipeline/enterprise-setup/certificate/introduce#im-communication).
+Скопируйте адрес вебхука и настройте его в конвейере [Сертификат уведомления DingTalk](/enterprise/pipeline/enterprise-setup/certificate/introduce#im-communication).
 
-:::info**Note, DingTalk group robot must enable security settings:**
-If "Signature" is enabled, please record and save the signature secret key, and configure it in the DingTalk notification credential of the pipeline.
+:::info**Примечание, робот группы DingTalk должен включить настройки безопасности:**.
+Если включена функция "Подпись", запишите и сохраните секретный ключ подписи и настройте его в учетной записи DingTalk-уведомления конвейера.
 :::
 
-## Pipeline Task Configuration DingTalk Group Notification
+## Конфигурация задачи конвейера "Групповые Уведомление DingTalk"
 
-1. In the pipeline task node, select to add an Enterprise WeChat group notification.
+1. В ноде задач конвейера выберите добавление уведомления группы Enterprise WeChat.
 
-![Add DingTalk Configuration](./assets/Add_DingTalk_Configuration.png)
+![Добавить конфигурацию DingTalk](./assets/Add_DingTalk_Configuration.png)
 
-2. Add the DingTalk credentials, please refer to the credential management [DingTalk Webhook](/enterprise/pipeline/enterprise-setup/certificate/introduce#im-communication)
+2. Добавьте учетные данные DingTalk, обратитесь к управлению учетными данными [Вебхук DingTalk] (/enterprise/pipeline/enterprise-setup/certificate/introduce#im-communication).
 
-3. Select notification events, when the task of this pipeline enters the selection state, it will trigger message notifications.
+3. Выберите события уведомления, и, когда задача этого конвейера перейдёт в состояние выбора, это запустит отправку уведомления о сообщениях.
 
-4. Select the notification content, the selected notification content will be automatically added to the push message.
+4. Выберите содержимое уведомления, после чего выбранное содержимое уведомления будет автоматически добавлено в push-сообщение.
 
-5. Supports filling in custom content, supports referencing environment variables, such as ${GITEE_PIPELINE_NAME}, supports DingTalk [Markdown](https://open.dingtalk.com/document/robots/custom-robot-access) syntax.
+5. Поддержка заполнения пользовательского контента, поддержка ссылок на переменные окружения, такие как ${GITEE_PIPELINE_NAME}, поддержка синтаксиса DingTalk [Markdown](https://open.dingtalk.com/document/robots/custom-robot-access).
 
-6. Please enter the mobile phone number (DingTalk mobile phone number) of the member that needs to be mentioned, or enter all.
+6. Введите номер мобильного телефона (номер мобильного телефона DingTalk) участника, которого необходимо упомянуть, или введите все.
 
-## Trigger Pipeline Run
+## Триггерный запуск конвейера
 
-Trigger pipeline execution. When the pipeline task enters the running state configured in the notification plugin, trigger message notification.
+Триггер выполнения конвейера. Когда задача конвейера переходит в состояние выполнения, настроенное в плагине уведомлений, запускается уведомление о сообщении.
 
-![DingTalk group notification message example](./assets/DingTalk group notification message example.png)
+![Пример сообщения группового уведомления DingTalk](./assets/DingTalk-notification-message-example.png)

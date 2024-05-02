@@ -1,7 +1,7 @@
 ---
-title: Priority Setting
+title: Настройка приоритета
 ---
 
-The "Priority Settings" page provides three naming schemes for priority, and you can choose the appropriate scheme according to the actual situation.
+На странице "Настройки приоритета" предусмотрены три схемы наименования приоритета, и вы можете выбрать соответствующую схему в зависимости от конкретной ситуации.
 
-![Image Description](assets/image347.png)
+![Описание изображения](assets/image347.png)

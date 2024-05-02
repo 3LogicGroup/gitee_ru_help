@@ -1,6 +1,6 @@
 ---
-title: Product Introduction
-description: Product Introduction
+title: Знакомство с продуктом
+description: Знакомство с продуктом
 slug: enterprise/insight/intro
 ---
-Gitee focuses on user value flow efficiency and creates an all-in-one development measurement dashboard. By systematically improving instead of focusing on specific areas, it helps you improve your ability to deliver value continuously and quickly. While solving the problems of enterprise flow efficiency, resource efficiency, and quality, it intelligently provides comprehensive solutions for performance improvement, helping teams break out of the efficiency well.
+Gitee фокусируется на эффективности потока ценностей для пользователей и создает универсальную панель мониторинга разработки. Систематически совершенствуясь, а не сосредотачиваясь на конкретных областях, он помогает вам повысить вашу способность создавать ценности непрерывно и быстро. Решая проблемы эффективности бизнес-процессов, ресурсосбережения и качества, он предоставляет разумные комплексные решения для повышения производительности, помогая командам выйти за рамки эффективности.

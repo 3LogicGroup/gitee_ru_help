@@ -1,21 +1,21 @@
 ---
-title: What to do when the repository capacity is insufficient
+title: Что делать, если ёмкость репозитоия недостаточна
 origin-url: https://gitee.ru/help/articles/4321
 ---
 
-1. First, check the quota description for personal/enterprise version packages and the capacity for large files in the repository. Refer to the help document: https://gitee.ru/help/articles/4232
-2. Optimize storage space through repository GC. Refer to the help documentation: https://gitee.ru/help/articles/4173
-3. If using the enterprise version, you can check the current version's package quota and upgrade the package to expand repository capacity.
-Operation steps:
+1. Сначала проверьте описание квоты для пакетов персональной/корпоративной версии и объем больших файлов в репозитории. Подробнее см. справочный документ: https://gitee.ru/help/articles/4232
+2. Оптимизируйте пространство для хранения с помощью repository GC. Обратитесь к справочной документации: https://gitee.ru/help/articles/4173
+3. Если используется корпоративная версия, вы можете проверить квоту пакетов текущей версии и обновить пакет, чтобы увеличить емкость репозитория.
+Шаги операции:
 
-- Log in to the enterprise super administrator account (or other accounts with enterprise management permissions);
-- Go to Enterprise Workspace -> Management -> Overview -> Package Details to check.
+- Войдите в учетную запись суперадминистратора предприятия (или другие учетные записи с правами управления предприятием);
+- Перейдите в Корпоративное рабочее пространство -> Управление -> Обзор -> Сведения о пакете для проверки.
 
-![Image Description](../../../../assets/image204.png)
+![Описание изображения](../../../../assets/image204.png)
 
- - If you need to expand the capacity of a single repository, you can upgrade the package
+ - В случае необходимости увеличения емкости отдельного репозитория вы можете обновить пакет
 
-Upgrade Package Operation Guide:
-Enterprise Dashboard - Click 'Expand/Upgrade/Renew' (Enterprise Dashboard - Click 'Expand/Upgrade/Renew')
+Руководство по эксплуатации пакета обновления:
+Панель мониторинга версии Enterprise - нажмите "Развернуть/обновить/возобновить" (Панель версии Enterprise - нажмите "Развернуть/обновить/возобновить")
 
-![Image Description](../../../../assets/image205.png)
+![Описание изображения](../../../../assets/image205.png)

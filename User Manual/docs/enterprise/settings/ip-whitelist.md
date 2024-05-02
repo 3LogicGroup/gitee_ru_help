@@ -1,23 +1,23 @@
 ---
-title: Set IP Whitelist
+title: Настройка белого списка IP-адресов
 authors:
   - name: Zoker
     url: https://gitee.ru/kesin
 origin-url: https://gitee.ru/help/articles/4274
 ---
 
-Gitee Enterprise version launched the IP whitelist function, which is mainly used for enterprises to prohibit non-designated IP access to code repositories.
+В версии Gitee Enterprise доступна функция белого списка IP-адресов, которая чаще всего используется предприятиями для установки ограничения доступа к репозиториям кода.
 
-> If you were able to pull the code before but now cannot, it is possible that the enterprise to which the repository belongs has enabled the IP whitelist function, and the IP address used for pulling the code is not in the whitelist. Contact the administrator to add it.
+> Если ранее вы могли получить код из репозитория, а тепеь не можете, это может быть вызвано тем, что предприятие, которому принадлежит этот репозиторий, включило функцию белого списка IP-адресов, и теперь IP-адрес, с которого запрашивается код, в этот список не входит. Обратитесь к администратору, чтобы добавить его в список.
 
-As shown in the following figure:
+Как показано на изобраении ниже:
 
-![Image Description](https://images.gitee.ru/uploads/images/2019/1018/142040_69712d2a_669935.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2019/1018/142040_69712d2a_669935.png )
 
-#### Usage
+#### Использование
 
-1. Enter the enterprise workspace -> Manage -> Security Settings
+1. Войдите в рабочее пространство предприятия -> Управление -> Настроки безопасности
 
-2. Add IP addresses allowed to access the Git repository
+2. Добавьте IP-адрес в список разрешенных к доступу к репозиторию Git
 
-3. Enable security options: Only allow pushing and pulling code within the trusted range
+3. Включите параметр безопасности: Отправка и получение кода будут разрешены только в пределах довереннго диапазона.

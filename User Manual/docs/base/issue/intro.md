@@ -1,22 +1,22 @@
 ---
-title: Issue Introduction
+title: Знакомство с задачами
 authors:
   - name: Cheese
-description: Issue function introduction
+description: Знакомство с функцией задач
 ---
 
-## What is an Issue?
+## Что такое задача?
 
-### Define Issue
+### Определение задачи
 
-We may define an Issue as a problem and a to-do list, a bug list, a discussion board, etc., to help everyone better understand the meaning and functionality of an Issue.
+Чтобы помочь каждому лучше понять значение и функциональность задачи, мы можем дать определение задачи как проблемы и списка дел, списка ошибок, доски обсуждений и т.д.
 
-### Issue Functionality
+### Функциональность задачи
 
-Issue is a way to greatly improve efficiency in team collaboration. It allows us to easily track, enhance, and debug the entire repository. In a public repository, anyone can use
+Задача - это способ значительно повысить эффективность совместной работы команды. Это позволяет нам легко отслеживать, улучшать и отлаживать весь репозиторий. В открытом репозитории использовать могут все
 
-According to Gitee's official recommendations, project-related technical issues, bug reports, suggestions, and other information can be published through Issues.
+Согласно официальным рекомендациям Gitee, в разделе "Задачи" можно публиковать технические вопросы, сообщения об ошибках, предложения и другую связанную с проектом информацию.
 
 ---
 
-Next, I will show you how to flexibly use Issues in a repository, hoping it can be helpful for your development collaboration!
+Далее будет показано, как гибко использовать задачи в репозитории. Надеемся, это будет полезно для вашей совместной работы по разработке программных продуктов!

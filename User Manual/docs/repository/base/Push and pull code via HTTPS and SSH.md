@@ -1,43 +1,43 @@
 ---
-title: Push and Pull Code via HTTPS and SSH Protocols
+title: Отправка и слияние кода с помощью протоколов HTTPS и SSH
 
 origin-url: https://gitee.ru/help/articles/4238
 ---
 
 
-## Introduction to Git Transfer Protocol
+## Введение в протокол передачи данных Git
 
-Git can use the following four protocols for data transmission:
+Git может использовать следующие четыре протокола для передачи данных:
 
-- Local Protocol (Local)
-Using HTTP/HTTPS Protocol
-- SSH (Secure Shell) protocol
-- Git Protocol
+- Локальный протокол (Local)
+Использование протокола HTTP/HTTPS
+- Протокол SSH (Secure Shell)
+- Протокол Git
 
-Among them, the local protocol is not commonly used because most of the time, remote development and code sharing are conducted. The 'git protocol' is also not commonly used because it lacks authorization mechanisms and is difficult to set up.
+Среди них локальный протокол используется нечасто, поскольку чаще всего ведется удаленная разработка и совместное использование кода. Протокол git также не используется, поскольку в нем отсутствуют механизмы авторизации и его сложно настроить.
 
-## Currently supported protocols by Gitee
+## Протоколы, поддерживаемые Gitee в настоящее время
 
-Currently, Gitee supports pushing/pulling code using the 'HTTPS protocol' and 'ssh protocol'. The difference between the two protocols is only in the different addresses when using the same repository with different protocols, and the corresponding authorization implementation.
+В настоящее время Gitee поддерживает оптравку/слияние кода с помощью протоколов 'HTTPS' и 'ssh'. Разница между этими двумя протоколами заключается только в различных адресах при использовании одного и того же репозитория с разными протоколами, а также в соответствующей реализации авторизации.
 
-Using the repository **<https://gitee.ru/normalcoder/Gitee-Blog-Applets>** as an example, the remote repository addresses (remote) for the two protocols are as follows:
+На примере репозитория **<https://gitee.ru/normalcoder/Gitee-Blog-Applets>** адреса удаленных репозиториев (remote) для двух протоколов выглядят следующим образом:
 
-> **HTTPS Protocol**: [https://gitee.ru/normalcoder/Gitee-Blog-Applets.git](https://gitee.ru/normalcoder/Gitee-Blog-Applets.git)
+> **Протокол HTTPS**: [https://gitee.ru/normalcoder/Gitee-Blog-Applets.git](https://gitee.ru/normalcoder/Gitee-Blog-Applets.git)
 >
-The SSH protocol: [git@gitee.ru:normalcoder/Gitee-Blog-Applets.git](git@gitee.ru:normalcoder/Gitee-Blog-Applets.git)
+Протокол SSH: [git@gitee.ru:normalcoder/Gitee-Blog-Applets.git](git@gitee.ru:normalcoder/Gitee-Blog-Applets.git)
 
-> About managing remote repositories in git, you can refer to the article **["Basic Operations of Git Repositories / Remote Repository Management"](/help/articles/4114#article-header1)**.
+> Об управлении удаленными репозиториями в git вы можете прочитать в статье **["Основные операции с репозиториями Git / Управление удаленными репозиториями"](/help/articles/4114#article-header1)**.
 
-## Difference between HTTPS and SSH protocols in usage
+## Разница между протоколами HTTPS и SSH в использовании
 
-Using the `https protocol` to clone is more convenient for beginners. Just copy the https URL and use the clone command directly in Git Bash to clone it locally. However, **you need to enter your username and password every time you fetch and push code**, which is the inconvenience of the `https protocol`.
+Использование протокола `https для клонирования более удобно для новичков. Просто скопируйте https URL и используйте команду clone непосредственно в Git Bash, чтобы клонировать его локально. Однако **вам нужно вводить имя пользователя и пароль каждый раз, когда вы получаете и отправляете код**, что является неудобством протокола `https`.
 
-To clone using the SSH protocol, you need to configure and add SSH keys before cloning. Therefore, if a user wants to clone using the SSH URL, they must be the owner of this repository.
+Для клонирования по протоколу SSH необходимо настроить и добавить ключи SSH перед клонированием. Поэтому, если пользователь хочет клонировать по SSH URL, он должен быть владельцем этого репозитория.
 
-Also, when using the SSH protocol, it is not necessary to enter the account and password each time for fetching and pushing code.
+Кроме того, при использовании протокола SSH нет необходимости каждый раз вводить учетную запись и пароль для получения и отправки кода.
 
-> For more information on generating, configuring, and using SSH Keys, please refer to **["Public Key Management"](/help/categories/38)** and **["Account Management / SSH Public Key Setting"](/help/articles/4191)**
+> Более подробную информацию о создании, настройке и использовании ключей SSH можно найти в разделах **["Управление открытыми ключами"](/help/categories/38)** и **["Управление учетными записями / Настройка открытых ключей SSH"](/help/articles/4191)**.
 
-In terms of commands, there is not much difference between the two protocols. Commands such as `git clone`, `git pull`, `git push` are the same.
+С точки зрения команд, разница между двумя протоколами невелика. Такие команды, как `git clone`, `git pull`, `git push`, одинаковы.
 
-For basic git command usage, you can refer to the articles "Gitee Help Center / Common Git Questions" and "Git Knowledge Base".
+О базовом использовании команд git вы можете прочитать в статьях "Справочный центр Gitee / Общие вопросы по Git" и "База знаний Git".

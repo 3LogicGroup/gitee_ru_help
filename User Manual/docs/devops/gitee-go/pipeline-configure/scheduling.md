@@ -1,33 +1,33 @@
 ---
-title: Task Orchestration
+title: Оркестровка задач
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 slug: /gitee-go/pipeline/scheduling
-description: What is Gitee Go
+description: Что такое Gitee Go
 origin-url: 
 ---
 
-### Stage settings
+### Настройки этапа
 
-A stage is a secondary element in a pipeline and typically represents a collection of similar tasks, such as the "code scanning" stage, which can have three tasks: "code style scanning," "code security scanning," and "code defect scanning." A pipeline can have multiple stages that are executed sequentially. The basic elements of a stage are as follows:
+Этап - это вторичный элемент в конвейере и обычно представляет собой набор подобных задач, таких как этап "сканирования кода", который может включать три задачи: "сканирование стиля кода", "сканирование безопасности кода" и "сканирование дефектов кода". Конвейер может содержать несколько этапов, которые выполняются последовательно. Основные элементы этапа следующие:
 
-Stage name: The name of the stage, which can be repeated within the same pipeline.
-- Stage identification: Unique identifier for a stage, cannot be duplicated within the same pipeline
-- Trigger Method
-  - Auto Trigger: After the upstream stage build is successful, automatically trigger the downstream stage. If it fails, triggering the downstream is not allowed.
-  - Manual Trigger: After the upstream stage is successfully built, the downstream stage will not be triggered automatically and requires manual clicking of the execute button.
-- Failure strategy
- - **Fast Failure**: This is mainly applicable in scenarios where concurrent tasks are being executed, as shown in the diagram below. There are three parallel task chains in the build phase, and when the compilation phase starts, all three task chains will begin execution simultaneously. If Step1-1 fails, even if Step2-1 and Step3-1 succeed, downstream tasks will not be triggered. In other words, when "Fast Failure" is selected, parallel task chains can affect each other's execution status.
-![Quick Failure and Natural Failure](https://images.gitee.ru/uploads/images/2021/1117/174914_1850cfff_5192864.png)
-- **Natural Failure**: In contrast to fast failure, when selecting "Natural Failure", parallel task chains do not affect each other. Even if Step1-1 fails, it will only affect that Step1-2 and Step1-3 cannot continue to execute, while Step2 and Step3 chains will still execute normally until all chains are completed.
+Название этапа: Название этапа, которое может повторяться в рамках одного конвейера.
+- Идентификация этапа: Уникальный идентификатор для этапа, который не может повторяться в рамках одного конвейера.
+- Метод триггера:
+- Автозапуск: После успешного завершения сборки предыдущего этапа, автоматически запускается следующий этап. Если предыдущий этап завершается с ошибкой, автоматический запуск следующего этапа не происходит.
+- Ручной запуск: После успешного завершения сборки предыдущего этапа следующий этап не запускается автоматически и требует ручного запуска.
+- Стратегия обработки ошибок
+- **Быстрый сбой**: это в основном применимо в сценариях, где выполняются параллельные задачи, как показано на схеме ниже. На этапе сборки существуют три параллельные цепочки задач, и когда начинается этап компиляции, все три цепочки задач начнут выполнение одновременно. Если Шаг 1-1 завершится неудачно, даже если Шаг 2-1 и Шаг 3-1 завершатся успешно, последующие задачи не будут запущены. Другими словами, когда выбран «Быстрый сбой», параллельные цепочки задач могут влиять на статус выполнения друг друга.
+![Быстрый сбой и естественный сбой](https://images.gitee.ru/uploads/images/2021/1117/174914_1850cfff_5192864.png)
+- **Естественный сбой**: в отличие от быстрого сбоя, при выборе «Естественный сбой» параллельные цепочки задач не влияют друг на друга. Даже если Шаг 1-1 завершится неудачей, это повлияет только на то, что Шаг 1-2 и Шаг 1-3 не смогут продолжать выполнение, в то время как цепочки Шаг 2 и Шаг 3 будут по-прежнему выполняться нормально, пока все цепочки не будут завершены.
 
- **Example Usage** :
-【 **Recommended】You can define in the visual editing interface:**
-![New Stage](https://images.gitee.ru/uploads/images/2021/1117/175149_76c0a4c2_5192864.png )
-![Edit Stage](https://images.gitee.ru/uploads/images/2021/1117/175154_2dfa1dd2_5192864.png )
+ **Пример использования**:
+**[Рекомендуется]** Вы можете посмотреть на скриншоте:
+![Новый этап](https://images.gitee.ru/uploads/images/2021/1117/175149_76c0a4c2_5192864.png )
+![Редактировать этап](https://images.gitee.ru/uploads/images/2021/1117/175154_2dfa1dd2_5192864.png )
 
- **You can define directly in Yml:**
+ **Вы можете посмотреть в Yml:**
 
 ```yaml
 # Configuration Stage, mandatory fields. Multiple stages can be configured to execute sequentially according to the configuration order.
@@ -43,22 +43,22 @@ Compile
     trigger: auto
 ```
 
-### Task Settings
+### Настройки задачи
 
-A task is a third-level element of a pipeline, which is a sub-element of a stage and the smallest unit of execution. In a stage, tasks can be defined to be executed in serial or parallel order. Tasks are automatically executed by default and do not support manual execution. A task corresponds to a plugin, and the task is the execution container for the plugin. Based on this, the overall model of the pipeline is: **One pipeline corresponds to multiple stages, one stage corresponds to multiple tasks, and one task corresponds to one plugin**.
+Задача — это элемент третьего уровня конвейера, который является подэлементом этапа и наименьшей единицей выполнения. На этапе задачи могут быть определены для выполнения в последовательном или параллельном порядке. По умолчанию задачи выполняются автоматически и не поддерживают выполнение вручную. Задача соответствует плагину, а задача является контейнером выполнения плагина. Исходя из этого, общая модель конвейера выглядит следующим образом: **Один конвейер соответствует нескольким этапам, один этап соответствует нескольким задачам и одна задача соответствует одному плагину**.
 
-A task contains the following basic information:
+Задача содержит следующую основную информацию:
 
-- Task Name: The name of the task, which can be repeated within the same stage.
-- Task Identifier: Unique identifier for the task, cannot be duplicated within the same phase
+- Имя задачи: название задачи, которая может повторяться в рамках одного и того же этапа.
+- Идентификатор задачи: уникальный идентификатор задачи, не может быть дублирован в пределах одного этапа.
 
- **Use Case:**
-**[Recommended]** You can define it in the visual editing interface:
-Create a new task
-Configure the task
-![Create serial and parallel tasks](https://images.gitee.ru/uploads/images/2021/1117/175347_8a345538_5192864.png )
+ **Пример использования**:
+**[Рекомендуется]** Вы можете посмотреть на скриншоте:
+Создать новую задачу
+Настроить задачу
+![Создать последовательные и параллельные задачи](https://images.gitee.ru/uploads/images/2021/1117/175347_8a345538_5192864.png )
 
- **You can define directly in Yml:**
+ **Вы можете посмотреть в Yml:**
 
 ```yaml
 # Configure tasks, required fields. Multiple tasks can be configured, and serial and parallel can be defined.

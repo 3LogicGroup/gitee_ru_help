@@ -1,8 +1,8 @@
-# Russian environment-pro
+# Russian environment-pro (Примечание: это название программного обеспечения)
 
-## 1. Access the jump server
+## 1. Доступ к серверу перехода
 
-Key usage method:
+Способ использования ключа:
 
 ```
 ssh -i xxx.pem ubunutu@10.4.145.xx

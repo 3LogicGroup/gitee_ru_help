@@ -1,36 +1,36 @@
 ---
-title: WebHook Key Verification and Verification Algorithm
+title: Верификация ключа вебхука и алгоритм верификации
 ---
 
-## WebHook Signature Introduction
+## Знакомство с подписями вебхуков
 
-Gitee WebHook supports secure validation through a key.
+Вебхук Gitee поддерживает безопасную верификацию с помощью ключа.
 
-By configuring a non-public WebHook key, users can sign the request content when making requests. After receiving the request, the server verifies the signature using the same key to confirm the integrity and trustworthiness of the received request. The entire process
+Настроив непубличный ключ вебхука, пользователи могут подписывать содержимое запроса при отправке запросов. После получения запроса сервер проверяет подпись, используя тот же ключ, чтобы подтвердить целостность и достоверность полученного запроса.
 
-> Compared with password authentication, signature verification can effectively avoid the security issues caused by the leakage of WebHook passwords during network transmission.
+> По сравнению с аутентификацией по паролю, проверка подписи позволяет эффективно избежать проблем безопасности, вызванных утечкой паролей вебхука во время передачи по сети.
 
-WebHook Signature Generation Algorithm (Reference)
+Алгоритм генерации подписей вебхуков (ссылка)
 
-If WebHook is using the signature method, the request target will include a request header named 'X-Gitee-Token' with the generated signature content as its value. The signature algorithm is as follows:
+Если вебхук использует метод подписи, цель запроса будет включать заголовок запроса с именем 'X-Gitee-Token' с сгенерированным содержимым подписи в качестве его значения. Алгоритм подписи следующий:
 
-Signature parameter description
+Описание параметра подписи
 
-| Parameter | Description |
+| Параметр  | Описание |
 | --------- | --------------------------------------------------------------- |
-The current timestamp, in milliseconds. The time difference between the timestamp and the request call time should not exceed 1 hour. The timestamp should be sent together with the secret key.
-| secret    | Signature key, the SEC string starting with SEC displayed below the signing section on the robot security settings page
+Текущая временная метка в миллисекундах. Разница во времени между временной меткой и временем вызова запроса не должна превышать 1 часа. Временная метка должна быть отправлена вместе с секретным ключом.
+| Секретный ключ | Ключ подписи - строка SEC, начинающаяся с SEC и отображающаяся под разделом подписи на странице настроек безопасности робота.
 
-- Step 1: Use the HmacSHA256 algorithm to calculate the signature by treating timestamp + "
-" + secret key as the signing string.
-- Step 2: Base64 encode the results obtained above.
-Step 3: Encode the results obtained above using urlEncode to get the final signature (using UTF-8 character set).
+- Шаг 1: Используйте алгоритм HmacSHA256 для вычисления подписи, обработав временную метку + "
+" + секретный ключ в качестве строки подписи.
+- Шаг 2: Закодируйте полученные результаты в Base64.
+Шаг 3: закодируйте полученные результаты с помощью urlEncode, чтобы получить окончательную подпись (с использованием набора символов UTF-8).
 
-Step 2, concatenate the timestamp and the signature value obtained in step 1 to the URL.
+Шаг 2. Соедините временную метку и значение подписи, полученное на шаге 1, с URL-адресом.
 
-## Signature Calculation Example Code
+## Пример кода вычисления подписи
 
-Signature Calculation Code Example (Java)
+Пример кода вычисления подписи (Java)
 
 ```java
 Long timestamp = System.currentTimeMillis();
@@ -42,7 +42,7 @@ byte[] signData = mac.doFinal(stringToSign.getBytes("UTF-8"));
 return URLEncoder.encode(new String(Base64.encodeBase64(signData)),"UTF-8");
 ```
 
-Signature Calculation Code Example (Python)
+Пример кода вычисления подписи (Python)
 
 ```python
 #python 2.7

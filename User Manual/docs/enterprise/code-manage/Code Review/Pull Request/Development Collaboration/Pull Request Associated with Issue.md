@@ -1,31 +1,30 @@
 ---
-title: Pull Request associated with Issue
+title: Запрос на слияние, связанный с задачей
 origin-url: https://gitee.ru/help/articles/4142
 ---
 
-Gitee Help Center / Repository Management / Collaborative Development / Help Details
-Pull Request associates with Issue
-Pull Request Issue
-By associating an issue with a pull request, users can close the issue when closing the pull request. The association feature has the following characteristics:
+Справочный центр Gitee / Управление репозиторием / Совместная разработка / Подробная справочная информация
+Запрос на слияние связан с задачей
+задача с запросом на слияние
+Связав задачу с запросом на слияние, пользователи могут закрыть задачу при закрытии запроса на слияние. Функция сопоставления имеет следующие характеристики:
 
-1. A PR can be associated with multiple issues, for example, associating with issue1 and issue2 in the format: #issue1id, #issue2id
-2. After associating a PR with an issue, the status of the issue will automatically change to In Progress. When the PR is merged, the issue will be closed.
-3. Difference between Personal Edition and Enterprise Edition:
+1. Запрос на слияние может быть связан с несколькими задачами, например, с issue1 и issue2 в формате: #issue1id, #issue2id
+2. После связывания запроса на слияние с задачей статус задачи автоматически изменится на "Выполняется". Когда запрос на слияние будет объединен, задача будет закрыта.
+3. Разница между Personal Edition и Enterprise Edition:
 
- - Personal Edition, PR can only be associated with tasks in the current repository
- - Enterprise version, PP can associate tasks from all enterprises.
+- В Personal Edition запрос на слияние может быть связан только с задачами в текущем репозитории
+- В Enterprise Edition запрос на слияние может быть связан с задачами всех предприятий.  
 
-## **The specific steps to associate an issue with a pull request are as follows:**
+## ** Конкретные шаги для связи задачи с запросом на слияние:**
 
-### **1. Specify the identifier of the issue to be closed in the content of the PR, for example:**
+### **1. Укажите в содержании запроса на слияние идентификатор задачи, подлежащей закрытию, например:**
 
-![Image Description](../../../../../../assets/image200.png)
+![Описание изображения](../../../../../../assets/image200.png)
 
-### **2. You can see the association in the issue details page**
+### **2. Вы можете увидеть связь на странице сведений о задаче**
 
-![Image Description](../../../../../../assets/image201.png)
+![Описание изображения](../../../../../../assets/image201.png)
 
-### **3. When the associated issue of a PR is closed after merging**
+### **3. Когда связанная с запросом на слияние задача закрывается после слияния**
 
-![Image Description](../../../../../../assets/image202.png)
- 
+![Описание изображения](../../../../../../assets/image202.png)

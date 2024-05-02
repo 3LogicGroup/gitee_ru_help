@@ -1,3 +1,3 @@
-# Custom Pages
+# Пользовательские страницы
 
-After adding, you need to register the route through `plugin`
+После добавления необходимо зарегистрировать маршрут через `plugin`.

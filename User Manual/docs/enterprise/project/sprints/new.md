@@ -1,7 +1,7 @@
 ---
-title: Create New Iteration
+title: Создание новой итерации
 ---
 
-Click "Iterations" in the navigation menu of the agile project, then click the "New Iteration" button in the upper right corner to open the "New Iteration" window. After filling in the title, responsible person, and planned time, click the "OK" button.
+Чтобы открыть окно "Новая итерация", нажмите на "Итерации" в навигационном меню проекта Agile, затем нажмите на кнопку "Новая итерация" в правом верхнем углу. После заполнения заголовка, ответственного участника и запланированного времени нажмите кнопку "OK".
 
-![Image Description](../docs/assets/image587.png)
+![Описание изображения](../docs/assets/image587.png)

@@ -1,8 +1,8 @@
-# install redis cluster
+# Устанавливаем кластер Redis
 
 
 
-## 1. Create CephFS Storage Pool
+## 1. Создание пула устройств хранения данных CephFS
 
 `filesystem-russia.yaml`
 
@@ -39,7 +39,7 @@ russia-fs  1           26s   Progressing
 
 
 
-## 2. Provisioning CephFS Storage
+## 2. Предоставление хранилища CephFS
 
 `storageclass-russia.yaml`
 
@@ -78,13 +78,13 @@ gitee-public-cephfs         rook-ceph.cephfs.csi.ceph.com   Delete          Imme
 
 
 
-## 3. Deploy Redis Cluster with Helm - 3 masters and 3 slaves
+## 3. Развертывание кластера Redis с помощью Helm — 3 главных и 3 подчиненных устройства
 
-Prerequisite: Use an NFS type StorageClass for persistent storage, with StorageClass name 'rook-cephfs'
+Предварительное условие: используйте StorageClass типа NFS для постоянного хранилища с именем StorageClass «rook-cephfs».
 
 
 
-Chart 仓库地址: [https://artifacthub.io/packages/helm/bitnami/redis-cluster](https://gitee.com/link?target=https%3A%2F%2Fartifacthub.io%2Fpackages%2Fhelm%2Fbitnami%2Fredis-cluster)
+Диаграмма: [https://artifacthub.io/packages/helm/bitnami/redis-cluster](https://gitee.com/link?target=https%3A%2F%2Fartifacthub.io%2Fpackages%2Fhelm%2Fbitnami%2Fredis-cluster)
 
 ```sh
 Pull chart to local
@@ -169,7 +169,7 @@ redis-cluster-5   1/1     Running   0             109s
 
 
 
-Explanation
+Объяснение
 
 ```sh
 # Internal access within the cluster, through svc automatic load balancing:

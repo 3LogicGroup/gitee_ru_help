@@ -1,24 +1,24 @@
 ---
-title: Create New Repository
+title: Создание нового репозитория
 
 origin-url: https://gitee.ru/help/articles/4169
 ---
 
-After completing the registration and successfully logging in to the Gitee account, users can start creating their first repository.
+После завершения регистрации и успешного входа в учетную запись Gitee пользователи могут приступить к созданию своего первого репозитория.
 
-1. Click on the "+" sign in the top right corner of the website and select "New Repository" to enter the new repository page.
+1. Нажмите на знак "+" в правом верхнем углу сайта и выберите "Новый репозиторий", чтобы перейти на страницу нового репозитория.
 ![](%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93.assets/image.png)
-- 2. Fill in the repository information on the new repository page. The concepts related to repositories are explained as follows:
-  - **Repository Name**: The name of the repository used for repository naming
-  - **Ownership**: The ownership of the repository can be a personal account/organization/enterprise. After creation, the account becomes the default owner (administrator) of the repository.
-  - **Path**: The git access path of the repository, composed of `user personal address + repository path name`. After creating the repository, users will access the repository through this path.
-- **Repository Introduction**: A brief introduction to the repository
-- **Is it open source**: Set whether the repository is a public repository, public repositories are visible to everyone, private repositories are only visible to repository members.
-  - **Select Language**: The primary programming language used in the repository
-  - **Add `.gitignore`**: A system-provided template for ignoring files in git commits. After setting `.gitignore`, specified directories/files will be ignored by default in the repository.
-- **Add an open source license**: If the repository is public, you can add an open source license to set the licensing constraints for the current project repository and derivative project repositories. The open source license determines whether the open source project is business-friendly.
-  - **Readme**: Project repository's self-description document, usually containing software descriptions or usage instructions.
-- **Initialize repository using `***template files`**: Initialize the repository using `Issue` or `Pull Request` file templates.
-- 3. Click on "Create" to create your first repository on [Gitee].
+- 2. Заполните информацию о репозитории на странице нового репозитория. Концепции, связанные с репозиториями, объясняются следующим образом:
+  - **Имя репозитория**: Имя репозитория, используемое для именования репозитория.
+  - **Право собственности**: Владельцем репозитория может быть личная учетная запись/организация/предприятие. После создания учетная запись становится владельцем (администратором) репозитория по умолчанию.
+  - **Путь**: Путь доступа к git-репозиторию, состоящий из `личный адрес пользователя + имя пути к репозиторию`. После создания репозитория пользователи будут обращаться к нему по этому пути.
+  - **Введение в репозиторий**: Краткое введение в репозиторий.
+  - **Является ли он открытым**: Установите, является ли репозиторий открытым, публичные репозитории видны всем, частные репозитории видны только членам репозитория.
+  - **Выбрать язык**: Основной язык программирования, используемый в репозитории.
+  - **Добавить `.gitignore`**: Предоставляемый системой шаблон для игнорирования файлов в git-коммитах. После установки `.gitignore` указанные директории/файлы будут по умолчанию игнорироваться в репозитории.
+  - **Добавить лицензию на открытый исходный код**: Если репозиторий является публичным, вы можете добавить лицензию с открытым исходным кодом, чтобы установить лицензионные ограничения для репозитория текущего проекта и репозиториев производных проектов. Лицензия с открытым исходным кодом определяет, является ли проект с открытым исходным кодом удобным для бизнеса.
+  - **Readme**: Документ самоописания репозитория проекта, обычно содержащий описания программ или инструкции по использованию.
+  - **Инициализация репозитория с помощью `***шаблонных файлов`**: Инициализация репозитория с помощью шаблонов файлов `Задача` или `Запрос на слияние`.
+- 3. Нажмите на кнопку "Создать", чтобы создать свой первый репозиторий на [Gitee].
 
 [Gitee]:https://gitee.ru/

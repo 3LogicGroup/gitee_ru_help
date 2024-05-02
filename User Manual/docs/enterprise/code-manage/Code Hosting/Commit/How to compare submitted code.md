@@ -1,9 +1,9 @@
 ---
-Title: How to Compare Submitted Code
+Title: Как сравнить отправленный код
 ---
 
 
-We want to know what modifications we made to the file when submitting the code: "Repository Details"->"Code", click "x commits" to enter the commit record page, and then click "Compare" button again. The commit record checkbox will appear, check the commit record and click "Confirm" to see the code comparison.
+Если вам нужно знать, какие изменения были внесены в файл при отправке кода, пройдите по пути: "Сведения о репозитории"->"Код", нажмите "x коммитов", чтобы перейти на страницу записи коммита, а затем снова нажмите кнопку "Сравнить". После того, как появится чекбокс записи коммита, отметьте запись коммита и нажмите "Подтвердить", чтобы увидеть сравнение кода.
 
-![Image Description](./assets/code_commit_1.png)
-![Image Description](./assets/code_commit_2.png)
+![Описание изображения](./assets/code_commit_1.png)
+![Описание изображения](./assets/code_commit_2.png)

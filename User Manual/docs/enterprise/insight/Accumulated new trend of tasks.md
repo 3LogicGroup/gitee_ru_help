@@ -1,7 +1,7 @@
 ---
-title: Cumulative trend of new tasks
-description: Task cumulative growth trend
+title: Тренд кумулятивного роста задач
+description: Тренд кумулятивного роста количества новых задач
 slug: enterprise/insight/issue-cumulative-trend
 ---
-Track the daily new and completed work items in the project in the "Daily New Tasks Trend".
-![Image Description](./assets/issue_cumulative_trend.png)
+Отслеживайте ежедневные новые и завершенные рабочие элементы в проекте в "Ежедневный тренд новых задач".
+![Описание изображения](./assets/issue_cumulative_trend.png)

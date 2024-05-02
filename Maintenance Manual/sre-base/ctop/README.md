@@ -1,34 +1,34 @@
 # ctop
 
-Star count: 11.6k | Language: Go
+Количество звезд: 11.6k | Язык: Go
 
-A docker container monitoring tool that implements the display effect similar to the 'top' command.
+Инструмент для мониторинга докер-контейнеров, реализующий эффект отображения, аналогичный команде 'top'.
 
-Installation: https://github.com/bcicen/ctop#install
+Установка: https://github.com/bcicen/ctop#install
 
-Command: `ctop`
+Команда: `ctop`.
 
 URL: https://github.com/bcicen/ctop
 
 
 
-Reference: Docker Container Status Command Line Tool - Ctop - Jianshu
+Ссылка: Инструмент командной строки для определения состояния контейнеров Docker - Ctop - Jianshu
 
 
 
-## One, GO implementation version
+## Часть 1, версия для реализации на GO
 
-Official website: https://bcicen.github.io/ctop/
-
-
+Официальный сайт: https://bcicen.github.io/ctop/
 
 
 
 
 
-## Part 2: Python implementation version
 
-Official website: https://github.com/yadutaf/ctop
+
+## Часть 2: версия для реализации на Python
+
+Официальный сайт: https://github.com/yadutaf/ctop
 
 
 

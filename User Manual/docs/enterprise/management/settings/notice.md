@@ -1,29 +1,29 @@
 ---
-title: Announcements and Broadcast Notifications
+title: Объявления и массовые уведомления
 ---
 
-Click on the 'Settings' in the enterprise navigation menu, then click on 'Announcements and Mass Notifications' to enter the announcement and welcome private message management page.
+Нажмите «Настройки» в меню навигации компании, затем нажмите «Объявления и массовые уведомления», чтобы перейти на страницу управления объявлениями и уведомлениями.
 
-![Image Description](assets/image409.png)
+![Описание изображения](assets/image409.png)
 
-## Release Announcement
+## Объявление о релизе
 
-Fill in the announcement content in the input box under 'Publish Announcement', then click the 'Publish Announcement' button.
+Заполните содержание объявления в поле ввода в разделе «Опубликовать объявление», затем нажмите кнопку «Опубликовать объявление».
 
-![Image Description](assets/image410.png)
+![Описание изображения](assets/image410.png)
 
-Newly published announcements will be displayed at the top of the 'Dashboard' page.
+Недавно опубликованные объявления будут отображаться в верхней части страницы «Панель управления».
 
-![Announcement](./assets/notice-preview.png)
+![Объявление](./assets/notice-preview.png)
 
-## Clear Announcement
+## Очистка объявления
 
-Click the 'Clear Announcement' button, then click the 'Publish Announcement' button.
+Нажмите кнопку «Очистить объявление», затем нажмите кнопку «Опубликовать объявление».
 
-![Image Description](assets/image412.png)
+![Описание изображения](assets/image412.png)
 
-## Set Welcome DM
+## Настройка приветственного сообщения
 
-Fill in the input box under 'Custom Welcome Private Message' with the private message content, then click 'Set Private Message Content' button. After setting, new members joining the company will receive this private message.
+Заполните поле ввода в разделе «Пользовательское приветственное личное сообщение» содержимым личного сообщения, затем нажмите кнопку «Установить содержимое личного сообщения». После настройки новые участники, присоединяющиеся к компании, получат это личное сообщение.
 
-![Image Description](assets/image413.png)
+![Описание изображения](assets/image413.png)

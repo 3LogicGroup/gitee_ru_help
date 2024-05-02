@@ -1,30 +1,30 @@
 ---
-title: Personal Information Settings
+title: Настройки персональных данных
 slug: /account/profile-settings
 origin-url: https://gitee.ru/help/articles/4188
 ---
 
-### Basic information settings
+### Настройки основной информации
 
-Users can update their account basic information and security information by going to **Settings -> Basic Settings -> Profile -> [Basic Information](https://gitee.ru/profile)**. It supports setting/modifying the current account's registered email, linked phone number, nickname, Weibo address, blog address, and self-introduction.
+Пользователи могут обновить основную информацию о своей учетной записи и информацию о безопасности, перейдя в ** Настройки -> Основные настройки -> Профиль -> [Основная информация](https://gitee.ru/profile)**. Он поддерживает настройку / изменение зарегистрированного адреса электронной почты текущей учетной записи, связанного номера телефона, псевдонима, адреса Weibo, адреса блога и самопрезентации.
 
-Updated information will be displayed in the "User Panel" on the personal account homepage.
+Обновленная информация будет отображаться в "Панели пользователя" на главной странице личного кабинета.
 
-![Personal Account Homepage](https://images.gitee.ru/uploads/images/2018/0814/192811_97344418_551147.png "Personal Account Homepage")
+![Домашняя страница личного кабинета](https://images.gitee.ru/uploads/images/2018/0814/192811_97344418_551147.png "Домашняя страница личного кабинета")
 
-### Personal address settings
+### Настройки персональных данных
 
-Users can complete their real shipping information through **"Settings"->"Basic Settings"->"Profile"->"[Personal Address](https://gitee.ru/profile?from=address)"** for Gitee to give gifts to users, send GVP certificates, and other functions. This information is not displayed publicly.
+Пользователи могут ввести свою реальную информацию о доставке через ** "Настройки"-> "Основные настройки"-> "Профиль"->"[Личный адрес](https://gitee.ru/profile?from=address)"** для Gitee, чтобы дарить пользователям подарки, отправлять сертификаты GVP и выполнять другие функции. Эта информация не отображается публично.
 
-### Personal address settings
+### Настройки личного адреса
 
-Users can update their account password by going to **'Settings' -> 'Basic Settings' -> '[Change Password](https://gitee.ru/profile/password)'**. After verifying the original password, they can update their account password.
+Пользователи могут обновить пароль своей учетной записи, перейдя в ** "Настройки" -> "Основные настройки" -> "[Изменить пароль](https://gitee.ru/profile/password)"**. После проверки исходного пароля они могут обновить пароль своей учетной записи.
 
-If the user forgets the original password, it can be reset by using the "[Forgot Password](https://gitee.ru/password/new)" feature
+Если пользователь забудет исходный пароль, его можно сбросить с помощью функции "[Забыл пароль](https://gitee.ru/password/new)"
 
-### Change Primary Email
+### Изменение основного адреса электронной почты
 
-Operation steps: Log in to Gitee account → Settings → Email Management → Replace primary email.
+Шаги операции: Войдите в учетную запись Gitee → Настройки → Управление электронной почтой → Измените основной адрес электронной почты.
 
 ![](%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF%E8%AE%BE%E7%BD%AE.assets/image.png)
 

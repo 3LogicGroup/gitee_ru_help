@@ -1,33 +1,33 @@
 ---
-title: Work item settings
+title: Настройки рабочего элемента
 ---
 
-## Field Settings
+## Настройки полей
 
-Custom fields can be created or deleted in the 'Field Settings' page for use by various work item types.
+Пользовательские поля могут быть созданы или удалены на странице 'Настроек полей' для использования различными типами элементов работы.
 
-![Image Description](assets/image339.png)
+![Описание изображения](assets/image339.png)
 
-## Status Settings
+## Настройки статуса
 
-On the "Status Settings" page, you can create and delete statuses.
+На странице "Настройки статуса" вы можете создавать и удалять статусы.
 
-![Image Description](assets/image340.png)
+![Описание изображения](assets/image340.png)
 
-Type Settings
+## Настройка типов
 
-In the 'Type Settings' page, you can view information and usage of each work item type and perform editing, configuration, migration, and deletion operations on them.
+На странице "Настройки типов" вы можете просматривать информацию и использование каждого типа элемента работы, а также выполнять операции редактирования, конфигурации, миграции и удаления.
 
-![Image Description](assets/image341.png)
+![Описание изображения](assets/image341.png)
 
-### Configuration Type
+### Тип конфигурации
 
-On the 'Type Settings' page, click on the 'Configure Types' link, and you can configure the fields, states, workflows, and content templates for this work item type in the configuration page.
+На странице "Настройки типов" нажмите на ссылку "Настроить типы", и вы сможете настроить поля, состояния, рабочие процессы и шаблоны содержимого для данного типа рабочего элемента на странице настроек.
 
-![Image Description](assets/image342.png)
+![Описание изображения](assets/image342.png)
 
-Data Migration
+### Миграция данных
 
-To bulk modify the type of a certain class of work items, you can click on the "Data Migration" link in the "Type Settings" page to enter the data migration page for that type.
+Чтобы выполнить массовое изменение типа определённого класса рабочих элементов, вы можете нажать на ссылку "Миграция данных" на странице "Настройки типов", чтобы перейти на страницу миграции данных для этого типа.
 
-![Image Description](assets/image343.png)
+![Описание изображения](assets/image343.png)

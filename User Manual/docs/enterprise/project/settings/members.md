@@ -1,24 +1,24 @@
 ---
-title: Member management
+title: Управление участниками
 origin-url: https://gitee.ru/help/articles/4349
 ---
 
-Click on 'Members' in the project navigation menu to enter the member management page.
+Для перехода на страницу управления участниками нажмите на "Участники" в навигационном меню проекта.
 
-![Image Description](assets/image565.png)
+![Описание изображения](assets/image565.png)
 
-## Add Project Member
+## Добавление участника проекта
 
-Click on the "Add Member" button, then check the members in the selection box, and click "Add" to add them to the project.
+Нажмите на кнопку "Добавить участника", затем отметьте участников в поле выбора и нажмите "Добавить".
 
-![Image Description](assets/image566.png)
+![Описание изображения](assets/image566.png)
 
-## Add Enterprise Members to Multiple Projects
+## Добавление участника предприятия в несколько проектов
 
-Click on the "Members" in the enterprise navigation menu to enter the member management page, then click "..." on the right side of the target member's row, and then click "Edit" in the dropdown menu.
+Для перехода на страницу управления участниками нажмите на "Участники" в навигационном меню проекта, затем нажмите на "..." в правой части строки выбранного участника и нажмите на "Редактировать" в выпадающем меню.
 
-![Image Description](assets/image567.png)
+![Описание изображения](assets/image567.png)
 
-Click on the "Joined Projects" tab, select the project in the dropdown under "Add Associated Project", and then click the "Save" button.
+Нажмите на вкладку "Объединенные проекты", в выпадающем списке под "Добавить связанный проект" выберите проект и нажмите кнопку "Сохранить."
 
-![Image Description](assets/image568.png)
+![Описание изображения](assets/image568.png)

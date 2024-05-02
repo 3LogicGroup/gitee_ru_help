@@ -1,5 +1,5 @@
 ---
-title: Three steps to start a pipeline
+title: Три шага для запуска конвейера
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
@@ -8,58 +8,58 @@ slug: /gitee-go/get-started-in-3-steps
 origin-url: 
 ---
 
-Three steps to quickly play with Gitee Go! Go! Go! Go!
+Три шага, чтобы быстро начать пользоваться Gitee Go
 
-## 1. Free Usage
+## 1. Бесплатное использование
 
-Enterprise/Community Edition is now fully open!
-Currently, by opening Gitee Go Pipeline, each individual code repository can directly obtain 200 minutes of free build time, which is permanently valid!
-Enterprise/organization/individual automatically receives 1000 minutes of free build time per month, applicable to all repositories!
+Корпоративная версия и версия для Сообщества теперь полностью открыта.
+В настоящее время, открыв конвейер Gitee Go Pipeline, каждый отдельный репозиторий кода может напрямую получить 200 минут бесплатного времени сборки, которое действительно на постоянной основе.
+Предприятие/организация/частное лицо автоматически получает 1000 минут бесплатного времени сборки в месяц, применимо ко всем репозиториям.
 
-![Personal Billing Details](https://images.gitee.ru/uploads/images/2022/0317/191152_e80dfbbd_10531940.png)
+![Личные платежные данные](https://images.gitee.ru/uploads/images/2022/0317/191152_e80dfbbd_10531940.png)
 
-## 2. Fork Demo repository as needed
+## 2. Создание форка демо-репозитория
 
-You can experience the convenience brought by the pipeline for the first time by Forking the following Demo repository. You can also skip this step and proceed to the next one.
+Вы можете впервые ощутить удобство конвейера, создав  демонстрационный репозиторий. Вы также можете пропустить этот шаг и перейти к следующему.
 
-- One-click deployment of cloud instances for SpringBoot applications built with Maven: [Maven Usage Example](https://gitee.ru/gitee-go/spring-boot-maven-deploy-case)
-- Application built with Gradle: [Gradle Usage Example](https://gitee.ru/gitee-go/spring-gradle)
-- Build a command-line tool using Golang: [Golang usage example](https://gitee.ru/gitee-go/golang-build-case)
-- Build front-end engineering package based on Node.js: [Node.js Usage Example](https://gitee.ru/gitee-go/gitee-go-nodejs-usage-example)
-- Java application built with Ant: [Ant Usage Example](https://gitee.ru/gitee-go/gitee-go-ant-example)
-- Applications built with Python: [Python Usage Example](https://gitee.ru/gitee-go/gitee-go-python-example)
-- Based on Rails testing and compiling examples: [Ruby usage examples](https://gitee.ru/gitee-go/ruby-rails-case)
-- Application built using PHP: [PHP usage example](https://gitee.ru/gitee-go/gitee-go-php-demo)
-- Web application based on ThinkPHP 6.0, one-click deployment on cloud host: [ThinkPHP Usage Example](https://gitee.ru/gitee-go/thinkphp6-deploy-case)
-- One-click deployment of cloud hosts based on LaravelS: [LaravelS Usage Example](https://gitee.ru/gitee-go/laravels-deploy-case)
-- Deploy a SpringBoot application based on Gradle build with one click: [Gradle Usage Example](https://gitee.ru/gitee-go/spring-boot-gradle-deploy-case)
+- Развертывание облачных экземпляров для приложений SpringBoot, созданных с помощью Maven, в один клик: [Пример использования Maven](https://gitee.ru/gitee-go/spring-boot-maven-deploy-case)
+- Приложение, созданное с помощью Gradle: [Пример использования Gradle](https://gitee.ru/gitee-go/spring-gradle)
+- Создайте инструмент командной строки с помощью Golang: [Пример использования Golang](https://gitee.ru/gitee-go/golang-build-case)
+- Создайте пакет внешнего проектирования на основе Node.js: [Пример использования Node.js](https://gitee.ru/gitee-go/gitee-go-nodejs-usage-example)
+- Java-приложение, созданное с помощью Ant: [Пример использования Ant] (https://gitee.ru/gitee-go/gitee-go-ant-example)
+- Приложения, созданные на Python: [Пример использования Python](https://gitee.ru/gitee-go/gitee-go-python-example)
+- На основе примеров тестирования и компиляции Rails: [Примеры использования Ruby](https://gitee.ru/gitee-go/ruby-rails-case)
+- Приложение, созданное с использованием PHP: [Пример использования PHP](https://gitee.ru/gitee-go/gitee-go-php-demo)
+- Веб-приложение на базе ThinkPHP 6.0, развертывание в один клик на облачном хосте: [Пример использования ThinkPHP](https://gitee.ru/gitee-go/thinkphp6-deploy-case)
+- Развертывание облачных хостов на базе LaravelS в один клик: [Пример использования LaravelS](https://gitee.ru/gitee-go/laravels-deploy-case)
+— Развертывание приложения SpringBoot на основе сборки Gradle одним щелчком мыши: [Пример использования Gradle](https://gitee.ru/gitee-go/spring-boot-gradle-deploy-case)
 
-Gitee Go Official Organization: [https://gitee.ru/gitee-go](https://gitee.ru/gitee-go). The following related demos, new features of Gitee Go, and help manuals will be updated here in real time, and regular capabilities comparisons and analyses in the CICD field both domestically and internationally will be provided. The open-source work of Gitee Go is also progressing rapidly, so stay tuned~
+Официальная страница Gitee Go: [https://gitee.ru/gitee-go](https://gitee.ru/gitee-go). Следующие соответствующие демоверсии, новые функции Gitee Go и справочные руководства будут обновляться здесь в режиме реального времени, а также будут предоставляться регулярные сравнения и анализ возможностей в области CICD как внутри страны, так и за рубежом. Работа Gitee Go с открытым исходным кодом также быстро развивается, так что следите за обновлениями.
 
-## 3. One-click enable Gitee Go, default create three pipelines
+## 3. Включение Gitee Go одним щелчком мыши, по умолчанию создается три конвейера.
 
-- **If you are using the Enterprise Edition, select the repository you forked in the second step or other repositories and enter Gitee Go from here.**
-![Enterprise Edition Gitee Go entrance](https://images.gitee.ru/uploads/images/2022/0317/191650_3c80ffbe_10531940.png)
+- **Если вы используете Корпоративную версию, выберите репозиторий, который вы разветвили на втором этапе, или другие репозитории и введите Gitee Go отсюда.**
+![Вход в Корпоративную версию Gitee Go](https://images.gitee.ru/uploads/images/2022/0317/191650_3c80ffbe_10531940.png)
 
-- **If you are using the Community Edition, select the repository you forked in the second step or other repositories and enter Gitee Go from here.**
-![Community Edition Gitee Go Entry](https://images.gitee.ru/uploads/images/2021/1117/130845_2fa08f4e_5192864.png)
+- **Если вы используете Общественную версию, выберите репозиторий, который вы разветвили на втором этапе, или другие репозитории и введите Gitee Go отсюда.**
+![Общественная версия Gitee Go](https://images.gitee.ru/uploads/images/2021/1117/130845_2fa08f4e_5192864.png)
 
-> If you encounter a situation where Gitee Go cannot be activated as shown in the figure below, please check if your account is bound to a mobile phone number. [Check if the mobile phone number is bound >>>](https://gitee.ru/profile/account_information). Due to the underlying mechanism of Gitee Go based on cloud native and other elastic scheduling mechanisms, which can scale massively, in response to the national call, the use of public resources for "mining" is prohibited. Before starting the journey of Gitee Go, your account needs to be bound to a mobile phone number!
+> Если вы столкнулись с ситуацией, когда Gitee Go не может быть активирован, как показано на рисунке ниже, проверьте, привязана ли ваша учетная запись к номеру мобильного телефона. [Проверьте, привязан ли номер мобильного телефона >>>](https://gitee.ru/profile/account_information). Из-за базового механизма Gitee Go, основанного на облачных и других механизмах планирования, которые могут масштабироваться в широких пределах, в ответ на призыв государства использование общедоступных ресурсов для «майнинга» запрещено. Прежде чем начать пользоваться Gitee Go, вашу учетную запись необходимо привязать к номеру мобильного телефона.
 
-Unable to activate
+Невозможно активировать
 
-After choosing to enable Gitee Go, if you directly fork the demo repository mentioned above, you do not need to use the template to create it directly. In addition, you can choose to create three pipelines based on the template or customize the pipeline. The recommended pipeline template here is recommended based on the language you selected when creating the repository. It is recommended to use the template first.
+После включения Gitee Go, если вы напрямую создадите упомянутый выше демонстрационный репозиторий, вам не нужно использовать шаблон для его непосредственного создания. Кроме того, вы можете создать три конвейера на основе шаблона или настроить конвейер. Рекомендуемый здесь шаблон конвейера зависит от языка, выбранного вами при создании репозитория. Рекомендуется сначала использовать шаблон.
 
-![Enable](https://images.gitee.ru/uploads/images/2022/0317/191828_713944c4_10531940.png)
+![Включить](https://images.gitee.ru/uploads/images/2022/0317/191828_713944c4_10531940.png)
 
-> Creating a pipeline based on a template cannot guarantee a 100% build success rate. It may be related to the specific code in your code repository. If the build fails, you can troubleshoot the issue through the build logs or contact us (QQ Group: 1078759826) for real-time support.
+> Создание конвейера на основе шаблона не может гарантировать 100% успешность сборки. Это может быть связано с конкретным кодом в вашем репозитории кода. Если сборка не удалась, вы можете устранить проблему с помощью журналов сборки или связаться с нами (группа QQ: 1078759826) для получения поддержки в режиме реального времени.
 
-After using templates to create a pipeline, a commit will be generated in your code repository. A `.workflow` folder will be created in the root directory, and the following files will be produced
+После использования шаблонов для создания конвейера в вашем репозитории кода будет создан коммит. В корневом каталоге будет создана папка `.workflow`, и будут созданы следующие файлы:
 
-- **Generate Description File**
+- **Создать файл описания**
 
-![Description File](https://images.gitee.ru/uploads/images/2021/1117/131132_38aa23a6_5192864.png)
+![Файл описания](https://images.gitee.ru/uploads/images/2021/1117/131132_38aa23a6_5192864.png)
 
-- **Pipeline List Page**
+- **Страница со списком конвейеров**
 
-![Image Description](https://images.gitee.ru/uploads/images/2022/0411/183956_13c42c65_10531940.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2022/0411/183956_13c42c65_10531940.png )

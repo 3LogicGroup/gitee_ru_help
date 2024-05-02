@@ -1,18 +1,18 @@
 ---
-title: How to use the CodeOwners feature?
+title: Как использовать функцию CodeOwners?
 origin-url: https://gitee.ru/help/articles/4379
 ---
 
 
-When submitting a PR for daily iteration delivery, specify team members for code review. In most cases, when the code changes involve a file or directory A, the majority of the time, a fixed person B is assigned to perform the code review. We can then refer to B as the CodeOwner of component A. In simple terms, Codeowner is used to define who is responsible for specific files or directories in the repository.
+При отправке запроса на слияние для ежедневной доставки итераций укажите членов команды для проверки кода. В большинстве случаев, когда изменения кода затрагивают файл или каталог А, в большинстве случаев для выполнения проверки кода назначается постоянный сотрудник Б. Затем мы можем ссылаться на Б как на владельца кода компонента A. Проще говоря, Codeowner используется для определения того, кто отвечает за определенные файлы или каталоги в репозитории.
 
-To use the CodeOwner feature, you need to create a CODEOWNERS file at a specified location in the repository. They only apply to the current branch, and the specified locations are:
+Чтобы использовать функцию CodeOwner, вам необходимо создать файл CODEOWNERS в указанном местоположении репозитория. Они применяются только к текущей ветви, и указанными местоположениями являются:
 
-- In the root directory of the repository
-- In the .gitee/ directory
-- In the docs/ directory
+- В корневой директории репозитория
+- В директории .gitee/
+- В директории  docs/
 
-### **CODEOWNERS file example**
+### **Образец файла CODEOWNERS**
 
 ```bash
 # Code Owners for a file
@@ -35,7 +35,7 @@ docs/*  docs@example.com
 apps/ @octocat
 ```
 
-When multiple CODEOWNERS rules in the file match, the user from the last matching pattern in the file will be used. For example:
+При совпадении правил нескольких CODEOWNERS в файле будет использоваться пользователь из последнего совпадающего шаблона в файле. Например:
 
 ```bash
 README.md @user1
@@ -44,13 +44,13 @@ README.md @user1
 *.md @user2
 ```
 
-README.md is owned by @user2, and each file path can only match one CODEOWNERS
-  Rule.
+README.md принадлежит @user2, и путь к каждому файлу может соответствовать только одному Правилу
+  CODEOWNERS.
 
-Syntax escape
+Эрканироование синтаксиса
 
-Use \ to escape patterns starting with #, so that they are treated as patterns instead of comments.
-- Use [ ] to define the scope of the group. The usage of group is as follows:
+Используйте \ для экранирования шаблонов, начинающихся с #, чтобы они обрабатывались как шаблоны, а не как комментарии.
+- Используйте [ ] для определения области действия группы. Использование группы заключается в следующем:
 
 ```INI
 [Documentation]
@@ -65,8 +65,8 @@ model/db/   @database
 README.md  @docs
 ```
 
-You can make a section optional so that the approval of code reviews in that section is optional.
-Place an insertion character ^ before the name of the code owner
+Вы можете сделать раздел необязательным, чтобы утверждение проверок кода в этом разделе было необязательным.
+Поместите символ вставки ^ перед именем владельца кода
 
 ```INI
 ^[Documentation]
@@ -78,12 +78,12 @@ Place an insertion character ^ before the name of the code owner
 /app/models @xxx @xxx2
 ```
 
-### **CodeOwner Assignment Rules**
+### **Правила назначения CodeOwner**
 
-- The specified Codeowner can be either @username or a specified email address.
-- When the specified user does not exist in the platform, or does not exist as a developer or above role in the repository, the corresponding user will not be assigned, and no specific prompt will be provided as to why it is not assigned.
-- The assignment list is limited to repository members, excluding enterprise edition super admins, admins, and organization admins.
-- CODEOWNER attribution only follows the last rule
-- CODEOWNER assignment is not allowed to be removed, it is updated with the CODEOWNERS file.
-- CODEOWNERS assignment: Add the corresponding CODEOWNER to the related PR and add an assignment log (the pusher assigned CODEOWNER XXXX).
-- CODEOWNERS reduce assignment: Related PR updates do not remove the assignment and add assignment logs (the pusher removed the CODEOWNER identity of XXXX).
+- Для указания Codeowner нужно ввести @username или адрес электронной почты.
+- Если указанный пользователь не существует на платформе или не существует в качестве разработчика или вышеуказанной роли в репозитории, соответствующий пользователь не будет назначен, и при этом не будет предоставлено никакого конкретного пояснения, почему он не назначен.
+- Список назначений ограничен участниками репозитория, за исключением суперадминистраторов версии Enterprise Edition, администраторов, а также администраторов организаций.
+- Назначение CODEOWNER выполняется только по последнему правилу
+- Запрещается удалять назначение CODEOWNER, оно обновляется с файлами CODEOWNERS.
+- Назначение CODEOWNERS: Добавьте соответствующего CODEOWNER в свзяанный запрос на слияние и добавьте журнал присвоения (отправитель назначил CODEOWNER XXXX).
+- CODEOWNERS сокращают присвоение: связанные обновления запроса на слияние не удаляют присвоение и не добавляют журналы присвоений (отправитель удалил идентификатор CODEOWNER XXXX).

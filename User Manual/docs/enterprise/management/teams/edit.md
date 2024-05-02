@@ -1,7 +1,7 @@
 ---
-title: Edit Team
+title: Редактирование команды
 ---
 
-Click on the "Members" in the enterprise navigation menu to enter the member management page. Click on the edit icon on the right side of the team in the team list on the left to enter the team edit page. After editing the team information, click the "Save Changes" button.
+Для перехода на страницу управления участниками нажмите «Участники» в меню навигации компании. Нажмите на значок редактирования справа от команды в списке команд слева, чтобы перейти на страницу редактирования команды. После редактирования информации о команде нажмите кнопку «Сохранить изменения».
 
-![Image Description](assets/image416.png)
+![Описание изображения](assets/image416.png)

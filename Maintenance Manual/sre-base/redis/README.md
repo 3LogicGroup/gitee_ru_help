@@ -1,4 +1,4 @@
-# Redis standalone
+# Автономный Redis
 
 ## Redis Business
 
@@ -6,10 +6,10 @@
 - redis-cache port: 6380
 - redis-public port: 6381
 
-## Startup command
+## Команда запуска
 
 ```sh
-# Create Docker exclusive network
+# Создать эксклюзивную сеть Docker
 docker network create nginx_proxy
 
 cd redis-cache

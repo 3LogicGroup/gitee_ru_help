@@ -1,39 +1,39 @@
 ---
-title: Document Management
+title: Управление документами
 authors:
   - name: Cheese
-description: Wiki document deletion, renaming, moving, permission management
+description: Удаление, переименование, перемещение, управление правами доступа к Wiki-документам
 ---
 
-Document Management
+Управление документами
 
-### Document/Directory Deletion
+### Удаление документов/директорий
 
-#### Document deletion
+#### Удаление документов
 
-Click the `trash can` icon button on the right side of the document to delete the document.
-![Image Description](assets/image12.png)
+Для удаления документа нажмите на кнопку со значком "Корзина" в правой части документа.
+![Описание изображения](assets/image12.png)
 
-#### Directory deletion
+#### Удаление директорий
 
-Click on the 'three dots' icon next to the directory, and select 'Delete' from the dropdown menu to delete the directory.
-![Image Description](assets/image13.png)
-### Document/Directory Renaming
+Для удаления директории нажмите на значок "три точки" рядом с директорией и в выпадающем меню выберите "Удалить".
+![Описание изображения](assets/image13.png)
+### Переименование документов/директорий
 
-#### Document Rename
+#### Переименование документов
 
-In the document editing page, you can rename the document.
+Вы можете переименовать документ на странице редактирования документа.
 
-Rename Directory
+#### Переименование директорий
 
-Click on the 'three dots' icon on the directory's right side, and select 'Rename' from the dropdown menu to rename the directory.
-![Image Description](assets/image14.png)
+Чтобы переименовать директорию, нажмите на значок "три точки" в правой части директроии и в выпадающем меню выберите "Переименовать".
+![Описание изображения](assets/image14.png)
 
-### Document Migration
+### Миграция документов
 
-Long press and drag the document to place it in the target directory.
+Нажмите на документ и, удерживая, перетащите его в целевую директорию.
 
-Document Access Control Management
+Управление контролем доступа к документам
 
-Click the 'Select Permissions' button on the document page on the right side, and you can select the minimum access permission for the document in the dropdown.
-![Image Description](assets/image15.png)
+Нажмите кнопку "Выбрать разрешения" на странице документа справа, и в выпадающем списке выберите минимальные права доступа для документа.
+![Описание изображения](assets/image15.png)

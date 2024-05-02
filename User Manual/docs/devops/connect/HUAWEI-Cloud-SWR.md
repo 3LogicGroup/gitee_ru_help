@@ -1,86 +1,86 @@
 ---
-title: Huawei Container Cloud
+title: Облако контейнеров Huawei 
 
 origin-url: https://gitee.ru/help/articles/4221
 ---
 
-"Huawei Cloud Container Image Service (SWR)" (https://www.huaweicloud.com/product/swr.html) now supports [Gitee](https://gitee.ru/).
+"Сервис контейнеров образов облака Huawei (SWR)" (https://www.huaweicloud.com/product/swr.html) теперь поддерживает [Gitee](https://gitee.ru/).
 
 URL-a1b223ddf5
 
-Huawei Cloud Container Registry (SWR) supports the full lifecycle management of container images, from source code to images, and from images to applications. It provides simple, easy-to-use, and secure image management functions to help users quickly deploy containerized services. The recently launched image building and automatic deployment functions further facilitate users in creating their own cloud-based DevOps processes.
+Реестр контейнеров Облака Huawei (SWR) поддерживает управление полным жизненным циклом образов контейнеров - от исходного кода до образов и от образов до приложений. Он предоставляет простые, понятные в использовании и безопасные функции управления образами, помогающие пользователям быстро развертывать контейнерные сервисы. Недавно запущенные функции создания образа и автоматического развертывания еще больше облегчают пользователям создание собственных облачных процессов DevOps.
 
-**SWR (Huawei Cloud Container Image Service) has the following features:**
+**SWR (Сервис контейнеров образов Облака Huawei) обладает следующим функционалом:**
 
-Image management: Supports full lifecycle management of container images, including uploading, downloading, deleting, etc. Provides public and private download URLs for use in different scenarios.
+Управление образами: Поддерживает управление полным жизненным циклом образов контейнеров, включая загрузку, скачивание, удаление и т.д. Предоставляет общедоступные и частные URL-адреса для загрузки для использования в различных сценариях.
 
-- Integration with Docker official images: Seamless integration with Docker Hub official images. Users can directly view and search Docker images in the container image service, and provide the image collection feature. Users can collect Docker official images for easy searching and use.
+- Интеграция с официальными образами Docker: полная интеграция с официальными образами Docker Hub. Пользователи могут напрямую просматривать образы Docker и выполнять поиск в сервисе образов  контейнеров, а также использовать функцию сбора образов. Пользователи могут собирать официальные образы Docker для удобства поиска и использования.
 
-- Access Control: Provides image isolation capability, supports assigning appropriate access permissions (read, edit, manage) to different users.
+- Контроль доступа: Обеспечивает возможность изоляции образов, поддерживает назначение различным пользователям соответствующих прав доступа (чтение, редактирование, управление).
 
-  - Compatible with native Docker: Supports using Docker CLI and native Docker Registry V2 version API to manage images.
+- Совместимость с платформенно-ориентированным Docker: поддерживает использование Docker CLI и платформенно-ориентированный Docker Registry версии V2 API для управления образами.
 
-- Image Building: Supports integration with Gitee, Github, Gitlab, and other source code hosting websites to build images. Image building is automatically triggered when code updates or tag updates occur. Supports users hosting their own Gitee accounts and binding code repositories with image repositories through configuration. The container image service will add hooks in the code repository. Once a push or tag action is detected, the system will automatically download the code and compile and build it based on the specified dockerfile. The generated new image will be pushed to the user's specified image repository.
+- Создание изображений: Поддерживается интеграция с Gitee, Github, Gitlab и другими сайтами хостинга исходного кода для сборки образов. Сборка образов автоматически запускается при обновлении кода или тегов. Предоставляет поддержку пользователям, размещающим на Gitee собственные аккаунты и связывающим репозитории кода с репозиториями образов с помощью конфигурации. Сервис создания образов контейнеров добавляет крючки в репозиторий кода. Как только будет обнаружено действие отправки кода или создания тега, система автоматически загрузит код, скомпилирует и соберет его на основе указанного dockerfile. Новый сгенерированный образ будет отправлен в указанное пользователем хранилище образов.
 
-- Automatic Deployment: Provides an image deployment entry point for one-click deployment of container applications. It supports automatic triggering of deployment when a new version image that meets the specified rules is pushed to the image repository. It seamlessly integrates with Cloud Container Service (CCE) for full lifecycle management and visual monitoring and operation of container clusters. Users can monitor and operate deployed applications using Cloud Container Service (CCE).
+- Автоматическое развертывание: предоставляет исходную точку развертывания образа для развертывания контейнерных приложений в один клик. Поддерживается автоматический запуск развертывания, когда в хранилище изображений помещается образ новой версии, соответствующий указанным правилам. Он легко интегрируется с облачным контейнерным сервисом (ACCESS) для управления полным жизненным циклом и визуального мониторинга и эксплуатации кластеров контейнеров. Пользователи могут отслеживать и управлять развернутыми приложениями с помощью облачного контейнерного сервиса (CCE).
 
-Specific usage process:
+Конкретный процесс использования:
 
-### Step 1
+### Шаг 1
 
-On the Gitee (gitee.ru) repository page - Services, select 'Huawei Container Cloud'.
+Выберите 'Облако Контейнеров Huawei' на странице "Сервисы" репозитория Gitee (gitee.ru).
 
-![Image Description](https://images.gitee.ru/uploads/images/2018/0829/153110_570f319d_669935.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2018/0829/153110_570f319d_669935.png )
 
-### Step 2
+### Шаг 2
 
-According to the page guide, visit Huawei Cloud <https://www.huaweicloud.com/> and register or log in to an existing account. Select Products -> Application Services -> Container Image Service.
-Or directly access <https://www.huaweicloud.com/product/swr.html> to enter.
+Согласно приведенном на странице руководству, посетите Облако Huawei  <https://www.huaweicloud.com/>, зарегистрируйтесь или войдите в существующую учетную запись. Выберите Продукты -> Сервисы приложений -> Сервис контейнерных образов.
+Или зайдите непосредственно на <https://www.huaweicloud.com/product/swr.html>, чтобы войти.
 
-![Image Description](https://images.gitee.ru/uploads/images/2018/0829/153122_935eba6a_669935.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2018/0829/153122_935eba6a_669935.png )
 
-### Step 3
+### Шаг 3
 
-Click "Use Now" to enter the container image service management panel
+Нажмите "Использовать сейчас" для входа на панель управления службой создания образов контейнеров
 
-![Image Description](https://images.gitee.ru/uploads/images/2018/0829/153132_1e34a01c_669935.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2018/0829/153132_1e34a01c_669935.png )
 
-### Step 4
+### Шаг 4
 
-Select Image Build -> Create Build Task
+Выбрать сборку образа -> Создать задачу на сборку
 
-![Image Description](https://images.gitee.ru/uploads/images/2018/0829/153140_18151c9c_669935.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2018/0829/153140_18151c9c_669935.png )
 
-### Step 5
+### Шаг 5
 
-Select Gitee as the source code, enter the basic information, and click "Bind Account" after completion
+Выберите Gitee в качестве исходного кода, введите основную информацию и по завершении нажмите "Привязать учетную запись"
 
-![Image Description](https://images.gitee.ru/uploads/images/2018/0829/153155_361af3fb_669935.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2018/0829/153155_361af3fb_669935.png )
 
-### Step 6
+### Шаг 6
 
-Enter the Gitee authorization page, click the "Authorize" button, and close the current new page after the binding is successful.
+Войдите на страницу авторизации Gitee, нажмите кнопку "Авторизоваться" и после успешной привязки закройте текущую новую страницу.
 
-### Step 7
+### Шаг 7
 
-Go back to the console page and click the confirmation button to complete the account binding.
+Для завершения привязки учетной записи вернитесь на страницу консоли и нажмите кнопку подтверждения.
 
-### Step 8
+### Шаг 8
 
-Select the user on Gitee, the repository to build the image service, and the branch of the repository
+Выберите пользователя в Gitee, репозиторий для создания сервиса изображений и ветку репозитория
 
-![Image Description](https://images.gitee.ru/uploads/images/2018/0829/153225_a80bde09_669935.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2018/0829/153225_a80bde09_669935.png )
 
-### Step 9
+### Шаг 9
 
-Click the "Create" button to enter the build task list, and click the corresponding task to enter the task details
+Нажмите кнопку "Создать", чтобы перейти к списку задач сборки, затем щелкните соответствующую задачу, чтобы ввести сведения о задаче
 
-### Step 10
+### Шаг 10
 
-Click the 'Build Image' button in the upper right corner of the task details page
+Нажмите кнопку "Собрать образ" в правом верхнем углу страницы сведений о задаче
 
-![Image Description](https://images.gitee.ru/uploads/images/2018/0829/153234_67c74cf0_669935.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2018/0829/153234_67c74cf0_669935.png )
 
-If the build fails, you can locate the reason from the build log.
+В случае неудачи сборки причину можно установить в журнале сборки.
 
-Next, you can deploy the built image to Huawei Cloud (Container Engine).
+Далее вы можете развернуть собранный образ в Облаке Huawei (Модуль контейнеров).

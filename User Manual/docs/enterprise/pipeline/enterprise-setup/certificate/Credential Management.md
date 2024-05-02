@@ -1,78 +1,78 @@
 ---
-title: Credential Management
-description: Credential management
+title: Управление учетными данными
+description: Управление учетными данными
 slug: /enterprise/pipeline/enterprise-setup/certificate/introduce
 keywords:
  - Gitee
- - Credential Management
+ - Управление учетными данными
 ---
 
-## What is a Voucher
+## Что такое ваучер
 
-Credentials are authentication information uniformly managed and centralized by Gitee. They are referenced in Gitee services through the issuance of tokens, such as K8S certificates, account passwords, Alibaba Cloud AKSK, Docker repository account passwords, etc.
+Учетные данные - это информация об аутентификации, единообразно управляемая и централизованная компанией Gitee. Они используются в сервисах Gitee посредством выдачи токенов, таких как сертификаты K8S, пароли учетных записей, Alibaba Cloud AKSK, пароли учетных записей репозиториев Docker и т. д.
 
-## What Can You Do
+## Что вы можете сделать
 
-- Credentials can help you manage authentication information uniformly and reduce duplicate configuration costs.
-- After configuring the credentials, they can be referenced only in the Gitee Go pipeline, such as K8S deployment and Helm deployment tasks that can reference K8S certificates
-- Certificates can help protect core accounts from leakage and reduce security risks
-After configuring credentials, Gitee will issue a token (i.e. unique identifier) and map it to authentication information. In Gitee, the token is used to obtain authentication information, eliminating the risk of directly configuring account passwords.
+- Учетные данные помогут вам единообразно управлять информацией об аутентификации и сократить расходы на дублирование конфигурации.
+- После настройки учетных данных на них можно ссылаться только в конвейере Gitee Go, например в задачах развертывания K8S и Helm, которые могут ссылаться на сертификаты K8S.
+- Сертификаты помогают защитить основные учетные записи от утечки и снизить риски безопасности.
+После настройки учетных данных Gitee выдает токен (т. е. уникальный идентификатор) и сопоставляет его с информацией об аутентификации. В Gitee токен используется для получения информации об аутентификации, что устраняет риск прямой настройки паролей учетных записей.
 
-Credential Features
+Особенности учетных данных
 
-1. Support configuring credentials for various cloud services (Alibaba Cloud/Tencent Cloud, etc.), IM communication (DingTalk/Feishu/Enterprise WeChat, etc.), other services (Kubernetes/Docker Repository/Jenkins Master/Maven Settings, etc.).
+1. Поддержка настройки учетных данных для различных облачных сервисов (Alibaba Cloud/Tencent Cloud и т. д.), IM-коммуникаций (DingTalk/Feishu/Enterprise WeChat и т. д.), других сервисов (Kubernetes/Docker Repository/Jenkins Master/Maven Settings и т. д.).
 
-2. All credentials support setting the usage scope: project visible, repository visible. Project or repository members can use other people's credentials to create pipeline calls to external services.
+2. Все учетные данные поддерживают настройку области использования: видимый проект, видимый репозиторий. Участники проекта или репозитория могут использовать чужие учетные данные для создания конвейерных вызовов внешних сервисов.
 
-3、Voucher invalidation issues caused by member resignation or other reasons can be modified by configuring the information in the voucher, without the need to modify the configuration in the pipeline repeatedly.
+3、 Проблемы с недействительностью ваучеров, вызванные выходом участника из проекта или другими причинами, могут быть изменены путем настройки информации в ваучере, без необходимости повторно изменять конфигурацию в конвейере.
 
-Go to Enterprise Settings -> Credential Management to view all credentials within the enterprise.
+Перейдите в раздел "Настройки предприятия" -> "Управление учетными данными", чтобы просмотреть все учетные данные на предприятии.
 
-![Enterprise Credential Management](assets/cloud_service.png)
+![Управление корпоративными учетными данными](assets/cloud_service.png)
 
-### Cloud Service
+### Облачный сервис
 
-Currently supported cloud services include:
+В настоящее время поддерживаются следующие облачные сервисы:
 
-- Alibaba Cloud
- - Tencent Cloud
- - Huawei Cloud
+ - Облако Alibaba Cloud
+ - Облако Tencent
+ - Облако Huawei
 
-![Cloud Service](./assets/cloud-service.png)
+![Облачный сервис](./assets/cloud-service.png)
 
-:::info**Note, the permissions that need to be granted for Alibaba Cloud AKSK:**
+:::info**Примечание: разрешения, которые необходимо предоставить для Alibaba Cloud AKSK:**.
 
-In the multi-cloud deployment scenario, the required permissions are as follows:
+В сценарии развертывания в нескольких облаках требуются следующие разрешения:
 
-Read permission: Read ECS instances, read Cloud Assistant status, read Cloud Command execution results
+Разрешение на чтение: Чтение экземпляров ECS, чтение состояния Cloud Assistant, чтение результатов выполнения Cloud Command.
 
-Write permission: Install cloud assistant on ECS instances, restart ECS instances, execute cloud assistant commands
+Разрешение на запись: Установка облачного помощника на экземпляры ECS, перезапуск экземпляров ECS, выполнение команд облачного помощника.
 
-The write permissions do not include the permission to modify instance information
+Разрешение на запись не включает в себя разрешение на изменение информации об экземпляре
 
-Authorization path: Permission => Permission policy => RAM role => RAM user
+Путь авторизации: Разрешение => Политика разрешений => Роль RAM => Пользователь RAM
 
-These 6 permissions are the minimum permission policies required for the RAM role, which is based on the minimum trust of the user. Users need to customize the created permission policies.
+Эти 6 разрешений являются минимальными политиками разрешений, необходимыми для роли RAM, которая основана на минимальном доверии пользователя. Пользователям необходимо настраивать созданные политики разрешений.
 :::
 
-IM Communication
+IM-коммуникации
 
-Currently supported communication services include:
+В настоящее время поддерживаются следующие коммуникационные сервисы:
 
 - Feishu
 - DingTalk
 - WeChat Work
 
-![IM Communication](./assets/IM Communication.png)
+![IM-коммуникации](./assets/IM Communication.png)
 
-Others
+Другие
 
-Currently supported other services include:
+В настоящее время поддерживаются и другие сервисы:
 
 - Kubernetes
-- Docker Registry
-- Generic username and password
-- Jenkins Master
-- Maven Settings
+- Реестр докеров
+- Общее имя пользователя и пароль
+- Мастер Jenkins
+- Настройки Maven
 
-![k8s credentials](./assets/k8s credentials.png)
+![Учетные данные k8s](./assets/k8s credentials.png)

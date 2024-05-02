@@ -1,23 +1,23 @@
 ---
-title: OpenSCA Open Source Component Detection
-description: OpenSCA open source component detection
+title: Обнаружение компонентов с открытым исходным кодом OpenSCA
+description: Обнаружение компонентов с открытым исходным кодом OpenSCA
 slug: /enterprise/pipeline/plugin/open-sca
 keywords:
  - Gitee
  - OpenSCA
- - Component Detection
+ - Обнаружение компонентов
 ---
 
-## Form Introduction
+## Знакомство с формой
 
-- **Path to the file or directory to be checked**: The path to the file or directory that needs to be checked.
+- **Путь к проверяемому файлу или каталогу**: Путь к файлу или каталогу, который необходимо проверить.
 
-## Usage Example
+## Пример использования
 
-Fill in the path of the file or directory to be detected, for example `./`.
+Введите путь к файлу или каталогу, который необходимо обнаружить, например `./`.
 
-View the corresponding scan report in the build details after running the pipeline.
+После запуска конвейера просмотрите соответствующий отчет о сканировании в деталях сборки.
 
-![openSCA Scan Report](./assets/openSCA Scan Report.png)
+![Отчет о сканировании openSCA](./assets/openSCA Scan Report.png)
 
-### Learn more about [openSCA](https://opensca.xmirror.cn/docs/v1/)
+### Узнайте больше о [openSCA](https://opensca.xmirror.cn/docs/v1/)

@@ -1,11 +1,11 @@
 ---
-title: Set Company Information
+title: Установка информации о компании
 authors:
   - name: Roger
     url: https://gitee.ru/yuriluo
 origin-url: https://gitee.ru/help/articles/4150
 ---
 
-Click 'Summary Information' in the 'Management' interface of the enterprise:
+Нажмите на "Общая информация" в интерфейсе "Управление" в предприятии:
 
-![Image Description](image669.png)
+![Описание изображения](image669.png)

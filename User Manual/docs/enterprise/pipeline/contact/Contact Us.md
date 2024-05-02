@@ -1,17 +1,17 @@
 ---
-title: Contact Us
-description: Contact us
+title: Свяжитесь с нами
+description: Свяжитесь с нами
 origin-url: https://gitee.ru/help/articles/4368
 slug: /enterprise/pipeline/contact/introduce
 keywords:
  - Gitee
- - Contact Us
+ - Свяжитесь с нами
 ---
 
-If you have any questions about the pipeline, you can join our QQ group and @ our technical support staff for assistance.
+Если у вас возникли вопросы по конвейеру, вы можете присоединиться к нашей группе QQ и обратиться за помощью к сотрудникам службы технической поддержки.
 
-QQ Group: 1078759826
+Группа QQ: 1078759826
 
-QR Code
+QR-код
 
-![QR Code](./assets/QR Code.webp)
+![QR-код](./assets/QR Code.webp)

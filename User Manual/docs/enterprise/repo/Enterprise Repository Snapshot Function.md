@@ -1,41 +1,41 @@
 ---
-title: Enterprise Warehouse Snapshot Function
+title: Функция моментального снимка репозитория предприятия
 authors:
   - name: liwen
     url: https://gitee.ru/liwen
 tags:
   - Jenkins
-- Continuous integration
-  - Automated Build
+- Непрерывная интеграция
+  - Автоматизированная сборка
 
 keywords:
   - Jenkins
-- Continuous integration
-  - Automated Build
+- Непрерывная интеграция
+  - Автоматизированная сборка
 
 origin-url: https://gitee.ru/help/articles/4163
 ---
 
 
 
-Gitee has launched the Enterprise Repository Snapshot feature, which creates snapshots for paid enterprises and their organization repositories.
+Компания Gitee запустила функцию моментального снимка репозитория предприятия, которая создает снимки для платных предприятий и их репозиториев.
 
-Snapshot creation time:
+Время создания моментальных снимков:
 
-The creation time of snapshots is the weekends in the last three weeks and the first weekends of each month in the last half year.
+Время создания снимков - выходные дни за последние три недели и первые выходные каждого месяца за последние полгода.
 
-Go to the enterprise interface -> Click on "Projects" to view the snapshot status of all repositories
+Перейдите в интерфейс предприятия -> Нажмите на "Проекты", чтобы просмотреть статус моментальных снимков всех репозиториев
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/0309/110342_82472377_5370906.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/0309/110342_82472377_5370906.png )
 
-You can see the status of the snapshot column, and there are three types of snapshot status
+Вы можете увидеть статус колонки моментальных снимков, и есть три типа статуса моментальных снимков
 
-    Green: There is already a snapshot
-    Grey: Creating the first snapshot starting this weekend
-    Red: The snapshot feature is only available for Enterprise Standard Edition and above
+    Зеленый: Моментальный снимок уже есть
+    Серый: Создаётся первый снимок, начиная с этих выходных.
+    Красный: функция моментального снимка доступна только для версии Enterprise Standard Edition и выше.
 
-Hover over the green icon to see the number of snapshots and time
+Наведите курсор на зеленый значок, чтобы увидеть количество снимков и время.
 
-If users need to restore a snapshot of the repository, they can contact us using the **exclusive service privileges** of the enterprise version to perform the operation.
+Если пользователям необходимо восстановить снимок репозитория, они могут обратиться к нам, используя **эксклюзивные сервисные привилегии** корпоративной версии для выполнения этой операции.
 
-It should be noted that the creation of snapshots is fully automatic and requires no action from the user
+Следует отметить, что создание моментальных снимков происходит полностью автоматически и не требует никаких действий со стороны пользователя

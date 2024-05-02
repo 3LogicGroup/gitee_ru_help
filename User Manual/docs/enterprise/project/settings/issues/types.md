@@ -1,19 +1,19 @@
 ---
-title: Setting Work Item Types
+title: Настройка типов рабочего элемента
 ---
 
-Click on the bottom of the project navigation menu, "Project Settings":
+Внизу навигационного меню проекта нажмите на "Настройки проекта":
 
-![Image Description](assets/image583.png)
+![Описание изображения](assets/image583.png)
 
-Click on the 'Work Item Settings' group to enter the settings page for that work item type.
+Для перехода на страницу настроек выбранного типа рабочего элемента нажмите на группу "Настройки рабочего элемента".
 
-![Image Description](assets/image584.png)
+![Описание изображения](assets/image584.png)
 
-After clicking the "Add Type" button, you can select types in the popup window and click the "Add" button to add them to the project.
+После нажатия на кнопку "Добавить тип" во всплывающем окне будет доступен выбор типов. Добавить выбранные типы в проект можно, нажав на кнопку "Добавить".
 
-![Image Description](assets/image585.png)
+![Описание изображения](assets/image585.png)
 
-If you can't find a suitable type, you can click on the 'Create Type' link in the bottom left corner to enter the enterprise management page to create a new type.
+Если вы не нашли подходящий тип, вы можете создать его на странице управления предприятием, нажав на ссылку "Создать тип" в нижнем левом углу.
 
-![Image Description](assets/image586.png)
+![Описание изображения](assets/image586.png)

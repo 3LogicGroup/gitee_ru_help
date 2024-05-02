@@ -1,74 +1,74 @@
 ---
-title: Code submission triggering
-description: Code submission triggers
+title: Триггеры отправки кода
+description: Триггеры представления кода
 slug: /enterprise/pipeline/source/trigger
 keywords:
  - Gitee
- - Code submission trigger
+ - Триггер отправки кода
 ---
 
-After binding the code source, save the pipeline, and the system will automatically register the webhook on the code service platform. After submitting code on the corresponding code address and branch, the pipeline can be triggered to run.
+После привязки источника кода сохраните конвейер, и система автоматически зарегистрирует веб-крючок на платформе сервиса кода. После отправки кода по соответствующему адресу и ветке кода конвейер может быть запущен на выполнение.
 
-## Trigger Events and Filtering Conditions
+## Триггерные события и условия фильтрации
 
-You can use the configuration of trigger events and filter conditions to filter the webhook events of the source code.
+Вы можете использовать конфигурацию триггерных событий и условий фильтрации для фильтрации событий webhook исходного кода.
 
-### Trigger Events Supported by Different Code Sources
+### События триггеров, поддерживаемые различными источниками кода
 
-| | Gitee | Github | Continuously updated on other platforms |
+| | Gitee | Github | Постоянно обновляется на других платформах |
 |---------|-------|-------|-------|
-Branch push | ✅ | ✅ |
-| Tag push | ✅ | ✅ |
-| Code review  | ✅  | ❌  |
+Branch push | ✅ | ✅ | ✅ |
+| Tag push | ✅ | ✅ | ✅ |
+Обзор кода | ✅ | ❌ | ❌ |
 
 Branch push
 
-Pushing from a local branch to a remote branch (or modifying files in the Web interface of the code management platform), such as pushing from local master to origin/master. The pipeline will match the target branch of the push with the filter conditions. If there is a match, the pipeline will be triggered.
+Перемещение из локальной ветки в удаленную (или изменение файлов в веб-интерфейсе платформы управления кодом), например, перемещение из локального мастера в origin/master. Конвейер сопоставит целевую ветвь push с условиями фильтра. Если есть совпадение, конвейер будет запущен.
 
-Branch push supports three matching methods, and the three matching rules are intersection, which means that if all rules are set, the pipeline can only be triggered if all rules are met.
+Branch push поддерживает три метода сопоставления, и три правила сопоставления являются пересекающимися, что означает, что если все правила установлены, конвейер может быть запущен только при выполнении всех правил.
 
-- Branch Matching: There are the following four independent matching rules
-  - Prefix match: for example, if you fill in 'dev', it will match all branches starting with 'dev'; when left blank, it matches all branches.
-  - Exact Match: If filled with dev, it will only match the dev branch
-- Regular expression match: If you fill in dev.*, it will match all branches with the prefix dev
-- Exact exclusion: If filled with 'dev', submitting code to the dev branch will not trigger the pipeline. Exact exclusion rules have the highest priority and are usually used in combination with other rules
+- Сопоставление веток: существуют следующие четыре независимых правила сопоставления:
+  - Префиксное соответствие: например, если вы заполните 'dev', то будут соответствовать все ветки, начинающиеся с 'dev'; если оставить пустым, то будут соответствовать все ветки.
+  - Точное соответствие: Если заполнить dev, то будет соответствовать только ветке dev.
+- Соответствие регулярному выражению: Если вы заполните dev.*, то оно будет соответствовать всем веткам с префиксом dev.
+- Точное исключение: Если заполнить 'dev', отправка кода в ветку dev не приведет к срабатыванию конвейера. Правила точного исключения имеют наивысший приоритет и обычно используются в сочетании с другими правилами
 
-- File/Directory Matching: There are the following two independent matching rules
-  - Exact Match: If you fill in src/main/test.java, code path filtering will only trigger pipeline runs when code updates satisfy this rule.
-    - Regular expression matching: If filled with src.*, it means that the code path starting with 'src' needs to be updated to trigger the pipeline run.
+- Сопоставление файлов и каталогов: существует два следующих независимых правила сопоставления
+  - Точное соответствие: Если вы заполните src/main/test.java, фильтрация путей кода будет запускать конвейер только в том случае, если обновления кода удовлетворяют этому правилу.
+    - Сопоставление по регулярному выражению: если заполнить src.*, это означает, что для запуска конвейера необходимо обновить путь кода, начинающийся с 'src'.
 
-Commit comment keyword matching: only supports regular expression matching
-- Regular expression match: If filled with '^build.*', it will trigger the pipeline for code submissions with commit messages starting with 'build'.
+Сопоставление ключевых слов комментария коммита: поддерживает только сопоставление регулярных выражений
+- Соответствие регулярному выражению: Если заполнено '^build.*', это означает, что конвейер будет запущен для кода, представленного с сообщениями коммита, начинающимися с 'build'.
 
-### Tag Push
+### Отправка тегов
 
-Push the local tag to the server tag (or create a Tag on the code management platform's web interface), for example, push the local tag release/0.0.1 to the server. The pipeline will match the target Tag name with the filter condition, and if it matches successfully, the pipeline will be triggered.
+Переместите локальный тег в тег сервера (или создайте тег в веб-интерфейсе платформы управления кодом), например, переместите локальный тег release/0.0.1 на сервер. Конвейер сопоставит имя целевого тега с условием фильтра, и в случае успешного совпадения будет запущен конвейер.
 
-- Tag Match: There are four independent matching rules
-    - Prefix matching: If filled in with v1, it matches all tags starting with v1; when left empty, it matches all tags
-    - Exact matching: If you fill in v1.1.1, only v1.1.1 tag will be matched
-    - Regular expression match: If filled with v1.*, it matches all tags with prefix v1.
-- Exact exclusion: If filled in with v1.1.1, creating a v1.1.1 Tag will not trigger the pipeline. The rule of exact exclusion has the highest priority and is usually used in combination with other rules.
+- Сопоставление тегов: Существует четыре независимых правила сопоставления
+    - Сопоставление по префиксу: если заполнить v1, он будет соответствовать всем тегам, начинающиеся с v1; если оставить пустым, то совпадают все теги
+    - Точное соответствие: если вы заполните v1.1.1, будет выполнено сопоставление только с тегом v1.1.1.
+    - Соответствие регулярному выражению: Если заполнить v1.*, оно будет сооветствовать всем тегам с префиксом v1.
+- Точное исключение: Если заполнить v1.1.1, то создание тега v1.1.1 не приведет к срабатыванию конвейера. Правило точного исключения имеет наивысший приоритет и обычно используется в сочетании с другими правилами.
 
-### Code Review
+### Обзор кода
 
-Code review is triggered by actions such as initiating a PR, updating a PR, and commenting on a PR from the page. Therefore, as long as code review triggering is configured in the pipeline, any of these three actions that meet the matching rules will automatically trigger the pipeline execution.
+Проверка кода запускается такими действиями, как инициирование PR, обновление PR и комментирование PR со страницы. Поэтому, если в конвейере настроено инициирование проверки кода, любое из этих трех действий, отвечающих правилам соответствия, автоматически инициирует выполнение конвейера.
 
-Code review supports four matching modes, and the four matching rules are intersected. That is, only when all rules are met can the pipeline be triggered.
+Обзор кода поддерживает четыре режима сопоставления, и четыре правила сопоставления пересекаются. То есть только при выполнении всех правил конвейер может быть запущен.
 
-- Branch Matching: There are the following four independent matching rules
-    - Prefix matching: If filled in with dev, it matches all branches starting with dev; when left empty, it matches all branches
-- Exact match: If you fill in dev, it will only match the dev branch
-    - Regular Expression Matching: If you fill in dev.*, it will match all branches with the dev prefix.
-- Exact exclusion: For example, if you fill in dev, submitting code to the dev branch will not trigger the pipeline. The exact exclusion rule has the highest priority and is usually used in combination with other rules.
+- Сопоставление веток: существуют следующие четыре независимых правила сопоставления
+    - Префиксное соответствие: если заполнено dev, то совпадают все ветви, начинающиеся с dev; если оставлено пусто, то совпадают все ветви
+- Точное совпадение: Если вписать dev, то будет соответствовать только ветке dev.
+    - Сопоставление по регулярному выражению: если вы заполните dev.*, оно будет сопоставляться со всеми ветками с префиксом dev.
+- Точное исключение: Например, если вы заполните dev, отправка кода в ветку dev не приведет к срабатыванию конвейера. Правило точного исключения имеет наивысший приоритет и обычно используется в сочетании с другими правилами.
 
-- Source branch file/directory matching: There are two independent matching rules as follows
-  - Exact Match: If you fill in src/main/test.java, code path filtering will only trigger pipeline runs when code updates satisfy this rule.
-    - Regular expression matching: If filled with src.*, it means that the code path starting with 'src' needs to be updated to trigger the pipeline run.
+- Сопоставление файлов/директорий исходной ветки: существует два следующих независимых правила сопоставления
+  - Точное соответствие: Если вы заполните src/main/test.java, фильтрация путей кода будет запускать конвейер только в том случае, если обновления кода удовлетворяют этому правилу.
+    - Соответствие регулярному выражению: если заполнить src.*, это означает, что путь кода, начинающийся с 'src', должен быть обновлен, чтобы запустить конвейер.
 
-- Review Title Matching: Supports Regular Expression Matching Only
-    - Regular expression match: If you fill in ^Production code merge.*, then PR titles starting with Production code merge will trigger the pipeline when initiating PR, updating PR, or commenting on PR.
+- Сопоставление заголовков обзоров: поддерживается только сопоставление регулярных выражений
+    - Соответствие регулярному выражению: Если вы заполните ^Production code merge.*, то заголовки запросов на слияние, начинающиеся с Production code merge, будут запускать конвейер при инициировании, обновлении или комментировании запроса на слияние.
 
-- Comment Information Matching: Supports Regular Expression Matching Only
-  - Regular expression matching: If filled with
-  `^通过.*`, it will match any comment in the PR starting with `通过`
+- Сопоставление информации о комментарии: Поддерживается только сопоставление с регулярными выражениями
+  - Сопоставление с регулярными выражениями: если заполнено
+  `^通过.*`, то будет проводиться сопоставление с любым комментарием в запросе на слияние, начинающемся с `通过`.

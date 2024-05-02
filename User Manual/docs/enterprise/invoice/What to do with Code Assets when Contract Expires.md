@@ -1,15 +1,15 @@
 ---
-title: How to handle code assets when the contract expires
+title: Как обращаться со средствами кода по истечении срока действия контракта
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 origin-url: https://gitee.ru/help/articles/4164
 keywords:
- - Contract expiry
- - Code asset
+ - Истечение срока действия контракта
+ - Средства кода
 slug: /enterprise/questions/invoice/contract-expired
 ---
 
-After the paid enterprise package expires, if the actual usage limit of the current enterprise (including the number of members, total repository capacity, etc.) does not exceed the free version quota, it will automatically be downgraded to the enterprise free version.
+После истечения срока действия платного пакета Enterprise версия пакета будет автоматически понижена до бесплатной версии Enterprise, если фактический лимит использования текущего пакета (включая количество участников, общую емкость хранилища и т.д.) не превысит квоту бесплатной версии.
 
-If the current enterprise's actual usage limit (including the number of members, total repository capacity, etc.) exceeds the free version quota, the use of corresponding functions (such as push, pull, etc.) will be restricted until the user reduces it to meet the quota of the enterprise free version.
+Если фактический лимит использования текущего пакета Enterprise (включая количество участников, общую емкость хранилища и т.д.) превышает квоту бесплатной версии, использование соответствующих функций (таких как отправка, слияние и т.д.) будет ограничено до тех пор, пока пользователь не уменьшит его до соответствия квоте бесплатной версии Enterprise.

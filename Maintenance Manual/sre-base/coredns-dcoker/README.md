@@ -1,13 +1,13 @@
- # Install coredns-docker
+ # Установка coredns-docker
 
-> Repository address: https://gitee.com/autom-studio/coredns-docker
-
-
-
-Due to the systemd-resolved service managing the DNS system for DNS caching in the Ubuntu operating system, the /etc/resolv.conf file on the host is configured with the address 127.0.0.53. coredns uses this configuration for forwarding, resulting in infinite forwarding.
+> Адрес репозитория: https://gitee.com/autom-studio/coredns-docker
 
 
-Disable cloud host `systemd-resolved` service
+
+Из-за того, что служба systemd-resolved управляет системой DNS для кэширования DNS в операционной системе Ubuntu, файл /etc/resolv.conf на хосте настроен на адрес 127.0.0.53. Сервер coredns использует эту конфигурацию для пересылки, что приводит к бесконечной пересылке.
+
+
+Отключите службу облачного хоста `systemd-resolved
 
 ```sh
 systemctl disable systemd-resolved.service 
@@ -15,7 +15,7 @@ systemctl stop systemd-resolved.service
 systemctl mask systemd-resolved.service 
 ```
 
-Create configuration file persistence directory and copy configuration file
+Создайте каталог сохранения файла конфигурации и скопируйте файл конфигурации
 ```sh
 $ mkdir -p /data/coredns/zones
 $ cd coredns-docker/coredns
@@ -26,38 +26,38 @@ $ cp autom.studio /data/coredns/zones/autom.studio
 $ cp Corefile.template /data/coredns/Corefile
 ```
 
-/data/coredns/Corefile configuration file is as follows
+Конфигурационный файл /data/coredns/Corefile имеет следующий вид
 
 [Corefile](./Corefile.template)
 
 
-- Hosts file parsing
+- Разбор файла хостов
 [hosts](./hosts)
 
 
-- Zone resolution
+- Разрешение зон
 [autom.studio](./autom.studio)
 
 
 
-The host directory is empty. You need to add the host A record mapping to this file.
+Каталог хостов пуст. Вам нужно добавить сопоставление A-записей хостов в этот файл.
 
-> Note: I am using the latest version of the coredns/coredns:1.10.1 image.
-> Customizing your own image is also possible
+> Примечание: я использую последнюю версию образа coredns/coredns:1.10.1.
+> Также возможно создание собственного образа.
 
 
-- The content of the docker-compose.yml file is as follows
+- Содержимое файла docker-compose.yml выглядит следующим образом
 
 [docker-compose-host-network.yml](./docker-compose-host-network.yml)
 
 
-Deploy coredns
+Развертывание coredns
 ```sh
 $ docker-compose -f docker-compose-host-network.yml up -d
 ```
 
 
-- Test Host File
+- Файл тестового хоста
 ```sh
 root@gdc-ci-base:/data/coredns# cat hosts
 
@@ -68,7 +68,7 @@ autom.studio.           23      IN      A       106.12.45.72
 ......
 ```
 
-Test zone file
+Файл тестовой зоны
 ```sh
 root@gdc-ci-base:/data/coredns# dig ai.autom.studio @172.18.0.95
 .....
@@ -85,30 +85,30 @@ test.autom.studio.      30      IN      A       172.18.0.97
 ```
 
 
-- Test etcd
+- Тест etcd
 
 ```sh
 A/CNAME record
-## Add/Modify Resolution
+## Добавить/изменить резолюцию
 $ docker exec -it etcd etcdctl put /devops/com/gitlab/devops/@/1 '{"host":"192.168.100.100","ttl":10}'
 
 
-# /devops is a fixed prefix; /com/gitee/devops is the domain name to be resolved: devops.gitee.com;
-  /@ is a fixed ending identifier; /1 represents the value of the resolution, which can be any value, used to represent multiple resolution values for the same domain name
+# /devops — фиксированный префикс; /com/gitee/devops — это разрешаемое доменное имя: devops.gitee.com;
+   /@ — фиксированный конечный идентификатор; /1 представляет значение разрешения, которое может быть любым значением, используемым для представления нескольких значений разрешения для одного и того же доменного имени.
 
-View parsing
+Посмотреть парсинг
 $ docker exec -it etcd etcdctl get /devops/com/gitlab/devops --prefix
 /devops/com/gitlab/devops/@/1
 {"host":"192.168.100.100","ttl":10}
 
 
-Remove parsing
+Удалить парсинг
 $ docker exec -it etcd etcdctl del /devops/com/gitlab/devops/@/1
 
-# PTR Records (reverse DNS lookup based on IP)
-# Add/Modify parsing
+# PTR-записи (обратный поиск DNS по IP)
+# Добавление/изменение парсинга
 $ docker exec -it etcd etcdctl put /gitee/arpa/in-addr/192/168/100/100/@ '{"host":"devops.gitlab.com.","ttl":10,"type":"PTR"}' # 192.168.100.100 -> devops.gitee.com
-# View and delete as above
+# Просмотр и удаление, как указано выше
 
 ```
 
@@ -122,7 +122,7 @@ devops.gitlab.com.      10      IN      A       192.168.100.100
 ```
 
 
-Add custom domain name resolution in CoreDNS of Kubernetes
+Добавьте пользовательское разрешение доменных имен в CoreDNS в Kubernetes
 ```sh
 $ kubectl get cm/coredns -o yaml -n kube-system
 
@@ -153,15 +153,15 @@ kind: ConfigMap
 
 ```
 
-> Note there is a dot (.) after 'forward'.
+> Обратите внимание, что после слова 'forward' стоит точка (.).
 >
-> 172.18.0.95 is the internal data center Coredns server.
+> 172.18.0.95 - это внутренний сервер Coredns центра обработки данных.
 
 
 
 
 
-You can also add host A records as follows:
+Вы также можете добавить записи хоста A следующим образом:
 
 ```sh
 
@@ -175,7 +175,7 @@ You can also add host A records as follows:
 
 
 
-You can add the following content to the Corefile to configure wildcard domain resolution and A records:
+Вы можете добавить следующее содержимое в Corefile, чтобы настроить разрешение доменов с подстановочными знаками и записи A:
 
 ```yaml
 .:53 {
@@ -198,9 +198,9 @@ You can add the following content to the Corefile to configure wildcard domain r
 
 
 
-The rewrite directive is used for wildcard domain resolution, resolving all domain names ending with .internal.example.com to internal.example.com. The hosts directive is used to configure A record resolution, resolving the specified domain name to the corresponding IP address.
+Директива rewrite используется для разрешения доменов с подстановочными знаками, разрешая все доменные имена, заканчивающиеся на .internal.example.com, в internal.example.com. Директива hosts используется для настройки разрешения записи A, разрешая указанное доменное имя в соответствующий IP-адрес.
 
-Remember to modify the path of Corefile and reload the configuration file to make the configuration take effect.
+Не забудьте изменить путь к Corefile и перезагрузить конфигурационный файл, чтобы настройки вступили в силу.
 
 
 
@@ -209,6 +209,6 @@ Remember to modify the path of Corefile and reload the configuration file to mak
 FQA:
 
 
-Troubleshooting CoreDNS continuous restart issue
+Устранение проблемы с непрерывным перезапуском CoreDNS
 
 https://www.zerchin.xyz/2021/08/12/CoreDNS%E4%B8%8D%E6%96%AD%E9%87%8D%E5%90%AF%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5/

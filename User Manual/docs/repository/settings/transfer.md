@@ -1,29 +1,29 @@
 ---
-title: Repository transfer
+title: Перенос репозитория
 
 origin-url: https://gitee.ru/help/articles/4144
 ---
 
-Gitee now provides 3 types of transfers: **Transfer repository to individual**, **Transfer repository to organization**, **Transfer repository to enterprise**. Users can go to **'Manage' -> 'Repository Settings' -> 'Transfer Repository'** to perform the transfer operation on a repository.
+Теперь Gitee предоставляет 3 типа переноса: **Перенос репозитория частному лицу**, **Перенос репозитория организации**, **Перенос репозитория предприятию**. Пользователи могут перейти в **'Управление' -> 'Настройки репозитория' -> 'Перенос репозитория'**, чтобы выполнить операцию переноса репозитория.
 
-### 1. Transfer repository to other members
+### 1. Перенос репозитория другому участнику
 
-> Need confirmation from the other party through private message, accept the transfer
+> Получите подтверждение от другой стороны через личное сообщение, примите перенос.
 
-- After successful transfer, the repository owner becomes the target user, other members' permissions remain the same, and the source repository owner is removed from the repository but defaults to watch public repositories.
+- После успешного переноса владелец репозитория становится целевым пользователем, права других пользователей остаются прежними, а владелец исходного репозитория удаляется из репозитория, но по умолчанию просматривает публичные репозитории.
 
-### 2. Transfer Repository to Organization
+### 2. Перенос репозитория в организацию
 
-> Repositories can be transferred to organizations that you create or join
+> Репозитории можно переносить в организации, которые вы создаете или к которым присоединяетесь.
 
-- After the transfer is successful, the owner of the repository becomes the owner of the organization, and the permissions of other members remain unchanged
+- После успешного переноса владелец репозитория становится владельцем организации, а разрешения других членов остаются неизменными
 
-### 3. Transfer repository to enterprise
+### 3. Перенос репозитория на предприятие
 
-> Repositories can be transferred to enterprises that you create or join
+> Репозитории можно переносить на предприятия, которые вы создаете или к которым присоединяетесь.
 >
-To transfer to another company, you need to generate a transfer code in the target company's Enterprise Edition by going to "Warehouse Management" -> "Create Warehouse/Transfer Warehouse" -> "Generate Transfer Code".
+Для переноса на другое предприятие необходимо сгенерировать код переноса в Enterprise Edition целевого предприятия, перейдя в раздел "Управление хранилищем" -> "Создать хранилище/Перенести хранилище" -> "Сгенерировать код переноса".
 
-- After the transfer is successful, the owner of the repository becomes the owner of the enterprise, and the permissions of other members remain unchanged
+- После успешного переноса владелец хранилища становится владельцем предприятия, а разрешения других участников остаются неизменными
 
-![Repository Transfer Instructions](https://images.gitee.ru/uploads/images/2019/1209/143705_bbc580c4_551147.png "Repository Transfer Instructions")
+![Инструкции по переносу репозитория](https://images.gitee.ru/uploads/images/2019/1209/143705_bbc580c4_551147.png "Repository Transfer Instructions")

@@ -1,20 +1,20 @@
 ---
-title: Filter, view, and create branches
+title: Фильтрация, просмотр и создание веток
 authors:
   - name: Cheese
-description: Filtering and viewing the instructions for different branches in the repository and creating a new branch
+description: Фильтрация и просмотр инструкций для различных веток в репозитории и создание новой ветки
 ---
 
-## Filter and view different branches in the repository
+## Фильтрация  и просмотр различных веток в репозитории
 
-Click on your repository to enter. The default branch you are currently on will be displayed in the upper left corner of the repository main page. Click to open the dropdown menu and switch to any branch of the repository to view.
+Нажмите на свой репозиторий, чтобы войти в него. Ветка по умолчанию, в которой вы сейчас находитесь, будет отображаться в левом верхнем углу главной страницы репозитория. Нажмите, чтобы открыть выпадающее меню и переключиться на любую ветку репозитория для просмотра.
 
-![Filter View](./assets/a-branch-screen.png)
+![Просмотр фильтра](./assets/a-branch-screen.png)
 
-## Create a New Branch
+## Создание новой ветки
 
-Click on your repository, click on the 'Branches' button on the top left of the repository main page to enter the branches page. Here, you can see the existing branches of the repository along with their update information and status. You can also perform a series of quick operations on branches. For example, by clicking the '+ New Branch' button on the top right of this page, you can create a new branch.
+Перейдите в свой репозиторий, нажмите на кнопку "Ветви" в левом верхнем углу главной страницы репозитория, чтобы перейти на страницу ветвей. Здесь вы можете увидеть существующие ветви репозитория вместе с информацией об их обновлении и статусе. Вы также можете выполнить ряд быстрых операций над ветками. Например, нажав кнопку '+ Новая ветка' в правом верхнем углу этой страницы, вы можете создать новую ветку.
 
-![Create Branch](./assets/a-new-branch-first.png)
+![Создать ветку](./assets/a-new-branch-first.png)
 
-![Create Branch](./assets/a-new-branch-second.png)
+![Создать ветку](./assets/a-new-branch-second.png)

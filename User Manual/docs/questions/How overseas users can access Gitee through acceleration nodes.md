@@ -1,8 +1,8 @@
 ---
-title: How overseas users can access Gitee
+title: Как зарубежные пользователи могут работать в Gitee 
 origin-url: https://gitee.ru/help/articles/4345
 ---
 
-1. Prerequisite: User's requesting end is located in a non-mainland area (overseas, Hong Kong, Macau, Taiwan);
+1. Предварительное условие: Конечный пользователь продукта находится не в матирековой части Китая (зарубежные страны, Гонконг, Макао, Тайвань)
 
-2. DNS is recommended to use 8.8.8.8 (Aliyun users should not use the default DNS server)
+2. Рекомендуемый DNS-сервер 8.8.8.8 (Пользователям Alibaba не рекомендуется использовать этот DNS-сервер по умолчанию)

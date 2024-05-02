@@ -1,34 +1,34 @@
 ---
-title: How to handle code conflicts
+title: Как устранить конфликты в коде
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 origin-url: https://gitee.ru/help/articles/4194
 ---
 
-Conflict merging usually occurs when there are differences between the local commits and the commits on the server, and Git cannot automatically merge the file changes in these differences, so manual merging is required.
+Обычно конфликт слияния возникает, когда между локальными коммитами и коммитами на сервере имеются различия, и Git не может автоматически объединить изменения файлов в этих различиях, поэтому требуется ручное слияние.
 
-For example, I execute `git pull origin master`
+Например, выполняется команда `git pull origin master`.
 
-"#### If Git can merge automatically, then the process looks like this"
+"#### Если Git может автоматически выполнить слияние, то процесс выглядит следующим образом"
 
-![Image Description](http://git.oschina.net/uploads/images/2016/0226/113507_cca8cd22_62561.gif)
+![Описание изображения](http://git.oschina.net/uploads/images/2016/0226/113507_cca8cd22_62561.gif)
 
-During the fetch, Git automatically merges and generates a commit.
+Во время выборки Git автоматически выполняет слияние и генерирует коммит.
 
-#### If Git cannot merge automatically, it will prompt
+#### Если Git не может автоматически выполнить слияние, он выдаст сообщение
 
-![Image Description](http://git.oschina.net/uploads/images/2016/0226/113621_dbc985b5_62561.png)
+![Описание изображения](http://git.oschina.net/uploads/images/2016/0226/113621_dbc985b5_62561.png)
 
-At this point, we can see that there is a conflict with `README.MD` and we need to resolve it manually by modifying `README.MD` to resolve the conflict.
+На этом этапе можно видеть, что существует конфликт с `README.MD`, и его нужно устранить вручную, внеся изменения в `README.MD`.
 
-![Image Description](http://git.oschina.net/uploads/images/2016/0226/113823_fffe18cf_62561.png)
+![Описание изображения](http://git.oschina.net/uploads/images/2016/0226/113823_fffe18cf_62561.png)
 
-It can be seen that there is a conflict on the line of code 1+1=?, the goal of resolving the conflict is to keep the desired code, here keep 1+1=2, then save and exit
+Можно видеть, что конфликт существует в строке кода 1+1=?, при этом цель устранения конфликта - сохранить нужный код, здесь сохраняем 1+1=2, затем сохраняем и выходим
 
-![Image Description](http://git.oschina.net/uploads/images/2016/0226/114159_426b8d65_62561.png)
+![Описание изображения](http://git.oschina.net/uploads/images/2016/0226/114159_426b8d65_62561.png)
 
-After exiting, make sure all conflicts are resolved, and then you can use
+После выхода необходимо убедиться, что все конфликты устранены, а затем можно использовать
 
 ```bash
 git add .
@@ -36,8 +36,8 @@ git commit -m "fixed conflicts"
 git push origin master`
 ```
 
-You can complete a merge conflict by
+Устранить конфликт слияния можно следующим образом:
 
-The entire process looks like this
+Весь процесс выглядит следующим образом:
 
-![Image Description](http://git.oschina.net/uploads/images/2016/0226/114058_429e8b54_62561.gif)
+![Описание изображения](http://git.oschina.net/uploads/images/2016/0226/114058_429e8b54_62561.gif)

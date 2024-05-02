@@ -1,13 +1,13 @@
 ---
-title: Lock Enterprise Member
+title: Заблокировать участника компании
 ---
 
-Click on 'Members' in the enterprise navigation menu to enter the member management page, then click on the '...' on the right side of the target member's row, and then click on the 'Lock' option in the dropdown menu.
+Нажмите на "Участники" в меню навигации компании для перехода на страницу управления участниками. Затем щелкните на "..." справа от строки целевого участника и выберите опцию "Заблокировать" в выпадающем меню.
 
-![Image Description](assets/image383.png)
+![Описание изображения](assets/image383.png)
 
-Enter the verification method and the reason for the lock in the pop-up verification window.
+Во всплывающем окне верификации введите метод верификации и причину блокировки.
 
-![Image Description](assets/image384.png)
+![Описание изображения](assets/image384.png)
 
-After the user is locked, they will not be able to access your enterprise normally. To unlock, click 'Unlock' in the member operation menu.
+После блокировки пользователя он не сможет получить доступ к вашей компании обычным образом. Чтобы разблокировать его, нажмите "Разблокировать" в меню операций с участниками.

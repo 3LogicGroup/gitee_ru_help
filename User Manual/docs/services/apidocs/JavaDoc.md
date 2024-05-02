@@ -1,34 +1,34 @@
 ---
-title: JavaDoc service
+title: Сервис JavaDoc
 
 origin-url: https://gitee.ru/help/articles/4225
 ---
 
-Gitee supports automatic generation and hosting (free) of JavaDoc documentation.
+Gitee поддерживает автоматическое создание и хостинг (бесплатный) документации JavaDoc.
 
-## Environment
+## Среда
 
 * Apache Maven 3
 * OpenJDK 8/11/17
 
-Only supports Maven repository.
+Поддерживает только репозиторий Maven.
 
-## Steps to Use
+## Шаги использования
 
-### Step 1
+### Шаг 1
 
-On the Gitee (gitee.ru) repository homepage, click "Services" - select "JavaDoc".
+На главной странице репозитория Gitee (gitee.ru) нажмите «Сервисы» — выберите «JavaDoc».
 
 ![javadoc-1](../assets/javadoc-1.png)
 
-### Step 2
+### Шаг 2
 
-Fill in the relevant parameters according to the prompt information and click 'Generate Documentation'.
+Заполните соответствующие параметры в соответствии с подсказкой и нажмите «Создать документацию».
 
 ![javadoc-2](../assets/javadoc-2.png)
 
-### Step 3
+### Шаг 3
 
-Click the document access address link to view the document.
+Для просмотра документа нажмите ссылку на адрес документа.
 
 ![javadoc-3](../assets/javadoc-3.png)

@@ -1,6 +1,6 @@
-# Gitee Help Center
+# Справочный центр Gitee
 
-## Key Directory Structure and Files
+## Структура ключевых каталогов и файлы
 
 ```bash
 ├── website                  # Source code of help center framework
@@ -12,30 +12,30 @@
 └── docs                     # Directory of help center documentation
 ```
 
-## Environment Setup
+## Настройка среды
 
-It is recommended to use the LTS version of `nodejs`.
+Рекомендуется использовать LTS-версию `nodejs`.
 
-### Use native environment to set up
+### Используйте для настройки собственную среду
 
-> Install `nvm` to manage the local `Node.js` environment, refer to the documentation: https://github.com/nvm-sh/nvm#installing-and-updating
+> Установите `nvm` для управления локальным окружением `Node.js`, см. документацию: https://github.com/nvm-sh/nvm#installing-and-updating
 > 
-> To download and install `Node.js`, please visit: https://nodejs.org/zh-cn/
+> Чтобы загрузить и установить `Node.js`, посетите сайт: https://nodejs.org/zh-cn/
 
-Install `nvm`
+Установите `nvm`
 
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 ```
 
-Install `Node.js LTS` and set it as the default version
+Установите `Node.js LTS` и назначьте версией по умолчанию
 
 ```bash
 nvm install lts/gallium
 nvm use lts/gallium --default
 ```
 
-Install environment dependencies and run preview
+Установите зависимости среды и запустите предварительный просмотр
 
 ```bash
 cd website && cp .env.example .env
@@ -43,16 +43,16 @@ npm install
 npm run start
 ```
 
-Install environment dependencies and run preview
+Установите зависимости среды и запустите предварительный просмотр
 
 ```bash
 cd website
 npm clear
 ```
 
-Access http://127.0.0.1:3000/ to preview the effect
+Для предварительного просмотра результата зайдите на сайт http://127.0.0.1:3000/ 
 
-### Crowdin Translation
+### Перевод в Crowdin
 ```bash
 # cli 
 npm install @crowdin/cli@3 -g
@@ -67,28 +67,28 @@ cd website  && docusaurus write-translations
 cd .. && crowdin upload && crowdin download
 ```
 
-### Building with Docker
+### Сборка с помощью Docker
 
-> Please search on Baidu for installing `Docker` and `docker-compose`.
+> Найдите на Baidu файлы для установки `Docker` и `docker-compose`.
 
-Build Docker images
-
-```bash
-docker-compose build
-```
-
-Build Docker images
+Сборка образов Docker
 
 ```bash
 docker-compose build
 ```
 
-Start running image
+Сборка образов Docker
+
+```bash
+docker-compose build
+```
+
+Запуск образа
 
 ```bash
 docker-compose up -d
 ```
 
-Access http://127.0.0.1:3000/ to preview the effect
+Для предварительного просмотра результата зайдите на сайт http://127.0.0.1:3000/
 
-## How to Contribute to Documentation
+## Как принять участие в разработку документации

@@ -1,11 +1,11 @@
 ---
-title: Create an Agile project
+title: Создание проекта Agile 
 ---
 
-Click "Projects" in the left navigation menu to enter the project list page, then click the "New Project" button in the upper right corner.
+Нажмите на "Проекты" в навигационном меню слева для перехода на страницу списка проектов. Затем нажмите на кнопку "Новый проект" в правом верхнем углу.
 
-![Image Description](../docs/assets/image558.png)
+![Описание изображения](../docs/assets/image558.png)
 
-Select "Agile Project" in the pop-up "Choose project type" window.
+Выберите "Проект Agile" во всплывающем окне "Выберите тип проекта".
 
-![Image Description](../docs/assets/image559.png)
+![Описание изображения](../docs/assets/image559.png)

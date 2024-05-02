@@ -1,38 +1,38 @@
 ---
-title: How to handle the departure of the enterprise creator
+title: Как решить проблему ухода создателя предприятия
 origin-url: https://gitee.ru/help/articles/4242
 keywords: 
- - Transfer enterprise account
-- Handover
+ - Передача учетной записи предприятия
+- Передача дел
 slug: /enterprise/account/owner-leave
 ---
 
-### 1. Transfer Enterprise Account
+### 1. Передача учетной записи предприятия
 
-Enter the enterprise interface, click on 'Management' - 'Summary Information' - select the members who will receive the enterprise account, click on 'Transfer' to complete the transfer of the enterprise account.
+Войдите в корпоративный интерфейс, нажмите "Управление" - "Сводная информация" - выберите участников, которые получат корпоративную учетную запись, нажмите "Перенос", чтобы завершить перенос корпоративной учетной записи.
 
-![Image Description](image689.png)
+![Описание изображения](image689.png)
 
-### 2. How to handle if not handed over properly?
+### 2. Что делать, если передача не была выполнена должным образом?
 
-1. Fill out the account transfer application materials and affix the official seal; Click [here to download the application materials](https://gitee.ru/enterprise_transfer_template.docx).
+1. Заполните материалы заявки на перенос учетной записи и заверьте их официальной печатью; Нажмите [здесь, чтобы загрузить материалы заявки](https://gitee.ru/enterprise_transfer_template.docx).
 
-2. Other Materials:
+2. Прочие материалы:
 
-(1) Scanned copy of business license, copy of applicant's ID card;
+(1) Отсканированная копия бизнес-лицензии, копия удостоверения личности заявителя;
 
-(2) Except for the enterprise legal person applying for transfer to an enterprise account directly, others need to provide one of the following: Company Power of Attorney/Company Employment Certificate.
+(2) За исключением юридического лица-предприятия, подающего заявку на передачу непосредственно на корпоративный аккаунт, другим лицам необходимо предоставить один из следующих документов: Доверенность компании/Справку о приеме на работу в компании.
 
-(3) Special Note: If the account information of the original company registrant is unknown, it is also necessary to provide a photo of the person receiving the enterprise (or applicant) holding the business license and ID card.
+(3) Особое примечание: Если информация об учетной записи первоначального владельца регистрации компании неизвестна, необходимо также предоставить фотографию лица, получающего предприятие (или заявителя), имеющего бизнес-лицензию, а также удостоверение личности.
 
-(4) Gitee's purchase invoice screenshot or the latest paid Gitee order screenshot.
+(4) Скриншот счета-фактуры на покупку в Gitee или скриншот последнего оплаченного заказа Gitee.
 
-3. Send the required files to git@oschina.cn email address using your company's enterprise email.
+3. Отправьте необходимые файлы на адрес электронной почты git@oschina.cn, используя корпоративный адрес электронной почты вашей компании.
 
-Email title: Ownership transfer application + Company name.
+Название электронного письма: Заявление о передаче права собственности + название компании.
 
-Please indicate your contact information in the email so that our customer service can contact you to confirm the handover matters.
+Укажите в электронном письме вашу контактную информацию, чтобы наша служба поддержки клиентов могла связаться с вами для подтверждения материалов передачи.
 
-Note:
-(1) If official processing is required, only available for enterprise paid users due to security considerations for company information
-(2) The new enterprise owner needs to be in the enterprise, if not, can be invited by the enterprise administrator. **
+Примечание:
+(1) Если требуется официальная обработка, она доступна только для пользователей платных  версий Enterprise из соображений безопасности корпоративной информации
+(2) Новый владелец предприятия должен входить в штат предприятии, а если нет, он может быть приглашен в качестве администратора предприятия. **

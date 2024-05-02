@@ -1,8 +1,8 @@
 ---
-title: Remove Member
+title: Удаление участника
 origin-url: https://gitee.ru/help/articles/4177
 ---
 
-The repository owner can remove members from the repository by going to 'Repository Settings' -> 'Repository Member Management'. Once removed, the corresponding members will lose the permissions they had for that repository.
+Владелец репозитория может удалить участников из репозитория, перейдя в "Настройки репозитория" -> "Управление участниками репозитория". После удаления соответствующие участники потеряют права, которые у них были в отношении этого репозитория.
 
-![Image Description](../../../../../assets/image220.png)
+![![Описание изображения](../../../../../assets/image 220.png)

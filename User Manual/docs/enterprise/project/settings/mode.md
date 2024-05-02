@@ -1,9 +1,9 @@
 ---
-title: Management Mode Settings
+title: Настройка режимов управления
 ---
 
-Click on the bottom of the project navigation menu, "Project Settings":
+Нажмите на "Настройки проекта" внизу навигационного меню проекта:
 
-In the 'Project Information' page, click on the radio button of the 'Work Item Management Mode' field to switch modes.
+На странице "Информация о проекте", чтобы переключить режим, нажмите на переключатель в разделе «Режим управления рабочими элементами».
 
-![Image Description](assets/image569.png)
+![Описание изображения](assets/image569.png)

@@ -1,5 +1,5 @@
 ---
-title: Image build and deployment
+title: Сборка и развертывание образа
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
@@ -7,12 +7,12 @@ slug: /gitee-go/plugin/image-build-and-deployment
 origin-url: 
 ---
 
-## 1. Image Build
+## 1. Сборка образа
 
-The default workspace is the current code repository root directory. Specify the Dockerfile to build the image and push it to the remote image repository.
+Рабочей областью по умолчанию является текущий корневой каталог репозитория кода. Укажите Dockerfile для создания образа и отправьте его в удаленный репозиторий образов.
 
-- Visual Configuration
-![Image Build](https://images.gitee.ru/uploads/images/2021/1223/161518_fbc81757_5192864.png)
+- Визуальная конфигурация
+![Сборка образа](https://images.gitee.ru/uploads/images/2021/1223/161518_fbc81757_5192864.png)
 
 ```yml
 - step: build@docker
@@ -36,19 +36,19 @@ Docker image repository address, such as hub.docker.com
   isCache: false
 ```
 
-- Parameter Output
-After the image is successfully built, it will automatically output a parameter GITEE_DOCKER_IMAGE to the downstream to represent the image address, which can be directly referenced in the downstream.
+- Вывод параметров
+После того, как образ будет успешно создан, он автоматически выведет параметр GITEE_DOCKER_IMAGE в нисходящий поток, чтобы представить адрес изображения, на который можно напрямую ссылаться в нисходящем потоке.
 
     ```bash
     docker pull ${GITEE_DOCKER_IMAGE}
     ```
 
-## 2. K8S Deployment
+## 2. Развертывание K8S
 
-The default workspace is the current codebase root directory, and deployment is performed based on the specified yaml file using the apply mode.
+Рабочей областью по умолчанию является текущий корневой каталог базы кода, а развертывание выполняется на основе указанного файла yaml с использованием режима применения.
 
-- Visual Configuration
-![K8S Deployment](https://images.gitee.ru/uploads/images/2021/1223/172207_4bf97ccc_5192864.png )
+- Визуальная конфигурация
+![Развертывание K8S](https://images.gitee.ru/uploads/images/2021/1223/172207_4bf97ccc_5192864.png )
 
 ```yml
 - step: deploy@k8s
@@ -66,8 +66,8 @@ The kubectl version is the current version of the kubectl client used in this st
   isReplace: false
 ```
 
-- Tips
-The K8S deployment plugin can be used together with the "Image Build" plugin, where the upstream is the "Image Build" task and the downstream is the "K8S deployment" task. The yaml required in the K8S plugin can be written as follows to obtain the image.
+- Советы
+Плагин развертывания K8S можно использовать вместе с плагином «Сборка образа», где восходящим потоком является задача «Создание образа», а нисходящим — задача «Развертывание K8S». Yaml, необходимый для плагина K8S, можно записать следующим образом, чтобы получить изображение.
 
     ```yaml
     spec:
@@ -81,12 +81,12 @@ The K8S deployment plugin can be used together with the "Image Build" plugin, wh
             - containerPort: 80
     ```
 
-## 3, Helm Deployment
+## 3. Развертывание Helm
 
-The default workspace is the root directory of the current code repository. Deployment is done based on the specified chart file directory and values file directory. The initial deployment uses the 'install' mode, and subsequent deployments use the 'upgrade' mode.
+Рабочей областью по умолчанию является корневой каталог текущего репозитория кода. Развертывание выполняется на основе указанного каталога файлов диаграммы и каталога файлов значений. При первоначальном развертывании используется режим «установки», а при последующих развертываниях используется режим «обновления».
 
-- Visual Configuration
-![Helm Deployment](https://images.gitee.ru/uploads/images/2021/1223/172809_294e30fc_5192864.png)
+- Визуальная конфигурация
+![Развертывание Helm] https://images.gitee.ru/uploads/images/2021/1223/172809_294e30fc_5192864.png)
 
 ```yml
 - step: deploy@helm

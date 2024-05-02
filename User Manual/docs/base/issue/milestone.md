@@ -1,30 +1,30 @@
 ---
-title: Milestone Management
+title: Управление контрольными точками
 authors:
   - name: Cheese
-description: Content related to issue milestone management
+description: Контент, связанный с управлением контрольными точками задач
 ---
 
-> Milestones are a project planning tool used to centrally manage the progress of issues and pull requests.
+> Контрольные точки - инструмент планирования проекта, используемый для централизованного управления ходом решения задач и запросов на слияние.
 
-During project planning, we can design small milestones for different tasks, marking the desired completion deadline for each task. Try to complete all tasks at each time milestone.
+Во время планирования проекта мы можем разработать небольшие контрольные точки для различных подзадач, отметив желаемый срок завершения для каждой подзадачи. Старайтесь выполнять все подзадачи на каждой контрольной точке.
 
-## Milestone Management
+## Управление контрольными точками
 
-In the Pull Request page and Issue page of the repository, we can easily find the 'Milestones' button in the upper right corner. Clicking on it will take you to the repository's milestone management page.
+Вы легко можете найти кнопку "Контрольные точки" в правом верхнем углу страницы запросова на слияние и страницы задач репозитория. Нажав на нее, вы попадете на страницу управления контрольными точками репозитория.
 
 ![](milestone.assets/image.png)
 
-## Create Milestone
+## Создание контрольной точки
 
-Here, you can find all the milestones of this repository. Click on the 'New Milestone' button at the top right of the page to create a new milestone.
+Здесь вы можете ознакомиться со всеми контрольными точками этого репозитория. Для создания новой контрольной точки нажмите на кнопку "Создать контрольную точку" в правом верхнем углу страницы.
 
 ![](milestone.assets/image-1.png)
 
-On the new milestone page, you can add `Title`, `Due Date`, and `Description` for your newly created milestone.
+На странице "Новая контрольная точка" вы можете добавить "Название", "Срок выполнения" и "Описание" для своей только что созданной контрольной точки.
 
 ![](milestone.assets/image-2.png)
 
-Once the milestone is created, you can associate the issues managed under this repository with the milestone.
+После создания контрольной точки вы сможете связать с ней задачи, управляемые в этом репозитории.
 
 ![](milestone.assets/image-3.png)

@@ -1,32 +1,32 @@
 ---
-title: Add Members
+title: Добавление участников
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 origin-url: https://gitee.ru/help/articles/4175
 ---
 
-Users can add members to the repository for collaboration through **Repository homepage->"Manage"->"Repository Settings"->"Repository Members Management"->"Add Repository Member"**.
+Пользователи могут добавлять участников в репозиторий для совместной работы через **Домашнюю страницу репозитория->"Управление"->"Настройки репозитория"->"Управление участниками репозитория"->"Добавить участника репозитория "**.
 
-![Add repository members](https://images.gitee.ru/uploads/images/2018/0814/145208_0a51331e_551147.png "Add repository members")
+![Добавление участников репозитория](https://images.gitee.ru/uploads/images/2018/0814/145208_0a51331e_551147.png "Добавить участников репозитория")
 
-Currently, there are three ways to add members: **Invite via link**, **Directly add**, **Invite members through repository**
+В настоящее время существует три способа добавления участников: **Пригласить по ссылке**, **Прямое добавление**, **Пригласить участников через репозиторий**.
 
-## Invite Members via Link
+## Приглашение участников по ссылке
 
-By selecting the role to join as a member, different invitation links can be generated. These links can be shared with others through QQ/QR code, etc., to invite users to join the repository. At the same time, by checking the 'require administrator approval' option, after the members confirm, the administrators can review again.
+При выборе роли, к которой нужно присоединиться в качестве участника, могут быть сгенерированы различные пригласительные ссылки. Этими ссылками можно поделиться с другими через QQ/QR-код и т. д., чтобы пригласить пользователей присоединиться к репозиторию. В то же время, отметив опцию "Требуется одобрение администратора", после подтверждения участниками репозитория администраторы могут повторно просмотреть приглашение.
 
-![Invite members via link](https://images.gitee.ru/uploads/images/2018/0814/145844_46fad951_551147.png)
+![Приглашение участников по ссылке](https://images.gitee.ru/uploads/images/2018/0814/145844_46fad951_551147.png)
 
-## Add members directly
+## Добавление участников непосредственно в репозиторий
 
-After the user selects a role, search and add the Gitee user's personalized address or email to invite them to join the repository. After the invitation is accepted, the invitee will be added directly to the repository.
-If the invited user is not a Gitee user, the system will send an invitation link to the target email, and the link will be valid for 3 days.
+После того как пользователь выберет роль, найдите и добавьте персональный адрес или электронную почту пользователя Gitee, чтобы пригласить его присоединиться к репозиторию. После того как приглашение будет принято, приглашенный будет добавлен непосредственно в репозиторий.
+Если приглашенный пользователь не является пользователем Gitee, система отправит ссылку на приглашение на целевой адрес электронной почты, и ссылка будет действительна в течение 3 дней.
 
-![Add members directly](https://images.gitee.ru/uploads/images/2018/0814/150142_b0411813_551147.png "Add members directly")
+![Добавление участников непосредственно в репозиторий](https://images.gitee.ru/uploads/images/2018/0814/150142_b0411813_551147.png "Добавить участников напрямую")
 
-Inviting Members through Repositories
+## Приглашение участников через репозитории
 
-Users can search for repositories that the current account has participated in. Invite users from other repositories to join the repository.
+Пользователи могут искать репозитории, в которых участвовал текущий аккаунт. Приглашайте пользователей из других репозиториев присоединиться к вашему репозиторию.
 
-![Invite members via repository](https://images.gitee.ru/uploads/images/2018/0814/151118_e63fbff0_551147.png)
+![Пригласить участников через репозитории](https://images.gitee.ru/uploads/images/2018/0814/151118_e63fbff0_551147.png)

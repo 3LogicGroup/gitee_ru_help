@@ -1,33 +1,33 @@
 ---
-title: Upgrade free enterprise account to paid version
+title: Обновление учетной записи пользователя бесплатной версии Enterprise до платной версии
 authors:
   - name: South Drifting All the Way
     url: https://gitee.ru/kangxiok
 origin-url: https://gitee.ru/help/articles/4160
 keywords:
- - Upgrade to Pay
- - Free Enterprise
-slug: /enterprise/questions/invoice/upgrade-paid-version
----
+ - Обновить, Оплатить
+ - Бесплатная версия Enterprise Edition
+slug: /enterprise/questions/invoice/Обновить-paid-version
+---
 
-If you already have a corporate account and want to upgrade to a paid version (Enterprise Basic Edition or above).
+Если у вас уже есть корпоративная учетная запись и вы хотите перейти на платную версию (Enterprise Basic Edition или выше).
 
-1. Log in to your account, select 'Mine', and find the corresponding enterprise that needs to be upgraded and click on it.
+1. Войдите в учетную запись, выберите "Мои", найдите соответствующее предприятие, которое необходимо обновить, и нажмите на него.
 
-![Upgrade](/img/enterprise/question/invoice/upgrade-paid-version/1.webp)
+![Обновление](/img/enterprise/question/invoice/Обновить-paid-version/1.webp)
 
-2. In the enterprise version interface, click on 'Upgrade to paid version'
+2. В интерфейсе версии Enterprise нажмите на 'Обновить до платной версии'
 
-![Upgrade](./assets/upgrade-2.png)
+![Обновление](./assets/Обновить-2.png)
 
-3. On the upgrade/renewal page, select the desired enterprise package type, number of users, and number of years to purchase. Check and agree to the "Gitee Enterprise Service Terms", then click "Submit Order" to go to the payment page.
+3. На странице "Обновить/продлить" выберите для совершения покупки нужный тип корпоративного пакета, количество пользователей и количество лет. Проверьте и согласитесь с "Условиями предоставления услуг Gitee Enterprise", затем нажмите "Отправить заказ" для перехода на страницу оплаты.
 
-![Upgrade](./assets/upgrade-3.png)
+![Обновление](./assets/Обновить-3.png)
 
-Note: The discount code here is only available for new Gitee registered users or during Gitee online promotion activities, and the quantity is limited.
+Примечание: Приведенный здесь скидочный код доступен только для новых зарегистрированных пользователей Gitee или во время онлайн-промоакций Gitee, причем количество участников акций ограничено.
 
-4. Choose the payment method according to your actual payment situation on the payment page.
+4. На странице оплаты выберите способ оплаты в соответствии с вашей реальной ситуацией.
 
-When making offline public transfers, please make the transfer according to the account information shown in the figure below (based on the account information displayed on this webpage). After completing the transfer, please upload the bank's electronic receipt for the staff to check in a timely manner. Lastly, there are instructions on the page regarding issuing invoices for public transfers, please be aware.
+При осуществлении публичных переводов в режиме оффлайн, осуществляйте перевод в соответствии с информацией о счете, показанной на рисунке ниже (на основе информации о счете, отображаемой на этой веб-странице). По завершении перевода загрузите электронную банковскую квитанцию, чтобы сотрудники могли своевременно ее проверить. И, наконец, обращаем ваше внимание на инструкции по выставлению счетов-фактур за публичные переводы, имеющиеся на странице.
 
-![Upgrade](./assets/upgrade-4.png)
+![Обновление](./assets/Обновить-4.png)

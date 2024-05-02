@@ -1,13 +1,13 @@
 ---
-title: Batch Operations on Repositories
+title: Пакетные операции над репозиториями
 origin-url: https://gitee.ru/help/articles/4323
 ---
 
-(1) In the enterprise version, log in as the repository administrator role (or other accounts with the permission to manage repository members)
-(2) Operation Steps: Enterprise Dashboard -> Project -> Repository -> Batch Operations -> Submit
+(1) В корпоративной версии войдите в систему с ролью администратора репозитория (или другими учетными записями с правами на управление участниками репозитория)
+(2) Шаги операции: Панель управления предприятия -> Проект -> Репозиторий -> Пакетные операции -> Отправить
 
-![Image Description](image643.png)
+![Описание изображения](image643.png)
 
-![Image Description](image644.png)
+![Описание изображения](image644.png)
 
-(3) Batch operations are not supported in the Personal Edition
+(3) Пакетные операции не поддерживаются в Personal Edition

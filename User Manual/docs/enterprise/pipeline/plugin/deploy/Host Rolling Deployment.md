@@ -1,15 +1,15 @@
 ---
-title: Host Rolling Deployment
-description: Host Rolling Deployment
+title: Последовательное развертывание хоста
+description: Последовательное развертывание хоста
 slug: /enterprise/pipeline/plugin/host-rollout-deploy
 keywords:
  - Gitee
  - Host
- - Rolling Deployment
+ - Последовательное развертывание
 ---
 
-Host Rolling Deployment is similar to Host Deployment, supporting deployment in batches. Specific configurations can refer to the Host Deployment task.
+Последовательное развертывание хоста похоже на развертывание хоста и поддерживает пакетное развертывание. Конкретные конфигурации могут относиться к задаче «Развертывание хоста».
 
-## What is scrolling frequency?
+## Что такое частота прокрутки?
 
-For example, when selecting 1/3 frequency: Gitee Go will randomly select 1/3 machines from the host group to execute, and continue to execute manually until all machines (excluding those that have been executed) have finished executing.
+Например, при выборе частоты 1/3: Gitee Go случайным образом выберет для выполнения 1/3 компьютеров из группы хостов и продолжит выполнение вручную до тех пор, пока все машины (за исключением тех, которые были запущены) не завершат выполнение.

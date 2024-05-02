@@ -1,29 +1,29 @@
 
 
-# NTP Server (Chrony)
+# NTP Сервер (Chrony)
 
 
 
-## 1.NTP Server
+## 1.NTP-сервер
 
-### 1.1 Install and Configure Chrony.
+### 1.1 Установите и настройте Chrony
 
 ```sh
 root@dlp:~# apt -y install chrony
 root@dlp:~# vi /etc/chrony/chrony.conf
-# line 17: comment out default settings and add NTP Servers for your timezone
+# строка 17: закомментируйте настройки по умолчанию и добавьте NTP-серверы для вашего часового пояса
 pool ntp.ubuntu.com        iburst maxsources 4
 pool 0.ubuntu.pool.ntp.org iburst maxsources 1
 pool 1.ubuntu.pool.ntp.org iburst maxsources 1
 pool 2.ubuntu.pool.ntp.org iburst maxsources 2
 
-# add to the end : add network range you allow to receive time syncing requests from clients
+# добавить в конец: добавить диапазон сети, в котором вы разрешаете получать запросы на синхронизацию времени от клиентов
 allow 10.4.145.0/24
 
 root@dlp:~# systemctl restart chrony
 root@dlp:~# systemctl enable --now chrony
 
-# show status
+# показать статус
 root@dlp:~# chronyc sources
 210 Number of sources = 14
 MS Name/IP address         Stratum Poll Reach LastRx Last sample
@@ -42,7 +42,7 @@ MS Name/IP address         Stratum Poll Reach LastRx Last sample
 
 
 
-## 2.NTP Client
+## 2.Клиент NTP
 
 ```sh
 root@client:~# systemctl status systemd-timesyncd
@@ -58,7 +58,7 @@ root@client:~# systemctl status systemd-timesyncd
              +- 662 /lib/systemd/systemd-timesyncd
 
 root@client:~# vi /etc/systemd/timesyncd.conf
-# add to the end : set NTP server for your timezone
+# добавьте в конце : установите NTP-сервер для вашего часового пояса
 NTP=10.4.145.142
 
 root@client:~# systemctl restart systemd-timesyncd
@@ -81,13 +81,13 @@ Root distance: 30.089ms (max: 5s)
 
 
 
-Set timezone
+Установите часовой пояс
 
 ```sh
-# Set Moscow Timezone
+# Установите московский часовой пояс
 sudo timedatectl set-timezone Europe/Moscow
 
-# Set China Timezone
+# Установите часовой пояс Китая
 [root@tianyi backups]# timedatectl list-timezones |grep Shanghai
 Asia/Shanghai
 [root@tianyi backups]# timedatectl set-timezone Asia/Shanghai

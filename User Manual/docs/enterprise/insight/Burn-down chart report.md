@@ -1,7 +1,7 @@
 ---
-title: Burnout Chart Report
-description: Burnout chart report
+title: Отчет по диаграмме сгорания
+description: Отчет по диаграмме сгорания
 slug: enterprise/insight/burn_down_report
 ---
-Track the remaining work during the iteration period in the burn-down chart, compare it with the ideal line to predict whether the iteration can complete the goal on time, in order to make corresponding adjustments in a timely manner.
-![Image Description](./assets/burn_down_report.png)
+Отслеживайте на диаграмме сгорания оставшуюся работу в течение итерационного периода, сравнивайте ее с идеальной линией, чтобы спрогнозировать возможность своевременного выполнения задачи в ходе итерации, и своевременно внести соответствующие коррективы.
+![Описание изображения](./assets/burn_down_report.png)

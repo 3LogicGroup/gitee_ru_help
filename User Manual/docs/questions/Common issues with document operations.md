@@ -1,15 +1,15 @@
 ---
-title: Common Document Operations Issues
+title: Типичные проблемы при работе с документацией
 authors:
   - name: South Drifting All the Way
     url: https://gitee.ru/kangxiok
 origin-url: https://gitee.ru/help/articles/4315
 ---
 
-### 1. Does wiki document editing content get automatically saved in real-time?
+### 1. Поддерживает ли Wiki редактирование содержимого с автоматическим сохранением в режиме реального времени?
 
-When editing wiki documents, switching from normal mode to full-screen and then back to normal window mode will not lose the edited content. This switching process does not have automatic saving. Only when returning to the normal window and clicking save, the system will officially save the file version.
+При редактировании вики-документов переключение из режима обычного окна в полноэкранный, а затем обратно в режим обычного окна не приведет к потере отредактированного содержимого. Этот процесс переключения не предусматривает автоматического сохранения. Система сохранит версию файла только при возвращении в режим обычного окна и нажатии кнопки "Сохранить".
 
-### 2. Will there be a prompt when leaving the wiki document page without saving?
+### 2. Будет ли показано предупреждение в случае попытки закрытия несохранённого документа?
 
-When leaving the wiki document editing page, the browser will automatically prompt if there are unsaved contents and ask if you want to leave.
+Если в редактируемом Wiki-документе документе есть несохраненные данные, то при его закрытии браузер автоматически отправит уведомление об этом.

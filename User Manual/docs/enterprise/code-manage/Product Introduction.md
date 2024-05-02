@@ -1,6 +1,6 @@
 ---
-title: Product Introduction
+title: Знакомство с продуктом
 description: None
 ---
 
-Gitee is a code management service with ten years of technical accumulation, supporting storage of millions of code repositories and online code collaboration among hundreds of thousands of developers. It helps you achieve full lifecycle management of your internal R&D assets, with efficient immersive online code collaboration supported by various code content security strategies.
+Gitee - сервис управления кодом с десятилетним техническим опытом, поддерживающий хранение миллионов репозиториев кода и совместную работу с кодом в режиме онлайн сотен тысяч разработчиков. Он поможет вам обеспечить полное управление жизненным циклом ваших внутренних научно-исследовательских активов благодаря эффективной интерактивной совместной работе с кодом, поддерживаемой различными стратегиями безопасности содержимого кода.

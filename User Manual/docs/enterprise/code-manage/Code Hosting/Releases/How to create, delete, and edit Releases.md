@@ -1,11 +1,11 @@
 ---
-title: How to create, delete, and edit releases
+title: Как создавать, удалять и редактировать релизы
 ---
 
-1. Create a new version
+1. Создать новую версию
 
-![Image Description](../../../../../assets/image146.png)
+![Описание изображения](../../../../../assets/image146.png)
 
-2. Edit and Delete Release
+2. Редактировать и удалить релиз
 
-![Image Description](../../../../../assets/image148.png)
+![Описание изображения](../../../../../assets/image148.png)

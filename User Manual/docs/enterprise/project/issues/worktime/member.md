@@ -1,15 +1,15 @@
 ---
-title: Member working hours statistics
+title: Статистика рабочих часов участника
 ---
 
-Click "Metrics" in the project navigation menu:
+Нажмите на "Метрики" в навигационном меню проекта:
 
-![Metrics](/img/enterprise/project/project-metrics.png)
+![Метрики](/img/enterprise/project/project-metrics.png)
 
-Click on 'Member Working Hours Report' in the 'Metrics' menu to view the working hours statistics of project members.
+Для просмотра статистики рабочих часов участников проекта нажмите на "Отчет по рабочим часам участника" в меню "Метрики".
 
-![Member Work Time Report](/img/enterprise/project/project-member-worktime-report.png)
+![Отчет по рабочим часам участника](/img/enterprise/project/project-member-worktime-report.png)
 
-In addition, you can also go to the company's work time statistics page by clicking on "Statistics", "Work Hours Statistics", "Personnel Work Hours" in the left menu to view the work time statistics of all members within the company.
+Кроме того, для посмотра статистики рабочего времени всех участников компании вы также можете перейти в на страницу рабочего времени компании, нажав на "Статистика", "Статистика рабочих часов", "Часы работы персонала" в левой части меню.
 
-![Member Work Time Statistics](/img/enterprise/project/enterprise-member-worktime-report.png)
+![Статистика рабочего времени участника](/img/enterprise/project/enterprise-member-worktime-report.png)

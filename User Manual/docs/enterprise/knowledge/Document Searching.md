@@ -1,7 +1,7 @@
 ---
-title: Document search
-description: Document search
+title: Поиск документов
+description: Поиск документов
 slug: enterprise/knowledge/search
 ---
-Go to the document page and enter the desired document name in the "Search Documentation" input box to perform document search.
-![Image Description](assets/image318.png)
+Чтобы найти документ, перейдите на страницу "Документы" и введите название нужного документа в поле ввода "Поиск документации".
+![Описание изображения](assets/image318.png)

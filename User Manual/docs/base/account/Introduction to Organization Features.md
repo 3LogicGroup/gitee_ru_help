@@ -1,12 +1,12 @@
 ---
-title: Organization Function Introduction
+title: Знакомство с функциями организаций
 slug: /account/organization-introduct
 origin-url: https://gitee.ru/help/articles/4129
 ---
 
-To meet the needs of small-scale team repository collaboration and management, Gitee provides the "Organization" feature, which is a collection of personnel and repositories.
+Чтобы удовлетворить потребности небольшой команды в совместной работе и управлении репозиториями, Gitee предоставляет функцию "Организация", представляющую собой совокупность персонала и репозиториев.
 
-There is no direct permission relationship between members and repositories, so organization members do not have direct management permissions for repositories.
-To enable organization members to access/manage repositories in the 'organization' correctly, they need to be added to the repository members first. For specific operations, please refer to: [Repository Management->Add Members](/help/articles/4175)
+Между участниками и репозиториями нет прямых  разрешительных отношений, поэтому участники организации не имеют разрешений на прямое управление репозиториями.
+Чтобы участники организации могли корректно получать доступ к репозиториям в "организации" и управлять ими, необходимо сначала добавить их в список участников репозитория. Для выполнения конкретных операций пройдите: [Управление репозиторием->Добавить участников](/help/articles/4175)
 
-Organization owners can create multiple teams (roles) to manage users belonging to the organization. The organization owner is the highest role in the organization. Like users, organizations can create repositories, but organizations do not have SSH public key configuration and cannot operate version control as an organization.
+Владельцы организаций могут создавать несколько команд (ролей) для управления пользователями, принадлежащими организации. Высшей ролью в организации является владелец организации. Как и пользователи, организации могут создавать репозитории, но организации не имеют настроек с открытым ключом SSH и не могут осуществлять управление версиями как организация.

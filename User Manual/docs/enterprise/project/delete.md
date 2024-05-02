@@ -1,13 +1,13 @@
 ---
-title: Delete Project
+title: Удаление проекта
 origin-url: https://gitee.ru/help/articles/4259
 slug: /enterprise/project/questions/delete
 ---
 
-Click on the bottom of the project navigation menu, "Project Settings":
+В нижней части навигационного меню проекта нажмите на "Настройки проекта":
 
-![Image Description](docs/assets/image521.png)
+![Описание изображения](docs/assets/image521.png)
 
-Click on the 'Delete project' in the left project settings menu, then click the 'Confirm Delete' button.
+Нажмите на "Удалить проект" слева в меню настроек проекта, затем подтвердите нажатием на кнопку "Подтвердить удаление".
 
-![Image Description](docs/assets/image522.png)
+![Описание изображения](docs/assets/image522.png)

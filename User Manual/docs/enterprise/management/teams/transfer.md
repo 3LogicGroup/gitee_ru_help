@@ -1,12 +1,12 @@
 ---
-title: Transfer to Team
+title: Перенос в команду
 origin-url: https://gitee.ru/help/articles/4215
 ---
 
-Click on the 'Members' in the enterprise navigation menu to enter the member management page, then click on the 'Team Management' in the 'Team' menu, then click on the 'Generate Transfer Code' button and copy the transfer code.
+Для перехода на страницу управления участниками нажмите «Участники» в меню навигации компании, затем нажмите «Управление командой» в меню «Команда», затем нажмите кнопку «Создать код передачи» и скопируйте код передачи.
 
-![Image Description](assets/image422.png)
+![Описание изображения](assets/image422.png)
 
-Go to the 'Settings' page of the organization, click on 'Transfer to Enterprise' in the left menu, fill in the transfer code copied just now on the page, and then click the 'Transfer' button.
+Перейдите на страницу «Настройки» организации, нажмите «Перевести в компанию» в левом меню, заполните только что скопированный на странице код перевода, а затем нажмите кнопку «Перевести».
 
-![Image Description](assets/image423.png)
+![Описание изображения](assets/image423.png)

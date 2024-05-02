@@ -1,41 +1,40 @@
 ---
-title: Support DingTalk Notifications
+title: Поддержка уведомлений DingTalk
 authors:
   - name: South Drifting All the Way
     url: https://gitee.ru/kangxiok
 origin-url: https://gitee.ru/help/articles/4278
 ---
 
-> #### Due to the optimization of DingTalk group robots, custom robots cannot be added temporarily, existing custom robots are not affected
+> #### По причине оптимизации групповых роботов DingTalk добавление ие пользовательских роботов временно невозможно, но существующие пользовательские роботы не затрагиваются
 
-> #### We will continue to follow up on the availability of this feature
+> #### Мы продолжим отслеживать доступность этой функции
 
-### 1. Add robot
+### 1. Добавление робота
 
-Select 'Custom' robot on the DingTalk robot management page, enter the robot name, and select the group to send messages to. If necessary, you can set an avatar for the robot, and then click 'Next'.
+На странице управления роботами DingTalkвыберите "Пользовательский" робот, введите имя робота и выберите группу для отправки сообщений. При необходимости вы можете установить аватар для робота, а затем нажать "Далее".
 
 ![](https://images.gitee.ru/uploads/images/2019/1009/161438_2abc0bb1_551147.png)
 
-![Image Description](https://images.gitee.ru/uploads/images/2019/1009/161438_247e230f_551147.png)
+![Описание изображения](https://images.gitee.ru/uploads/images/2019/1009/161438_247e230f_551147.png)
 
-Click the "Copy" button to get the WebHooks address corresponding to this bot, in the following format:
+Нажмите кнопку "Копировать", чтобы получить соответствующий этому роботу адрес вебхуков в следующем формате:
 
 ```bash
 https://oapi.dingtalk.com/robot/send?access_token=xxxxxxxx
 ```
 
-### 2. Set up WebHooks for the repository in Gitee
+### 2. Настройка вебхуков для репозитория в Gitee
 
-Go to your Gitee repository, click on "Manage", and then click on "WebHooks" on the left. Enter the WebHooks URL in the URL field, **do not select old format**, and you can set a password or leave it unset.
+Перейдите в свой репозиторий Gitee, нажмите "Управление", а затем нажмите "вебхуки" слева. Введите URL-адрес вебхуков в поле URL. **Не выбирайте старый формат**. Также по мере необходимости вы можете установить пароль.
+![Описание изображения](https://images.gitee.ru/uploads/images/2019/1009/161438_bce6551e_551147.png)
 
-![Image Description](https://images.gitee.ru/uploads/images/2019/1009/161438_bce6551e_551147.png)
+### 3. Следующие действия запустят вебхуки DingTalk
 
-### 3. The following actions will trigger DingTalk WebHooks
+- Отправка кода: Репозиторий отправляет код, отправляет ветки, удаляет ветки
+- Отправка тегов: Создание тегов, удаление тегов
+- Задача: Создание, закрытие, повторное открытие, удаление задач или изменение ответственных
+- Запрос на слияние: Создание, обновление, объединение запросов на слияние
+- Комментарии: Отправка комментариев на репозитории, задачи, запросы на слияние, коммиты
 
-- Push: Repository pushes code, pushes branches, deletes branches
-- Tag push: Create tag, delete tag
-- Issue: Create, close, reopen, delete tasks, or modify task assignees
-- Pull request: Create pull request, update pull request, merge pull request
-- Comment: Comment on repositories, issues, pull requests, commits
-
-![Image Description](https://images.gitee.ru/uploads/images/2019/1009/161438_04ff173d_551147.png)
+![Описание изображения](https://images.gitee.ru/uploads/images/2019/1009/161438_04ff173d_551147.png)

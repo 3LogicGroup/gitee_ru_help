@@ -1,15 +1,15 @@
 ---
-title: View and Filter Repositories
+title: Просмотр и фильтрация репозиториев
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 origin-url: https://gitee.ru/help/articles/4170
 ---
 
-After logging in, users can use the "Repositories" tab on the personal homepage to search and browse the repositories owned/participated by the current account.
+После входа в систему пользователи могут использовать вкладку "Репозитории" на персональной домашней странице для поиска и просмотра репозиториев, принадлежащих/участвующих в текущей учетной записи.
 
-Through the "Repository Panel", users can browse repositories based on categories such as "Personal/Public/Private/Participated/Cloned (Forks)". They can also use the "Tags" feature to categorize repositories within the repository browsing area. Alternatively, they can directly search for repositories using the repository search bar.
+Через "Панель репозиториев" пользователи могут просматривать репозитории по таким категориям, как "Личные/Общественные/Частные/Участники/Клонированные (копии репозитория)". Они также могут использовать функцию "Теги" для категоризации репозиториев в области просмотра репозиториев. Кроме того, можно напрямую искать репозитории с помощью строки поиска репозиториев.
 
- **After logging in, you can also quickly access recently created repositories through the Quick Browse section in the lower-left corner of the homepage.**
+ **После входа в систему вы также можете быстро получить доступ к недавно созданным репозиториям через раздел "Быстрый просмотр" в левом нижнем углу главной страницы.**.
 
-![Repository Panel Function Diagram](https://images.gitee.ru/uploads/images/2018/0814/101339_17dcb31c_551147.png "Repository Panel Function Diagram.png")
+![Функциональная диаграмма панели репозитория](https://images.gitee.ru/uploads/images/2018/0814/101339_17dcb31c_551147.png "Функциональная диаграмма панели репозитория.png")

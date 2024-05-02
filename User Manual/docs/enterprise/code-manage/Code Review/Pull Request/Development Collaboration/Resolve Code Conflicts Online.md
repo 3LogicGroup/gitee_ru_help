@@ -1,25 +1,25 @@
 ---
-title: Resolve Code Conflicts Online
+title: Устранение конфликтов кода в режиме онлайн
 origin-url: https://gitee.ru/help/articles/4305
 ---
 
 
-### **Function Introduction**
+### **Знакомство с функцией**
 
-When encountering code conflicts during the use of Pull Request, it is often necessary to retrieve the code locally, handle the code conflicts through 'git merge', and then push it back to the repository.
+При возникновении конфликтов кода во время использования запроса на слияние часто возникает необходимость извлечь код локально, устранить конфликты кода с помощью "git merge", а затем отправить его обратно в репозиторий.
 
-Gitee provides a WebIDE solution to resolve conflicts online without the need for a client operation.
+Для устранения конфликтов в режиме онлайн без необходимости работы с клиентом Gitee предоставляет решение Web IDE.
 
-### **Resolve conflicts online through WebIDE**
+### # **Устранение конфликтов в режиме онлайн с помощью WebIDE**
 
-1. On the PR page with code conflicts, click 'Try to resolve conflicts using WebIDE' to enter the WebIDE.
+1. Для входа в WebIDE на содержащей конфликты кода странице запроса на слияние нажмите "Попытаться разрешить конфликты с помощью WebIDE"
 
-![Image Description](../../../../../../assets/image183.png)
+![![Описание изображения](../../../../../../ assets/image183.png)
 
-2. Select the code file with the corresponding conflict, find the conflicting code segment, and choose the appropriate code changes and accept them.
+2. Выберите содержащий соответствующий конфликт файл кода, найдите конфликтный сегмент кода, выберите соответствующие изменения кода и примите их.
 
-![Image Description](../../../../../../assets/image184.png)
+![![Описание изображения](../../../../../../ assets/image184.png)
 
-3. "Temporarily save" the modified file, then click "Submit" to submit the code with resolved conflicts to the PR source branch, go back to the Pull Request page, and resolve the code conflicts.
+3. "Временно сохраните" измененный файл, затем нажмите "Отправить", чтобы отправить код с устраненными конфликтами в исходную ветку запроса на слияние, вернитесь на страницу запроса на слияние и устраните конфликты кода.
 
-![Image Description](../../../../../../assets/image185.png)
+![Описание изображения](../../../../../../ assets/image185.png)

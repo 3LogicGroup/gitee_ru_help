@@ -1,31 +1,31 @@
 ---
-title: Notification Settings
+title: Настройки уведомлений
 slug: /account/notification-settings
 origin-url: https://gitee.ru/help/articles/4190
 ---
 
-### Message notification settings
+### Настройки уведомлений о сообщениях
 
-When a user creates/manages/follows a repository and there are new activities such as new pull requests to handle, the user will receive notifications from Gitee.
+Когда пользователь создает репозиторий/управляет им/подписывается на него, и в нем появляются новые действия, такие как подлежащие обработке новые запросы на слияние, пользователь будет получать уведомления от Gitee.
 
-Users can access **"Settings" -> "Basic Settings" -> "[Notification Settings](https://gitee.ru/profile/notifications)"** to configure their notification settings.
+Для настройки параметров уведомлений пользователи могут зайти в **"Настройки" -> "Основные настройки" -> "[Настройки уведомлений](https://gitee.ru/profile/notifications) "**.
 
-Currently supported notification services and channels in Gitee are as follows:
+В настоящее время в Gitee поддерживаются следующие службы и каналы уведомлений:
 
 ![](%E6%B6%88%E6%81%AF%E9%80%9A%E7%9F%A5%E8%AE%BE%E7%BD%AE.assets/image.png)
-### How to Enable WeChat Notification
+### Как включить уведомления WeChat
 
-Gitee supports Issue/PullRequest assignment and status change reminders via WeChat. You can open it in the following ways:
+Gitee поддерживает назначение задач/запросов на слияние и напоминания о смене статуса через WeChat. Вы можете открыть его следующими способами:
 
 
-### Support third-party IM message notification through WebHook
+### Поддержка уведомления о мгновенных сообщениях от третьих лиц через вебхук
 
-In order to facilitate users to receive Gitee's push in third-party IM, we have supported the following third-party applications through WebHook
+Чтобы облегчить пользователям получение push-уведомлений от Gitee в сторонних мгновенных сообщениях, мы обеспечили поддержку через вебхук следующих сторонних приложений 
 
-- DingTalk Robot: Set the WebHook URL to the DingTalk group chat robot address.
-- Related documents: [WebHook adds support for DingTalk](/help/articles/4135)
-- Enterprise WeChat bot: Set the WebHook URL to the Enterprise WeChat bot address.
-  - Related documentation: [Add support for WeChat Work in WebHook](/help/articles/4296)
-- Feishu Robot: Set the WebHook URL to the Feishu group chat robot address.
-  - Related documentation: [WebHook adds support for Feishu](/help/articles/4297)
-- Slack Bot: Set the WebHook URL to the Slack bot address.
+- Робот DingTalk: Вставьте URL-адрес вебхука на адрес робота группового чата DingTalk.
+- Сопутствующая документация: [Вебхук добавляет поддержку для DingTalk](/help/articles/4135)
+- Корпоративный бот WeChat: Вставьте URL-адрес вебхук на адрес корпоративного робота WeChat.
+  - Сопутствующая документация: [Добавьте поддержку работы WeChat в вебхуке](/help/articles/4296)
+- Робот Feishu: Вставьте URL-адрес вебхука на адрес робота группового чата Feishu.
+  - Сопутствующая документация: [Вебхук добавляет поддержку для Feishu](/help/articles/4297)
+- Slack-бот: Вставьте URL-адрес вебхука на адрес Slack-бота.

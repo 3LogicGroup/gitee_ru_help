@@ -1,32 +1,32 @@
 ---
-title: Pull Request quality gates
+title: Границы качества запроса на слияние
 authors:
   - name: Cheese
-description: Operation instructions for Pull Request quality gate feature scanning
+description: Инструкции сканирования функции границ качества запроса на слияние
 ---
 
-> Pull Request quality gate is the last threshold for code submission and requires complete automated testing of all code. Gitee Scan has launched the quality gate scanning feature and opened it for unlimited use by all paid enterprises.
+> Границы качества запроса на слияние являются последним пороговым значением для отправки кода и требуют полного автоматизированного тестирования всего кода. Gitee Scan запустила функцию сканирования границ качества и открыла ее для неограниченного использования всеми пользователями платных версий Enterprise.
 
-## Scan quality access control
+## Контроль доступа к качеству сканирования
 
-Create a new module and select 'Enable Quality Gate' when creating code review triggers. When the PR code scan fails, merging the PR is not allowed. Quality Gate can strictly control the code quality from the source, and prohibit the inclusion of code that does not meet the specifications.
+Создавая триггеры проверки кода, создайте новый модуль и выберите "Включить Границы качества". Если проверка кода запроса на слияние завершается неудачей, объединение запроса на слияние не допускается. Гранды качества могут строго контролировать качество исходного кода и запрещать включение кода, не соответствующего спецификациям.
 
-![Quality gate](https://pic1.zhimg.com/80/v2-c93c936a6eb5fb73580b5d117ed2bda4_1440w.webp)
+![Границы качества](https://pic1.zhimg.com/80/v2-c93c936a6eb5fb73580b5d117ed2bda4_1440w.webp)
 
-![Quality gate](https://pic2.zhimg.com/80/v2-33d18ea1b176ae740b178254c7c2921d_1440w.webp)
+![Границы качества](https://pic2.zhimg.com/80/v2-33d18ea1b176ae740b178254c7c2921d_1440w.webp)
 
-![Quality gate](https://pic1.zhimg.com/80/v2-5ab2b85926b8bdcab6d9dc74bb631d68_1440w.webp)
+![Границы качества](https://pic1.zhimg.com/80/v2-5ab2b85926b8bdcab6d9dc74bb631d68_1440w.webp)
 
-## Scan scheme management
+## Управление схемами сканирования
 
-![Scan plan](https://pic3.zhimg.com/80/v2-cdadf32bd3a4278da93e2ea1710d9592_1440w.webp)
+![План сканирования](https://pic3.zhimg.com/80/v2-cdadf32bd3a4278da93e2ea1710d9592_1440w.webp)
 
-Click on the 'Scan Plan' button on the code scanning settings page to create and edit all scan plans for the organization.
+Чтобы создать и отредактировать все планы сканирования для организации, нажмите кнопку "Настройка" на странице настроек сканирования кода.
 
-![Scan plan](https://pic1.zhimg.com/80/v2-ef284848693086a6efd3094de7642edc_1440w.webp)
+![План сканирования](https://pic1.zhimg.com/80/v2-ef284848693086a6efd3094de7642edc_1440w.webp)
 
-The scanning solution includes built-in general scanning schemes for mainstream languages and Alibaba scanning scheme.
+Решение для сканирования включает встроенные общие схемы сканирования для основных языков и схему сканирования Alibaba.
 
-Gitee Enterprise supports enterprise-customized scanning schemes, which can integrate different rule sets and set quality gates. When setting quality gates, you can customize the calculation rules for the issues.
+Gitee Enterprise поддерживает настраиваемые предприятием схемы сканирования, которые могут объединять различные наборы правил и устанавливать параметры качества. При настройке параметров качества вы можете настроить правила расчета для задач.
 
-Scan solution
+Решение для сканирования

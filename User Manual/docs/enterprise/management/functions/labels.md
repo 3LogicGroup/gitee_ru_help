@@ -1,13 +1,13 @@
 ---
-title: Tag Settings
+title: Настройки тегов
 ---
 
-Tags are used to classify and search for work items and code reviews (Pull Requests).
+Теги используются для классификации и поиска элементов работы и обзоров кода (запросов на слияние).
 
-You can create, edit, and delete tags in the "Tag Settings" page.
+Вы можете создавать, редактировать и удалять теги на странице "Настройки тегов".
 
-![Image Description](assets/image344.png)
+![Описание изображения](assets/image344.png)
 
-If you need to replace or cancel the use of a certain tag, you can click on the "Data Migration" link to enter the data migration interface for operation.
+Если вам необходимо заменить или отменить использование определенного тега, вы можете нажать на ссылку "Миграция данных", чтобы перейти к интерфейсу миграции данных для выполнения операции.
 
-![Image Description](assets/image345.png)
+![Описание изображения](assets/image345.png)

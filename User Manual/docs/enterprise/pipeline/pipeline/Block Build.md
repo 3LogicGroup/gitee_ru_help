@@ -1,19 +1,19 @@
 ---
-title: Block Build
-description: Block build
+title: Блокировка сборок
+description: Блокировка сборок
 slug: /enterprise/pipeline/block
 keywords:
  - Gitee
- - Block Build
+ - Блокировка сборок
 ---
 
-Blocking builds are set up to solve the problem of scarce resources and prevent contamination of environments in collaborative work.
+Блокировка сборок создана для решения проблемы нехватки ресурсов и предотвращения загрязнения среды при совместной работе.
 
-- Switch on (block the build when the previous build is not finished): The next pipeline will not be triggered when the previous pipeline is not finished; the next pipeline will be automatically triggered when the previous pipeline is finished.
-- Switch Off (Non-blocking Build): Normal and default build mode, allows multiple builds to run in parallel under the same pipeline.
+- Включить (блокировать сборку, когда предыдущая сборка не завершена): Следующий конвейер не будет запущен, когда предыдущий не завершен; следующий конвейер будет автоматически запущен, когда предыдущий завершен.
+- Выключить (неблокируемая сборка): Обычный режим сборки по умолчанию, позволяющий нескольким сборкам работать параллельно в рамках одного конвейера.
 
-Scenario Example:
+Пример сценария:
 
-A pipeline consists of three stages: compile, deploy to test environment, and functional testing. In build #1 triggered by A, both compile and deploy to test environment stages have been completed, and functional testing is currently in progress. At this point, B submits a code and triggers build #2. When it reaches the deploy to test environment stage, A's functional testing in build #1 is interrupted and fails. To avoid this issue, the execution order of pipeline builds can be limited. If the previous build has not been fully executed, the next build will be in a waiting state.
+Конвейер состоит из трех этапов: компиляция, развертывание в тестовой среде и функциональное тестирование. В сборке № 1, запущенной A, завершены этапы компиляции и развертывания в тестовой среде, и в настоящее время идет функциональное тестирование. В этот момент B отправляет код и запускает сборку #2. Когда она достигает стадии развертывания в тестовой среде, функциональное тестирование A в сборке #1 прерывается и заканчивается неудачей. Чтобы избежать этой проблемы, порядок выполнения конвейерных сборок может быть ограничен. Если предыдущая сборка не была полностью выполнена, следующая сборка будет находиться в состоянии ожидания.
 
-![Blocking build](./assets/Blocking build.png)
+![Блокировка сборки](./assets/Blocking build.png)

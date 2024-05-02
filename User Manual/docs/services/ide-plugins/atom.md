@@ -1,27 +1,27 @@
 ---
-title: Atom plugins
+title: Плагины для Atom
 authors:
   - name: South Drifting All the Way
     url: https://gitee.ru/kangxiok
 origin-url: https://gitee.ru/help/articles/4116
 ---
 
-# Gitee ATOM Extension
+# Расширение Gitee ATOM
 
-ATOM is one of the favorite code editors for programmers and has a good plugin ecosystem. Therefore, the Gitee team has launched Gitee's ATOM extension through bounty.
+ATOM — один из любимых редакторов кода для программистов и имеет хорошую экосистему плагинов. Поэтому команда Gitee запустила расширение ATOM Gitee за вознаграждение.
 
-## How to use
+## Как использовать
 
-Run in the command line or terminal:
+Запустите в командной строке или терминале:
 
 ```shell
 apm install gitee
 ```
 
-Or you can open the Settings page to install Gitee
+Вы также можете открыть страницу настроек, чтобы установить Gitee.
 
-![Install](https://github.com/fcharlie/atom-gitee/raw/master/images/install.png)
+![Установка](https://github.com/fcharlie/atom-gitee/raw/master/images/install.png)
 
-## Problem Discovery
+## Обнаружение проблем
 
-If you encounter any issues or have any suggestions while using, you can submit an issue at [URL]
+Если в процессе использования у вас возникнут какие-либо проблемы или появятся какие-либо предложения, вы можете сообщить о проблеме по адресу [URL]

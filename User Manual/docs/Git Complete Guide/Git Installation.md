@@ -1,60 +1,60 @@
 ---
-title: Git installation
+title: Установка Git
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 origin-url: https://gitee.ru/help/articles/4106
 ---
 
-Git was initially developed on Linux and for a long time, it could only run on Linux/Unix systems. As Git became more popular, some developers started porting it to the Windows platform. Currently, Git is a cross-platform tool that can run on Windows/macOS/Linux/Unix.
+Изначально Git был разработан для Linux, и долгое время он мог работать только на системах Linux/Unix. По мере роста популярности Git некоторые разработчики начали переносить его на платформу Windows. В настоящее время Git является кроссплатформенным инструментом, который может работать на Windows/macOS/Linux/Unix.
 
-Download
+Как скачать
 
-You can obtain Git installation packages for Windows/macOS/Linux operating systems from [https://git-scm.com/](https://git-scm.com/). Alternatively, you can install it using the following methods.
+Вы можете получить установочные пакеты Git для операционных систем Windows/macOS/Linux с сайта [https://git-scm.com/](https://git-scm.com/). Кроме того, вы можете установить его следующими способами.
 
-### Installation on Windows
+### Установка в Windows
 
-Download the Windows version of the client from <http://git-scm.com/download>, run it as an administrator, and keep selecting Next for installation. Please note that if you are not familiar with the meaning of each option, keep the default options.
+Загрузите Windows-версию клиента с сайта <http://git-scm.com/download>, запустите ее от имени администратора и выберите Next для установки. Обратите внимание, что, если вы не знаете значения каждой опции, следует сохранить опции по умолчанию.
 
-### Install on Ubuntu
-
-```bash
-Execute 'apt-get install git' in the terminal.
-```
-
-### Centos/Redhat Installation
+### Установка на Ubuntu
 
 ```bash
-Execute yum install git in the terminal
+Выполните команду 'apt-get install git' в терминале.
 ```
 
-### Installing Fedora23
+### Установка Centos/Redhat
 
 ```bash
-Execute 'dnf install git' or 'yum install git' in the terminal.
+Выполните команду yum install git в терминале
 ```
 
-### Fedora22/21 Installation
+### Установка Fedora23
 
 ```bash
-Execute yum install git in the terminal
+Выполните команду 'dnf install git' или 'yum install git' в терминале.
 ```
 
-### SUSE/OPENSUSE Installation
+### Установка Fedora22/21
 
 ```bash
-Execute sudo zypper install git in the terminal
+Выполните команду yum install git в терминале
 ```
 
-### Mac OS X Installation
+### Установка SUSE/OPENSUSE
 
 ```bash
-Execute 'brew install git' in the terminal (Note: please resolve the environment variable and Brew tool issues on your own).
+Выполните команду sudo zypper install git в терминале
 ```
 
-### Compile and Install (Note: Only suitable for non-Windows systems)
+### Установка Mac OS X
 
-Select a version from <https://github.com/git/git/releases> for download, then unzip and enter the Git directory to execute the following code sequentially:
+```bash
+Выполните команду 'brew install git' в терминале (Примечание: решите проблемы с переменными окружения и инструментом Brew самостоятельно).
+```
+
+### Компиляция и установка (Примечание: подходит для всех систем, кроме Windows)
+
+Выберите версию из <https://github.com/git/git/releases> для загрузки, затем распакуйте и войдите в каталог Git для последовательного выполнения следующего кода:
 
 ```bash
 make configure
@@ -63,9 +63,9 @@ make all
 sudo make install
 ```
 
-Note: If you encounter compilation issues, please search for the dependencies required by Git yourself.
+Примечание: В случае возникновения проблем с компиляцией, самостоятельно найдите необходимые Git зависимости.
 
-If everything above is normal, open the terminal (on Windows, open the bash that was installed along with Git) and enter 'git --version'. It should display similar information as follows:
+Если все в порядке, откройте терминал (в Windows откройте bash, который был установлен вместе с Git) и введите 'git --version'. Должна появиться следующая информация:
 
 ```bash
 git version 2.5.0

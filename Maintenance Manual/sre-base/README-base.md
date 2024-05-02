@@ -1,6 +1,6 @@
-#  sre-base-initialization
+# sre-base-initialization
 
-## 1. Installation Package Specification
+## 1. Спецификация установочного пакета
 
 ```sh
 dockerfile: ~/workdir/dockerfile
@@ -18,7 +18,7 @@ Daemon process hosting: systemd
 
 
 
-## 2. Install kubectl and helm
+## 2. Установка kubectl и helm
 
 ```
 # kubectl 

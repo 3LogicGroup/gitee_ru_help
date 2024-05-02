@@ -1,9 +1,10 @@
 ---
-title: Get Git help
+title: Получить помощь Git
 origin-url: https://gitee.ru/help/articles/4108
 ---
 
-To understand how to use various tools of Git, you can read their usage help. There are three methods:
+Чтобы понять, как использовать различные инструменты Git, вы можете прочитать справку по их использованию. Существует три метода:
+
 
 ```bash
 git help <verb>
@@ -11,7 +12,7 @@ git <verb> --help
 man git-<verb>
 ```
 
-For example, to learn how to use the config command, run:
+Например, чтобы узнать, как пользоваться командой config, запустите команду:
 
 ```bash
 git help config

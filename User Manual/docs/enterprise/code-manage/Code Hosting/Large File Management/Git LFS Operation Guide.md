@@ -1,40 +1,40 @@
 ---
-title: Git LFS Operation Guide
+title: Руководство по эксплуатации Git-LFS
 origin-url: https://gitee.ru/help/articles/4235
 slug: /enterprise/code-manage/code-hosting/large-file-manage/git-lfs
 ---
 
-> Gitee(gitee.ru) now supports Git LFS feature, which is currently available for paid enterprises.
+> > Теперь Gitee (gitee.ru) поддерживает функцию Git-LFS, которая в настоящее время доступна для платных предприятий.
 
 ### **Git-LFS**
 
-Git, as the world's best distributed version control tool, is also an excellent file management tool. It gives project members the ability to remotely collaborate on projects, which is why it is loved by more and more professionals in the industry. Many excellent project management platforms, such as domestic ones
+Git, являющийся лучшим в мире инструментом распределенного контроля версий, также является отличным инструментом управления файлами. Он дает участникам проекта возможность удаленно сотрудничать над проектами, именно поэтому его любят все больше профессионалов отрасли. Множество отличных платформ для управления проектами, таких как отечественные
 
-So how can we avoid such crash events?
+Как можно избежать серьезных сбоев?
 
-Now let's introduce today's protagonist, Git LFS (Git Large File Storage), which is a technology for storing large files in Git.
+Позвольте представить вам главного героя сегодняшнего дня, Git LFS (Git Large File Storage) - технологию хранения больших файлов в Git.
 
-In a Git repository, for non-text files such as various media files, software artifact files, binary files, etc., these files often have a large size. Managing them directly with Git will cause the repository size to expand rapidly, leading to slower Git operations and also affecting the upload of the repository to the remote end.
+В репозитории Git для нетекстовых файлов, таких как различные медиафайлы, файлы программных артефактов, двоичные файлы и т.д., эти файлы часто имеют большой размер. Управление ими непосредственно с помощью Git приведет к быстрому увеличению размера репозитория, что приведет к замедлению операций Git, а также негативно повлияет на загрузку репозитория на удаленный сервер.
 
-Git LFS is a plugin-based enhancement tool for Git. Simply put, it replaces the actual files used in the Git repository with pointers to the actual files, and stores the actual files on a remote LFS server, while tracking the changes of these files in the local repository in real-time
+Git LFS - это инструмент улучшения Git на основе плагинов. Проще говоря, он заменяет фактические файлы, используемые в репозитории Git, указателями на фактические файлы и сохраняет фактические файлы на удаленном сервере LFS, отслеживая изменения этих файлов в локальном репозитории в режиме реального времени
 
-![Image Description](./assets/143214_bc84b95c_551147.webp)
+![Описание изображения](./assets/143214_bc84b95c_551147.webp)
 
-### **Principle**
+### **Принцип**
 
-According to the official Git LFS documentation:
+Согласно официальной документации Git LFS:
 
-Git LFS is based on the features of the .gitattributes configuration file in Git. It uses the `smudge` filter to find the content of large files based on the pointer file, and the `clean` filter to create a new version of the pointer file when making changes to large files. Additionally, the `pre-push` hook uploads the large files to the Git LFS server. When pushing to Git and the commit includes large files tracked by LFS, the `pre-push` hook detects it and performs the upload to the Git LFS server.
+Git LS основан на функциях конфигурационного файла .gitattributes в Git. Он использует фильтр `smudge` (`размытие`) для поиска содержимого больших файлов на основе файла указателя и фильтр `clean` (`очистка`) для создания новой версии файла указателя при внесении изменений в большие файлы. Кроме того, хук `pre-push` (`предварительная отправка`) загружает большие файлы на сервер Git LFS. Когда отправка в Git и коммит включают большие файлы, отслеживаемые LFS, функция `pre-push` обнаруживает это и выполняет загрузку на сервер Git LFS.
 
-Therefore, if a repository contains LFS content but you do not want to push such files during a push, just add the `--no-verify` option, like this:
+Поэтому, если репозиторий содержит LFS-контент, но вы не хотите отправлять такие файлы во время отправки, просто добавьте опцию "--no-verify", например, так:
 
 ```bash
 git push --no-verify
 ```
 
-The `--no-verify` option tells `git push` to completely skip the `pre-push` hook.
+Опция `--no-verify` приказывает функции `git push` полностью пропустить хук `pre-push`.
 
-As mentioned earlier, for files managed by LFS, the content stored in the local repository is actually a pointer file, and its format is similar to the following:
+Как упоминалось ранее, для файлов, управляемых LFS, содержимое, хранящееся в локальном репозитории, на самом деле является файлом-указателем, и его формат похож на следующий:
 
 ```bash
 $ git show HEAD:2.svg
@@ -45,19 +45,19 @@ size 14651
 (END)
 ```
 
-`version` represents the version of LFS
+`version` представляет версию LFS
 
-`oid` represents the unique hash value of a file object
+`oid` представляет уникальное хэш-значение файлового объекта
 
-`size` represents the file size
+`size` представляет размер файла
 
-### **Installation**
+### **Установка**
 
-**Note: The following installations and command demonstrations are based on the command line in Linux. The graphical interface operations on Windows are not covered due to time constraints.**
+**Примечание: Следующие установки и демонстрации команд основаны на командной строке в Linux. Операции с графическим интерфейсом в Windows не рассматриваются из-за нехватки времени.**
 
-Install dependencies: Git >=1.8.5
+Установить зависимости: Git >=1.8.5
 
-Linux System:
+Система Linux:
 
 ```bash
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
@@ -67,19 +67,19 @@ sudo apt-get install git-lfs
 
 > https://packagecloud.io/github/git-lfs/install#bash
 
-For installation on other operating systems, refer to the official installation documentation:
+Для установки на других операционных системах обратитесь к официальной документации по установке:
 
 > https://github.com/git-lfs/git-lfs#installing
 
-### **Configuration**
+### **Настройки**
 
-Step 1: Set up relevant configurations for the repository in the Git repository
+Шаг 1: Установите в репозитории Git соответствующие настройки для репозитория
 
 ```bash
 git lfs install
 ```
 
-> Tips: This command will automatically modify the Git configuration file .gitconfig globally. It will add the following configuration to the file:
+> Подсказка: Эта команда автоматически внесет глобальные изменения в файл настроек Git .gitconfig. Она добавит в файл следующую настройку:
 
 ```bash
 [filter "lfs"]
@@ -89,7 +89,8 @@ process = git-lfs filter-process
 required = true
 ```
 
-Step 2: Select the files to be tracked by LFS:
+Шаг 2: Выберите файлы, подлежащие отслеживанию в LFS:
+
 
 ```bash
 $ git lfs track "*.svg"
@@ -98,19 +99,19 @@ $ git lfs track "2.png"
 $ git lfs track "example.lfs"
 ```
 
-> Tips:
+> Подсказки:
 
-> This command will modify the .gitattributes configuration file in the repository (if the file does not exist, it will be automatically created):
-> See below:
+> Эта команда внесет изменения в файл настроек .gitattributes в репозитории (если файл не существует, он будет создан автоматически):
+> См. ниже:
 > $ cat .gitattributes
 > *.svg filter=lfs diff=lfs merge=lfs -text
 > *.png filter=lfs diff=lfs merge=lfs -text
 
-Curious students may ask, what if you want to know which files you have tracked? How can you do that?
+Любопытные студенты могут спросить, что делать, если вы хотите узнать, какие файлы отслеживали? Как вы можете это сделать?
 
-Easy, one command solves it!
+Очень просто, это решается одной командой!
 
-You can use `git lfs ls-files` to view the files currently being tracked by LFS at any time:
+Вы в любое время можете использовать "git lfs ls-files" для просмотра файлов, отслеживаемых в данный момент LFS:
 
 ```bash
 $ git lfs ls-files
@@ -119,28 +120,28 @@ d61cf5835a * 2.png
 158213f90f * 3.svg
 ```
 
-> The file can only be tracked and viewed after `git add file`
+> Файл можно отследить и просмотреть только после выполнения команды `git add file`
 
-Some people may wonder, what if I don't want LFS to track a certain file?
+Некоторые могут задаться вопросом: "А что, если я не хочу, чтобы LFS отслеживала определенный файл?"
 
-Good, still solved with one command:
+Хорошо, это все еще решается одной командой:
 
 ```bash
 git lfs untrack "1.png"
 ```
 
-After selecting the files that need LFS management, it is recommended to save the configuration:
+После выбора файлов, требующих управления LFS, рекомендуется сохранить настройки:
 
-Step 3: Save and commit the configuration:
+Шаг 3: Сохраните и зафиксируйте изменения настроек:
 
 ```bash
 git add .gitattributes
 git commit -m "add .gitattributes"
 ```
 
-Configuration Summary:
+Краткое описание настрое:
 
-After installing Git LFS, you only need three steps to configure LFS functionality in the repository:
+После установки Git LFS вам для настройки функциональности LFS в репозитории потребуется всего три шага:
 
 ```bash
 #step 1
@@ -153,15 +154,15 @@ git lfs track files
 git add .gitattributes
 ```
 
-In fact, since the first step is a global configuration, it only needs to be executed once. If there are other repositories that need to use LFS, there is no need to execute it again, unless LFS configuration is cancelled along the way.
+Фактически, поскольку первый шаг является глобальной настройкой, его нужно выполнить только один раз. Если есть другие репозитории, которые должны использовать LFS, нет необходимости выполнять его снова, если только настройки LFS не будут отменены в процессе.
 
-> Tips: Run `git lfs uninstall` to cancel the global configuration of LFS.
+> Подсказка: Для отмены глобальной настройки LFS выполните `git lfs uninstall`.
 
-### **Use Cases**
+### **Сценарии использования**
 
-#### **Scenario One:**
+#### **Сценарий Номер Один:**
 
-One day, you are looking for interesting projects on Gitee. Soon, you find a valuable game project and decide to fork and clone it immediately.
+Вы ищете интересные проекты на Gitee. Вскоре вы находите ценный игровой проект и решаете немедленно создать его форк и клон.
 
 ```bash
 $ git clone git@gitee.ru:hightest/lfs-demo.git my-project
@@ -179,7 +180,7 @@ Enter passphrase for key '/home/git/.ssh/id_ed25519':
 Filtering content: 100% (5/5), 1.51 MiB | 257.00 KiB/s, done.
 ```
 
-You just made a slight modification to an example file example.lfs, and then by the way, use git diff to see the changes:
+Вы только что внесли небольшие изменения в файл-образец example.lfs, а теперь, чтобы увидеть внесенные изменения, воспользуйтесь git diff:
 
 ```bash
 $ cd my-project
@@ -198,17 +199,17 @@ version https://git-lfs.github.com/spec/v1
 (END)
 ```
 
-`git diff` shows changes that are not what you expected, why does this difference occur?
+Команда `git diff` показывает изменения, не соответствующие вашим ожиданиям, почему же возникает это различие?
 
-If you have read the previous section on principles, you will understand immediately. This is the difference in LFS pointer file, which indicates that the repository you downloaded is using LFS for file management.
+Если вы прочитали предыдущий раздел о принципах, вы сразу поймете, в чем дело. Это различие заключается в файле-указателе LFS, которое указывает на то, что для управления файлами загруженный вами репозиторий использует LFS.
 
-At this time, the actual storage file size of the repository is only 132 Bytes, while its actual size is 9.18 MiB, which differs by several orders of magnitude.
+На данный момент фактический размер файла хранилища репозитория составляет всего 132 байта, в то время как его фактический размер составляет 9,18 Мб, что отличается на несколько порядков.
 
-This approach has obvious advantages. For large files, it can be managed with very little space.
+Такой подход имеет очевидные преимущества. Для больших файлов можно использовать очень мало места.
 
-#### **Scenario Two:**
+#### **Сценарий Номер Два:**
 
-As a game developer, you have always wanted to design and develop a fun game. The project used in Scene 1 has inspired you, and you decide to do in-depth development based on it. You have added many image files, sound effect files, and other game resource files to this repository. Initially, every git add/commit/push was smooth. However, one time, you packaged these files into biger.zip and tried to push them to the remote repository, but the push failed, and the system displayed the following message:
+Как разработчик игр, вы всегда хотели спроектировать и разработать увлекательную игру. Вас вдохновил проект, использованный в сценарии 1, и вы решили заняться углубленной разработкой на его основе. Вы добавили много файлов изображений, звуковых эффектов и других файлов игровых ресурсов в это хранилище. Изначально каждое добавление/фиксация/ отправка git проходили гладко. Однако однажды вы упаковали эти файлы в biger.zip и попытались отправить их в удаленный репозиторий, но отправка завершилась неудачей, и система выдала следующее сообщение:
 
 ```bash
 $ git push origin master
@@ -232,16 +233,17 @@ To gitee.ru:hightest/lfs-demo.git
 error: failed to push some refs to 'gitee.ru:hightest/lfs-demo.git'
 ```
 
-Clearly, the push was rejected because the single file being pushed is too large and exceeds the quota of 300 MB.
+Очевидно, что отправка была отклонена, поскольку отправляемый отдельный файл слишком велик и превышает квоту в 300 МБ.
 
-At the same time, you can also clearly feel that various basic operations of Git become sluggish and delayed.
+В то же время вы также можете отчетливо почувствовать, что различные базовые операции Git становятся мдленными и заторможенными.
 
-At this time, inspired by Scenario 1, you think of using Gtiee's LFS service to manage large files, where the repository only stores the pointer information to avoid this problem.
+На данный момент, вдохновившись сценарием 1, вы думаете об использовании службы LFS Gtiee для управления большими файлами, где в репозитории хранится только информация об указателе, чтобы избежать этой проблемы.
 
-- Use LFS to manage large historical files:
-If a repository has already committed some large files, running `git lfs track` at this time will not be effective.
+- Используйте LFS для управления большими архивными файлами:
 
-To apply the existing large files in the repository to LFS, use 'git lfs migrate' to import them into LFS.
+Если репозиторий уже зафиксировал транзакцию нескольких файлов большого размера, запуск команды "git lfs track` не будет эффективным.
+
+Чтобы применить существующие большие файлы в репозитории к LFS, используйте "git lfs migrate" для их импорта в LFS.
 
 ```bash
 $ git lfs migrate import --include-ref=master --include="biger.zip"
@@ -254,21 +256,21 @@ migrate: Updating refs: ..., done.
 migrate: checkout: ..., done.
 ```
 
-`--include-ref` option specifies the imported branch
+Функция "--include-ref" указывает импортируемую ветку
 
-> If it applies to all branches, use the `--everything` option.
+> Если она применяется ко всем веткам, используйте параметр `--everything`.
 
-> - The `-include` option specifies the file to be imported. Wildcards can be used for batch import.
+> - Параметр `-include` указывает импортируемый файл. Для пакетного импорта можно использовать подстановочные знаки.
 
-The above operation will rewrite the commit history. If you do not want to rewrite the history, use the --no-rewrite option and provide new commit information:
+Описанная выше операция перезапишет историю коммита. Если вы не хотите переписывать историю, используйте функцию --no-rewrite и предоставьте новую информацию о коммите:
 
 ```bash
 git lfs migrate import --no-rewrite -m "lfs import"
 ```
 
-After the files in the local commit history are included in LFS management, if the history is modified again, a force push is required when pushing the code again.
+После того, как файлы в локальной истории коммитов будут включены в управление LFS, при повторном запуске кода потребуется принудительная отправка, если история снова будет изменена.
 
-To change the commit history, you need to use `--force` option to push forcefully.
+Чтобы изменить историю коммитов, вам нужно использовать параметр "--force" для принудительной отправки.
 
 ```bash
 $ git push origin master --force
@@ -288,19 +290,19 @@ To gitee.ru:hightest/lfs-demo.git
  + cefd169...53d5e65 master -> master (forced update)
 ```
 
-By now, the large files in the historical commits have been migrated to the remote LFS server. The local Git repository only keeps the pointer file of this large file, so pushing will no longer trigger quota limitations. After a successful push, the remote repository will be consistent with the local repository, as shown in Scenario 1, it only manages the pointer file of this large file.
+На данный момент большие файлы в исторических коммитах были перенесены на удаленный LFS-сервер. В локальном Git-репозитории хранится только файл-указатель этого большого файла, поэтому в случае отправки ограничение квоты запускаться больше не будет. После успешной отправки удаленный репозиторий будет совместим с локальным. Как показано в сценарии №1, он управляет только файлом-указателем этого большого файла.
 
-After a successful push, you can see it in the **Repository Management page**:
+После успешной отправки вы сможете увидеть это на странице **Управление репозиторием**:
  
-![Image Description](./assets/lfs_1.png)
+![Описание изображения](./assets/lfs_1.png)
 
-#### **Scenario Three:**
+#### **Сценарий Номер Три:**
 
-As a heavy user of Git, you must use Git to manage your files in your daily work. However, if you have experienced rewriting historical commits and uploading to the LFS server, you have learned to configure the LFS feature in the repository from the beginning to ensure that every commit and push is perfect.
+Будучи активным пользователем Git, вы наверняка используете Git для управления файлами в своей повседневной работе. Однако если вы сталкивались с переписыванием исторических коммитов и загрузкой на сервер LFS, вы научились настраивать функцию LFS в репозитории с самого начала, чтобы гарантировать, что все коммиты и отправки будут идеальными.
 
-In a new project, in the initial stage, you have already configured LFS. At this time, there is a larger file 'biggerthanbigger.zip' with a size of 778M, which far exceeds the limit of the individual file size.
+В новом проекте вы уже настроили LFS на начальном этапе работы. В это время появился большой файл 'biggerthanbigger.zip' размером 778M, значительно превышающий ограничение на размер отдельного файла.
 
-- Use LFS to manage newly added large files
+- Используйте LFS для управления вновь добавленными большими файлами
 
 ```bash
 cd new-project
@@ -308,7 +310,7 @@ git add biggerthanbigger.zip
 git commit -m "add bigger than bigger zip file"
 ```
 
-Then commit to the remote repository, because LFS service is used, **if there are no unexpected issues, this commit will not be rejected**.
+Затем нарпавьте коммит в удалённый репозиторий, и, поскольку используется служба LFS, **этот коммит не будет отклонён, если не возникнет никаких неожиданных проблем**.
 
 ```bash
 $ git push origin master
@@ -327,55 +329,54 @@ To gitee.ru:hightest/new-project.git
    dfe8b09..5f03bab  master -> master
 ```
 
-But in fact, accidents are very likely to happen!
+Но на самом деле вероятность возникновения нештатных ситуаций очень высока!
 
-Because the pushed file is too large, it is likely to fail to push due to exceeding the LFS quota. Although LFS is specifically used for managing large files, it cannot store large files without restrictions as it is not a file storage service.
+Поскольку размер передаваемого файла слишком велик, его, скорее всего, не удастся отправить из-за превышения квоты LFS. Хотя LFS специально используется для управления большими файлами, она не может хранить большие файлы без ограничений, поскольку не является службой хранения файлов.
 
-Regarding the limitations on large files with Gitee LFS, please refer to the quota explanation below.
-
+Что касается ограничений на большие файлы в Gitee LFS,  ознакомьтесь с приводимым ниже объяснением квот.
 <hr />
 
-### **Gitee LFS Quota Explanation**
+### **Объяснение квот Gitee LFS**
 
-Currently, the LFS feature is only available to paid enterprises, with the following quotas:
+В настоящее время функция LFS доступна только платным предприятиям со следующими квотами:
 
-| Free Version | Basic Class | Standard Edition | Advanced Edition | Exclusive Edition | Private Deployment Version |
+| Бесплатная версия | Базовый класс | Стандартная версия | Расширенная версия | Эксклюзивная версия | Версия для частного развертывания  |
 | ------ | ------ | ------ | ------ | ------ | ------------ |
-| 0 GB   | 1 GB   | 1 GB   | 1 GB   | 1 GB   |
-  Unlimited         |
+| 0 ГБ   | 1 ГБ   | 1 ГБ   | 1 ГБ   | 1 ГБ   |
+  Без ограничений         |
 
-Query link: [https://gitee.ru/enterprises#price](https://gitee.ru/enterprises#price)
+Ссылка на запрос: [https://gitee.ru/enterprises#price](https://gitee.ru/enterprises#price)
 
-To view the usage of LFS capacity for each repository in an enterprise that has enabled LFS feature, go to the enterprise dashboard (Dashboard). Assuming your enterprise name is My-Enterprise, the address is https://e.gitee.ru/My-Enterprise/dashboard:
+Для просмотра используемой емкости LFS каждого репозитория на предприятии, использующем функцию LFS, перейдите на приборную панель предприятия. Предположим, что название вашего предприятия - My-Enterprise, адрес - https://e.gitee.ru/My-Enterprise/dashboard:
 
-![Image Description](./assets/lfs_2.png)
-
-<hr/>
-
-To view the LFS capacity usage of each repository within the enterprise, go to the enterprise dashboard, select the extension application, and click on LFS for details:
-
-![Image Description](./assets/lfs_1.png)
-
-You can see the usage of quota for each repository using LFS feature within the enterprise, as well as the total usage. Clicking on the repository name will also redirect you to the management page of that repository.
+![Описание изображения](./assets/lfs_2.png)
 
 <hr/>
 
-If the enterprise has a high demand for large files and the current 1 GB capacity is not enough, don't worry, Gitee has a solution, which is self-expansion.
+Для просмотра использования емкости LFS каждого репозитория на предприятии перейдите на панель управления предприятия, выберите приложение расширения и щелкните LFS для получения подробной информации:
 
-Still in the enterprise management dashboard, at the top level, there is a [Renew/Upgrade/Expand] link that leads directly to the upgrade and expansion interface:
+![Описание изображения](./assets/lfs_1.png)
 
-![Image Description](./assets/order_1.png)
-![Image Description](./assets/order_2.png)
-
-According to enterprise requirements, up to 100G of LFS space can be configured, which is sufficient for most projects.
+Вы можете увидеть использование квоты для каждого репозитория, использующего функцию LFS на предприятии, а также общий процент использования. Щелчок по имени репозитория также перенаправит вас на страницу управления этим репозиторием.
 
 <hr/>
 
-### **Summary:**
+Если предприятие испытывает большую потребность в больших файлах и текущей емкости 1 ГБ недостаточно, не волнуйтесь, у Gitee есть решение - саморасширение.
 
-Git LFS is an easy-to-install, easy-to-configure, and efficient Git extension tool that effectively manages large files in repositories, avoiding the problem of large repository size and affecting project management efficiency. At the same time, Gitee platform provides good support for Git LFS functionality, coupled with flexible space quota management, making it easy for enterprises to achieve automatic scaling, and conveniently solve the problem of large repository files encountered in project development.
+В верхней части панели управления предприятием имеется ссылка [Renew/Upgrade/Expand], ведущая непосредственно к интерфейсу обновления и расширения:
 
-Reference links
+![Описание изображения](./assets/order_1.png)
+![Описание изображения](./assets/order_2.png)
+
+В соответствии с потребностями предприятия можно сконфигурировать до 100 Гб пространства LFS, что достаточно для большинства проектов.
+
+<hr/>
+
+### **Заключение:**
+
+Git LFS - простой в установке, настройке и использовании инструмент расширения Git, эффективно управляющий большими файлами в репозиториях, позволяя избежать проблемы большого размера репозитория и снижения эффективности управления проектами. В то же время платформа Gitee обеспечивает хорошую поддержку функциональности Git LFS в сочетании с гибким управлением квотами пространства, что позволяет предприятиям легко добиться автоматического масштабирования и удобно решить проблему больших файлов в репозитории, возникающую при разработке проектов.
+
+Ссылки на источники
 
 [https://git-lfs.github.com/](https://gitee.ru/link?target=https%3A%2F%2Fgit-lfs.github.com%2F)
 

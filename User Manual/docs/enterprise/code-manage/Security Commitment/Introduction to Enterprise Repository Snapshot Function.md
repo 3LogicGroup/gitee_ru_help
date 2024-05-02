@@ -1,25 +1,25 @@
----
-title: Introduction to Enterprise Edition Repository Snapshot Feature
+﻿---
+title: Знакомство с функцией моментального снимка репозитория версии Enterprise Edition
 origin-url: https://gitee.ru/help/articles/4163
 ---
 
 
-number: Number,                        # consistent with the above id
+number: Номер                        # соответствует вышеприведенному id
 
-The snapshot is taken on weekends in the past three weeks and on the first weekend of each month in the past six months.
+Снимки делались по выходным в течение последних трех недель и в первые выходные каждого месяца в течение последних шести месяцев.
 
-Go to the Enterprise interface -> Click "Code" to view the snapshot status of all repositories.
+Для просмотра статуса снимка всех репозиториев перейдите в корпоративный интерфейс -> Нажмите "Код".
 
-![Image Description](./assets/snapshot.png)
+![Описание изображения](./assets/snapshot.png)
 
-You can see the status of snapshot columns, and there are three types of snapshot statuses.
+Вы можете видеть статус столбцов моментальных снимков, причём существует три типа статусов моментальных снимков.
 
-- Green: Already have snapshot
-Gray: Create the first snapshot starting this weekend
-- Red: The snapshot function is only available in Enterprise Standard Edition and above
+- Зеленый: У вас уже есть моментальный снимок
+Серый: Создайте первый моментальный снимок, начиная с этих выходных
+- Красный: Функция моментального снимка доступна только в Enterprise Standard Edition и выше
 
-Hover over the green icon to see the number of snapshots and the time
+Наведите курсор на зеленый значок, чтобы увидеть количество моментальных снимков и время их создания
 
-If users need to restore a snapshot of a repository, they can contact us to perform the operation using the exclusive service privilege of the Enterprise Edition.
+Если пользователям необходимо восстановить моментальный снимок хранилища, они могут связаться с нами для выполнения операции, используя эксклюзивные сервисные привилегии Enterprise Edition.
 
-It should be noted that snapshot creation is fully automated and requires no user action
+Следует отметить, что создание моментального снимка полностью автоматизировано и не требует никаких действий пользователя

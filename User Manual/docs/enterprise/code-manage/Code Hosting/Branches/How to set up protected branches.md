@@ -1,11 +1,11 @@
 ---
-title: How to set up branch protection
+title: Как настроить защиту ветки
 origin-url: https://gitee.ru/help/articles/4239
 ---
 
-"Protected Branch" is a feature of Gitee for managing code permissions in team collaboration. It is used to protect critical branches from being damaged in order to minimize the loss caused by members' misoperations. After protection, only the repository administrator can modify, merge, and perform other operations on this branch.
+"Защищенная ветка" - функция Gitee для управления разрешениями кода при совместной работе в команде. Она используется для защиты критически важных веток от повреждения в целях минимизации потерь, вызванных неправильными действиями участников. После настройки защиты только администратор репозитория имеет право вносить изменения, выполнять слияния и осуществлять другие операции с этой веткой.
 
-To enter the repository, go to Code -> Branch -> Protected Branch to enable branch protection.
+Чтобы войти в репозиторий и включить защиту ветки, перейдите в Код -> Ветка-> Защищенная ветка.
 
-![Image Description](../../../../../assets/image143.png)
-![Image Description](../../../../../assets/image144.png)
+![Описание изображения](../../../../../assets/image143.png)
+![Описание изображения](../../../../../assets/image144.png)

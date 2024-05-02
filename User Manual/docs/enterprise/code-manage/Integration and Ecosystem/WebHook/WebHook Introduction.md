@@ -1,35 +1,35 @@
 ---
-title: WebHook Introduction
+title: Знакомство с вебхуками
 origin-url: https://gitee.ru/help/articles/4183
 ---
 
-## Introduction to WebHook
+## Знакомство с вебхуками
 
-The Gitee WebHook feature helps to automatically callback a specified HTTP address after a user pushes code.
+Функция Gitee вебхук помогает автоматически выполнять обратный вызов указанного HTTP-адреса после того, как пользователь введет код.
 
-> This is a general solution, users can write their own script programs according to different needs (such as sending emails, automatic deployment, etc.)
+> Это общее решение, пользователи могут писать свои собственные скриптовые программы в соответствии с различными потребностями (такими как отправка электронных писем, автоматическое развертывание и т.д.)
 
-#### Comparison of Enterprise WebHook and Repository WebHook
+#### Сравнение Enterprise WebHook и Repository WebHook
 
-- Effective for pushing, PR, and Issue (task) in all repositories within the enterprise
-Webhooks for repositories are only effective for pushes, PRs, and issues related to the bound repository.
+- Эффективен для отправки, запросов на слияние, а также задач во всех репозиториях предприятия
+Вебхуки для репозиториев эффективны только для отправки, запросов на слияние и задач, связанных с привязанным репозиторием.
 
-## Data Structures and Types
+## Структуры и типы данных
 
-For information on the data structure and types of WebHooks, refer to the following documentation
+Для получения информации о структуре данных и типах вебхуков обратитесь к следующей документации
 
-- [WebHook push data format description](/help/articles/4186)
-- [WebHook secret key verification and verification algorithm](/help/articles/4290)
-- [WebHook Push Data Type Description](/help/articles/4271)
+- [Описание формата данных отправки вебхуков](/help/articles/4186)
+- [Проверка секретного ключа вебхука и алгоритм верификации](/help/articles/4290)
+- [Описание типа данных отправки вебхуков](/help/articles/4271)
 
-## Third-party IM Support
+## Сторонняя поддержка обмена мгновенными сообщениями
 
-We have added support for the following third-party applications through WebHook to facilitate users to receive Gitee notifications in third-party IM
+Мы добавили поддержку следующих сторонних приложений через вебхуки, чтобы облегчить пользователям получать уведомления Gitee в сторонних мгновенных сообщениях.
 
-- DingTalk bot: Set the WebHook URL to the DingTalk group chat bot address.
-  - Related documentation: [WebHook adds support for DingTalk](/help/articles/4135)
-- Enterprise WeChat bot: Set the WebHook URL to the Enterprise WeChat bot address.
-- Related document: [Add support for WeChat Work in WebHook](/help/articles/4296)
-- Feishu bot: Set the WebHook URL to the Feishu group chat bot address.
-  - Related documentation: [WebHook adds support for Feishu](/help/articles/4297)
-- Slack Bot: Set the WebHook URL to the Slack Bot address.
+- Бот DingTalk: Вставьте URL-адрес вебхука в адрес бота группового чата DingTalk.
+- Документация по WeChat: [Вебхук добавляет поддержку DingTalk](/help/articles/4135)
+- Корпоративный WeChat-бот: Вставьте URL-адрес WebHook в адрес корпоративного WeChat-бота.-бота.
+- Документ по теме: [Добавить поддержку работы WeChat в вебхук](/help/articles/4296)
+- Бот Feishu: Вставьте URL-адрес вебхука в адрес бота группового чата Feishu.
+- Документация по теме: [Вебхук добавляет поддержку Feishu](/help/articles/4297)
+- Slack-бот: Вставьте URL-адрес вебхука в адрес Slack-бота.

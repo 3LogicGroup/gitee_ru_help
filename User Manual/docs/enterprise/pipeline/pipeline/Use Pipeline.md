@@ -1,21 +1,21 @@
 ---
-title: Use Pipelines
-description: Using Pipeline
+title: Использование конвейеров
+description: Использование конвейеров
 slug: /enterprise/pipeline/use
 keywords:
  - Gitee
- - Usage
- - Pipeline
+ - Использование
+ - Конвейер
 ---
 
-Gitee projects have a **pipeline** feature, click to open
+В проектах Gitee есть функция **конвейер**, нажмите, чтобы открыть
 
-![Pipeline menu](./assets/Pipeline menu.png)
+![Меню конвейера](./assets/Pipeline menu.png)
 
-The left side is the pipeline group, and the right side is the pipeline list
+Слева находится группа конвейеров, а справа - список конвейеров
 
-![Pipeline List](./assets/pipeline_list.png)
+![Список конвейеров](./assets/pipeline_list.png)
 
-Project settings -> Pipeline settings, support setting pipeline groups, tags, variables, templates, and other functions.
+Настройки проекта -> Настройки конвейеров, поддерживают настройку групп конвейеров, тегов, переменных, шаблонов и других функций.
 
-![Pipeline Settings](./assets/Pipeline Settings.png)
+![Настройки конвейера](./assets/Pipeline Settings.png)

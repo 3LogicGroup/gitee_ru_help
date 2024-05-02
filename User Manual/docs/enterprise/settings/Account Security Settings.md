@@ -1,11 +1,11 @@
 ---
-title: Account security settings
+title: Настройки безопасности аккаунта
 authors:
   - name: Roger
     url: https://gitee.ru/yuriluo
 origin-url: https://gitee.ru/help/articles/4152
 ---
 
-Click 'Security Settings' in the 'Management' interface of the enterprise:
+Нажмите на "Настройки безопасности" в интерфейсе "Управление" предприятия: 
 
-![Image Description](image671.png)
+![Описание изображения](image671.png)

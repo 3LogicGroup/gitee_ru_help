@@ -1,15 +1,15 @@
-# Deploying harbor high availability
+# Развертывание порта высокой доступности
 
 ![](./assets/image-20231209111656591.png)
 
 ![](./assets/image-20231209111835679.png)
 
-## 1. Install nfs
+## 1. Установите nfs
 
 ```sh
 # fdisk /dev/vdb
 # pvcreate /dev/vdb1
-  Physical volume "/dev/vdb1" successfully created.
+  Физический том "/dev/vdb1" успешно создан.
 
 # vgcreate vg_nfs_server /dev/vdb1
 # vgdisplay
@@ -29,21 +29,21 @@
 # lsblk
 ```
 
-[nfs-docker: nfs-docker (gitee.com)](https://gitee.com/k8s-devops/nfs-docker)
+[NFS-докер: nfs-docker (gitee.com)](https://gitee.com/k8s-devops/nfs-docker)
 
-## 2. Install redis
+## 2. Установите redis
 
-Steps omitted
+Шаги опущены
 
-## 3. Install PostgreSQL
+## 3. Установите PostgreSQL
 
-Steps omitted
+Шаги опущены
 
-## 4. Deploy High Availability 'harbor' Cluster
+## 4. Развертывание кластера высокой доступности 'harbor'
 
-### 4.1 Single-node deployment
+### 4.1 Развертывание на одном узле
 
-> Deploy temporary standalone `harbor` host node execute `10.4.145.135` host
+> Развертывание временного автономного узла `harbor` выполнить хост `10.4.145.135`.
 
 ```sh
 $ wget https://github.com/goharbor/harbor/releases/download/v2.4.2/harbor-online-installer-v2.4.2.tgz
@@ -82,20 +82,20 @@ $ diff harbor.yml harbor.yml.tmpl
 > data_volume: /data
 ```
 
-Create data persistence directory
+Создание каталога постоянства данных
 
 ```sh
 $ mkdir -p /data/harbor
 ```
 
-Begin deployment
+Начать развертывание
 
 ```sh
-# Enable Helm Charts and Image Vulnerability Scanning in Harbor
+# Включение диаграмм Helm и сканирования уязвимостей изображений в Harbor
 $ sudo ./install.sh --with-trivy --with-chartmuseum
 ```
 
-### 4.2 Mounting NFS Service
+### 4.2 Монтирование службы NFS
 
 ```sh
 root@gitee-sre1: ~# apt -y install nfs-common
@@ -105,10 +105,10 @@ root@gitee-sre1: ~# echo '10.4.145.105:/data/nfs /data/harbor  nfs defaults  0 0
 root@gitee-sre1: ~# mount -a
 ```
 
-### 4.3 Exporting postgres data
+### 4.3 Экспорт данных postgres
 
 ```sh
-# Create user and database examples
+# Создайте примеры пользователей и баз данных
 root@gitee-postgresql1:~# su - postgres
 postgres@gitee-postgresql1:~$ psql
 psql (12.17 (Ubuntu 12.17-0ubuntu0.20.04.1))
@@ -125,11 +125,11 @@ postgres=# CREATE DATABASE notaryserver;
 CREATE DATABASE
 
 
-# Import PostgreSQL data, you can also skip exporting the data.
-# Deploy temporary single-node harbor host on 10.4.145.135 host
+# Импортируйте данные PostgreSQL, вы также можете пропустить экспорт данных.
+# Разверните временный одноузловой хост-порт на хосте 10.4.145.135
 
 Host: 10.4.145.135
-## Enter the temporary harbor-db container to export related tables and data
+## Создайте временный контейнер harbor-db для экспорта связанных таблиц и данных
 # docker exec -it -u postgres harbor-db bash
 
 Export data
@@ -143,21 +143,21 @@ Import data into a separately deployed PostgreSQL database
 # psql -h 10.4.145.105 -U postgres notaryserver -W < /tmp/notaryserver.sql
 ```
 
-### 4.4 Deploying `harbor` for High Availability
+### 4.4 Развертывание `harbor` для высокой доступности
 
-#### 1. Clean up `harbor` data and configuration files
+#### 1. Очистите данные и конфигурационные файлы `harbor`.
 
 ```sh
-## Stop service
+## Остановите службу
 # cd /home/ubuntu/workdir/docker-compose/harbor
 # docker-compose down
 # cd /root/
 
-## Initialize and clean up local storage space
+## Инициализация и очистка локального пространства хранения
 # rm -rf /data/harbor
 ```
 
-#### 2. Recreate Configuration File
+#### 2. Пересоздайте файл конфигурации
 
 ```sh
 root@gitee-sre2:/home/ubuntu/workdir/docker-compose/harbor# diff  harbor.yml harbor.yml.tmpl
@@ -283,7 +283,7 @@ root@gitee-sre2:/home/ubuntu/workdir/docker-compose/harbor# diff  harbor.yml har
 > #   idle_timeout_seconds: 30
 ```
 
-#### 3. Deploy the first node `harbor`
+#### 3. Разверните первый узел `harbor`.
 
 ```sh
 # cd /home/ubuntu/workdir/docker-compose/harbor
@@ -298,7 +298,7 @@ root@gitee-sre2:/home/ubuntu/workdir/docker-compose/harbor# diff  harbor.yml har
 # docker-compose ps
 ```
 
-#### 4. Deploy the second node `harbor`
+#### 4. Разверните второй узел `harbour`
 
 ```sh
 # cd /home/ubuntu/workdir/docker-compose/harbor
@@ -313,24 +313,24 @@ root@gitee-sre2:/home/ubuntu/workdir/docker-compose/harbor# diff  harbor.yml har
 # docker-compose ps
 ```
 
-### 4.5 Deploying keepalived
+### 4.5 Развертывание keepalived
 
-Access using keepalived's vip
+Доступ с помощью vip keepalived
 
-Reference documentation
+Справочная документация
 
-[Harbor Highly Available Deployment - evescn - 博客园 (cnblogs.com)](https://www.cnblogs.com/evescn/p/16175819.html)
+[Высокодоступное развертывание Harbour - evescn - блогосфера (cnblogs.com)](https://www.cnblogs.com/evescn/p/16175819.html)
 
-「开源摘星计划」Harbor 高可用集群设计及部署（实操+视频），基于离线安装方式_51CTO 博客_harbor 集群搭建
+"Звездный проект с открытым исходным кодом" Разработка и развертывание высокодоступного кластера Harbor (практическое применение + видео), основанного на автономной установке_51CTO Blog_harbor cluster setup
 
-[Yan Shicheng - Blog | Focus on automation operation and maintenance technology (cnblogs.com)](https://www.cnblogs.com/yanshicheng/p/15756591.html#autoid-1-3-0)
+[Янь Шичэн - Блог | Фокус на технологии автоматизации эксплуатации и обслуживания (cnblogs.com)](https://www.cnblogs.com/yanshicheng/p/15756591.html#autoid-1-3-0)
 
-[Harbor High-Availability Deployment and Configuration (Master-Slave)\_harbor Master-Slave Manual Push-CSDN Blog](https://blog.csdn.net/weixin_45308292/article/details/107248788)
+[Развертывание и настройка высокой доступности Harbor (Master-Slave)\_harbor Master-Slave. Руководство Push-CSDN Блог](https://blog.csdn.net/weixin_45308292/article/details/107248788)
 
-[DevOps/ops/Building High Availability Shared Storage Backend for Harbor.md at master · yangpeng14/DevOps (github.com)](https://github.com/yangpeng14/DevOps/blob/master/ops/Building High Availability Shared Storage Backend for Harbor.md)
+[DevOps/ops/Создание серверной части общего хранилища высокой доступности для Harbor.md на мастере · yangpeng14/DevOps (github.com)](https://github.com/yangpeng14/DevOps/blob/master/ops/Building High Availability Shared Storage Backend for Harbor.md)
 
-Kubernetes Container Cluster - Harbor Repository Highly Available Cluster Deployment Instructions_51CTO Blog_Kubernetes Cluster Deployment
+Кластер контейнеров Kubernetes — Инструкции по развертыванию высокодоступного кластера Harbour Repository_51CTO Blog_Развертывание кластера Kubernetes
 
-"[harbor high availability case (shared storage directory) solution 1-White Eyebrow Dashu (baimeidashu.com)](http://www.baimeidashu.com/10894.html)"
+"[Решение для случая высокой доступности порта (общий каталог хранения) 1-White Eyebrow Dashu (baimeidashu.com)](http://www.baimeidashu.com/10894.html)"
 
-"[Install and configure high availability Harbor image repository | Gang updates (wangfanggang.com)](https://wangfanggang.com/Docker/harbor/)"
+"[Установка и настройка высокой доступности репозитория образов Harbor | Обновления Gang (wangfanggang.com)](https://wangfanggang.com/Docker/harbor/)"

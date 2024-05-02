@@ -6,39 +6,39 @@ authors:
 origin-url: https://gitee.ru/help/articles/4224
 ---
 
-Qi An Xin Code Guardian (referred to as Code Guardian) is a static application security testing system that provides a solution for enterprise-level source code defect analysis, source code defect auditing, and source code defect fixing and tracking.
+QiAnXin Code Guardian (далее Code Guardian) представляет собой систему статического тестирования безопасности приложений, которая обеспечивает решение для анализа дефектов исходного кода на уровне предприятия, аудита дефектов исходного кода, а также исправления и отслеживания дефектов исходного кода.
 
-## Core Features
+## Основные характеристики
 
-CodeGuard analyzes software source code through static analysis technology to automatically detect security vulnerabilities in the software. It currently supports defect detection in software source code developed in various programming languages ​​such as C, C++, Objective-C, C#, Java, Java (Android), JavaScript, PHP, Swift, Go, Python, Cobol, TSQL, PL/SQL, JSP, ASPX, Node.js, Vue.js, React.js, HTML, XML, etc. It includes more than 1300 types of source code defects and is compatible with domestic and international security development standards or specifications such as CWE and OWASP TOP 10.
+CodeGuard анализирует исходный код программного обеспечения с помощью технологии статического анализа для автоматического обнаружения уязвимостей в программном обеспечении. В настоящее время CodeGuard поддерживает обнаружение дефектов в исходном коде программного обеспечения, разработанного на различных языках программирования, таких как C, C++, Objective-C, C#, Java, Java (Android), JavaScript, PHP, Swift, Go, Python, Cobol, TSQL, PL/SQL, JSP, ASPX, Node.js, Vue.js, React.js, HTML, XML и др. Он включает в себя более 1300 типов дефектов исходного кода и совместим с отечественными и международными стандартами или спецификациями разработки систем безопасности, такими как CWE и OWASP TOP 10.
 
-## Use Cases
+## Примеры использования
 
-> Defect Detection of Source Code before Deployment
+> Обнаружение дефектов в исходном коде перед развертыванием
 
-After software development (including in-house development and outsourcing development) is completed, the security department or testing department conducts a security acceptance check on the software source code through Code Security to comprehensively detect and analyze the security vulnerabilities. They provide professional and detailed inspection reports to assist software developers in fixing and eliminating security risks.
+После завершения разработки программного обеспечения (включая разработку собственными силами и аутсорсинг) отдел безопасности или отдел тестирования проводят приемочную проверку исходного кода программного обеспечения с помощью Code Security с целью всестороннего выявления и анализа уязвимостей в системе безопасности. Они предоставляют профессиональные и подробные отчеты о проверке, чтобы помочь разработчикам программного обеспечения исправить и устранить риски безопасности.
 
-> Software Security Development System Landing
+> Внедрение системы безопасности разработкми программного обеспечения
 
-In the software development stage, integrate the Code Guardian system with the enterprise development testing toolchain to perform automated periodic source code defect detection. Developers can promptly discover and fix software security issues. In the software testing stage, the security department or testing department will conduct acceptance checks.
+На этапе разработки программного обеспечения интегрируйте систему Code Guardian с набором инструментов корпоративного тестирования для периодического автоматического обнаружения дефектов исходного кода. Разработчики могут оперативно обнаруживать и устранять проблемы с безопасностью программного обеспечения. На этапе тестирования программного обеспечения отдел безопасности или тестирования проводит приемочные проверки.
 
-## Steps to Use
+## Этапы использования
 
-### Step 1
+### Этап 1
 
-In Gitee (gitee.ru) repository page - Services, select "Source Code Defect Detection"
+На странице репозитория Gitee (gitee.ru) "Сервисы" выберите "Выявление дефектов исходного кода"
 
 ![](https://images.gitee.ru/uploads/images/2020/0508/135221_97019850_551147.png )
 
-### Step 2
+### Этап 2
 
-Click on 'Create Code Scanning' - select 'Repository Branch' and 'Language Category', and click on 'Submit'.
+Нажмите "Создать сканирование кода" - выберите "Ветка репозитория" и "Языковую категорию", а затем нажмите "Отправить".
 
 ![](https://images.gitee.ru/uploads/images/2020/0508/135341_7b75057b_551147.png )
 
-### Step 3
+### Этап 3
 
-Wait for the queue to complete and check the detection results.
+Дождитесь завершения формирования очереди и проверьте результаты обнаружения.
 
 ![](https://images.gitee.ru/uploads/images/2020/0508/135426_dfae98eb_551147.png )
 

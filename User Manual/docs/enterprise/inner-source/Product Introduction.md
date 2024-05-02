@@ -1,92 +1,91 @@
----
-title: Gitee internal sourcing
-description: InnerSource is using open source software development best practices and establishing a culture similar to open source within the organization.
+﻿---
+title: Внутренний обмен кодом в Gitee
+description: InnerSource использует лучшие практики разработки программного обеспечения с открытым исходным кодом и создает в организации культуру, схожую с культурой открытого исходного кода.
 origin-url: https://gitee.ru/InnerSource
 ---
 
-**Organization introduction**
+**Знакомство с продуктом**
 
-InnerSource is the use of open-source software development best practices and the establishment of a culture similar to open-source within an organization. The organization may still develop proprietary software but opens it up internally.
+InnerSource - использование лучших практик разработки программного обеспечения с открытым исходным кодом и создание в организации культуры, похожей на культуру открытого исходного кода. Организация может по-прежнему разрабатывать собственное программное обеспечение, но открывает его для внутреннего использования.
 
-Benefits of adopting open source
+Преимущества перехода на открытый исходный код
 
-In addition to the quality benefits of open source projects, there are the following benefits:
+Помимо качественных преимуществ проектов с открытым исходным кодом, существуют следующие преимущества:
 
-**Develop more effectively and efficiently**
+**Вести разработку более эффективно и результативно**.
 
-1. Faster time to market
-2. Reduced development costs
+1. Меньшее время выхода на рынок
+2. Снижение затрат на разработку
 
-Overcome organizational unit boundaries (break down departmental walls)
+Преодоление границ организационных подразделений (разрушение межведомственных перегородок)
 
-1. Cost and risk sharing among organizational units
-2. Cross-Organizational Unit Boundary Collaboration
-3. Application-level information exchange
+1. Распределение затрат и рисков между подразделениями организации
+2. Сотрудничество между подразделениями организации
+3. Обмен информацией на уровне приложений
 
-More successful reuse
+Более успешное повторное использование
 
-1. Can provide capabilities that individual components cannot
-2. Reusability and independence between consumers and providers
-3. Easier for component providers
+1. Может предоставлять возможности, недоступные отдельным компонентам
+2. Возможность повторного использования и независимость потребителей от поставщиков
+3. Проще для поставщиков компонентов
 
-Better software products
+Повышение качества программных продуктов
 
-1. Improved code quality
-2. More innovative development
+1. Улучшенное качество кода
+2. Более инновационная разработка
 
-**More flexible use of developers**
+** Более гибкое использование труда разработчиков**
 
-1. Simplify deployment for developers
-2. Unrelated developers collaborate with each other
+1. Упрощение развертывания для разработчиков
+2. Сотрудничество независимых разработчиков
 
-Enhanced knowledge management
+Улучшенное управление знаниями
 
-1. Community Learning
-2. Openness and usability of knowledge
+1. Обучение сообщества
+2. Открытость и удобство использования знаний
 
-**Employees are more motivated**
+** Повышение мотивации сотрудников**
 
-**Internal source book (PDF download)**
- 
-[![Image Description](./assets/084340_c14103b7_36.webp)](https://gitee.ru/InnerSource/definition_of_innersource/raw/master/getting-started-with-innersource.pdf)
-[![Image Description](./assets/cover_2.png)](https://gitee.ru/InnerSource/definition_of_innersource/raw/master/AdoptingInnerSource.pdf)
+** Внутренний справочник (скачать в формате PDF)** 
+[![Описание изображения](./assets/084340_c14103b7_36.webp)](https://gitee.ru/InnerSource/definition_of_innersource/raw/master/getting-started-with-innersource.pdf)
+[![Описание изображения](./assets/cover_2.png)](https://gitee.ru/InnerSource/definition_of_innersource/raw/master/AdoptingInnerSource.pdf)
 
-PPT sharing (Baidu): [Internal Open Source - WHAT, WHY, HOW](https://gitee.ru/OSCYuanChuangHui/2018_lecturer_ppt/raw/master/2019.12.15%20%E6%B7%B1%E5%9C%B3%E5%B9%B4%E7%BB%88%E7%9B%9B%E5%85%B8/%E5%BC%80%E6%BA%90%E6%B2%BB%E7%90%86/3.%20%E5%86%85%E9%83%A8%E5%BC%80%E6%BA%90%E7%9A%84%20WHAT%20:%20WHY%20:%20HOW%E2%80%94%E2%80%94%E8%B0%AD%E4%B8%AD%E6%84%8F.pdf)
+Презентация (Baidu): [Внутренний открытый исходный код - ЧТО, КАК, ПОЧЕМУ](https://gitee.ru/OSCYuanChuangHui/2018_lecturer_ppt/raw/master/2019.12.15%20%E6%B7%B1%E5%9C%B3%E5%B9%B4%E7%BB%88%E7%9B%9B%E5%85%B8/%E5%BC%80%E6%BA%90%E6%B2%BB%E7%90%86/3.%20%E5%86%85%E9%83%A8%E5%BC%80%E6%BA%90%E7%9A%84%20WHAT%20:%20WHY%20:%20HOW%E2%80%94%E2%80%94%E8%B0%AD%E4%B8%AD%E6%84%8F.pdf)
 
-**How does Gitee support enterprise internal sources**
+**Как Gitee поддерживает внутренний исходный код предприятия**
 
-Gitee Enterprise Edition provides direct support for the internal open source governance of enterprises. In Gitee Enterprise Edition, you can centrally manage all external and internal open source projects of the enterprise in the 'Insource' channel. The 'Insource' channel aggregates all information about enterprise open source, including community participation, contributions, evaluations, and more. The technical leader of the enterprise can have a clear understanding of the achievements in the open source field.
+Gitee Enterprise Edition обеспечивает прямую поддержку внутреннего управления предприятиями с открытым исходным кодом. В Gitee Enterprise Edition вы можете централизованно управлять всеми внешними и внутренними проектами предприятия с открытым исходным кодом в канале "Insource". Канал "Insource" объединяет всю информацию об открытых исходных кодах предприятия, включая участие сообщества, вклады, оценки и многое другое. Технический руководитель предприятия может иметь четкое представление о достижениях в области открытых исходных кодов.
 
-To learn more about Gitee's support for enterprise inner-source governance, please read [Gitee Best Practices for Enterprise Inner-Source](https://gitee.ru/InnerSource/gitee-innersource-best-practices).
+Чтобы узнать больше о поддержке Gitee корпоративного управления с использованием внутренних источников, прочитайте [Лучшие практики Gitee для предприятия, осуществляющего внутренний обмен исходным кодом](https://gitee.ru/InnerSource/gitee-innersource-best-practices).
 
-Go to [Activate Gitee Enterprise Edition](https://gitee.ru/enterprises/new?from=innersource) immediately to experience Gitee's enterprise source governance capabilities.
+Сразу же перейдите к [Активировать Gitee Enterprise Edition](https://gitee.ru/enterprises/new?from=innersource), чтобы проверить возможности управления корпоративными источниками Gitee.
 
-**Other Internal Source Articles**
+**Другие статьи об InnerSource **
 
-- [Inner Source in Platform-Based Product Engineering](https://gitee.ru/InnerSource/definition_of_innersource/raw/master/InnerSourceinPlatform-BasedProductEngineeringIEEETSE.pdf)
+- [InnerSource в разработке продуктов на основе платформы](https://gitee.ru/InnerSource/definition_of_innersource/raw/master/InnerSourceinPlatform-BasedProductEngineeringIEEETSE.pdf)
 
-- [Inner Source—Adopting Open Source Development Practices in Organizations](https://gitee.ru/link?target=https%3A%2F%2Fwww.infoq.com%2Farticles%2Finner-source-open-source-development-practices%2F)
+- [InnerSource - внедрение в организациях практики разработки с открытым исходным кодом](https://gitee.ru/link?target=https%3A%2F%2Fwww.infoq.com%2Farticles%2Finner-source-open-source-development-practices%2F)
 
-- [InnerSource with GitLab](https://gitee.ru/link?target=https%3A%2F%2Fabout.gitlab.com%2Fsolutions%2Finnersource%2F)
+- [InnerSource с GitLab](https://gitee.ru/link?target=https%3A%2F%2Fabout.gitlab.com%2Fsolutions%2Finnersource%2F)
 
-- [Why You Need to Care About Inner Sourcing](https://gitee.ru/link?target=https%3A%2F%2Fwww.laserfiche.com%2Fecmblog%2Fwhy-you-need-to-care-about-inner-sourcing%2F)
+- [Почему вам нужно заботиться об InnerSource](https://gitee.ru/link?target=https%3A%2F%2Fwww.laserfiche.com%2Fecmblog%2Fwhy-you-need-to-care-about-inner-sourcing%2F)
 
-- [InnerSourcing: the development model of the future?](https://gitee.ru/link?target=https%3A%2F%2Fblog.bitergia.com%2F2016%2F07%2F26%2Finnersourcing-the-development-model-of-the-future%2F)
+- [InnerSourcing: модель разработки будущего?](https://gitee.ru/link?target=https%3A%2F%2Fblog.bitergia.com%2F2016%2F07%2F26%2Finnersourcing-the-development-model-of-the-future%2F)
 
-- [Innersource: How to leverage open source in the enterprise](https://gitee.ru/link?target=https%3A%2F%2Fopensource.com%2Farticle%2F17%2F9%2Finnersource)
+- [InnerSource: Как использовать программное обеспечение с открытым исходным кодом на предприятии](https://gitee.ru/link?target=https%3A%2F%2Fopensource.com%2Farticle%2F17%2F9%2Finnersource)
 
-- [Microsoft is going all-in on 'Inner Source'](https://gitee.ru/link?target=https%3A%2F%2Fwww.zdnet.com%2Farticle%2Fmicrosoft-is-going-all-in-on-inner-source%2F)
+- [Microsoft полностью посвящает себя 'InnerSource'](https://gitee.ru/link?target=https%3A%2F%2Fwww.zdnet.com%2Farticle%2Fmicrosoft-is-going-all-in-on-inner-source%2F)
 
-- [Salesforce Engineering: Inner Sourcing: What’s this?](https://gitee.ru/link?target=https%3A%2F%2Fengineering.salesforce.com%2Finner-sourcing-whats-this-ef2220ae59ec)
+- [Разработка системы продаж: InnerSourcing: Что это такое?](https://gitee.ru/link?target=https%3A%2F%2Fengineering.salesforce.com%2Finner-sourcing-whats-this-ef2220ae59ec)
 
-- [BOSCH: Know how Open and Inner Source](https://gitee.ru/link?target=https%3A%2F%2Fwww.bosch.com%2Fresearch%2Fknow-how%2Fopen-and-inner-source%2F)
+- [BOSCH: Ноу-хау по открытому исходному коду и Inner Source](https://gitee.ru/link?target=https%3A%2F%2Fwww.bosch.com%2Fresearch%2Fknow-how%2Fopen-and-inner-source%2F)
 
-- [Adobe: Open Development vs. Inner Source](https://gitee.ru/link?target=https%3A%2F%2Fmedium.com%2Fadobetech%2Fopen-development-vs-inner-source-fdccf573a242)
+- [Adobe: Открытая разработка против InnerSource](https://gitee.ru/link?target=https%3A%2F%2Fmedium.com%2Fadobetech%2Fopen-development-vs-inner-source-fdccf573a242)
 
-- [ACM: Inner Source Definition, Benefits, and Challenges](https://gitee.ru/link?target=https%3A%2F%2Fdl.acm.org%2Fdoi%2F10.1145%2F2856821)
+- [ACM: Определение, достоинства и проблемы InnerSource](https://gitee.ru/link?target=https%3A%2F%2Fdl.acm.org%2Fdoi%2F10.1145%2F2856821)
 
-- [Why open source may trump inner source for internal collaboration](https://gitee.ru/link?target=https%3A%2F%2Fwww.techrepublic.com%2Farticle%2Fwhy-open-source-may-trump-inner-source-for-internal-collaboration%2F)
+- [Почему открытый исходный код может превзойти InnerSource для внутренней совместной работы](https://gitee.ru/link?target=https%3A%2F%2Fwww.techrepublic.com%2Farticle%2Fwhy-open-source-may-trump-inner-source-for-internal-collaboration%2F)
 
-- [Innersource: A Guide to the What, Why, and How](https://gitee.ru/link?target=https%3A%2F%2Fwww.jonobacon.com%2F2017%2F06%2F25%2Finnersource-guide%2F)
+- [InnerSource: Руководство - Что, Как и Почему?](https://gitee.ru/link?target=https%3A%2F%2Fwww.jonobacon.com%2F2017%2F06%2F25%2Finnersource-guide%2F)
 
-- [IEEE: Inner Source--Adopting Open Source Development Practices in Organizations: A Tutorial](https://gitee.ru/link?target=https%3A%2F%2Fieeexplore.ieee.org%2Fdocument%2F6809709)
+- [IEEE: InnerSource - Внедрение практики разработки программного обеспечения с открытым исходным кодом в организациях: Учебное пособие](https://gitee.ru/link?target=https%3A%2F%2Fieeexplore.ieee.org%2Fdocument%2F6809709)

@@ -1,14 +1,14 @@
 ---
-title: File Comparison
+title: Сравнение файлов
 authors:
   - name: Cheese
-description: View the file comparison operation for several commits
+description: Просмотр операции сравнения файлов для нескольких коммитов
 ---
 
-## Implement online file comparison between several commits
+## Реализуйте онлайн-сравнение файлов между несколькими коммитами
 
-Click on the file you want to view the commit comparison, and click on the 'View by line' function.
+Нажмите на файл, который вы хотите просмотреть при сравнении коммитов, и нажмите на функцию 'Просмотр по строкам'.
 
-![File Comparison](./assets/c-view-by-line.png)
+![Сравнение файлов](./assets/c-view-by-line.png)
 
-![File Comparison](./assets/c-files-compare.png)
+![Сравнение файлов](./assets/c-files-compare.png)

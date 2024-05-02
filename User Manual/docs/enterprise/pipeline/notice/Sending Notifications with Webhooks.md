@@ -1,32 +1,32 @@
 ---
-title: Send Notifications Using Webhooks
-description: Send notifications using Webhook
+title: Отправка уведомлений с помощью вебхуков
+description: Отправка уведомлений с помощью вебхуков
 slug: /enterprise/pipeline/notice/webhook
 keywords:
  - Gitee
- - webhook
- - Notification
+ - вебхук
+ - уведомление
 ---
 
-Users can configure Webhook notifications in the pipeline to push information about the running status of the pipeline stages to a specified address.
+Пользователи могут настроить вебхук-уведомления в конвейере, чтобы отправлять информацию о состоянии выполнения этапов конвейера по указанному адресу.
 
-## Pipeline Task Configuration Webhook Notification
+## Конфигурация задачи конвейера "Вебхук-уведомления"
 
-1. In the pipeline task node, select Add Webhook Notification.
+1. В узле задачи конвейера выберите "Добавить вебхук-уведомления".
 
-![Add Webhook Notification](./assets/Add Webhook Notification.png)
+![Добавить вебхук-уведомления](./assets/Add-Webhook-Notification.png)
 
-![Webhook Notification Configuration](./assets/Webhook Notification Configuration.png)
+![Конфигурация уведомлений вебхука](./assets/Webhook-Notification-Configuration.png)
 
-2. Fill in the Webhook address, and note that the Webhook address must be accessible from the public network.
+2. Введите адрес вебхука с учетом требования, что адрес вебхука должен быть доступен через публичную сеть.
 
-3. The key is not required and is used for WebHook authentication. It generates a request signature using the signature key to authenticate and prevent malicious requests to the URL.
+3. Ключ не требуется и используется для аутентификации вебхука. Он генерирует подпись запроса с использованием ключа подписи для аутентификации и предотвращения вредоносных запросов к URL-адресу.
 
-4. Select notification events that will trigger message notifications when the tasks in this pipeline enter the selected status.
+4. Выберите события уведомления, которые будут запускать уведомления о сообщениях, когда задачи в этом конвейере переходят в выбранное состояние.
 
-## Trigger Pipeline Run
+## Триггерный запуск конвейера
 
-Gitee pipelines send webhook requests as POST requests. The payload contains task status information.
+Конвейеры Gitee отправляют запросы веб-хуков в виде POST-запросов. В полезной нагрузке содержится информация о состоянии задачи.
 
 ```json
 {

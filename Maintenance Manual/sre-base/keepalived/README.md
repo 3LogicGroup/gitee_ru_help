@@ -1,6 +1,6 @@
 # keepalived
 
-Install Keepalived that uses VRRP (Virtual Router Redundancy Protocol) in order to build redundant configuration.This example is based on the environment like follows. Configure simply redundant settings for virtual IP address.
+Установите Keepalived, использующий протокол VRRP (Virtual Router Redundancy Protocol) для создания избыточной конфигурации. Этот пример основан на следующей среде. Просто настройте избыточные параметры для виртуального IP-адреса.
 
 ```
                             VIP:10.4.145.142
@@ -11,38 +11,38 @@ Install Keepalived that uses VRRP (Virtual Router Redundancy Protocol) in order 
 +----------------------+                     +----------------------+
 ```
 
-## 1. Install
+## 1. Установка
 
 ```sh
 root@gitee-sre2: ~# apt -y install keepalived
 ```
 
-## 2. Configure Keepalived
+## 2. Настройка Keepalived
 
 ### 2.1 master
 
 `vi /etc/keepalived/keepalived.conf`
 
 ```
-# create new
+# создать новый
 global_defs {
     router_id node01
 }
 
 vrrp_instance VRRP1 {
     state MASTER
-    # if you like disable automatic failback, set this value with [BACKUP]
+    # если вы хотите отключить автоматическое восстановление после сбоя, установите это значение с помощью [BACKUP]
     # nopreempt
-    # network interface that virtual IP address is assigned
+    # сетевой интерфейс, которому назначен виртуальный IP-адрес
     interface enp3s0
-    # set unique ID on each VRRP interface
-    # on the a VRRP interface, set the same ID on all nodes
+    # установить уникальный идентификатор на каждом интерфейсе VRRP
+    # на интерфейсе VRRP установите одинаковый идентификатор на всех узлах
     virtual_router_id 101
-    # set priority : [Master] > [BACKUP]
+    # установить приоритет: [Master] > [BACKUP]
     priority 200
-    # VRRP advertisement interval (sec)
+    # Интервал объявления VRRP (сек)
     advert_int 1
-    # virtual IP address
+    # виртуальный IP-адрес
     virtual_ipaddress {
         10.4.145.142/24
     }
@@ -62,7 +62,7 @@ root@gitee-sre2:/home/ubuntu/workdir/docker-compose/keepalived-docker# ip addres
        valid_lft forever preferred_lft forever
 ```
 
-### 2.2 Backup
+### 2.2 Резервное копирование
 
 `vi /etc/keepalived/keepalived.conf`
 
@@ -107,15 +107,14 @@ root@gitee-sre1:/home/ubuntu# systemctl is-enabled keepalived.service
 enabled
 ```
 
-## 3. Using keepalived for Virtual Machines in Openstack
+## 3. Использование keepalived для виртуальных машин в Openstack
 
-References:
+Ссылки:
 
-> [Virtual machine installation Keepalived binding VIP · openstack · See Yun (kancloud.cn)](https://www.kancloud.cn/pshizhsysu/openstack/2297705)
+> [Установка виртуальной машины Keepalived привязка VIP - openstack - См. Yun (kancloud.cn)](https://www.kancloud.cn/pshizhsysu/openstack/2297705)
 
-> [Sharing a Floating IP for External Service in OpenStack Cloud Using Keepalived | Coder Home (codenong.com)](https://www.codenong.com/cs106534245/)
+> [Совместное использование плавающего IP-адреса для внешнего сервиса в облаке OpenStack с помощью Keepalived | Coder Home (codenong.com)](https://www.codenong.com/cs106534245/)
 
-> [openstack-虚机-keepalived-vip-配置及问题解决 | 点点滴滴 (tang-lei.com)](http://tang-lei.com/2019/07/30/opesntack-虚机-keepalived-vip-配置及问题解决/)
+> [vip-конфигурация и решение проблем виртуальной машины openstack keepalived | GDD (tang-lei.com)](http://tang-lei.com/2019/07/30/opesntack-虚机-keepalived-vip-配置及问题解决/)
 
-> [openstack 运维/openstack 运维手册.md - openstak-ceph_doc
-  - 开源中国 (gitee.com)](https://e.gitee.com/oschina/repos/oschina/openstak-ceph-doc/blob/master/openstack运维/openstack运维手册.md)
+> [openstack ops/openstack ops manual.md - openstak-ceph_doc - Open Source China (gitee.com)](https://e.gitee.com/oschina/repos/oschina/openstak-ceph-doc/blob/master/openstack运维/openstack运维手册.md)

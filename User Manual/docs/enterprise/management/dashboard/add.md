@@ -1,10 +1,10 @@
 ---
-title: Add Component
+title: Добавление компонента
 ---
 
-Click the "Add Component" button in the upper right corner:
+Нажмите кнопку "Добавить компонент" в правом верхнем углу:
 
-![Image Description](assets/image326.png)
-Click the "Add Component" button in the upper right corner of the component card in the window to add the component to the workspace.
+![Описание изображения](assets/image326.png)
+Нажмите кнопку "Добавить компонент" в правом верхнем углу карточки компонента в окне, чтобы добавить компонент в рабочее пространство.
 
-![Image Description](assets/image327.png)
+![Описание изображения](assets/image327.png)

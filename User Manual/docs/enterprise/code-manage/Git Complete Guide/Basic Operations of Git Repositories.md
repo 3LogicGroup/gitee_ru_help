@@ -1,83 +1,84 @@
 ---
-title: Git repository basic operations
+title: Основные операции с репозиторием Git
 origin-url: https://gitee.ru/help/articles/4114
 ---
 
-Basic repository management
+Основы управления репозиториями
 
-Initialize a Git repository (using "/home/gitee/test" folder as an example)
+Инициализируйте репозиторий Git (используя в качестве примера папку "/home/gitee/test")
 
 ```bash
 cd /home/gitee/test    # Go to the git folder
 'git init               #initialize a Git repository'
 ```
 
-### **Add files to Git staging area**
+### **Добавить файлы в область подготовленных файлов Git**
 
 ```bash
 git add "readme.txt" 
 ```
 
-Note: Use `git add -A` or `git add .` to commit all changes in the current repository.
+Примечание: для фиксации всех изменений в текущем репозитории используйте `git add -A` или `git add .`.
 
-### **View the current file submission status of the repository (A: submission succeeded; AM: file has changed after being added to the cache)**
+### **Просмотр текущего статуса отправки файла в хранилище (A: отправка прошла успешно; AM: файл изменился после добавления в кэш)**
 
 ```bash
 git status -s
 ```
 
-### **Committing versions from the staging area of Git to the repository, parameter -m is followed by the comment for the current commit**
+### **Коммиты изменений версий из области технологической подготовки Git в репозиторий, за параметром -m следует комментарий к текущему коммиту**
 
 ```bash
 git commit -m "1.0.0"
 ```
 
-### **Push the local Git repository information to the server**
+### **Передача информации о локальном Git-репозитории на сервер**.
 
 ```bash
 git push https://gitee.ru/***/test.git
 ```
 
-### **View git commit logs**
+### **Просмотр журналов коммитов git**
 
 ```bash
 git log
 ```
 
-## **Remote Repository Management**
+## **Управление удаленным репозиторием**
 
-### **Modify Repository Name**
+### **Изменение имени репозитория**
 
-By default, when cloning or performing other operations, the repository name is usually origin. If we want to change its name, such as not liking the name origin and wanting to change it to oschina, we need to execute the command in the repository directory:
+По умолчанию при клонировании или выполнении других операций имя репозитория обычно сохраняется origin. Если мы хотим изменить его - например, нам не нравится исходное имя origin и мы хотим изменить его на oschina, - нам нужно выполнить в каталоге репозитория следующую команду:
 
 ```bash
 git remote rename origin oschina
 ```
 
-This way, your remote repository name will be changed to oschina. Similarly, the command to execute when pushing will no longer be git push origin master, but git push oschina master. The same applies to pulling.
+Таким образом, имя вашего удалённого репозитория будет изменено на oschina. Аналогично, команда, которую нужно выполнить при отправке, теперь будет запсиываться не git push origin master, а git push oschina master. То же самое относится и к слиянию.
 
-### Add a repository
+### Добавление репозитория
 
-If you want to add a remote repository to a local repository without performing a clone operation, you can execute
+Если вы хотите добавить удаленный репозиторий в локальный репозиторий без выполнения операции клонирования, вы можете выполнить команду
 
 ```bash
 git remote add origin Repository address
 ```
 
-Attention:
+**Внимание!**
 
-1. origin is the alias for your repository, it can be changed, but please make sure it does not conflict with existing repository aliases
-2. Repository addresses generally support http/https/ssh/git protocols, do not add addresses for other protocols.
+1. origin - это псевдоним для вашего репозитория, его можно изменить, но убедитесь, что он не конфликтует с псевдонимами существующих репозиториев 
 
-View the remote repository URL corresponding to the current repository
+2. Адреса репозиториев обычно поддерживают протоколы http/https/ssh/git, не добавляйте адреса для других протоколов.
+
+Просмотр URL-адреса удаленного репозитория, соответствующего текущему репозиторию:
 
 ```bash
 git remote -v
 ```
 
-This command can display the names and corresponding repository addresses of the repositories already added in your current repository. In general, there will be two identical records, fetch and push, where fetch is used to synchronize from remote and push is used to push to remote.
+Эта команда может отобразить имена и соответствующие адреса репозиториев, уже добавленных в текущий репозиторий. В общем случае будет две одинаковые записи, fetch и push, где fetch используется для синхронизации с удалённым репозиторием, а push - для отправки в удалённый репозиторий.
 
-### **Modify the remote repository address for the repository**
+### **Изменение адреса удаленного репозитория для текущего репозитория**
 
 ```bash
 Change the repository URL using `git remote set-url origin repository_url`.

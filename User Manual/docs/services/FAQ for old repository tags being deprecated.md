@@ -1,39 +1,39 @@
 ---
-title: FAQ for Deprecated Repository Tags
+title: Часто задаваемые вопросы по устаревшим тегам репозитория
 authors:
   - name: The Little Prince
     url: https://gitee.ru/kena-QY
 origin-url: https://gitee.ru/help/articles/4334
 ---
 
-# About Tag Offline
+# Тег в режиме офлайн
 
-In order to better leverage the value of tags, Gitee has launched a new tagging system. The new tags will only be supported by repository administrators and will be made public to everyone. The original tags have been closed for editing but can still be viewed. It is expected to be discontinued before June 1, 2021.
+Чтобы лучше использовать ценность тегов, Gitee запустила новую систему тегирования. Новые теги будут поддерживаться только администраторами репозитория и будут доступны всем. Исходные теги закрыты для редактирования, но их можно просмотреть. Ожидается, что её действие будет прекращено до 1 июня 2021 года.
 
-If you want to keep the current tag data, our migration feature can automatically convert the original tag data to the new tag.
+Если вы хотите сохранить текущие данные тега, наша функция миграции может автоматически преобразовать исходные данные тега в новый тег.
 
-## 1. Who Can Migrate Tags?
+## 1. Кто может переносить теги?
 
-Currently, only the owner (responsible person) of the repository can migrate tags to the repository. You can choose to migrate all the tags made for the repositories you own at once, or migrate them by repository. However, each repository can only be migrated once.
+В настоящее время переносить теги в репозиторий может только владелец (ответственное лицо) репозитория. Вы можете по своему выбору перенести сразу все теги, созданные для принадлежащих вам репозиториев, или перенести их по отдельным репозиториям. Однако каждый репозиторий можно перенести только один раз.
 
-## 2. What will happen to the tags I previously used when selecting [Migrate Now]?
+## 2. Что произойдет с тегами, которые я ранее использовал при выборе [Перенести сейчас]?
 
-1. After data migration, the labels you have created for your own repositories will not be lost. Instead, based on the label content, the repositories will be automatically tagged with new labels. You can use the new labels to organize your repository list.
+После переноса данных созданные вами метки для собственных репозиториев не будут потеряны. Вместо этого, в зависимости от содержимого метки, репозитории будут автоматически помечены новыми метками. Вы можете использовать новые метки для организации списка репозиториев.
 
-During the migration process, conflicts may occur between old and new tag data. Gitee will handle it compatibly while ensuring data integrity.
+В процессе миграции между старыми и новыми данными тегов могут возникнуть конфликты. Gitee справится с этим, обеспечивая при этом целостность данных.
 
-## 3. Can I not migrate the data?
+## 3. Могу ли я не перенести данные?
 
-You can still use the old tags to organize the repositories you have participated in, the repositories you have starred, the repositories you have watched, and the code snippets in the short term. At the same time, we will retire it on June 1, 2021.
+Вы по-прежнему можете использовать старые теги для организации репозиториев, в которых вы участвовали, репозиториев, которые вы отметили, репозиториев, которые вы просматривали, и фрагментов кода в краткосрочной перспективе. Эта возможность будет удалена 1 июня 2021 г.
 
-## IV. What is the difference between the new tags and the tags I currently use online?
+## 4. В чем разница между новыми тегами и тегами, которые я сейчас использую в Интернете?
 
-Currently, the online tags can be used to categorize and label your own repositories, and they are only visible to yourself.
+В настоящее время онлайн-теги можно использовать для категоризации и маркировки ваших собственных репозиториев, и они видны только вам.
 
-The new labels are visible to all users on the platform. Gitee has given them more expectations: by setting appropriate labels, you can easily classify and retrieve them, and make it easier for others to search for tags they are interested in, thus increasing the exposure of your open source projects.
+Новые ярлыки видны всем пользователям платформы. Gitee дал им больше возможностей: установив соответствующие метки, вы можете легко классифицировать и извлекать их, а также облегчить другим поиск интересующих их тегов, тем самым увеличивая доступность ваших проектов с открытым исходным кодом.
 
-The new tag unlocks more gameplay. If you are interested, you can take a look [here](https://gitee.ru/oschina/gitee-open-label).
+Новый тег открывает больше сценариев игры. Если это вас заинтересовало, более подробную информацию вы можете посмотреть [здесь](https://gitee.ru/oschina/gitee-open-label).
 
-## V. What should I do if I didn't have time to migrate my tag data and it went offline?
+## 5. Что делать, если у меня не было времени перенести данные тега и он отключился?
 
-After Gitee processes the offline handling, it will send you the repository - tags as an internal message. In the future, you can also manually add tags according to this content.
+После того, как Gitee обработает автономную обработку, он отправит вам теги репозитория в формате внутреннего сообщения. В дальнейшем вы также сможете вручную добавлять теги в соответствии с этим контентом.

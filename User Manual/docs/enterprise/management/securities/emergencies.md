@@ -1,9 +1,9 @@
 ---
-title: Exception Alert
+title: Уведомления об исключениях
 ---
 
-When there are abnormal alarm records in the company, the 'Settings' in the company's function menu and the 'Abnormal Alarm' in the company management menu will have a mark indicating the number of alarms.
+Когда в компании есть записи об аномальных сигналах тревоги, в разделе "Настройки" в меню функций компании и в разделе "Аномальный сигнал тревоги" в меню управления компанией будет отображаться метка, указывающая количество тревог.
 
-Click "Settings" - "Exception Alert" to filter and view the exception alert records of enterprise members on the "Exception Alert" page. After handling the exception alert, you can mark these alert records as read.
+Нажмите "Настройки" - "Уведомления об исключениях", чтобы отфильтровать и просмотреть записи об уведомлениях участников предприятия на странице "Уведомления об исключениях". После обработки уведомления вы можете отметить эти записи как прочитанные.
 
-![Image Description](assets/image391.png)
+![Описание изображения](assets/image391.png)

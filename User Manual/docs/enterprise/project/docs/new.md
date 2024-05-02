@@ -1,15 +1,15 @@
 ---
-title: Create new document
+title: Создание нового документа
 ---
 
-Click "Knowledge Base" in the project navigation menu:
+Нажмите на "База знаний" в меню навигации проекта:
 
-![Image Description](assets/image525.png)
+![Описание изображения](assets/image525.png)
 
-Click the "New" button in the upper right corner, then click "New Document" in the dropdown menu:
+Нажмите на кнопку "Создать" в правом верхнем углу, затем в выпадающем меню выберите "Новый документ":
 
-![Image Description](assets/image526.png)
+![Описание изображения](assets/image526.png)
 
-Enter the document name and adjust the permission settings according to actual needs.
+Введите название документа и добавьте необходимые настройки доступа.
 
-![Image Description](assets/image527.png)
+![Описание изображения](assets/image527.png)

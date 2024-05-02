@@ -1,5 +1,5 @@
 ---
-title: Product Introduction
+title: Знакомство с продуктом
 ---
 
-Gitee project management covers the entire lifecycle of R&D management, supporting various development models such as waterfall, agile (Scrum, Kanban), seamlessly integrating with code management, CI/CD, and test management, while providing powerful and flexible custom configuration capabilities to easily solve complex collaboration demands between different scenarios and teams, enabling efficient teamwork.
+Управление проектами Gitee покрывает весь жизненный цикл управления исследованиями и разработкой, поддерживая различные модели разработки, такие как: каскадная модель, Agile (Scrum, Kanban), бесшовно интегрируется с системами управления кодом, CI/CD и управлением тестированием. Также предлагает мощные и гибкие инструменты индивидуальной настройки, позволяющие легко решать сложные задачи и налаживать эффективное взаимодействие в команде, независимо от сценария или проекта, упрощая работу команды.

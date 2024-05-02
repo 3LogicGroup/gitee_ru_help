@@ -1,11 +1,11 @@
 ---
-title: File Sharing
+title: Общий доступ к файлам
 authors:
   - name: South Drifting All the Way
     url: https://gitee.ru/kangxiok
 origin-url: https://gitee.ru/help/articles/4254
 ---
 
-Supports multi-level folders to facilitate the management of knowledge types and content, allowing members to quickly and accurately access information and shorten search time.
+Поддержка многоуровневых папок облегчает управление типами знаний и контентом, позволяя пользователям быстро и точно получать доступ к информации и сокращать время поиска.
 
-![Image Description](image675.png)
+![Описание изображения](image675.png)

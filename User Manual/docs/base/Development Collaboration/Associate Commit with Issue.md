@@ -1,49 +1,49 @@
 ---
-title: Commit Associated with Issue
+title: Коммит, связанный с задачей
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 origin-url: https://gitee.ru/help/articles/4141
 ---
 
-> Note that Gitee's new solution no longer uses the issue ID to identify issues, but uses ident instead. [Please check here](https://gitee.ru/oschina/git-osc/issues/IE5CI) for specific instructions. To avoid manually entering the issueident incorrectly, it is recommended to directly copy #issueident.
+> Обратите внимание, что для идентификации задач новое решение Gitee больше не использует идентификатор задачи, а вместо него использует ident. [Проверьте здесь](https://gitee.ru/oschina/git-osc/issues/IE5CI), чтобы получить конкретные инструкции. Во избежание неправильного ввода идентификатора задачи вручную, рекомендуется напрямую скопировать #issueident.
 
-Explanation:
+Разъяснение:
 
-1. When pushing locally, please ensure that the email configured locally is consistent with the registered email of the Gitee account in order to associate the issue correctly.
-2. Difference between Personal and Enterprise versions: Commits in personal repositories can only be associated with tasks in that repository, while commits in enterprise repositories can be associated with tasks in the entire enterprise.
-3. A commit message can be associated with multiple tasks at the same time, for example: `fix #issue_ident_1 #issue_ident_2` or `fix #issue_ident_1 fix #issue_ident_2`, please separate different issue_idents with spaces.
+1. Чтобы правильно привязать задачу, при выполнении локальной отправки убедитесь, что локально настроенный адрес электронной почты соответствует зарегистрированному адресу электронной почты учетной записи Gitee.
+2. Различие между версиями Personal  и Enterprise: коммиты в репозиториях версии Personal могут быть связаны только с задачами в этом репозитории, в то время как коммиты в репозиториях версии Enterprise могут быть связаны с задачами на всем предприятии.
+3. Сообщение о коммите может быть связано с несколькими задачами одновременно, например: `fix #issue_ident_1 #issue_ident_2` или `fix #issue_ident_1 fix #issue_ident_2`, различные issue_idents необходимо разделять пробелами.
 
-### 1. commit message associated task
+### 1. Задача, связанная с сообщением о коммите
 
-- Keywords: link, linked, linking, relate, related, relating
-- Format: Enter `link #issue_ident` or `link issue_url` in the commit message.
+- Ключевые слова: ссылка, снабженный ссылкой, привязка по ссылке, установка отношения, относящийся, связанный отношением
+- Форматирование: Введите в сообщение о коммите команду `link #issue_ident` или `link issue_url`.
 
-> The result will be as follows
+> Результат будет выглядеть следующим образом
 
 ![](Commit%E5%85%B3%E8%81%94Issue.assets/image-1.png)
 
-### 2. Close the task with commit
+### 2. Закрытие задачи с коммитом
 
-- Keywords: close, closes, closing, closed, fixed, fix, resolved
-- Format: enter 'close #issue_ident' in commit message -
+- Ключевые слова: закрыть, закрывает, закрытие, закрытый, исправленный, исправлять, решенный
+- Форматирование: введите в сообщение о коммите команду 'close #issue_ident' -
 
-> The effect diagram is shown below
+> Диаграмма эффектов приведена ниже
 
 ![](Commit%E5%85%B3%E8%81%94Issue.assets/image.png)
 
-### 3. Comment on the task through a commit
+### 3. Отправка комментариев к задаче через коммит
 
-- Keywords: comment, reply
-- Format: To comment on an issue, you can enter the following in the commit message: `comment #issue_ident` or `comment issue_url`.
-- The effect is as follows:
-![Image Description](https://static.oschina.net/uploads/img/201806/26162619_VN49.png)
+- Ключевые слова: комментировать, ответить
+- Форматирование: Чтобы оставить комментарий к задаче, вы можете ввести следующее в сообщении о коммите: `comment #issue_ident` or `comment issue_url`.
+- Результат будет выглядеть следующим образом:
+![Описание изображения](https://static.oschina.net/uploads/img/201806/26162619_VN49.png)
 
-### 4. Change Task Status through Commit
+### 4. Изменение статуса задачи через коммит
 
-- Keywords: state to, change the state to
-- Usage:
+- Ключевые слова: состояние на, изменить статус на
+- Использование:
   - `#issue_ident state to To Do`
-  - Change the state of `#issue_ident` to 'To-do'.
-  - Change the state of `issue_url` to 'To-do'.
-- Change the `issue_url` status to To-do
+  - Изменить статус `#issue_ident` на "Нужно сделать".
+  - Изменить статус `issue_url` на "Нужно сделать".
+  - Изменить статус `issue_url` на "Нужно сделать".

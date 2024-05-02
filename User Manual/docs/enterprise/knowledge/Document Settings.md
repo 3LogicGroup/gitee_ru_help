@@ -1,21 +1,21 @@
 ---
-title: Document Settings
-description: Document settings
+title: Настройки документов
+description: Настройки документов
 slug: enterprise/knowledge/setting
 ---
-Document Settings
+Настройки документов
 
-1. Click on the settings icon on the document page to enter the document settings page.
-![Image Description](assets/image314.png)
-![Image Description](assets/image315.png)
+1. Для входа на страницу "Настройки документов" нажмите на иконку "Настройки" на странице документа.
+![Описание изображения](assets/image314.png)
+![Описание изображения](assets/image315.png)
 
-Historical Versions
+Исторические версии
 
-1. Click on the "History Versions" in the left menu to view the document's history versions.
-![Image Description](assets/image316.png)
+1. Для просмотра истории версий документа нажмите на "История версий" в меню слева.
+![Описание изображения](assets/image316.png)
 
-Moving to Recycle Bin
+Перемещение в корзину
 
-1. Click on "Move to Recycle Bin" in the left menu;
-2. Click "Move to Recycle Bin" to move the document to the recycle bin.
-![Image Description](assets/image317.png)
+1. Нажмите "Переместить в корзину" в меню слева;
+2. Для перемещения документа в корзину нажмите "Переместить в корзину".
+![Описание изображения](assets/image317.png)

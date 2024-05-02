@@ -1,12 +1,12 @@
----
-title: Repository GC
+﻿---
+title: Сбор мусора в репозитории
 origin-url: https://gitee.ru/help/articles/4173
 ---
 
-As the usage of the repository increases, the size of the project repository becomes larger, and the access speed and efficiency decrease. Git provides the GC function to help users optimize repository space.
+По мере увеличения использования репозитория размер репозитория проекта становится больше, а скорость доступа и эффективность снижаются. Git предоставляет функцию сборки мусора, помогающую пользователям оптимизировать пространство репозитория.
 
-Users can optimize repository space by accessing Repository Homepage -> 'Repository Settings' -> 'Feature Settings' -> 'Repository GC' and using the Repository GC feature.
+Пользователи могут оптимизировать пространство репозитория, перейдя на домашнюю страницу репозитория -> "Настройки репозитория" -> "Настройки функций" -> "Общий доступ к репозиторию" и используя функцию общего доступа к репозиторию.
 
-![Image Description](../../../../../../assets/image137.png)
+![Описание изображения](../../../../../../assets/image137.png)
 
-For information on Git GC, please refer to: [Git Internal Principles - Maintenance and Data Recovery](https://gitee.ru/link?target=https%3A%2F%2Fgit-scm.com%2Fbook%2Fzh%2Fv2%2FGit-%25E5%2586%2585%25E9%2583%25A8%25E5%258E%259F%25E7%2590%2586-%25E7%25BB%25B4%25E6%258A%25A4%25E4%25B8%258E%25E6%2595%25B0%25E6%258D%25AE%25E6%2581%25A2%25E5%25A4%258D)
+Для получения информации о сборе мусора в Git обратитесь к ресурсу: [Внутренние принципы Git - Обслуживание и восстановление данных](https://gitee.ru/link?target=https%3A%2F%2Fgit-scm.com%2Fbook%2Fzh%2Fv2%2FGit-%25E5%2586%2585%25E9%2583%25A8%25E5%258E%259F%25E7%2590%2586-%25E7%25BB%25B4%25E6%258A%25A4%25E4%25B8%258E%25E6%2595%25B0%25E6%258D%25AE%25E6%2581%25A2%25E5%25A4%258D)

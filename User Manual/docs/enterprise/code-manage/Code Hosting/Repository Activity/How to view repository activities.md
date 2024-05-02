@@ -1,11 +1,11 @@
 ---
-title: How to view repository activities
+title: Как просматривать действия в репозитории
 ---
 
-1. "Repository Details"->"Overview":
+1. "Сведения о репозитории"->"Обзор":
 
-![Image Description](../../../../../assets/image16.png)
+![Описание изображения](../../../../../assets/image16.png)
 
-2. Filter dynamic
+2. Динамика фильтрации
 
-![Image Description](../../../../../assets/image17.png)
+![Описание изображения](../../../../../assets/image17.png)

@@ -1,66 +1,66 @@
 ---
-title: Quickly Import GitHub Repositories to Gitee and Synchronize Updates
+title: Быстрый импорт репозиториев из GitHub в Gitee и синхронизация обновлений
 origin-url: https://gitee.ru/help/articles/4284
 ---
 
-### 1. Repository Import
+### 1. Импорт репозитория
 
-Log in to the Gitee account, click the "+" button in the upper right corner, click "Import repository from GitHub", and authorize Gitee access on the redirected page.
+Войдите в учетную запись Gitee, нажмите на кнопку "+" в правом верхнем углу, нажмите на "Импортировать репозиторий из GitHub" и авторизируйтесь через Gitee на странице, куда вы будете перенаправлены.
 
-![Image Description](https://images.gitee.ru/uploads/images/2020/1228/112528_a7793116_7722649.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/1228/112528_a7793116_7722649.png )
 
-Integration with GitHub.
+Интеграция с GitHub.
 
-![Image Description](https://images.gitee.ru/uploads/images/2019/1219/181219_db79b8bd_669935.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2019/1219/181219_db79b8bd_669935.png )
 
-Import your Github projects to Gitee selectively
+Выборочно импортируйте ваши проекты из GitHub в Gitee
 
-![Image Description](https://images.gitee.ru/uploads/images/2019/1219/181957_1fb4eeac_669935.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2019/1219/181957_1fb4eeac_669935.png )
 
-- If it is an open source repository, simply click create, and after the import is completed, you will be taken to the corresponding Gitee repository page (import speed may vary depending on the repository size and network conditions, please be patient).
+- Если это репозиторий с открытым исходным кодом, просто нажмите "Создать" и по завершении импорта вы будете перенаправлены на страницу репозитория в Gitee (скорость импорта может зависеть от размера репозитория и скорости интернет-соединения).
 
-- If it is a private repository, you need to log in with a GitHub account that has permission to operate the repository and authorize it. The result is the same as above.
+- Если это частный репозиторий, вам нужно войти в учетную запись GitHub с правами на управление репозиторием и разерешить выполнение действия. Результат буде таким же, как описано выше.
 
-Sync updates between Gitee and Github
+Синхронизация обновлений между Gitee и GitHub
 
-#### Method 1 (recommended): For repositories with fewer branches
+#### Способ №1 (рекомендуемый): для репозиториев с небольшим количеством веток
 
-If it is a local repository, only add the remote repositories for Gitee and Github with different names as needed on the command line.
+Если это локальный репозиторий, достаточно добавить через командную строку удаленные репозитории для Gitee и GitHub с разными названиями.
 
 `git remote add remote_name remote_address`
 
-![Image Description](https://images.gitee.ru/uploads/images/2019/1219/182224_d5066b4d_669935.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2019/1219/182224_d5066b4d_669935.png )
 
-The specific method of operation is as follows:
+Вот подробное описание шагов:
 
-1. First, use 'git remote -v' to check the remote repository list of the repository you want to sync. If the Gitee remote repository address is not in the list, you need to add a new address.
+1. Во-первых, выполните команду 'git remote -v', чтобы просмотреть список удаленных репозиториев, которые вы хотите синхронизировать. Если в списке нет удаленного репозитрия Gitee, необходимо добавить новый адрес.
 
 ```bash
 git remote add remote_repo_name remote_repo_url
 # eg: git remote add gitee git@github.com:xxx/xxx.git
 ```
 
-If you encounter the error 'Could not remove config section' while adding
+Если вы столкнулись с ошибкой "Не удалось удалить раздел настроек" в процессе добавления
 
-2. Pull the latest code from GitHub to your local machine.
+2. Скопируйте последнюю версию кода из GitHub на вашу локальную машину
 
 ```bash
 git pull repository_name branch_name
 # eg：git pull origin master
 ```
 
-3. Push the latest local code to Gitee
+3. Отправьте в Gitee последнюю обновлённую версию кода с локальной машины
 
 ```bash
 git push remote_repo_name branch_name
 # eg：git push gitee master
 ```
 
-If there are any differences, you need to resolve them manually.
+В случае выявления каких-либо различий, необходимо устранить их вручную
 
-#### Method 2 (Recommended): Comparing multiple branch repositories
+#### Способ №2 (рекомендуемый): сравнение репозиториев с большим количеством веток 
 
-1. Clone the GitHub repository to the local machine, using the following command
+1. Склонируйте репозиторий GitHub на локальную машину, используя следующую команду
 
 ```bash
 git clone git@github.com:xxx/xxx.git
@@ -68,40 +68,40 @@ git clone git@github.com:xxx/xxx.git
 cd xxx
 ```
 
-2. Pull all branches of the repository at once, the command is as follows:
+2. Одновременно скопируйте все ветки репозитория, используя команду:
 
 `$ for b in`git branch -r | grep -v -- '->'`; do git branch --track ${b##origin/} $b; done`
 
-Command Simple Explanation:
+Описание команды:
 
-- | Represents a channel, which means that the output of the previous command is the input of the next command.
-- for xxx in xxxs; do xxx; done is a shell for loop statement.
-- The backticks `` indicate that the content inside is a command.
-- git branch -r lists remote branches.
-- grep -v – ‘->’, grep command to search for lines that do not contain '->'.
-- git branch -r | grep -v – '->', which together means to view remote branches excluding those containing '->'.
-- $b represents the name of the remote branch, for example: origin/dev.
-- ${b##origin/} means to extract the content after `origin/` in the remote branch name, for example: dev, and use it as the local branch.
-- git branch --track ${b##origin/} $b, similar to method 1: git branch dev origin/dev. The --track parameter is optional.
+- | Представляет канал, это означает, что вывод предыдущей команды - это ввод следующей команды.
+- for xxx in xxxs; do xxx; это - оболочка оператора цикла.
+- Обратные кавычки указывают, что их содержимое - это команда.
+- git branch -r выводит список удаленных веток.
+- grep -v – ‘->’, команда grep выполняет поиск строк, не содержащих '->'.
+- git branch -r | grep -v – '->', что вместе означает просмотр удаленных веток за исключением содержащих '->'.
+- $b представляет имя удаленной ветки, например, origin/dev.
+- ${b##origin/} означает извлечение содержимого после `origin/` в имени удаленной ветки, например, dev, и использование извлеченного кода в качестве локальной ветки.
+- git branch --track ${b##origin/} $b, аналогично способу 1: git branch dev origin/dev. Параметр --track не является обязательным.
 
-Check all branches (including local and remote repository branches)
+Проверьте все ветки (включая локальные и ветки удаленных репозиториев)
 
 ```bash
 git branch --all
 ```
 
-4. Push local repository to Gitee
+4. Отправьте локальный репозиторий в Gitee
 
-#### Method 3: Compare repositories with multiple branches
+#### Способ №3: Сравнение репозиториев с большим количеством веток
 
-Click the sync update button on the Gitee repository homepage!
+Нажмите кнопку обновления синхронизации на домашней странице репозитория Gitee!
 
-![Image Description](https://images.gitee.ru/uploads/images/2019/1219/182244_d97d6aa2_669935.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2019/1219/182244_d97d6aa2_669935.png )
 
-The synchronization function here is set to force synchronization (new code will directly overwrite the existing one)
+Функция синхронизации начнёт принудительную синхронизацию (новый код перезапишется поверх существующего)
 
 --------------------------
 
-Reference article link:
+Ссылка на справочную информацию:
 
-Gitee Official Blog: <https://blog.gitee.ru/2018/06/05/github_to_gitee/>
+Официальный блог Gitee: <https://blog.gitee.ru/2018/06/05/github_to_gitee/>

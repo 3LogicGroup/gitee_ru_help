@@ -1,29 +1,29 @@
 ---
-title: Common Variables
-description: Common variables
+title: Общие переменные
+description: Общие переменные
 slug: /enterprise/pipeline/variable/global
 keywords:
  - Gitee
- - Project-level
- - Common Variables
+ - Уровень проекта
+ - Общие переменные
 ---
 
-General variables are common environment variables controlled by the project, managed uniformly by the project, and can be added to pipelines.
+Общие переменные - это общие переменные окружения, которые контролируются проектом, управляются им единообразно и могут быть добавлены в конвейеры.
 
-As shown in the figure, click on General Variables -> Add Variable -> Fill in the variable configuration -> Create
+Как показано на рисунке, нажмите на Общие переменные -> Добавить переменную -> Заполните конфигурацию переменной -> Создать
 
-![Add Common Variables](./assets/Add_Common_Variables.png)
+![Добавить общие переменные](./assets/Add_Common_Variables.png)
 
-Add universal variable 1
+Добавить универсальную переменную 1
 
-## Pipeline Associated Common Variables
+## Общие переменные, связанные с трубопроводом
 
-Go to the pipeline editing page, click on the indicated location, select variables, and click on Associate.
+Перейдите на страницу редактирования трубопровода, нажмите на указанное место, выберите переменные и нажмите на кнопку Ассоциировать.
 
-![Reference Common Variables](./assets/Reference_Common_Variables.png)
+![Ссылка на общие переменные](./assets/Reference_Common_Variables.png)
 
-:::info**Note:**
-Variable priority: Task output variable > Pipeline-level variable > General variable.
+:::info**Примечание:**
+Приоритет переменной: Выходная переменная задачи > Переменная уровня конвейера > Общая переменная.
 
-If the same variable exists in both custom variables and common variables in the same pipeline, the variable in the pipeline takes the highest priority.
+Если одна и та же переменная существует и в пользовательских переменных, и в общих переменных в одном и том же конвейере, переменная в конвейере имеет наивысший приоритет.
 :::

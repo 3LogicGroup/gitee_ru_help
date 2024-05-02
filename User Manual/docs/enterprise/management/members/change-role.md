@@ -1,11 +1,11 @@
 ---
-title: Change the role of enterprise members
+title: Изменение роли участников компании
 ---
 
-Click on the "Members" in the enterprise navigation menu to enter the member management page, then click "..." on the right side of the target member's row, and then click "Edit" in the dropdown menu.
+Нажмите на "Участники" в меню навигации компании, чтобы перейти на страницу управления участниками. Затем нажмите на "..." справа от строки целевого участника и выберите "Редактировать" в выпадающем меню.
 
-![Image Description](assets/image381.png)
+![Описание изображения](assets/image381.png)
 
-Click on the 'Member Role' selection box in the 'Edit Member Information' interface, then select a role from the drop-down menu, and finally click the 'Save' button.
+Нажмите на "Роль участника" на странице "Редактировать информацию об участнике", затем выберите роль из выпадающего меню, и, наконец, нажмите кнопку "Сохранить".
 
-![Image Description](assets/image382.png)
+![Описание изображения](assets/image382.png)

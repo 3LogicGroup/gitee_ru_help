@@ -1,7 +1,7 @@
 ---
-title: Table View
+title: Представление таблицы 
 ---
 
-Click on the view dropdown menu on the filter bar, and then click on the 'Table' option.
+Нажмите на выпадающее окно на панели фильтров, затем кликните на опцию "Таблица".
 
-![Image Description](../../docs/assets/image544.png)
+![Описание изображения](../../docs/assets/image544.png)

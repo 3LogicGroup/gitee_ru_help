@@ -1,18 +1,18 @@
 ---
-title: WebHook support for WeChat Work
+title: Поддержка вебхуков для WeChat Work
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 origin-url: https://gitee.ru/help/articles/4296
 ---
 
-Enterprise WeChat provides the 'Group Robot' feature in internal group chats. By using WebHooks, you can add custom robots to implement automatic notifications in Enterprise WeChat.
+Корпоративный WeChat предоставляет функцию "Групповой робот" во внутренних групповых чатах. С помощью вебхуков вы можете добавить в Корпоративный WeChat пользовательских роботов для рассылки автоматических уведомлений.
 
-## Add Robot
+## Добавление робота
 
-In the enterprise WeChat group chat, select 'Add Group Robot'->'Create a new robot' from the right-click menu of the internal group in the chat window. Set an avatar and name for the robot, and click 'Add' to get a WebHook address. Close the window to complete the addition of the WeChat robot in the enterprise WeChat internal group.
+В корпоративном чате WeChat выберите "Добавить группового робота" -> "Создать нового робота" из контекстного меню в правом верхнем углу окна чата. Установите аватар и имя для робота, а затем нажмите "Добавить", чтобы получить адрес вебхука. Закройте окно, чтобы завершить добавление робота WeChat во внутреннюю группу корпоративного WeChat.
 
-> Currently, group chats containing external contacts do not support adding robots.
+> В настоящее время групповые чаты с внешними контактами не поддерживают добавление роботов.
 
 ![](https://images.gitee.ru/uploads/images/2020/0327/092629_5890bc35_551147.png )
 
@@ -22,33 +22,33 @@ In the enterprise WeChat group chat, select 'Add Group Robot'->'Create a new rob
 
 ![](https://images.gitee.ru/uploads/images/2020/0327/093031_727106a2_551147.png )
 
-Set up robot WebHook
+Настройка вебхука робота
 
-During the above-mentioned adding process, you can obtain a WebHook request URL in the form of 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'. Add this URL to Gitee to complete the WebHook setup.
+При добавлении вебхука на предыдущем шаге вы получите URL-адрес запроса вебхука, например 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'. Добавьте этот URL-адрес в Gitee, чтобы завершить настройку вебхука.
 
-On the Gitee repository page, go to "Manage" -> "WebHooks Settings" -> "Add" to add a new WebHook.
+На странице репозитория в Gitee перейдите в "Управление" -> "Настройки вебхуков" -> "Добавить", чтобы добавить новый вебхук.
 
-Fill in the webhook address obtained from the previous section into the URL, select the specific trigger event, activate and add to complete the setup of the webhook.
+Заполните полученный URL-адрес вебхука в поле URL, выберите конкретное событие-триггер, активируйте и добавьте, чтобы завершить настройку вебхука.
 
 ![](webhook-for-wecom-robot.assets/image.png)
 
-## IP Whitelist
+## Белый список IP-адресов
 
-By setting the request IP address (range), you can limit the IP whitelist of the triggering robot. Since the IP range of Gitee service requests is not fixed, it is not recommended to set the IP address (range) whitelist to avoid the robot from being triggered incorrectly.
+Установка диапазона IP-адресов позволяет ограничить белый список IP-адресов, с которых могут быть выполнены запросы на активацию бота. Поскольку диапазон IP-адресов запросов услуг Gitee не фиксирован, не рекомендуется устанавливать белый список IP-адресов (диапазон), чтобы избежать проблем с нормальной активацией бота.
 
 ![](https://images.gitee.ru/uploads/images/2020/0327/093557_a03e2928_551147.png )
 
-## Trigger WebHooks
+## Триггеры вебхуков
 
-WebHook requests to WeChat Work are triggered by setting up a robot in the following scenarios.
+Следующие сценарии вызовут запросы вебхука к WeChat Work.
 
-- Push: Repository pushes code, pushes branches, deletes branches
-- Tag push: Create tag, delete tag
-- Issue: Create, close, reopen, delete tasks, or modify task assignees
-- Pull request: Create pull request, update pull request, merge pull request
-- Comment: Comment on repositories, issues, pull requests, commits
+- Push: Репозиторий отправляет код, создает ветки, удаляет ветки
+- Tag Push: Создание тега, удаление тега
+- Issue: Создание, закрытие, повторное открытие, удаление задач или изменение назначенных исполнителей задачи
+- Pull Request: Создание запроса на слияние, обновление запроса на слияние, объединение запроса на слияние
+- Comment: Комментарии к репозиториям, задачам, запросам на слияние, коммитам
 
-## Related Readings
+## Связанные материалы
 
-- [Gitee WebHook supports DingTalk group chat robot](/help/articles/4135)
-- [Gitee WebHook supports Feishu group chat bot](/help/articles/4297)
+- [Поддержка Gitee вебхуков для робота группового чата DingTalk](/help/articles/4135)
+- [Поддержка Gitee вебхуков для группового чата Feishu](/help/articles/4297)

@@ -1,43 +1,43 @@
 ---
-title: Using a Repository Template
+title: Использование шаблона репозитория
 origin-url: https://gitee.ru/help/articles/4348
 ---
 
-Function Introduction:
+Введение функции:
 
-Template Repository: Allows enterprise members to set existing repositories as templates so that other members can generate new repositories with the same code based on the template repository.
-You can quickly create a new repository through the template repository page, or select the corresponding template repository when creating a new repository.
+Репозиторий шаблонов: Позволяет участникам предприятия устанавливать существующие репозитории в качестве шаблонов, чтобы другие участники могли создавать новые репозитории с тем же кодом на основе шаблона репозитория.
+Вы можете быстро создать новый репозиторий на странице репозитория шаблонов или выбрать соответствующий репозиторий шаблонов при создании нового репозитория.
 
-Operation Instructions:
+Инструкции по работе:
 
-1. Permission description: Log in as a Repository Administrator or Enterprise Administrator and set a repository as a repository template
+1. Описание разрешения: Войти в систему в качестве администратора репозитория или администратора предприятия и установить репозиторий в качестве шаблона репозитория.
 
-2. Steps to Create Template Repository:
+2. Шаги по созданию шаблона репозитория:
 
-(1) Log in to the Gitee account and enter the enterprise workspace. Select 'Code' and click on 'New Repository'. Fill in the complete repository information and click on 'Create' to proceed.
+(1) Войдите в учетную запись Gitee и войдите в рабочую область предприятия. Выберите "Код" и нажмите "Новый репозиторий". Заполните полную информацию о репозитории и нажмите "Создать", чтобы продолжить.
 
-![Image Description](image658.png)
+![Описание изображения](image658.png)
 
-(2) After the repository is created, click Repository -> Manage -> Feature settings -> Check the template repository to select it, so that the repository becomes a 'template repository'.
+(2) После создания репозитория нажмите Репозиторий -> Управление -> Настройки функций -> Проверить репозиторий шаблонов, чтобы выбрать его, чтобы репозиторий стал 'репозиторий шаблонов'.
 
-![Image Description](image659.png)
+![Описание изображения](image659.png)
 
-(3) When creating a new repository again, you can use the template repository for quick use. Click on New Repository -> Use Template Repository and select the desired template repository -> Create successfully.
+(3) При повторном создании нового репозитория вы можете использовать шаблонный репозиторий для быстрого использования. Нажмите на Новый репозиторий -> Использовать репозиторий шаблонов и выберите нужный шаблонный репозиторий -> Создать успешно.
 
-![Image Description](image660.png)
+![Описание изображения](image660.png)
 
- **Note: If you want to set an existing repository as a template repository, simply go to the repository settings, as shown below:**
+ **Примечание: Если вы хотите установить существующий репозиторий в качестве репозитория шаблонов, просто перейдите к настройкам репозитория, как показано ниже:**.
 
-![Image Description](image611.png)
+![Описание изображения](image611.png)
 
-3. How to view existing template repositories?
+3. Как просмотреть существующие репозитории шаблонов?
 
-   Click on Code -> Code Repository -> Template Repository to view.
+   Нажмите на Код -> Репозиторий кода -> Репозиторий шаблонов для просмотра.
 
-![Image Description](image612.png)
+![Описание изображения](image612.png)
 
-4. How to Cancel Template Repository?
+4. Как отменить репозиторий шаблонов?
 
-Click on Code -> Code Repository -> Template Repository -> Right-click 'Cancel Template Repository'
+Нажмите на Код -> Репозиторий кода -> Репозиторий шаблонов -> Нажмите правой кнопкой мыши 'Отменить репозиторий шаблонов'
 
-![Image Description](image613.png)
+![Описание изображения](image613.png)

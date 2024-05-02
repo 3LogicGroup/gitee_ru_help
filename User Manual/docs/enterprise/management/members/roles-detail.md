@@ -1,234 +1,231 @@
 ---
-title: Role permission description
+title: Описание разрешений роли
 origin-url: https://gitee.ru/help/articles/4288
 ---
 
-## Feature module permissions
+## Разрешения модуля функций
 
-The functional module permissions are divided into two categories: [Global Data] and [Related to Me]
+Разрешения функциональных модулей разделены на две категории: [Глобальные данные] и [Связанные со мной].
 
-- 'Global Data' is the relevant permission that grants members roles access to all resources within an enterprise. When selected, it will include permissions related to 'With Me' (excluding the 'View' permission), and when unselected, it will not disable the permissions related to 'With Me'.
-- "Related to me" is the current existing permission control for member roles. For example, after an outsourcing person becomes a repository member/project member, the scope of their operations (pushing/pulling code, creating resources, deleting resources, etc.) can be limited.
-Enterprise Edition 'Public Repositories' and 'Community Edition Repositories' are not controlled by 'Member Role Permissions'.
+- "Глобальные данные" - это разрешение, предоставляющее участникам ролей доступ ко всем ресурсам в компании. При выборе данного разрешения будут включены разрешения, связанные со мной (за исключением разрешения "Просмотр"), и при снятии отметки разрешения не будет отключать разрешения, связанные со мной.
+- "Связанные со мной" - это текущее существующее управление разрешениями для ролей участников. Например, после того как внештатное лицо становится участником репозитория/проекта, область их операций (загрузка/выгрузка кода, создание ресурсов, удаление ресурсов и т. д.) может быть ограничена.
 
-The priorities of "Lock enterprise members", "Enterprise whitelist", and "Set read-only files" are still higher than "Member role permissions".
+"Публичные репозитории" и "Репозитории версии коммьюнити" в Корпоративной версии "Разрешениями ролей участников" не контролируются.
+Приоритеты "Блокировки участников компании", "Белый список компании" и "Установки только для чтения файлов" по-прежнему выше, чем "Разрешения ролей участников".
 
-[Global Data] has a higher priority than [Related to Me] (except for [View] permission, [View] is the most basic permission, and if [View] permission is closed in [Related to Me], the entire feature page will be hidden).
+[Глобальные данные] имеют более высокий приоритет, чем [Связанные со мной] (за исключением разрешения [Просмотр], [Просмотр] является наиболее базовым разрешением, и если разрешение [Просмотр] закрыто в [Связанные со мной], вся страница функций будет скрыта).
 
-### Weekly Report
+### Еженедельный отчет
 
-**Related to me:**
+**Связанные со мной:**
 
-| Option | Description |
+| Опция | Описание |
 | ------------ | ------------------------------------------------------------ |
-| View | Allow viewing the "My Weekly Report" module on the "Workbench" page in the company view. |
-| Create | Allows creating weekly reports on the 'Workspace' page under the Enterprise view.<br/>Allows creating weekly reports on the 'Members' page under the Project view.
-| Edit Historical Weekly Report | Allows editing all weekly report records in the "My Weekly Report" module on the "Workbench" page under the enterprise view. |
+| Просмотр | Позволяет просматривать модуль "Мой еженедельный отчет" на странице "Рабочий стол" в представлении компании. |
+| Создать | Позволяет создавать еженедельные отчеты на странице "Рабочее пространство" в представлении компании.<br/>Позволяет создавать еженедельные отчеты на странице "Участники" в представлении проекта.
+| Редактирование исторических еженедельных отчетов | Позволяет редактировать все записи еженедельного отчета в модуле «Мой еженедельный отчет» на странице «Инструментальные средства» в представлении компании. |
 
-**Global data:**
+**Глобальные данные:**
 
-| Option | Description |
+| Опция | Описание |
 | ------------ | ------------------------------------------------------------ |
-| View | Allow viewing the 'My Weekly Report' and 'Member Weekly Report' modules on the 'Dashboard' page of the Enterprise View. |
+| Просмотр | Разрешить просмотр модулей "Мой еженедельный отчет" и "Еженедельный отчет участника" на странице "Панель инструментов" в представлении компании.|
 
-### Task
+### Задача
 
-**Related to me:**
+**Связанные со мной:**
 
-Options   Description
+| Опция | Описание |
 | -------- | ------------------------------------------------------------ |
-| View     | Allow viewing:<br/>1. Enterprise view: All tasks without associated projects or repositories.<br/>2.
-| New | Allow creating tasks within the following scope: <br/>1. Projects participated in or created by the enterprise you are in. <br/>2. Repositories with [Reporter] or higher permissions you participated in. <br/>3. Repositories under the enterprise organization you manage or own.
-| Modify Properties | Allow editing the attributes of tasks within the following scope (attributes are all fields in the task except for title and description):<br/>1. All tasks created, assigned, or collaborated by me in my enterprise.<br/>2. Tasks in projects that I create or participate in.<br/>3. Tasks in repositories that I participate in or manage.<br/>4. Tasks in repositories of enterprise organizations that I manage or own. |
-| Modification Content | Allow editing the title and description of the tasks within the following scopes:<br/>1. All tasks created, assigned, or collaborated by me in the enterprise I belong to.<br/>2. Tasks created or participated by me in projects.<br/>3. Tasks participated or managed by me in repositories.<br/>4. Tasks in repositories managed or owned by me in the enterprise organization. |
-| Delete | Allow deletion:<br/>1. I can delete tasks that I created.<br/>2. Tasks in repositories that I manage or own.<br/>3. Tasks in repositories of organizations that I manage or own.
+| Просмотр | Разрешить просмотр:<br/>1. Представление компании: все задачи без связанных проектов или репозиториев.<br/>2.
+| Новый | Разрешить создание задач в следующем объеме: <br/>1. Проекты, в которых участвовало или созданное компанией, в которой вы находитесь. <br/>2. Репозитории с разрешениями [Репортер] или выше, в которых вы участвовали. <br/>3. Репозитории корпоративной организации, которой вы управляете или владеете.
+| Изменить свойства | Разрешить редактирование атрибутов задач в следующей области (атрибутами являются все поля задачи, кроме названия и описания):<br/>1. Все задачи, созданные, назначенные или совместно созданные мной в моей компании.<br/>2. Задачи в проектах, которые я создаю или в которых участвую.<br/>3. Задачи в репозиториях, в которых я участвую или управляю.<br/>4. Задачи в репозиториях корпоративных организаций, которыми я управляю или владею. |
+| Содержание изменений | Разрешить редактирование названия и описания задач в следующих пределах:<br/>1. Все задачи, созданные, назначенные или совместно выполненные мной в компании, к которому я принадлежу.<br/>2. Задачи, созданные мной или участвовавшие в проектах.<br/>3. Задачи, в которых я участвовал или управлял мной, в репозиториях.<br/>4. Задачи в репозиториях, управляемых или принадлежащих мне в корпоративной организации. |
+| Удалить | Разрешить удаление:<br/>1. Я могу удалять созданные мной задачи.<br/>2. Задачи в репозиториях, которыми я управляю или владею.<br/>3. Задачи в репозиториях организаций, которыми я управляю или владею.
+**Глобальные данные:**
 
-**Global data:**
-
-Options   Description
+| Опция | Описание |
 | -------- | ------------------------------------------------------------ |
-| View | Allow access to all pages related to [Tasks] in the enterprise view and project view. |
-| New      | Allow creating tasks anywhere within the enterprise.                               |
-| Modify attributes | Allow editing attributes of all tasks within the enterprise (attributes are all fields in a task except for the title and description). |
+| Просмотр | Разрешить доступ ко всем страницам, связанным с [Задачи], в представлении компании и представлении проекта. |
+| Новый | Разрешить создавать задачи в любой точке компании. |
+| Изменить свойства | Разрешить редактирование атрибутов всех задач внутри компании (атрибутами являются все поля задачи, кроме названия и описания). |
+| Изменение | Разрешить редактирование названий и содержания всех задач внутри компании. |
+| Удалить | Разрешить удаление всех задач внутри компании. |
 
-| Modification | Allow editing the titles and content of all tasks within the enterprise. |
-| Delete | Allow deleting all tasks within the enterprise. |
+### Проект
 
-### Project
+**Связанные со мной:**
 
-**Related to me:**
-
-| Option | Description |
+| Опция | Описание |
 | ---- | ------------------------------------------------------------ |
-| View | Allow viewing projects that you are involved in or created. |
-| New | Allow creating new projects for the enterprise. |
-| Allow me to delete created projects | Allow deleting projects created by oneself. |
-Manage projects I created (member management, modify description). Allow editing of settings content for projects created by myself, add, delete, modify, and search for members in projects created by myself.
+| Просмотр | Разрешить просмотр проектов, в которых вы участвуете или создали. |
+| Новый | Разрешить создание новых проектов для компании. |
+| Разрешить удалять созданные проекты | Разрешить удаление проектов, созданных самостоятельно. |
+Управлять созданными мной проектами (управление участниками, изменение описания). Разрешить редактирование содержимого настроек для проектов, созданных мной, добавлять, удалять, изменять и искать участников в проектах, созданных мной.
 
-**Global data:**
+**Глобальные данные:**
 
-| Option | Description                                 |
+| Опция | Описание                                 |
 | ---- | -------------------------------------------- |
-| View | Allow viewing all projects within the enterprise. |
-| New | Allows creating a project for the enterprise. |
-| Delete | Allows the deletion of any project within the enterprise. |
-| Management | Allow editing any project within the enterprise, add, delete, modify, and query its project members. |
+| Просмотр | Разрешить просмотр всех проектов внутри компании. |
+| Новый | Позволяет создать проект для компании. |
+| Удалить | Позволяет удалить любой проект внутри компании. |
+| Управление | Разрешите редактировать любой проект внутри компании, добавлять, удалять, изменять и запрашивать участников проекта. |
 
-### Warehouse
+### Хранилище
 
-**Related to me:**
+**Связанные со мной:**
 
-| Option                    | Description                                                  |
+| Опция                    | Описание                                                  |
 | -------------------------- | ------------------------------------------------------------ |
-| View | Allows me to view the repositories I participate in or manage, as well as their PRs that I review and test. <br/> `【View】 permission represents the ability to view repository and PR information, but it does not allow viewing the actual code content. If the 【Pull Code】 permission is disabled, the repository code cannot be seen within the organization, and the community entry of the enterprise repository will redirect to the repository's issue page`. |
-| New                       | Allow creating repositories for enterprises.                                         |
-| Allow deleting repositories I created                       | Allow deleting repositories created within the enterprise                                          |
-| Management (members, repository basic settings) | Allow editing of the repository settings created by me, managed by me, and responsible for me under the organization in the enterprise. Allow adding, deleting, modifying, and querying repository members. <br/> Allow editing/closing of the repositories created by me, managed by me, and responsible for me under the organization in the enterprise.
-Allow performing related operations based on the role permissions I have in the participating repository.
-| Push Code | Allow me to push code, upload files, and create new files in repositories where my role is Developer or higher. |
-| Merge Pull Request           | Allows merging of non-protected branches in repositories with roles of 'Developer' and above.
+| Просмотр | Позволяет просматривать репозитории, в которых я участвую или которыми управляю, а также их запросы на слияние, которые я просматриваю и тестирую. <br/> Разрешение `【Просмотр】 представляет собой возможность просмотра репозитория и информации запроса на слияние, но не позволяет просматривать фактическое содержимое кода. Если разрешение 【Извлечение кода】 отключено, код репозитория не будет виден внутри организации, а запись сообщества корпоративного репозитория будет перенаправлена ​​на страницу проблем репозитория`. |
+| Новый | Разрешить создание репозиториев для компаний. |
+| Разрешить удаление созданных мной репозиториев | Разрешить удаление репозиториев, созданных внутри компании |
+| Управление (участники, базовые настройки репозитория) | Разрешить редактирование настроек репозитория, созданного мной, управляемого мной и ответственного за меня в рамках организации в компании. Разрешить добавление, удаление, изменение и запрос участников репозитория. <br/>Разрешить редактирование/закрытие репозиториев, созданных мной, управляемых мной и отвественных в компании.
+Разрешить выполнение связанных операций на основе разрешений роли, которые у меня есть в репозитории.
+| Отправиить код | Разрешите мне отправлять код, загружать файлы и создавать новые файлы в репозиториях, где моя роль — разработчик или выше. |
+| Запрос на объединение | Позволяет объединять незащищенные ветки в репозиториях с ролью «Разработчик» и выше.
 
-**Global data:**
+**Глобальные данные:**
 
-| Option                    | Description                                                  |
+| Опция                    | Описание                                                  |
 | -------------------------- | ------------------------------------------------------------ |
-| View | Allows viewing all repositories and PRs within the enterprise. |
-| New                       | Allow creating repositories for enterprises.                                         |
-| Delete | Allows deleting any repository within the enterprise, but without the "Manage" permission for the repository, cannot access the "Repository Settings" page for deletion operation.|
-| Manage (members, repository basic settings) | Allow editing all repository settings within the organization, add, delete, modify, and view repository members.<br/>Allow editing/closing all PRs within the organization. |
-| Pull Code | Allows browsing/pulling code from all repositories within the enterprise (including forks).<br/>Allows creating PR within the enterprise. |
-| Push Code | Allows pushing code, uploading files, and creating files to all repositories within the organization. This will ignore repository role permissions and protected branch rules.
-| Enterprise Open Source Management | Allows editing the open source attributes of the enterprise's global repositories, but without repository management permission, you cannot access the management page to make modifications.
-| Merge Pull Request | Allows merging PRs from any repository within the enterprise. In this case, repository role permissions and protected branch rules are ignored.
-| Access Internal Open Source Repositories | Allow access to internal open source repositories within the enterprise. |
+| Просмотр | Позволяет просматривать все репозитории и запросы на слияние внутри компании. |
+| Новый | Разрешить создание репозиториев для компаний. |
+| Удалить | Позволяет удалить любой репозиторий в компании, но без разрешения «Управление» для репозитория невозможно получить доступ к странице «Настройки репозитория» для операции удаления.|
+| Управление (участники, основные настройки репозитория) | Разрешить редактирование всех настроек репозитория внутри организации, добавлять, удалять, изменять и просматривать участников репозитория.<br/>Разрешить редактирование/закрытие всех запросов на слияние внутри организации. |
+| Получить код | Позволяет просматривать/извлекать код из всех репозиториев внутри компании (включая форки).<br/>Позволяет создавать PR внутри компании. |
+| Отправиить код | Позволяет отправлять код, загружать файлы и создавать файлы во все репозитории внутри организации. При этом будут игнорироваться разрешения роли репозитория и правила защищенной ветки.
+| Управление предприятием с открытым исходным кодом | Позволяет редактировать атрибуты открытого исходного кода глобальных репозиториев компании, но без разрешения на управление репозиторием вы не сможете получить доступ к странице управления для внесения изменений.
+| Запрос на слияние | Позволяет объединять запросы на слияние из любого хранилища внутри компании. В этом случае разрешения роли репозитория и правила защищенной ветки игнорируются.
+| Доступ к внутренним репозиториям с открытым исходным кодом | Разрешите доступ к внутренним репозиториям с открытым исходным кодом внутри компании. |
 
-### Documentation
+### Документация
 
-**Related to me:**
+**Связанные со мной:**
 
-Options   Description
+| Опция                   | Описание                                                 |
 | -------- | ------------------------------------------------------------ |
-| View | Allow viewing documents that I have created or have 'Read Only' or 'Read and Write' permissions set. |
-| New      | Allow the enterprise to create new documents.                       |
-| Edit    | Allows editing of documents in the enterprise with "Read and Write" document permissions. |
-| Delete | Allow deleting documents with "read-write" document permissions within the company. |
-| Permission Settings | Allows modifying the "Read/Write" permission of documents in the enterprise that are set as "Read/Write". |
+| Просмотр | Разрешить просмотр документов, которые я создал или у которых установлены разрешения «Только чтение» или «Чтение и запись». |
+| Новый | Разрешить компании создавать новые документы. |
+| Редактировать | Позволяет редактировать документы в компании с правами «Чтение и запись». |
+| Удалить | Разрешить удаление документов с разрешениями на чтение и запись внутри компании. |
+| Настройки разрешений | Позволяет изменить разрешение «Чтение/Запись» для документов в компании, для которых установлено значение «Чтение/Запись». |
 
-**Global data:**
+**Глобальные данные:**
 
-| Option   | Description                           |
+| Опция                  | Описание                           |
 | -------- | -------------------------------------- |
-| View     | Allow viewing all documents within the enterprise.               |
-| New | Allow enterprise to create new documents. |
-| Edit     | Allow editing all documents within the enterprise.               |
-| Delete | Allow deleting all documents within the enterprise. |
-Set Permissions
+| Просмотр | Разрешить просмотр всех документов внутри компании |
+| Новый | Разрешить компании создавать новые документы |
+| Редактировать | Разрешить редактирование всех документов внутри компании |
+| Удалить | Разрешить удаление всех документов внутри компании |
+Установить разрешения
 
-### Members
+### Участники
 
-Selecting this option allows viewing the [Members] page within the Enterprise View. It also allows configuring the [Enterprise Member Management] option in [Enterprise Management Permissions].
+Выбор этой опции позволяет просматривать страницу [Участники] в представлении компании. Это также позволяет настроить опцию [Управление участниками компанией] в разделе [Разрешения на управление компанией].
 
-## Enterprise management permissions
+## Разрешения на управление компанией
 
-Enabling it means allowing access to the [Management] page in the enterprise view and viewing the [Enterprise Statistics Overview].
+Включение означает разрешение доступа к странице [Управление] в представлении компании и просмотр [Обзор статистики компании].
 
-### Enterprise Member Management
+### Управление корпоративными участниками
 
-| Option                  | Description                                                |
+| Опция                  | Описание                                                |
 | ------------------------ | ------------------------------------------------------------ |
-| Add Enterprise Members         | Allow inviting external personnel to join the enterprise. |
-| Remove Enterprise Member | Allow removing any member within the organization (except super administrators). |
-| Change Role | Allow changing the role of enterprise members. |
-| Manage (edit, lock members, etc.) | Allow editing of enterprise member profiles, locking of enterprise members, sending reset password emails to members.
-|
-| Add Team | Allows creating teams within the enterprise. |
-| Management Team               | Allow editing team information within the company and deleting teams. |
+| Добавить корпоративных участников | Разрешить приглашение внешнего персонала на работу в компанию |
+| Удалить участника компании | Разрешить удаление любого участника в организации (кроме суперадминистраторов) |
+| Изменить роль | Разрешить изменение роли участников компании |
+| Управление (редактирование, блокировка участников и т. д.) | Разрешить редактирование профилей участников компании, блокировку участников компании, отправку участникам электронных писем о сбросе пароля.
+| Добавить команду | Позволяет создавать команды внутри компании |
+| Управляющая команда | Разрешить редактирование информации о команде внутри компании и удаление команд |
 
-### Operation Log
+### Журнал операций
 
-Check this option to allow access to the [Operation Log] page under the [Management] menu in the enterprise view
+Установите этот флажок, чтобы разрешить доступ к странице [Журнал операций] в меню [Управление] в представлении компании.
 
-### Alarm Records
+### Записи аварийных сообщений
 
-Checking this option means allowing access to the "Alarm Records" page under the "Management" menu in the enterprise view.
+Выбор этой опции означает разрешение доступа к странице «Записи аварийных сообщений» в меню «Управление» в представлении компании.
 
 ### Git LFS
 
-Checking this option means allowing access to the 'Git LFS' page under the 'Management' menu in the enterprise view.
+Выбор этой опции означает разрешение доступа к странице «Git LFS» в меню «Управление» в представлении компании.
 
-### Order Invoice Management
+### Управление счетами заказов
 
-| Option | Description |
+| Опция | Описание |
 | ---- | ------------------------------------------------------------ |
-| View | Allow access to the [Order Invoice Management] page under the [Management] menu in the enterprise view. |
-| Manage | Allow interaction with the "Order Invoice Management" page under the "Manage" menu in the enterprise view. |
+| Просмотр | Разрешите доступ к странице [Управление счетами заказов] в меню [Управление] в представлении компании |
+| Управление | Позволяет взаимодействовать со страницей «Управление счетами заказов» в меню «Управление» в представлении компании |
 
-### WebHooks
+### Вебхуки
 
-| Option | Description |
+| Опция | Описание |
 | ---- | -------------------------------------------------------- |
-| View | Allow access to the [WebHooks] page under the [Management] menu in the enterprise view. |
-| Manage | Allows interaction with the "WebHooks" page under the "Manage" menu in the enterprise view. |
+| Просмотр | Разрешите доступ к странице [Вебхуки] в меню [Управление] в представлении компании |
+| Управление | Позволяет взаимодействовать со страницей «Веб-хуки» в меню «Управление» в представлении компании |
 
-### Deploy Public Key
+### Развертывание открытого ключа
 
-| Option | Description |
+| Опция | Описание |
 | ---- | -------------------------------------------------------- |
-| View | Allow access to the "Deploy Keys" page in the "Manage" menu within the enterprise view. |
-| Management | Allows interaction with the 'Deploy Public Key' page under the 'Management' menu in the enterprise view. |
+| Просмотр | Разрешите доступ к странице [Развертывание ключей] в меню [Управление] в представлении компании |
+| Управление | Позволяет взаимодействовать со страницей «Развертывание открытого ключа» в меню «Управление» в представлении компании |
 
-### Task Types and Status Management
+### Типы задач и управление статусами
 
-| Option | Description |
+| Опция | Описание |
 | ---- | ------------------------------------------------------------ |
-| View | Allow access to the "Task Type and Status Management" page under the "Manage" menu in the enterprise view. |
-| Manage | Allow interaction with the "Task Type and Status Management" page under the "Management" menu in the enterprise view. |
+| Просмотр | Разрешите доступ к странице [Управление типами и статусами задач] в меню [Управление] в представлении компании |
+| Управление | Позволяет взаимодействовать со страницей «Управление типами и статусами задач» в меню «Управление» в представлении компании |
 
-### Tag Management
+### Управление тегами
 
-| Option | Description |
+| Опция | Описание |
 | ---- | -------------------------------------------------------- |
-| View | Allow access to the [Management] menu in the enterprise view, [Tag Management] page. |
-| Management | Allows interaction with the "Tag Management" page under the "Management" menu in the enterprise view. |
+| Просмотр | Разрешите доступ к меню [Управление] в представлении компании, страница [Управление тегами] |
+| Управление | Позволяет взаимодействовать со страницей «Управление тегами» в меню «Управление» в представлении компании |
 
-Enterprise Information Settings
+### Настройки корпоративной информации
 
-| Option | Description |
+| Опция | Описание |
 | ---- | ------------------------------------------------------------ |
-| View | Allow access to the "Enterprise Information Settings" page under the "Management" menu in the enterprise view. |
-| Manage | Allow interaction with the "Enterprise Information Settings" page under the "Manage" menu in the enterprise view. |
+| Просмотр | Разрешите доступ к странице [Настройки корпоративной информации] в меню [Управление] в представлении компании |
+| Управление | Позволяет взаимодействовать со страницей «Настройки корпоративной информации» в меню «Управление» в представлении компании |
 
-### Member Role Permission Settings
+### Настройки разрешений роли участника
 
-| Option | Description |
+| Опция | Описание |
 | ---- | ------------------------------------------------------------ |
-| View | Allow access to the "Member Role and Permission Settings" page under the "Management" menu in the enterprise view. |
-| Manage | Allows interaction with the "Member Role and Permission Settings" page under the "Manage" menu in the enterprise view. |
+| Просмотр | Разрешите доступ к странице [Роль участника и настройки разрешений] в меню [Управление] в представлении компании |
+| Управление | Позволяет взаимодействовать со страницей «Роль участника и настройки разрешений» в меню «Управление» в представлении компании |
 
-Notification and Alert Settings
+### Настройки уведомлений и оповещений
 
-| Option | Description |
+| Опция | Описание |
 | ---- | ------------------------------------------------------------ |
-| View | Allow access to the "Notification and Alert Settings" page under the "Management" menu in the enterprise view. |
-| Manage | Allow interaction with the "Notification and Alert Settings" page under the "Manage" menu in the enterprise view. |
+| Просмотр | Разрешите доступ к странице [Настройки уведомлений и оповещений] в меню [Управление] в представлении компании |
+| Управление | Позволяет взаимодействовать со страницей «Настройки уведомлений и оповещений» в меню «Управление» в корпоративном представлении |
 
-### Security settings
+### Настройки безопасности
 
-| Option | Description |
+| Опция | Описание |
 | ---- | -------------------------------------------------------- |
-| View | Allow access to the "Security Settings" page under the "Management" menu in the enterprise view. |
-| Management | Allows interaction with the "Security Settings" page under the "Management" menu in the enterprise view. |
+| Просмотр | Разрешите доступ к странице [Настройки безопасности] в меню [Управление] в представлении компании |
+| Управление | Позволяет взаимодействовать со страницей «Настройки безопасности» в меню «Управление» в представлении компании |
 
-### Company announcement
+### Объявление компании
 
-| Option | Description |
+| Опция | Описание |
 | ---- | ------------------------------------------------------------ |
-| View | Allow access to the [Enterprise Announcement] page under the [Management] menu in the enterprise view. |
-| Publish | Allows editing and publishing new announcements within the "Enterprise Announcement" page under the "Manage" menu in the enterprise view. |
+| Просмотр | Разрешите доступ к странице [Объявление компании] в меню [Управление] в представлении компании |
+| Опубликовать | Позволяет редактировать и публиковать новые объявления на странице «Корпоративные объявления» в меню «Управление» в представлении компании |
 
-### Send private message
+### Отправить личное сообщение
 
-| Option | Description |
+| Опция | Описание |
 | ---- | ------------------------------------------------------------ |
-| View | Allow access to the [Mass Private Message] page under the [Management] menu in the enterprise view. |
-| Publish | Allows editing and publishing new broadcast private messages in the "Manage" menu under the enterprise view. |
+| Просмотр | Разрешите доступ к странице [Массовое личное сообщение] в меню [Управление] в представлении компании. |
+| Опубликовать | Позволяет редактировать и публиковать новые широковещательные личные сообщения в меню «Управление» в представлении компании. |

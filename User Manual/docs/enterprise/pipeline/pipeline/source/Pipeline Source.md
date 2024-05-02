@@ -1,31 +1,31 @@
 ---
-title: Pipeline Source
-description: Pipeline source
+title: Источник конвейера
+description: Источник конвейера
 slug: /enterprise/pipeline/source
 keywords:
  - Gitee
- - Pipeline Source
+ - Источник конвейера
 ---
 
-Pipeline source, as the input source of Gitee pipeline, can obtain raw materials from code hosting services or other third-party services and put these raw materials into the workspace.
+Источник конвейера, являющийся входным источником конвейера Gitee, может получать исходные материалы из сервисов хостинга кода или других сторонних сервисов и помещать их в рабочее пространство.
 
-Pipelines process and manipulate the input materials in the workspace, which could be tasks like compiling, packaging, executing automation, versioning, etc.
+Конвейеры обрабатывают и манипулируют входными материалами в рабочем пространстве, что может представлять собой такие задачи, как компиляция, упаковка, автоматизация выполнения, версионирование и т. д.
 
-Currently supported pipeline source types:
+В настоящее время поддерживаются типы исходных материалов конвейеров:
 
-- Source Code
+- Источник код
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Configure Code Source](/enterprise/pipeline/source/code)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Настроить источник кода](/enterprise/pipeline/source/code)
 
-- Artifact Source
+- Источник артефактов
 
-Configure artifact repository source
+Настройка источника репозитория артефактов
 
-- Pipeline Source
+- Источник конвейера
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Configure pipeline source](/enterprise/pipeline/source/pipeline)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Настроить источник конвейера](/enterprise/pipeline/source/pipeline)
   
-Subsequent releases will also introduce other types of pipeline sources, so stay tuned:
+В последующих выпусках будут представлены и другие типы источников конвейеров, так что следите за новостями:
 
-- Artifact Repository
-- Object Storage Repository
+- Репозиторий артефактов
+- Репозиторий объектных хранилищ

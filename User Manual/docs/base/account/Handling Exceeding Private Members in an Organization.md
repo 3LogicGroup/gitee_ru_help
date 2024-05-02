@@ -1,71 +1,71 @@
 ---
-title: How to handle exceeding private members in the organization
+title: Способ решения проблемы превышения численности участников частных репозиториев в организации
 slug: /account/organization-member-quota-above
 origin-url: https://gitee.ru/help/articles/4233
 ---
 
-'Organization' is a tool provided by Gitee for open source project collaboration, such as managing private projects. The number of members participating in private repository collaboration must not exceed
+"Организация" - инструмент, предоставляемый Gitee для совместной работы над проектами с открытым исходным кодом, например, для управления частными проектами. Количество участников, задействованных в совместной работе с частным репозиторием, не должно превышать 5 человек.
 
-To avoid affecting your normal use, please delete the number of members in your organization's private repository to comply with the rules (<=5 people) before **December 31, 2018**. **If you fail to upgrade to Enterprise or reduce the number of members in private repositories, all private repositories will enter read-only mode.** Detailed operation instructions are as follows:
+Во избежание негативного влияния на ваше обычное использование приведите численность участников в частном репозитории вашей организации в соответствие с правилами (<=5 человек) до ** 31 декабря 2018 года**. **Если вам не удастся обновить продукт до версии Enterprise или уменьшить количество участников в частных репозиториях, все частные репозитории перейдут в режим "Только для чтения".** Подробные инструкции по эксплуатации приведены ниже:
 
-Note: Use an organization admin account for the following operations.
+Примечание: Для следующих операций используйте учетную запись администратора организации.
 
-## 1. Confirm that the private repository of the organization will not exceed 5 members
+## 1. Подтвердите, что число участников частного репозитория организации не будет превышать 5 человек
 
-Go to the organization homepage, click 'Settings' - 'Private Repository Members' to see which members are currently in the private repositories.
+Чтобы увидеть, какие участники в данный момент находятся в частных репозиториях, перейдите на домашнюю страницу организации, нажмите "Настройки" - "Участники частного репозитория".
 
-## 2. How to handle when the number of members in the organization's private repository exceeds 5?
+## 2. Что делать, если количество участников в частном репозитории организации превышает 5 человек?
 
-### 2.1 Purchase Gitee Enterprise Edition
+### 2.1 Приобрести Gitee Enterprise Edition
 
-**If you need to retain more than 5 private repository members, please use [Gitee Enterprise](https://gitee.ru/enterprises/?from=group-collaborators) and purchase the corresponding package to obtain the quota.**
+**Если вам необходимо сохранить более 5 участников частного репозитория, используйте [Gitee Enterprise](https://gitee.ru/enterprises/?from=group-collaborators) и приобретите соответствующий пакет для получения квоты.**
 
-_Note: If the current organization has exceeded the limit, you can directly upgrade to the enterprise edition, but because of the exceeding, it will still enter a locked state and must be paid to continue using it!_
+_ Примечание: Если текущая организация превысила лимит, вы можете напрямую перейти на корпоративную версию, но из-за превышения лимита она все равно будет заблокирована, а за продолжение ее использования вам будет необходимо заплатить!_
 
-#### 2.1.1. Hope that the original repository address will not change
+#### 2.1.1. Надеемся, что исходный адрес репозитория не изменится
 
-- **The current account does not have an enterprise account. Follow these steps:**
+- **В текущем аккаунте нет учетной записи предприятия Выполните следующие действия:**
 
-Step 1: Go to the organization homepage, select 'Settings' - 'Upgrade to Enterprise Edition'
+Шаг 1: Перейдите на домашнюю страницу организации, выберите "Настройки" - "Обновить до версии Enterprise".
 
-Step 2: Follow the prompts to fill in the enterprise information and complete the account upgrade.
+Шаг 2: Следуйте инструкциям по заполнению корпоративной информации и завершению обновления учетной записи.
 
-Step 3: Enter the enterprise workspace interface, select 'Members' and 'Repositories' from the left sidebar to view the organization members and repositories that have been transferred.
+Шаг 3: Для просмотра перенесенных участников организации и репозиториев войдите в интерфейс рабочего пространства версии Enterprise, выберите "Участники" и "Репозитории" на левой боковой панели.
 
-- If the current account has a free enterprise, follow these steps:
+- Если текущий аккаунт использует бесплатную версию Enterprise, выполните следующие шаги:
 
-Step 1: Go to the enterprise management console - "Enterprise Settings" - "Delete Enterprise".
+Шаг 1: Перейдите в консоль управления Enterprise - "Настройки Enterprise" - "Удалить Enterprise".
 
-Step 2: Go to the organization homepage and select 'Settings' - 'Upgrade to Enterprise Edition'
+Шаг 2: Перейдите на домашнюю страницу организации и выберите "Настройки" - "Обновить до Enterprise Edition"
 
-Step 3: Follow the prompts to fill in the enterprise information and complete the account upgrade.
+Шаг 3: Следуйте указаниям по заполнению информации о предрприятии и завершению обновления аккаунта.
 
-Step 4: Go to the enterprise workbench interface, select 'Members' and 'Repositories' in the left sidebar, and view the transferred organization members and repositories.
+Шаг 4: Перейдите в интерфейс рабочей среды Enterprise, выберите на левой боковой панели "Участники" и "Репозитории" и просмотрите перенесенных участников организации и репозитории.
 
-- **If the current account has a paid enterprise and belongs to the same department/company as the organization, follow these steps:**
+- **Если текущая учетная запись использует платную версию Enterprise Edition и относится к тому же отделу/компании, что и организация, выполните следу:**
 
-Step 1: Go to the Enterprise Dashboard, select "Members" - "Add Team" - "Transfer to Team".
+Шаг 1: Перейдите на панель инструментов Enterprise, выберите "Участники" - "Добавить команду" - "Переместить в команду".
 
-Step 2: Click "Generate Transfer Code" - "Copy" in the pop-up window.
+Шаг 2: Во всплывающем окне нажмите "Сгенерировать код перевода" - "Скопировать".
 
-Step 3: Go to the organization homepage, select 'Settings' - 'Transfer to Enterprise', paste the transfer code copied in step 2 here, and click 'Next'.
+Шаг 3: Перейдите на домашнюю страницу организации, выберите "Настройки" - "Перевод на предприятие", вставьте сюда код перевода, скопированный на Шаге 2, затем нажмите "Далее".
 
-Step 4: Confirm enterprise information, here you need to check the check mark shown in the figure below, and then click "Confirm Transfer".
+Шаг 4: Подтвердите информацию о предприятии, здесь вам нужно установить флажок, показанный на рисунке ниже, а затем нажать "Подтвердить перенос".
 
-![Transfer Organization](https://images.gitee.ru/uploads/images/2018/1212/111527_f917f741_669935.png "1.png")
+![Перенос Организации](https://images.gitee.ru/uploads/images/2018/1212/111527_f917f741_669935.png "1.png")
 
-- **If the current account belongs to a paid enterprise and is different from the organization in a department/company, follow these steps:**
+- **Если текущий аккаунт принадлежит платной версии Enterprise и отличается от организации в отделе/компании, выполните эти шаги:**
 
-Step 1: Go to the organization homepage, select 'Settings' - 'Upgrade to Enterprise Edition'
+Шаг 1: Перейдите на домашнюю страницу организации, выберите "Настройки" - "Обновить до версии Enterprise Edition"
 
-Step 2: Follow the prompts to fill in the enterprise information and complete the account upgrade.
+Шаг 2: Следуйте указаниям по заполнению информации о предрприятии и завершению обновления аккаунта.
 
-#### 2.1.2, Select enterprise package and make payment
+#### 2.1.2, Выберите пакет Enterprise и произведите оплату
 
-For payment details, please see: [https://gitee.ru/help/articles/4160](https://gitee.ru/help/articles/4160)
+Подробности оплаты смотрите здесь: [https://gitee.ru/help/articles/4160](https://gitee.ru/help/articles/4160)
 
-### 2.2 Delete members from private repositories
+### 2.2 Удалить участников из частных репозиториев
 
-Go to the organization homepage, click on [Settings] - [Private Repository Members] - [Remove All] to remove the members from all private repositories of the organization, until the number of collaborators in private repositories is reduced to
+Перейдите на домашнюю страницу организации, нажмите [Настройки] - [Участники частного репозитория] - [Удалить всех], чтобы удалить участников из всех частных репозиториев организации, пока количество сотрудников в частных репозиториях не сократится до 5 человек.
 
-![Image Description](https://images.gitee.ru/uploads/images/2019/0103/193737_61ef3bd2_669935.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2019/0103/193737_61ef3bd2_669935.png )

@@ -1,14 +1,14 @@
 ---
-title: Wiki Knowledge Base Introduction
+title: Знакомство с базой знаний Wiki
 authors:
   - name: Cheese
-description: Introduction to Wiki
+description: Знакомство с Wiki
 ---
 
-> Gitee Wiki is a knowledge base that allows multiple people to store, share, and collaborate on content, helping teams achieve shared learning.
+> Gitee Wiki - база знаний, позволяющая многим людям хранить контент, обмениваться и совместно работать над ним, помогая командам осуществлять совместное обучение.
 
-Gitee Wiki caters to the convenient and efficient needs of team collaboration. It allows users to perform "add/delete/modify/search" operations on the wiki at any time. It supports Markdown format writing and provides functions such as version control, file comparison, hierarchical expansion, and quick search, assisting teams in knowledge accumulation and management.
+Gitee Wiki обеспечивает удобство и эффективность совместной работы в команде. Это позволяет пользователям выполнять операции "добавление / удаление / изменение / поиск" в вики в любое время. Платформа поддерживает запись в формате Markdown и предоставляет такие функции, как контроль версий, сравнение файлов, иерархическое расширение и быстрый поиск, помогая командам в накоплении знаний и управлении ими.
 
-In the repository main page, you can easily find the wiki module page for repository wiki management.
+На главной странице репозитория вы можете легко найти страницу модуля wiki для управления вики-сайтами репозитория.
 
-![Image Description](assets/image676.png)
+![Описание изображения](assets/image676.png)

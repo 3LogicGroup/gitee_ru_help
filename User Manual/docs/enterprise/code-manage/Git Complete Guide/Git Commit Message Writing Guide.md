@@ -1,80 +1,79 @@
 ---
-title: Git Commit Message Writing Guide
+title: Руководство по написанию сообщения о коммите Git
 origin-url: https://gitee.ru/help/articles/4231
 ---
 
-### **Introduction**
+### **Введение**
 
-In Git, every time you commit code, you need to write a Commit message, otherwise the commit will not be allowed. This operation will be done by
+Каждый раз, когда вы фиксируете изменения кода в Git , вам необходимо написать сообщение о коммите, в противном случае коммит не будет разрешен. Эта операция будет выполнена с помощью команды
 
 ```bash
 git commit -m "hello world"
 ```
 
-> The -m parameter in the above code is used to specify the commit message.
-If a line is not enough, you can only execute git commit, it will bring up a text editor for you to write multiple lines.
+> Параметр -m в приведенном выше коде используется для указания сообщения о коммите.
+Если строки недостаточно, вы можете выполнить только команду git commit, при этом откроется текстовый редактор, в котором вы сможете написать несколько строк.
 
 ```bash
 git commit
 ```
 
-### **Format**
+### **Формат**
 
-Commit message consists of three parts: Header, Body, and Footer. It can be represented by the following structure.
+Сообщение о коммите состоит из трех частей: шапки, основной части и подвала. Оно может быть представлено следующей структурой.
 
 ```bash
 <type>(<scope>): <subject>// Empty line<body>// Empty line<footer>
 ```
 
-The Header is required, while the Body and Footer can be omitted (ignored by default). Generally, when we specify the -m parameter in the git commit command, it is equivalent to specifying the Header by default.
-> Regardless of which part, no line should exceed 72 characters (or 100 characters). This is to avoid automatic line breaks affecting the aesthetics.
+Шапка обязательна, в то время как основной текст и подвал могут быть опущены (игнорируются по умолчанию). Как правило, когда мы указываем параметр -m в команде git commit, это эквивалентно указанию шапки по умолчанию.
+> Независимо части длина строки не должна превышать 72 символов (или 100 символов). Это делается для того, чтобы избежать автоматических разрывов строк, влияющих на эстетику.
 
-### **Header**
+### **Шапка**
 
-The header section only has one line, including three fields: type (required), scope (optional), and subject (required).
+В шапке есть только одна строка, включающая три поля: тип (обязательно), область применения (необязательно) и тема (обязательно).
 
-#### **type**
+#### **Тип**
 
-- feat: new feature
-- fix: Fixing a bug
-- docs: Documentation
-style: formatting (changes that do not affect code execution)
-- refactor: Refactoring (i.e., code changes that are neither adding new features nor modifying bugs)
-- test: Add test
-- chore: changes in build process or auxiliary tools
+- feat: новая функция
+- fix: Исправление бага
+- docs:
+Стиль документации: форматирование (изменения, не влияющие на исполнение кода)
+- refactor: Рефакторинг (т.е. изменения кода, которые не добавляют новых функций и не исправляют ошибки)
+- test: Добавить тест
+- chore: изменения в процессе сборки или вспомогательных инструментах
 
-If the type is feat or fix, this commit will definitely appear in the Change log
+Если тип - feat или fix, этот коммит обязательно появится в журнале изменений
 
-#### **scope**
+#### **Область применения**
 
-The scope is used to indicate the scope of the commit's impact, such as data layer, control layer, view layer, etc., depending on the repository.
+Область применения используется для указания области воздействия коммита, такой как уровень данных, уровень управления, уровень представления и т.д., в зависимости от репозитория.
 
-#### **subject**
+#### **Тема**
 
-subject is a brief description of the commit's purpose, not exceeding 50 characters.
+тема - краткое описание цели коммита, не превышающее 50 символов.
 
-- Start with a verb, use the first person present tense, such as change, instead of changed or changes.
-- First letter lowercase
-- Do not end with a period (.)
+- Начинайте с глагола, используйте первое лицо настоящего времени, например "изменяю", вместо "изменил" или "изменения" - Первая буква в нижнем регистретре
+- Не заканчивайте точкой (.)
 
-### **Body**
+### **Тело**
 
-The body section is a detailed description of this commit, which can be divided into multiple lines. Here is an example.
+Тело представляет собой подробное описание этого коммита, которое можно разделить на несколько строк. Вот пример.
 
-> More detailed explanatory text, if necessary. Wrap it to about 72 characters or so. Further paragraphs come after blank lines.- Bullet points are okay, too- Use a hanging indent
+> Более подробный пояснительный текст, если необходимо. Сократите его примерно до 72 символов. Дальнейшие абзацы идут после пустых строк.- Также допускается применение точечных маркеров - используйте висячий отступ
 
-There are two important points.
+Есть два важных момента.
 
-- Use the first person present tense, for example, use 'change' instead of 'changed' or 'changes'.
-- The motivation for code changes should be explained, as well as a comparison with previous behavior.
+- Используйте настоящее время от первого лица, например, используйте "изменить" вместо "изменено" или "changes".
+- Следует объяснить мотивацию изменений кода, а также сравнить его поведение с поведением предыдущей версии.
 
-### **Footer**
+### **Подвал**
 
-Footer is only used for two situations.
+Подвал используется только в двух ситуациях.
 
-#### **1. Incompatible changes**
+#### **1. Несовместимые изменения**
 
-If the current code is not compatible with the previous version, the Footer section starts with BREAKING CHANGE, followed by a description of the changes, the reason for the changes, and migration methods.
+Если текущий код несовместим с предыдущей версией, подвал начинается с КРИТИЧЕСКОГО ИЗМЕНЕНИЯ, за которым следует описание изменений, причины их внесения и методов переноса.
 
 ```bash
 BREAKING CHANGE: isolate scope bindings definition has changed.
@@ -96,26 +95,26 @@ BREAKING CHANGE: isolate scope bindings definition has changed.
     The removed `inject` wasn't generaly useful for directives so there should be no code using it.
 ```
 
-#### **2. Close Issue**
+#### **2. Закрыть проблему**
 
-If the current commit is related to an issue, it can be closed in the Footer section.
+Если текущий коммит связан с проблемой, он может быть закрыт в подвале.
 
-> Closes #234
+> Закрывает #234
 
-You can also close multiple issues at once.
+Вы также можете закрыть несколько проблем одновременно.
 
-> Closes #123, #245, #992
+> Закрывает #123, #245, #992
 
-### **Revert**
+### **Отменить**
 
-There is also a special case where if the current commit is used to revert a previous commit, it must start with 'revert:', followed by the Header of the commit being reverted.
+Существует также особый случай, когда, если текущий коммит используется для отката предыдущего коммита, он должен начинаться с 'revert:', за которым следует заголовок откатываемого коммита.
 
-> revert: feat(pencil): add 'graphiteWidth' option
+> revert: feat(карандаш): добавьте опцию "graphiteWidth"
 
-> This reverts commit 667ecc1654a317a13331b17617d973392f415f02.
+> Это отменяет коммит 667ecc1654a317a13331b17617d973392f415f02.
 
-The format of the body section is fixed and must be written as 'This reverts commit <hash>', where the hash is the SHA identifier of the commit being reverted.
+Формат тела фиксирован и должен быть записан как "Это откатывает коммит <хэш>", где хэш является SHA-идентификатором возвращаемой фиксации.
 
-If the current commit and the commit being reverted are in the same release, they will not appear in the Change log. If they are in different releases, the current commit will appear under the Reverts section in the Change log.
+Если текущая фиксация и отменяемая фиксация относятся к одному и тому же выпуску, они не будут отображаться в журнале изменений. Если они относятся к разным выпускам, текущая фиксация появится в разделе "Откаты" в журнале изменений.
 
-This article is excerpted from Ruanyifeng's blog ["Git Commit message writing guide"](https://gitee.ru/link?target=http%3A%2F%2Fwww.ruanyifeng.com%2Fblog%2F2016%2F01%2Fcommit_message_change_log.html)
+Эта статья взята из блога Руанйифена ["Руководство по написанию сообщений о коммитах Git"](https://gitee.ru/link?target=http%3A%2F%2Fwww.ruanyifeng.com%2Fblog%2F2016%2F01%2Fcommit_message_change_log.html)

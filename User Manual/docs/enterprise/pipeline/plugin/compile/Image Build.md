@@ -1,34 +1,34 @@
 ---
-title: Image Build
-description: Image Build
+title: Сборка образов
+description: Сборка образов
 slug: /enterprise/pipeline/plugin/image-compile
 keywords:
  - Gitee
- - Image Building
+ - Сборка образов
  - Docker
- - Build
+ - Сборка
 ---
 
-## Form Introduction
+## Знакомство с формой
 
-- **Repository URL**: Docker image repository URL, such as hub.docker.com
-- **Repository Username**: Mirror Repository Authentication Username
-- **Repository Password**: Authentication password for the image repository
-- **Image Tag**: Image tag, such as tomcat:v1.${GITEE_PIPELINE_BUILD_NUMBER}, supports system parameters or custom parameters of the pipeline.
-Dockerfile path: relative path to the root directory of the code repository, such as ./Dockerfile
-- **Context**: Context is the context for Docker build. Please fill in the path relative to the root directory of the code repository, such as
-- **Pull upstream outputs**: Pull upstream outputs, can be configured multiple times, such as ${BUILD_ARTIFACT}. Supports system parameters and direct input of a pull address; the default decompression path is the code repository root directory, if configured.
-- **Docker Cache**: Do not use cache, docker build will use the parameter --no-cache=true for image building.
-- **Build parameters**: Set build parameters (--build-arg)
-- **Output Parameter Alias**: After this task is successfully executed, the following parameters will be automatically output and passed on to downstream tasks. To avoid parameter conflicts between multiple identical tasks, you can customize the alias of the parameter and directly use the parameter value in the downstream task as ${parameter_name}.
+- **URL-адрес репозитория**: URL-адрес репозитория образов Docker, например, hub.docker.com.
+- **Имя пользователя репозитория**: Имя пользователя для аутентификации зеркального репозитория
+- **Пароль репозитория**: Пароль аутентификации для хранилища изображений
+- **Тег изображения**: Тег образа, например tomcat:v1.${GITEE_PIPELINE_BUILD_NUMBER}, поддерживает системные параметры или пользовательские параметры конвейера.
+Путь к файлу Docker: относительный путь к корневому каталогу репозитория кода, например ./Dockerfile
+- **Контекст**: Контекст - это контекст для сборки Docker. Укажите путь относительно корневой директории репозитория кода, например
+- **Отправка результатов для выгрузки данных**: Pull upstream outputs, может быть настроен несколько раз, например ${BUILD_ARTIFACT}. Поддерживает системные параметры и прямой ввод адреса pull; путь распаковки по умолчанию - корневой каталог репозитория кода, если он настроен.
+- **Кэш Docker**: Не использовать кэш, сборка docker будет использовать параметр --no-cache=true для сборки образа.
+- **Параметры сборки**: Установка параметров сборки (--build-arg).
+- **Псевдоним выходного параметра**: После успешного выполнения этой задачи следующие параметры будут автоматически выведены и переданы последующим задачам. Чтобы избежать конфликтов параметров между несколькими одинаковыми задачами, вы можете настроить псевдоним параметра и напрямую использовать значение параметра в последующих задачах как ${имя_параметра}.
 
-## Notes:
+## Примечания:
 
-- When using image building, try not to install dependencies and download code during image building (some basic dependencies or common configurations should be placed in the base image), ensuring that the Dockerfile has very few things that can change. This way, the image build process will be much faster than when creating the image.
+- При использовании сборки образов старайтесь не устанавливать зависимости и не загружать код во время сборки образа (некоторые базовые зависимости или общие конфигурации должны быть помещены в базовый образ), чтобы в Dockerfile было очень мало объектов, которые могут измениться. Таким образом, процесс сборки образа будет выполняться намного быстрее, чем его создание.
 
-## Common combinations:
+## Общие комбинации:
 
-### Image Build and Deployment (Single Artifact)
+### Сборка и развертывание образа (один артефакт)
 
 ```mermaid
 graph LR
@@ -36,14 +36,14 @@ A[Maven Build] --> B[Image Build] --> C[K8S Deployment]
     B --> D[Helm Chart Deployment]
 ```
 
-### Artifact Upload and Deployment (Single Artifact)
+### Загрузка и развертывание артефактов (один артефакт)
 
 ```mermaid
 graph LR
 A[Maven Build] -->B[Upload Artifact] -->C[Release] -->D[Host Deployment]
 ```
 
-### Image Build and Deployment (Multiple Artifacts)
+### Сборка и развертывание образов (несколько артефактов)
 
 ```mermaid
 graph LR

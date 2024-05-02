@@ -1,195 +1,195 @@
 ---
-title: Jenkins Plugin
+title: Плагин Jenkins
 origin-url: https://gitee.ru/help/articles/4193
 ---
 
-# Table of Contents
+# Оглавление
 
-- [Table of Contents](#table-of-contents)
-- [Introduction](#Introduction)
-- [Supported Features](#Supported Features)
-  - [Planned Features](#Planned-Features)
-- [Plugin Installation](#Plugin Installation)
-- [Plugin Configuration](#Plugin Configuration)
-  - [Add Gitee link configuration](#add-gitee-link-configuration)
-    - [Create a New Build Task](#Create-a-New-Build-Task)
-- Global Task Configuration
-- Source Code Management Configuration
-    - [Trigger Configuration](#trigger-configuration)
-    - [Post-build Steps Configuration](#post-build-steps-configuration)
-      - [Build Result Feedback to Gitee](#build-result-feedback-to-gitee)
-      - [Automatically merge PR on successful build](#automatically-merge-pr)
-- [Create Gitee Project WebHook](#create-gitee-project-webhook)
-- [Test push to trigger build](#test-push-to-trigger-build)
-      - [Test PR Trigger Build](#test-pr-trigger-build)
-- [Environment Variables](#Environment Variables)
-- [User Support](#User Support)
-- [Contribution](#Contribution)
-  - [Packaging or running tests](#Packaging-or-running-tests)
+- [Оглавление](#Оглавление)
+- [Введение](#Введение)
+- [Поддерживаемые функции](#Поддерживаемые_функции)
+  - [Планируемые функции](#Планируемые_функции)
+- [Установка плагина](#Установка_плагина)
+- [Настройка плагина](#Настройка_плагина)
+  - [Добавление конфигурации ссылки Gitee](#Добавление_конфигурации_ссылки_Gitee)
+    - [Создание новой задачи сборки](#Создание_новой_задачи_сборки)
+- Глобальная настройка задач
+- Настройка управления исходным кодом
+    - [Настройка триггеров](#Настройка_триггеров)
+    - [Настройка шагов после сборки](#Настройка_шагов_после_сборки)
+      - [Обратная связь с Gitee по результатам сборки](#Обратная-связь-с-Gitee-по-результатам-сборки)
+      - [Автоматическое объединение запроса на слияние при успешной сборке](#Автоматическое-объединение-запроса-на-слияние)
+- [Создание вебхука проекта Gitee](#Создание-вебхука-проекта-Gitee)
+- [Тестовая отправка запускает сборку](#Тестовая отправка_запускает_сборку)
+      - [Тестирование запроса на слияние для запуска сборки](#Тестирование_запроса_на_слияние_для_запуска_сборки)
+- [Переменные среды](#Переменные_среды)
+- [Поддержка пользователей](#Поддержка_пользователей)
+- [Вклад](#Вклад)
+  - [Упаковка или выполнение тестов](#Упаковка_или_выполнение_тестов)
 
-Introduction
+##Введение
 
-Gitee Jenkins Plugin is a Jenkins plugin developed by Gitee based on [GitLab Plugin](https://github.com/jenkinsci/gitlab-plugin). It is used to configure Jenkins triggers to receive WebHook sent by Gitee platform for automated continuous integration or continuous deployment, and can provide feedback on the build status to Gitee platform.
+Плагин Jenkins Gitee представляет собой плагин Jenkins, разработанный Gitee на основе [плагина GitLab](https://github.com/jenkinsci/gitlab-plugin). Он используется для настройки триггеров Jenkins для получения вебхука, отправляемого платформой Gitee, для автоматической непрерывной интеграции или непрерывного развертывания и может предоставлять обратную связь о статусе сборки платформе Gitee.
 
-Currently supported features
+Поддерживаемые в настоящее время функции
 
-- When pushing code to Gitee, the configured WebHook triggers a Jenkins job build.
-- Comment submit record triggers corresponding version Jenkins task build
-- When submitting a Pull Request to the Gitee project, it triggers Jenkins through the configured WebHook
-- Support [ci-skip] instruction filtering or [ci-build] instruction triggering the build.
-- Filter already built Commit versions. If it is a branch push, then filter the same branch push. If it is a PR, then filter the same PR.
-- Filter triggers by branch name.
-- Regular expression filtering for triggering branches.
-- Set WebHook Verification Password.
-- Configurable post-build actions to comment the build result triggered by PR to the corresponding PR in Gitee.
-- The post-build action can be configured to automatically merge the corresponding PR when the build triggered by the PR is successful.
-For all events related to PR, if the PR code conflicts cannot be automatically merged, do not trigger the build; and if the function to comment on PR is configured, comment on the PR to indicate the conflict.
-- PR comments can trigger builds through WebHooks (can be used to trigger builds again from Gitee platform comments if build fails)
-- Support configuring PR to not require testing and filter trigger builds. (Can be used for not building and deploying test environment if no testing is required)
-- Supports canceling the ongoing unfinished build for the same PR when triggering a build, and proceeds with the current build (multiple builds for the same PR do not queue, multiple different builds are not queued either).
+- При отправке кода в Gitee настроенный вебхук запускает сборку задания Jenkins.
+- Запись об отправке комментария запускает соответствующую версию сборки задачи Jenkins
+- Отправляемый в проект Gitee запрос на слияние запускает Jenkins через настроенный вебхук
+- Поддержка фильтрации команд [ci-skip] или запускающей сборку команды [ci-build].
+- Фильтрация уже созданных версий коммита. Если это отправка ветки, то отфильтровывается отправка той же самой ветки. Если это запрос на слияние, то отфильтровывается тот же самый запрос на слияние.
+- Фильтрация триггеров по названию ветки.
+- Фильтрация регулярных выражений для запуска веток.
+- Установка пароля проверки вебхука.
+- Настраиваемые действия после сборки для комментирования результата сборки, вызванного запроса на слияние к соответствующему запросу на слияние в Gitee.
+- Действие после сборки может быть настроено на автоматическое объединение с соответствующим запросом на слияние, когда сборка, инициированная запросом на слияние, будет успешно зваершена.
+Что касается всех событий, связанных с запросами на слияние, то не запускайте сборку, если конфликты кода запроса на слияние не могут быть автоматически объединены; и, если функция комментирования запросов на слияние настроена, прокомментируйте запрос на слияние, чтобы указать на конфликт.
+- Комментарии к запросам на слияние могут запускать сборку через вебхуки (если сборка закончится неудачно, их можно будет использовать для повторного запуска сборки из комментариев платформы Gitee)
+- Поддержка настройки запросов на слияние  с целью избавиться от необходимости тестирования и фильтрации сборок триггеров (может использоваться для отказа от создания и развертывания тестовой среды, если тестирование не требуется)
+- Поддерживает отмену текущей незавершенной сборки для того же запроса на слияние при запуске сборки и продолжает текущую сборку (несколько сборок для одного и того же запроса на слияние не ставятся в очередь, несколько разных сборок также не ставятся в очередь).
 
-## Planned Features
+## Планируемые функции
 
-1. PR review and test pass trigger build (can be triggered by users for deployment, and can be combined with the feature of automatically merging PRs to improve workflow.)
-2. Check the trigger method to automatically add WebHook to Gitee.
+1. Проверка запроса на слияние и прохождение теста запускают сборку (могут запускаться пользователями для развертывания и могут сочетаться с функцией автоматического объединения запроса на слияние для улучшения рабочего процесса).
+2. Проверьте метод запуска для автоматического добавления вебхука в Gitee.
 
-# Plugin installation
+# Установка плагина
 
-1. Online Installation
-    - Go to Manage Jenkins -> Manage Plugins -> Available
-  - Right side Filter input: Gitee
-    - Check Gitee in the optional list below (if Gitee is not in the list, click Check now
-- Click Download now and install after restart
+1. Установка в режиме онлайн
+    - Перейдите в Управление Jenkins -> Управление плагинами -> Доступно
+	- Введите справа значение фильтра: Gitee
+    - Проверьте Gitee в дополнительном списке ниже (если Gitee нет в списке, нажмите "Проверить сейчас")
+	- Нажмите "Загрузить сейчас" и установите после перезагркзки
 
-![Image Description](https://images.gitee.ru/uploads/images/2018/0723/112748_b81a1ee3_58426.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2018/0723/112748_b81a1ee3_58426.png )
 
-2. Manual Installation
-   - From the [release](https://gitee.ru/oschina/Gitee-Jenkins-Plugin/releases) list, enter the latest release version and download the corresponding XXX.hpi file.
-- Go to Manage Jenkins -> Manage Plugins -> Advanced
-- Select the downloaded XXX.hpi file in "Upload Plugin File" and click Upload
-    - On the subsequent page, check the box for 'Restart Jenkins when installation is complete and no jobs are running.'
+2. Установка вручную
+	- В списке [release](https://gitee.ru/oschina/Gitee-Jenkins-Plugin/releases) введите последнюю версию релиза и загрузите соответствующий файл XXX.hpi.
+	- Перейдите в Управление Jenkins -> Управление плагинами -> Дополнительно
+	- Выберите загруженный файл XXX.hpi в разделе "Загрузить файл плагина" и нажмите Загрузить
+	- На следующей странице установите флажок "Перезапустить Jenkins, когда установка будет завершена и не будет запущено каких-либо заданий". - На следующей странице установите флажок "Перезапустить Jenkins, когда установка будет завершена и никаких заданий выполняться не будет".
 
-![Image Description](https://images.gitee.ru/uploads/images/2018/0723/113303_2a1d0a03_58426.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2018/0723/113303_2a1d0a03_58426.png )
 
-# Plugin configuration
+# Настройка плагина
 
-## Add Gitee link configuration
+## Добавление конфигурации ссылки Gitee
 
-1. Go to Jenkins -> Manage Jenkins -> Configure System -> Gitee Configuration -> Gitee connections
-2. Enter 'Gitee' or any name you want in 'Connection name'
-3. Enter the Gitee complete URL address in 'Gitee host URL': 'https://gitee.ru' (Domain name of Gitee private deployment entered by the Gitee private deployment customer)
-4. If Gitee APIV5 personal token is not configured in `Credentials`, click `Add` and select `Jenkins`.
-1. Select ``Domain`` and choose ``Global credentials``.
-2. Select "Kind" as "Gitee API Token"
-    3. ``Scope`` Select the scope you need
-4. Enter your Gitee personal token for the 'Gitee API Token', get the address: <https://gitee.ru/profile/personal_access_tokens>
-5. Enter the desired ID and description in the `ID` and `Description` fields.
-5. Select ``Credentials`` and choose the configured Gitee APIV5 Token.
-6. Click `Advanced` to configure whether to ignore SSL errors (depending on your Jenkins environment) and set the link measurement timeout (depending on your network environment).
-7. Click ``Test Connection`` to test if the link is successful. If it fails, please check the above steps 3, 5, 6.
+1. Перейдите в Jenkins -> Упрпавление Jenkins -> Настроить систему -> Настройка Gitee -> связь с Gitee
+2. Введите 'Gitee' или любое другое имя в поле 'Имя подключения'.
+3. Введите полный URL-адрес Gitee в поле 'Gitee host URL': 'https://gitee.ru' (Доменное имя частного развертывания Gitee, введенное заказчиком частного развертывания Gitee)
+4. Если личный токен Gitee API V5 не настроен в разделе `Учетные данные`, нажмите `Добавить` и выберите  `Jenkins`.
+5. Выберите ``Домен``, затем ``Глобальные учетные данные``.
+6. Задайте "Вид" как "Токен API Gitee".
+7. ``Область применения`` Выберите нужную вам область применения
+8. Введите свой личный токен Gitee для "Токена API Gitee", пройдя по адресу: <https://gitee.ru/profile/personal_access_tokens>
+9. Введите нужные идентификатор и описание в полях `Идентификатор` и `Описание`.
+10. Выберите ``Учетные данные``, а затем настроенный токен Gitee APIV5.
+11. Нажмите "Дополнительно", чтобы указать в настройках, следует ли игнорировать ошибки SSL (в зависимости от вашей среды Jenkins) и установить измерение времени ожидания ответа соединения (в зависимости от вашего сетевого окружения).
+12. Нажмите `Проверить соединение`, чтобы проверить, успешно ли установлена ссылка. Если это не удается, проверьте вышеуказанные шаги 3, 5, 6.
 
-After successful configuration, it should look like this:
-![Gitee link configuration](https://images.gitee.ru/uploads/images/2018/0716/185651_68707d16_58426.png)
+После успешной настройки она должна выглядеть следующим образом:
+![Конфигурация ссылки Gitee](https://images.gitee.ru/uploads/images/2018/0716/185651_68707d16_58426.png)
 
-### Create New Build Task
+### Создание новой задачи сборки
 
-Go to Jenkins -> New Item, enter 'Gitee Test' as the name, select 'Freestyle project' and save to create the build project.
+Перейдите в Jenkins -> Создать элемент, введите название "Gitee Test", выберите "Freestyle project" и сохраните, чтобы создать проект сборки.
 
-### Task Global Configuration
+### Глобальная настройка задач
 
-In the task global configuration, you need to select the Gitee link from the previous step. Go to the Configure -> General of a specific task (e.g. 'Gitee Test'), choose the Gitee connection configured earlier, as shown in the figure:
+В Глобальной настройке задач необходимо выбрать из предыдущего шага ссылку Gitee. Перейдите в меню Настроить -> Общие конкретной задачи (например, 'Gitee Test'), и выберите настроенное ранее соединение Gitee, как показано на рисунке:
 
-![Task Global Configuration](https://images.gitee.ru/uploads/images/2018/0716/191715_9660237b_58426.png )
+![Глобальная настройка задач](https://images.gitee.ru/uploads/images/2018/0716/191715_9660237b_58426.png )
 
-### Source Code Management Configuration
+### Настройка управления исходным кодом
 
-Go to a task (e.g. 'Gitee Test') Configure -> Source Code Management tab
+Перейдите к задаче (например, 'Gitee Test') Настроить -> вкладка "Управление исходным кодом"
 
-1. Click *Git*
-2. Enter your repository address, for example ``git@your.gitee.server:gitee_group/gitee_project.git``
-1. Click the *Advanced* button, enter ``origin`` in the *Name* field, and enter ``+refs/heads/*:refs/remotes/origin/* +refs/pull/*/MERGE:refs/pull/*/MERGE`` in the *Refspec* field.
-Note that the new version of Jenkins no longer accepts multiple refs descriptions that simultaneously contain the * wildcard. If you only want to trigger on a push, you can write the first part only; if you only want to trigger on a PR, you can write the second part only. See the following image for details: ![Image Description](https://images.gitee.ru/uploads/images/2020/0601/220940_0ce95dd0_58426.png )
-3. In the Credentials section, enter the username and password credentials corresponding to the https URL of the git repository or the ssh key credentials for ssh. Note that the Gitee API Token credentials cannot be used for source code management, they are only used for API calls in the Gitee plugin.
-4. *Branch Specifier* option:
-1. For single-repository workflow input: ``origin/${giteeSourceBranch}``
-2. For PR workflow input: 'pull/${giteePullRequestIid}/MERGE'
-Additional Behaviours options
-1. For single-repository workflows, if you want to merge the default branch (release branch) before building the pushed branch, you can do the following:
-        1. Click on *Add* dropdown
-2. Select *Merge before build*
-        3. Set *Name of repository* to ``origin``
-4. Set *Branch to merge to* as ``${ReleaseBranch}``, which is the default branch to merge (release branch)
-    2. For PR workflow, Gitee server has already pre-merged the original branch and the target branch of the PR. You can directly build it. If the target branch is not the default branch (release branch), you can also merge it before the build.
+1. Нажмите *Git*
+2. Введите адрес вашего репозитория, например, ``git@your.gitee.server:gitee_group/gitee_project.git``
+3. Нажмите кнопку *Дополнительно*, введите `origin` в поле *Name*, затем введите ``+refs/heads/*:refs/remotes/origin/* +refs/pull/*/MERGE:refs/pull/*/MERGE`` в поле *Refspec*.
+Обратите внимание, что новая версия Jenkins больше не принимает описания нескольких ссылок, одновременно содержащих подстановочный знак *. Если вы хотите запускать только при нажатии, вы можете написать только первую часть; если вы хотите запускать только при запросе на слияние, вы можете написать только вторую часть. Для получения подробной информации смотрите следующее изображение : ![Описание изображения](https://images.gitee.ru/uploads/images/2020/0601/220940_0ce95dd0_58426.png )
+4. В разделе "Учетные данные" введите имя пользователя и пароль, соответствующие URL-адресу https-репозитория git, или учетные данные ssh-ключа для ssh. Обратите внимание, что учетные данные токена Gitee API нельзя использовать для управления исходным кодом, они используются только для вызовов API в плагине Gitee.
+5. Опция *Указатель ветки*:
+6. Для входа в рабочий процесс с одним репозиторием: ``origin/${giteeSourceBranch}``
+7. Для ввода рабочего процесса запроса на слияние: 'pull/${giteePullRequestIid}/MERGE'
+Дополнительные варианты поведения
+1. Для рабочих процессов с одним репозиторием, если вы хотите объединить ветку по умолчанию (ветку релиза) перед созданием ветки, в которую будет производиться пересылка, вы можете сделать следующее:
+        1. Нажмите на выпадающий список *Добавить*.
+		2. Выберите *Соединить перед сборкой*.
+        3. Задайте  ``origin`` в *Имени репозитория* .
+		4. Задайте  *Ветку для слияния* как ``${ReleaseBranch}``, которая является ветвкой для слияния по умолчанию (ветка релиза)
+2. Для работы с запросом на слияние сервер Gitee уже предварительно объединил исходную ветку и целевую ветку запроса на слияние. Вы можете собрать ее напрямую. Если целевая ветка не является веткой по умолчанию (веткой релиза), вы также можете объединить ее перед сборкой.
 
-Configuration as shown in the figure:
+Настройка как показано на рисунке:
 
-![Source Code Management Configuration](https://images.gitee.ru/uploads/images/2018/0716/191913_ef0995f4_58426.png )
+![Настройка управления исходным кодом](https://images.gitee.ru/uploads/images/2018/0716/191913_ef0995f4_58426.png )
 
-### Trigger Configuration
+### Настройка триггеров
 
-Go to the trigger build of the task configuration: Configure -> Build Triggers tab
+Перейдите к триггерам сборки  в настройках задачи: Настройки -> вкладка "Триггеры сборки"
 
-1. Check the `Enabled Gitee triggers` for the build trigger rules you need, such as `Push Event` and `Opened Merge Request Events`. The checked events will receive WebHooks and trigger the build. Currently supported trigger events include:
-    - Push Events: Code push event
-Commit Comment Events: Comment submission record events
-    - Opened Merge Request Events: PR submission event
-    - Updated Merge Request Events: Update PR events
-Accepted Merge Request Events: Accept/merge PR events
-Closed Merge Request Events: Close PR event
-    - Approved Pull Requests: Event for approved PR
-    - Tested Pull Requests: Triggered by a successful PR event.
-2. `Build Instruction Filter` :
-    - `None`: No filter
-    - `[ci-skip] skip build`: Skip the build trigger when the commit message or PR description contains `[ci-skip]`.
-- `[ci-build] trigger build`: commit message
-  or when the PR description includes `[ci-build]`, trigger the build.
-3. 'Ignore last commit has build' option allows skipping already built Commit versions.
-4. Cancel incomplete build on same Pull Requests
-5. `Ignore Pull Request conflicts` This option determines whether to build when a Pull Request has conflicts.
-6. Allowed branches can be configured to allow building on specific branches, currently supporting branch names and regular expressions for filtering.
-7. `Secret Token for Gitee WebHook` This option can configure the password for WebHook, which needs to be consistent with the password configured in Gitee WebHook to trigger the build.
-8. Note: If the PR status is not auto-mergeable, the build will not be triggered.
-![Trigger Configuration](https://images.gitee.ru/uploads/images/2021/0107/171932_e25c8359_2102225.png )
+1. Проверьте "Включенные триггеры Gitee" для необходимых вам правил запуска сборки, как, например, "Событие отправки кода" и "Открытые события запроса на слияние". Отмеченные события получат веб-ссылки и запустят сборку. Поддерживаемые в настоящее время триггерные события включают:
+	- События отправки: событие отправки кода
+Фиксация событий комментариев: События записи отправки комментариев
+	- Открытые события запроса на слияние: Событие отправки запроса на слияние
+	- Обновленные события запроса на слияние: Обновление событий запросов на слияние
+Принятые события запроса на слияние: Принять/объединить события запросов на слияние
+Закрытые события запроса на слияние: Закрыть запросы на слияние
+	- Одобренные запросы на слияние: Событие для утвержденных запросов на слияние
+	- Протестированные запросы на слияние: запускаются при успешном событии отправки запроса на слияние.
+2. `Фильтры команд сборки` :
+    - `Нет`: Нет фильтров
+    - `[ci-skip] пропустить сборку`: Пропустить запуск сборки, если сообщение о коммите или описание запроса на слияние содержит команду `[ci-skip]`.
+	- `[ci-build] запустить сборку`: сообщение о коммите
+  или запустить сборку, если описание запроса на слияние включает команду `[ci-build]`.
+3. Опция 'Игнорировать последний собранный коммит' позволяет пропускать уже собранные версии коммита.
+4. Отменить неполную сборку по тем же запросам на слияние
+5. `Игнорировать конфликты запросов на слияние` Этот параметр определяет, следует ли выполнять сборку при наличии конфликтов в запросе на извлечение.
+6. Разрешенные ветки могут быть настроены таким образом, чтобы разрешить использование определенных веток, в настоящее время поддерживающих имена веток и регулярные выражения для фильтрации
+7. `Секретный токен для вебхука Gitee WebHook` Этот параметр позволяет настроить пароль для вебхука, который должен соответствовать паролю, настроенному в вебхуках Gitee для запуска сборки.
+8. Примечание: Если запроса на слияние не обладает статусом "автоматически объединяемый", сборка запущена не будет.
+![Настройки триггера](https://images.gitee.ru/uploads/images/2021/0107/171932_e25c8359_2102225.png )
 
-### Post-Build Steps Configuration
+### Настройка шагов после сборки
 
-Go to the post-build configuration of the task: Configure -> Post-build Actions tab
+Перейдите к настройке задачи после сборки: Настройка -> вкладка "Действия после сборки"
 
-#### Build Results Feedback to Gitee
+#### Обратная связь с Gitee по результатам сборки
 
-1. Click on the 'Add post-build action' dropdown and select: 'Add note with build status on Gitee pull requests'
-2. In `Advanced`, you can configure:
-- Add message only for failed builds: Only comment back for failed builds to Gitee
-- Customize the review content for each status (the content can reference Jenkins environment variables or custom environment variables).
-3. If this feature is enabled, the status that cannot be automatically merged can also be reviewed to Gitee
+1. Нажмите на выпадающий список "Добавить действие после сборки" и выберите: "Добавить заметку со статусом сборки в запросах на слияние Gitee"
+2. В разделе `Дополнительно` вы можете настроить:
+- Добавлять сообщение только для неудачных сборок: отправлять комментарии только для неудачных сборок в Gitee
+- Настройте содержимое обзора для каждого статуса (содержимое может ссылаться на переменные среды Jenkins или пользовательские переменные среды).
+3. Если эта функция включена, запросы на слияние со статусом,  исключающим автоматическое объединение, также могут быть проверены в Gitee
 
-#### Automatically merge PR on successful build
+#### Автоматическое объединение запроса на слияние при успешной сборке
 
-Click `Add post-build action` dropdown and select: `Accept Gitee pull request on success`
+Нажмите на выпадающий список "Добавить действие после сборки" и выберите: "Принять запрос на слияние Gitee при успешном выполнении".
 
-![Build after step configuration](https://images.gitee.ru/uploads/images/2018/0716/192304_0e323bc0_58426.png)
+![Сборка после пошаговой настройки](https://images.gitee.ru/uploads/images/2018/0716/192304_0e323bc0_58426.png)
 
-### Create Gitee Project WebHook
+### Создание вебхука проекта Gitee
 
-Enter the Gitee project set in the source code management configuration, and go to Management -> WebHooks
+Введите набор проектов Gitee в настройках управления исходным кодом и перейдите в Управление -> вебхуки
 
-1. Add a WebHook, and fill in the URL with the URL shown in `Trigger Configuration: Build when a change is pushed to Gitee. Gitee webhook URL`, for example: <http://127.0.0.1:8080/jenkins/project/fu>.
-2. Password: Fill in the WebHook password configured in point 5 of the trigger configuration. If no password is set, it can be left blank.
-3. Check PUSH, Pull Request
+1. Добавьте вебхуки и заполните поле URL-адреса URL-адресом, указанным в разделе "Настройки триггера: сборка при отправке изменения в Gitee. URL-адрес вебхука Gitee`, например: <http://127.0.0.1:8080/jenkins/project/fu>.
+2. Пароль: Введите пароль вебхука, настроенный в пункте 5 нестроек триггера. Если пароль не задан, его можно оставить пустым.
+3. Установите флажок ОТПРАВКА, Запрос на слияние
 
-#### Test push triggers build
+#### Тестовая отправка запускает сборку
 
-1. Select the PUSH WebHook in Gitee's WebHook management and click on test to observe the build status of the Jenkins task.
-2. Edit a file and submit it on the Gitee project page, and observe the build status of the Jenkins task.
+1. Выберите ОТПРАВИТЬ вебхук в управлении вебхуками Gitee и нажмите на кнопку "Тестировать", чтобы увидеть состояние сборки задачи Jenkins.
+2. Отредактируйте файл и отправьте его на странице проекта Gitee, после чего наблюдайте за статусом сборки задачи Jenkins.
 
-#### Test PR Trigger Build
+#### Тестирование запроса на слияние для запуска сборки
 
-1. Select the Pull Request WebHook in the WebHook management of Gitee. Click on test and observe the build status of the Jenkins job.
-2. Create a Pull Request in the Gitee project and observe the build status of the Jenkins job.
+1. В управлении вебхуками Gitee выберите вебхук запроса на слияние. Нажмите на кнопку "Тестировать" и проследите за состоянием сборки задачи Jenkins.
+2. В проекте Gitee создайте запрос на слияние и наблюдайте за состоянием сборки задачи Jenkins.
 
-Environment Variables
+##### Переменные среды
 
-Currently, the supported environment variables are as follows. Please note that different WebHook triggers may result in some variables being empty. For more details, please install the EnvInject Plugin and check the Environment Variables during the build.
+В настоящее время поддерживаются следующие переменные окружения. Обратите внимание, что при различных триггерах вебхуков некоторые переменные могут быть пустыми. Для получения более подробной информации, установите плагин EnvInject и проверьте переменные окружения во время сборки.
 
 ```java
     public Map<String, String> getBuildVariables() {
@@ -243,24 +243,24 @@ Currently, the supported environment variables are as follows. Please note that 
 
 ```
 
-User Support
+##### Поддержка пользователей
 
-If you have any questions during use, please feel free to provide feedback in [Gitee Jenkins Issue](https://gitee.ru/oschina/Gitee-Jenkins-Plugin/issues).
+Если во время использования у вас возникнут какие-либо вопросы, просим отправлять отзывы в [Gitee Jenkins Issue](https://gitee.ru/oschina/Gitee-Jenkins-Plugin/issues).
 
-To get more logs for troubleshooting, you can follow the steps below before providing feedback:
+Чтобы получить больше журналов для устранения неполадок, перед отправкой отзыва вы можете выполнить следующие действия:
 
-1. Go to Jenkins -> Manage Jenkins -> System Log
-2. Click on Add new log recorder.
-3. Enter 'Gitee Jenkins Plugin'.
-4. In the next page, click on Add in the Logger section, enter 'com.gitee.jenkins' in the input box, and select All in the Log level, then save.
-5. After completing the above steps, you can view the translated result in the 'Gitee Jenkins Plugin' log.
+1. Перейдите Jenkins -> Управление Jenkins -> Журнал системы
+2. Нажмите на кнопку "Добавить новый регистратор журналов".
+3. Введите "Плагин Gitee Jenkins". 
+4. На следующей странице нажмите "Добавить" в разделе "Регистратор", введите в поле ввода  "com.git.jenkins",  на уровне журнала выберите "Все", затем сохраните.
+5. После выполнения вышеописанных шагов вы можете просмотреть переведенный результат в журнале "Плагин Gitee Jenkins".
 
-Contributions
+####Вклад
 
-Feel free to submit CI scenario feature suggestions or directly submit a PR to contribute code.
+Вносите предложения по функциям сценария непрерывной интеграции или напрямую отправлять запросы на слияние для внесения вклада в разработку кода.
 
-## Packaging or Running Tests
+## Упаковка или выполнение тестов
 
-Pack the hpi file and execute in the repository directory: `mvn package`
+Упакуйте файл hpi и выполните его в директории репозитория: `mvn package`
 
-Run tests directly: ``mvn hpi:run``
+Выполняйте тесты напрямую: ``mvn hpi:run``

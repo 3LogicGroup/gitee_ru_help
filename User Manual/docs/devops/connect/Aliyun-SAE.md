@@ -1,89 +1,89 @@
 ﻿---
-title: Alibaba Cloud Serverless Application Engine SAE
+title: Модуль бессерверных приложений SAE для AlibabaCloud
 ---
 
-Serverless Application Engine SAE (Serverless App Engine) is a zero-code transformation, easy-to-use, and adaptive elastic application fully managed platform. SAE allows you to deploy online applications (such as Web/Microservices/Job tasks) in seconds from source code/code packages/Docker images without IaaS and K8s operations and automatically scales instances based on usage for billing. It comes with capabilities such as logs, monitoring, and load balancing out of the box.
+Бессерверный Модуль приложений SAE (Serverless App Engine) - это полностью управляемая платформа с преобразованием зеро-кода, простая в использовании и адаптивно-гибкая для приложений. SAE позволяет развертывать онлайн-приложения (такие как веб/микросервисы/рабочие задания) за считанные секунды из исходного кода /пакетов кода/образов Docker без операций IaaS и K8s и автоматически масштабировать экземпляры в зависимости от использования для выставления счетов. Поставляется с такими возможностями, как ведение журналов, мониторинг и балансировка нагрузки "из коробки".
 
-## Core Advantages
+## Основные преимущества
 
-| Features | Core Advantages |
+| Функционал | Основные преимущества |
 | --- | ------ |
-| Simplified experience | <ul><li>Zero modification deployment, zero learning cost, instantly create & publish applications</li>
-| Open Standards | <ul><li>Build based on container standards, core capabilities open source, no vendor lock-in</li> <li>Rich platform engineering capabilities, helping to improve development and operation efficiency
-| Extreme elasticity | <ul><li>Millisecond-level elastic scaling, adapting the number of application instances based on traffic</li> <li>Efficient cold start of applications, supports scaling down to 0</li></ul> |
+| Упрощенный опыт | <ul><li>Развертывание с нулевыми изменениями, отсутствие затрат на обучение, мгновенное создание и публикация приложений</li>
+| Открытые стандарты | <ul><li>Сборка на основе контейнерных стандартов, основные возможности программного обеспечения с открытым исходным кодом, отсутствие привязки к поставщику</li> <li>Rich platform engineering capabilities, helping to improve development and operation efficiency
+| Чрезвычайная гибкость | <ul><li>Гибкое масштабирование на миллисекундном уровне, адаптирующее количество экземпляров приложения в зависимости от трафика</li> <li>Эффективный "холодный" запуск приложений, поддержка масштабирования до 0</li></ul> |
 
-## Use Cases
+## Примеры использования
 
-| Scenario | Features |
+| Сценарий | Функционал |
 |:---:|:------:|
-| Web application one-stop hosting | Comparable to Google CloudRun, providing a one-stop fast experience for web application deployment in the cloud: <br/> Including maintenance-free IaaS, automatic elastic scaling, out-of-the-box web application firewall, CDN global acceleration, persistent storage with OSS, log management, load balancing, RDS database, and other capabilities, suitable for personal blogs/forums, corporate websites, multi-site deployment applications, background threads, scheduled tasks, etc. |
-| Microservice Application Hosting | Just iterate each microservice application based on the Spring Cloud/Dubbo development specifications, and Alibaba Cloud SAE provides underlying resource scheduling, deployment, gray release, microservice governance, and monitoring and diagnostic capabilities. |
-| Sudden Traffic Scenario | New retail/e-commerce, online education, entertainment and other industries often have unexpected spikes in traffic. SAE provides a set of highly available productized solutions to solve the problem, including precise capacity, extreme elasticity, and flow control and degradation. |
+| Универсальный хостинг веб-приложений | Сравним с Google  Run, обеспечивает универсальное и быстрое развертывание веб-приложений в облаке: <br/> В том числе не требует обслуживания IaaS, предусмотрены автоматическое гибкое масштабирование, готовый брандмауэр веб-приложений, глобальное ускорение CDN, постоянное хранилище с операционными системами, управление журналами, балансировка нагрузки, база данных RDS и другие возможности, подходящие для личных блогов /форумов, корпоративных веб-сайтов, приложений для развертывания на нескольких сайтах, фоновой работы потоки, запланированные задачи и т.д. |
+| Хостинг микросервисных приложений | Просто итерируйте каждое микросервисное приложение на основе спецификаций разработки Spring /Dubbo, а Alibaba  SAE предоставит базовое планирование ресурсов, развертывание, серый релиз, управление микросервисами, а также возможности мониторинга и диагностики. |
+| Сценарий внезапных всплесков трафика | В новых отраслях розничной торговли/электронной коммерции, онлайн-образования, развлечений и других отраслях часто наблюдаются неожиданные всплески трафика. SAE предлагает набор высокодоступных решений для решения этой проблемы, включая точную пропускную способность, исключительную гибкость, а также управление потоками и замедление. |
 
-## Getting Started Guide
+## Руководство для начала работы
 
-> Preparations: Register and log in to the Alibaba Cloud account.
+> Подготовка: Зарегистрируйтесь и войдите в учетную запись Alibaba .
 
-1. Go to SAE product homepage (https://www.aliyun.com/product/sae).
-2. Click on `Free Activation`.
+1. Перейдите на домашнюю страницу продукта SAE (https://www.aliyun.com/product/sae).
+2. Нажмите `Бесплатная Активация`.
 
-    ![Open SAE for free](./Aliyun-SAE/001-open-sae-for-free.png)
+    ![Открыть SAE бесплатно](./Aliyun-SAE/001-open-sae-for-free.png)
     
-3. Click on `Get Package and Open Pay-as-You-Go` and follow the prompts to pay (this package is a free trial package and no payment is required).
+3. Нажмите "Получить пакет и открыть Оплату по факту" и следуйте инструкциям по оплате (этот пакет является бесплатным пробным пакета, поэтому оплата не требуется).
 
-![Get the package and activate pay-as-you-go](./Aliyun-SAE/002-get-the-package-and-activate-pay-as-you-go.png)
-![Buy It Now](./Aliyun-SAE/003-buy-it-now.png)
-![Agree to the agreement](./Aliyun-SAE/004-agree-to-the-agreement.png)
-![Payment](./Aliyun-SAE/005-pay.png)
+![Получить пакет и активирвать оплату по факту](./Aliyun-SAE/002-get-the-package-and-activate-pay-as-you-go.png)
+![Купить сейчас](./Aliyun-SAE/003-buy-it-now.png)
+![Принять условия соглашения](./Aliyun-SAE/004-agree-to-the-agreement.png)
+![Оплата](./Aliyun-SAE/005-pay.png)
 
-4. Click on `Management Console`
+4. Нажмиет на `Консоль управления`
 
-![Management console](./Aliyun-SAE/006-management-console.png)
+![Консоль управления](./Aliyun-SAE/006-management-console.png)
 
-5. Click `Experience in Advance` to enter SAE 2.0.
+5. Нажмите "Попробовать", чтобы войти в SAE 2.0.
 
-![Enter SAE 2.0](./Aliyun-SAE/007-enter-sae-2.0.png)
+![Вход в SAE 2.0](./Aliyun-SAE/007-enter-sae-2.0.png)
 
-6. In the pop-up dialog 'Welcome to Serverless Application Engine SAE', click on 'Confirm Creation'.
+6. 6. Во всплывающем диалоговом окне "Добро пожаловать в Модуль бессерверных приложений SAE" нажмите "Подтвердить создание".
 
-![Confirm the creation of SAE instance](./Aliyun-SAE/008-confirm-creation-of-sae-instance.png)
+![Подтвердить создания экземпляра SAE](./Aliyun-SAE/008-confirm-creation-of-sae-instance.png)
 
-## Application deployment guide
+## Руководство по развертыванию приложений
 
-1. Log in to the SAE console (https://sae.console.aliyun.com/#/Overview?regionId=cn-zhangjiakou), click on 'Application Management' - 'Application List', and select 'North China 3 (Zhangjiakou)' or 'South China 1 (Shenzhen)' region. (If you are already in the SAE 2.0 console, you can skip to step 3)
+1. Войдите в консоль SAE (https://sae.console.aliyun.com/#/Overview?regionId=cn-zhangjiakou), нажмите на "Управление приложениями" - "Список приложений" и выберите регион "Северный Китай 3 (Чжанцзякоу)" или "Южный Китай 1 (Шэньчжэнь)". (Если вы уже находитесь в консоли SAE 2.0, переходите к шагу 3)
 
-    ![Select Area](./Aliyun-SAE/009-select-area.png)
+    ![Выбор региона](./Aliyun-SAE/009-select-area.png)
 
-2. Click `Experience SAE 2.0 Beta` to enter the SAE2.0 console
+2. Нажмите `Experience SAE 2.0 Beta` для входа в консоль SAE2.0
 
-    ![Enter the console](./Aliyun-SAE/010-enter-the-console.png)
+    ![Вход в консоль](./Aliyun-SAE/010-enter-the-console.png)
 
-3. Click 'Application Management' - 'Create Application'
+3. Нажмите 'Управление приложениями' - 'Создать приложение'
 
-![Create Application](./Aliyun-SAE/011-create-app.png)
+![Создание приложения](./Aliyun-SAE/011-create-app.png)
 
-4. On the 'Create Application' page, configure the relevant information. Select 'Continuous Deployment from Source Code Repository' and click on 'Set up Continuous Deployment'.
+4. Настройте соответствующую информацию на странице 'Создать приложение'. Выберите "Непрерывное развертывание из хранилища исходного кода" и нажмите "Настроить непрерывное развертывание".
 
-![Select code source](./Aliyun-SAE/012-select-code-source.png)
+![Выбор истончика кода](./Aliyun-SAE/012-select-code-source.png)
 
-5. In the 'Basic Information Settings' section, enter a custom 'Application Name' and 'Application Description', select 'Continuous Deployment from Source Code Repository' for 'Application Deployment Method', and then click 'Set Continuous Deployment'. In the 'Set Continuous Deployment' panel, configure the relevant information, and then click 'OK'. (This example uses a game application on Gitee).
+5. В разделе "Основные информационные настройки" введите задаваемое пользователем "Имя приложения" и "Описание приложения", выберите "Непрерывное развертывание из репозитория исходного кода" для поля "Метод развертывания приложения", а затем нажмите "Установить непрерывное развертывание". На панели "Настроить непрерывное развертывание" настройте соответствующую информацию, а затем нажмите "ОК". (В этом примере используется игровое приложение на Gitee).
 
-  ![Application Settings](./Aliyun-SAE/013-apply-settings.png)
+  ![Настрйки приложения](./Aliyun-SAE/013-apply-settings.png)
 
-6. Configure the relevant information in the 'HTTP Traffic Fully Managed' area.
+6. Настройте соответствующую информацию в области "Полное управление HTTP-трафиком".
 
-![Traffic Configuration](./Aliyun-SAE/014-traffic-configuration.png)
+![Настройка трафика](./Aliyun-SAE/014-traffic-configuration.png)
 
-7. In the 'Capacity Settings' section, configure the relevant information, and then click 'Skip Advanced Settings, Create Application'.
+7. В разделе "Настройки емкости" настройте соответствующую информацию, а затем нажмите 'Пропустить дополнительные настройки, Создать приложение'.
 
-> After configuring this mirror, when you submit code to the Gitee repository, Gitee will automatically synchronize the repository to GitHub.
+> После настройки этого зеркала, когда вы будете отправлять код в репозиторий Gitee, Gitee будет автоматически синхронизировать репозиторий с GitHub.
 
-8. After the application is created, it will be redirected to the 'Basic Information' page. On this page, you can view measurement data, application elastic monitoring, application information, and edit traffic access settings, and other information.
+8. После создания приложения оно будет перенаправлено на страницу "Основная информация". На этой странице вы сможете просматривать данные измерений, гибкий мониторинг приложений, информацию о приложениях, редактировать параметры доступа к трафику и другую информацию.
 
-![Details](./Aliyun-SAE/016-details.png)
+![Подробности](./Aliyun-SAE/016-details.png)
 
-9. On the 'Basic Information' page, in the 'HTTP Traffic Fully Managed' section, click 'Public Access Address' to access it.
+9. На странице "Основная информация" в разделе "Полностью управляемый HTTP-трафик" нажмите "Адрес общего доступа", чтобы получить доступ к нему.
 
-![Public Network Access Address](./Aliyun-SAE/017-public-network-access-address.png)
+![Адрес доступа к публичной сети](./Aliyun-SAE/017-public-network-access-address.png)
 
-> On first visit, SAE will automatically add your public IP address to the whitelist. If subsequent access fails, please update the IP whitelist.
+> При первом посещении SAE автоматически добавит ваш общедоступный IP-адрес в белый список. Если в дальнейшем получить доступ не удастся, обновите белый список IP-адресов.

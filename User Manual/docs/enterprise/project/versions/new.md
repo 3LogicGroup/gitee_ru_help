@@ -1,11 +1,11 @@
 ---
-title: Create a Version
+title: Создание версии
 ---
 
-Click on "Version" in the navigation menu of the agile project, and then click the "New Version" button in the upper right corner:
+Нажмите на "Версия" в навигационном меню проекта Agile, затем нажмите на кнопку "Новая версия" в правом верхнем углу:
 
-![Image Description](../docs/assets/image610.png)
+![Описание изображения](../docs/assets/image610.png)
 
-After filling in the version number, title, assignee, and other fields, click the 'OK' button
+После заполнения номера версии, названия, ответственного и других полей, нажмите на кнопку "OK".
 
-![Image Description](../docs/assets/image611.png)
+![Описание изображения](../docs/assets/image611.png)

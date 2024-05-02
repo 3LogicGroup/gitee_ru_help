@@ -1,12 +1,12 @@
-# LFS Server (Cloud Storage)
+# LFS Server (облачное хранилище)
 
-LFS Server storage backend is OSS, currently implemented support for Alibaba Cloud and implemented abstract interface support for Azure Blob, AWS S3, Tencent Cloud, etc.
+Бэкэнд хранилища LFS Server является OSS, в настоящее время реализована поддержка Alibaba Cloud и реализована поддержка абстрактного интерфейса для Azure Blob, AWS S3, Tencent Cloud и т.д.
 
-## LFS Server
+## LFS-сервер
 
-> Repository URL: https://gitee.com/oscstudio/lfsoss.git
+> URL репозитория: https://gitee.com/oscstudio/lfsoss.git
 
-## Build Image
+## Создайте образ
 
 - [Dockerfile](./Dockerfile)
 
@@ -15,7 +15,7 @@ $ docker build -t hub.gitee.com/library/lfsoss:v1.0.0 .
 $ docker push hub.gitee.com/library/lfsoss:v1.0.0
 ```
 
-Create Database
+Создайте базу данных
 
 ```shell
 mysql> create database lfs;
@@ -31,22 +31,22 @@ mysql> alter user gitee@'%' identified with mysql_native_password by '123456';
 Query OK, 0 rows affected (0.27 sec)
 ```
 
-## Create minio key
+## Создайте ключ minio
 
 ```shell
-# Access Key
+# Ключ доступа
 u5C4unUfImuOQrfMp9OU
 
-# Secret Key
+# Секретный ключ
 dZGu9loZ6xJNguXP9aKjA0cW9fIQFzh8BpMjMSPn
 
 ```
 
-## Modify configuration file
+## Измените файл конфигурации
 
-- [Configuration file](./config/lfsserve.json)
+- [Конфигурационный файл](./config/lfsserve.json)
 
-## Start Container
+## Запуск контейнера
 
 ```sh
 $ docker-compose up -d

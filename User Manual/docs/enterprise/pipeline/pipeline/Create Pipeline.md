@@ -1,35 +1,35 @@
 ---
-title: Create a pipeline
-Create pipeline
+title: Создание конвейера
+Создание конвейера
 slug: /enterprise/pipeline/create
 keywords:
  - Gitee
- - Create
- - Pipeline
+ - Создание
+ - Конвейер
 ---
 
-Click the **New Pipeline** button in the top right corner of the pipeline list to start creating a pipeline.
+Нажмите кнопку **Новый конвейер** в правом верхнем углу списка конвейеров, чтобы начать создание конвейера.
 
-![Create Pipeline](./assets/Create Pipeline.png)
+![Создать конвейер](./assets/Create Pipeline.png)
 
-## Select Pipeline Template
+## Выбор шаблона конвейера
 
-When creating a pipeline, select the corresponding programming language, you can view the default pipeline template under the current language, select the desired template, and then click confirm.
+При создании конвейера выберите соответствующий язык программирования, вы можете просмотреть шаблон конвейера по умолчанию для текущего языка, выбрать нужный шаблон, а затем нажать кнопку подтверждения.
 
-![Select pipeline template](./assets/Select_pipeline_template.png)
+![Выбрать шаблон конвейера](./assets/Select_pipeline_template.png)
 
-## Choose Code Source
+## Выберите источник кода
 
-After selecting the template, you can choose the code source you are using as the starting point of the pipeline.
+После выбора шаблона вы можете выбрать источник кода, который вы используете в качестве начальной точки конвейера.
 
-Select the source of the pipeline ![Select Pipeline Source](./assets/Select Pipeline Source.png)
+Выберите источник кода для конвейера ![Выберите источник конвейера](./assets/Select Pipeline Source.png)
 
-Introduction and usage of configuring code source can be found in the chapter [Pipeline Source](/enterprise/pipeline/source).
+Введение и использование настройки источника кода можно найти в главе [Источник конвейеров](/enterprise/pipeline/source).
 
-## New Creation Completed
+## Создание новго конвейера завершено
 
-After creation, you will be taken to the pipeline orchestration interface, where you can continue defining the input sources and workflow of the pipeline.
+После создания нового конвейера вы попадете в интерфейс оркестровки конвейера, где сможете продолжить определение источников входного сигнала и рабочего процесса конвейера.
 
-![Pipeline Orchestration](./assets/Pipeline Orchestration.png)
+![Оркестровка конвейеров](./assets/Pipeline Orchestration.png)
 
-For an introduction to pipeline orchestration, please refer to the article [Pipeline Layout](/enterprise/pipeline/layout).
+Для ознакомления с оркестровкой конвейеров обратитесь к статье [Расположение конвейеров](/enterprise/pipeline/layout).

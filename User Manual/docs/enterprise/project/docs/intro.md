@@ -1,6 +1,6 @@
 ---
-title: Function Introduction
+title: Знакомство с функционалом
 origin-url: https://gitee.ru/help/articles/4350
 ---
 
-Utilize Gitee Knowledge Base to share enterprise project knowledge collaboration, project documents are fully separated from enterprise documents, the knowledge base belongs to the project and allows project members to view it by default.
+Испольуйте базу знаний Gitee чтобы делиться знаниями о проектах предприятия и сотрудничестве. Документация по проекту находится отдельно от документации предприятия. База знаний принадлежит только проекту, и у участников проекта по умолчанию есть права на просмотр.

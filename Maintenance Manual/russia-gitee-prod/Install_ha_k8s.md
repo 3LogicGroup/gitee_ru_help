@@ -1,52 +1,53 @@
-# High availability deployment solution for Kubernetes clusters
+# Решение для развертывания высокой доступности для кластеров Kubernetes.
 
-## 1. High Availability Principle of Kubernetes Cluster
+## 1. Принцип высокой доступности кластера Kubernetes
 
-In a Kubernetes cluster, there are mainly two types of nodes, namely Master nodes and worker nodes.
+В кластере Kubernetes есть два основных типа узлов: главные и рабочие.
 
-The Master node is the management node of the entire Kubernetes cluster, which receives external commands and maintains the cluster status.
+Мастер-узел — это узел управления всем кластером Kubernetes, который получает внешние команды и поддерживает состояние кластера.
 
-If the master node fails, the entire cluster will lose control. The main services running on the master node are apiserver, etcd, scheduler, and controller-manager.
+Если главный узел выйдет из строя, отеряет управление весь кластер. Основными службами, работающими на главном узле, являются apiserver, etcd, планировщик и диспетчер-контроллер.
 
-Worker nodes (Node nodes) primarily perform computing tasks and run main services like kubelet and kube-proxy. When a worker node fails, Kubernetes will schedule Pods to other worker nodes without affecting the entire cluster operation, and even the impact on the application system is minimal.
+Рабочие узлы выполняют в основном вычислительные задачи и запускают основные сервисы, такие как kubelet и kube-proxy. В случае сбоя рабочего узла Kubernetes запланирует поды на другие рабочие узлы, не влияя на всю работу кластера, и даже влияние на систему приложений будет минимальным.
 
-Therefore, the high availability of the Kubernetes cluster mainly refers to the high availability of the Master node.
+Таким образом, высокая доступность кластера Kubernetes в основном относится к высокой доступности главного узла.
 
-## 2. Server basic information
+## 2. Основная информация о сервере
 
-节点角色
+
+Роль узла
 | ------------------------------ | --------- | ---------------- | ---------------------------------------------------- | ------------ | -------- | ----------------- | -------------------------------------------------- |
 | gitee-kubernetes-master1       | Amd64/X86 | Ubuntu 20.04 LTS | VCPU：8C<br />Mem：32G<br />System-Disk：200G        | 10.4.145.92  | v1.26.0  | containerd=1.6.20 | VIP：10.4.145.100                                  |
 | gitee-kubernetes-master2       | Amd64/X86 | Ubuntu 20.04 LTS | VCPU：8C<br />Mem：32G<br />System-Disk：200G        | 10.4.145.129 | v1.26.0  | containerd=1.6.20 | VIP：10.4.145.100                                  |
 | gitee-kubernetes-master3       | Amd64/X86 | Ubuntu 20.04 LTS | VCPU：8C<br />Mem：32G<br />System-Disk：200G        | 10.4.145.169 | v1.26.0  | containerd=1.6.20 | VIP：10.4.145.100                                  |
 | gitee-kubernetes-node01~node15 | Amd64/X86 |
   Ubuntu 20.04 LTS | VCPU: 16C
-Mem: 64G
-System-Disk: 200G
- | omitted         |
+Память: 64ГБ
+Системный диск: 200ГБ
+ | Пропуск |
 
-## 3. Kubernetes cluster network planning
+## 3. Проектирования сети кластера Kubernetes
 
-| Network | CIDR Range | Remarks |
+| Сеть | Диапазон CIDR | Примечания |
 | ------------ | ------------- | -------------------------------------- |
-| Pod Network | 10.200.0.0/16 | The cluster can accommodate up to 65534 Pods |
-| Service Network | 10.100.0.0/16 | Used for service discovery and load balancing within the cluster
-| calico network segment | 10.10.0.0/16 | Cross-host forwarding is achieved through route configuration on the host. |
+| Капсульная сеть | 10.200.0.0/16 | Кластер может вместить до 65534 модулей |
+| Сервисная сеть | 10.100.0.0/16 | Используется для обнаружения сервисов и балансировки нагрузки внутри кластера.
+| сегмент сети колено | 10.10.0.0/16 | Пересылка между хостами достигается посредством настройки маршрута на хосте. |
 
-> - Network Proxy: ipvs
+> - Сетевой прокси: ipvs
 >
-> - CNI component: **calico network component** Reference: k8s network Calico network
+> - Компонент CNI: **сетевой компонент Calico** Ссылка: сеть k8s Сеть Calico
 >
-> - The DNS domain is `cluster.local`. This domain is the default DNS domain for Kubernetes, used to resolve DNS records for Kubernetes Services and Pods.
+> - DNS-домен — `cluster.local`. Этот домен является доменом DNS по умолчанию для Kubernetes и используется для разрешения записей DNS для служб и модулей Kubernetes.
 >
-> Note
-The host network segment, K8s Service network segment, and Pod network segment cannot overlap.
+> Примечание
+Сегмент хост-сети, сегмент сети службы K8s и сегмент сети Pod не могут перекрываться.
 
-## 4. Installation in a high availability environment
+## 4. Установка в среде высокой доступности
 
-### 4.1 Install Environment Preparation
+### 4.1 Подготовка среды установки
 
-In order to deploy Kubernetes smoothly, some configuration work needs to be done, and the configuration work has been integrated into the following script
+Для плавного развертывания Kubernetes необходимо выполнить некоторую работу по настройке, которая была интегрирована в следующий скрипт:
 
 `pre_reboot.sh`
 
@@ -171,7 +172,7 @@ Pre-configuration before installation
 $ bash pre_reboot.sh hostname DNS_address
 ```
 
-### 4.2 Install Master Node
+### 4.2 Установка главного узла
 
 `post_reboot.sh`
 
@@ -500,15 +501,15 @@ root@gitee-kubernetes-master1:/tmp# kubeadm version
 kubeadm version: &version.Info{Major:"1", Minor:"26", GitVersion:"v1.26.3", GitCommit:"9e644106593f3f4aa98f8a84b23db5fa378900bd", GitTreeState:"clean", BuildDate:"2023-03-15T13:38:47Z", GoVersion:"go1.19.7", Compiler:"gc", Platform:"linux/amd64"}
 ```
 
-### 4.3 Install haproxy
+### 4.3 Установка haproxy
 
-haproxy is a high-performance load balancing system.
+haproxy — это высокопроизводительная система балансировки нагрузки.
 
-Implement load balancing for 3 apiservers using haproxy.
+Реализуйте балансировку нагрузки для 3-х апсерверов с помощью haproxy.
 
-The following operations are performed on master1, master2, and master3 respectively.
+Следующие операции выполняются на master1, master2 и master3 соответственно.
 
-#### Install haproxy
+#### Установите haproxy
 
 ```sh
 $ apt -y install haproxy
@@ -517,9 +518,9 @@ $ apt -y install haproxy
 $ echo 1024 61000 > /proc/sys/net/ipv4/ip_local_port_range
 ```
 
-#### Configure haproxy
+#### Настроика haproxy
 
-Configure HAProxy on all Master nodes (refer to the official HAProxy documentation for detailed configuration, all Master nodes have the same HAProxy configuration)
+Настройте HAProxy на всех главных узлах (подробную настройку см. в официальной документации HAProxy, все главные узлы имеют одинаковую конфигурацию HAProxy)
 
 ```sh
 $ sudo cp -rf /etc/haproxy/haproxy.cfg{,.bak}
@@ -588,7 +589,7 @@ EOF'
 $ sudo systemctl enable --now haproxy
 ```
 
-Enable haproxy logging
+Включить ведение журнала haproxy
 
 ```sh
 # vim /etc/haproxy/haproxy.cfg
@@ -614,19 +615,19 @@ sudo service haproxy restart
 sudo tail -f /var/log/haproxy.log
 ```
 
-### 4.4 Install keepalived
+### 4.4 Установка поддержки активности
 
-keepalived is a very popular server high availability solution. Use keepalived to implement apiserver
+Keepalived — очень популярное решение для обеспечения высокой доступности серверов. Используйте Keepalived для реализации API-сервера
 
-The following operations are performed on master1, master2, and master3 respectively.
+Следующие операции выполняются на master1, master2 и master3 соответственно.
 
-#### Install keepalived
+#### Установка поддержки активности
 
 ```sh
 $ sudo apt -y install keepalived
 ```
 
-#### Configure keepalived
+#### Настройка keepalived
 
 master1
 
@@ -739,9 +740,9 @@ vrrp_instance VI_1 {
 }
 ```
 
-#### Health Check Script
+#### Скрипт проверки работоспособности
 
-All Master nodes configure KeepAlived health check file:
+Все главные узлы настраивают файл проверки работоспособности KeepAlived:
 
 ```sh
 $ cat >/etc/keepalived/check_apiserver.sh<<"EOF"
@@ -766,7 +767,7 @@ $ chmod +x /etc/keepalived/check_apiserver.sh
 $ sudo systemctl enable --now keepalived
 ```
 
-Start haproxy and keepalived:
+Запустите haproxy и keepalived:
 
 ```sh
 $ systemctl daemon-reload
@@ -774,7 +775,7 @@ $ systemctl enable --now haproxy
 $ systemctl enable --now keepalived
 ```
 
-If high availability is implemented using HAProxy and KeepAlived, test if the VIP is working properly.
+Если высокая доступность реализована с помощью HAProxy и KeepAlived, проверьте, правильно ли работает VIP.
 
 ```sh
 ## Perform Ping Test on All Nodes
@@ -795,32 +796,32 @@ telnet> quit
 Connection closed.
 ```
 
-If ping is not available and telnet does not appear, the VIP is considered unavailable.
+Если пинг недоступен и telnet не отображается, VIP считается недоступным.
 
-If VIP is not available, further execution should not continue. VIP issues, such as firewall and SELinux, HAProxy and Keepalived status, and whether the listening ports are normal, need to be investigated.
+Если VIP недоступен, дальнейшее выполнение не должно продолжаться. Необходимо изучить проблемы VIP, такие как брандмауэр и статус SELinux, HAProxy и Keepalived, а также исправность портов прослушивания.
 
-### 4.5 Initializing Master Node
+### 4.5 Инициализация главного узла
 
-Next, initialize the Master node. It's important to note that only one Master node needs to be initialized, and the remaining Master nodes join using the kubeadm join command.
+Затем инициализируйте главный узел. Важно отметить, что необходимо инициализировать только один главный узел, а остальные главные узлы присоединяются с помощью команды kubeadm join.
 
-Initialization command for master1:
+Команда инициализации для master1:
 
-#### Command line initialization of k8s
+#### Инициализация k8s из командной строки
 
 ```sh
 # kubeadm init --apiserver-advertise-address=192.168.101.21 --control-plane-endpoint=192.168.101.18 --apiserver-bind-port=6443 --kubernetes-version=v1.26.3 --pod-network-cidr=10.200.0.0/16 --service-cidr=10.100.0.0/16 --service-dns-domain=cluster.local --image-repository=registry.cn-hangzhou.aliyuncs.com/google_containers --ignore-preflight-errors=swap
 ```
 
-#### Initialize k8s based on the init file
+#### Инициализируем k8s на основе файла инициализации
 
-Output default configuration to file
+Вывод конфигурации по умолчанию в файл
 
 ```sh
 sudo sh -c 'kubeadm config print init-defaults > kubeadm-init.yaml'
 sudo cp -rf kubeadm-init.yaml kubeadm-init.yaml.bak
 ```
 
-**Modified Initialization File Content**
+**Измененное содержимое файла инициализации**
 
 `kubeadm-init.yaml`
 
@@ -880,7 +881,7 @@ kind: KubeProxyConfiguration
 mode: ipvs
 ```
 
-File-based execution of k8s master initialization
+Инициализация k8s
 
 ```sql
 root@k8s-master-1:/home/containerd# kubeadm init --upload-certs --config kubeadm-init.yaml
@@ -959,7 +960,7 @@ kubeadm join 10.4.145.100:16443 --token abcdef.0123456789abcdef \
 
 ```
 
-**According to the instructions, the following actions need to be performed to use the cluster**
+**Согласно инструкции, для использования кластера необходимо выполнить следующие действия**
 
 ```ruby
 root@gitee-kubernetes-master1:/tmp# mkdir -p $HOME/.kube
@@ -967,9 +968,9 @@ root@gitee-kubernetes-master1:/tmp# sudo cp -i /etc/kubernetes/admin.conf $HOME/
 root@gitee-kubernetes-master1:/tmp# sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
-### 4.6 Install Calico Network
+### 4.6 Установка сети Calico
 
-Perform the following operations in the master node, select to use the calico network plugin here
+Выполните следующие операции на главном узле, используйте сетевой плагин Calico.
 
 ```sh
 root@gitee-kubernetes-master1:~/workdir/kubernetes_install/calico# wget https://raw.githubusercontent.com/projectcalico/calico/v3.26.1/manifests/calico.yaml
@@ -996,15 +997,15 @@ default-ipv4-ippool   10.10.0.0/16
 calicoctl get node
 ```
 
-#### Calico IPIP network usage instructions
+#### Инструкции по использованию сети Calico IPIP
 
-[Calico-cni Network Plugin](./Calico-cni.md)
+[Сетевой плагин Calico-cni](./Calico-cni.md)
 
-### 4.7 Join the remaining Master nodes
+### 4.7 Присоединяйтесь к остальным мастер-узлам
 
-Next, add the master2 and master3 nodes to the control plane of the master nodes.
+Затем добавьте узлы master2 и master3 в плоскость управления главных узлов.
 
-Perform the following commands on master2 and master3 respectively, where the command for master2 node is as follows:
+Выполните следующие команды на master2 и master3 соответственно, где команда для узла master2 выглядит следующим образом:
 
 ```sh
 kubeadm join 10.4.145.100:16443 --token abcdef.0123456789abcdef \
@@ -1012,7 +1013,7 @@ kubeadm join 10.4.145.100:16443 --token abcdef.0123456789abcdef \
       --control-plane --certificate-key 1ffac4970d53e793a1387ae4356949e8e4255c05574573dca2bd4ec73e369f38
 ```
 
-After the command execution is completed, check the status of the Pods in the cluster again, as shown below:
+После завершения выполнения команды еще раз проверьте состояние подов в кластере, как показано ниже:
 
 ```sh
 root@gitee-kubernetes-master1:/home/ubuntu# kubectl get node
@@ -1046,15 +1047,15 @@ kube-system   kube-scheduler-gitee-kubernetes-master2            1/1     Running
 kube-system   kube-scheduler-gitee-kubernetes-master3            1/1     Running   0              116s
 ```
 
-You can find that important components like apiserver, controller-manager, etcd, and scheduler are already running on 3 nodes.
+Вы можете увидеть, что важные компоненты, такие как apiserver, контроллер-менеджер, планировщи и т. д. уже работают на трех узлах.
 
-At this point, in the statistics report interface of haproxy, it can be seen that all 3 Master nodes have turned green.
+На этом этапе в интерфейсе статистического отчета haproxy видно, что все 3 главных узла стали зелеными.
 
 - https://haproxy.autom.studio/haproxy-status
 
-4.8 Join worker nodes
+4.8 Присоединение к рабочим узлам
 
-Joining a worker node is relatively simple. After installing all the required components such as kubectl, kubelet, and kubeadm in the installation environment, use the command provided by the system during the initialization of master01. In this example, the join command is:
+Присоединиться к рабочему узлу просто. После установки в среду всех необходимых компонентов, таких как kubectl, kubelet и kubeadm, используйте команду, предоставленную системой во время инициализации master01. В этом примере команда соединения:
 
 ```sh
 View token
@@ -1064,9 +1065,9 @@ kubeadm join 10.4.145.100:16443 --token x7j9gh.fw5mslqrn5w8hjvz --discovery-toke
 $ kubeadm join 10.4.145.100:16443 --token x7j9gh.fw5mslqrn5w8hjvz --discovery-token-ca-cert-hash sha256:e0138c2df859fb695753e13273372da733144e7dc95634a20b49f42c5b36e76c
 ```
 
-## 5. Install common tools
+## 5. Установите общие инструменты
 
-### 5.1 Install kubectl
+### 5.1 Установите kubectl
 
 ```sh
 root@gitee-sre2:/home/ubuntu# apt-get -y install bash-completion
@@ -1094,7 +1095,7 @@ EOF
 source  ~/.bashrc
 ```
 
-### 5.2 Install helm
+### 5.2 Установите helm
 
 ```sh
 # helm
@@ -1112,17 +1113,17 @@ $ helm completion bash > /etc/bash_completion.d/helm
 $ echo "helm completion bash > /etc/bash_completion.d/helm" >>  ~/.bashrc
 ```
 
-> How to Accelerate?
+> Как ускорить?
 
-[DaoCloud/public-binary-files-mirror: Many binary files are overseas. It is slow to download in China and needs acceleration. (github.com)](https://github.com/DaoCloud/public-binary-files-mirror?tab=readme-ov-file)
+[DaoCloud/public-binary-files-mirror: Многие бинарные файлы находятся за границей. В Китае загружается медленно и требует ускорения. (github.com)](https://github.com/DaoCloud/public-binary-files-mirror?tab=readme-ov-file)
 
-### 5.3 Kubectx Kubens and fzf
+### 5.3 Kubectx Kubens и fzf
 
-In general, there may be multiple clusters, such as development/testing/production, local or cloud clusters. Kubectx and Kubens can be used to quickly switch between different clusters and namespaces.
+Как правило, может существовать несколько кластеров, таких как кластеры разработки/тестирования/производства, локальные или облачные кластеры. Kubectx и Kubens можно использовать для быстрого переключения между различными кластерами и пространствами имен.
 
-In addition, fzf provides an interactive way to switch contexts, so you don't have to remember any clusters or namespaces.
+Кроме того, fzf предоставляет интерактивный способ переключения контекстов, поэтому вам не нужно запоминать какие-либо кластеры или пространства имен.
 
-Install dependencies for kubectx and kubens:
+Установите зависимости для kubectx и kubens:
 
 ```sh
 Download kubectx and kubens script files
@@ -1138,9 +1139,9 @@ echo 'source ~/.kubectx/completion/kubens.bash' >> ~/.bash_profile
 source ~/.bash_profile
 ```
 
-kubectx and kubens have been successfully installed.
+kubectx и kubens были успешно установлены.
 
-To install fzf, follow the steps below:
+Чтобы установить fzf, выполните следующие действия:
 
 ```sh
 # 1. Download and install fzf
@@ -1153,13 +1154,13 @@ echo '[ -f ~/.fzf.bash ] && source ~/.fzf.bash' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-Now, fzf has been successfully installed.
+Теперь fzf успешно установлен.
 
-Please note that before installation, make sure that your system has installed git and curl.
+Перед установкой убедитесь, что в вашей системе установлены git и curl.
 
-5.4 kubectl plugin manager krew
+5.4 Менеджер плагинов kubectl krew
 
-Manually install linux-x86_64
+Установите Linux-x86_64 вручную.
 
 ```sh
 wget https://github.com/kubernetes-sigs/krew/releases/download/v0.4.4/krew-linux_amd64.tar.gz
@@ -1171,7 +1172,7 @@ echo 'export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-Using krew
+Использование команды
 
 ```cmake
 kubectl krew search               # Display all plugins
@@ -1183,13 +1184,13 @@ kubectl krew remove view-secret   # Uninstall the plugin
 
 ### 5.5 kubectl-neat
 
-Project URL: kubectl-neat(opens new window)
+URL проекта: kubectl-neat(откроется в новом окне)
 
-Project description: A tool that removes unnecessary information when exporting yaml using kubectl with -o
+Описание проекта: Инструмент, удаляющий ненужную информацию при экспорте yaml с помощью kubectl с -o
 
 https://github.com/itaysk/kubectl-neat
 
-Simply download the binary file to /usr/local/bin.
+Просто загрузите двоичный файл в /usr/local/bin.
 
 ```sh
 $ wget "https://github.com/itaysk/kubectl-neat/releases/download/v2.0.3/kubectl-neat_linux_amd64.tar.gz"
@@ -1197,7 +1198,7 @@ $ tar zxvf kubectl-neat_linux_amd64.tar.gz
 $ mv kubectl-neat /usr/local/bin/
 ```
 
-Alternatively, install the following, Go development environment is required
+Альтернативно установите следующее среда разработки Go.
 
 ```sh
 $ git clone https://github.com/itaysk/kubectl-neat.git
@@ -1206,14 +1207,14 @@ $ go build .
 $ mv kubectl-neat /usr/local/bin/
 ```
 
-## 6. Kubernetes Node Scheduling Plan
+## 6. План проектирования узла Kubernetes
 
-{"节点名称"=>"gitee-kubernetes-node13", "ROLES"=>"Amd64/X86", "IP"=>"10.4.145.144", "标签"=>"污点", "备注"=>"redis cluster migration"}
+{"Узел"=>"gitee-kubernetes-node13", "Роли"=>"Amd64/X86", "IP"=>"10.4.145.144", "Метка"=>"Ограничение", "Примечание" => "Миграция кластера Redis"}
 | ----------------------- | ------ | ----------------------------------------------- | ------------------------------ | ------------------------------------------------ | ----------------------------------- |
-| master                  | master | 10.4.145.92<br />10.4.145.129<br />10.4.145.169 | node-role.kubernetes.io/master | node-role.kubernetes.io/control-plane:NoSchedule | Master node is not allowed to deploy non-system Pods.
+| master                  | master | 10.4.145.92<br />10.4.145.129<br />10.4.145.169 | node-role.kubernetes.io/master | node-role.kubernetes.io/control-plane:NoSchedule | Master узлу не разрешено развертывать несистемные модули.
 | gitee-kubernetes-node01 | worker | 10.4.145.107
   \                                   | node_role=giteeInternal        | GiteeInternalOnly=yes:NoSchedule
-  \                | Internal 标签的 Pod                 |
+  \                | Pod  c меткой Internal                |
 gitee-kubernetes-node02
 gitee-kubernetes-node03
 gitee-kubernetes-node04
@@ -1221,23 +1222,23 @@ gitee-kubernetes-node05
 | gitee-kubernetes-node06 | worker | 10.4.145.113
 | gitee-kubernetes-node07 | worker | 10.4.145.34
   \                                    | node_role=giteeRuby            | GiteeRubyOnly=yes:NoSchedule
-  \                    | Ruby 标签的 pod                     |
+  \                    | Pod  c меткой Ruby                     |
 gitee-kubernetes-node08
 | gitee-kubernetes-node09 | worker | 10.4.145.57
   \                                    | node_role=giteeFrontend        | GiteeFrontendOnly=yes:NoSchedule
   \                | Frontend pod                 |
 | gitee-kubernetes-node10 | worker | 10.4.145.116
   \                                   | node_role=giteeFrontend        | GiteeFrontendOnly=yes:NoSchedule
-  \                | Frontend 标签的 pod                 |
+  \                | Pod  c меткой Frontend                |
 gitee-kubernetes-node11
 | gitee-kubernetes-node12 | worker | 10.4.145.123 | node_role=giteeMonitor | No taint | Pod with Monitor label.
 gitee-kubernetes-node13
 | gitee-kubernetes-node14 | worker | 10.4.145.53
   \                                    | node_role=giteeRuby            | GiteeRubyOnly=yes:NoSchedule
-  \                    | Ruby 标签的 pod                     |
+  \                    | Pod с меткой Ruby                     |
 gitee-kubernetes-node15
 
-The commands to set tags and taints are as follows:
+Команды для установки тегов и меток следующие:
 
 ```sh
 # ----------------gitee k8s--------------------------
@@ -1300,7 +1301,7 @@ kubectl describe nodes gitee-kubernetes-node04|grep -A 5 Taints
 ....
 ```
 
-For more operations, refer to the following:
+Дополнительные операции см. в следующих разделах:
 
 ```sh
 Kubernetes Advanced Scheduling
@@ -1336,9 +1337,9 @@ Delete labels
 kubectl label nodes 172.18.0.66 node_role-
 ```
 
-## 7. Deploy Metrics
+## 7. Развертывание метрик
 
-In newer versions of Kubernetes, metrics collection for system resources is done using Metrics-server, which can collect memory, disk, CPU, and network usage of nodes and pods.
+В новых версиях Kubernetes сбор метрик для системных ресурсов осуществляется с помощью Metrics-сервера, который может собирать данные об использовании памяти, диска, ЦП и сети узлов и модулей.
 
 ```sh
 root@ctrl:~# git clone https://github.com/kubernetes-sigs/metrics-server
@@ -1402,7 +1403,7 @@ metrics-server-6776c5c959-5plm8            1/1     Running   0               88s
 # [metrics-server] pod has been deployed
 ```
 
-Validation
+Валидация
 
 ```sh
 root@ctrl:~# k top node
@@ -1428,11 +1429,11 @@ calico-node-bv6zm                                  45m          94Mi
 .....
 ```
 
-## 8. Deploy Dashboard
+## 8. Развертывание информационной панели
 
-helm deployment
+развертывание helm
 
-Chart Repository URL
+URL-адрес репозитория диаграмм
 
 ```sh
 $ helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/
@@ -1491,7 +1492,7 @@ Get the Kubernetes Dashboard URL by running:
   echo https://$NODE_IP:$NODE_PORT/
 ```
 
-Check the deployment status of kubernetes-dashboard
+Проверьте статус развертывания kubernetes-dashboard.
 
 ```sh
 $ kubectl get pods,svc -n kubernetes-dashboard | grep kubernetes-dashboard
@@ -1499,7 +1500,7 @@ pod/kubernetes-dashboard-5486c8f5bf-xff6r   1/1     Running   0          45s
 service/kubernetes-dashboard   NodePort   192.168.48.88   <none>        443:30443/TCP   45s
 ```
 
-Set login token information
+Установить информацию токена входа
 
 ```sh
 $ cat >admin.yaml<<EOF
@@ -1554,9 +1555,9 @@ kubectl -n kubernetes-dashboard describe secret $(kubectl -n kubernetes-dashboar
 # Get token value for logging in
 ```
 
-Access the https://node01IP:30443/ to see the login interface.
+Откройте https://node01IP:30443/, чтобы увидеть интерфейс входа в систему.
 
-You can use nginx for reverse proxy, nginx configuration is as follows
+Вы можете использовать nginx для обратного прокси, конфигурация nginx выглядит следующим образом.
 
 `kubernetes-dashboard.conf`
 
@@ -1605,35 +1606,35 @@ server {
 }
 ```
 
-## 9. Cloud-Native Storage Rook
+## 9. Облачное хранилище Rook
 
-### 9.1 Motivation
+### 9.1 Мотивация
 
-{"description"=>"云环境 kubernetes 集群要使用后端存储有很多选择，比如 oss ， nas ， 云盘等。但是有时候我们可能会出于其他各种原因需要自建存储服务器来为 kubernetes 提供存储卷，一般我们都会选择 ceph 存储，但如果使用物理机或者 ecs去部署，需要花费大量人力不说，维护起来也相当割裂，幸好有 rook ceph 这种方案，很好地与云原生环境集成，可以让 ceph 直接跑在 kubernetes集群上，这样一来便可大大方便维护还是管理。"}
+{"описание"=>"В облачной среде для кластера Kubernetes существует множество вариантов использования хранилища, таких как OSS, NAS, облачные диски и т. д. Однако по разным причинам иногда нам может потребоваться создать собственный сервер хранения для предоставления томов хранения Kubernetes. Обычно мы выбираем хранилище Ceph, но если для развертывания используются физические серверы или ECS, это потребует значительных затрат как по части трудозатрат, так и по сложности поддержки. К счастью, существует такое решение, как Rook Ceph, которое отлично интегрируется в облачную среду, позволяя Ceph запускаться непосредственно на кластере Kubernetes. Это существенно облегчает процесс поддержки и управления"}
 
-### 9.2 Prerequisites
+### 9.2 Предварительные условия
 
-1. In the production environment, at least 3 nodes are needed to be used as OSD nodes for storing data.
-Each OSD node must have at least one raw disk for initialization when deploying rook ceph.
-3. We are using a higher version of rook ceph, which requires Kubernetes version 1.22 or higher.
+1. В производственной среде необходимо использовать как минимум 3 узла в качестве узлов OSD для хранения данных.
+Каждый узел OSD должен иметь по крайней мере один необработанный диск для инициализации при развертывании rook ceph.
+2. Мы используем более позднюю версию rook ceph, для которой требуется Kubernetes версии 1.22 или выше.
 
-| Name          | Information                                                       |
-| --------------- | ------------------------------------------------------------------- |
-| Node Configuration       | 16c64g 200G SSD *1 500G SSD *1 (one system disk and one ceph metadata) Number of Nodes 3 |
-| Kubernetes Cluster | v1.26.0 |
-| helm            | v3.8.0                                                              |
-| Rook            | v1.13.1                                                             |
-| Ceph            | v18.2.1                                                             |
-| Mon Component | 3 |
-| Mgr Component | 2 |
+| Имя | Информация |
+| --------------- | -------------------------------------------------- ----------------- |
+| Конфигурация узла | 16c64g SSD 200 ГБ *1 SSD 500 ГБ *1 (один системный диск и один ceph для метаданных) Количество узлов 3 |
+| Кластер Kubernetes | v1.26.0 |
+| helm | v3.8.0 |
+| Rook | v1.13.1 |
+| Ceph | v18.2.1 |
+| Mon Компонент | 3 |
+| Mgr Компонент | 2 |
 
-### 9.3 Deployment
+### 9.3 Развертывание
 
-#### K8S Cluster Preparation
+#### Подготовка кластера K8S
 
-Rook 1.13 supports Kubernetes v1.23 or higher versions.
+Rook 1.13 поддерживает Kubernetes v1.23 или более поздние версии.
 
-The Kubernetes cluster used in this article is as follows:
+Кластер Kubernetes, используемый в этой статье, выглядит следующим образом:
 
 ```sh
 $ kubectl get node
@@ -1655,11 +1656,11 @@ gitee-kubernetes-node11    Ready    <none>          20d   v1.26.3
 gitee-kubernetes-node12    Ready    <none>          20d   v1.26.3
 ```
 
-Regarding the configuration of the container runtime, the container runtime of this Kubernetes cluster is Containerd.
+Что касается конфигурации среды выполнения контейнера, средой выполнения контейнера этого кластера Kubernetes является Containerd.
 
-Note that if the Containerd systemd configuration containerd.service has the `LimitNOFILE=infinity` configuration, there will be issues with the Ceph Mon component when starting the Ceph cluster using Rook. The `ms_dispatch` process will continuously consume 100% CPU. The Rook community has discussed this issue in two ISSUES, ISSUE 11253 (https://github.com/rook/rook/issues/11253) and ISSUE 10110 (https://github.com/rook/rook/issues/10110). It is necessary to set a suitable value for `LimitNOFILE`, and in my case, I have set it to `1048576`.
+Обратите внимание, что если конфигурация systemd ContainerdContainerd.service имеет конфигурацию `LimitNOFILE=infinity`, возникнут проблемы с компонентом Ceph Mon при запуске кластера Ceph с использованием Rook. Процесс ms_dispatch будет постоянно загружать процессор на 100%. Сообщество Rook обсуждало эту проблему в двух РЕЛИЗАХ: РЕЛИЗ 11253 (https://github.com/rook/rook/issues/11253) и РЕЛИЗ 10110 (https://github.com/rook/rook/issues/10110). . Необходимо установить подходящее значение для LimitNOFILE, в моем случае я установил его на 1048576.
 
-How to fix?
+Как исправить?
 
 ```bash
 $ cat >/etc/systemd/system/containerd.service.d/LimitNOFILE.conf<<EOF
@@ -1670,16 +1671,16 @@ $ systemctl daemon-reload
 $ systemctl restart containerd
 ```
 
-#### Local Storage Preparation (LVM logical volume)
+#### Подготовка локального хранилища (логический том LVM)
 
-To configure a Ceph storage cluster, you need at least one of the following local storage options:
+Чтобы настроить кластер хранения Ceph, вам нужен по крайней мере один из следующих вариантов локального хранилища:
 
-- Raw devices (without partition or formatted file system)
-- Raw partitions (without formatted file system)
-- LVM logical volume (without formatted file system)
-- A persistent volume provided in block mode within a storage class.
+- Необработанные устройства (без разделов и отформатированной файловой системы)
+- Необработанные разделы (без отформатированной файловой системы)
+- Логический том LVM (без форматированной файловой системы)
+— Постоянный том, предоставляемый в блочном режиме внутри класса хранилища.
 
-We will use `LVM logical volume` as the local storage.
+Мы будем использовать «логический том LVM» в качестве локального хранилища.
 
 gitee-kubernetes-node09~gitee-kubernetes-node11
 
@@ -1697,7 +1698,7 @@ root@gitee-kubernetes-node11:/home/ubuntu# fdisk -l | grep /dev/vdb
 Disk /dev/vdb: 500 GiB, 536870912000 bytes, 1048576000 sectors
 ```
 
-> Note: Before performing the following steps, make sure there are no important data on the disk, as these steps will erase all data on the disk.
+> Примечание. Прежде чем выполнять следующие действия, убедитесь, что на диске нет важных данных, поскольку эти действия приведут к удалению всех данных на диске.
 
 ```sh
 # First, create physical volumes
@@ -1717,9 +1718,9 @@ Delete LVM
 #pvremove /dev/vdb
 ```
 
-Because the local storage required by the Ceph cluster is LVM logical volumes that are not formatted as a file system, be sure not to use 'mkfs.ext4' or 'mkfs.xfs' to format the logical volume.
+Поскольку локальное хранилище, требуемое кластером Ceph, представляет собой логические тома LVM, которые не отформатированы как файловая система, не используйте «mkfs.ext4» или «mkfs.xfs» для форматирования логического тома.
 
-Finally, check the logical volume:
+Наконец, проверьте логический том:
 
 ```sh
 $ lvdisplay
@@ -1741,21 +1742,21 @@ $ lvdisplay
   Block device           253:0
 ```
 
-#### Configure Time Synchronization
+#### Настройка синхронизации времени
 
-Pay attention to setting the time synchronization of each server node, whether this is important, otherwise if the time of each server node is not synchronized, the rook ceph operator may not work properly when operating the ceph mon component.
+Обратите внимание на настройку синхронизации времени каждого узла сервера, важно ли это, иначе, если время каждого узла сервера не синхронизировано, оператор rook ceph может работать неправильно при работе компонента ceph mon.
 
-It is recommended to use chronyd for time synchronization.
+Для синхронизации времени рекомендуется использовать chronyd.
 
-#### Install helm
+#### Установить helm
 
-Refer to 5.2 Install helm
+См. 5.2 Установка helm.
 
-#### Deploy Rook Operator
+#### Развертывание оператора Rook
 
-We schedule Ceph's mon, osd, mrg, etc. to gitee-kubernetes-node09,
+Мы планируем mon, osd, mrg и т. д. Ceph в gitee-kubernetes-node09,
 
-Label the following 3 nodes with 'role=ceph' and add the taint 'GiteeFrontendOnly=yes:NoSchedule'
+Пометьте следующие три узла как «role=ceph» и добавьте запятнание «GiteeFrontendOnly=yes:NoSchedule».
 
 ```sh
 # kubectl label node gitee-kubernetes-node09 role=ceph
@@ -1770,9 +1771,9 @@ kubectl taint nodes gitee-kubernetes-node10 GiteeFrontendOnly=yes:NoSchedule
 kubectl taint nodes gitee-kubernetes-node11 GiteeFrontendOnly=yes:NoSchedule
 ```
 
-We will deploy the rook ceph operator using the Rook Helm Chart.
+Мы развернем оператор цефа ладьи, используя диаграмму Rook Helm.
 
-Rook currently publishes the built version of Ceph Operator to the release and master channels. The release channel contains the latest stable version of Rook.
+В настоящее время Rook публикует встроенную версию Ceph Operation на каналах Release и Master. Канал выпуска содержит последнюю стабильную версию Rook.
 
 ```sh
 $ helm repo add rook-release https://charts.rook.io/release
@@ -1780,7 +1781,7 @@ $ helm repo update
 #$ helm install --create-namespace --namespace rook-ceph rook-ceph rook-release/rook-ceph -f values.yaml
 ```
 
-Or download the rook-ceph helm chart from https://charts.rook.io/release/rook-ceph-v1.13.1.tgz, and then use the following command to install:
+Или загрузите диаграмму управления rook-ceph с https://charts.rook.io/release/rook-ceph-v1.13.1.tgz, а затем используйте следующую команду для установки:
 
 ```sh
 $ helm pull rook-release/rook-ceph --version v1.13.1 --untar
@@ -1788,9 +1789,9 @@ $ helm pull rook-release/rook-ceph --version v1.13.1 --untar
 $ helm install --create-namespace --namespace rook-ceph rook-ceph rook-ceph-v1.13.1.tgz -f values.yaml
 ```
 
-Regarding the content configured in values.yaml, you can customize it as needed based on the documentation at https://github.com/rook/rook/blob/master/deploy/charts/rook-ceph-cluster/values.yaml.
+Что касается содержимого, настроенного в файле values.yaml, вы можете настроить его по мере необходимости на основе документации по адресу https://github.com/rook/rook/blob/master/deploy/charts/rook-ceph-cluster/values.yaml.
 
-The following is the current customization I have made, mainly configuring the use of a private image repository address when deploying Rook Operator and Ceph, as well as scheduling related configurations.
+Ниже приведены текущие настройки, которые я сделал, в основном настраивая использование адреса частного репозитория изображений при развертывании Оператора Rook и Ceph, а также планируя соответствующие конфигурации.
 
 `values-prod.yaml`
 
@@ -1869,7 +1870,7 @@ admissionController:
               - ceph
 ```
 
-Deployment
+Развертывание
 
 ```sh
 $ kubectl create ns rook-ceph
@@ -1877,7 +1878,7 @@ $ cd rook-ceph
 $ helm install -n rook-ceph rook-ceph -f values-prod.yaml .
 ```
 
-After the deployment is complete, confirm that rook-ceph-operator is started normally:
+После завершения развертывания убедитесь, что rook-ceph-operator запускается нормально:
 
 ```sh
 $ kubectl get pods -n rook-ceph -l "app=rook-ceph-operator"
@@ -1885,27 +1886,27 @@ NAME                                  READY   STATUS    RESTARTS   AGE
 rook-ceph-operator-5bb7fbf69c-hn785   1/1     Running   0          64s
 ```
 
-#### Create Ceph cluster
+#### Создание кластера Ceph
 
-##### Reference Documentation
+##### Справочная документация
 
-Rook documentation focuses on starting Rook in various environments. When creating a Ceph cluster, customization can be considered based on the example cluster manifest below:
+Документация Rook посвящена запуску Rook в различных средах. При создании кластера Ceph можно рассмотреть возможность настройки на основе примера манифеста кластера ниже:
 
-- [cluster.yaml](https://github.com/rook/rook/blob/release-1.12/deploy/examples/cluster.yaml): Cluster settings for the production cluster running on bare metal. Requires at least three worker nodes.
-- [cluster-on-pvc.yaml](https://github.com/rook/rook/blob/release-1.12/deploy/examples/cluster-on-pvc.yaml): Cluster setup for a production cluster running in a dynamic cloud environment.
-- cluster-test.yaml: Used for cluster settings in the test environment (such as minikube).
+- [cluster.yaml](https://github.com/rook/rook/blob/release-1.12/deploy/examples/cluster.yaml): настройки кластера для производственного кластера, работающего на «голом железе». Требуется как минимум три рабочих узла.
+- [cluster-on-pvc.yaml](https://github.com/rook/rook/blob/release-1.12/deploy/examples/cluster-on-pvc.yaml): настройка кластера для рабочего кластера, работающего в динамическая облачная среда.
+-uster-test.yaml: используется для настроек кластера в тестовой среде (например, minikube).
 
-For more detailed information, refer to Ceph example configuration
+Для получения более подробной информации обратитесь к примеру конфигурации Ceph.
 
-Rook Ceph Operator has been deployed and running successfully, and we can now create a Ceph cluster using 'cluster.yaml'.
+Оператор Rook Ceph развернут и успешно работает, и теперь мы можем создать кластер Ceph, используя «cluster.yaml».
 
-##### Create Cluster
+##### Создать кластер
 
 ```sh
 $ git clone --single-branch --branch v1.13.1 https://github.com/rook/rook.git
 ```
 
-Based on [cluster-prod.yaml](https://github.com/rook/rook/blob/release-1.12/deploy/examples/cluster.yaml), customize our own cluster.yaml. Here are the modifications that only include cluster.yaml:
+На основе [cluster-prod.yaml](https://github.com/rook/rook/blob/release-1.12/deploy/examples/cluster.yaml) настройте собственный файл Cluster.yaml. Вот модификации, которые включают только файл Cluster.yaml:
 
 ```yaml
 apiVersion: ceph.rook.io/v1
@@ -1960,20 +1961,20 @@ spec:
           effect: "PreferNoSchedule"
 ```
 
-Because the local storage of the Ceph cluster will use the previously created unformatted file system's LVM logical volume, the logical volume we created is named `osd`, belongs to the volume group `ceph`, and has the path `/dev/ceph/osd`.
+Поскольку локальное хранилище кластера Ceph будет использовать ранее созданный логический том LVM неформатированной файловой системы, созданный нами логический том называется `osd`, принадлежит группе томов `ceph` и имеет путь `/dev/ceph/osd`.
 
-Rook started supporting the use of LVM logical volumes as local storage from version 1.9. The implementation code for this is in the PR https://github.com/rook/rook/pull/7967. The documentation in the CephCluster CRD (https://rook.io/docs/rook/v1.13/CRDs/Cluster/ceph-cluster-crd/) is not very detailed on how to use logical volumes for storage. Based on the implementation code in the PR, the current configuration requires specifying `spec.storage.devices[].name` in the CephCluster resource definition as `/dev/disk/by-id/dm-name-<vgName>-<lvName>`.
+Рук начал поддерживать использование логических томов LVM в качестве локального хранилища с версии 1.9. Код реализации для этого находится в PR https://github.com/rook/rook/pull/7967. Документация в CRD CephCluster (https://rook.io/docs/rook/v1.13/CRDs/Cluster/ceph-cluster-crd/) не очень подробно описывает, как использовать логические тома для хранения. Основываясь на коде реализации в запросе на слияние, текущая конфигурация требует указания `spec.storage.devices[].name` в определении ресурса CephCluster как `/dev/disk/by-id/dm-name-<vgName>-< lvName>`.
 
-Therefore, the value of `devices[].name` in the `spec.storage` section of our cluster.yaml configuration is `/dev/disk/by-id/dm-name-ceph-osd`.
+Таким образом, значение `devices[].name` в разделе `spec.storage` конфигурации кластера.yaml равно `/dev/disk/by-id/dm-name-ceph-osd`.
 
-Create Ceph Cluster:
+Создайте кластер Ceph:
 
 ```sh
 $ kubectl create -f cluster-prod.yaml
 cephcluster.ceph.rook.io/rook-ceph created
 ```
 
-Verify if the cluster is running by inspecting the pods in the rook-ceph namespace.
+Убедитесь, что кластер работает, проверив модули в пространстве имен rook-ceph.
 
 ```sh
 $ kubectl get pod
@@ -2007,11 +2008,11 @@ rook-ceph-osd-prepare-gitee-kubernetes-node11-p92dn               0/1     Comple
 rook-ceph-tools-5996f89559-b4tch                                  1/1     Running     0              18h
 ```
 
-The number of OSD pods depends on the number of nodes in the cluster and the number of configured devices. For the default cluster.yaml mentioned above, an OSD will be created for each available device found on each node.
+Количество модулей OSD зависит от количества узлов в кластере и количества настроенных устройств. Для упомянутого выше файла Cluster.yaml по умолчанию OSD будет создан для каждого доступного устройства, найденного на каждом узле.
 
-If there are any issues during the creation process, you can check the logs of the `rook-ceph-operator` Pod.
+Если в процессе создания возникли какие-либо проблемы, вы можете проверить журналы пода rook-ceph-operator.
 
-To re-run the `rook-ceph-osd-prepare-<nodename>` Job, scan for available local storage to add OSD, you can run the following command:
+Чтобы повторно запустить задание `rook-ceph-osd-prepare-<nodename>`, просканировать доступное локальное хранилище для добавления OSD, вы можете запустить следующую команду:
 
 ```sh
 # Delete old jobs
@@ -2020,11 +2021,11 @@ $ kubectl get job -n rook-ceph | awk '{system("kubectl delete job "$1" -n rook-c
 $ kubectl rollout restart deploy rook-ceph-operator  -n rook-ceph
 ```
 
-To determine if each OSD on a node can be successfully added, pay attention to the logs of the 'rook-ceph-osd-prepare-<nodename>' Job corresponding to the Pod.
+Чтобы определить, можно ли успешно добавить каждое OSD на узле, обратите внимание на журналы задания «rook-ceph-osd-prepare-<nodename>», соответствующего поду.
 
-#### Verify Cluster Status
+#### Проверка состояния кластера
 
-To verify the health status of the cluster, Rook Toolbox is required.](https://rook.io/docs/rook/v1.13/Troubleshooting/ceph-toolbox/)
+Для проверки состояния работоспособности кластера требуется Rook Toolbox.(https://rook.io/docs/rook/v1.13/Troubleshooting/ceph-toolbox/)
 
 ```sh
 $ kubectl apply -f https://raw.githubusercontent.com/rook/rook/release-1.13/deploy/examples/toolbox.yaml
@@ -2033,8 +2034,7 @@ $ kubectl get po -n rook-ceph | grep rook-ceph-tools
 rook-ceph-tools-68b98695bb-gh76t                  1/1     Running     0             23s
 ```
 
-> 注: 当前 release-1.13/deploy/examples/toolbox.yaml
-  中的 Ceph 镜像还是 v17.2.6，可以手动修改成 v18.2.1 还需加上污点容忍和亲和性
+> Примечание: Образ Ceph в файле release-1.13/deploy/examples/toolbox.yaml все еще v17.2.6. Можно вручную изменить на v18.2.1, а также добавить разрешения Taints и Affinity.
 
 ```sh
       nodeSelector:
@@ -2050,7 +2050,7 @@ rook-ceph-tools-68b98695bb-gh76t                  1/1     Running     0         
           effect: "NoSchedule"
 ```
 
-Connect to the toolbox and run the command `ceph status`:
+Подключитесь к панели инструментов и запустите команду `ceph status`:
 
 ```sh
 $ kubectl -n rook-ceph exec -it deploy/rook-ceph-tools -- bash
@@ -2058,13 +2058,13 @@ Or as follows
 $ kubectl -n rook-ceph exec -it $(kubectl -n rook-ceph get pod -l "app=rook-ceph-tools" -o jsonpath='{.items[0].metadata.name}') -- bash
 ```
 
-The following are the verification points for health status:
+Ниже приведены точки проверки состояния:
 
-- All monitor (mon) nodes should be in quorum state.
-- A manager (mgr) node should be in an active state.
-- At least three OSD nodes should be online and available
+— Все узлы монитора (mon) должны находиться в состоянии кворума.
+- Узел менеджера (mgr) должен находиться в активном состоянии.
+- Как минимум три узла OSD должны быть онлайн и доступны.
 
-If the health status is not HEALTH_OK, you should investigate the reasons for warnings or errors.
+Если состояние работоспособности отличается от HEALTH_OK, вам следует выяснить причины предупреждений или ошибок.
 
 ```sh
 bash-4.4$ ceph status
@@ -2122,18 +2122,18 @@ total_space      1.5 TiB
 
 ```
 
-From the output, it can be seen that the cluster is in normal state, with 3 mons, 2 mgrs, and 3 osds deployed in the cluster.
+Из выходных данных видно, что кластер находится в нормальном состоянии: в кластере развернуты 3 mon, 2 mgrs и 3 osd.
 
-Check the storage pools in the current cluster:
+Проверьте пулы хранения в текущем кластере:
 
 ```sh
 bash-4.4$ ceph osd lspools
 1 .mgr
 ```
 
-You can see that there is only one storage pool named `.mgr` in the current cluster. This indicates that only the default management pool (mgr pool) has been created in this Ceph cluster, which is a special pool used to store management and monitoring-related data.
+Вы можете видеть, что в текущем кластере есть только один пул хранения с именем .mgr. Это указывает на то, что в этом кластере Ceph был создан только пул управления по умолчанию (пул mgr), который представляет собой специальный пул, используемый для хранения данных, связанных с управлением и мониторингом.
 
-Query commands related to the toolbox
+Команды запроса, относящиеся к панели инструментов
 
 ```
 ceph status
@@ -2143,13 +2143,13 @@ rados df
 ceph osd lspools
 ```
 
-#### Ceph Dashboard
+#### Панель управления Ceph
 
-Ceph Dashboard can be used to view the status of the cluster. A Ceph cluster deployed with Rook has Ceph Dashboard enabled by default.
+Панель мониторинга Ceph можно использовать для просмотра состояния кластера. В кластере Ceph, развернутом с помощью Rook, по умолчанию включена панель мониторинга Ceph.
 
 ![](https://blog.frognew.com/images/2023/09/ceph-v18-dashboard.png)
 
-`rook-ceph-mgr-dashboard` is its Service in the Kubernetes cluster.
+`rook-ceph-mgr-dashboard` — это его служба в кластере Kubernetes.
 
 ```sh
 $ kubectl get svc rook-ceph-mgr-dashboard -n rook-ceph
@@ -2157,7 +2157,7 @@ NAME                      TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    A
 rook-ceph-mgr-dashboard   ClusterIP   10.100.133.87   <none>        7000/TCP   73m
 ```
 
-It can be exposed through Ingress or by creating a NodePort Service [dashboard-external-http](https://github.com/rook/rook/blob/master/deploy/examples/dashboard-external-http.yaml).
+Его можно открыть через Ingress или создав службу NodePort [dashboard-external-http](https://github.com/rook/rook/blob/master/deploy/examples/dashboard-external-http.yaml).
 
 ```sh
 $ kubectl get svc  -n rook-ceph
@@ -2171,27 +2171,27 @@ rook-ceph-mon-b                         ClusterIP   10.100.73.21     <none>     
 rook-ceph-mon-c                         ClusterIP   10.100.159.142   <none>        6789/TCP,3300/TCP   75m
 ```
 
-The name of the Ceph Dashboard admin user can be checked with the following command:
+Имя пользователя-администратора Ceph Dashboard можно проверить с помощью следующей команды:
 
 ```sh
 $ kubectl -n rook-ceph get secret rook-ceph-dashboard-password -o jsonpath="{['data']['password']}" | base64 --decode && echo
 ```
 
-### 9.4 Use Storage - Service Persistence
+### 9.4 Использование хранилища — постоянство сервиса
 
-Ceph provides three types of storage interfaces: Block, Shared Filesystem, and Object.
+Ceph предоставляет три типа интерфейсов хранения: блочный, разделяемая файловая система и объектный.
 
-The following demonstrates how to use these three types of storage for a Ceph cluster deployed and managed by Rook.
+Ниже показано, как использовать эти три типа хранилища для кластера Ceph, развернутого и управляемого Rook.
 
-Using Rook to use Ceph provides three storage types and their purposes as follows:
+Использование Rook для использования Ceph обеспечивает три типа хранения и их назначение следующим образом:
 
-- Block storage (Block) is used to provide ReadWriteOnce (RWO) storage for a single Pod.
-- CephFS Shared Filesystem is suitable for shared read-write (RWX) storage between multiple Pods.
-- Object storage provides storage that can be accessed through the S3 endpoint of an internal or external Kubernetes cluster.
+— Блочное хранилище (Block) используется для предоставления хранилища ReadWriteOnce (RWO) для одного модуля.
+- Общая файловая система CephFS подходит для совместного хранения данных для чтения и записи (RWX) между несколькими модулями.
+— Объектное хранилище предоставляет хранилище, доступ к которому можно получить через конечную точку S3 внутреннего или внешнего кластера Kubernetes.
 
-![](https://mmbiz.qpic.cn/mmbiz_png/bd4WXH8wjhlHKsrr5E8rxpD8qyeqr1ZrQ3jb8bqZFLpgZe7EdvqWOgib19aI9gWFfn0lHus6jlUFK10vnibDr4Jg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](https://mmbiz.qpic.cn/mmbiz_png/bd4WXH8wjhlHKsrr5E8rxpD8qyeqr1ZrQ3jb8bqZFLpgZe7EdvqWOgib19aI9gWFfn0lHus6jlUFK10vnibDr4Jg/640?wx_fmt=png&wxfrom=5 &wx_lazy=1&wx_co=1)
 
-#### 9.4.1 Block Storage
+#### 9.4.1 Блочное хранилище
 
 ```shell
 Block storage is a data storage technology that writes data to disks or other storage media in units called blocks. Block storage is commonly used in environments such as servers, data centers, and cloud computing to store large-scale datasets.
@@ -2210,21 +2210,21 @@ Block storage systems are typically used to store large-scale datasets such as d
 I believe everyone has also used cloud storage. So what can cloud storage do? Of course, our RBD can do the same things, such as snapshot backup, incremental backup, kernel driver, etc., all of which are supported.
 ```
 
-**Block storage allows a single Pod to mount storage.**
+**Блочное хранилище позволяет подключить хранилище к одному поду.**
 
-This guide explains how to create a simple multi-tier web application on Kubernetes using the persistent volumes enabled by Rook.
+В этом руководстве объясняется, как создать простое многоуровневое веб-приложение в Kubernetes с использованием постоянных томов, включенных Rook.
 
-##### 9.4.1.1 RBD storage supply
+##### 9.4.1.1 Поставка хранилища RBD
 
-Before Rook can provide storage, you need to create StorageClass and CephBlockPool.
+Прежде чем Rook сможет предоставить хранилище, вам необходимо создать StorageClass и CephBlockPool.
 
-This example requires at least 1 OSD per node, and each OSD needs to be on 3 different nodes. Each OSD must be on a different node because `failureDomain` is set to `host` and `replicated.size` is set to 3.
+В этом примере требуется как минимум один OSD на каждый узел, и каждый OSD должен находиться на трех разных узлах. Каждое OSD должно находиться на отдельном узле, поскольку для параметра «failureDomain» установлено значение «host», а для параметра «replication.size» установлено значение 3.
 
-Use directly
+Используйте напрямую
 
-Use the `rook/deploy/examples/csi/rbd/storageclass.yaml` file to create CephBlockPool storage pool and StorageClass dynamic storage volumes.
+Используйте файл rook/deploy/examples/csi/rbd/storageclass.yaml для создания пула хранения CephBlockPool и томов динамического хранения StorageClass.
 
-Or create the `storageclass.yaml` file below:
+Или создайте файл `storageclass.yaml` ниже:
 
 ```yaml
 apiVersion: ceph.rook.io/v1
@@ -2265,11 +2265,11 @@ reclaimPolicy: Delete
 allowVolumeExpansion: true
 ```
 
-This storageclass.yaml file contains the definition of StorageClass 'rook-ceph-block' and CephBlockPool 'replicapool'.
+Этот файл Storageclass.yaml содержит определение StorageClass 'rook-ceph-block' и CephBlockPool 'replicapool'.
 
-If you have deployed the Rook Operator in a namespace other than 'rook-ceph', please change the prefix in the 'provisioner' field to match the namespace you are using. For example, if the Rook Operator is running in the 'my-namespace' namespace, the value of the provisioner should be 'my-namespace.rbd.csi.ceph.com'.
+Если вы развернули оператор Rook в пространстве имен, отличном от «rook-ceph», измените префикс в поле «provisioner», чтобы он соответствовал пространству имен, которое вы используете. Например, если оператор Rook работает в пространстве имен «my-namespace», значение поставщика должно быть «my-namespace.rbd.csi.ceph.com».
 
-Next, create this StorageClass and CephBlockPool.
+Затем создайте StorageClass и CephBlockPool.
 
 ```sh
 $ kubectl apply -f storageclass.yaml
@@ -2277,11 +2277,12 @@ cephblockpool.ceph.rook.io/replicapool created
 storageclass.storage.k8s.io/rook-ceph-block created
 ```
 
-> According to Kubernetes specifications, when using the "Retain" reclaim policy, any PersistentVolume
 
-When creating a CephBlockPool resource named 'replicapool', it will automatically create a storage pool with the same name in the Ceph cluster.
+> Согласно спецификациям Kubernetes, при использовании политики восстановления «Retain» любой PersistentVolume
 
-This operation is performed by the Ceph Operator. If the storage pool is not created, you can check the Ceph Operator logs to identify the problem.
+При создании ресурса CephBlockPool с именем «replicapool» он автоматически создаст пул хранения с тем же именем в кластере Ceph.
+
+Эту операцию выполняет оператор Ceph. Если пул хранения не создан, вы можете проверить журналы оператора Ceph, чтобы определить проблему.
 
 ```sh
 $ kubectl -n rook-ceph exec -it deploy/rook-ceph-tools -- bash
@@ -2290,15 +2291,16 @@ bash-4.4$ ceph osd lspools
 2 replicapool
 ```
 
-The output above indicates that the storage pool 'replicapool' has been created.
 
-Set Ceph as the default storage volume
+Вывод выше показывает, что пул хранения «replicapool» создан.
+
+Установите Ceph в качестве тома хранения по умолчанию
 
 ```sh
 [root@k8s-master1 ~]# kubectl patch storageclass rook-ceph-block -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
 ```
 
-After modification, check the status of StorageClass (**with a default flag**).
+После изменения проверьте статус StorageClass (**с флагом по умолчанию**).
 
 ```
 $ kubectl get sc
@@ -2306,7 +2308,7 @@ NAME                        PROVISIONER                  RECLAIMPOLICY   VOLUMEB
 rook-ceph-block (default)   rook-ceph.rbd.csi.ceph.com   Delete          Immediate           true                   2m5s
 ```
 
-##### 9.4.1.2 Use Storage
+##### 9.4.1.2 Использование хранилища
 
 `rook/deploy/examples/csi/rbd/pvc.yaml`
 
@@ -2325,7 +2327,7 @@ spec:
   storageClassName: rook-ceph-block
 ```
 
-To view Kubernetes PVC (Persistent Volume Claim), run the following command:
+Чтобы просмотреть Kubernetes PVC (заявление постоянного тома), выполните следующую команду:
 
 ```sh
 $ kubectl get pvc
@@ -2333,7 +2335,7 @@ NAME      STATUS   VOLUME                                     CAPACITY   ACCESS 
 rbd-pvc   Bound    pvc-f6fa10da-9e2e-4ca1-aec2-0a1b9b457f86   1Gi        RWO            rook-ceph-block   8m55s
 ```
 
-View the created persistent volumes:
+Просмотрите созданные постоянные тома:
 
 ```sh
 $ kubectl get pv
@@ -2341,7 +2343,7 @@ NAME                                       CAPACITY   ACCESS MODES   RECLAIM POL
 pvc-f6fa10da-9e2e-4ca1-aec2-0a1b9b457f86   1Gi        RWO            Delete           Bound    rook-ceph/rbd-pvc   rook-ceph-block            11m
 ```
 
-View specific information of one persistent volume:
+Просмотр конкретной информации об одном постоянном томе:
 
 ```sh
 $ kubectl describe pv pvc-f6fa10da-9e2e-4ca1-aec2-0a1b9b457f86
@@ -2376,7 +2378,7 @@ Source:
 Events:                <none>
 ```
 
-Check the rbd images in the storage pool replicapool:
+Проверьте образы rbd в пуле реплик пула носителей:
 
 ```sh
 $ kubectl -n rook-ceph exec -it deploy/rook-ceph-tools -- bash
@@ -2384,7 +2386,7 @@ bash-4.4$ rbd ls -p replicapool
 csi-vol-487f0510-6c2c-4a39-8198-3c411598a777
 ```
 
-We create a Pod example application using block storage provided by Rook.
+Мы создаем пример приложения Pod, используя блочное хранилище, предоставленное Rook.
 
 `rook/deploy/examples/csi/rbd/pod.yaml`
 
@@ -2417,7 +2419,7 @@ NAME              READY   STATUS    RESTARTS   AGE
 csirbd-demo-pod   1/1     Running   0          2m1s
 ```
 
-Or directly create a transient pod
+Или напрямую создайте временный модуль
 
 ```sh
 $ kubectl apply -f pod-ephemeral.yaml
@@ -2450,7 +2452,7 @@ NAME                         READY   STATUS    RESTARTS   AGE
 csi-rbd-demo-ephemeral-pod   1/1     Running   0          14s
 ```
 
-Check the rbd images in the storage pool replicapool:
+Проверьте образы rbd в пуле реплик пула носителей:
 
 ```
 $ rbd ls -p replicapool
@@ -2458,15 +2460,15 @@ csi-vol-487f0510-6c2c-4a39-8198-3c411598a777
 csi-vol-75a8fa65-83b7-469e-baa2-5856fc96721e
 ```
 
-##### 9.4.1.3 PVC Snapshot - Block Storage Snapshot
+##### 9.4.1.3 Снимок PVC — снимок блочного хранилища
 
-The purpose of snapshotclass:
+Цель класса моментальных снимков:
 
-Like StorageClass, it provides a way to manage the supply of volumes. VolumeSnapshotClass also provides a way to manage volume snapshots.
+Как и StorageClass, он позволяет управлять предоставлением томов. VolumeSnapshotClass также предоставляет способ управления снимками томов.
 
-Kubernetes 1.19 and above require a separate installation of the Snapshot Controller to enable PVC snapshot functionality. Therefore, it is installed in advance. If the version is below 1.19, it is not necessary to install it separately.
+Kubernetes 1.19 и более поздние версии требуют отдельной установки контроллера моментальных снимков, чтобы включить функцию моментального снимка PVC. Поэтому он устанавливается заранее. Если версия ниже 1.19, отдельно устанавливать ее не нужно.
 
-Installation method is as follows:
+Способ установки следующий:
 
 ```sh
 kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/master/client/config/crd/snapshot.storage.k8s.io_volumesnapshots.yaml
@@ -2480,20 +2482,20 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snaps
 kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/master/deploy/kubernetes/snapshot-controller/setup-snapshot-controller.yaml
 ```
 
-Reference: [I get an error when deploying an existing snapshotclass.yaml. · Issue #6819 · rook/rook (github.com)](https://github.com/rook/rook/issues/6819)
+Ссылка: [Я получаю сообщение об ошибке при развертывании существующего файла snapshotclass.yaml. · Проблема № 6819 · rook/rook (github.com)](https://github.com/rook/rook/issues/6819)
 
-[Ceph Docs (rook.github.io)](https://rook.github.io/docs/rook/v1.5/ceph-csi-snapshot.html)
+[Документация Ceph (rook.github.io)](https://rook.github.io/docs/rook/v1.5/ceph-csi-snapshot.html)
 
-File location: rook/deploy/examples/csi/rbd/snapshotclass.yaml
+Расположение файла: rook/deploy/examples/csi/rbd/snapshotclass.yaml.
 
-Creation
+Создание
 
 ```sh
 $ kubectl create -f snapshotclass.yaml
 volumesnapshotclass.snapshot.storage.k8s.io/csi-rbdplugin-snapclass created
 ```
 
-Content: Actually, it is through parameters to specify the information of the snapshot resource provided. Managed through the snapshot.storage.k8s.io/v1 API interface.
+Содержание: На самом деле, это параметры для указания информации о предоставленном ресурсе моментального снимка. Управляется через API-интерфейс snapshot.storage.k8s.io/v1.
 
 ```sh
 cat csi/rbd/snapshotclass.yaml
@@ -2516,13 +2518,13 @@ parameters:
 deletionPolicy: Delete
 ```
 
-###### Create Snapshot
+###### Создать снимок
 
-Before creating a snapshot, we add some content to the volume that needs to be snapshotted for later data validation.
+Прежде чем создавать снимок, мы добавляем в том некоторый контент, который необходимо сделать снимок для последующей проверки данных.
 
-Add an nginx homepage data in the web-0-pvc pod for testing purposes later.
+Добавьте данные домашней страницы nginx в модуль web-0-pvc для последующего тестирования.
 
-Create Test Containers and PVC
+Создание тестовых контейнеров и PVC
 
 ```yaml
 ---
@@ -2603,10 +2605,9 @@ drwx------ 2 root root 16384 Jan  4 06:35 lost+found
 root@web-54c59df478-znqpp:/usr/share/nginx/html# exit
 ```
 
-Modified the `index.html` file, next, we will create a snapshot
+Изменил файл index.html, далее создадим снимок.
 
-snapsho defines a type called VolumeSnapshot, which comes from an existing PVC. Note that PVC
-  is distinguished by namespace, so it must be in the same namespace, otherwise it cannot be Bound.
+снимок определяет тип VolumeSnapshot, который происходит из существующего PVC. Обратите внимание, что PVC отличается пространством имен, поэтому он должен находиться в том же пространстве имен, иначе он не может быть привязан.
 
 `snapshot.yaml`
 
@@ -2636,7 +2637,7 @@ NAME               READYTOUSE   SOURCEPVC   SOURCESNAPSHOTCONTENT   RESTORESIZE 
 rbd-pvc-snapshot   true         web-0-pvc                           1Gi           csi-rbdplugin-snapclass   snapcontent-7cecab7b-297f-4899-8046-4813f08b58b6   3s             5s
 ```
 
-###### Specify Snapshot Creation PVC
+###### Укажите PVC создания моментального снимка
 
 `pvc-restore.yaml`
 
@@ -2659,11 +2660,11 @@ spec:
       storage: 1Gi
 ```
 
-Note: When specifying a snapshot to create PVC, the following conditions need to be met:
+Примечание. При указании моментального снимка для создания PVC необходимо соблюдать следующие условия:
 >
-> 1. In the same namespace;
+> 1. В том же пространстве имен;
 >
-> 2. The storage size must be less than or equal to the size of the snapshot. Otherwise, it cannot be bound.
+> 2. Размер хранилища должен быть меньше или равен размеру снимка. В противном случае его невозможно связать.
 
 ```sh
 $ kubectl create -f pvc-restore.yaml -n rook-ceph
@@ -2676,7 +2677,7 @@ web-0-pvc          Bound    pvc-1a93a247-e78c-4d6e-838f-929a520d1343   1Gi      
 
 ```
 
-###### Data validation
+###### Валидация данных
 
 `restore-nginx.yaml`
 
@@ -2714,7 +2715,7 @@ spec:
             claimName: rbd-pvc-restore
 ```
 
-Mount the previously created PVC to the pod by creating an nginx.
+Подключите ранее созданный PVC к модулю, создав файл nginx.
 
 ```sh
 $ kubectl create -f restore-nginx.yaml -n rook-ceph
@@ -2731,30 +2732,30 @@ $ k exec pod/wordpress-restore-69bb6c76b8-zmb87 -- cat /var/www/html/index.html
 this is pvc snapshot rbd test!
 ```
 
-From the above, it can be seen that the data is OK.
+Из вышеизложенного видно, что данные в порядке.
 
-Mount point for web-0: /usr/share/nginx/html/
+Точка монтирования для web-0: /usr/share/nginx/html/
 
-Mount point for wordproess-restore: /var/www/html/
+Точка монтирования для wordproess-restore: /var/www/html/
 
-Because the data of the snapshot is also directly mounted to the PVC, the data is directly stored in the mount point of the PVC.
+Поскольку данные моментального снимка также напрямую монтируются в PVC, они сохраняются непосредственно в точке монтирования PVC.
 
-##### 9.4.1.4 PVC dynamic resizing
+##### 9.4.1.4 Динамическое изменение размера PVC
 
-Expansion Requirement
+Требование к расширению
 
-- PVC expansion for file sharing type requires k8s 1.15+
-Block storage type PVC expansion requires k8s 1.16+
+- Расширение PVC для типа обмена файлами требует k8s 1.15+
+Для расширения PVC-хранилища блочного типа требуется k8s 1.16+.
 
-PVC expansion requires enabling 'ExpandCSIVolumes'. The latest version of Kubernetes has already enabled this feature by default. You can check if your Kubernetes version has already enabled this feature.
+Расширение PVC требует включения «ExpandCSIVolumes». Последняя версия Kubernetes уже включила эту функцию по умолчанию. Вы можете проверить, включена ли эта функция в вашей версии Kubernetes.
 
 ```sh
 $ kube-apiserver -h|grep ExpandCSIVolumes
 ```
 
-If default is true, this feature does not need to be enabled. If default is false, this feature needs to be enabled.
+Если по умолчанию установлено значение true, эту функцию включать не нужно. Если по умолчанию установлено значение false, эту функцию необходимо включить.
 
-- The storage class must also support dynamic scaling `allowVolumeExpansion: true`
+- Класс хранилища также должен поддерживать динамическое масштабирование. `allowVolumeExpansion: true`
 
 ```yaml
 $ kubectl get sc rook-cephfs -o yaml
@@ -2763,9 +2764,9 @@ apiVersion: storage.k8s.io/v1
 kind: StorageClass
 ```
 
-###### Scaling operation
+###### Операция масштабирования
 
-Before scaling, PVC has a capacity of 1GB.
+До масштабирования PVC имеет емкость 1 ГБ.
 
 ```sh
 $ kubectl get pvc -n rook-ceph
@@ -2787,7 +2788,7 @@ tmpfs          tmpfs     32G     0   32G   0% /proc/scsi
 tmpfs          tmpfs     32G     0   32G   0% /sys/firmware
 ```
 
-After Scaling
+После масштабирования
 
 ```sh
 $ kubectl edit pvc/web-0-pvc -n rook-ceph
@@ -2818,11 +2819,11 @@ tmpfs          tmpfs     32G     0   32G   0% /sys/firmware
 root@web-54c59df478-znqpp:/#
 ```
 
-##### 9.4.1.5 PVC Clone
+##### 9.4.1.5 Клон PVC
 
-PVC cloning is similar to PVC snapshot
+Клонирование PVC похоже на снимок PVC.
 
-Create a test environment
+Создайте тестовую среду
 
 ```sh
 $ k apply -f deployment-pvc-restore.yaml
@@ -2872,17 +2873,17 @@ rbd-pvc-clone      Bound    pvc-d3466f64-639b-4720-b094-064121b9ed6b   1Gi      
 web-0-pvc          Bound    pvc-7568c98a-0225-4db0-9e88-d5ea27925440   1Gi        RWO            rook-ceph-block   115s
 ```
 
-**Note:**
+**Примечание:**
 
-**1. Cloning can only be done within the same namespace;**
+**1. Клонирование можно выполнить только в том же пространстве имен;**
 
-**2. The size of the cloned pvc must be less than or equal to the size of the original**
+**2. Размер клонированного PVC должен быть меньше или равен размеру оригинала**
 
-#### 9.4.2 CephFS shared file system
+#### 9.4.2 Общая файловая система CephFS
 
-CephFS file system storage (also known as shared file system) can be mounted with read/write access from multiple Pods. This can be very useful for applications that can be clustered using a shared file system.
+Хранилище файловой системы CephFS (также известное как общая файловая система) может быть смонтировано с доступом для чтения/записи из нескольких модулей Pod. Это может быть очень полезно для приложений, которые можно кластеризовать с использованием общей файловой системы.
 
-Starting from Pacific version (Ceph 16), Ceph supports multiple file systems.
+Начиная с версии Pacific (Ceph 16), Ceph поддерживает несколько файловых систем.
 
 ```shell
 1: Characteristics of RBD:
@@ -2905,13 +2906,13 @@ Separates metadata from data (data contains the actual data and metadata contain
 9: Use with Hadoop (replace HDFS)
 ```
 
-##### 9.4.2.1 Create CephFilesystem
+##### 9.4.2.1 Создание файловой системы Ceph
 
-Create a file system by specifying the required settings for metadata pool, data pools, and metadata server in the `CephFilesystem` CRD.
+Создайте файловую систему, указав необходимые настройки для пула метаданных, пулов данных и сервера метаданных в CRD `CephFilesystem`.
 
-Here, we create a metadata pool with 3 replicas and a data pool with 3 replicas. For more options, please refer to the [documentation for creating a shared file system](https://rook.io/docs/rook/v1.11/CRDs/Shared-Filesystem/ceph-filesystem-crd/).
+Здесь мы создаем пул метаданных с 3 репликами и пул данных с 3 репликами. Дополнительные параметры см. в [Документация по созданию общей файловой системы] (https://rook.io/docs/rook/v1.11/CRDs/Shared-Filesystem/ceph-filesystem-crd/).
 
-Create the following filesystem.yaml file:
+Создайте следующий файл filesystem.yaml:
 
 ```yaml
 apiVersion: ceph.rook.io/v1
@@ -2933,13 +2934,13 @@ spec:
     activeStandby: true
 ```
 
-Rook Ceph Operator will create all the pools and other resources required to start the service. This may take some time to complete.
+Оператор Rook Ceph создаст все пулы и другие ресурсы, необходимые для запуска службы. Это может занять некоторое время.
 
 ```sh
 $ kubectl create -f filesystem.yaml
 ```
 
-Make sure the file system is configured and wait for the mds Pod to start:
+Убедитесь, что файловая система настроена, и дождитесь запуска модуля mds:
 
 ```sh
 $ kubectl -n rook-ceph get pod -l app=rook-ceph-mds
@@ -2948,7 +2949,7 @@ rook-ceph-mds-myfs-a-9cc6945cf-tvv9x   1/1     Running   0          44s
 rook-ceph-mds-myfs-b-b988647d4-spmh5   1/1     Running   0          42s
 ```
 
-To check the detailed status of the file system, enter the Rook toolbox and use 'ceph status' to view it. Confirm that the output includes the status of the MDS service. In this example, there is an active MDS instance and a standby MDS instance for failover.
+Чтобы проверить подробный статус файловой системы, войдите в панель инструментов Rook и используйте «ceph status», чтобы просмотреть его. Убедитесь, что выходные данные включают состояние службы MDS. В этом примере имеется активный экземпляр MDS и резервный экземпляр MDS для аварийного переключения.
 
 ```sh
 bash-4.4$ ceph -s
@@ -2973,7 +2974,7 @@ bash-4.4$ ceph -s
     client:   852 B/s rd, 1 op/s rd, 0 op/s wr
 ```
 
-Use 'ceph osd lspools' to check and confirm the creation of the 'myfs-metadata' and 'myfs-replicated' storage pools.
+Используйте «ceph osd lspools», чтобы проверить и подтвердить создание пулов хранения «myfs-metadata» и «myfs-replicated».
 
 ```sh
 bash-4.4$ ceph osd lspools
@@ -2983,11 +2984,11 @@ bash-4.4$ ceph osd lspools
 5 myfs-replicated
 ```
 
-##### 9.4.2.2 CephFS Storage Provisioning
+##### 9.4.2.2 Предоставление хранилища CephFS
 
-Before Rook starts providing CephFS storage, a StorageClass needs to be created based on the file system. This is necessary for Kubernetes to interact with the CSI driver to create persistent volumes.
+Прежде чем Rook начнет предоставлять хранилище CephFS, необходимо создать StorageClass на основе файловой системы. Это необходимо для взаимодействия Kubernetes с драйвером CSI для создания постоянных томов.
 
-Save the following storage class definition as storageclass.yaml file:
+Сохраните следующее определение класса хранения в файле Storageclass.yaml:
 
 ```yaml
 apiVersion: storage.k8s.io/v1
@@ -3028,11 +3029,11 @@ mountOptions:
   #- debug
 ```
 
-If you have deployed the Rook Operator in a namespace different from 'rook-ceph', modify the prefix in the provisioner to match the namespace you are using.
+Если вы развернули оператор Rook в пространстве имен, отличном от «rook-ceph», измените префикс в поставщике, чтобы он соответствовал пространству имен, которое вы используете.
 
-For example, if the Rook Operator is running in the 'rook-op' namespace, then the value of the provisioner should be 'rook-op.rbd.csi.ceph.com'.
+Например, если оператор Rook работает в пространстве имен «rook-op», то значение поставщика должно быть «rook-op.rbd.csi.ceph.com».
 
-Create a storage class:
+Создайте класс хранилища:
 
 ```sh
 $ kubectl create -f storageclass.yaml
@@ -3043,13 +3044,13 @@ NAME          PROVISIONER                     RECLAIMPOLICY   VOLUMEBINDINGMODE 
 rook-cephfs   rook-ceph.cephfs.csi.ceph.com   Delete          Immediate           true                   4m39s
 ```
 
-##### 9.4.2.3 About quotas
+##### 9.4.2.3 О квотах
 
-CephFS CSI driver enforces requested PVC size using quotas. CephFS quotas are supported only in newer Linux kernels, at least version 4.17.
+Драйвер CephFS CSI обеспечивает запрошенный размер PVC с помощью квот. Квоты CephFS поддерживаются только в новых ядрах Linux, начиная с версии 4.17.
 
-##### 9.4.2.4 Using storage: Mounting multiple Pods
+##### 9.4.2.4 Использование хранилища: монтирование нескольких модулей
 
-Create the following busybox.yaml:
+Создайте следующий файл busybox.yaml:
 
 ```yaml
 apiVersion: v1
@@ -3092,7 +3093,7 @@ spec:
             claimName: busybox-data-pvc
 ```
 
-Create the deployment and pvc for this busybox:
+Создайте развертывание и pvc для этого busybox:
 
 ```sh
 $ kubectl apply -f busybox.yaml
@@ -3100,7 +3101,7 @@ persistentvolumeclaim/busybox-data-pvc created
 deployment.apps/busybox created
 ```
 
-View the created PVC and automatically provisioned PV:
+Просмотрите созданный PVC и автоматически подготовленный PV:
 
 ```sh
 $ kubectl get pvc
@@ -3112,7 +3113,7 @@ NAME                                       CAPACITY   ACCESS MODES   RECLAIM POL
 pvc-38fe93c8-c55b-4e18-b955-15a09dc45943   2Gi        RWX            Delete           Bound    rook-ceph/busybox-data-pvc                   rook-cephfs                25s
 ```
 
-View specific information of PV:
+Просмотр конкретной информации о PV:
 
 ```sh
 $ kubectl describe pv pvc-38fe93c8-c55b-4e18-b955-15a09dc45943
@@ -3146,21 +3147,21 @@ Source:
 Events:                <none>
 ```
 
-Is Ceph_openebs used for production environments?
+Используется ли Ceph_openebs для производственных сред?
 
-#### 9.4.3 Object Storage
+#### 9.4.3 Хранилище объектов
 
-TODO
+ПРЕДСТОИТ РАЗРАБОТАТЬ
 
-Reference articles
+Справочные статьи
 
-[Deploying and managing Ceph cluster automatically using Rook | Frognew (frognew.com)](https://blog.frognew.com/2023/06/rook-quick-start.html)
+[Автоматическое развертывание и управление кластером Ceph с помощью Rook | Frognew (frognew.com)](https://blog.frognew.com/2023/06/rook-quick-start.html)
 
-## 10. Backup Cloud-Native Applications Using the Open-Source Tool Velero
+## 10. Резервное копирование облачных приложений с помощью инструмента с открытым исходным кодом Velero
 
-## FQA
+## Часто задаваемые вопросы
 
-### Uninstall and redeploy rook-ceph
+### Удаление и повторное развертывание rook-ceph
 
 ```sh
 #First: Uninstall the chart.
@@ -3196,37 +3197,38 @@ kubectl patch crd/NAME -p '{"metadata":{"finalizers":[]}}' --type=merge
 sudo rm -rf /var/lib/rook
 ```
 
-### Test Data Cleanup
+### Очистка тестовых данных
 
-If Rook is to be continued to use, only the created deploy, pod, pvc need to be cleaned. Afterwards, it can be put into use directly.
+Если Rook будет продолжать использоваться, необходимо очистить только созданное развертывание, модуль, pvc. После этого его можно сразу использовать.
 
-#### Data deletion steps
+#### Действия по удалению данных
 
-Data cleaning steps:
+Этапы очистки данных:
 
-1. First, clean up the mounted PVC and Pod, which may involve cleaning up separately created Pod and Deployment or other advanced resources.
-2. After cleaning up PVC, clean up all PVCs created through ceph StorageClass, and it is best to check if PVs are cleaned up
-3. Then clean up the snapshot: `kubectl delete volumesnapshot XXXXXXXX`
-4. Clean up the created Pool, including block storage and file storage
+1. Сначала очистите смонтированный PVC и Pod, что может включать очистку отдельно созданного Pod и Deployment или других дополнительных ресурсов.
+2. После очистки PVC очистите все PVC, созданные с помощью ceph StorageClass, и лучше всего проверить, очищены ли PV.
+3. Затем очистите снимок: `kubectl delete Volumesnapshot XXXXXXXX`
+4. Очистите созданный Пул, включая блочное хранилище и файловое хранилище.
 
 ```sh
 $ kubectl delete -n rook-ceph cephblockpool replicapool
 $ kubectl delete -n rook-ceph cephfilesystem myfs
 ```
 
-- Clean up StorageClass:
+- Очистите StorageClass:
 
 ```sh
 $ kubectl delete sc rook-ceph-block rook-cephfs
 ```
 
-- Cleaning up Ceph cluster:
+- Очистка кластера Ceph:
 
 ```
 kubectl -n rook-ceph delete cephcluster rook-ceph
 ```
 
-- Deleting Rook resources:
+- 
+Удаление ресурсов Rook:
 
 ```sh
 $ kubectl delete -f operator.yaml
@@ -3234,7 +3236,7 @@ $ kubectl delete -f common.yaml
 $ kubectl delete -f crds.yaml
 ```
 
-1.如果卡住需要参考 Rook 的[troubleshooting](https://rook.io/docs/rook/v1.6/ceph-teardown.html#troubleshooting)
+1.Если вы не знаете что делать, обратитесь к документации Rook.[troubleshooting](https://rook.io/docs/rook/v1.6/ceph-teardown.html#troubleshooting)
 
 ```sh
 for CRD in $(kubectl get crd -n rook-ceph | awk '/ceph.rook.io/ {print $1}');
@@ -3243,18 +3245,18 @@ do
 done
 ```
 
-2. Clean up data directory and disk
+2. Очистите каталог данных и диск
 
-Reference link: https://rook.io/docs/rook/v1.6/ceph-teardown.html#delete-the-data-on-hosts
+Справочная ссылка: https://rook.io/docs/rook/v1.6/ceph-teardown.html#delete-the-data-on-hosts.
 
-Reference link: https://rook.io/docs/rook/v1.6/ceph-teardown.html
+Справочная ссылка: https://rook.io/docs/rook/v1.6/ceph-teardown.html
 
 ```sh
 kubectl -n rook-ceph patch configmap rook-ceph-mon-endpoints --type merge -p '{"metadata":{"finalizers": [null]}}'
 kubectl -n rook-ceph patch secrets rook-ceph-mon --type merge -p '{"metadata":{"finalizers": [null]}}'
 ```
 
-#### Delete ceph pool storage pool
+#### Удаление пула хранения пула ceph
 
 ```sh
 kubectl -n rook-ceph exec -it deploy/rook-ceph-tools -- bash
@@ -3296,11 +3298,11 @@ bash-4.4$ ceph fs status
 bash-4.4$ ceph -s
 ```
 
-Reference
+Ссылка
 
-[4.12. Delete Ceph File System Using Command Line Interface Red Hat Ceph Storage 4 | Red Hat Customer Portal](https://access.redhat.com/documentation/zh-cn/red_hat_ceph_storage/4/html/file_system_guide/removing-a-ceph-file-system-using-the-command-line-interface_fs#doc-wrapper)
+[4.12. Удаление файловой системы Ceph с помощью интерфейса командной строки Red Hat Ceph Storage 4 | Портал клиентов Red Hat](https://access.redhat.com/documentation/zh-cn/red_hat_ceph_storage/4/html/file_system_guide/removing-a-ceph-file-system-using-the-command-line-interface_fs# doc-wrapper)
 
-#### Delete rbd hard disk
+#### Удалить жесткий диск rbd
 
 ```sh
 bash-4.4$ rbd ls -p replicapool
@@ -3310,13 +3312,13 @@ bash-4.4$ rbd rm replicapool/csi-vol-5e4e1cd5-d889-4705-9575-c65f0e0b4d01
 Removing image: 100% complete...done.
 ```
 
-'#### ceph cluster reports 'daemons have recently crashed' issue handling'
+#### Кластер ceph сообщает, что daemons вышли из строя, обработка проблем
 
-The reason for this problem is that when data is balanced or rolled back, a daemon crashes and is not archived in time, causing alarms in the cluster.
+Причина этой проблемы в том, что при балансировке или откате данных daemon выходит из строя и не архивируется вовремя, вызывая аварийные сигналы в кластере.
 
 
 
-2. Solution
+1. Решение
 
 ```sh
 $ ceph crash ls
@@ -3325,7 +3327,7 @@ OR
 $ ceph crash archive-all
 ```
 
-3. Check Cluster Status
+2. Проверка статуса кластера
 
 ```sh
 $ ceph -s
@@ -3333,34 +3335,34 @@ $ ceph -s
 
 
 
-Reference documentation
+Справочная документация
 
-rook's GitHub address: https://github.com/rook/rook
+Адрес rook на GitHub: https://github.com/rook/rook
 
-[Quickstart - Rook Ceph Documentation](https://rook.io/docs/rook/latest/Getting-Started/quickstart/#create-a-ceph-cluster)
+[Краткий старт — документация Rook Ceph](https://rook.io/docs/rook/latest/Getting-Started/quickstart/#create-a-ceph-cluster)
 
-[Rook 1.13 Deployment Guide: Deploying and Managing Ceph with Rook 1.13 (Reef)
+[Руководство по развертыванию Rook 1.13: Развертывание и управление Ceph с помощью Rook 1.13 (Reef)
 
-[Deploying and managing Ceph cluster automatically using Rook | Frognew (frognew.com)](https://blog.frognew.com/2023/06/rook-quick-start.html)
+[Автоматическое развертывание и управление кластером Ceph с помощью Rook | Frognew (frognew.com)](https://blog.frognew.com/2023/06/rook-quick-start.html)
 
-"[Rook Cloud-Native Storage - Layzer - 博客园 (cnblogs.com)](https://www.cnblogs.com/layzer/articles/rook_notes.html)"
+"[Rook Облачное хранилище - Layzer - Blog Park (cnblogs.com)](https://www.cnblogs.com/layzer/articles/rook_notes.html)"
 
-kubernetes application-rook ceph cluster deployment - coke without ice (isekiro.com)
+Развертывание кластера Ceph в приложении kubernetes-rook - coke without ice (isekiro.com)
 
-Kubernetes Install Rook-ceph 1.3.11 - Flowing Year Dizzy Time - Blog Park
+Kubernetes: установка Rook-ceph 1.3.11 - Flowing Year Dizzy Time - Blog Park
 
-"Deploying Ceph Cluster with Rook on Existing Kubernetes Cluster (https://www.cnblogs.com/bixiaoyu/p/16135309.html)"
+«Развертывание кластера Ceph с помощью Rook в существующем кластере Kubernetes (https://www.cnblogs.com/bixiaoyu/p/16135309.html)"
 
-[【Original】K8S uses ceph-csi persistent storage RBD - wsjhk - 博客园 (cnblogs.com)](https://www.cnblogs.com/wsjhk/p/13710569.html)
+[K8S использует RBD постоянного хранилища ceph-csi. - wsjhk - Blog Park (cnblogs.com)](https://www.cnblogs.com/wsjhk/p/13710569.html)
 
-[Advanced Kubernetes: Rook for Cloud-Native Storage - Skyflask - Cnblogs (cnblogs.com)](https://www.cnblogs.com/skyflask/p/16844097.html#_caption_8)
+[Продвинутый Kubernetes: Rook для облачного хранилища - Skyflask - Cnblogs (cnblogs.com)](https://www.cnblogs.com/skyflask/p/16844097.html#_caption_8)
 
-Install rook-ceph in k8s cluster - Hello Hello 111111 - Blog Park (cnblogs.com)
+Установите rook-ceph в кластер k8s - Hello Hello 111111 - Blog Park (cnblogs.com)
 
-[Helm3 通过 Rook 安装 Ceph 集群 | Mr.Pu 个站博客 (putianhui.cn)](https://www.putianhui.cn/posts/07bbf6bfd606/)
+Helm3 установка Ceph кластера через Rook | Блог Mr.Pu (putianhui.cn)](https://www.putianhui.cn/posts/07bbf6bfd606/)
 
-Ceph Common Command Explanation - Mr.Pu Blog
+Объяснение команды Ceph- Блог Mr.Pu
 
-[Deploying Ceph with Rook v1.11.2 Operator - 简书 (jianshu.com)](https://www.jianshu.com/p/87a006bca19b)
+[Развертывание Ceph с помощью оператора Rook v1.11.2 - (jianshu.com)](https://www.jianshu.com/p/87a006bca19b)
 
-Kuberntes 云原生实战六 使用 Rook 搭建 Ceph 集群-阿里云开发者社区 (aliyun.com)
+Практическое использование облачных решений Kubernetes. Часть шестая: создание кластера Ceph с помощью Rook - Сообщество разработчиков Alibaba Cloud (aliyun.com)

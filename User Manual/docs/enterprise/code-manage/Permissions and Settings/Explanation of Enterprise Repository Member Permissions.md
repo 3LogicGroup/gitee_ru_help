@@ -1,23 +1,23 @@
 ---
-title: Enterprise Warehouse Member Permissions Explanation
+title: Разъяснение прав участников репозитория предприятия
 origin-url: https://gitee.ru/help/articles/4159
 ---
 
-> Enterprise repository members can have the following types:
+> Участники репозитория предприятия могут относиться к следующим типам:
 
-| Member Role | Permissions |
+| Роль участника | Права |
 | --- | --- |
-| Visitor (Logged-in User) | For public repositories: Create Issue, Comment, Clone and Pull Repository, Download Code as Zip, Fork Repository, Fork Repository and Submit Pull Request, Download Attachments
-| Reporter | Inherits the permissions of a visitor. Private repositories: cannot view code, cannot download code, cannot push, cannot fork, cannot submit pull requests, can download attachments, cannot upload attachments, cannot delete attachments |
-| Observer | Inherit the reporter's permission for private repositories: create Wiki, can clone and download code, can pull, cannot
-| Developer | Create issues, comment, clone and pull repositories, fork repositories, package and download code, create pull requests, create branches, push branches, delete branches, create tags (milestones), create wikis, can upload attachments, can delete their own uploaded attachments, cannot delete attachments uploaded by others, |
-| Administrator | Create issues, comment, clone and pull repositories, package and download code, create pull requests, create branches, push branches, delete branches, create tags (milestones), create wikis, add repository members, force push branches, edit repository properties, can upload attachments, can delete attachments uploaded by themselves or others, cannot transfer/clear/delete the repository |
- 
-> In Gitee Go, the permissions of the pipeline are fully inherited from the repository role permissions, and the specific permission details are as follows:
+| Гость (зарегистрированный пользователь) | Для общедоступных репозиториев: Создать проблему, прокомментировать, клонировать и извлекать репозитории, загружать код в виде Zip-архива, создавать форк репозитория, оздавать форк репозитория и отправлять запрос на слияние, загружать вложенияния
+| Докладчик| Наследует разрешения посетителя. Частные репозитории: не имеет права просмотреть код, не имеет права загружать код, не имеет права отправилять, не имеет права создавать форки, не имеет права отправлять запросы на слияние, не имеет права загружать вложения, не имеет права загружать вложения, не имеет права удалять вложения |
+| Наблюдатель| Наследует права докладчика для частных репозиториев: создает вики, может клонировать и загружать код, может объединять, не может
+| Разработчик | Создавать задачи, комментировать, клонировать и извлекать репозитории, разветвлять репозитории, упаковывать и загружать код, создавать запросы на извлечение, создавать ветви, отправлять ветви, удалять ветви, создавать теги (вехи), создавать вики, может загружать вложения, может удалять собственные загруженные вложения, не имеет права удалять вложения, загруженные другими, |
+| Администратор | Создавать задачи, комментировать, клонировать и объединять репозитории, создавать пакеты и загружать код, создавать запросы на слияние, создавать ветки, отправлять ветеи, удалять ветки, создавать теги (этапы),создавать вики, добавлять участников репозитория, принудительно отправлять ветки, редактировать свойства репозитория, может загружать вложения, может удалять загруженные вложения им или другими лицами, не имеет права переносить/очищать/удалять репозиторий |
 
-| Member Role | Permissions |
-|------   |-----------------------------|
-| Reporter | Inherits visitor permissions. Private repository: Cannot view pipeline execution records and details, cannot view pipeline configurations, cannot view artifact repositories, cannot download artifacts, i.e., pipeline-related content is not visible.
-| Observer | Inherits reporter permissions. Private repository: Can view pipeline execution records and details, can download artifacts, can view artifact repositories, i.e., all pipeline-related content is visible, but cannot make changes.
-| Developer | Inherits the observer's permissions. Can execute pipelines, view pipeline configurations, update pipelines, and delete pipelines. |
-| Administrator | Inherits developer permissions. |
+> В Gitee Go разрешения конвейера данных полностью наследуются от разрешений роли репозитория, а конкретные сведения о разрешениях представлены ниже:
+
+| Роль участника | Права | 
+|------ |-----------------------------|
+| Докладчик | Наследует права доступа посетителей. Частный репозиторий: Невозможно просмотреть записи и подробные сведения о выполнении конвейера, невозможно просмотреть конфигурации конвейера, невозможно просмотреть хранилища артефактов, невозможно загрузить артефакты, т.е. содержимое, связанное с конвейером, не отображается.
+| Наблюдатель | Наследует права докладчика. Частный репозиторий: Может просматривать записи и подробные сведения о выполнении конвейера, может загружать артефакты, может просматривать хранилища артефактов, т.е. все содержимое, связанное с конвейером, видно, но вносить изменения нельзя.
+| Разработчик | Наследует права наблюдателя. Может выполнять конвейеры данных, просматривать конфигурации конвейеров данных, обновлять конвейеры и удалять конвейеры. |
+| Администратор | Наследует права разработчика. |

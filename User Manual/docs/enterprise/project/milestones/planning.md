@@ -1,11 +1,11 @@
 ---
-title: Plan Milestone
+title: Планирование этапа
 ---
 
-Click on 'Milestones' in the navigation menu of the standard project, and then click on the title of the milestone in the list.
+Нажмите на "Этапы" в навигационном меню стандартного проекта, а затем в списке нажмите на название нужного этапа. 
 
-![Image Description](../docs/assets/image554.png)
+![Описание изображения](../docs/assets/image554.png)
 
-After entering the milestone page, click "Plan Milestone" in the left menu:
+После входа на страницу этапа, нажмите на "Планирование этапа" в меню слева:
 
-![Image Description](../docs/assets/image555.png)
+![Описание изображения](../docs/assets/image555.png)

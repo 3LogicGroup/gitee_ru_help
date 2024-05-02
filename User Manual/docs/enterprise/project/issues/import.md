@@ -1,15 +1,15 @@
 ---
-title: Import Work Item
+title: Импорт рабочих элементов
 ---
 
-After entering the work item list page, select 'Import' from the '...' menu in the upper right corner to open the work item import window.
+После ввхода на страницу списка рабочих элементов выберите "Импортировать" из меню "..." в правом верхнем углу, чтобы открыть окно импорта рабочего элемента.
 
-In the "Work Item Import" window, you can download and view the template file for work item data. Click on the middle area to select the file you want to upload, and then click the "Import" button to start the import.
+В окне "Импорт рабочего элемента" вы можете загрузить и просмотреть файл-шаблон для данных рабочего элемента. Нажмите на область посередине чтобы выбрать файл, который вы хотите загрузить, затем нажмите на кнопку "Импорт", чтобы запустить процедуру импорта.
 
-![Image Description](image529.png)
+![Описание изображения](image529.png)
 
-When there is a problem with the uploaded file content, an error message will be displayed. Click the 'Download Verification File' link to view the specific error message.
+Если обнаружится проблема с содержимым импортируемого файла, отобразится окно с сообщением об ошибке. Для просмотра подробной информации об ошибке нажмите на ссылку "Скачать файл проверки".
 
-![Image Description](image531.png)
+![Описание изображения](image531.png)
 
-Click on the "..." menu and select "Import History" to view historical import records
+Нажмите на элемент "..." в меню и выберите "История импорта" для просмотра записей исторического импорта

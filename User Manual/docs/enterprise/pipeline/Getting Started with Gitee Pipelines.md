@@ -1,71 +1,71 @@
 ---
-title: Introduction to Gitee Pipelines
-description: Introduction to Gitee Pipelines
+title: Знакомство с конвейерами Gitee
+description: Знакомство с конвейерами Gitee
 slug: /enterprise/pipeline/introduce
 origin-url: https://gitee.ru/help/articles/4393
 keywords:
  - Gitee
  - CICD
- - Intelligent Build
- - Multi-cloud Management
- - Pipeline
+ - Интеллектуальная сборка
+ - Управление несколькими облаками
+ - Конвейер
 ---
 
-What is a pipeline
+Что такое конвейер
 
-Project pipeline is a brand new UI-based CI/CD tool launched by Gitee, providing continuous integration and continuous delivery (deployment) capabilities to help companies continuously improve the quality and efficiency of application delivery. By automating build, testing, and deployment, it achieves continuous delivery from development to release. It measures delivery process and discovers efficiency issues, and provides optimization recommendations.
+Проектный конвейер - это новый CI/CD-инструмент на базе пользовательского интерфейса, выпущенный компанией Gitee и предоставляющий возможности непрерывной интеграции и непрерывной доставки (развертывания), чтобы помочь компаниям постоянно повышать качество и эффективность доставки приложений. Автоматизируя сборку, тестирование и развертывание, он обеспечивает непрерывную доставку от разработки до выпуска. Она измеряет процесс доставки и выявляет проблемы эффективности, а также предоставляет рекомендации по оптимизации.
 
-![Pipeline List](./assets/pipeline_list.png)
+![Список конвейеров](./assets/pipeline_list.png)
 
-## Product Advantages
+## Преимущества продукта
 
-### One-stop platform, full traceability of the R&D process
+### Единая платформа, полная отслеживаемость процесса разработки.
 
-From issue creation, to code submission and storage, to final deployment and release, a series of processes are connected to make the necessary compilation, testing, and deployment processes for engineers simple, efficient, and stable. It is also integrated with PR access control and issue status transitions, making the development results measurable and the development process observable.
+От создания проблемы, отправки и хранения кода до окончательного развертывания и выпуска - ряд процессов связан между собой, чтобы сделать необходимые процессы компиляции, тестирования и развертывания для инженеров простыми, эффективными и стабильными. Кроме того, эта система интегрирована с контролем доступа к PR и переходом статуса выпуска, что делает результаты разработки измеримыми, а процесс разработки - наблюдаемым.
 
-### Smart Build
+### Интеллектуальная сборка
 
-Adjust resources dynamically based on the current number of tasks to solve resource contention problems. Visualize the observation of queued tasks and resource usage, dynamically adjust task priorities to help improve pipeline execution speed and efficiency. When tasks are crowded, in addition to quickly scaling up, it will also train pre-scaling models based on long-term accumulated pipeline construction data within the enterprise. Expand in advance based on the pre-scaling model to further improve pipeline execution speed and reduce your wait time, with the fastest completion in seconds.
+Динамическая настройка ресурсов в зависимости от текущего количества задач для решения проблемы нехватки ресурсов. Визуальное наблюдение за очередями задач и использованием ресурсов, динамическая корректировка приоритетов задач для повышения скорости и эффективности выполнения конвейера. В случае переполненности задач, помимо быстрого масштабирования, система также обучает модели предварительного масштабирования на основе накопленных в течение длительного времени данных о строительстве трубопроводов на предприятии. Заблаговременное расширение на основе модели предварительного масштабирования позволит еще больше повысить скорость выполнения конвейера и сократить время ожидания, а также быстро завершить работу за считанные секунды.
 
-### Multi-cloud Management, One-Click Deployment
+### Управление несколькими облаками, развертывание в один клик
 
-Implement one-stop management of multi-cloud environments, providing you with a global resource dashboard to help you increase resource utilization and reduce maintenance costs. It is tightly integrated with the pipeline to achieve unified allocation of multi-cloud resources and enable one-click deployment across multiple clouds. It also allows smooth service migration, staged release, rollback, and other operations based on different cloud providers.
+Реализуйте единое управление мультиоблачными средами, предоставляя вам глобальную панель управления ресурсами, чтобы помочь вам повысить эффективность использования ресурсов и сократить расходы на обслуживание. Она тесно интегрирована с конвейером, что позволяет унифицировать распределение ресурсов нескольких облаков и развертывать их одним щелчком мыши. Кроме того, он обеспечивает плавную миграцию сервисов, поэтапный выпуск, откат и другие операции на базе различных облачных провайдеров.
 
-Rich and flexible templates
+Разнообразные и гибкие шаблоны
 
-Gitee Pipeline provides dozens of generic pipeline templates to help you quickly create pipelines. At the same time, it supports customizing your own templates to manage enterprise continuous integration and continuous delivery processes.
+Gitee Pipeline предоставляет десятки типовых шаблонов для быстрого создания конвейеров. В то же время он поддерживает настройку собственных шаблонов для управления корпоративными процессами непрерывной интеграции и непрерывной доставки.
 
-## Use Cases
+## Примеры использования
 
-### Scenario 1: Delivery Process Setup
+### Сценарий 1: Настройка процесса доставки
 
-- Automated build, test, and deployment for various types of applications (e.g., Spring applications) on each code change, version management of code, artifacts, and test reports, and hierarchical management of testing and deployment
-- Product Form: CI/CD Pipeline, Pipeline Plugin Template
-- Value: Fast and reliable delivery process (traceable, repeatable, rollbackable)
+- Автоматизированная сборка, тестирование и развертывание приложений различных типов (например, приложений Spring) при каждом изменении кода, управление версиями кода, артефактами и отчетами о тестировании, а также иерархическое управление тестированием и развертыванием.
+- Форма продукта: CI/CD Pipeline, шаблон плагина Pipeline Plugin
+- Ценность: Быстрый и надежный процесс доставки (отслеживаемый, повторяемый, откатываемый).
 
-### Scenario 2: Test Capability, Deploy Capability Service
+### Сценарий 2: Тестирование возможностей, служба развертывания возможностей
 
-To extend the capabilities of the pipeline, such as code scanning, more testing capabilities and deployment capabilities can be accessed as plugins in the pipeline. Tasks that previously required QA (testing engineers) and OP (operations engineers) can now be completed by RD (development engineers) autonomously by calling the services, such as setting up testing environments and deploying in stages.
-- Product Form: Plugin Center
-- Value: Reduce communication and application costs, improve delivery efficiency
+Для расширения возможностей конвейера, таких как сканирование кода, можно использовать дополнительные возможности тестирования и развертывания в качестве плагинов конвейера. Задачи, которые раньше требовали участия QA (инженеров по тестированию) и OP (инженеров по эксплуатации), теперь могут быть выполнены RD (инженерами по разработке) автономно, путем вызова служб, например, создание тестовых сред и поэтапное развертывание.
+- Форма продукта: Центр плагинов
+- Ценность: Сокращение расходов на связь и приложения, повышение эффективности доставки.
 
-### Scenario 3: Continuous Improvement based on Efficiency Metrics
+### Сценарий 3: Непрерывное совершенствование на основе показателей эффективности
 
-- Generate efficiency reports for code changes to application delivery and process reports for build, test, and deployment phases. Identify key processes that impact efficiency and make improvements. Track the effectiveness of the improvements.
-- Product Form: Metric Report
-- Value: Continuous Efficiency Improvement
+- Генерируйте отчеты об эффективности для изменений кода при доставке приложений и отчеты о процессах на этапах сборки, тестирования и развертывания. Определите ключевые процессы, влияющие на эффективность, и внесите улучшения. Отслеживайте эффективность улучшений.
+- Форма продукта: Отчет по метрике
+- Ценность: Постоянное повышение эффективности
 
-## Basic Concepts of Pipeline
+## Основные понятия конвейера
 
-- **Pipeline:** A pipeline provides a custom process orchestration tool and consists of multiple stages.
-- **Input Source:** Original materials from continuous delivery, such as Gitee repositories
-- **Stage:** A stage is used to manage a group of tasks with similar business attributes (e.g., build, test, and deploy), each stage contains one or more tasks.
-- **Task:** A task is the smallest scheduling unit in a pipeline, and all scripts and content under a task are executed in the same runtime environment.
-- **Trigger:** The way to start the pipeline. Common triggers include automatic triggering based on code changes, manual triggering, and scheduled triggering.
-- **Run (Build):** Represents an execution of the pipeline. After the run is completed, you will get all the logs related to stages and tasks, as well as the results of the run.
-Artifacts: Refers to various data processed in the pipeline, which can be executable programs, lib files, jar packages, Docker images, Helm Chart deployment files, etc.
-- **Variables:** Variables are the content passed between pipelines, stages, and tasks, and they are an important part of the pipeline, existing in key-value form.
+- **Конвейер:** Конвейер представляет собой инструмент оркестровки пользовательских процессов и состоит из нескольких этапов.
+- **Источник входных данных:** Исходные материалы из непрерывной доставки, например репозитории Gitee
+- Этап:** Этап используется для управления группой задач со схожими бизнес-атрибутами (например, сборка, тестирование и развертывание), каждый этап содержит одну или несколько задач.
+- **Задача:** Задача - это наименьшая единица планирования в конвейере, и все сценарии и содержимое под задачей выполняются в одной и той же среде выполнения.
+- **Триггер:** Способ запуска конвейера. К распространенным триггерам относятся автоматическое срабатывание на основе изменений кода, ручное срабатывание и срабатывание по расписанию.
+- **Прогон (сборка):** Представляет собой выполнение конвейера. После завершения выполнения вы получите все журналы, связанные с этапами и задачами, а также результаты выполнения.
+Артефакты: Относится к различным данным, обрабатываемым в конвейере, которые могут представлять собой исполняемые программы, lib-файлы, jar-пакеты, образы Docker, файлы развертывания Helm Chart и т. д.
+- Переменные:** Переменные - это содержимое, передаваемое между конвейерами, этапами и задачами, и они являются важной частью конвейера, существуя в форме ключ-значение.
 
-## Pricing
+## Ценообразование
 
-Committed to providing discounted and stable CI/CD services for enterprise users, therefore, a certain amount of free resource usage is provided for enterprises. More billing rules can be viewed in the 'Billing Rules and Product Pricing' section.
+Мы стремимся предоставлять корпоративным пользователям CI/CD-сервисы со скидками и стабильностью, поэтому для предприятий предоставляется определенный объем бесплатного использования ресурсов. Дополнительные правила тарификации можно посмотреть в разделе "Правила тарификации и ценообразование продуктов".

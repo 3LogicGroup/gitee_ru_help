@@ -1,30 +1,29 @@
 ---
-title: Prohibit forced push to repository
+title: Запрет принудительной отправки в репозиторий
 
 origin-url: https://gitee.ru/help/articles/4275
 ---
 
+В Git есть функция под названием -f параметр, что означает принудительную отправку кода. Она принудительно заменяет данные удаленного репозитория данными из локального репозитория. Возможные последствия включают перезапись файлов более старой версией содержимого и потерю истории изменений.
 
-Git has a scary feature called -f parameter, which is force push. It forcefully overrides the remote repository with the local repository. The consequences include the possibility of files being overwritten with older content and the loss of commit history.
+Принудительная отправка чаще всего происходит при конфликте версий репозитория. В процессе совместной разработки многие разработчики во избежания проблем используют -f отправку напрямую, и это приводит к серьезным ошибкам.
 
-Forced push usually occurs when there are conflicts in the repository version. In collaborative development, many developers, in order to save trouble, directly use the -f push, and then the tragedy happens.
+Обычный процесс заключается в том, чтобы найти способ устранить конфликты, а затем отправить код.
 
-The normal process is to find a way to resolve conflicts and then push.
+Пользователям Gitee Enterprise стала доступна функция ограничения принудительной отправки кода в репозитории. На странице управления репозиторием можно выбрать пункт "Отключить принудительную отправку кода".
 
-Gitee Enterprise customers have launched the function of restricting forced pushes to repositories. From the repository management page, you can select 'Disable Force Push'.
+![Описание изображения](image667.png)
 
-![Image Description](image667.png)
-
-Once the forced push is disabled, if a developer uses the -f parameter during a push conflict, the following error will be reported:
+Когда принудительная отправка отключена, при попытке принудительно отправить код через  -f параметр будет отображаться ошибка:
 
 `denying non-fast-forward refs/heads/master (you should pull first)`
 
-![Image Description](https://images.gitee.ru/uploads/images/2019/1018/154312_eb4467ca_669935.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2019/1018/154312_eb4467ca_669935.png )
 
-This feature is currently only available to enterprise customers and is not enabled by default. It needs to be manually enabled.
+В настоящий момент эта функция доступна только для корпоративных клиентов и не включается по умолчанию. Включение функции производится вручную.
 
-Of course, we recommend using fork + pull requests for collaborative development, or setting the main branch as read-only and then using
+В совместной разработке рекомендуется использовать форки + запросы на слияние, или установить основную ветку в режим "только для чтения" и только потом работать с ней.
 
 -----------------
 
-Go to experience Gitee Enterprise now: [https://gitee.ru/enterprises](https://gitee.ru/enterprises)
+Для ознакомления с Gitee Enterprise перейдите по ссылке: [https://gitee.ru/enterprises](https://gitee.ru/enterprises)

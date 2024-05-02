@@ -1,10 +1,10 @@
-# MySQL master-slave high availability
+# Высокая доступность MySQL master-slave
 
 
 
-Online installation
+Онлайн-установка
 
-## 1. Set up the source for mysql5.7
+## 1. Установите источник для mysql5.7
 
 ```sh
 root@gitee-mysql-master:/home/ubuntu/workdir # wget https://repo.mysql.com//mysql-apt-config_0.8.12-1_all.deb
@@ -67,9 +67,9 @@ gpg: Imported: 1
 
 
 
-## 2. Install MySQL-5.7
+## 2. Установите MySQL-5.7
 
-At this time, a mysql.list file is generated in the /etc/apt/source.list.d/ directory and the system is updated. We can check that the mysql5.7 source appears by using apt-cache policy mysql-server.
+В это время в каталоге /etc/apt/source.list.d/ создается файл mysql.list, и система обновляется. Мы можем проверить, что источник mysql5.7 появился, используя apt-cache policy mysql-server.
 
 ```sh
 root@gitee-mysql-master:/home/ubuntu/workdir # apt-cache policy mysql-server
@@ -88,7 +88,7 @@ mysql-server:
 
 
 
-### 2.1 Install mysql-client
+### 2.1 Установите mysql-клиент
 
 ```sh
 root@gitee-mysql-master:/home/ubuntu/workdir# sudo apt install mysql-client=5.7.42-1ubuntu18.04
@@ -136,7 +136,7 @@ Reading status information... Complete
 
 
 
-### 2.2 Install mysql-community-server
+### 2.2 Установите mysql-community-server
 
 ```sh
 root@gitee-mysql-master:/home/ubuntu/workdir# sudo apt install mysql-community-server=5.7.42-1ubuntu18.04
@@ -159,7 +159,7 @@ Preparing software package...
 
 
 
-### 2.3 Install mysql-server
+### 2.3 Установите mysql-сервер
 
 ```sh
 root@zgk-Ubuntu-T01:~# sudo apt install mysql-server=5.7.42-1ubuntu18.04
@@ -182,9 +182,9 @@ Setting up mysql-server (5.7.40-1ubuntu18.04)...
 
 
 
-## 3. Verification and Testing
+## 3. Проверка и тестирование
 
-After installation, you can see the version of MySQL as 5.7.40 by using the command 'dpkg -l | grep mysql'.
+После установки вы можете увидеть версию MySQL как 5.7.40 с помощью команды 'dpkg -l | grep mysql'.
 
 
 
@@ -198,7 +198,7 @@ ii  mysql-community-server          5.7.42-1ubuntu18.04               amd64     
 ii  mysql-server                    5.7.42-1ubuntu18.04               amd64        MySQL Server meta package depending on latest version
 ```
 
-After entering the password with 'mysql -u root -p', you will enter the database normally
+После ввода пароля с помощью команды 'mysql -u root -p' вы сможете нормально войти в базу данных
 
 ```sh
 root@gitee-mysql-master:/home/ubuntu/workdir# mysql -u root -p
@@ -219,7 +219,7 @@ mysql> quit
 Bye
 ```
 
-Check if the database is functioning properly and modify the root login permissions
+Проверьте, правильно ли функционирует база данных, и измените права на вход в систему с правами root.
 
 ```sh
 root@gitee-mysql-slave:/home/ubuntu/workdir# mysql -u root -p
@@ -274,7 +274,7 @@ Bye
 
 
 
-Configure to allow access from other IP
+Настройте разрешение доступа с других IP
 
 ```sh
 root@gitee-mysql-slave:/home/ubuntu/workdir# cat /etc/mysql/mysql.conf.d/mysqld.cnf
@@ -285,10 +285,10 @@ datadir         = /var/lib/mysql
 log-error       = /var/log/mysql/error.log
 
 port = 3306
-# By default we only accept connections from localhost
+# По умолчанию мы принимаем соединения только с localhost
 #bind-address   = 127.0.0.1
 bind-address    = 0.0.0.0
-# Disabling symbolic-links is recommended to prevent assorted security risks
+# Отключение символических ссылок рекомендуется для предотвращения различных рисков безопасности
 symbolic-links=0
 
 root@gitee-mysql-master:/home/ubuntu/workdir# /etc/init.d/mysql restart
@@ -297,7 +297,7 @@ Restarting mysql (via systemctl): mysql.service.
 
 
 
-## 4. Replication
+## 4. Репликация
 
 
 
@@ -312,13 +312,13 @@ datadir         = /var/lib/mysql
 log-error       = /var/log/mysql/error.log
 
 port = 3306
-# By default we only accept connections from localhost
+# По умолчанию мы принимаем соединения только с localhost
 #bind-address   = 127.0.0.1
 bind-address    = 0.0.0.0
-# Disabling symbolic-links is recommended to prevent assorted security risks
+# Отключение символических ссылок рекомендуется для предотвращения различных рисков безопасности
 symbolic-links=0
 
-# Character Set Configuration
+# Конфигурация набора символов
 character-set-server = utf8mb4
 collation-server = utf8mb4_unicode_ci
 
@@ -327,7 +327,7 @@ slow_query_log = 1
 slow_query_log_file = /var/log/mysql/slow.log
 long_query_time = 2
 
-# Buffer Configuration
+# Конфигурация буфера
 key_buffer_size = 256M
 thread_cache_size = 128
 table_open_cache = 4096
@@ -340,7 +340,7 @@ max_connections = 4096
 max_allowed_packet = 64M
 max_connect_errors = 100
 
-# InnoDB Configuration
+# Конфигурация InnoDB
 default_storage_engine = InnoDB
 innodb_buffer_pool_size = 16G
 innodb_flush_log_at_trx_commit = 2
@@ -356,11 +356,11 @@ innodb_read_io_threads = 4
 innodb_write_io_threads = 4
 innodb_thread_concurrency = 0
 
-# Copy configuration (if using copy)
+# Копирование конфигурации (если используется копирование)
 server-id = 101
 log_bin = /var/log/mysql/mysql-bin.log
 
-# Other Configuration
+# Другая конфигурация
 tmp_table_size = 256M
 max_heap_table_size = 256M
 open_files_limit = 65535
@@ -403,13 +403,13 @@ datadir         = /var/lib/mysql
 log-error       = /var/log/mysql/error.log
 
 port = 3306
-# By default we only accept connections from localhost
+# По умолчанию мы принимаем соединения только с localhost
 #bind-address   = 127.0.0.1
 bind-address    = 0.0.0.0
-# Disabling symbolic-links is recommended to prevent assorted security risks
+# Отключение символических ссылок рекомендуется для предотвращения различных рисков безопасности
 symbolic-links=0
 
-# Character Set Configuration
+# Конфигурация набора символов
 character-set-server = utf8mb4
 collation-server = utf8mb4_unicode_ci
 
@@ -418,7 +418,7 @@ slow_query_log = 1
 slow_query_log_file = /var/log/mysql/slow.log
 long_query_time = 2
 
-# Buffer Configuration
+# Конфигурация буфера
 key_buffer_size = 256M
 thread_cache_size = 128
 table_open_cache = 4096
@@ -431,7 +431,7 @@ max_connections = 4096
 max_allowed_packet = 64M
 max_connect_errors = 100
 
-# InnoDB Configuration
+# Конфигурация InnoDB
 default_storage_engine = InnoDB
 innodb_buffer_pool_size = 16G
 innodb_flush_log_at_trx_commit = 2
@@ -447,12 +447,12 @@ innodb_read_io_threads = 4
 innodb_write_io_threads = 4
 innodb_thread_concurrency = 0
 
-# Copy Configuration
+# Копирование конфигурации
 server-id = 102
 log_bin = /var/log/mysql/mysql-bin.log
 read_only=1
 
-# Other Configuration
+# Другая конфигурация
 tmp_table_size = 256M
 max_heap_table_size = 256M
 open_files_limit = 65535
@@ -461,9 +461,9 @@ root@gitee-mysql-slave:/home/ubuntu/workdir# systemctl restart mysql
 
 
 
-### 4.3 Configure synchronization
+### 4.3 Настройка синхронизации
 
-Operations on the host
+Операции на хосте
 
 ```sh
 root@gitee-mysql-master:/home/ubuntu/workdir# mysql -uroot -p
@@ -521,7 +521,7 @@ mysql_dump.sql                                                                  
 
 
 
-Operations on standby machine
+Операции на резервной машине
 
 ```sh
 root@gitee-mysql-slave:/home/ubuntu# mysql -u root -p < /home/ubuntu/mysql_dump.sql
@@ -610,11 +610,11 @@ Master_SSL_Verify_Server_Cert: No
 
 
 
-### 4.4 Database verification
+### 4.4 Проверка базы данных
 
 
 
-Create database on the master server as follows
+Создайте базу данных на master-сервере следующим образом
 
 ```sh
 mysql> create database hujianlidb charset=utf8;
@@ -623,7 +623,7 @@ Query OK, 1 row affected (0.02 sec)
 mysql>
 ```
 
-Check if the database is synchronized from the slave
+Проверьте, синхронизирована ли база данных с ведомым устройством
 
 ```sh
 mysql> show databases;
@@ -641,9 +641,9 @@ mysql> show databases;
 
 
 
-### 4.5 Enable semi-synchronous replication
+### 4.5 Включите полусинхронную репликацию
 
-Install semi-synchronous replication plugin and enable semi-synchronous replication in the primary database
+Установите плагин полусинхронной репликации и включите полусинхронную репликацию в основной базе данных
 
 ```
 root@gitee-mysql-master:/home/ubuntu/workdir# mysql -uroot -p
@@ -681,7 +681,7 @@ mysql> show plugins;
 +----------------------------+----------+--------------------+--------------------+---------+
 ```
 
-Install semi-synchronous replication plugin and enable semi-synchronous replication in the slave
+Установите плагин полусинхронной репликации и включите полусинхронную репликацию в ведомом устройстве
 
 ```sh
 mysql> install plugin rpl_semi_sync_slave soname 'semisync_slave.so';
@@ -708,9 +708,9 @@ mysql> start slave io_thread;
 Query OK, 0 rows affected (0.00 sec)
 ```
 
-To enable the semi-sync replication feature during startup, you can add rpl_semi_sync_slave_enabled=on and rpl_semi_sync_master_enabled=on to the my.cnf configuration file.
+Чтобы включить функцию полусинхронной репликации во время запуска, вы можете добавить rpl_semi_sync_slave_enabled=on и rpl_semi_sync_master_enabled=on в конфигурационный файл my.cnf.
 
-As shown below
+Как показано ниже
 
 ```sh
 root@gitee-mysql-master:/home/ubuntu/workdir# cat /etc/mysql/mysql.conf.d/mysqld.cnf
@@ -721,13 +721,13 @@ datadir         = /var/lib/mysql
 log-error       = /var/log/mysql/error.log
 
 port = 3306
-# By default we only accept connections from localhost
+# По умолчанию мы принимаем соединения только с localhost
 #bind-address   = 127.0.0.1
 bind-address    = 0.0.0.0
-# Disabling symbolic-links is recommended to prevent assorted security risks
+# Отключение символических ссылок рекомендуется для предотвращения различных рисков безопасности
 symbolic-links=0
 
-# Character Set Configuration
+# Конфигурация набора символов
 character-set-server = utf8mb4
 collation-server = utf8mb4_unicode_ci
 
@@ -736,7 +736,7 @@ slow_query_log = 1
 slow_query_log_file = /var/log/mysql/slow.log
 long_query_time = 2
 
-# Buffer Configuration
+# Конфигурация буфера
 key_buffer_size = 256M
 thread_cache_size = 128
 table_open_cache = 4096
@@ -749,7 +749,7 @@ max_connections = 4096
 max_allowed_packet = 64M
 max_connect_errors = 100
 
-# InnoDB Configuration
+# Конфигурация InnoDB
 default_storage_engine = InnoDB
 innodb_buffer_pool_size = 16G
 innodb_flush_log_at_trx_commit = 2
@@ -765,28 +765,28 @@ innodb_read_io_threads = 4
 innodb_write_io_threads = 4
 innodb_thread_concurrency = 0
 
-# Copy configuration (if using copy)
+# Копирование конфигурации (если используется копирование)
 server-id = 101
 log_bin = /var/log/mysql/mysql-bin.log
 
-# Other Configuration
+# Другая конфигурация
 tmp_table_size = 256M
 max_heap_table_size = 256M
 open_files_limit = 65535
 
-# Semi-synchronous replication
+# Полусинхронная репликация
 rpl_semi_sync_slave_enabled=on
 rpl_semi_sync_master_enabled=on
 ```
 
-Check if semi-synchronous replication is running properly on the primary database
+Проверьте, правильно ли работает полусинхронная репликация в основной базе данных.
 
 ```sh
 mysql> show global status like "%semi%";
-Rpl_semi_sync_master_clients 1 # A slave is already connected to the master using semi-synchronous replication
-Rpl_semi_sync_master_status ON # Indicates that it is already in semi-sync replication mode
-Rpl_semi_sync_master_no_tx 0 #Number of times failed to receive slave commits
-Rpl_semi_sync_master_yes_tx 0 #Successful receipt of slave transaction reply count
+Rpl_semi_sync_master_clients 1 # Ведомый уже подключен к ведущему с помощью полусинхронной репликации
+Rpl_semi_sync_master_status ON # Указывает, что он уже находится в режиме полусинхронной репликации
+Rpl_semi_sync_master_no_tx 0 # Количество неудачных попыток получения ведомых коммитов
+Rpl_semi_sync_master_yes_tx 0 # Счетчик успешного получения ответа на транзакцию ведомого
 ```
 
 Check the semi-synchronous replication status on the replica
@@ -804,21 +804,21 @@ Rpl_semi_sync_slave_status ON # Enable semi-sync replication on the slave
 
 
 
-### 4.6 Create user
+### 4.6 Создание пользователя
 
-Create Regular User
+Создать обычного пользователя
 
 ```sql
-# Create gitee on both master and slave
+# Создайте gitee на ведущем и ведомом устройствах
 create user gitee@'%' identified by 'oschina123';
-# grant all privileges on gitlabhq_production.* to gitee@'%' with grant option;
+# предоставить все привилегии на gitlabhq_production.* для gitee@'%' с опцией grant;
 GRANT ALL PRIVILEGES ON *.* TO 'gitee'@'%';
 FLUSH PRIVILEGES;
 ```
 
 
 
-Create Read-Only User
+Создать пользователя, доступного только для чтения
 
 ```sql
 // Create a readonly user on the slave database
@@ -826,10 +826,10 @@ CREATE USER 'readonly'@'%' IDENTIFIED BY 'oschina123';
 GRANT SELECT ON gitee_production.* TO 'readonly'@'%';
 ```
 
-## 5. View MySQL Configuration
+## 5. Просмотр конфигурации MySQL
 
 ```sh
-# Check the maximum number of connections for MySQL
+# Проверьте максимальное количество соединений для MySQL
 mysql> show variables like '%max_connections%';
 +-----------------+-------+
 | Variable_name   | Value |
@@ -838,7 +838,7 @@ mysql> show variables like '%max_connections%';
 +-----------------+-------+
 1 row in set (0.01 sec)
 
-# View the maximum number of connections that the server can handle:
+# Просмотр максимального количества соединений, которые может обработать сервер:
 mysql> show global status like 'Max_used_connections';
 +----------------------+-------+
 | Variable_name        | Value |
@@ -847,25 +847,25 @@ mysql> show global status like 'Max_used_connections';
 +----------------------+-------+
 1 row in set (0.01 sec)
 
-# View MySQL connections to this server
-# On production servers, the database cannot be restarted easily, so we have to manually release some unused connections.
+# Просмотр соединений MySQL с этим сервером
+# На производственных серверах базу данных нельзя перезапустить легко, поэтому мы должны вручную освободить некоторые неиспользуемые соединения.
 mysql> show processlist;
 
-# You can see the MySQL data connection list and each one will have a process ID (in the first column of the table). We just need to enter this command:
-mysql> kill 1180421; (where 1180421 is the process ID to be killed found in the process list)
+# Вы можете увидеть список соединений с данными MySQL, и у каждого из них будет идентификатор процесса (в первом столбце таблицы). Нам нужно ввести эту команду:
+mysql> kill 1180421; (где 1180421 — идентификатор процесса, который нужно уничтожить, найденный в списке процессов)
 
 
-# Check if the database has slow queries enabled, the command is as follows, details are shown in Figure 11-9.
+# Проверьте, включены ли в базе данных медленные запросы, команда выглядит следующим образом, подробности показаны на рисунке 11-9.
 mysql> show variables like "%slow%";
 mysql> show variables like "%long_query%";
 ```
 
 
 
-User Permission Configuration
+Конфигурация разрешений пользователей
 
 ```sh
-# Check all users of the current database:
+# Проверьте всех пользователей текущей базы данных:
 mysql> use mysql;
 mysql> select user, host, authentication_string from user;
 +---------------+-----------+-------------------------------------------+
@@ -880,17 +880,17 @@ mysql> select user, host, authentication_string from user;
 5 rows in set (0.00 sec)
 
 
-# Grant super privileges to the user (both super and ALL PRIVILEGES are acceptable):
+# Предоставьте пользователю суперпривилегии (допустимы оба варианта - super и ALL PRIVILEGES):
 GRANT super ON *.* TO 'mysql'@'localhost';
 GRANT ALL PRIVILEGES ON *.* TO 'mysql'@'localhost';
 
 
-# Remove super privileges from the user (both super and ALL PRIVILEGES are acceptable):
+# Удалите у пользователя суперпривилегии (допустимы оба варианта - super и ALL PRIVILEGES):
 REVOKE super ON *.* FROM 'mysql'@'localhost';
 REVOKE ALL PRIVILEGES ON *.* FROM 'mysql'@'localhost';
 
 
-# Check the permissions granted to the user
+# Проверьте права, предоставленные пользователю
 mysql> SHOW GRANTS FOR 'gitee'@'%';
 +----------------------------------------------------------------------------------+
 | Grants for gitee@%                                                               |

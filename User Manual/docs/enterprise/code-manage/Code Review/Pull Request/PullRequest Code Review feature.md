@@ -1,15 +1,19 @@
 ---
-title: Pull Request Code Review Function
-origin-url: https://gitee.ru/help/articles/4306
+title: Клонирование запроса на слияние
+origin-url: https://gitee.ru/help/articles/4133
 ---
 
-The PullRequest review function can save the progress of viewing the changed code for users, distinguishing between viewed and unviewed code.
 
-### **How to use**
+## Клонировать исходный код ветки запроса на слияние в локальный репозиторий
 
-On a PR detail page, you can find the "Reviewed" functionality by checking the "Files" list of changes.
+### **Адрес клона текущего жапроса на слияние можно найти на любой открытой странице запроса на слияние**
 
-Checking 'Read' can mark the viewing status of the corresponding file. When selecting 'Read' for a file, the changed file will be automatically folded, and the number of 'Read' files will be displayed on the page.
+![Описание изображения](../../../../../assets/image171.png)
 
-> When there are changes in the code in the Pull Request, the system will automatically mark the corresponding changed files as 'unread'.
-![Image Description](../../../../../assets/image174.png)
+### **Скопируйте адрес в буфер обмена, используя функцию копирования одним щелчком мыши**
+
+![](../../../../base/pullrequest/%E5%85%8B%E9%9A%86PullRequest.assets/image.png)
+
+### **Для переключения на соответствующий репозиторий Git и выполнения этой команды Git создаст новую ветку на основе текущей исходной ветки запроса на извлечение и переключится на эту ветку, чтобы вы могли получить весь зафиксированный код в этой ветке**
+
+![Описание изображения](./assets/16114241_bgum.png)

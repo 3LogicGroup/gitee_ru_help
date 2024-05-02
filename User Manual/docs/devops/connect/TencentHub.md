@@ -1,35 +1,35 @@
 ---
-title: TencentHub
+title: Tencent Hub
 
 origin-url: https://gitee.ru/help/articles/4223
 ---
 
-Tencent Hub is a container-based service provided by Tencent Cloud platform. It provides version management for multiple storage formats, supporting Docker Image, Binary, Helm Charts, and other file types. Tencent Hub also provides an orchestration engine for DevOps workflows, allowing you to easily orchestrate DevOps workflows and accelerate software iteration and release speed.
+Tencent Hub представляет собой контейнерный сервис, предоставляемый облачной платформой Tencent . Он обеспечивает управление версиями для различных форматов хранения, поддерживая Docker Image, Binary, Helm Charts и другие типы файлов. Tencent Hub также предоставляет механизм оркестровки рабочих процессов DevOps, позволяющий легко оркестровать рабочие процессы DevOps и ускорить скорость итерации и выпуска программного обеспечения.
 
-Currently, Tencent Hub has opened support for Gitee code repositories. The specific usage process is as follows:
+В настоящее время Tencent Hub открыл поддержку репозиториев кода Gitee. Процесс использования выглядит следующим образом:
 
-### Step 1
+### Шаг 1
 
-To use Tencent Hub for the first time, you need to register and create a Tencent Hub account.
+Чтобы впервые воспользоваться Tencent Hub, вам необходимо зарегистрироваться и создать учетную запись Tencent Hub.
 
-![Image Description](https://images.gitee.ru/uploads/images/2018/0829/155104_dfc5f7d8_669935.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2018/0829/155104_dfc5f7d8_669935.png )
 
-### Step 2
+### Шаг 2
 
-After registration, find the authorization for [Gitee](https://gitee.ru/) in the settings.
+После регистрации найдите в настройках авторизацию для [Gitee](https://gitee.ru/).
 
-![Image Description](https://images.gitee.ru/uploads/images/2018/0829/155129_221c28ef_669935.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2018/0829/155129_221c28ef_669935.png )
 
-### Step 3
+### Шаг 3
 
-After clicking on authorization, it will redirect to the third-party application authorization page of Gitee.
+После нажатия на кнопку авторизации произойдет перенаправление на страницу авторизации сторонних приложений Gitee.
 
-![Image Description](https://images.gitee.ru/uploads/images/2018/0829/155139_3f8cc379_669935.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2018/0829/155139_3f8cc379_669935.png )
 
-### Step 4
+### Шаг 4
 
-After completing the authorization, you can use Tencent Hub to directly build container project repositories hosted on the Gitee platform.
+По завершении авторизации вы можете использовать Tencent Hub для прямой сборки репозиториев контейнерных проектов, размещенных на платформе Gitee.
 
-![Image Description](https://images.gitee.ru/uploads/images/2018/0829/155148_e973246d_669935.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2018/0829/155148_e973246d_669935.png )
 
-Visit [Gitee](https://gitee.ru/) to experience it immediately!
+Посетите [Gitee](https://gitee.ru/), чтобы немедленно испытать его в действии!

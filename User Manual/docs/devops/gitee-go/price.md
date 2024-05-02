@@ -1,5 +1,5 @@
 ---
-title: Product Pricing and Billing
+title: Цены на продукт и выставление счетов
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
@@ -9,26 +9,26 @@ description: Gitee Go product pricing and billing
 origin-url: 
 ---
 
-Enterprise/Community Edition is now fully open!
+Корпоративная/общественная версия теперь полностью открыта!
 
-Currently, by opening Gitee Go Pipeline, each individual code repository can directly obtain 200 minutes of free build time, which is permanently valid!
+В настоящее время, открыв конвейер Gitee Go, каждый отдельный репозиторий кода может напрямую получить 200 минут бесплатного времени сборки, которое действительно на постоянной основе!
 
-Enterprise/organization/individual automatically receives 1000 minutes of free build time per month, applicable to all repositories!
+Предприятие/организация/частное лицо автоматически получает 1000 минут бесплатного времени сборки в месяц, применимо ко всем репозиториям!
 
-![Personal Billing Details](https://images.gitee.ru/uploads/images/2022/0317/191152_e80dfbbd_10531940.png)
+![Личные платежные данные](https://images.gitee.ru/uploads/images/2022/0317/191152_e80dfbbd_10531940.png)
 
-## 1. Product pricing
+## 1. Цены на продукт
 
-The build time exceeds a total of 1000 minutes. You can also continue to purchase overtime packages. The specific pricing is as follows. It is also recommended that you join the official communication group mentioned below for real-time answers to Gitee Go-related questions.
+Время сборки в общей сложности превышает 1000 минут. Вы также можете продолжать приобретать пакеты сверхурочной работы. Конкретные цены приведены ниже. Также рекомендуется присоединиться к официальной группе общения, упомянутой ниже, чтобы в режиме реального времени отвечать на вопросы, связанные с Gitee Go.
 
-| Overtime Package | Amount |
+| Пакет | Сумма |
 |---------|-------|
-| 400 minutes | 100 yuan |
-| 800 minutes | 200 RMB |
-| 2000 minutes | 500 RMB |
-| 4000 minutes | 1000 RMB |
-| Annual (Unlimited Duration) | 5000 RMB |
+| 400 минут | 100 юаней |
+| 800 минут | 200 юаней |
+| 2000 минут | 500 юаней |
+| 4000 минут | 1000 юаней |
+| Годовой (неограниченный срок) | 5000 юаней |
 
-## 2. Billing Model
+## 2. Модель выставления счетов
 
-Billing model
+Модель выставления счетов

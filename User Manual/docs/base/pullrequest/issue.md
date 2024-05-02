@@ -1,30 +1,30 @@
----
-title: PullRequest associated with Issue
+﻿---
+title: Запрос на слияние, связанный с задачей
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 origin-url: https://gitee.ru/help/articles/4142
 ---
 
-By associating an issue with a pull request, users can close the issue when closing the pull request. The association feature has the following characteristics:
+Связав задачу с запросом на слияние, пользователи могут закрыть задачу при закрытии запроса на слияние. Функция сопоставления обладает следующими характеристиками:
 
-1. A PR can be associated with multiple issues, for example, simultaneously associated with issue1, issue2 in the format: `#issue1ident, #issue2dent`
-2. After PR is associated with an issue, the status of the issue will automatically change to 'In Progress'. When the PR is merged, the issue will be closed.
-3. Difference between Personal and Enterprise versions:
+1. Запрос на слияние может быть связан с несколькими задачами, например, одновременно связан с issue1, issue2 в формате: `#issue1ident, #issue2dent`
+2. После того, как запрос на слияние будет связан с задачей, статус задачи автоматически изменится на "Выполняется". После выполнения запроса на слияние задача будет закрыта.
+3. Разница между версиями Personal и Enterprise:
 >
-> - Personal version, PR can only associate tasks from the current repository.
-> - Enterprise version, PP can be associated with tasks of all enterprises.
+> - В версии Personal запрос на слияние может быть связан с задачами только из текущего репозитория.
+> - В версии Enterprise запрос на слияние может быть связан с задачами всех предприятий.
 
-## The specific steps to associate an Issue with a Pull Request are as follows
+## Конкретные шаги для привязки задачи с запросом на слияние:
 
-#### 1. Specify the ident of the issue that needs to be closed in the content of the PR, for example
+#### 1. В содержании запроса на слияние укажите идентификатор задачи, которую необходимо закрыть, например
 
-![Image Description](https://images.gitee.ru/uploads/images/2021/0820/014040_20105e6c_551147.png)
+![Описание изображения](https://images.gitee.ru/uploads/images/2021/0820/014040_20105e6c_551147.png)
 
-#### 2. You can see the association on the issue details page
+#### 2. Вы можете увидеть связь на странице сведений о задаче
 
-![Image Description](https://images.gitee.ru/uploads/images/2021/0820/014040_08507522_551147.png)
+![Описание изображения](https://images.gitee.ru/uploads/images/2021/0820/014040_08507522_551147.png)
 
-#### 3. When the associated issue of the PR is closed after it is merged
+#### 3. Когда связанная с запросом на слияние задача закрывается после его выполнения
 
-![Image Description](https://images.gitee.ru/uploads/images/2021/0820/014040_5d7b8f12_551147.png)
+![Описание изображения](https://images.gitee.ru/uploads/images/2021/0820/014040_5d7b8f12_551147.png)

@@ -1,8 +1,8 @@
 ---
-title: Document preview
-description: Document preview
+title: Предварительный просмотр документа
+description: Предварительный просмотр документа
 slug: enterprise/knowledge/preview
 ---
-Click the preview icon to preview the document in full screen.
-![Image Description](assets/image324.png)
-![Image Description](assets/image325.png)
+Для просмотра документа в полноэкранном режиме нажмите на значок предварительного просмотра.
+![Описание изображения](assets/image324.png)
+![Описание изображения](assets/image325.png)

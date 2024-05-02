@@ -1,9 +1,8 @@
-# SSH tunnel web forwarding system for access control
+# Система веб-пересылки SSH-туннеля для контроля доступа
 
 
 
 
 
-[sshtunnelweb: SSH tunnel web forwarding system based on user IP for permission control, developed in Go. Used mainly for accessing production environment services from within the company by R&D, without exposing the production IP. Only access to the company's internal host port is required.](https://gitee.com/oldsa/sshtunnelweb)
-
+[sshtunnelweb: система веб-пересылки SSH-туннеля на основе IP-адреса пользователя для контроля разрешений, разработанная на Go. Используется в основном для доступа к службам производственной среды внутри компании в рамках исследований и разработок без раскрытия производственной интеллектуальной собственности. Требуется только доступ к внутреннему хост-порту компании.](https://gitee.com/oldsa/sshtunnelweb)
 

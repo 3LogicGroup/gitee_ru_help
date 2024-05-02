@@ -1,9 +1,9 @@
 ---
-title: Version Planning
+title: Планирование версии
 ---
 
-Click on 'Versions' in the navigation menu of the agile project, and then click on the 'Release Plan' tab:
+Нажмите на "Версии" в навигационном меню проекта Agile, затем нажмите на вкладку "План релиза":
 
-In the calendar view, click on any date cell to quickly open the "Create Version" window, and the release time in the window will be automatically filled in as that date.
+Чтобы быстро открыть окно "Создать версию", нажмите на ячейку любой даты в календаре. Время релиза будет автоматически заполнено выбранной датой.
 
-![Image Description](../docs/assets/image612.png)
+![Описание изображения](../docs/assets/image612.png)

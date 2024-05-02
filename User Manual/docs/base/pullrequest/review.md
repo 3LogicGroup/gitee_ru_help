@@ -1,98 +1,98 @@
 ---
-title: Frequently Asked Questions for Enterprise Edition Package
+title: Часто задаваемые вопросы по пакету Enterprise Edition
 origin-url: https://gitee.ru/help/articles/4203
 ---
 
-## How is the enterprise edition charged?
+## Как оплачивается версия Enterprise edition?
 
-Gitee paid version starts at 299 CNY/person/year. Please check the pricing page for detailed information: https://gitee.ru/enterprises/price
+Расценки платной версии Gitee начинаются с 299 юаней с человека в год. Для получения подробной информации перейдите на страницу цен:  https://gitee.ru/enterprises/price
 
-## What is the 20-person limit of the Standard Edition?
+## Каков лимит на 20 человек в стандартной версии?
 
-The creator of the standard version of the enterprise can add up to 20 enterprise members to the enterprise account, and can assign these 20 people to various enterprise repositories. Therefore, the maximum number of repository members for each enterprise repository is 20.
+Создатель стандартной версии Enterprise может добавить до 20 пользователей enterprise в учетную запись enterprise и может закрепить этих 20 человек за различными корпоративными репозиториями. Таким образом, максимальное количество участников репозитория для каждого корпоративного репозитория равно 20.
 
-## What is the Standard Edition 20G Repository Capacity?
+## Какова емкость репозитория версии Standard Edition 20G?
 
-The total capacity of all repository resource files under the Enterprise Standard Edition account is limited to 20 GB. (Including code, images, documents, attachments, etc.)
+Общий объем всех файлов ресурсов репозитория под учетной записью Enterprise Standard Edition ограничен 20 ГБ. (Включая код, изображения, документы, вложения и т.д.)
 
-## How can paid enterprises expand their user accounts?
+## Как могут пользователи платных версий Enterprise могут расширить учетные записи своих пользователей?
 
-Paid Enterprise Edition supports adding individual member numbers separately
-Operation Steps: Log in to the enterprise super administrator/owner account
-Enterprise Workspace -> Management -> Order and Invoice Management -> Click 'Expand/Upgrade/Renew' -> Check 'Increase member quota' -> Purchase additional members based on requirements
-![Image Description](https://images.gitee.ru/uploads/images/2020/1015/160453_c833e252_7722649.png )  
-![Image Description](https://images.gitee.ru/uploads/images/2020/1015/160455_7effd70d_7722649.png )
+Платная версия Enterprise Edition поддерживает отдельное добавление различного количества участников
+Шаги операции: Войдите в учетную запись суперадминистратора/владельца предприятия
+Рабочее пространство Enterprise -> Управление -> Управление заказами и счетами-фактурами -> Нажмите "Расширить/ обновить/продлить" -> Установите флажок "Увеличить квоту участников" -> Приобретите дополнительных участников в соответствии с требованиями
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/1015/160453_c833e252_7722649.png )  
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/1015/160455_7effd70d_7722649.png )
 
-## What are Single Repositories and Single Files?
+## Что такое отдельные хранилища и отдельные файлы?
 
-A company account has created multiple repositories (such as repositories A, B, C), and a single repository refers to one of them (such as repository A). In repository A, several files have been uploaded (such as index.php, README.md), and a single file refers to one of them (such as index.php).
+Учетная запись компании создала несколько репозиториев (например, репозитории А, Б, В), и один репозиторий ссылается на один из них (например, репозиторий A). В репозиторий A было загружено несколько файлов (например, index.php, README.md), при этом один файл ссылается на один из них (например, index.php).
 
-## How many repositories can enterprise users create?
+## Сколько репозиториев могут создать пользователи пакета Enterprise?
 
-There is no limit to the number of repositories as long as it is within the capacity limit of the enterprise package.
+Количество репозиториев не ограничено, если оно находится в пределах емкости пакета Enterprise.
 
-Upgrade to the paid version or purchase the enterprise version has any discounts?
+Предоставляются ли какие-либо скидки при обновлении до платной версии или покупке версии Enterprise?
 
-Discount of 999 yuan for purchasing the standard version in the first year of the startup company
-(2) For the first purchase of the enterprise paid version, one month can be given as a gift, excluding the basic version.
-(3) Purchase Gitee Enterprise Edition (any version) for 2 years and get 3 months of usage duration for free; purchase Gitee Enterprise Edition (any version) for 3 years and get 6 months of usage duration for free.
-For specific details, refer to: <https://blog.gitee.ru/2019/01/05/gitee-startup/>
+Скидка в размере 999 юаней при покупке стандартной версии в первый год работы стартап-компании
+(2) При первой покупке корпоративной платной версии в подарок может быть предоставлен один месяц, за исключением базовой версии.
+(3) Приобретите Gitee Enterprise Edition (любую версию) на 2 года и получите 3 месяца бесплатного использования; приобретите Gitee Enterprise Edition (любую версию) на 3 года и получите 6 месяцев бесплатного использования.
+Для получения более подробной информации обратитесь к: <https://blog.gitee.ru/2019/01/05/gitee-startup/>
 
-## After selecting an enterprise plan, how to make payment?
+## Как произвести оплату после выбора корпоративного плана?
 
-Step 1: Generate an order. Log in to the enterprise with the super administrator account. On the left sidebar of the enterprise personal workspace interface, click 'Management' - 'Order & Invoice Management' - Select the package and click 'Purchase' to generate an order.
+Шаг 1: Создайте заказ. Войдите в версию Enterprise с учетной записью суперадминистратора. На левой боковой панели интерфейса enterprise personal workspace нажмите "Управление" - "Управление заказами и накладными" - Выберите пакет и нажмите "Купить", чтобы сгенерировать заказ.
 
-Step 2: Pay the order. Select the appropriate payment method, click 'Pay', complete the payment, and the order will take effect immediately.
+Шаг 2: Оплатите заказ. Выберите подходящий способ оплаты, нажмите "Оплатить", завершите платеж, и заказ немедленно вступит в силу.
 
-Gitee supports online payment methods such as Alipay, corporate online banking, personal online banking, and offline bank transfer.
+Gitee поддерживает такие способы онлайн-оплаты, как Alipay, корпоративный онлайн-банкинг, личный онлайн-банкинг и офлайн-банковский перевод.
 
-> Note:
+> Примечание:
 >
-> - Alipay, corporate online banking, personal online banking can all issue invoices with the company name
-> - If a transfer is made through offline corporate bank transfer and the personal account is used to transfer to our corporate account, only a normal invoice with the individual's name as the recipient can be issued. However, if the transfer is made from a company account to our corporate account, an enterprise value-added tax normal invoice or enterprise value-added tax special invoice can be issued with the company name as the recipient.
+> - Alipay, корпоративный онлайн-банкинг, персональный онлайн-банкинг - все они могут выставлять счета с указанием названия компании
+> - Если перевод осуществляется посредством офлайн-корпоративного банковского перевода и личный кабинет используется для перевода на наш корпоративный счет, может быть выставлен только обычный счет-фактура с указанием имени физического лица в качестве получателя. Однако, если перевод осуществляется со счета компании на наш корпоративный счет, может быть выставлен обычный счет-фактура по налогу на добавленную стоимость предприятия или специальный счет-фактура по налогу на добавленную стоимость предприятия с указанием названия компании в качестве получателя.
 
-What is the discount policy for startup companies in the enterprise edition? How to operate?
+Какова политика скидок для начинающих компаний в enterprise edition? Как работать?
 
-Please check the details at <https://blog.gitee.ru/2019/01/05/gitee-startup/>
-Available after obtaining a discount code for purchasing the Enterprise Edition
-Operation steps: Enterprise Workspace -> Management -> Order and Invoice Management -> Click "Expand/Upgrade/Renew" -> Check "Use Coupon Code" -> Purchase
-![Image Description](https://images.gitee.ru/uploads/images/2020/1015/160605_58dac6f0_7722649.png )
-![Image Description](https://images.gitee.ru/uploads/images/2020/1015/160611_200c8a05_7722649.png )
+Ознакомьтесь с подробностями по адресу <https://blog.gitee.ru/2019/01/05/gitee-startup/>
+Доступно после получения кода скидки при покупке Enterprise Edition
+Шаги операции: Рабочее пространство предприятия -> Управление -> Управление заказами и счетами-фактурами -> Нажмите "Развернуть/ Обновить/продлить" -> Установите флажок "Использовать код купона" -> Покупка
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/1015/160605_58dac6f0_7722649.png )
+![Описание изображения](https://images.gitee.ru/uploads/images/2020/1015/160611_200c8a05_7722649.png )
 
-## Can invoices be issued?
+## Можно ли выставлять счета-фактуры?
 
-You can apply for an invoice, such as a VAT general invoice (electronic invoice is limited to general invoices) or a VAT special invoice. The application steps are as follows:
+Вы можете подать заявку на выставление счета-фактуры, например, общего счета-фактуры по НДС (электронный счет-фактура распространяется только на общие счета-фактуры) или специального счета-фактуры по НДС. Шаги подачи заявки следующие:
 
-When cloning the SSH URL, you must be the owner of this repository.
+При клонировании URL-адреса SSH вы должны быть владельцем этого репозитория.При клонировании URL-адреса SSH вы должны быть владельцем этого репозитория.
 
-> Note: Generally, general taxpayers can apply for special VAT invoices, and small-scale taxpayers can only apply for ordinary VAT invoices.
+> Примечание: Как правило, обычные налогоплательщики могут подавать заявки на специальные счета-фактуры по НДС, а мелкие налогоплательщики могут подавать заявки только на обычные счета-фактуры по НДС.
 
-## Why was the application for a dedicated invoice rejected?
+## Почему была отклонена заявка на специальный счет-фактуру?
 
-The application for invoice has been rejected, and you will be prompted with information. You can click on 'Order & Invoice Management' in the Enterprise Management Console, go to 'Order Records', and click on 'Details' to view the rejection reason.
+Заявка на выставление счета была отклонена, и вам будет предложено ввести информацию. Вы можете нажать "Управление заказами и накладными" в консоли управления предприятием, перейти в "Записи заказов" и нажать "Подробности", чтобы просмотреть причину отклонения.
 
- **Generally, the following situations will be rejected:**
+ ** Как правило, в следующих ситуациях заявки будут отклоняться:**
 
-1. There are obvious errors in filling in the invoice information or mailing information
-2. The uploaded business license does not match the information provided
-3. The uploaded general taxpayer certification materials do not have a general taxpayer seal
+1. В заполнении информации о счете-фактуре или почтовой рассылке имеются явные ошибки
+2. Загруженная бизнес-лицензия не соответствует предоставленной информации
+3. Загруженные материалы для общей сертификации налогоплательщика не имеют печати общего налогоплательщика
 
- **If situation 3 occurs, please re-upload any of the following types of scanning documents:**
+ **В случае возникновения ситуации 3 повторно загрузите любой из следующих типов отсканированных документов:**
 
-- General taxpayer notification issued by the tax bureau (stamped with the tax seal)
-- Value-added tax general taxpayer qualification registration form (stamped with tax seal)
-- Attach a scanned copy of the VAT taxpayer registration certificate or business license
-- Search for the general taxpayer information of your company on the website of the local tax bureau and upload a screenshot.
+- Общее уведомление налогоплательщика, выданное налоговым бюро (с печатью налогового органа)
+- Регистрационная форма общей квалификации налогоплательщика по налогу на добавленную стоимость (с печатью налогового органа)
+- Приложите отсканированную копию свидетельства о регистрации плательщика НДС или лицензии на ведение бизнеса
+- Найдите общую информацию о налогоплательщике вашей компании на веб-сайте местного налогового бюро и загрузите скриншот.
 
-> Note: "Three Certificates in One" refers to the business license, organization code certificate, and tax registration certificate in the process of combining three certificates into one. Among them, the tax registration certificate is possessed by both small-scale taxpayers and general taxpayers, so it is impossible to determine whether your company has the qualification of a general taxpayer through the combination of three certificates. Please upload any of the above scan documents.
+> Примечание: "Три сертификата в одном" относятся к бизнес-лицензии, сертификату с кодом организации и свидетельству о постановке на налоговый учет в процессе объединения трех сертификатов в один. Среди них свидетельство о постановке на налоговый учет имеется как у мелких налогоплательщиков, так и у налогоплательщиков общего профиля, поэтому невозможно определить, имеет ли ваша компания квалификацию налогоплательщика общего профиля, используя комбинацию из трех сертификатов. Пожалуйста, загрузите любой из вышеуказанных отсканированных документов.
 
-## Is the data stored in the code repository safe?
+## Безопасны ли данные, хранящиеся в репозитории кода?
 
-Gitee Enterprise provides users with flexible and comprehensive security protection strategies, escorting enterprise data and information security! Currently, we have taken the following measures:
+Gitee Enterprise предоставляет пользователям гибкие и комплексные стратегии защиты, сопровождающие корпоративные данные и информационную безопасность! В настоящее время мы приняли следующие меры:
 
-- The entire site is SSL encrypted. Gitee uses encryption and decryption technology to transmit data in encrypted form based on the SSL/TLS protocol, ensuring end-to-end network transmission security throughout the entire data security lifecycle.
-- Automatic deletion of enterprise data when an employee leaves. Establish a data firewall for enterprise data and automatically delete all Forked enterprise repository data when an employee leaves, ensuring no leakage of important information.
-- Fine-grained permission control. Non-members of the enterprise repository cannot access and obtain resources in the repository.
-Automatic repository backup. Snapshots are taken for enterprise repositories and organization repositories under the enterprise, providing code security against accidental deletion.
-- Operation log recording. All actions of enterprise members are automatically recorded, enabling issue tracing and accountability.
-- More security protection: abnormal behavior monitoring and alerting, two-factor verification for sensitive operations, advanced cloud security protection, 24/7 operation and maintenance monitoring.
+- Весь сайт зашифрован по протоколу SSL. Gitee использует технологию шифрования и дешифрования для передачи данных в зашифрованном виде на основе протокола SSL/TLS, обеспечивая сквозную безопасность передачи по сети на протяжении всего жизненного цикла защиты данных.
+- Автоматическое удаление корпоративных данных при увольнении сотрудника. Установите брандмауэр данных для корпоративных данных и автоматически удаляйте все разветвленные данные корпоративного хранилища при увольнении сотрудника, гарантируя отсутствие утечки важной информации.
+- Детальный контроль разрешений. Лица, не являющиеся членами корпоративного репозитория, не могут получить доступ к ресурсам в репозитории.
+Автоматическое резервное копирование репозитория. Для корпоративных репозиториев и репозиториев организаций в рамках enterprise создаются моментальные снимки, обеспечивающие защиту кода от случайного удаления.
+- Запись журнала операций. Все действия сотрудников предприятия автоматически регистрируются, что позволяет отслеживать проблемы и подотчетность.
+- Дополнительная защита безопасности: мониторинг и оповещение о ненормальном поведении, двухфакторная проверка для конфиденциальных операций, расширенная облачная защита, мониторинг эксплуатации и технического обслуживания в режиме 24/7.

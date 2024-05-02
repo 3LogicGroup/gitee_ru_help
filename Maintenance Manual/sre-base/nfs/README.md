@@ -2,43 +2,43 @@
 
 
 
-## 1.  Configure NFS Server
+## 1.  Настройте NFS-сервер
 
 ``` sh
 root@gitee-postgresql1:~# apt -y install nfs-kernel-server
 
 root@gitee-postgresql1:~# vi /etc/idmapd.conf
-# line 5 : uncomment and change to your domain name
-# Domain = srv.world
+# строка 5 : откомментируйте и измените на имя вашего домена
+# Домен = srv.world
 
 root@gitee-postgresql1:~# vi /etc/exports
-# Example for NFSv2 and NFSv3:
-# /srv/homes       hostname1(rw,sync,no_subtree_check) hostname2(ro,sync,no_subtree_check)
+# Пример для NFSv2 и NFSv3:
+# /srv/homes hostname1(rw,sync,no_subtree_check) hostname2(ro,sync,no_subtree_check)
 #
-# Example for NFSv4:
-# /srv/nfs4        gss/krb5i(rw,sync,fsid=0,crossmnt,no_subtree_check)
-# /srv/nfs4/homes  gss/krb5i(rw,sync,no_subtree_check)
+# Пример для NFSv4:
+# /srv/nfs4 gss/krb5i(rw,sync,fsid=0,crossmnt,no_subtree_check)
+# /srv/nfs4/homes gss/krb5i(rw,sync,no_subtree_check)
 /data/nfs          *(rw,fsid=0,async,no_subtree_check,no_auth_nlm,insecure,no_root_squash)
 
 root@gitee-postgresql1:~# mkdir /data/nfs
 root@gitee-postgresql1:~# systemctl restart nfs-server
 
-# Reload NFS server configuration:
+# Перезагрузите конфигурацию NFS-сервера:
 root@gitee-postgresql1:~ sudo exportfs -a
-# Check NFS server status
+# Проверьте состояние NFS-сервера
 root@gitee-postgresql1:~ sudo systemctl status  nfs-server
 ```
 
 
 
-## 2. Configure NFS Client
+## 2. Настройте NFS-клиент
 
 ```sh
 root@gitee-postgresql2:~# apt -y install nfs-common
 
 root@gitee-postgresql2:~# vi /etc/idmapd.conf
-# line 5 : uncomment and change to your domain name
-# Domain = srv.world
+# строка 5 : откомментируйте и измените на имя вашего домена
+# Домен = srv.world
 
 root@gitee-postgresql2:~# mount -t nfs 10.4.145.105:/data/nfs /mnt
 
@@ -61,6 +61,6 @@ tmpfs                                    tmpfs     6.3G     0  6.3G   0% /run/us
 10.4.145.105:/data/nfs                   nfs       500G  3.6G  497G   1% /mnt
 
 
-# if mount with NFSv3, add [-o vers=3] option
+# если монтировать с NFSv3, добавьте опцию [-o vers=3].
 root@gitee-postgresql2:~# mount -t nfs -o vers=3 dlp.srv.world:/home/nfsshare /mnt
 ```

@@ -1,55 +1,55 @@
 ---
-title: Repository status function description
+title: Описание функции "Статус репозитория"
 origin-url: https://gitee.ru/help/articles/4343
 ---
 
 
 
-## Repository status function description
+## Описание функции "Статус репозитория"
 
-### Pausing and closing repositories
+### Постановка на паузу и закрытие репозиториев
 
-This feature is used to change the repository status, which helps ① optimize enterprise resource display; ② reduce enterprise costs; ③ improve the efficiency of developers' work.
+Эта функция используется для изменения статуса репозитория, что помогает ① оптимизировать отображение корпоративных ресурсов; ② снизить затраты предприятия; ③ повысить эффективность работы разработчиков.
 
-### **The scope of functional impact is as follows:**
+### **Объем функционального воздействия выглядит следующим образом:**
 
-| Feature Module | Feature Point / Specific Operation | Enable | Pause | Disable |
+| Модуль функций | Точка функции / Конкретная операция | Включить | Пауза | Отключить |
 |------|-------------------|----|----|----|---|
-| Interface Display | Dashboard, Project List, Dropdown Filter List | Show | Hide | Hide |
-| Code | View Code, Pull | ✅ | ✅ | ✅ |
-|      | Delete Code, Push | ✅ | ❌ | ❌ |
-| Files | Create File / Folder / Upload Attachment | ✅ | ❌ | ❌ |
-| Branches | Create, Edit, Delete | ✅ | ❌ | ❌ |
-| Tags | Create, Import, Edit | ✅ | ❌ | ❌ |
-| Distribution | Create, Edit, Delete | ✅ | ❌ | ❌ |
-| Milestone  | Associated Repository  | ✅  | ✅  | ❌  |
-| PR  | Create, merge, rollback, close, edit, assign	      | ✅  |
+| Отображение интерфейса | Приборная панель, Список проектов, Выпадающий список фильтров | Показать | Скрыть | Скрыть |
+| Код | Просмотр кода, Слияние | ✅ | ✅ | ✅ |
+|      | Удаление кода, Добавление | ✅ | ❌ | ❌ |
+| Файлы | Создать файл / Папка / Загрузить приложение | ✅ | ❌ | ❌ |
+| Ветки | Создать, Редактировать, Удалить | ✅ | ❌ | ❌ |
+| Теги | Создать, Импортировать, Редактировать | ✅ | ❌ | ❌ |
+| Распределение | Создать, Редактировать, Удалить | ✅ | ❌ | ❌ |
+| Контрольная точка  | Связанный репозиторий  | ✅  | ✅  | ❌  |
+| Запрос на слияние  | Создать, объединить, откатить, закрыть, редактировать, назначить	      | ✅  |
   ❌  | ❌  |
-|     | Review, Test, Comment  | ✅  | ✅  | ❌  |
-| Wiki | Create, modify, delete | ✅ | ❌ | ❌ |
-| Issue | Creating, editing, commenting, assigning, transitioning status, associating repositories | ✅ | ✅ | ❌ |
-| Repository | Access repository, modify repository state | ✅ | ✅ | ✅ |
-|   | Comment, settings | ✅ | ✅ | ❌ |
-|    | Delete              | ✅  | ✅  | ✅  |
-> The scope of changes only includes the above content, and other functions not mentioned are not modified by default.
+|     | Проверить, Тестировать, Комментировать  | ✅  | ✅  | ❌  |
+| Wiki | Создать, изменить, удалить | ✅ | ❌ | ❌ |
+| Проблема | Создание, редактирование, комментирование, назначение, статус перехода, привязка репозиториев | ✅ | ✅ | ❌ |
+| Репозиторий | Доступ к репозиторию, изменить статус репозитория | ✅ | ✅ | ✅ |
+|   | Комментировать, настройки | ✅ | ✅ | ❌ |
+|    | Удалить              | ✅  | ✅  | ✅  |
+> Объем изменений включает только вышеуказанное содержимое, а другие функции, не упомянутые выше, по умолчанию не изменяются.
 
-### **1. Repository visibility:**
+### **1. Видимость репозитория:**
 
-In the workbench, project list, and drop-down filter list, all repositories with statuses of 'Paused' and 'Closed' will be hidden
+В рабочем пространстве, списке проектов и раскрывающемся списке фильтров все репозитории со статусами "Постановлено на паузу" и "Закрыто" будут скрыты
 
-### **2. Repositories in suspended state:**
+### **2. Репозитории в приостановленном состоянии:**
 
-Paused repositories will be subject to the following operation restrictions:
+Приостановленные репозитории будут подвержены следующим ограничениям на работу:
 
-1. Code: Limit access/view/pull code, no restrictions on push/delete code;
-2. Files: Limit new file, new folder, upload attachment;
-3. Branches: Limit new, modify, edit, delete;
-4. Tags: Limit new, import, edit;
-5. Distribution: Limit new, edit, and delete;
-6. PR: Limit new, merge, revert, close, edit, assign; do not limit comment, review, test;
-7. Wiki: Limitations on creating, modifying, and deleting, but not on viewing
-8. Repository: Limit deletion, no restriction on access, comments, and other settings except deletion;
+1. Код: Ограничение доступа/просмотра/слияния кода, никаких ограничений на отправку/удаление кода;
+2. Файлы: Ограничение на создание нового файла, новой папки, загружаемого вложения;
+3. Ветки: Ограничение создания новых, изменения, редактирования, удаления;
+4. Теги: Ограничивать создание новых, Импортировать, Редактировать;
+5. Распространение: Ограничивать создание новых, редактирование и удаление;
+6. Запрос на слияние: ограничение на создание новых, слияние, возврат, закрытие, редактирование, назначение; нет ограничений на комментарии, рецензирование, тестирование;
+7. Wiki: Ограничения на создание, изменение и удаление, но не на просмотр
+8. Репозиторий: Ограничить удаление, никаких ограничений на доступ, комментарии и другие настройки, кроме удаления;
 
-### **3. Repositories in closed state:**
+### **3. Репозитории в закрытом состоянии:**
 
-Repositories in the closed state will further restrict repository functionality, only retaining the ability to view/pull code, access the repository, and modify repository status.
+Переход репозитория в закрытое состояние еще больше ограничит функциональность репозитория, сохранив только возможности просмотра/слияния кода, доступа к репозиторию и изменения статуса репозитория.

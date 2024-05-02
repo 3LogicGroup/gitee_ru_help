@@ -1,11 +1,11 @@
 ---
-title: Create a Kanban project
+title: Создание проекта Канбан
 ---
 
-Click "Projects" in the left navigation menu to enter the project list page, then click the "New Project" button in the upper right corner.
+Нажмите на "Проекты" в навигационном меню слева для перехода на страницу списка проектов. Затем нажмите на кнопку "Новый проект" в правом верхнем углу.
 
-![Image Description](../docs/assets/image556.png)
+![Описание изображения](../docs/assets/image556.png)
 
-Select "Kanban project" in the pop-up "Select project type" window.
+Выберите "проект Канбан" во всплывающем окне "Выберите тип проекта".
 
-![Image Description](../docs/assets/image557.png)
+![Описание изображения](../docs/assets/image557.png)

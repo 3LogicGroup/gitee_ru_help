@@ -1,28 +1,28 @@
 ---
-title: File creation, update, deletion
+title: Создание, обновление, удаление файлов
 authors:
   - name: Cheese
-description: Instructions for file creation, update, and deletion
+description: Инструкции по созданию, обновлению и удалению файлов
 ---
 
-## Create a new file or folder online
+## Создание нового файла или папки в Интернете
 
-Click into your repository, pull down the 'Files' menu, select the 'New file' function. Fill in the file name or file path, write the document content, add your commit message, and then 'Commit'.
+Зайдите в свой репозиторий, вызовите меню 'Файлы', выберите функцию 'Новый файл'. Введите имя файла или путь к нему, напишите содержимое документа, добавьте сообщение о фиксации, а затем 'Коммит'.
 
-![New File](./assets/a-new-file.png)
+![Новый файл](./assets/a-new-file.png)
 
-![New File](./assets/a-write-file-name.png)
+![Новый файл](./assets/a-write-file-name.png)
 
-![New File](./assets/a-commit-new-file.png)
+![Новый файл](./assets/a-commit-new-file.png)
 
-Online file updates
+## Обновление файлов в режиме онлайн
 
-To update the file, click on 'Edit' on the right side of the page. After making the desired changes and adding the commit information, select 'Commit'.
+Чтобы обновить файл, нажмите на кнопку "Редактировать" в правой части страницы. После внесения нужных изменений и добавления информации о фиксации выберите 'Коммит'.
 
-![Update File.png](./assets/a-file-update.png)
+![Обновить файл.png](./assets/a-file-update.png)
 
-## Delete Files Online
+## Удаление файлов онлайн
 
-Select the file or folder to be deleted, right-click, and choose the "Delete" function.
+Выберите файл или папку для удаления, нажмите правой кнопкой мыши и выберите функцию "Удалить".
 
-![Delete file](./assets/a-file-delete.png)
+![Удалить файл](./assets/a-file-delete.png)

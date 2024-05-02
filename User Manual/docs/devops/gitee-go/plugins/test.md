@@ -1,5 +1,5 @@
 ---
-title: Test Class Plugin
+title: Плагин тестового класса
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
@@ -7,30 +7,30 @@ slug: /gitee-go/plugin/unit-test
 origin-url: 
 ---
 
-Gitee Go provides out-of-the-box unit testing capabilities for mainstream languages, allowing easy unit testing of code.
+Gitee Go предоставляет готовые возможности модульного тестирования для основных языков, что упрощает модульное тестирование кода.
 
-Gitee Go currently supports unit testing for the following languages: 
+Gitee Go в настоящее время поддерживает модульное тестирование для следующих языков.: 
 
 Java Maven
 
 Java Gradle
 
-Usage:
-When creating or editing a pipeline, selecting the test class plugin group allows you to view the test class plugin templates currently supported by Gitee Go. Click on configure to quickly use unit testing capabilities.
-![Image Description](https://images.gitee.ru/uploads/images/2022/0518/112712_e3b4f82a_10531940.png )
+Использование:
+При создании или редактировании конвейера, выбор группы плагинов тестового класса позволяет вам просмотреть шаблоны плагинов тестового класса, которые в настоящее время поддерживаются Gitee Go. Нажмите «Настроить», чтобы быстро использовать возможности модульного тестирования.
+![Описание изображения](https://images.gitee.ru/uploads/images/2022/0518/112712_e3b4f82a_10531940.png )
 
-### 1. Maven unit test
+### 1. Модульный тест Maven
 
-- Supported Versions
+- Поддерживаемые версии
   - Maven: 2.2.1, 3.2.5, 3.3.9, 3.5.2, 3.5.3, 3.5.4, 3.6.1, 3.6.3
-  Eight versions
-  - JDK: 6, 7, 8, 9, 10, 11, 13, 17 eight versions
-- Base image
-  - CentOS Linux release 8.3.2011
-  - Built-in Ali Source Maven Repository
-- Field description
-  - Visual configuration
-![Image Description](https://images.gitee.ru/uploads/images/2022/0518/104702_759ab8d1_10531940.png )
+  Восемь версий
+  - JDK: 6, 7, 8, 9, 10, 11, 13, 17 - итого восемь версий
+- Базовое изображение
+  - CentOS Linux версия 8.3.2011
+  - Встроенный репозиторий Ali Source Maven.
+- Описание поля
+  - Визуальная конфигурация
+![Maven](https://images.gitee.ru/uploads/images/2022/0518/104702_759ab8d1_10531940.png )
 
 - yml
 
@@ -64,17 +64,17 @@ displayName: Maven Unit Test
         settings: []
 ```
 
-### 2. Gradle Unit Testing
+### 2. Модульное тестирование Gradle
 
-- Supported Versions
-- Gradle: Supports four versions - 4.1, 4.2, 4.3, and 4.4
-  - JDK: 6, 7, 8, 9, 10, 11, 13, 17 eight versions
-- Base image
-  - CentOS Linux release 8.3.2011
-  - Built-in Ali Source Maven Repository
-- Field description
-  - Visual configuration
-![Image Description](https://images.gitee.ru/uploads/images/2022/0518/111925_a27eba13_10531940.png )
+- Поддерживаемые версии
+- Gradle: Поддерживает четыре версии - 4.1, 4.2, 4.3, и 4.4
+  - JDK: 6, 7, 8, 9, 10, 11, 13, 17 восемь версий
+- Базовое изображение
+  - CentOS Linux версия 8.3.2011
+  - Встроенный репозиторий Ali Source Maven.
+- Описание поля
+  - Визуальная конфигурация
+![Gradle](https://images.gitee.ru/uploads/images/2022/0518/111925_a27eba13_10531940.png )
 - yml
 
 ```yaml

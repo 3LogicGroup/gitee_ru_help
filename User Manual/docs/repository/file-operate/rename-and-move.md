@@ -1,18 +1,18 @@
 ---
-title: Rename, move file
+title: Переименование, перемещение файла
 authors:
   - name: Cheese
-description: Instructions for renaming files and moving file paths
+description: Инструкции по переименованию файлов и перемещению путей к ним
 ---
 
-## Renaming files online
+## Переименование файлов в Интернете
 
-Select the file or folder to be modified, right-click, and then select the `Rename` function.
+Выберите файл или папку, которую нужно изменить, нажмите правой кнопкой мыши, а затем выберите функцию `Переименовать`.
 
-![Rename File](./assets/b-rename-files.png)
+![Переименование файла](./assets/b-rename-files.png)
 
-## Move file (modify file path)
+## Перемещение файлов (изменение пути к файлу)
 
-Click into the file you want to move, find the 'Edit' function, enter the desired path in the file name field, add the commit message for this modification, and select 'Commit'.
+Нажмите на файл, который вы хотите переместить, найдите функцию `Редактировать`, введите нужный путь в поле имени файла, добавьте сообщение о фиксации этой модификации и выберите `Коммит`.
 
-![Move Files](./assets/b-move-files.png)
+![Перемещение файлов](./assets/b-move-files.png)

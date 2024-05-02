@@ -1,30 +1,30 @@
 ---
-title: Label Management
+title: Управление тегами
 authors:
   - name: Cheese
-description: Related content on Pull Request label management
+description: Связанный контент по управлению тегами запросов на слияние
 ---
 
-## How to add tags and manage tags for Pull Requests?
+## Как добавлять теги и управлять тегами для запросов на слияние?
 
-Pull Request creators and target repository managers can add labels to Pull Requests.
+Создатели запросов на слияние и менеджеры целевых репозиториев могут добавлять метки к запросам на слияние.
 
-1. The creator of the Pull Request can add existing labels to the PR by clicking the edit icon next to the label feature on the right side of the new PR page.
+1. Создатель запроса на слияние может добавить существующие метки в запроса на слияние, щелкнув значок редактирования рядом с функцией метки в правой части новой страницы запроса на слияние.
 
-![Add Tag](./assets/tag-add.png)
+![Добавить тег](./assets/tag-add.png)
 
-2. The manager of the target repository of the Pull Request can find the tag function on the right side of the PR details page, click the edit icon next to it, and select the existing tags of the repository to add to the PR.
+2. Менеджер целевого репозитория запроса на слияние может найти функцию тегов в правой части страницы сведений о запросе на слияние, щелкнуть значок редактирования рядом с ним и выбрать существующие теги репозитория для добавления в запрос на слияние.
 
-![Add Tags](./assets/tag-control.png)
+![Добавить теги](./assets/tag-control.png)
 
-According to the prompt in the above figure, the repository manager can click the 'Tag Management' button in the drop-down bar of the label to enter the tag management page and deploy all the tags of the repository. Alternatively, you can find and click the 'Tag Management' button on the repository's Pull Request page.
+Согласно подсказке на рисунке выше, менеджер репозитория может нажать кнопку "Управление тегами" в раскрывающейся панели ярлыка, чтобы перейти на страницу Управления тегами и развернуть все теги репозитория. В качестве альтернативы вы можете найти и нажать кнопку "Управление тегами" на странице запроса на извлечение репозитория.
 
-![Tag Management](./assets/tag-find-control.png)
+![Управление тегами](./assets/tag-find-control.png)
 
-Repository managers can 'edit' and 'delete' existing tags, as well as perform 'create tags' and 'import tags' operations, where importing tags allows the manager to import tags from other repositories they manage into the current repository.
+Менеджеры репозиториев могут "редактировать" и "удалять" существующие теги, а также выполнять операции "создать теги" и "импортировать теги", где импорт тегов позволяет менеджеру импортировать в текущий репозиторий теги из других репозиториев, которыми они управляют.
 
-Manage tags ![Tag Edit](./assets/tag-edit.png)
+Управление тегами ![Редактирование тегов](./assets/tag-edit.png)
 
-You can create and edit tags, including the `name`, `description`, and `color code`.
+Вы можете создавать и редактировать теги, включая `название`, `описание` и `цветовой код`.
 
-![Tag Management](./assets/tag-change.png)
+![Управление тегами](./assets/tag-change.png)

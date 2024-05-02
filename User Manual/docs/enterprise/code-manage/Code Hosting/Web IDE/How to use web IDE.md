@@ -1,11 +1,11 @@
 ---
-title: How to use web IDE
+title: Как использовать Web IDE
 ---
 
-1. Enter Web IDE
+1. Войдите в Web IDE
 
- ![Image Description](./assets/code_webide_1.png)
+ ![Описание изображения](./assets/code_webide_1.png)
 
-2. Edit code using Web IDE
+2. Редактируйте код с помощью Web IDE
 
- ![Image Description](./assets/code_webide_2.png)
+ ![Описание изображения](./assets/code_webide_2.png)

@@ -2,9 +2,9 @@
 slug: /enterprise/pipeline/questions/running-no-log
 ---
 
-The task is running without any logs, solve it using the following method:
+Задача выполняется без каких-либо логов, решите ее следующим способом:
 
-- Refresh current page;
-- Click the menu in the top right corner of the log to refresh the log;
-- Retry the current task in the stage;
-- Rebuild the current pipeline;
+- Обновите текущую страницу;
+- Нажмите на меню в правом верхнем углу журнала, чтобы обновить его;
+- Повторно выполните текущую задачу на этапе;
+- Перестройте текущий конвейер;

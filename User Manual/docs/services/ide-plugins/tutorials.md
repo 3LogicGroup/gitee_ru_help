@@ -1,26 +1,26 @@
 ---
-title: Tutorial for commonly used tools and plugins
+title: Руководство по часто используемым инструментам и плагинам
 
 origin-url: https://gitee.ru/help/articles/4124
 ---
 
-We have compiled some articles and tutorials on the use and extension tools/plugins related to Git.
+Мы собрали несколько статей и руководств по использованию и расширению связанных с Git инструментов/плагинов.
 
-Using egit plugin in eclipse - illustrated - detailed
+Использование плагина egit в eclipse – проиллюстрировано – подробно
 
-<a href="http://my.oschina.net/gal/blog/141442" target="_blank">Connect to Gitee with Visual Studio 2012</a>
+<a href="http://my.oschina.net/gal/blog/141442" target="_blank">Подключение к Gitee с помощью Visual Studio 2012</a>
 
-'* <a href="http://my.oschina.net/icelily/blog/141342" target="_blank">TortoiseGit cooperates with msysGit in the foolproof tutorial for Gitee code hosting</a>'
+'* <a href="http://my.oschina.net/icelily/blog/141342" target="_blank">TortoiseGit сотрудничает с msysGit в надежном руководстве по хостингу кода Gitee</a>'
 
-Use Eclipse's git plugin EGit to interact with Gitee
+Использование плагина git EGit для Eclipse для взаимодействия с Gitee.
 
-* <a href="http://my.oschina.net/longxuu/blog/141699" target="_blank">Using TortoiseGit (Turtle Git) for simple operations on Gitee in Windows 7 system</a>
+* <a href="http://my.oschina.net/longxuu/blog/141699" target="_blank">Использование TortoiseGit (Turtle Git) для простых операций с Gitee в системе Windows 7</a>
 
-'<a href="http://my.oschina.net/zxs/blog/142544" target="_blank">Xcode Connects to Gitee</a>'
+'<a href="http://my.oschina.net/zxs/blog/142544" target="_blank">Xcode подключается к Gitee</a>'
 
-eclipse's git plugin integration with Gitee
+Интеграция плагина eclipse git с Gitee
 
 * <a href="http://my.oschina.net/China2012/blog/174874" target="_blank">Eclipse
-  Using EGit to manage Gitee projects</a>
+  Использование EGit для управления проектами Gitee</a>
 
 '* <a href="http://gitee.ru/oschina/git-osc/issues/2586" target="_blank">https:// Gitee password setup using URL method</a>'

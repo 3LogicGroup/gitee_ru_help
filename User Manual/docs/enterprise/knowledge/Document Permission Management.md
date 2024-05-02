@@ -1,8 +1,8 @@
 ---
-title: Document permission management
-description: Document Permission Management
+title: Управление правами доступа к документам
+description: Управление правами доступа к документам
 slug: enterprise/knowledge/auth
 ---
-You can independently configure member access permissions based on roles, folders, and documents: 'No Access', 'Read Only', 'Read and Write', to help managers protect intellectual property and reduce the risk of code leakage.
-![Image Description](assets/image312.png)
-![Image Description](assets/image313.png)
+Чтобы помочь менеджерам защитить интеллектуальную собственность и снизить риск утечки кода, вы можете самостоятельно настраивать права доступа участников на основе ролей, папок и документов: "Нет доступа", "Только чтение", "Чтение и запись".
+![Описание изображения](assets/image312.png)
+![Описание изображения](assets/image313.png)

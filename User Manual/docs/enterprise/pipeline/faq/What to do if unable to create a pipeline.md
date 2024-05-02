@@ -2,9 +2,9 @@
 slug: /enterprise/pipeline/questions/can-not-open-pipeline
 ---
 
-Unable to open the pipeline may be due to the following reasons:
+Невозможность открыть конвейер может быть вызвана следующими причинами:
 
-- The current repository is an empty repository and needs to be initialized;
-- You have not bound your mobile phone number, please go to personal settings to bind your mobile phone number;
-- You do not have permission to open the repository pipeline. Please contact the repository administrator to open it;
-- Repository is disabled or blocked due to violations;
+- Текущий репозиторий является пустым и нуждается в инициализации;
+- Вы не привязали свой номер мобильного телефона. Перейдите в личные настройки, чтобы привязать свой номер мобильного телефона;
+- У вас нет прав на открытие конвейера репозитория. Обратитесь к администратору репозитория, чтобы открыть его;
+- Репозиторий отключен или заблокирован из-за нарушений;

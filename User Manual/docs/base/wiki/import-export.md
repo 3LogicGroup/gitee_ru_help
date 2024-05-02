@@ -1,24 +1,24 @@
 ---
-title: Document import/export
+title: Импорт/экспорт документов
 authors:
   - name: Cheese
-description: wiki document import and export
+description: Импорт и экспорт документов wiki
 ---
 
-## Document Import/Export
+## Импорт/экспорт документов
 
-### Document Import
+### Импорт документов
 
-Click the 'More' button on the left side of the Wiki page, select 'Upload' from the dropdown menu, and upload a zip/html/txt/markdown file to import the document into the Wiki knowledge base.
+Чтобы импортировать документ в базу знаний Wiki, нажмите кнопку "Дополнительно" в левой части вики-страницы, в выпадающем меню выберите "Загрузить" и загрузите файл zip/html/txt/markdown.
 
-![Image Description](assets/image06.png)
+![Описание изображения](assets/image06.png)
 
-Please note the conditions for importing documents into the Wiki knowledge base:
+Обратите внимание на условия импорта документов в базу знаний Wiki:
 
-![Image Description](assets/image07.png)
+![Описание изображения](assets/image07.png)
 
-### Document Export
+### Экспорт документов
 
-Select and click on the document you want to export, then click the 'Export' button in the upper right corner of the document page to export the document in different formats.
+Чтобы экспортировать документ в различных форматах, выберите и щелкните по документу, который вы хотите экспортировать, затем в правом верхнем углу страницы документанажмите кнопку "Экспортировать".
 
-![Image Description](assets/image08.png)
+![Описание изображения](assets/image08.png)

@@ -1,17 +1,17 @@
 ---
-title: WebHook data format for push
+title: Формат данных для отправки вебхука
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 ---
 
-Data type of WebHook. For more details, refer to [WebHook Push Data Type Description](./push-data-type)
+Тип данных вебхука. Для более подробной информации обратитесь к: [Описание типов данных для отправки вебхука](./push-data-type)
 
-Users can receive messages from Gitee WebHook through their own services. The following is an explanation of the data format for the WebHook push:
+Пользователи могут получать сообщения от вебхука Gitee через свои собственные сервисы. Ниже приведено объяснение формата данных для передачи вебхука:
 
-### Request Headers
+### Заголовки запроса
 
-WebHook request headers contain some key data
+Заголовки запроса вебхука содержат некоторые ключевые данные
 
 ```bash
 "Content-Type: application/json # Default is application/json, for old version hooks (no longer maintained) it is application/x-www-form-urlencoded"
@@ -25,15 +25,15 @@ X-Gitee-Timestamp: 1576754827988  # The timestamp when the WebHook was triggered
 'X-Gitee-Event: Merge Request Hook # Indicates the triggered hook type.'
 ```
 
-> The implementation algorithm for calculating the signature using the `X-Gitee-Token` signature key can be referred to as "[WebHook Key Verification and Verification Algorithm](./verify)".
+> Алгоритм реализации для вычисления подписи с использованием ключа подписи `X-Gitee-Token` можно найти в следующем документе: "[Алгоритм проверки и верификации ключа вебхука](./verify)".
 
-### Request Payload
+### Загрузка запроса
 
-Webhook request payload is divided into 4 types of payloads according to different hooks. The following are sample data pushed by each hook (for reference only, please refer to the actual received data).
+Загрузка запроса вебхука разделяется на 4 типа, в зависимости от различных хуков. Ниже приведены примеры данных, отправляемых каждым хуком (для ознакомления, обратитесь к фактическим полученным данным).
 
-### Push / Tag Push Hooks
+### Хуки отправки/тега 
 
-The following is the hook data triggered by pushing the code.
+Ниже приведены данные хука, вызванного отправкой кода.
 
 ```json
 {
@@ -177,9 +177,9 @@ The following is the hook data triggered by pushing the code.
 }
 ```
 
-### Issue Hooks
+### Хуки задач
 
-The following is the hook data triggered by a new task creation operation
+Ниже приведены данные хука, вызванного созданием новой задачи.
 
 ```json
 {
@@ -316,9 +316,9 @@ The following is the hook data triggered by a new task creation operation
 }
 ```
 
-### Pull Request Hooks
+### Хуки запросов на слияние
 
-The following is the data from a Pull Request hook trigger.
+Ниже приведены данные, вызванные срабатыванием хука запроса на слияние.
 
 ```json
 {
@@ -557,9 +557,9 @@ The following is the data from a Pull Request hook trigger.
 }
 ```
 
-### Comment Hook
+### Хуки комментариев
 
-The following is the hook data triggered by a comment task operation, where 'notable_type' represents different types of comments: Comment (repository comment), Commit, PullRequest, Issue
+Ниже приведены данные, вызванные операцией комментирования задачи, где 'notable_type' представляет различные типы комментариев: комментарий (комментарий к репозиторию), коммит, запрос на слияние, задачи.
 
 ```json
 {

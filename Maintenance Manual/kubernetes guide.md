@@ -1,6 +1,6 @@
-# Kubernetes Common Guide
+# Общее руководство по Kubernetes
 
-## 1. Node Maintenance Status
+## 1. Статус обслуживания узла
 
 ```sh
 Node eviction
@@ -9,25 +9,25 @@ Restore scheduling
 kubectl uncordon NODE
 ```
 
-[Safely empty a node | Kubernetes](https://kubernetes.io/zh-cn/docs/tasks/administer-cluster/safely-drain-node/)
+[Безопасное удаление узла | Kubernetes](https://kubernetes.io/zh-cn/docs/tasks/administer-cluster/safely-drain-node/)
 
 
 
-## 2. Cluster Certificate Expiration Replacement
+## 2. Замена сертификата кластера по истечении срока действия
 
-Update expired certificates for Kubernetes
+Обновление просроченных сертификатов для Kubernetes
 
-[Certificate Management using kubeadm | Kubernetes](https://kubernetes.io/zh-cn/docs/tasks/administer-cluster/kubeadm/kubeadm-certs/)
+[Управление сертификатами при помощи kubeadm | Kubernetes](https://kubernetes.io/zh-cn/docs/tasks/administer-cluster/kubeadm/kubeadm-certs/)
 
-Cluster certificate expiration replacement (yuque.com)
-
-
+Замена сертификата кластера по истечении срока действия (yuque.com)
 
 
 
-## 3. Configure Stub Domain and Upstream DNS Server Using CoreDNS
 
-[Custom DNS Service | Kubernetes](https://kubernetes.io/zh-cn/docs/tasks/administer-cluster/dns-custom-nameservers/)
+
+## 3. Настройка домена-заглушки и вышестоящего DNS-сервера с помощью CoreDNS
+
+[Пользовательская настройка службы DNS | Kubernetes](https://kubernetes.io/zh-cn/docs/tasks/administer-cluster/dns-custom-nameservers/)
 
 
 
@@ -41,25 +41,25 @@ Cluster certificate expiration replacement (yuque.com)
 
 
 
-## 5. Pulling Images from Private Repositories
+## 5. Объединение изображений из частных репозиториев
 
-[Pulling Images from a Private Repository | Kubernetes](https://kubernetes.io/zh-cn/docs/tasks/configure-pod-container/pull-image-private-registry/)
-
-
-
-
-
-## 6. Configure Pod Initialization
-
-Configure Pod Initialization | Kubernetes
-
-[创建静态 Pod | Kubernetes](https://kubernetes.io/zh-cn/docs/tasks/configure-pod-container/static-pod/)
+[Объединение изображений из частных репозиториев | Kubernetes](https://kubernetes.io/zh-cn/docs/tasks/configure-pod-container/pull-image-private-registry/)
 
 
 
 
 
-## 7. Daily Error Troubleshooting
+## 6. Инициализация модуля конфигурации
+
+Инициализация модуля конфигурации | Kubernetes
+
+[Инициализация модуля конфигурации | Kubernetes](https://kubernetes.io/zh-cn/docs/tasks/configure-pod-container/static-pod/)
+
+
+
+
+
+## 7. Ежедневное устранение неполадок
 
 [Troubleshooting Common Errors (yuque.com)](https://www.yuque.com/cuiliang0302/kubernetes/mrdyeu)
 
@@ -73,15 +73,14 @@ Configure Pod Initialization | Kubernetes
 
 
 
-## 7. Backup and Restore of Etcd Cluster in Kubernetes Environment
+## 7. Резервное копирование и восстановление кластера Etcd в среде Kubernetes
 
-Practice: Backup and restore of Etcd cluster in Kubernetes environment - Tencent Cloud Developer Community - Tencent Cloud (tencent.com)
-
-
+Практика: Резервное копирование и восстановление кластера Etcd в среде Kubernetes - Сообщество разработчиков Tencent Cloud - Tencent Cloud (tencent.com)
 
 
 
-## Gitee Reference
+
+## Справочные материалы Gitee
 
 "[‌‍‍﻿‬﻿‌⁡﻿⁡⁣⁢‍⁡⁡⁡‍⁢⁢‌﻿⁢‍⁢⁢‬‬‬‬‍⁡﻿⁢‌⁣﻿‬⁡⁣⁣⁢Gitee Public Cloud Component List - Feishu Cloud Docs (feishu.cn)](https://oschina-sz.feishu.cn/wiki/wikcnSCfAZJYob8N33THzvIJsRe)"
 
@@ -97,20 +96,20 @@ gitee-russia-dev: Russian Sass Development Environment Deployment Document
 
 
 
-Can see that the persistent volume mount is `/volumes/csi/csi-vol-4f7108ef-5d3e-4763-b429-f2437c2db4c2/81a009f7-8e8c-471a-ae4c-4caf1b898e6d` in CephFS instance myfs.
+Можно видеть, что монтаж постоянного тома выполняется `/volumes/csi/csi-vol-4f7108ef-5d3e-4763-b429-f2437c2db4c2/81a009f7-8e8c-471a-ae4c-4caf1b898e6d` в CephFS instance myfs.
 
 
 
-## Reference
+## Справочное руководство
 
-Translation result not found
 
-https://gitee.com/autom-studio/std/tree/master/ Deployment architecture / service distribution
 
-[Gitee Platform Architecture Description | Gitee SRE Wiki (autom.studio)](https://wiki.autom.studio/zh/Gitee/生产环境/Specifications/gitee平台架构说明)
+https://gitee.com/autom-studio/std/tree/master/ Архитектура развертывания / распределение сервисов
+
+[Описание Архитектуры Платформы Gitee | Gitee SRE Wiki (autom.studio)](https://wiki.autom.studio/zh/Gitee/生产环境/Specifications/gitee平台架构说明)
 
 [开源中国/atompi-gitee - 码云 - 开源中国](https://gitee.com/oschina/atompi-gitee/tree/master)
 
 [Deployment architecture/service distribution.md · Open Source China/atompi-gitee - Gitee - Open Source China](https://gitee.com/oschina/atompi-gitee/blob/master/-deployment architecture/service distribution.md#https://gitee.com/autom-studio/std/tree/master/-deployment architecture/service distribution)
 
-[Change the Reclaim Policy of PersistentVolume | Kubernetes](https://kubernetes.io/zh-cn/docs/tasks/administer-cluster/change-pv-reclaim-policy/)
+[Изменение политики удаления постоянного тома | Kubernetes](https://kubernetes.io/zh-cn/docs/tasks/administer-cluster/change-pv-reclaim-policy/)

@@ -1,24 +1,24 @@
 ---
-title: Trigger pipeline execution
-description: Trigger Pipeline Run
+title: Запуск выполнения конвейера
+description: Триггерный запуск конвейера
 slug: /enterprise/pipeline/trigger
 keywords:
  - Gitee
- - Trigger
- - Run
- - Pipeline
+ - Триггер
+ - Запуск
+ - Конвейер
 ---
 
-Gitee pipelines support different types of trigger strategies. You can choose the appropriate method to trigger the pipeline based on your usage scenario.
+Конвейеры Gitee поддерживают различные типы стратегий запуска. Вы можете выбрать подходящий метод запуска конвейера в зависимости от вашего сценария использования.
 
-Currently supported trigger strategies include the following:
+В настоящее время поддерживаются следующие стратегии запуска:
 
-- Manually triggered, users can click on Run Pipeline in the pipeline to execute it manually.
+- Ручной запуск: пользователи могут нажать на Запустить конвейер в конвейере, чтобы запустить его вручную.
 
-- [Code submission trigger](/enterprise/pipeline/source/trigger)
+- [Триггер отправки кода](/enterprise/pipeline/source/trigger)
 
-- [Trigger Pipeline on Schedule](/enterprise/pipeline/trigger/corn)
+- [Запуск конвейера по графику](/enterprise/pipeline/trigger/corn)
 
-You can trigger the information through the pipeline to see how the pipeline is triggered.
+Чтобы увидеть, как запускается конвейер, вы можете запустить информацию по конвейере.
 
-![Trigger Information](./assets/Trigger Information.png)
+![Информация о триггере](./assets/Trigger Information.png)

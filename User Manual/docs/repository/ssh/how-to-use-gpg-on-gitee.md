@@ -1,5 +1,5 @@
 ---
-title: How to use GPG on Gitee
+title: Как использовать GPG на Gitee
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
@@ -7,48 +7,48 @@ slug: /repository/ssh-key/how-to-use-gpg-with-gitee
 origin-url: https://gitee.ru/help/articles/4248
 ---
 
-## GPG Key generation and export
+## Генерация и экспорт GPG ключей
 
 ### Windows
 
-1. Download <https://gpg4win.org/>
+1. Загрузите <https://gpg4win.org/>.
 
-2. Generate GPG Key
+2. Сгенерируйте ключ GPG
 
-![Image Description](https://gitee.ru/uploads/images/2019/0506/145050_bebf25ab_2118102.png )
+![Описание изображения](https://gitee.ru/uploads/images/2019/0506/145050_bebf25ab_2118102.png )
 
-Enter the username and email, note that the email must match the Gitee submission email
+Введите имя пользователя и email, обратите внимание, что email должен совпадать с email, отправленным на Gitee
 
-![Image Description](https://gitee.ru/uploads/images/2019/0506/145127_a478549e_2118102.png )
+![Описание изображения](https://gitee.ru/uploads/images/2019/0506/145127_a478549e_2118102.png )
 
-3. Export
+3. Экспорт
 
-![Image Description](https://gitee.ru/uploads/images/2019/0506/145440_6ef1c448_2118102.png )
+![Описание изображения](https://gitee.ru/uploads/images/2019/0506/145440_6ef1c448_2118102.png )
 
 ### MacOS
 
-1. Download and install <https://gpgtools.org/>
+1. Скачайте и установите <https://gpgtools.org/>.
 
-2. Generate GPG Key
+2. Сгенерируйте GPG ключ
 
-Enter the username and email, note that the email must match the Gitee submission email
+Введите имя пользователя и email, обратите внимание, что email должен совпадать с email, отправленным на Gitee
 
-![Image Description](https://gitee.ru/uploads/images/2019/0506/143642_13ee972e_340906.png "gpg_mac.png")
+![Описание изображения](https://gitee.ru/uploads/images/2019/0506/143642_13ee972e_340906.png "gpg_mac.png")
 
-3. Export Public Key
+3. Экспорт открытого ключа
 
-![Image Description](https://gitee.ru/uploads/images/2019/0506/143648_a896df68_340906.png "gpg_mac_1.png")
+![Описание изображения](https://gitee.ru/uploads/images/2019/0506/143648_a896df68_340906.png "gpg_mac_1.png")
 
 ### Ubuntu 16.04/18.04
 
-1. Install
+1. Установка
 
 ```shell
 sudo apt install gnupg2  # Ubuntu 16.04
 sudo apt install gnupg   # Ubuntu 18.04
 ```
 
-2. Generate GPG Key
+2. Сгенерируйте GPG ключ
 
 ```bash
 gpg2 --full-gen-key     # Ubuntu 16.04 gpg version < 2.1.17
@@ -96,15 +96,15 @@ uid                      likui (Gitee GPG Key) <gitee@gitee.ru>
 sub rsa3072 2019-05-05 [E] [Valid until: 2020-05-04]
 ```
 
-3. Export GPG Public Key
+3. Экспорт открытого GPG ключа
 
 ```shell
 gpg --armor --export 8086B4D21B3118A83CC16CEBB0A02972E266DD6D
 ```
 
-## GPG Key configuration and usage
+## Настройка и использование GPG ключа
 
-1. Configure Git
+1. Настройте Git
 
 ```bash
 git config --global user.signingkey 8086B4D21B3118A83CC16CEBB0A02972E266DD6D
@@ -112,39 +112,39 @@ git config --global user.signingkey 8086B4D21B3118A83CC16CEBB0A02972E266DD6D
 
 2
 
-![Image Description](https://gitee.ru/uploads/images/2019/0506/150932_746867da_2118102.png )
+![Описание изображения](https://gitee.ru/uploads/images/2019/0506/150932_746867da_2118102.png )
 
-GPG public key verification status, GPG email needs to be activated to pass:
+Статус проверки открытого GPG ключа, для прохождения необходимо активировать электронную почту GPG:
 
-![Image Description](https://gitee.ru/uploads/images/2019/0506/151235_bdda7f4c_340906.png "gpg_gitee_1.png")
+![Описание изображения](https://gitee.ru/uploads/images/2019/0506/151235_bdda7f4c_340906.png "gpg_gitee_1.png")
 
-- `Delete` only removes the GPG public key, the verified commit signature status remains unchanged.
-- "Logout" removes the GPG public key and changes the verified commit signature status to unverified
+- `Delete` удаляет только открытый GPG ключ, статус проверенной подписи фиксации остается неизменным.
+- "Выход" удаляет открытый GPG ключ и изменяет статус проверенной подписи фиксации на непроверенный.
 
-3. Use GPG signature for commits
+3. Использование подписи GPG для коммитов
 
 ```shell
 git commit -S -m "YOUR COMMIT MESSAGE"
 git log --show-signature # View signature status
 ```
 
-4. Check Signature Status
+4. Проверка состояния подписи
 
-![Image Description](https://gitee.ru/uploads/images/2019/0506/152745_4ffaa4b3_340906.png )
+![Описание изображения](https://gitee.ru/uploads/images/2019/0506/152745_4ffaa4b3_340906.png )
 
-- The conditions for a commit to pass verification are: the commit email matches the public key email used for commit GPG signature, and the GPG public key verification passes.
+- Условия для прохождения проверки коммита следующие: email коммита совпадает с email открытого ключа, использованного для подписи GPG коммита, и проверка открытого GPG ключа проходит.
 
-View GPG public key
+Просмотр открытого GPG ключа
 
-Enter https://gitee.ru/<username>.gpg
+Введите https://gitee.ru/<имя пользователя>.gpg.
 
-- Go to the security settings by selecting the settings page in the upper right corner of the user profile - GPG public key
+- Перейдите к настройкам безопасности, выбрав страницу настроек в правом верхнем углу профиля пользователя - Открытый GPG ключ
 
-- Gitee platform GPG public key: <https://gitee.ru/gitee.gpg>
+- Открытый GPG ключ для платформы Gitee: <https://gitee.ru/gitee.gpg>
 
-## How to use platform GPG public key for signature verification?
+## Как использовать открытый ключ платформы GPG для проверки подписи?
 
-- Import platform GPG public key
+- Импорт открытого GPG ключа платформы
 
 ```shell
 jane@zh ~ (master !*+%) » curl https://gitee.ru/gitee.gpg | gpg --import
@@ -156,7 +156,7 @@ gpg: Total number processed: 1
 gpg:               imported: 1
 ```
 
-Set the platform GPG public key to be fully trusted
+Установите для открытого GPG ключа платформы режим полного доверия
 
 ```shell
 jane@zh ~ (master !*+%) » gpg --edit-key 63A71EA590E6E55E5ADED924173E9B9CA92EEF8F
@@ -199,7 +199,7 @@ unless you restart the program.
 gpg>
 ```
 
-Check the signature status of the commit, 'Good signature' means normal
+Проверьте статус подписи фиксации, "Хорошая подпись" означает, что все в порядке.
 
 ```shell
 commit b5fd988cafde32e01cb21662ee3452995674c3d9 (tag: v1.1, tag: v1, tag: k, tag: gpg2, tag: gpg1, tag: KK)

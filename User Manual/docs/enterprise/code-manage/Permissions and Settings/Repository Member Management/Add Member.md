@@ -1,12 +1,12 @@
 ---
-title: Add Member
+title: Добавить участника
 origin-url: https://gitee.ru/help/articles/4175
 ---
 
-Currently, there are three ways to add members: Link invitation, Direct addition, Invitation through repository
+В настоящее время существует три способа добавления участников: Приглашение по ссылке, Прямое добавление, Приглашение через репозиторий
 
-Invite members through links
+Приглашайте участников по ссылкам
 
-### **Directly Add Members**
+### **Прямое добавление участников**
 
-Invite members through repositories
+Приглашайте участников через репозитории

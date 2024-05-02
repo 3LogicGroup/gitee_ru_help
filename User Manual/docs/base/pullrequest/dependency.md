@@ -1,24 +1,24 @@
 ---
-title: Dependency Scan
+title: Сканировнаие зависимостей
 authors:
   - name: Cheese
-description: Operating instructions for Pull Request code dependency scanning feature
+description: Инструкция по работе с функцией сканирования зависимостей кода запроса на слияние
 ---
 
-> Gitee Scan integrates the mirror component analysis capability to analyze dependency security vulnerabilities and license compliance analysis.
+> В Gitee Scan интегрирована возможность анализа зеркальных компонентов для выявления уязвимостей безопасности зависимостей и анализа соответствия лицензиям.
 
-## Mirror Source Verification
+## Проверка зеркальных источников
 
-This service is provided by OPENSCA Security for technical support.
+Этот сервис предоставляется компанией OPENSCA Security для нужд технической поддержки.
 
-Direct and indirect dependency resolution.
-Security vulnerability analysis, quickly locate the vulnerability impact range and promptly fix it.
-Visual SBOM (Software Bill of Materials), helping to quickly sort out internal software assets.
+Разрешение прямых и косвенных зависимостей.
+Анализ уязвимостей системы безопасности, быстрое определение диапазона влияния уязвимости и ее оперативное устранение.
+Визуальный SBOM (список зависимостей программного обеспечения), помогающий быстро отсортировать внутренние программные активы.
 
-### Usage
+### Использование
 
-1. Use Gitee Go pipeline for scanning and analysis
-2. Use IDEA plugin for offline detection
-3. Use OpenSCA CLI to scan and analyze
+1. Использование конвейера данных Gitee Go для сканирования и анализа
+2. Используйте плагин IDEA для обнаружения в автономном режиме
+3. Используйте OpenSCA CLI для сканироваия и анализа
 
-To view the details of OPENSCA mirror security services, you can go to the repository page - Services - OPENSCA Mirror Security.
+Для просмотра подробной информации об услугах безопасности зеркала OPENSCA вы можете перейти на страницу репозитория - Сервисы - Безопасность зеркала OPENSCA.

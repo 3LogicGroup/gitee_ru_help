@@ -1,29 +1,29 @@
 ---
-title: How to clone repositories and projects with gitclone
+title: Как клонировать репозитории и проекты с помощью команды gitclone
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 origin-url: https://gitee.ru/help/articles/4111
 ---
 
-In the previous section, we introduced that Git supports multiple data transfer protocols, including the 'git://' protocol, 'http(s)://' protocol, and SSH transfer protocol represented by 'user@server:/path.git'. We can clone projects/repositories using these three protocols.
+В предыдущем разделе указывалось, что Git поддерживает несколько протоколов передачи данных, включая протокол 'git://', протокол 'http(s)://' и протокол передачи данных SSH, представленный в виде 'user@server:/path.git'. С помощью этих трёх протоколов можно клонировать проекты/репозитории.
 
-Next, we will use the repository 'git@git.oschina.net:zxzllyj/sample-project.git' as an example to clone the project/repository.
+Далее в качестве примера для клонирования проекта/репозитория будет использоваться репозиторий 'git@git.oschina.net:zxzllyj/sample-project.git'.
 
-### Clone via HTTPS
+### Клонирование по протоколу HTTPS
 
 ```bash
 git clone https://gitee.ru/zxzllyj/sample-project.git
 ```
 
-### Clone via SSH Protocol
+### Клонирование по протоколу SSH
 
 ```bash
 git clone git@gitee.ru:zxzllyj/sample-project.git
 ```
 
-Take the repository `git@gitee.ru:zxzllyj/sample-project.git` as an example (Note: ssh address is used here because the demo machine has already configured ssh public key, so ssh address can be used. If you haven't configured the public key, please use the https address)
+Используем в качестве примера репозиторий `git@gitee.ru:zxzllyj/sample-project.git` (Примечание: здесь используется ssh-адрес, поскольку на демонстрационной машине уже настроен открытый ключ ssh, поэтому можно использовать ssh-адрес. Если открытый ключ не настроен, используйте https-адрес)
 
-![Image Description](https://static.oschina.net/uploads/img/201603/10160653_BHzv.gif)
+![Описание изображения](https://static.oschina.net/uploads/img/201603/10160653_BHzv.gif)
 
-Note: Although the method in the figure above pulls the complete repository, it will only display the default branch. If you need to go directly to a specific branch, you can add the branch name after the repository address.
+Примечание: Хотя метод, показанный на рисунке выше, извлекает весь репозиторий, он отображает только ветку по умолчанию. Если вам нужно перейти непосредственно к определенной ветке, вы можете добавить название ветки после адреса репозитория.

@@ -1,11 +1,11 @@
 ---
-title: Abnormal Behavior Monitoring Alert
+title: Оповещение мониторига об аномальном поведении 
 authors:
   - name: Roger
     url: https://gitee.ru/yuriluo
 origin-url: https://gitee.ru/help/articles/4151
 ---
 
-Click on "Notification and Alert Settings" in the enterprise "Management" interface:
+Нажмите на "Настройки уведомлений и оповещений" в интерфейсе "Управление" в предприятии: 
 
-![Image Description](image670.png)
+![Описание изображения](image670.png)

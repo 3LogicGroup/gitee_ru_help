@@ -1,37 +1,37 @@
 ---
-title: Introduction to WebHook
+title: Знакомство с вебхуками
 
 origin-url: https://gitee.ru/help/articles/4183
 ---
 
-## WebHook Introduction
+## Знакомство с вебхуками
 
-Gitee WebHook feature helps to automatically callback a specified HTTP address after a user pushes code.
+Функция вебхуков Gitee помогает автоматически вызывать указанный HTTP-адрес после того, как пользователь отправляет код.
 
-> This is a general solution, and users can write their own script programs based on different needs (such as sending emails, automatic deployment, etc.).
+> Это стандартное решение, и пользователи могут написать свои собственные сценарии на основе различных потребностей (например, отправка электронных писем, автоматическое развертывание и т. д.).
 
-#### Comparison of Enterprise WebHook and Repository WebHook
+#### Сравнение вебхуков компании и вебхуков репозитория
 
-- Enterprise WebHooks are effective for all repositories within the enterprise for push, PR, and issue (task) events.
-- WebHooks for repositories only work for push, PR, and Issue (task) events bound to the repository.
+- Вебхуки компании действительны для всех репозиториев в компании для отправки, запросов на слияние и задач.
+- Вебхуки для репозиториев работают только для отправки, запросов на слияние и задач, связанных с репозиторием.
 
-## Data Structures and Types
+## Структуры данных и типы
 
-About the data structure and type description of WebHook, please refer to the following document
+Относительно описания структуры данных и типа вебхука обратитесь к следующим документам:
 
-- [WebHook Push Data Format Description](/enterprise/code-manage/integration-ecosystem/webhook/webhook-push-data-format-description)
-- [WebHook Key Verification and Verification Algorithm](/enterprise/code-manage/integration-and-ecology/WebHook/WebHook Key Verification and Verification Algorithm)
-- [WebHook Push Data Type Description](/enterprise/code-manage/integration-and-ecology/WebHook/WebHook%20Push%20Data%20Type%20Description)
+- [Описание формата данных для отправки вебхука](/enterprise/code-manage/integration-ecosystem/webhook/webhook-push-data-format-description)
+- [Проверка ключа вебхука и алгоритм проверки](/enterprise/code-manage/integration-and-ecology/WebHook/WebHook Key Verification and Verification Algorithm)
+- [Описание типов данных для отправки вебхука](/enterprise/code-manage/integration-and-ecology/WebHook/WebHook%20Push%20Data%20Type%20Description)
 
-## Third-party IM support
+## Поддержка сторонних мессенджеров
 
-In order to facilitate users to receive Gitee's push in third-party IM, we have supported the following third-party applications through WebHook
+Для удобства пользователей для получеения уведомлений Gitee в сторонних мессенджерах мы поддерживаем следующие сторонние приложения через вебхуки:
 
-- DingTalk Robot: Set the WebHook URL to the DingTalk group chat robot address.
-- Related documentation: [WebHook Support for DingTalk](/enterprise/code-manage/integration-and-ecosystem/webhook/webhook-dingtalk-support)
-- Enterprise WeChat bot: Set the WebHook URL to the Enterprise WeChat bot address.
-  - Related documentation: [WebHook adds support for WeChat Work](/enterprise/code-manage/integration-and-ecosystem/webhook/webhook-support-for-wechat-work)
-- Feishu Robot: Set the WebHook URL to the Feishu group chat robot address.
-  - Related documentation: [WebHook adds support for Feishu](/enterprise/code-manage/integration-ecosystem/WebHook/WebHook%20support-for-feishu-robot)
-- Slack Bot: Set the WebHook URL to the Slack bot address.
-- Related document: [WebHook adds support for Slack](/enterprise/code-manage/integration-and-ecology/webhook/webhook-for-slack)
+- Робот DingTalk: Установите URL вебхука на адрес робота группового чата DingTalk.
+- Связанная документация: [Поддержка вебхука для DingTalk](/enterprise/code-manage/integration-and-ecosystem/webhook/webhook-dingtalk-support)
+- Робот Enterprise WeChat: Установите URL вебхука на адрес робота Enterprise WeChat.
+  - Связанная документация: [Вебхук добавляет поддержку для WeChat Work](/enterprise/code-manage/integration-and-ecosystem/webhook/webhook-support-for-wechat-work)
+- Робот Feishu: Установите URL вебхука на адрес робота группового чата Feishu.
+  - Связанная документация: [Вебхук добавляет поддержку для Feishu](/enterprise/code-manage/integration-ecosystem/WebHook/WebHook%20support-for-feishu-robot)
+- Робот Slack: Установите URL вебхука на адрес робота Slack.
+- Cвязанная документация: [Вебхук добавляет поддержку для Slack](/enterprise/code-manage/integration-and-ecology/webhook/webhook-for-slack)

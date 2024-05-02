@@ -1,16 +1,16 @@
 ---
-title: Component Settings
+title: Настройки компонентов
 ---
 
-Click on the bottom of the project navigation menu, "Project Settings":
+Нажмите на "Настройки проекта" в нижней части навигационного меню проекта:
 
-![Image Description](assets/image561.png)
+![Описание изображения](assets/image561.png)
 
-Click "Component Settings" to see the enable status of each component.
-Drag and drop the handle on the left side of the component up and down to adjust the order of the component in the project navigation menu.
+Для просмотра статуса включения каждого из компонентов нажмите на "Настройки компонента".
+Изменять порядок расположения компонентов в навигационном меню проекта можно путем перетаскивания маркера на левой стороне компонента вверх и вниз в навигационном меню проекта.
 
-![Image Description](assets/image562.png)
+![Описание изображения](assets/image562.png)
 
-Clicking the switch on the right end of the component card can turn on or off the component. When the component is turned off, its entry in the project menu will be hidden.
+Нажатием на переключатель справа в карточке компонента можно включить или выключить его. Выключенные компоненты скрываются в меню проекта.
 
-![Image Description](assets/image563.png)
+![Описание изображения](assets/image563.png)

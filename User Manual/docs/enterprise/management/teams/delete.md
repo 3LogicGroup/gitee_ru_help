@@ -1,7 +1,7 @@
 ---
-title: Delete Team
+title: Удаление команды
 ---
 
-Click on "Members" in the enterprise navigation menu to enter the member management page. In the team list on the left, click on the edit icon of the team to enter the team editing page, and click the "Delete Team" button.
+Для перехода на страницу управления участниками нажмите «Участники» в меню навигации компании. В списке команд слева щелкните значок редактирования команды, чтобы перейти на страницу редактирования команды, затем нажмите кнопку «Удалить команду».
 
-![Image Description](assets/image415.png)
+![Описание изображения](assets/image415.png)

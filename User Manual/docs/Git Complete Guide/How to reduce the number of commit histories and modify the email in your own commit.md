@@ -1,46 +1,46 @@
 ---
-title: How to reduce the number of commit history and modify the email in your own commit
+title: Как уменьшить количество историй коммитов и изменить адрес электронной почты в вашем коммите
 authors:
   - name: No Mo
     url: https://gitee.ru/normalcoder
 origin-url: https://gitee.ru/help/articles/4198
 ---
 
-Note: The content in this section comes from <https://git-scm.com/book/zh/v2/Git>-Tools-Rewriting History. The ultimate interpretation right belongs to the author of this page. This document only quotes and formats the content to some extent. The author of this document has no copyright to the content of this page.
+Примечание: Содержимое этого раздела взято с сайта <https://git-scm.com/book/zh/v2/Git>-Tools-Rewriting History. Окончательное право интерпретации принадлежит автору этой страницы. Данный документ лишь в некоторой степени цитирует и форматирует содержание. Автор этого документа не имеет авторских прав на содержание этой страницы.
 
-Often, when using Git, you may want to correct the commit history for some reason. One great thing about Git is that it allows you to make decisions at the last minute. You can decide which files to include in a commit just before committing the staged content. You can choose not to work with certain content using the stash command. You can also rewrite past commits as if they happened differently. This may involve changing the order of commits, changing information in commits, modifying files, compressing or splitting commits, or completely removing commits before sharing your work with others.
+Часто при использовании Git вам по какой-либо причине может понадобиться исправить историю коммитов. Одна из замечательных особенностей Git заключается в том, что он позволяет принимать решения в последний момент. Прежде чем поделиться своей работой с другими, вы можете решить, какие файлы включить в коммит непосредственно перед отправкой коммита содержимого этапа. Вы можете отказаться от работы с определённым содержимым с помощью команды stash. Вы также можете переписать прошлые коммиты так, как будто они были созданы по-другому. Это может включать изменение порядка коммита, изменение информации в коммитах, модификацию файлов, сжатие или разделение коммитов или их полное удаление.
 
-In this section, you will learn how to accomplish these very useful tasks so that your commit history will be displayed as desired when sharing your work with others.
+В этом разделе вы узнаете, как выполнить эти очень полезные задачи, чтобы ваша история коммитов отображалась так, как нужно, когда вы делитесь своей работой с другими.
 
-### Modify the Last Commit
+### Изменение последнего коммита
 
-Modifying your most recent commit is one of the most common operations you perform when working with Git. For your most recent commit, you usually want to do two things: modify the commit message or modify the snapshot of the files you added, modified, and removed.
+Изменение последнего коммита - одна из самых распространённых операций, выполняемых при работе с Git. Для последнего коммита вы обычно хотите сделать две вещи: изменить сообщение о коммите или изменить снимки файлов, которые вы добавили, изменили и удалили.
 
-If you just want to modify the commit message of the most recent commit, it's very easy:
+Если вы просто хотите изменить сообщение о последнем коммите, это очень просто:
 
 ```bash
 git commit --amend
 ```
 
-This will take you to a text editor containing your most recent commit message for you to modify. When you save and close the editor, the editor will replace the most recent commit message with the content you entered.
+В результате вы перейдете в текстовый редактор, содержащий ваше последнее сообщение о коммите, которое вы можете изменить. Когда вы сохраните и закроете редактор, он заменит последнее сообщение о коммите введенным вами содержимым.
 
-If you have already made the commit but forgot to add a newly created file, you can make changes to the commit snapshot by adding or modifying files. By modifying the file and then running `git add` or `git rm` on a tracked file, followed by `git commit --amend`, the current staging area will be taken away and used as the snapshot for the new commit.
+Если вы уже сделали коммит, но забыли добавить вновь созданный файл, вы можете внести изменения в снимок коммита, добавив или изменив файлы. Если изменить файл, а затем выполнить `git add` или `git rm` для отслеживаемого файла, а затем `git commit --amend`, то текущая область хранения будет удалена и использована в качестве снапшота для нового коммита.
 
-When using this technique, be careful because the amendment will change the submitted SHA-1 checksum. It is similar to a small rebase. Do not amend it if the last commit has already been pushed.
+При использовании этой техники будьте осторожны, так как при изменении будет изменена переданная контрольная сумма SHA-1. Это похоже на небольшой rebase. Не вносите поправки, если последний коммит уже был вытолкнут.
 
-### Modify Multiple Commit Messages
+### Изменение нескольких сообщений о коммите
 
-To modify a commit that is further back in the commit history, a more complex tool must be used. Git does not have a history changing tool, but you can use the rebase tool to rebase a series of commits based on their original state.
+Чтобы изменить коммит, который находится дальше в истории коммитов, необходимо использовать более сложный инструмент. В Git нет инструмента для изменения истории, вы можно использовать инструмент rebase для изменения серии коммитов на основе их исходного состояния.
 
-For example, if you want to modify the commit messages of the last three commits or any one of the group of commits, pass the parent commit of the most recent commit you want to modify as an argument to the git rebase -i command, i.e. HEAD~2^ or HEAD~3. Remember that ~3 might be easier to remember because you are trying to modify the last three commits; but be aware that it actually specifies the previous four commits, i.e. the parent commit of the commit you want to modify:
+Например, в случае необходимости изменить сообщения последних трёх коммитов или любого другого из группы коммитов, передайте родительский коммит самого последнего коммита, который вы хотите изменить, в качестве аргумента команде git rebase -i, то есть HEAD~2^ или HEAD~3. Помните, что ~3 может быть легче запомнить, потому что вы пытаетесь изменить последние три коммита; но имейте в виду, что на самом деле он указывает на предыдущие четыре коммита, то есть, и на родительский коммит изменяемого вами коммита:
 
 ```bash
 git rebase -i HEAD~3
 ```
 
-Remember again that this is a rebase command - every commit within the range HEAD~3..HEAD will be rewritten, regardless of whether you modify the information. Do not involve any commits that have already been pushed to the central server - this will create two versions of the same change, confusing others.
+Ещё раз напомним, что это команда rebase - каждый коммит в диапазоне HEAD~3...HEAD будет переписан, независимо от того, изменяете ли вы информацию. Не включайте коммиты, которые уже были отправлены на центральный сервер - это создаст две версии одного и того же изменения, что запутает других.
 
-Running this command will give you a list of commits on the text editor, which looks like the following:
+Выполнив эту команду, вы получите список коммитов в текстовом редакторе, который выглядит следующим образом:
 
 ```bash
 pick f7f3f6d changed my name a bit
@@ -75,9 +75,9 @@ a5f4a0d added cat-file
 f7f3f6d changed my name a bit
 ```
 
-Note the reverse order display. Interactive rebase gives you a script that will run. It will replay each commit's changes from oldest to newest, starting with the commit you specified on the command line (HEAD~3). It lists the oldest, not the newest, at the top because that's the first one to be replayed.
+Обратите внимание на отображение в обратном порядке. Интерактивный rebase предоставляет вам скрипт, который будет запущен. Он воспроизведёт изменения каждого коммита от самого старого к самому новому, начиная с коммита, который вы указали в командной строке (HEAD~3). Он перечисляет самый старый, а не самый новый коммит вверху, потому что именно он будет воспроизведён первым.
 
-You need to modify the script to make it stay on the change you want to modify. To achieve this, simply change 'pick' to 'edit' in front of each commit you want to modify. For example, if you only want to modify the third commit message, you can modify the file as follows:
+Вам нужно изменить скрипт, чтобы он оставался на изменении, которое вы хотите изменить. Для этого просто замените 'pick' на 'edit' перед каждым коммитом, который вы хотите изменить. Например, если вы хотите изменить только третье сообщение коммита, вы можете изменить файл следующим образом:
 
 ```bash
 edit f7f3f6d changed my name a bit
@@ -85,37 +85,37 @@ pick 310154e updated README formatting and added blame
 pick a5f4a0d added cat-file
 ```
 
-When you save and exit the editor, Git takes you back to the last commit in the list and returns you to the command line with the following message:
+Когда вы сохраняете изменения и выходите из редактора, Git возвращает вас к последнему коммиту в списке и возвращает вас в командную строку со следующим сообщением:
 
 ```bash
 $ git rebase -i HEAD~3
 Stopped at f7f3f6d... changed my name a bit
-You can amend the commit now, with
+Теперь вы можете внести изменения в коммит, используя
 
        git commit --amend
 
-Once you’re satisfied with your changes, run
+Когда вы будете удовлетворены своими изменениями, выполните команду
 
        git rebase --continue
 ```
 
-These instructions tell you exactly what to do. Enter
+Эти инструкции подскажут вам, что именно нужно делать. Введите
 
 ```bash
 git commit --amend
 ```
 
-Modify the commit message and then exit the editor. Then, run
+Измените сообщение о коммите и выйдите из редактора. Затем выполните
 
 ```bash
 git rebase --continue
 ```
 
-This command will automatically apply the other two commits, and then it's done. If you need to change more than one 'pick' to 'edit', you need to modify each one separately.
+Эта команда автоматически применит два других коммита, и всё будет готово. Если вам нужно изменить несколько коммитов 'pick' на 'edit', вам нужно изменить каждый из них отдельно.
 
-### Reorder commits
+### Упорядочить коммиты
 
-You can also use interactive rebase to reorder or completely remove commits. If you want to remove the 'added cat-file' commit and then modify the order introduced by the other two commits, you can rewrite the rebase script like this:
+Вы также можете использовать интерактивный rebase для переупорядочивания или полного удаления коммитов. Если вы хотите удалить коммит 'added cat-file', а затем изменить порядок, введённый двумя другими коммитами, вы можете переписать скрипт rebase следующим образом:
 
 ```bash
 pick f7f3f6d changed my name a bit
@@ -123,39 +123,39 @@ pick 310154e updated README formatting and added blame
 pick a5f4a0d added cat-file
 ```
 
-Change it to this:
+Измените его на этот:
 
 ```bash
 pick 310154e updated README formatting and added blame
 pick f7f3f6d changed my name a bit
 ```
 
-When you save and exit the editor, Git brings your branch back to the parent commit of these commits, applies 310154e, and then applies f7f3f6d, and finally stops. In fact, the order of those commits has been modified and the 'added cat-file' commit has been completely removed.
+Когда вы сохраняете и выходите из редактора, Git возвращает вашу ветку к родительскому коммиту этих коммитов, применяет 310154e, затем применяет f7f3f6d и, наконец, останавливается. На самом деле порядок этих коммитов был изменён, а коммит 'added cat-file' был полностью удалён.
 
-### Compressed Commit
+### Сжатый коммит
 
-You can also compress a series of commits into a single commit using interactive rebase tool. The script provides useful instructions in the rebase information.
+Вы также можете сжать серию коммитов в один коммит с помощью интерактивного инструмента rebase. Скрипт предоставляет полезные инструкции в информации о rebase.
 
 ```bash
 #
-# Commands:
-#  p, pick = use commit
-#  r, reword = use commit, but edit the commit message
-#  e, edit = use commit, but stop for amending
-#  s, squash = use commit, but meld into previous commit
-#  f, fixup = like "squash", but discard this commit's log message
-#  x, exec = run command (the rest of the line) using shell
+# Команды:
+# p, pick = использовать коммит
+# r, reword = использовать коммит, но редактировать сообщение о коммите
+# e, edit = использовать коммит, но остановить для внесения поправок
+# s, squash = использовать коммит, но объединить с предыдущим коммитом
+# f, fixup = как "squash", но отбрасываем сообщение журнала этого коммита
+# x, exec = выполнить команду (оставшуюся часть строки) с помощью оболочки
 #
-# These lines can be re-ordered; they are executed from top to bottom.
+# Эти строки могут быть переупорядочены; они выполняются сверху вниз.
 #
-# If you remove a line here THAT COMMIT WILL BE LOST.
+# Если вы удалите здесь строку, то этот коммит будет потерян.
 #
-# However, if you remove everything, the rebase will be aborted.
+# Однако, если вы удалите все, rebase будет прерван.
 #
-# Note that empty commits are commented out
+# Обратите внимание, что пустые коммиты комментируются
 ```
 
-If 'squash' is specified instead of 'pick' or 'edit', Git will apply the changes of both and merge the commit messages together. So, if you want these three commits to be one commit, you can modify the script like this:
+Если вместо 'pick' или 'edit' указано 'squash', Git применит изменения обоих коммитов и объединит сообщения коммита вместе. Поэтому, если вы хотите, чтобы эти три коммита были одним коммитом, вы можете изменить сценарий следующим образом:
 
 ```bash
 pick f7f3f6d changed my name a bit
@@ -163,27 +163,27 @@ squash 310154e updated README formatting and added blame
 squash a5f4a0d added cat-file
 ```
 
-When you save and exit the editor, Git applies all three modifications and puts you back into the editor to merge the three commit messages:
+Когда вы сохраняете и выходите из редактора, Git применяет все три модификации и возвращает вас в редактор, чтобы объединить три сообщения коммита:
 
 ```bash
-# This is a combination of 3 commits.
-# The first commit's message is:
+# Это комбинация из 3 коммитов.
+# Сообщение первого коммита следующее:
 changed my name a bit
 
-# This is the 2nd commit message:
+# Это второе сообщение о коммите:
 
 updated README formatting and added blame
 
-# This is the 3rd commit message:
+# Это 3-е сообщение о коммите:
 
 added cat-file
 ```
 
-Once you save, you have a commit that contains all the changes from the previous three commits.
+После сохранения у вас будет коммит, содержащий все изменения из предыдущих трех коммитов.
 
-### Splitting Commits
+### Разделение коммитов
 
-Splitting a commit will undo the commit and then partially stage and commit multiple times until the desired number of commits is achieved. For example, if you want to split the middle commit of three commits. You want to split it into two commits: the first one is 'updated README formatting', and the second one is 'added blame' instead of the original 'updated README formatting and added blame'. This can be done by modifying the script of rebase -i and changing the instruction of the commit to be split to 'edit'.
+Разделение коммитов отменяет коммит, а затем частично выполняет коммит несколько раз, пока не будет достигнуто нужное количество коммитов. Например, если вы хотите разделить средний коммит из трёх коммитов. Вы хотите разделить его на два коммита: первый - "обновить форматирование README", а второй - "добавить вину" вместо оригинального "обновить форматирование README и добавить вину". Это можно сделать, изменив скрипт rebase -i и поменяв инструкцию разделяемого коммита на 'edit'.
 
 ```bash
 pick f7f3f6d changed my name a bit
@@ -191,7 +191,7 @@ edit 310154e updated README formatting and added blame
 pick a5f4a0d added cat-file
 ```
 
-Then, when the script takes you into the command line, reset that commit and retrieve the changes from the reset. Create several commits from it. When you save and exit the editor, Git takes you to the parent commit of the first commit in the list, applies the first commit (f7f3f6d), applies the second commit (310154e), and then takes you to the command line. There, you can perform a mixed reset for that commit using 'git reset HEAD^', which will actually undo that commit and unstage the modified files. Now you can stage and commit files until you have multiple commits, and then run 'git rebase --continue' when finished.
+Затем, когда скрипт переведёт вас в командную строку, сбросьте этот коммит и получите изменения из сброса. Создайте из него несколько коммитов. Когда вы сохранитесь и выйдете из редактора, Git переведёт вас на родительский коммит первого коммита в списке, применит первый коммит (f7f3f6d), применит второй коммит (310154e), а затем переведёт вас в командную строку. Там вы можете выполнить смешанный сброс для этого коммита с помощью команды 'git reset HEAD^', которая фактически отменит этот коммит и снимет с хранения изменённые файлы. Теперь вы можете перемещать и фиксировать файлы, пока не получите несколько коммитов, а затем выполнить команду 'git rebase --continue', когда всё будет готово.
 
 ```bash
 git reset HEAD^
@@ -202,7 +202,7 @@ git commit -m 'added blame'
 git rebase --continue
 ```
 
-Git applies the latest commit (a5f4a0d) in the script. The history looks like this:
+Git применяет последний коммит (a5f4a0d) в скрипте. История выглядит следующим образом:
 
 ```bash
 $ git log -4 --pretty=format:"%h %s"
@@ -213,15 +213,15 @@ $ git log -4 --pretty=format:"%h %s"
 f3cc40e changed my name a bit
 ```
 
-Again, these changes altered the SHA-1 checksum of all the commits in the list, so make sure none of the commits in the list have been pushed to a shared repository yet.
+Опять же, эти изменения изменили контрольную сумму SHA-1 всех коммитов в списке, поэтому убедитесь, что ни один из коммитов в списке еще не был выложен в общий репозиторий.
 
-## Nuclear-level Option: filter-branch
+## Опция уровня ядера: filter-branch
 
-There is another option for rewriting history, if you want to rewrite a large number of commits using a script, you can use it - for example, globally changing your email address or removing a file from each commit. This command is filter-branch, which can rewrite a large number of commits in history. You should not use it unless your repository has not been published and no one else has based their work on the commits to be rewritten. However, it can be very useful. You will learn a few common use cases, giving you an idea of where it is suitable to use it.
+Существует ещё одна опция для переписывания истории, если вы хотите переписать большое количество коммитов с помощью скрипта, вы можете использовать её - например, глобально изменить свой адрес электронной почты или удалить файл из каждого коммита. Эта команда - filter-branch, которая может переписать большое количество коммитов в истории. Её не следует использовать, если только ваш репозиторий не был опубликован и никто другой не основывал свою работу на коммитах, которые нужно переписать. Тем не менее, она может быть очень полезной. Вы познакомитесь с несколькими распространёнными случаями использования, что даст вам представление о том, где его можно применить.
 
-### Remove a file from each commit
+### Удалить файл из каждого коммита
 
-This often happens. Someone carelessly commits a huge binary file through git add . and you want to remove it from everywhere. Maybe accidentally committed a file that includes a password, but you want it to be open source. filter-branch
+Такое часто случается. Кто-то по неосторожности коммитит огромный бинарный файл через git add . и вы хотите удалить его отовсюду. Возможно, вы случайно закоммитили файл, содержащий пароль, но хотите, чтобы он был с открытым исходным кодом. filter-branch
 
 ```bash
 $ git filter-branch --tree-filter 'rm -f passwords.txt' HEAD
@@ -229,13 +229,13 @@ Rewrite 6b9b3cf04e7c5686a9cb838c3f36a8cb6a0fc2bd (21/21)
 Ref 'refs/heads/master' was rewritten
 ```
 
---tree-filter option runs the specified command after checking out each commit of the repository and recommit the results. In this example, you remove a file called passwords.txt from each snapshot, regardless of its existence. If you want to remove all accidental editor backup files, you can run a command like git filter-branch --tree-filter 'rm -f \*~' HEAD.
+Опция --tree-filter запускает указанную команду после проверки каждого коммита репозитория и повторного коммита с результатами. В этом примере вы удаляете файл passwords.txt из каждого снапшота, независимо от его существования. Если вы хотите удалить все случайные резервные файлы редактора, вы можете выполнить команду git filter-branch --tree-filter 'rm -f \*~' HEAD.
 
-Finally, you will see Git rewriting trees and commits and then moving branch pointers. It is usually a good idea to do this in a test branch and then hard reset the master branch when you decide that the final result is what you really want. To make filter-branch run on all branches, you can pass the --all option to the command.
+Наконец, вы увидите, как Git переписывает деревья и коммиты, а затем перемещает указатели веток. Обычно это хорошо делать в тестовой ветке, а затем жестко сбросить мастер-ветку, когда вы решите, что конечный результат - это то, что вы действительно хотите. Чтобы заставить filter-branch работать на всех ветках, вы можете передать команде опцию --all.
 
-### Make a subdirectory the new root directory
+### Сделать подкаталог новым корневым каталогом
 
-Assuming it has been imported from another source code control system and has several meaningless subdirectories (trunk, tags, etc.). If you want to make the trunk subdirectory the new repository root for each commit, filter-branch can help you do that.
+Предположим, что он был импортирован из другой системы контроля исходного кода и имеет несколько бессмысленных подкаталогов (trunk, tags и т. д.). Если вы хотите сделать подкаталог trunk новым корневым каталогом репозитория для каждого коммита, filter-branch поможет вам это сделать.
 
 ```bash
 $ git filter-branch --subdirectory-filter trunk HEAD
@@ -243,11 +243,11 @@ Rewrite 856f0bf61e41a27326cdae8f09fe708d679f596f (12/12)
 Ref 'refs/heads/master' was rewritten
 ```
 
-Now the new repository root directory is the trunk subdirectory. Git will automatically remove all commits that do not affect the subdirectory.
+Теперь новым корневым каталогом репозитория будет подкаталог trunk. Git автоматически удалит все коммиты, которые не влияют на подкаталог.
 
-### Global Modification of Email Address
+### Глобальное изменение адреса электронной почты
 
-Another common scenario is when you forget to run 'git config' to set your name and email address before starting work, or when you want to open source a project and change all your work email addresses to your personal email address. In any case, you can also use 'filter-branch' to modify email addresses in multiple commits at once. Be careful to only modify your own email address, so you use '--commit-filter':
+Другой распространенный сценарий - когда вы забыли запустить 'git config', чтобы задать свое имя и адрес электронной почты перед началом работы, или когда вы хотите открыть исходный код проекта и изменить все рабочие адреса электронной почты на свой личный адрес. В любом случае, вы также можете использовать 'filter-branch' для изменения адресов электронной почты в нескольких коммитах одновременно. Будьте внимательны, чтобы изменить только свой собственный адрес электронной почты, поэтому используйте '--commit-filter':
 
 ```bash
 git filter-branch --commit-filter '
@@ -261,4 +261,4 @@ git filter-branch --commit-filter '
         fi' HEAD
 ```
 
-This will traverse and rewrite each commit to include your new email address. Since commits include the SHA-1 checksum of their parent commits, this command will modify every commit in your history.
+В результате каждый коммит будет переписан с учётом вашего нового адреса электронной почты. Поскольку коммиты включают контрольную сумму SHA-1 своих родительских коммитов, эта команда изменит каждый коммит в вашей истории.

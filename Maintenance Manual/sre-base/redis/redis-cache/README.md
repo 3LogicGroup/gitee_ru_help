@@ -1,4 +1,4 @@
-Container deployment
+Развертывание контейнеров
 
 
 
