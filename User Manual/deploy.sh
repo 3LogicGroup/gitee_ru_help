@@ -3,23 +3,23 @@
 CURRENT_DIR=$(pwd)
 VALID_NODES=("node1" "node2")
 
-# 检查 .env 文件是否存在
+# Проверка, есть ли файл .env ?
 check_env(){
     if [ -f "$CURRENT_DIR/.env" ]; then
         set -a
         source $CURRENT_DIR/.env
         set +a
     else
-        echo " ✕ .env file does not exist, please use 'cp .env.example .env' or create it manually"
+        echo " ✕ Нет файла *.env , используйте 'cp .env.example .env' или создайте его вручную"
         echo 
         exit 1
     fi
 }
 
-# 环境变量检查
+# Проверка переменных окружения
 check_env_config(){
     if [ -z "${DEPLOY_DIR}" ]; then
-        echo " ✕ The environment variable DEPLOY_DIR does not exist, please set it in the .env file"
+        echo " ✕ Нет переменной окружения DEPLOY_DIR , задайте её в файле .env"
         echo 
         exit 1
     else
@@ -29,66 +29,66 @@ check_env_config(){
 
 show_help() {
     echo
-    echo "Usage: ./init.sh [targetNode]..."
+    echo "Использование: ./init.sh [targetNode]..."
     echo
-    echo "The targetNode parameter must be one of:"
+    echo "Значение параметра targetNode должно бы одним из:"
     echo "    all"
     for node in "${VALID_NODES[@]}"; do
         echo "    $node"
     done
     echo
-    echo "For example:"
-    echo "    ./init.sh all     Deploy all node services"
-    echo "    ./init.sh node1   Deploy node1 services"
+    echo "Например:"
+    echo "    ./init.sh all     Доставить сервисы всех узлов"
+    echo "    ./init.sh node1   Доставить сервисы узла node1"
     echo
     exit 1
 }
 
-# 检查版本参数是否有效的函数
+# Проверка, правильно ли задана версия
 check_node() {
     for node in "${VALID_NODES[@]}"; do
         if [[ "$1" == "$node" ]]; then
-            return 0 # 参数有效
+            return 0 # Версия правильная
         fi
     done
-    return 1 # 参数无效
+    return 1 # Неправильная версия
 }
 
-# 检查目录是否存在
+# Проверка, есть ли директория
 check_directory() {
     echo
     if [ ! -d "$1" ]; then
         mkdir -p "$1"
-        echo " ✔ The directory $1 was created"
+        echo " ✔ Создана директория $1"
         echo
     else
-        echo " ✔ Directory already exists: $1"
+        echo " ✔ Есть директория $1"
         echo
     fi
 }
 
 sync_resource() {
     check_directory "$1"
-    echo " ▶︎ Syncing website directory..."
+    echo " ▶︎ Синхронизирую директорию сайта..."
     echo
     cp -R ./website "$1"
-    echo " ▶︎ Syncing docs directory..."
+    echo " ▶︎ Синхронизирую директорию документации..."
     echo
     cp -R ./docs "$1"
-    echo " ✔ $1 has been initialized"
+    echo " ✔ $1 инициализирована"
 }
 
 resync_resource() {
     check_directory "$1"
-    echo " ▶︎ Cleaning $1..."
+    echo " ▶︎ Очищаю $1..."
     rm -rf "$1"
-    echo " ✔ $1 has been cleaned"
+    echo " ✔ $1 очищена"
     sync_resource "$1"
 }
 
 show_success(){
-    echo " ▶︎ $1 has started in the background."
-    echo " ☞ Use '$2' to view startup details."
+    echo " ▶︎ $1 начата фоном."
+    echo " ☞ Нажмите '$2' чтобы отобразить настройки запуска."
     echo
     exit
 }
@@ -99,7 +99,7 @@ main() {
         show_help
     fi
     echo
-    echo " ☞ Current directory: $CURRENT_DIR"
+    echo " ☞ Текущая директория: $CURRENT_DIR"
     echo
     check_env
     check_env_config

@@ -10,7 +10,7 @@
         "lvl0": {
             "selector": ".theme-doc-sidebar-item-link.menu__list-item a.menu__link.menu__link--active ~ a.menu__link",
             "global": true,
-            "default_value": "文档"
+            "default_value": "Документ"
         },
         "lvl1": {
             "selector": ".container h1",
